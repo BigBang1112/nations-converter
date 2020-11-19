@@ -15,20 +15,51 @@ Blocks:
       Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionCurveInWall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetRot: [90, 0, 0]
       OffsetPivot: [16, 0, 16]
-  - ~
-  - ~
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionStraightT.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [0, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionDiagWall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionStraightY.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
   - ~
   - Item: # Straight wall
       Name: NationsConverter\z_terrain\y_dirtTransition\DirtTtransitionStraightWall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetRot: [90, 0, 0]
       OffsetPivot: [16, 0, 16]
-  - ~
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitonStraightL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionStraightJ.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
   - ~
   - Item: # Curve wall
       Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionCurveWall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetRot: [180, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionCurve.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [180, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionEnd.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [-90, 0, 0]
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionSingle.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [0, 0, 0]
       OffsetPivot: [16, 0, 16]
 
   StadiumDirtHill:
@@ -43,7 +74,10 @@ Blocks:
   - Item:
       Name: NationsConverter\z_terrain\x_dirtHill\DirtHillCornerBothSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\x_dirtHill\DirtHillStraightYSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
   - ~
   - Item:
       Name: NationsConverter\z_terrain\x_dirtHill\DirtHillStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -56,7 +90,9 @@ Blocks:
   - Item:
       Name: NationsConverter\z_terrain\x_dirtHill\DirtHillStraightJSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\x_dirtHill\DirtHillStraightTSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
   - Items:
     - Name: NationsConverter\z_terrain\x_dirtHill\DirtHillCornerOutside.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetRot: [-90, 0, 0]
@@ -320,7 +356,14 @@ Blocks:
     - Name: NationsConverter\z_terrain\v_dirt\DirtGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     RemoveGround: true
-  StadiumRoadDirtHighGTCurve2: ~
+  StadiumRoadDirtHighGTCurve2:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\w_high\TM2RoadDirtHighCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\z_terrain\v_dirt\HoleDirtCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
   StadiumRoadDirtHighGTCurve3:
   - Items:
     - Name: NationsConverter\tb_TM2RoadDirt\w_high\TM2RoadDirtHighCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -375,7 +418,13 @@ Blocks:
     - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     RemoveGround: true
-  StadiumRoadDirtToRoadDirtHighCross: ~
+  StadiumRoadDirtToRoadDirtHighCross:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHighCross.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    RemoveGround: true
   StadiumRoadDirtHighToRoad:
   - Items:
     - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtHighToRoad.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
