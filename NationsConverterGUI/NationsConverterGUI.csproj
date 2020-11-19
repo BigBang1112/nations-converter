@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net5.0-windows;netcoreapp3.1;net452</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+	<PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
+  </ItemGroup>
+
+</Project>

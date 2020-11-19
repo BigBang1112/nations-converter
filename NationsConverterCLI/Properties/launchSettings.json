@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NationsConverterCLI": {
+      "commandName": "Project",
+      "commandLineArgs": "\"E:\\ManiaPlanetUserData\\Maps\\Nadeos\\Stadium\\2\\C04.Map.Gbx\""
+    }
+  }
+}

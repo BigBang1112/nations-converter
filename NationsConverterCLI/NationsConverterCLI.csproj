@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFrameworks>net5.0-windows;netcoreapp3.1;net452</TargetFrameworks>
+		<PlatformTarget>x86</PlatformTarget>
+		<Product>Nations Converter (CLI)</Product>
+		<Authors>BigBang1112</Authors>
+		<Version>0.1.0</Version>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="LICENSE.txt">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
