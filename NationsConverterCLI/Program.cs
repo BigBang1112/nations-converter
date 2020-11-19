@@ -29,6 +29,7 @@ namespace NationsConverterCLI
             }
 
             var assembly = Assembly.GetExecutingAssembly();
+            var localDirectory = Path.GetDirectoryName(assembly.Location);
 
             Log.OnLogEvent += Log_LoggedMainEvent;
 
@@ -44,10 +45,10 @@ namespace NationsConverterCLI
 
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
-            var sheet = YamlManager.Parse<Sheet>(assembly.Location + "/Sheets/Official.yml");
+            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Official.yml");
             var sheets = new Sheet[]
             {
-                YamlManager.Parse<Sheet>(assembly.Location + "/Sheets/Custom.yml")
+                YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Custom.yml")
             };
 
             var sheetMgr = new SheetManager(sheet, sheets);
@@ -81,7 +82,7 @@ namespace NationsConverterCLI
 
                 converter.Convert(map, GameVersion.TM2);
 
-                gbxMap.Save($"{assembly.Location}/{map.MapName}.Map.Gbx");
+                gbxMap.Save($"{localDirectory}/{map.MapName}.Map.Gbx");
             }
         }
 
