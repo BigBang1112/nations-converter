@@ -37,18 +37,17 @@ namespace NationsConverterCLI
                     Encoding.ASCII.GetString(Resources.StadiumBlockModels)
                 );
 
-            //List<string> files = Directory.GetFiles(@"Stadium", "*.*", SearchOption.AllDirectories).ToList();
             List<string> files = new List<string>
             {
                 fileName
-            };            
+            };         
 
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
-            var sheet = YamlManager.Parse<Sheet>("Sheets/Official.yml");
+            var sheet = YamlManager.Parse<Sheet>(assembly.Location + "/Sheets/Official.yml");
             var sheets = new Sheet[]
             {
-                YamlManager.Parse<Sheet>("Sheets/Custom.yml")
+                YamlManager.Parse<Sheet>(assembly.Location + "/Sheets/Custom.yml")
             };
 
             var sheetMgr = new SheetManager(sheet, sheets);
@@ -82,7 +81,7 @@ namespace NationsConverterCLI
 
                 converter.Convert(map, GameVersion.TM2);
 
-                gbxMap.Save(map.MapName + ".Map.Gbx");
+                gbxMap.Save($"{assembly.Location}/{map.MapName}.Map.Gbx");
             }
         }
 
