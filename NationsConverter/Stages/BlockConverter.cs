@@ -119,6 +119,13 @@ namespace NationsConverter.Stages
 
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
 
+                    if (version <= GameVersion.TMUF)
+                    {
+                        offsetPos -= parameters.Stadium2RelativeOffset.XZ;
+                        if (conversionItem.OffsetPos2 != null)
+                            offsetPos += (Vec3)conversionItem.OffsetPos2;
+                    }
+
                     var name = "";
                     var collection = 26;
                     var author = "Nadeo";

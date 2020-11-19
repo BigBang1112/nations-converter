@@ -30,7 +30,10 @@ namespace NationsConverter.Stages
                 {
                     var dirtBlockExists = false;
 
-                    foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)))
+                    foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
+                    || (version <= GameVersion.TMUF &&
+                       (o.Coord == (x - 1, 1, z - 1) // TMNF hill
+                    ||  o.Coord == (x - 1, -1, z - 1))))) // TMNF base
                     {
                         if (dirtBlocks.Contains(groundBlock.Name))
                         {
@@ -54,6 +57,15 @@ namespace NationsConverter.Stages
                 if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill")
                 {
                     var dirtBlock = x;
+
+                    var offset = default(Int3);
+                    if(version <= GameVersion.TMUF)
+                    {
+                        if (x.Name == "StadiumDirt")
+                            offset += (0, 1, 0);
+                        else if (x.Name == "StadiumDirtHill")
+                            offset -= (0, 1, 0);
+                    }
 
                     foreach (var block in blocks)
                     {
@@ -93,10 +105,10 @@ namespace NationsConverter.Stages
                                                 }
 
                                                 foreach (var unit in newCoords)
-                                                    if (dirtBlock.Coord == block.Coord + (Int3)(unit - newMin))
+                                                    if (dirtBlock.Coord + offset == block.Coord + (Int3)(unit - newMin))
                                                         return false;
                                             }
-                                            else if (dirtBlock.Coord == block.Coord)
+                                            else if (dirtBlock.Coord + offset == block.Coord)
                                                 return false;
                                         }
                                     }
