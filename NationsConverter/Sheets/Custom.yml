@@ -160,6 +160,15 @@ Blocks:
       Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
 
+  StadiumHolePillar:
+  - Blocks:
+    - Name: RoadTechStraight
+    - Name: StructureBase
+      Ghost: true
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 2.01, 0]
+      OffsetPivot: [16, 0, 16]
   StadiumHole:
   - Item:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadTechStraightObstacleHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
