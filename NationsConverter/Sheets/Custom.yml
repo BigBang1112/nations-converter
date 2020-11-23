@@ -616,41 +616,41 @@ Blocks:
 
   StadiumControlRoadGlass:
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassDeadend.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassDeadend.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassCorner.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassCorner.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassStraight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassStraight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassT.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassT.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadGlassCross.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\ControlGlassCross.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   StadiumControlRoadPub:
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubDeadendStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubDeadendStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubCornerStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubCornerStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubStraightStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubStraightStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubTStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubTStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
-      Name: NationsConverter\r_support\v_control\RoadPubCrossStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\r_support\v_control\PubCrossStructure.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   StadiumControlRoadCamera: ~
   StadiumControlCameraPub:
