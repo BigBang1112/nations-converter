@@ -627,20 +627,33 @@ Blocks:
       OffsetPivot: [16, 0, 16]
 
   StadiumControlRoadGlass:
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlGlassBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlGlassBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlGlassDeadend.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+    - Name: NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlGlassCorner.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlGlassDeadend.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlGlassStraight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+    - Name: NationsConverter\r_support\v_control\ControlGlassDeadendAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlGlassT.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlGlassCorner.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassCornerAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlGlassT.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassCross.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
@@ -666,9 +679,14 @@ Blocks:
       OffsetPivot: [16, 0, 16]
   StadiumControlRoadCamera: ~
   StadiumControlCameraPub:
-  - Item:
-      Name: NationsConverter\r_support\v_control\ControlPub.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  - Items:
+    - Name: NationsConverter\r_support\v_control\ControlPub.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
 
 # Inflatables
 

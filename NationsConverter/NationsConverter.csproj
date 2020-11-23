@@ -27,6 +27,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx" />
+	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassCornerAir.Item.Gbx" />
+	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassDeadendAir.Item.Gbx" />
+	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx" />
+	  <None Remove="UserData\Items\NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Content Include="Sheet.cs" />
 	  <Content Include="SheetManager.cs" />
 	</ItemGroup>
