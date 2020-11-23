@@ -155,11 +155,14 @@ Blocks:
   StadiumRoadMain:
   - Item:
       Name: NationsConverter\y_roadFlat\z_road\TechRoadToGroundSingle.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetRot: [0, 0, 0]
       OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetRot: [0, 0, 0]
+      OffsetPivot: [16, 0, 16]
+
+  StadiumHole:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\RoadTechStraightObstacleHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
 
 # Circuit
