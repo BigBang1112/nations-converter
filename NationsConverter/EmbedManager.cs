@@ -41,6 +41,8 @@ namespace NationsConverter
 
                                     void ImportBlock(ConversionBlock conversionBlock)
                                     {
+                                        if (conversionBlock == null) return;
+
                                         try
                                         {
                                             if (conversionBlock.Name.EndsWith(".Block.Gbx_CustomBlock"))
@@ -61,6 +63,8 @@ namespace NationsConverter
 
                                     void ImportItem(ConversionItem conversionItem)
                                     {
+                                        if (conversionItem == null) return;
+
                                         try
                                         {
                                             var itemName = conversionItem.Name.Split(' ');

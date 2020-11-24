@@ -108,6 +108,8 @@ namespace NationsConverter.Stages
 
                 void PlaceItem(ConversionItem conversionItem)
                 {
+                    if (conversionItem == null) return;
+
                     var offsetPos = (Vec3)conversionItem.OffsetPos;
 
                     var center = new Vec3(0, 0, 0);
