@@ -100,23 +100,17 @@ namespace NationsConverter.Stages
                 }
 
                 if (conversion.Item != null)
-                {
-                    var center = new Vec3(0, 0, 0);
-                    PlaceItem(conversion.Item, center);
-                }
+                    PlaceItem(conversion.Item);
 
                 if (conversion.Items != null)
-                {
-                    var center = new Vec3(0, 0, 0);
-
                     foreach (var item in conversion.Items)
-                        PlaceItem(item, center);
-                }
+                        PlaceItem(item);
 
-                void PlaceItem(ConversionItem conversionItem, Vec3 center)
+                void PlaceItem(ConversionItem conversionItem)
                 {
                     var offsetPos = (Vec3)conversionItem.OffsetPos;
 
+                    var center = new Vec3(0, 0, 0);
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
 
                     if (version <= GameVersion.TMUF)
@@ -217,9 +211,9 @@ namespace NationsConverter.Stages
                         freeBlock.Author = "Nadeo";
                 }
 
-                if (referenceBlock.IsGround && conversion.Ground != null)
+                if (conversion.Ground != null && referenceBlock.IsGround)
                     ProcessConversion(referenceBlock, conversion.Ground);
-                else if (conversion.Air != null)
+                if (conversion.Air != null && !referenceBlock.IsGround)
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
