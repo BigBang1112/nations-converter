@@ -741,7 +741,7 @@ Blocks:
   - Item:
       Name: NationsConverter\q_sculpt\x_sculpt\Sculpt3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [90, 0, 0]
+      OffsetRot: [-90, 0, 0]
   StadiumSculptC:
   - Item:
       Name: NationsConverter\q_sculpt\x_sculpt\Sculpt1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
