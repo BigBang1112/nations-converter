@@ -231,22 +231,22 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiFlatToBankedL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [-90, 0, 0]
+      OffsetRot: [90, 0, 0]
   StadiumCircuitBorderSlopeStartRight:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiFlatToBankedR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [-90, 0, 0]
+      OffsetRot: [90, 0, 0]
   StadiumCircuitBorderSlopeEndLeft:
   - Item:
-      Name: NationsConverter\u_platform\w_denti\DentiBankedToFlatR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      Name: NationsConverter\u_platform\w_denti\DentiBankedToFlatL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [-90, 0, 0]
+      OffsetRot: [90, 0, 0]
   StadiumCircuitBorderSlopeEndRight:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiBankedToFlatR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [-90, 0, 0]
+      OffsetRot: [90, 0, 0]
 
 # RoadDirt
 
