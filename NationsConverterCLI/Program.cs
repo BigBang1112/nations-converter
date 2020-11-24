@@ -41,7 +41,7 @@ namespace NationsConverterCLI
             List<string> files = new List<string>
             {
                 fileName
-            };         
+            };
 
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
@@ -80,7 +80,15 @@ namespace NationsConverterCLI
             {
                 var map = gbxMap.MainNode;
 
-                converter.Convert(map, GameVersion.TM2);
+                var chunk01F = map.GetChunk<CGameCtnChallenge.Chunk0304301F>();
+
+                int version;
+                if (chunk01F.Version <= 1)
+                    version = GameVersion.TMUF;
+                else
+                    version = GameVersion.TM2;
+
+                converter.Convert(map, version);
 
                 gbxMap.Save($"{localDirectory}/{map.MapName}.Map.Gbx");
             }
