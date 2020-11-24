@@ -8,6 +8,7 @@
 		<Product>Nations Converter</Product>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<Platforms>x86</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -23,40 +24,23 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Sheets\SheetManager.cs" />
+		<PackageReference Include="GBX.NET" Version="0.5.3" />
+		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+		<PackageReference Include="YamlDotNet" Version="9.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx" />
-	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassCornerAir.Item.Gbx" />
-	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassDeadendAir.Item.Gbx" />
-	  <None Remove="UserData\Items\NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx" />
-	  <None Remove="UserData\Items\NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx" />
+		<Compile Update="Resources.Designer.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+		</Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Include="Sheet.cs" />
-	  <Content Include="SheetManager.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="GBX.NET" Version="0.5.3" />
-	  <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-	  <PackageReference Include="YamlDotNet" Version="9.1.0" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Compile Update="Resources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>Resources.resx</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Update="Resources.resx">
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
+		<EmbeddedResource Update="Resources.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 	</ItemGroup>
 </Project>
