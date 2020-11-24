@@ -48,7 +48,11 @@ Blocks:
       OffsetRot: [90, 0, 0]
       OffsetPivot: [16, 0, 16]
       OffsetPos2: [0, 8, 0]
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionStraightK.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
+      OffsetPos2: [0, 8, 0]
   - Item: # Curve wall
       Name: NationsConverter\z_terrain\y_dirtTransition\DirtTransitionCurveWall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetRot: [180, 0, 0]
