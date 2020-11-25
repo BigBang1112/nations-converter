@@ -207,7 +207,10 @@ Blocks:
   - Block:
       Name: RoadTechTiltStraight
       OffsetDir: 2
-  StadiumRoadTiltTransition1Left: [ RoadTechTiltTransition1DownLeft ]
+  StadiumRoadTiltTransition1Left: 
+  - Block:
+      Name: RoadTechTiltTransition1DownLeft
+      OffsetDir: 2
   StadiumRoadTiltTransition1Right: 
   - Block:
       Name: RoadTechTiltTransition1DownRight
