@@ -294,9 +294,14 @@ Blocks:
       OffsetDir: 2
   
   StadiumHolePillarTilt: #
-  - Block:
-      Name: RoadTechTiltStraight
+  - Blocks:
+    - Name: RoadTechTiltStraight
       OffsetDir: 2
+    - Name: StructureBase
+      Ghost: true
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
   StadiumHoleTilt: #
   - Block:
       Name: RoadTechTiltStraight
