@@ -233,7 +233,8 @@ Blocks:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
   - Items:
-    - ~
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformCross.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
 
@@ -688,6 +689,105 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\x_bridge\SculptBridgeStraightSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+
+  StadiumTubePillarCap:
+  - Air:
+      Block: StructureBase
+    Ground:
+      Block: StructureBase
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
+  StadiumTubeV1:
+  - Air:
+      Block: StructureBase
+    Ground:
+      Block: StructureBase
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
+  StadiumTubeV4:
+  - Air:
+      Blocks:
+      - Name: StructureBase
+      - Name: StructureBase
+        OffsetY: 1
+      - Name: StructureBase
+        OffsetY: 2
+      - Name: StructureBase
+        OffsetY: 3
+    Ground:
+      Blocks:
+      - Name: StructureBase
+      - Name: StructureBase
+        OffsetY: 1
+      - Name: StructureBase
+        OffsetY: 2
+      - Name: StructureBase
+        OffsetY: 3
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
+  StadiumTubeV8:
+  - Air:
+      Blocks:
+      - Name: StructureBase
+      - Name: StructureBase
+        OffsetY: 1
+      - Name: StructureBase
+        OffsetY: 2
+      - Name: StructureBase
+        OffsetY: 3
+      - Name: StructureBase
+        OffsetY: 4
+      - Name: StructureBase
+        OffsetY: 5
+      - Name: StructureBase
+        OffsetY: 6
+      - Name: StructureBase
+        OffsetY: 7
+    Ground:
+      Blocks:
+      - Name: StructureBase
+      - Name: StructureBase
+        OffsetY: 1
+      - Name: StructureBase
+        OffsetY: 2
+      - Name: StructureBase
+        OffsetY: 3
+      - Name: StructureBase
+        OffsetY: 4
+      - Name: StructureBase
+        OffsetY: 5
+      - Name: StructureBase
+        OffsetY: 6
+      - Name: StructureBase
+        OffsetY: 7
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
+  StadiumTube:
+  - Air:
+      Block: StructureBase
+    Ground:
+      Block: StructureBase
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
+  StadiumTubePillar:
+  - Air:
+      Block: StructureBase
+    Ground:
+      Block: StructureBase
+      Item:
+        Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPos: [0, 1.665, 0]
+        OffsetPivot: [16, 0, 16]
 
   StadiumControlRoadGlass:
   - Items:
