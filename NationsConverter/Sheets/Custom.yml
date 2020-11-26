@@ -238,6 +238,31 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
+  StadiumPlatformSlope2Straight:
+  - Item:
+      Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformBiSlope2StartSmall: ~
+  StadiumPlatformBiSlope2Start:
+  - Item:
+      Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    Block: StructureBase
+  StadiumPlatformBiSlope2End:
+  - Item:
+      Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    Block: StructureBase
+      
+  StadiumPlatformCheckpoint:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
 
   StadiumPlatformToRoadMain:
   - Block:
@@ -410,9 +435,8 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-    - Name: NationsConverter\y_roadFlat\y_waypoint\checkpoint.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 0, 0]
     RemoveGround: true
   StadiumRoadDirtMultiLap:
   - Items:
