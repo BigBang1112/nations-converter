@@ -117,6 +117,7 @@ Blocks:
   - Item:
       Name: NationsConverter\z_terrain\x_dirtHill\DirtHillStraightTSmall.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
       OffsetPos2: [0, -8, 0]
   - Items:
     - Name: NationsConverter\z_terrain\x_dirtHill\DirtHillCornerOutside.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
