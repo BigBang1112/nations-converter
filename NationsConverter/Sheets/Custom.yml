@@ -239,6 +239,16 @@ Blocks:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
 
+  StadiumPlatformToRoadMain:
+  - Block:
+      Name: TrackWallToRoadTech
+      OffsetY: 1
+    Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+
 # Circuit
 
   StadiumCircuitBase:
