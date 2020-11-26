@@ -257,11 +257,6 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Variant.HasValue)
                     block.Variant = conversionBlock.Variant.Value;
 
-                if (block.Coord.Y == 0)
-                    block.IsGround = true;
-                else
-                    block.IsGround = referenceBlock.IsGround;
-
                 if (conversionBlock.Bit17.HasValue)
                     block.Bit17 = conversionBlock.Bit17.Value;
 
@@ -271,10 +266,7 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Flags.HasValue)
                     block.Flags = conversionBlock.Flags.Value;
 
-                if (conversionBlock.Custom)
-                {
-
-                }
+                block.IsGround = block.Coord.Y == 0;
 
                 map.Blocks.Add(block);
             }
