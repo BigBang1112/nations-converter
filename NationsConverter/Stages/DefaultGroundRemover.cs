@@ -12,12 +12,12 @@ namespace NationsConverter.Stages
         {
             map.ImportFileToEmbed("UserData/Blocks/NationsConverter/NoGround.Block.Gbx", "Blocks/NationsConverter");
 
-            for (var x = 1; x <= map.Size.GetValueOrDefault().X; x++)
+            for (var x = 0; x < 32; x++)
             {
-                for (var z = 1; z <= map.Size.GetValueOrDefault().Z; z++)
+                for (var z = 0; z < 32; z++)
                 {
-                    Int3 coord = (x, 0, z);
-                    if (version >= GameVersion.TM2)
+                    Int3 coord = (x + 8, 0, z + 8);
+                    if (version <= GameVersion.TMUF)
                         coord += parameters.Stadium2RelativeOffsetCoord.XZ;
                     map.Blocks.Add(new CGameCtnBlock(@"NationsConverter\NoGround.Block.Gbx_CustomBlock", Direction.North, coord) { IsGround = true });
                 }

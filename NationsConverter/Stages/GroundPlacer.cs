@@ -25,9 +25,9 @@ namespace NationsConverter.Stages
 
             var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill" };
 
-            for (var x = 0; x < map.Size.GetValueOrDefault().X; x++)
+            for (var x = 0+8; x < 32+8; x++)
             {
-                for (var z = 0; z < map.Size.GetValueOrDefault().Z; z++)
+                for (var z = 0+8; z < 32+8; z++)
                 {
                     var dirtBlockExists = false;
 
