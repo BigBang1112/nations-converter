@@ -23,7 +23,7 @@ namespace NationsConverter.Stages
             map.ImportFileToEmbed("UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
             map.ImportFileToEmbed("UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
 
-            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill" };
+            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
 
             for (var x = 0+8; x < 32+8; x++)
             {
