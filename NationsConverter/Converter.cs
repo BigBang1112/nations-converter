@@ -1,10 +1,14 @@
 ﻿using GBX.NET.Engines.Game;
 using NationsConverter.Stages;
+using System.IO;
+using System.Reflection;
 
 namespace NationsConverter
 {
     public class Converter
     {
+        public static string LocalDirectory { get; }
+
         public ConverterParameters Parameters { get; set; } = new ConverterParameters();
         public EmbedManager EmbedManager { get; set; } = new EmbedManager();
 
@@ -31,6 +35,11 @@ namespace NationsConverter
             MapChunkCleaner.Process(map, version, Parameters);
             DefaultGroundRemover.Process(map, version, Parameters);
             MetadataDefiner.Process(map, version, Parameters);
+        }
+
+        static Converter()
+        {
+            LocalDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         }
     }
 }

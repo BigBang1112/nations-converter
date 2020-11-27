@@ -172,7 +172,7 @@ namespace NationsConverter.Stages
                 if (conversion.Macroblock != null)
                 {
                     if (!macroblocks.TryGetValue(conversion.Macroblock, out CGameCtnMacroBlockInfo macro))
-                        macro = macroblocks[conversion.Macroblock] = GameBox.Parse<CGameCtnMacroBlockInfo>($"Macroblocks/{conversion.Macroblock}").MainNode;
+                        macro = macroblocks[conversion.Macroblock] = GameBox.Parse<CGameCtnMacroBlockInfo>($"{Converter.LocalDirectory}/Macroblocks/{conversion.Macroblock}").MainNode;
                     map.PlaceMacroblock(macro, referenceBlock.Coord + (0, conversion.OffsetY, 0), Dir.Add(referenceBlock.Direction, (Direction)conversion.OffsetDir));
                 }
 
@@ -273,7 +273,7 @@ namespace NationsConverter.Stages
 
             var sortedLog = log.ToList();
             sortedLog.Sort();
-            File.WriteAllText("missing_blocks.txt", string.Join("\n", sortedLog));
+            File.WriteAllText($"{Converter.LocalDirectory}/missing_blocks.txt", string.Join("\n", sortedLog));
         }
     }
 }

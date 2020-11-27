@@ -10,7 +10,7 @@ namespace NationsConverter.Stages
     {
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
         {
-            map.ImportFileToEmbed("UserData/Blocks/NationsConverter/NoGround.Block.Gbx", "Blocks/NationsConverter");
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Blocks/NationsConverter/NoGround.Block.Gbx", "Blocks/NationsConverter");
 
             for (var x = 0; x < 32; x++)
             {

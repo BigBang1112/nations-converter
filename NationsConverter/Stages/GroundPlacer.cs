@@ -20,8 +20,8 @@ namespace NationsConverter.Stages
                     x.Coord -= (0, 8, 0);
             });
 
-            map.ImportFileToEmbed("UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
-            map.ImportFileToEmbed("UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
 
             var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
 

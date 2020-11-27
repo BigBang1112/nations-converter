@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 
 namespace NationsConverter
@@ -10,6 +11,9 @@ namespace NationsConverter
     {
         public void CopyUsedEmbed(CGameCtnChallenge map, Definitions definitions)
         {
+            var assembly = Assembly.GetExecutingAssembly();
+            var localDirectory = Path.GetDirectoryName(assembly.Location);
+
             var previousEmbed = map.Embeds; // TODO: maybe later some kind of embed transfer support
 
             map.CreateChunk<CGameCtnChallenge.Chunk03043054>();
@@ -46,7 +50,7 @@ namespace NationsConverter
                                         try
                                         {
                                             if (conversionBlock.Name.EndsWith(".Block.Gbx_CustomBlock"))
-                                                map.ImportFileToEmbed($"UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
+                                                map.ImportFileToEmbed($"{localDirectory}UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
                                         }
                                         catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
                                         {
