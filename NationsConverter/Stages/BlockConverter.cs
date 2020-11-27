@@ -100,24 +100,27 @@ namespace NationsConverter.Stages
                 }
 
                 if (conversion.Item != null)
-                {
-                    var center = new Vec3(0, 0, 0);
-                    PlaceItem(conversion.Item, center);
-                }
+                    PlaceItem(conversion.Item);
 
                 if (conversion.Items != null)
-                {
-                    var center = new Vec3(0, 0, 0);
-
                     foreach (var item in conversion.Items)
-                        PlaceItem(item, center);
-                }
+                        PlaceItem(item);
 
-                void PlaceItem(ConversionItem conversionItem, Vec3 center)
+                void PlaceItem(ConversionItem conversionItem)
                 {
+                    if (conversionItem == null) return;
+
                     var offsetPos = (Vec3)conversionItem.OffsetPos;
 
+                    var center = new Vec3(0, 0, 0);
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
+
+                    if (version <= GameVersion.TMUF)
+                    {
+                        offsetPos -= parameters.Stadium2RelativeOffset.XZ;
+                        if (conversionItem.OffsetPos2 != null)
+                            offsetPos += (Vec3)conversionItem.OffsetPos2;
+                    }
 
                     var name = "";
                     var collection = 26;
@@ -210,9 +213,9 @@ namespace NationsConverter.Stages
                         freeBlock.Author = "Nadeo";
                 }
 
-                if (referenceBlock.IsGround && conversion.Ground != null)
+                if (conversion.Ground != null && referenceBlock.IsGround)
                     ProcessConversion(referenceBlock, conversion.Ground);
-                else if (conversion.Air != null)
+                if (conversion.Air != null && !referenceBlock.IsGround)
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
@@ -254,11 +257,6 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Variant.HasValue)
                     block.Variant = conversionBlock.Variant.Value;
 
-                if (block.Coord.Y == 0)
-                    block.IsGround = true;
-                else
-                    block.IsGround = referenceBlock.IsGround;
-
                 if (conversionBlock.Bit17.HasValue)
                     block.Bit17 = conversionBlock.Bit17.Value;
 
@@ -268,10 +266,7 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Flags.HasValue)
                     block.Flags = conversionBlock.Flags.Value;
 
-                if (conversionBlock.Custom)
-                {
-
-                }
+                block.IsGround = block.Coord.Y == 0;
 
                 map.Blocks.Add(block);
             }

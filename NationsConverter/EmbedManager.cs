@@ -28,45 +28,60 @@ namespace NationsConverter
 
                             if (conversion != null)
                             {
-                                if (conversion.Block != null)
-                                    ImportBlock(conversion.Block);
+                                Import(conversion);
 
-                                if (conversion.Blocks != null)
-                                    foreach (var conversionBlock in conversion.Blocks)
-                                        ImportBlock(conversionBlock);
-
-                                void ImportBlock(ConversionBlock conversionBlock)
+                                void Import(Conversion c)
                                 {
-                                    try
+                                    if (c.Block != null)
+                                        ImportBlock(c.Block);
+
+                                    if (c.Blocks != null)
+                                        foreach (var conversionBlock in c.Blocks)
+                                            ImportBlock(conversionBlock);
+
+                                    void ImportBlock(ConversionBlock conversionBlock)
                                     {
-                                        if (conversionBlock.Name.EndsWith(".Block.Gbx_CustomBlock"))
-                                            map.ImportFileToEmbed($"UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
+                                        if (conversionBlock == null) return;
+
+                                        try
+                                        {
+                                            if (conversionBlock.Name.EndsWith(".Block.Gbx_CustomBlock"))
+                                                map.ImportFileToEmbed($"UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
+                                        }
+                                        catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
+                                        {
+
+                                        }
                                     }
-                                    catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
+
+                                    if (c.Item != null)
+                                        ImportItem(c.Item);
+
+                                    if (c.Items != null)
+                                        foreach (var conversionItem in c.Items)
+                                            ImportItem(conversionItem);
+
+                                    void ImportItem(ConversionItem conversionItem)
                                     {
+                                        if (conversionItem == null) return;
 
+                                        try
+                                        {
+                                            var itemName = conversionItem.Name.Split(' ');
+                                            if (itemName.Length >= 3 && itemName[2] != "Nadeo")
+                                                map.ImportFileToEmbed($"UserData/Items/{itemName[0]}", $"Items/{Path.GetDirectoryName(itemName[0])}");
+                                        }
+                                        catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
+                                        {
+
+                                        }
                                     }
-                                }
 
-                                if (conversion.Item != null)
-                                    ImportItem(conversion.Item);
+                                    if (c.Ground != null && block.IsGround)
+                                        Import(c.Ground);
 
-                                if (conversion.Items != null)
-                                    foreach (var conversionItem in conversion.Items)
-                                        ImportItem(conversionItem);
-
-                                void ImportItem(ConversionItem conversionItem)
-                                {
-                                    try
-                                    {
-                                        var itemName = conversionItem.Name.Split(' ');
-                                        if (itemName.Length >= 3 && itemName[2] != "Nadeo")
-                                            map.ImportFileToEmbed($"UserData/Items/{itemName[0]}", $"Items/{Path.GetDirectoryName(itemName[0])}");
-                                    }
-                                    catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
-                                    {
-
-                                    }
+                                    if (c.Air != null && !block.IsGround)
+                                        Import(c.Air);
                                 }
                             }
                         }

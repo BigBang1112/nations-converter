@@ -29,6 +29,7 @@ namespace NationsConverterCLI
             }
 
             var assembly = Assembly.GetExecutingAssembly();
+            var localDirectory = Path.GetDirectoryName(assembly.Location);
 
             Log.OnLogEvent += Log_LoggedMainEvent;
 
@@ -37,18 +38,17 @@ namespace NationsConverterCLI
                     Encoding.ASCII.GetString(Resources.StadiumBlockModels)
                 );
 
-            //List<string> files = Directory.GetFiles(@"Stadium", "*.*", SearchOption.AllDirectories).ToList();
             List<string> files = new List<string>
             {
                 fileName
-            };            
+            };
 
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
-            var sheet = YamlManager.Parse<Sheet>("Sheets/Official.yml");
+            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Official.yml");
             var sheets = new Sheet[]
             {
-                YamlManager.Parse<Sheet>("Sheets/Custom.yml")
+                YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Custom.yml")
             };
 
             var sheetMgr = new SheetManager(sheet, sheets);
@@ -80,9 +80,17 @@ namespace NationsConverterCLI
             {
                 var map = gbxMap.MainNode;
 
-                converter.Convert(map, GameVersion.TM2);
+                var chunk01F = map.GetChunk<CGameCtnChallenge.Chunk0304301F>();
 
-                gbxMap.Save(map.MapName + ".Map.Gbx");
+                int version;
+                if (chunk01F.Version <= 1)
+                    version = GameVersion.TMUF;
+                else
+                    version = GameVersion.TM2;
+
+                converter.Convert(map, version);
+
+                gbxMap.Save($"{localDirectory}/{map.MapName}.Map.Gbx");
             }
         }
 

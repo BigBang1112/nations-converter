@@ -20,17 +20,21 @@ namespace NationsConverter.Stages
                     x.Coord -= (0, 8, 0);
             });
 
+            map.ImportFileToEmbed("UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
             map.ImportFileToEmbed("UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
 
-            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill" };
+            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
 
-            for (var x = 0; x < map.Size.GetValueOrDefault().X; x++)
+            for (var x = 0+8; x < 32+8; x++)
             {
-                for (var z = 0; z < map.Size.GetValueOrDefault().Z; z++)
+                for (var z = 0+8; z < 32+8; z++)
                 {
                     var dirtBlockExists = false;
 
-                    foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)))
+                    foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
+                    || (version <= GameVersion.TMUF &&
+                       (o.Coord == (x - 1, 1, z - 1) // TMNF hill
+                    ||  o.Coord == (x - 1, -1, z - 1))))) // TMNF base
                     {
                         if (dirtBlocks.Contains(groundBlock.Name))
                         {
@@ -54,6 +58,15 @@ namespace NationsConverter.Stages
                 if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill")
                 {
                     var dirtBlock = x;
+
+                    var offset = default(Int3);
+                    if(version <= GameVersion.TMUF)
+                    {
+                        if (x.Name == "StadiumDirt")
+                            offset += (0, 1, 0);
+                        else if (x.Name == "StadiumDirtHill")
+                            offset -= (0, 1, 0);
+                    }
 
                     foreach (var block in blocks)
                     {
@@ -93,10 +106,10 @@ namespace NationsConverter.Stages
                                                 }
 
                                                 foreach (var unit in newCoords)
-                                                    if (dirtBlock.Coord == block.Coord + (Int3)(unit - newMin))
+                                                    if (dirtBlock.Coord + offset == block.Coord + (Int3)(unit - newMin))
                                                         return false;
                                             }
-                                            else if (dirtBlock.Coord == block.Coord)
+                                            else if (dirtBlock.Coord + offset == block.Coord)
                                                 return false;
                                         }
                                     }

@@ -9,6 +9,7 @@
 		<Version>0.1.0</Version>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
+		<Platforms>x86</Platforms>
 	</PropertyGroup>
 
 	<ItemGroup>
