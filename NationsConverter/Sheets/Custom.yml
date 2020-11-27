@@ -437,6 +437,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 1.655, 0]
     RemoveGround: true
   StadiumRoadDirtMultiLap:
   - Items:
@@ -526,9 +527,11 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\tb_TM2RoadDirt\w_high\TM2RoadDirtHighStraightFence.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-    - Name: TM2DIRT\y_High\x_Special\z_TM2_RoadDirtHighCP.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+    - Name: NationsConverter\tb_TM2RoadDirt\w_high\TM2RoadDirtHighStraightCpSupport.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 6, 0]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
     - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
   StadiumRoadDirtHighMultiLap: ~
