@@ -959,6 +959,10 @@ Blocks:
       Item:
         Name: NationsConverter\r_support\v_control\ControlCameraBaseAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraBaseGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlCameraDeadend.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
@@ -966,12 +970,20 @@ Blocks:
       Item:
         Name: NationsConverter\r_support\v_control\ControlCameraDeadendAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraDeadendGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlCameraCorner.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
     Air:
       Item:
         Name: NationsConverter\r_support\v_control\ControlCameraCornerAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraCornerGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlCameraStraight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
@@ -983,6 +995,10 @@ Blocks:
       - Name: NationsConverter\r_support\v_control\ControlCameraStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
         OffsetRot: [180, 0, 0]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraStraightGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlCameraT.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
@@ -990,9 +1006,17 @@ Blocks:
       Item:
         Name: NationsConverter\r_support\v_control\ControlCameraStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraTGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
   - Item:
       Name: NationsConverter\r_support\v_control\ControlCameraCross.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraCrossGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
   StadiumControlCameraPub:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlPub.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
