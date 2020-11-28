@@ -215,6 +215,12 @@ Blocks:
       Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
 
+  StadiumGrassCheckpoint:
+  - Item:
+      Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 1.655, 0]
+
   StadiumHolePillar:
   - Blocks:
     - Name: RoadTechStraight
