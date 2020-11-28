@@ -6,7 +6,7 @@
 		<PlatformTarget>x86</PlatformTarget>
 		<Product>Nations Converter (CLI)</Product>
 		<Authors>BigBang1112</Authors>
-		<Version>0.1.0</Version>
+		<Version>0.2.1</Version>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
 		<Platforms>x86</Platforms>

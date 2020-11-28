@@ -11,9 +11,6 @@ namespace NationsConverter
     {
         public void CopyUsedEmbed(CGameCtnChallenge map, Definitions definitions)
         {
-            var assembly = Assembly.GetExecutingAssembly();
-            var localDirectory = Path.GetDirectoryName(assembly.Location);
-
             var previousEmbed = map.Embeds; // TODO: maybe later some kind of embed transfer support
 
             map.CreateChunk<CGameCtnChallenge.Chunk03043054>();
@@ -50,7 +47,7 @@ namespace NationsConverter
                                         try
                                         {
                                             if (conversionBlock.Name.EndsWith(".Block.Gbx_CustomBlock"))
-                                                map.ImportFileToEmbed($"{localDirectory}UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
+                                                map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Blocks/{conversionBlock.Name}", $"Blocks/{Path.GetDirectoryName(conversionBlock.Name)}");
                                         }
                                         catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
                                         {
@@ -73,7 +70,7 @@ namespace NationsConverter
                                         {
                                             var itemName = conversionItem.Name.Split(' ');
                                             if (itemName.Length >= 3 && itemName[2] != "Nadeo")
-                                                map.ImportFileToEmbed($"UserData/Items/{itemName[0]}", $"Items/{Path.GetDirectoryName(itemName[0])}");
+                                                map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/{itemName[0]}", $"Items/{Path.GetDirectoryName(itemName[0])}");
                                         }
                                         catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
                                         {
