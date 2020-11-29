@@ -252,6 +252,11 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\y_roadFlat\v_obstacle\TechNarrowCenterGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0.01, 16]
+  StadiumBump1:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
 
 # Slope
 
