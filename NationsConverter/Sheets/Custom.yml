@@ -237,6 +237,18 @@ Blocks:
       Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPos: [0, 2.01, 0]
       OffsetPivot: [16, 0, 16]
+  StadiumHolePillar2Front:
+  - Block: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [4, 2, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-4, 2, 0]
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureGroundWide.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 2.01, 0]
+      OffsetRot: [90, 0, 0]
+      OffsetPivot: [16, 0, 16]
   StadiumHole:
   - Item:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadTechStraightObstacleHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
