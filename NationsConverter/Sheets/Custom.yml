@@ -1080,6 +1080,29 @@ Blocks:
         OffsetRot: [180, 0, 0]
 
 # Inflatables
+  
+  StadiumInflatableCastle:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\Castle.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  StadiumInflatableCastleDoor:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\CastleDoor.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [-32, 0, 0]
+    OffsetPivotByBlockModel: true
+  StadiumInflatableCastleBig:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\CastleBig.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [-16, 0, -16]
+    OffsetPivotByBlockModel: true
+  StadiumInflatableCactus:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\Cactus.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  StadiumInflatableSnowTree:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\Trees.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+  StadiumInflatablePalmTree:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\Palms.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
 
   StadiumSculptA:
   - Item:
