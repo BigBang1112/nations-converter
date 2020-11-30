@@ -281,7 +281,7 @@ Blocks:
 
   StadiumHoleTilt:
   - Item:
-      Name: NationsConverter\w_tilt\t_obstacle\RoadTechTiltHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\w_roadTilt\t_obstacle\RoadTechTiltHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetRot: [180, 0, 0]
 
