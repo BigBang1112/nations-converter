@@ -276,12 +276,21 @@ Blocks:
   - Item:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadTechSlopeStraightObstacleTM2.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
+  StadiumBump1Slope:
+  - Item:
+      Name: NationsConverter\x_roadSlope\v_obstacle\RoadBump1Slope.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
 
 # RoadTilt
 
   StadiumHoleTilt:
   - Item:
       Name: NationsConverter\w_roadTilt\t_obstacle\RoadTechTiltHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumBump1Tilt:
+  - Item:
+      Name: NationsConverter\w_roadTilt\t_obstacle\RoadBump1Tilt.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetRot: [180, 0, 0]
 
