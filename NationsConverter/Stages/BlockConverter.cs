@@ -194,6 +194,9 @@ namespace NationsConverter.Stages
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, (16, 0, 16), radians);
                     // Applies the block rotation from the center of the entire block structure
 
+                    if (version <= GameVersion.TMUF)
+                        offsetPos -= parameters.Stadium2RelativeOffset * (1, 0, 1);
+
                     CGameCtnBlockSkin skin = null;
                     if (block.Skin != null)
                     {
