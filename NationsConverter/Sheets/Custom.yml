@@ -283,6 +283,19 @@ Blocks:
 
 # Slope
 
+  StadiumHolePillarSlope:
+  - Blocks:
+    - Name: RoadTechSlopeStraight
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    - Name: StructureBase
+      Ghost: true
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 6.01, 0]
+      OffsetRot: [0, 14, 0]
   StadiumHoleSlope:
   - Item:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadTechSlopeStraightObstacleTM2.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ

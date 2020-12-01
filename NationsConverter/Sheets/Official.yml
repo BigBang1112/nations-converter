@@ -184,7 +184,14 @@ Blocks:
   StadiumRoadMainFWSlope: [ RoadTechSpecialNoEngineSlope ]
   StadiumRoadMainForceAccelerationSlope: ~ #
 
-  StadiumHolePillarSlope: [ RoadTechSlopeStraight ] #
+  StadiumHolePillarSlope:
+  - Blocks:
+    - Name: RoadTechSlopeStraight
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    - Name: StructureBase
+      Ghost: true
   StadiumHoleSlope: [ RoadTechSlopeStraight ] #
   StadiumRoadStretchSlope: [ RoadTechSlopeStraight ] #
   StadiumBump1Slope: [ RoadTechSlopeStraight ] #
@@ -295,7 +302,7 @@ Blocks:
       Name: RoadTechTiltCurve2UpRight
       OffsetDir: 2
   
-  StadiumHolePillarTilt: #
+  StadiumHolePillarTilt:
   - Blocks:
     - Name: RoadTechTiltStraight
       OffsetDir: 2
