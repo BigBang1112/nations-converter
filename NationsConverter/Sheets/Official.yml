@@ -501,7 +501,10 @@ Blocks:
     - Name: PlatformTechCheckpoint
       OffsetY: 1
     - Name: TrackWallBranchCross
-  StadiumPlatformCheckpointDown: [ PlatformTechCheckpointSlope2Down ]
+  StadiumPlatformCheckpointDown:
+  - Block:
+      Name: PlatformTechCheckpointSlope2Down
+      OffsetY: 1
   StadiumPlatformCheckpointLeft:
   - Block:
       Name: PlatformTechCheckpointSlope2Left
