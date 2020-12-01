@@ -352,6 +352,22 @@ Blocks:
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  # StadiumPlatformCheckpointDown:
+  # StadiumPlatformCheckpointLeft:
+  StadiumPlatformCheckpointRight:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 15.9, 0]
+      OffsetRot: [0, 0, -26.5]
+  # StadiumPlatformCheckpointUp:
 
   StadiumPlatformToRoadMain:
   - Block:
