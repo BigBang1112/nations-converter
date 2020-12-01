@@ -305,6 +305,17 @@ Blocks:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadBump1Slope.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
 
+  StadiumRoadMainGTDiag4x3Slope:
+  - Item:
+      Name: NationsConverter\x_roadSlope\u_chicane\TechRoadSlopeChicane4L.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumRoadMainGTDiag4x3SlopeMirror:
+  - Item:
+      Name: NationsConverter\x_roadSlope\u_chicane\TechRoadSlopeChicane4R.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+
 # RoadTilt
 
   StadiumHoleTilt:
