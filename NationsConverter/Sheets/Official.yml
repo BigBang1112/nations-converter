@@ -195,8 +195,10 @@ Blocks:
   StadiumRoadMainGTDiag2x2SlopeMirror: [ RoadTechChicaneX2SlopeRight ]
   StadiumRoadMainGTDiag3x2Slope: [ RoadTechChicaneX3SlopeLeft ]
   StadiumRoadMainGTDiag3x2SlopeMirror: [ RoadTechChicaneX3SlopeRight ]
-  StadiumRoadMainGTDiag4x3Slope: ~ #
-  StadiumRoadMainGTDiag4x3SlopeMirror: ~ #
+  StadiumRoadMainGTDiag4x3Slope:
+  - Macroblock: StadiumRoadMainGTDiag4x3Slope.Macroblock.Gbx
+  StadiumRoadMainGTDiag4x3SlopeMirror:
+  - Macroblock: StadiumRoadMainGTDiag4x3SlopeMirror.Macroblock.Gbx
 
   StadiumRoadMainYShapedDiag2SlopeUp: [ RoadTechBranchYShaped2X3SlopeUp ]
   StadiumRoadMainYShapedDiag2SlopeDown: [ RoadTechBranchYShaped2X3SlopeDown ]
