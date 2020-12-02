@@ -490,6 +490,7 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiBankedR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
   StadiumCircuitBorderSlopeStartLeft:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiFlatToBankedL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -510,6 +511,28 @@ Blocks:
       Name: NationsConverter\u_platform\w_denti\DentiBankedToFlatR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetRot: [90, 0, 0]
+
+  StadiumCircuitBorderCornerIn:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderCornerOut:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1Out.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+
+  StadiumCircuitBorderSlopeGTCurve4OutLeftBottom:
+  - Item:
+      Name: NationsConverter\u_platform\r_dentiCurve4\BorderSlopeCurve4Out.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumCircuitBorderSlopeGTCurve4OutRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\r_dentiCurve4\BorderSlopeCurve4Out4.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, -8, 0]
+    OffsetPivotByBlockModel: true
 
 # RoadDirt
 
@@ -811,7 +834,15 @@ Blocks:
 
   StadiumRoadDirtWave_x2: ~
   StadiumRoadDirtWave_x1: ~
-  StadiumRoadDirtToRoadGrass: ~
+  StadiumRoadDirtToRoadGrass:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\z_terrain\v_dirt\DirtToRoadGrass.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    RemoveGround: true
   StadiumDirtDeadendDoor: ~
   StadiumDirtDeadendSpot: ~
   StadiumDirtDeadendTent1: ~
