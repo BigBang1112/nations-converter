@@ -22,7 +22,11 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos2: [0, 8, 0]
       OffsetRot: [90, 0, 0]
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightY.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos2: [0, 8, 0]
+      OffsetRot: [90, 0, 0]
   - ~
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightSide.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -36,7 +40,10 @@ Blocks:
       Name: NationsConverter\z_terrain\z_water\WaterStraightJ.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetPos2: [0, 8, 0]
-  - ~
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightT.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos2: [0, 8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterCurveOut.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
