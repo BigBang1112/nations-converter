@@ -1248,6 +1248,10 @@ Blocks:
       - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
         OffsetRot: [180, 0, 0]
+    Ground:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlCameraStraightGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
 
 # Inflatables
   
