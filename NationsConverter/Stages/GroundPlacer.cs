@@ -25,16 +25,18 @@ namespace NationsConverter.Stages
 
             var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
 
+            var grassCoords = new List<Int3>();
+
             for (var x = 0+8; x < 32+8; x++)
             {
-                for (var z = 0+8; z < 32+8; z++)
+                for (var z = 0 + 8; z < 32 + 8; z++)
                 {
                     var dirtBlockExists = false;
 
                     foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
                     || (version <= GameVersion.TMUF &&
                        (o.Coord == (x - 1, 1, z - 1) // TMNF hill
-                    ||  o.Coord == (x - 1, -1, z - 1))))) // TMNF base
+                    || o.Coord == (x - 1, -1, z - 1))))) // TMNF base
                     {
                         if (dirtBlocks.Contains(groundBlock.Name))
                         {
@@ -44,10 +46,14 @@ namespace NationsConverter.Stages
                     }
 
                     if (!dirtBlockExists)
+                    {
+                        grassCoords.Add((x, 1, z));
+
                         map.PlaceAnchoredObject(
                             (@"NationsConverter\z_terrain\w_grass\GrassGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
                             (x, 1, z) * map.Collection.GetBlockSize(),
                             (0, 0, 0));
+                    }
                 }
             }
 
@@ -55,7 +61,7 @@ namespace NationsConverter.Stages
 
             map.Blocks = blocks.AsParallel().Where(x =>
             {
-                if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill")
+                if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill" || x.Name == "StadiumDirtBorder")
                 {
                     var dirtBlock = x;
 
@@ -66,6 +72,8 @@ namespace NationsConverter.Stages
                             offset += (0, 1, 0);
                         else if (x.Name == "StadiumDirtHill")
                             offset -= (0, 1, 0);
+                        else if (x.Name == "StadiumDirtBorder")
+                            offset += (0, 1, 0);
                     }
 
                     foreach (var block in blocks)
@@ -118,6 +126,38 @@ namespace NationsConverter.Stages
                         }
                     }
                 }
+                return true;
+            }).ToList();
+
+            map.AnchoredObjects = map.AnchoredObjects.Where(x =>
+            {
+                foreach(var block in map.Blocks)
+                {
+                    if (parameters.Definitions.TryGetValue(block.Name, out Conversion[] variants))
+                    {
+                        if (variants != null)
+                        {
+                            var variant = block.Variant.GetValueOrDefault();
+
+                            if (variants.Length > variant)
+                            {
+                                var conversion = variants[variant];
+
+                                if (conversion != null) // If the variant actually has a conversion
+                                {
+                                    if (conversion.RemoveGround)
+                                    {
+                                        if ((block.Coord+(1,1,1)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                        {
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 return true;
             }).ToList();
         }
