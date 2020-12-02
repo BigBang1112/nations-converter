@@ -371,12 +371,10 @@ Blocks:
   - Item:
       Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-    Block: StructureBase
   StadiumPlatformBiSlope2End:
   - Item:
       Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-    Block: StructureBase
       
   StadiumPlatformCheckpoint:
   - Items:
@@ -458,6 +456,7 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\z_platform\PlatformFlatToSlope.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+    Block: StructureBase
   StadiumCircuitSlopeStraight:
   - Item:
       Name: NationsConverter\u_platform\z_platform\PlatformSlope.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -466,6 +465,7 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\z_platform\PlatformSlopeToFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+    Block: StructureBase
 
   StadiumCircuitBorderStraight:
   - Item:
