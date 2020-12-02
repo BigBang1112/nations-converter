@@ -318,6 +318,20 @@ Blocks:
 
 # RoadTilt
 
+  StadiumHolePillarTilt:
+  - Blocks:
+    - Name: RoadTechTiltStraight
+      OffsetDir: 2
+    - Name: StructureBase
+      Ghost: true
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 6.01, 0]
+      OffsetRot: [0, 0, -14]
   StadiumHoleTilt:
   - Item:
       Name: NationsConverter\w_roadTilt\t_obstacle\RoadTechTiltHole.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
