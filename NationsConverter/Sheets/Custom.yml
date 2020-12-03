@@ -1026,6 +1026,27 @@ Blocks:
   StadiumRoadDirtHillTiltToRoadSlopeX4Mirror: ~
 
 # Bridges
+  
+  StadiumSculptBridgeSuspendSlope2:
+  - Item:
+      Name: NationsConverter\q_sculpt\x_sculpt\SuspendSlope2Structure.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumSculptBridgeSuspendSlope2Mirror:
+  - Item:
+      Name: NationsConverter\q_sculpt\x_sculpt\SuspendSlope2MirrorStructure.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumSculptBridgeSuspendSlopeEnd:
+  - Item:
+      Name: NationsConverter\q_sculpt\x_sculpt\SuspendSlopeEnd.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumSculptBridgeSuspendSlopeEndMirror:
+  - Item:
+      Name: NationsConverter\q_sculpt\x_sculpt\SuspendSlopeEndMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
 
   StadiumSculptBridgeSlopeStart:
   - Item:
