@@ -681,6 +681,98 @@ Blocks:
     - Name: NationsConverter\u_platform\o_obstacle\CircuitBump.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumCircuitPillar1:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 8.01, 0]
+      OffsetPivot: [16, 0, 16]
+    Block:
+      Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+  StadiumCircuitPillar2:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, -5]
+  StadiumCircuitPillar3:
+  - Block:
+      Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 8.01, 0]
+      OffsetPivot: [16, 0, 16]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, -10]
+  StadiumCircuitPillar5:
+  - Block:
+      Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 8.01, 0]
+      OffsetPivot: [16, 0, 16]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 8, -10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 8, -10]
+  StadiumCircuitPillar6:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 8, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 8, -10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 8, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 8, -10]
+  StadiumCircuitPillar7:
+  - Block:
+      Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPos: [0, 8.01, 0]
+      OffsetPivot: [16, 0, 16]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 8, -5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 8, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 8, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 8, -5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 8, -10]
 
 # RoadDirt
 
