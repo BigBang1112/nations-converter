@@ -646,6 +646,30 @@ Blocks:
       OffsetPos: [0, -8, 0]
     OffsetPivotByBlockModel: true
 
+  StadiumCircuitRampBig:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\u_platform\o_obstacle\Ramp2k.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitRampSmall1x05:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\u_platform\o_obstacle\Ramp625Half.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitRampSmall1x1:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\u_platform\o_obstacle\Ramp625.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [180, 0, 0]
   StadiumCircuitHole:
   - Item:
       Name: NationsConverter\u_platform\o_obstacle\CircuitHole.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
