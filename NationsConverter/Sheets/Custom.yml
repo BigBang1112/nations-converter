@@ -646,6 +646,11 @@ Blocks:
       OffsetPos: [0, -8, 0]
     OffsetPivotByBlockModel: true
 
+  StadiumCircuitHole:
+  - Item:
+      Name: NationsConverter\u_platform\o_obstacle\CircuitHole.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+
 # RoadDirt
 
   StadiumRoadDirtFenceStraight:
