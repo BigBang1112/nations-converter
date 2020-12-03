@@ -1047,16 +1047,34 @@ Blocks:
       Name: NationsConverter\q_sculpt\x_sculpt\SuspendSlopeEndMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
-
-  StadiumSculptBridgeSlopeStart:
+    
+  StadiumSculptBridgePillar:
   - Item:
-      Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStart.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      Name: NationsConverter\r_support\x_bridge\SculptBridgePillar.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+  StadiumSculptBridgePillarMirror:
+  - Item:
+      Name: NationsConverter\r_support\x_bridge\SculptBridgePillarMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumSculptBridgeSlopeStart:
+  - Ground:
+      Item:
+        Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStart.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    Air:
+      Item:
+        Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStartAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
   StadiumSculptBridgeSlopeStartMirror:
-  - Item:
-      Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStartMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
+  - Ground:
+      Item:
+        Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStartMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    Air:
+      Item:
+        Name: NationsConverter\r_support\x_bridge\SculptBridgeSlopeStartMirrorAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
   StadiumSculptBridgeSlopeEnd:
   - Item:
