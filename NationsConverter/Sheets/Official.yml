@@ -812,11 +812,23 @@ Blocks:
       OffsetPos: [0, 8.25, 0]
       OffsetRot: [180, 0, 0]
   StadiumCircuitRampSmall1x1: ~
-  StadiumCircuitHole: *stadiumCircuitBase
-  StadiumCircuitBumpUp: *stadiumCircuitBase
+  StadiumCircuitHole:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBumpUp:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
   StadiumCircuitBumpUp2:
   - Macroblock: StadiumCircuitBumpUp2.Macroblock.Gbx
-  StadiumCircuitBumpDown: *stadiumCircuitBase
+  StadiumCircuitBumpDown: 
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
   StadiumCircuitPillar1:
   - Blocks:
     - Name: PlatformTechBase
