@@ -399,6 +399,40 @@ Blocks:
   - Item:
       Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+  
+  StadiumPlatformTurbo:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformTurboDown:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+    - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlateDown.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformTurboLeft:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlateLeft.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformTurboRight:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
+    - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlateRight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformTurboUp:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlateUp.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
       
   StadiumPlatformCheckpoint:
   - Items:
