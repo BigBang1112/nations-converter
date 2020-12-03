@@ -491,6 +491,27 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     Block: StructureBase
 
+  StadiumCircuitTurbo:
+  - Item:
+      Name: NationsConverter\u_platform\y_boost\PlatformBoost.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitTurboLeft:
+  - Item:
+      Name: NationsConverter\u_platform\y_boost\PlatformBoostBankedL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitTurboUp:
+  - Item:
+      Name: NationsConverter\u_platform\y_boost\PlatformBoostUp.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitTurboRight:
+  - Item:
+      Name: NationsConverter\u_platform\y_boost\PlatformBoostBankedR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitTurboDown:
+  - Item:
+      Name: NationsConverter\u_platform\y_boost\PlatformBoostDown.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+
   StadiumCircuitBorderStraight:
   - Item:
       Name: NationsConverter\u_platform\w_denti\DentiStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
