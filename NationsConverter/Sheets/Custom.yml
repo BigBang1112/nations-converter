@@ -290,6 +290,17 @@ Blocks:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  
+  StadiumRoadMainGTDiag4x3:
+  - Item:
+      Name: NationsConverter\y_roadFlat\u_chicane\TechRoadChicane4L.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumRoadMainGTDiag4x3Mirror:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\TechRoadChicane4R.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
 
 # Slope
 
