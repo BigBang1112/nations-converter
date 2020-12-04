@@ -172,7 +172,13 @@ namespace NationsConverter.Stages
                 if (conversion.Macroblock != null)
                 {
                     if (!macroblocks.TryGetValue(conversion.Macroblock, out CGameCtnMacroBlockInfo macro))
+                    {
                         macro = macroblocks[conversion.Macroblock] = GameBox.Parse<CGameCtnMacroBlockInfo>($"{Converter.LocalDirectory}/Macroblocks/{conversion.Macroblock}").MainNode;
+                        
+                        if (version <= GameVersion.TMUF) // TODO: Fix in GBX.NET
+                            foreach(var obj in macro.AnchoredObjects)
+                                obj.AbsolutePositionInMap += parameters.Stadium2RelativeOffset * (1, 0, 1);
+                    }
                     map.PlaceMacroblock(macro, referenceBlock.Coord + (0, conversion.OffsetY, 0), Dir.Add(referenceBlock.Direction, (Direction)conversion.OffsetDir));
                 }
 
@@ -193,6 +199,9 @@ namespace NationsConverter.Stages
 
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, (16, 0, 16), radians);
                     // Applies the block rotation from the center of the entire block structure
+
+                    if (version <= GameVersion.TMUF)
+                        offsetPos -= parameters.Stadium2RelativeOffset * (1, 0, 1);
 
                     CGameCtnBlockSkin skin = null;
                     if (block.Skin != null)
