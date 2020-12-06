@@ -131,7 +131,9 @@ namespace NationsConverter.Stages
 
             map.AnchoredObjects = map.AnchoredObjects.Where(x =>
             {
-                foreach(var block in map.Blocks)
+                var offset = default(Int3);
+
+                foreach (var block in map.Blocks)
                 {
                     if (parameters.Definitions.TryGetValue(block.Name, out Conversion[] variants))
                     {
@@ -147,10 +149,33 @@ namespace NationsConverter.Stages
                                 {
                                     if (conversion.RemoveGround)
                                     {
-                                        if ((block.Coord+(1,1,1)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                        if (BlockInfoManager.BlockModels.TryGetValue(block.Name, out BlockModel model))
                                         {
-                                            return false;
+                                            var center = default(Vec3);
+                                            var allCoords = new Int3[model.Ground.Length];
+                                            var newCoords = new Vec3[model.Ground.Length];
+                                            var newMin = default(Vec3);
+
+                                            if (model.Ground.Length > 1)
+                                            {
+                                                allCoords = model.Ground.Select(b => (Int3)b.Coord).ToArray();
+                                                var min = new Int3(allCoords.Select(c => c.X).Min(), allCoords.Select(c => c.Y).Min(), allCoords.Select(c => c.Z).Min());
+                                                var max = new Int3(allCoords.Select(c => c.X).Max(), allCoords.Select(c => c.Y).Max(), allCoords.Select(c => c.Z).Max());
+                                                var size = max - min + (1, 1, 1);
+                                                center = (min + max) * .5f;
+
+                                                for (var i = 0; i < model.Ground.Length; i++)
+                                                    newCoords[i] = AdditionalMath.RotateAroundCenter(allCoords[i], center, AdditionalMath.ToRadians(block.Direction));
+
+                                                newMin = new Vec3(newCoords.Select(c => c.X).Min(), newCoords.Select(c => c.Y).Min(), newCoords.Select(c => c.Z).Min());
+                                            }
+
+                                            foreach (var unit in newCoords)
+                                                if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                                    return false;
                                         }
+                                        else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                            return false;
                                     }
                                 }
                             }
