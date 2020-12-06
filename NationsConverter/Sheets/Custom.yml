@@ -965,14 +965,17 @@ Blocks:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     DirtGround:
       Item:
         Name: NationsConverter\z_terrain\v_dirt\HoleDirtCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Item:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtGTCurve3:
@@ -983,14 +986,17 @@ Blocks:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     DirtGround:
       Item:
         Name: NationsConverter\z_terrain\v_dirt\HoleDirtCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Item:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtGTCurve4:
@@ -1001,14 +1007,17 @@ Blocks:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassCurve4.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     DirtGround:
       Item:
         Name: NationsConverter\z_terrain\v_dirt\HoleDirtCurve4.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Item:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueCurve4.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtDiagonaleRight:
@@ -1019,16 +1028,19 @@ Blocks:
       Item:
         Name: NationsConverter\z_terrain\v_dirt\HoleDirtChicane3R.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     GrassGround:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassChicane3R.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Item:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueChicane3R.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
-    RemoveGround: true
+      OffsetPivotByBlockModel: true
     OffsetPivotByBlockModel: true
+    RemoveGround: true
   StadiumRoadDirtDiagonaleLeft:
   - Item:
       Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtChicane3L.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -1037,14 +1049,17 @@ Blocks:
       Item:
         Name: NationsConverter\z_terrain\v_dirt\HoleDirtChicane3L.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     GrassGround:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassChicane3L.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Item:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueChicane3L.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtStraightBirds:
@@ -1113,11 +1128,9 @@ Blocks:
 
   StadiumRoadDirtTurbo:
   - Items:
-    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
-    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightBooster.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
@@ -1359,18 +1372,21 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     DirtGround:
       Items:
       - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     FabricGround:
       Items:
       - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtToRoadDirtHighBridge:
