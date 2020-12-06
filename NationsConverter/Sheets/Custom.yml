@@ -602,6 +602,47 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetRot: [90, 0, 0]
 
+  StadiumCircuitBorderDiagIn:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerIn.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagInLeftBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagInLeftTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagInRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagInRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderDiagOut: 
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOut.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagOutLeftBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagOutLeftTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagOutRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeDiagOutRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+
   StadiumCircuitBorderCornerIn:
   - Item:
       Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1In.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -897,10 +938,19 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\y_roadFlat\y_waypoint\multiLap.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 0, 0]
     RemoveGround: true
 
-  StadiumRoadDirtTurbo: ~
+  StadiumRoadDirtTurbo:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightBooster.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    RemoveGround: true
   StadiumRoadDirtFreeWheeling: ~
   StadiumRoadDirtForceAcceleration: ~
   StadiumRoadDirtNoGrip: ~
