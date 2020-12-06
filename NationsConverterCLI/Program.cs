@@ -30,6 +30,9 @@ namespace NationsConverterCLI
 
             var assembly = Assembly.GetExecutingAssembly();
             var localDirectory = Path.GetDirectoryName(assembly.Location);
+            var outputDirectory = localDirectory;
+            if (args.Length >= 2)
+                outputDirectory = args[1];
 
             Log.OnLogEvent += Log_LoggedMainEvent;
 
@@ -90,7 +93,7 @@ namespace NationsConverterCLI
 
                 converter.Convert(map, version);
 
-                gbxMap.Save($"{localDirectory}/{map.MapName}.Map.Gbx");
+                gbxMap.Save($"{outputDirectory}/{Path.GetFileNameWithoutExtension(Path.GetFileNameWithoutExtension(gbxMap.FileName))}.Map.Gbx");
             }
         }
 
