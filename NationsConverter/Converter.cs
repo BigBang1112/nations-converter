@@ -10,6 +10,7 @@ namespace NationsConverter
         public static string LocalDirectory { get; }
 
         public ConverterParameters Parameters { get; set; } = new ConverterParameters();
+        public ConverterTemporary Temporary { get; set; }
         public EmbedManager EmbedManager { get; set; } = new EmbedManager();
 
         public UnassignedCleaner UnassignedCleaner { get; } = new UnassignedCleaner();
@@ -25,12 +26,14 @@ namespace NationsConverter
 
         public void Convert(CGameCtnChallenge map, int version)
         {
+            Temporary = new ConverterTemporary();
+
             UnassignedCleaner.Process(map, version, Parameters);
             BaseConverter.Process(map, version, Parameters);
-            GroundMaker.Process(map, version, Parameters);
+            GroundMaker.Process(map, version, Parameters, Temporary);
             ModeConverter.Process(map, version, Parameters);
             MediaTrackerConverter.Process(map, version, Parameters);
-            BlockConverter.Process(map, version, Parameters);
+            BlockConverter.Process(map, version, Parameters, Temporary);
             DupeCleaner.Process(map, version, Parameters);
             MapChunkCleaner.Process(map, version, Parameters);
             DefaultGroundRemover.Process(map, version, Parameters);

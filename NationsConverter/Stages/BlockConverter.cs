@@ -12,7 +12,7 @@ namespace NationsConverter.Stages
 {
     public class BlockConverter : IStage
     {
-        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
             var macroblocks = new Dictionary<string, CGameCtnMacroBlockInfo>();
             var log = new HashSet<string>();
@@ -222,9 +222,19 @@ namespace NationsConverter.Stages
                         freeBlock.Author = "Nadeo";
                 }
 
-                if (conversion.Ground != null && referenceBlock.IsGround)
-                    ProcessConversion(referenceBlock, conversion.Ground);
-                if (conversion.Air != null && !referenceBlock.IsGround)
+                if (referenceBlock.IsGround)
+                {
+                    if(conversion.Ground != null)
+                        ProcessConversion(referenceBlock, conversion.Ground);
+
+                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x => x == referenceBlock.Coord))
+                        ProcessConversion(referenceBlock, conversion.DirtGround);
+                    else if (conversion.FabricGround != null && blocks.Exists(x => x.Coord.XZ == referenceBlock.Coord.XZ && x.Name == "StadiumFabricCross1x1"))
+                        ProcessConversion(referenceBlock, conversion.FabricGround);
+                    else if (conversion.GrassGround != null)
+                        ProcessConversion(referenceBlock, conversion.GrassGround);
+                }
+                else if (conversion.Air != null)
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
@@ -283,6 +293,11 @@ namespace NationsConverter.Stages
             var sortedLog = log.ToList();
             sortedLog.Sort();
             File.WriteAllText($"{Converter.LocalDirectory}/missing_blocks.txt", string.Join("\n", sortedLog));
+        }
+
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        {
+            throw new NotImplementedException();
         }
     }
 }

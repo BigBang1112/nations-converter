@@ -10,7 +10,7 @@ namespace NationsConverter.Stages
 {
     public class GroundPlacer : IStage
     {
-        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
             map.Blocks.ForEach(x =>
             {
@@ -61,6 +61,9 @@ namespace NationsConverter.Stages
 
             map.Blocks = blocks.AsParallel().Where(x =>
             {
+                if (x.Name == "StadiumDirt")
+                    temporary.DirtCoords.Add(x.Coord);
+
                 if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill" || x.Name == "StadiumDirtBorder")
                 {
                     var dirtBlock = x;
@@ -185,6 +188,11 @@ namespace NationsConverter.Stages
 
                 return true;
             }).ToList();
+        }
+
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        {
+            throw new NotImplementedException();
         }
     }
 }
