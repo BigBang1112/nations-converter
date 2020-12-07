@@ -1584,6 +1584,80 @@ Blocks:
   StadiumRoadDirtHillTiltToRoadSlopeX4: ~
   StadiumRoadDirtHillTiltToRoadSlopeX4Mirror: ~
 
+# Trench
+
+  StadiumTrenchStraight: ~
+  StadiumTrenchStraightTunnel: ~
+  StadiumTrenchCorner: ~
+  StadiumTrenchCross: ~
+  StadiumTrenchCrossTunnel: ~
+  StadiumTrenchGTCurve2: ~
+  StadiumTrenchGTCurve3: ~
+  StadiumTrenchGTCurve3Tunnel: ~
+  StadiumTrenchGTCurve2Tunnel: ~
+
+  StadiumTrenchCheckpoint: ~
+  StadiumTrenchMultiLap: ~
+  StadiumTrenchFreeWheeling: ~
+  StadiumTrenchTurbo: ~
+  StadiumTrenchStraightScreen: ~
+  StadiumTrenchInPillar: ~
+
+  StadiumTrenchToRoadMain: ~
+  StadiumTrenchToRoadMainX2:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchToRoadX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumTrenchToRoadMainBiSlopeStart: ~
+  StadiumTrenchXRoadMain: ~
+  StadiumTrenchToRoadDirt: ~
+  StadiumTrenchToRoadDirtX2:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchToRoadDirtX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadDirtX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadDirtX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadDirtX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumTrenchToPlatformBiSlopeStart: ~
+  StadiumTrenchToLoopStart: ~
+
 # Bridges
   
   StadiumSculptBridgeSuspendSlope2:
