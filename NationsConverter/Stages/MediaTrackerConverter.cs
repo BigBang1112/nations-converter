@@ -13,12 +13,20 @@ namespace NationsConverter.Stages
             var offset = parameters.StadiumOffset;
             var offsetCoord = parameters.StadiumOffsetCoord;
 
-            //if (version >= GameVersion.TM2)
-            //    offset -= MainConverter.Parameters.Stadium2RelativeOffset;
+            if (version <= GameVersion.TMUF)
+            {
+                offsetCoord *= (3, 1, 3);
+                //offset -= MainConverter.Parameters.Stadium2RelativeOffset;
+            }
+
+            if(version >= GameVersion.TM2)
+            {
+                offsetCoord -= (0, 8, 0);
+            }
 
             map.TransferMediaTrackerTo049();
             map.OffsetMediaTrackerCameras(offset);
-            map.OffsetMediaTrackerTriggers(offsetCoord * (3, 1, 3));
+            map.OffsetMediaTrackerTriggers(offsetCoord);
         }
     }
 }
