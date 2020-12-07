@@ -1813,7 +1813,26 @@ Blocks:
     RemoveGround: true
   StadiumTrenchInPillar: ~
 
-  StadiumTrenchToRoadMain: ~
+  StadiumTrenchToRoadMain:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchToRoadX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchToRoadMainX2:
   - Item:
       Name: NationsConverter\s_underground\TM2TrenchToRoadX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -1863,7 +1882,26 @@ Blocks:
       OffsetDir: 1
       OffsetY: 1
     RemoveGround: true
-  StadiumTrenchToRoadDirt: ~
+  StadiumTrenchToRoadDirt:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchToRoadDirtX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadDirtX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadDirtX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadDirtX1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchToRoadDirtX2:
   - Item:
       Name: NationsConverter\s_underground\TM2TrenchToRoadDirtX2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
