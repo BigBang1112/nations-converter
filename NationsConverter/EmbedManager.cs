@@ -85,7 +85,7 @@ namespace NationsConverter
                                     if (c.Air != null && !block.IsGround)
                                         Import(c.Air);
 
-                                    if(c.DirtGround != null && map.Blocks.Exists(x => x.Coord == block.Coord && x.Name == "StadiumDirt"))
+                                    if(c.DirtGround != null && map.Blocks.Exists(x => x.Coord.XZ == block.Coord.XZ && x.Name == "StadiumDirt"))
                                         Import(c.DirtGround);
                                     else if(c.FabricGround != null && map.Blocks.Exists(x => x.Coord.XZ == block.Coord.XZ && x.Name == "StadiumFabricCross1x1"))
                                         Import(c.FabricGround);

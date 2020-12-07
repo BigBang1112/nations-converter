@@ -227,7 +227,7 @@ namespace NationsConverter.Stages
                     if(conversion.Ground != null)
                         ProcessConversion(referenceBlock, conversion.Ground);
 
-                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x => x == referenceBlock.Coord))
+                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x => x.XZ == referenceBlock.Coord.XZ))
                         ProcessConversion(referenceBlock, conversion.DirtGround);
                     else if (conversion.FabricGround != null && blocks.Exists(x => x.Coord.XZ == referenceBlock.Coord.XZ && x.Name == "StadiumFabricCross1x1"))
                         ProcessConversion(referenceBlock, conversion.FabricGround);
