@@ -1586,21 +1586,231 @@ Blocks:
 
 # Trench
 
-  StadiumTrenchStraight: ~
-  StadiumTrenchStraightTunnel: ~
-  StadiumTrenchCorner: ~
+  StadiumTrenchStraight:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
+  StadiumTrenchStraightTunnel:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
+  StadiumTrenchCorner:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchCurve1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve1.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchCross: ~
   StadiumTrenchCrossTunnel: ~
-  StadiumTrenchGTCurve2: ~
-  StadiumTrenchGTCurve3: ~
-  StadiumTrenchGTCurve3Tunnel: ~
-  StadiumTrenchGTCurve2Tunnel: ~
+  StadiumTrenchGTCurve2:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumTrenchGTCurve3:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumTrenchGTCurve3Tunnel:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve3.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumTrenchGTCurve2Tunnel:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve2.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
 
-  StadiumTrenchCheckpoint: ~
+  StadiumTrenchCheckpoint:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 2, 0]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchMultiLap: ~
   StadiumTrenchFreeWheeling: ~
-  StadiumTrenchTurbo: ~
-  StadiumTrenchStraightScreen: ~
+  StadiumTrenchTurbo:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchStraightBooster.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
+  StadiumTrenchStraightScreen:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchInPillar: ~
 
   StadiumTrenchToRoadMain: ~
@@ -1629,7 +1839,30 @@ Blocks:
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumTrenchToRoadMainBiSlopeStart: ~
-  StadiumTrenchXRoadMain: ~
+  StadiumTrenchXRoadMain:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    Block:
+      Name: RoadTechStraight
+      OffsetDir: 1
+      OffsetY: 1
+    RemoveGround: true
   StadiumTrenchToRoadDirt: ~
   StadiumTrenchToRoadDirtX2:
   - Item:
