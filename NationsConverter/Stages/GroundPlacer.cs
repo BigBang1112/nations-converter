@@ -21,6 +21,7 @@ namespace NationsConverter.Stages
             });
 
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/u_blue/BlueGround.Item.Gbx", "Items/NationsConverter/z_terrain/u_blue");
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
 
             var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
@@ -45,7 +46,18 @@ namespace NationsConverter.Stages
                         }
                     }
 
-                    if (!dirtBlockExists)
+                    var fabricExists = map.Blocks.Where(o => o.Coord.XZ == (x, 0, z) && o.Name == "StadiumFabricCross1x1").Count() > 0;
+
+                    if (fabricExists)
+                    {
+                        grassCoords.Add((x, 1, z));
+
+                        map.PlaceAnchoredObject(
+                            (@"NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                            (x, 1, z) * map.Collection.GetBlockSize(),
+                            (0, 0, 0));
+                    }
+                    else if (!dirtBlockExists)
                     {
                         grassCoords.Add((x, 1, z));
 
@@ -93,36 +105,46 @@ namespace NationsConverter.Stages
 
                                     if (conversion != null) // If the variant actually has a conversion
                                     {
-                                        if (conversion.RemoveGround)
+                                        bool DoRemoveGround(Conversion conv)
                                         {
-                                            if (BlockInfoManager.BlockModels.TryGetValue(block.Name, out BlockModel model))
+                                            if (conv.RemoveGround)
                                             {
-                                                var center = default(Vec3);
-                                                var allCoords = new Int3[model.Ground.Length];
-                                                var newCoords = new Vec3[model.Ground.Length];
-                                                var newMin = default(Vec3);
-
-                                                if (model.Ground.Length > 1)
+                                                if (BlockInfoManager.BlockModels.TryGetValue(block.Name, out BlockModel model))
                                                 {
-                                                    allCoords = model.Ground.Select(b => (Int3)b.Coord).ToArray();
-                                                    var min = new Int3(allCoords.Select(c => c.X).Min(), allCoords.Select(c => c.Y).Min(), allCoords.Select(c => c.Z).Min());
-                                                    var max = new Int3(allCoords.Select(c => c.X).Max(), allCoords.Select(c => c.Y).Max(), allCoords.Select(c => c.Z).Max());
-                                                    var size = max - min + (1, 1, 1);
-                                                    center = (min + max) * .5f;
+                                                    var center = default(Vec3);
+                                                    var allCoords = new Int3[model.Ground.Length];
+                                                    var newCoords = new Vec3[model.Ground.Length];
+                                                    var newMin = default(Vec3);
 
-                                                    for(var i = 0; i < model.Ground.Length; i++)
-                                                        newCoords[i] = AdditionalMath.RotateAroundCenter(allCoords[i], center, AdditionalMath.ToRadians(block.Direction));
+                                                    if (model.Ground.Length > 1)
+                                                    {
+                                                        allCoords = model.Ground.Select(b => (Int3)b.Coord).ToArray();
+                                                        var min = new Int3(allCoords.Select(c => c.X).Min(), allCoords.Select(c => c.Y).Min(), allCoords.Select(c => c.Z).Min());
+                                                        var max = new Int3(allCoords.Select(c => c.X).Max(), allCoords.Select(c => c.Y).Max(), allCoords.Select(c => c.Z).Max());
+                                                        var size = max - min + (1, 1, 1);
+                                                        center = (min + max) * .5f;
 
-                                                    newMin = new Vec3(newCoords.Select(c => c.X).Min(), newCoords.Select(c => c.Y).Min(), newCoords.Select(c => c.Z).Min());
+                                                        for (var i = 0; i < model.Ground.Length; i++)
+                                                            newCoords[i] = AdditionalMath.RotateAroundCenter(allCoords[i], center, AdditionalMath.ToRadians(block.Direction));
+
+                                                        newMin = new Vec3(newCoords.Select(c => c.X).Min(), newCoords.Select(c => c.Y).Min(), newCoords.Select(c => c.Z).Min());
+                                                    }
+
+                                                    foreach (var unit in newCoords)
+                                                        if (dirtBlock.Coord + offset == block.Coord + (Int3)(unit - newMin))
+                                                            return false;
                                                 }
-
-                                                foreach (var unit in newCoords)
-                                                    if (dirtBlock.Coord + offset == block.Coord + (Int3)(unit - newMin))
-                                                        return false;
+                                                else if (dirtBlock.Coord + offset == block.Coord)
+                                                    return false;
                                             }
-                                            else if (dirtBlock.Coord + offset == block.Coord)
-                                                return false;
+
+                                            return true;
                                         }
+
+                                        if (!DoRemoveGround(conversion)) return false;
+
+                                        if (block.IsGround && conversion.Ground != null)
+                                            DoRemoveGround(conversion.Ground);
                                     }
                                 }
                             }
@@ -150,36 +172,46 @@ namespace NationsConverter.Stages
 
                                 if (conversion != null) // If the variant actually has a conversion
                                 {
-                                    if (conversion.RemoveGround)
+                                    bool DoRemoveGround(Conversion conv)
                                     {
-                                        if (BlockInfoManager.BlockModels.TryGetValue(block.Name, out BlockModel model))
+                                        if (conv.RemoveGround)
                                         {
-                                            var center = default(Vec3);
-                                            var allCoords = new Int3[model.Ground.Length];
-                                            var newCoords = new Vec3[model.Ground.Length];
-                                            var newMin = default(Vec3);
-
-                                            if (model.Ground.Length > 1)
+                                            if (BlockInfoManager.BlockModels.TryGetValue(block.Name, out BlockModel model))
                                             {
-                                                allCoords = model.Ground.Select(b => (Int3)b.Coord).ToArray();
-                                                var min = new Int3(allCoords.Select(c => c.X).Min(), allCoords.Select(c => c.Y).Min(), allCoords.Select(c => c.Z).Min());
-                                                var max = new Int3(allCoords.Select(c => c.X).Max(), allCoords.Select(c => c.Y).Max(), allCoords.Select(c => c.Z).Max());
-                                                var size = max - min + (1, 1, 1);
-                                                center = (min + max) * .5f;
+                                                var center = default(Vec3);
+                                                var allCoords = new Int3[model.Ground.Length];
+                                                var newCoords = new Vec3[model.Ground.Length];
+                                                var newMin = default(Vec3);
 
-                                                for (var i = 0; i < model.Ground.Length; i++)
-                                                    newCoords[i] = AdditionalMath.RotateAroundCenter(allCoords[i], center, AdditionalMath.ToRadians(block.Direction));
+                                                if (model.Ground.Length > 1)
+                                                {
+                                                    allCoords = model.Ground.Select(b => (Int3)b.Coord).ToArray();
+                                                    var min = new Int3(allCoords.Select(c => c.X).Min(), allCoords.Select(c => c.Y).Min(), allCoords.Select(c => c.Z).Min());
+                                                    var max = new Int3(allCoords.Select(c => c.X).Max(), allCoords.Select(c => c.Y).Max(), allCoords.Select(c => c.Z).Max());
+                                                    var size = max - min + (1, 1, 1);
+                                                    center = (min + max) * .5f;
 
-                                                newMin = new Vec3(newCoords.Select(c => c.X).Min(), newCoords.Select(c => c.Y).Min(), newCoords.Select(c => c.Z).Min());
+                                                    for (var i = 0; i < model.Ground.Length; i++)
+                                                        newCoords[i] = AdditionalMath.RotateAroundCenter(allCoords[i], center, AdditionalMath.ToRadians(block.Direction));
+
+                                                    newMin = new Vec3(newCoords.Select(c => c.X).Min(), newCoords.Select(c => c.Y).Min(), newCoords.Select(c => c.Z).Min());
+                                                }
+
+                                                foreach (var unit in newCoords)
+                                                    if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                                        return false;
                                             }
-
-                                            foreach (var unit in newCoords)
-                                                if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
-                                                    return false;
+                                            else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                                return false;
                                         }
-                                        else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
-                                            return false;
+
+                                        return true;
                                     }
+
+                                    if (!DoRemoveGround(conversion)) return false;
+
+                                    if (block.IsGround && conversion.Ground != null)
+                                        DoRemoveGround(conversion.Ground);
                                 }
                             }
                         }

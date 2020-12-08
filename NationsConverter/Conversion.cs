@@ -28,6 +28,9 @@ namespace NationsConverter
         public bool RemoveGround { get; set; }
         public bool OffsetPivotByBlockModel { get; set; }
 
+        public bool MakeFabric { get; set; }
+        public bool MakeFabricOnGround { get; set; }
+
         public static implicit operator Conversion(string blockName) => new Conversion() { Block = new ConversionBlock() { Name = blockName } };
     }
 }

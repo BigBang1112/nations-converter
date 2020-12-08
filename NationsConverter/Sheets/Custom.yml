@@ -372,6 +372,24 @@ Blocks:
 
 # Platform
 
+  StadiumPlatformToRoad2:
+  - Blocks:
+    - Name: PlatformTechToRoadTech
+    - Name: PlatformTechBase
+    Item:
+      Name: NationsConverter\v_wallRide\x_base\PlatformToRoadL.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+      
+  StadiumPlatformToRoad2Mirror:
+  - Blocks:
+    - Name: PlatformTechToRoadTech
+    - Name: PlatformTechBase
+    Item:
+      Name: NationsConverter\v_wallRide\x_base\PlatformToRoadR.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+
   StadiumPlatformRoad:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
@@ -2270,6 +2288,62 @@ Blocks:
 
 # Inflatables
   
+  StadiumFabricStraight1x1:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [-16, 0, 16]
+    Blocks:
+      - Name: PlatformTechWallStraight
+      - Name: PlatformTechWallStraight
+        OffsetY: 1
+      - Name: PlatformTechLoopEnd
+        OffsetY: 2
+        OffsetDir: -1
+    OffsetPivotByBlockModel: true
+  StadiumFabricPillarAir:
+  - Ground:
+      Item:
+        Name: NationsConverter\q_sculpt\z_roof\FabricRampAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+  StadiumFabricCornerIn:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveInAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumFabricPillarCornerInAir:
+  - Ground:
+      Item:
+        Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveInAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
+  StadiumFabricCornerOut:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveOutAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [-16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumFabricPillarCornerOut:
+  - Ground:
+      Item:
+        Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveOutAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+  StadiumFabricCross1x1: ~
+  StadiumFabricCross3x3: ~
+  StadiumFabricCross3x3Screen: ~
+  StadiumFabricPillarAirScreen: ~
+  StadiumFabricPillarScreenSmall: ~
+  StadiumFabricRamp:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumFabricRampCornerOut:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveOutAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+  StadiumFabricRampCornerIn:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\FabricRampCurveInAir.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+
   StadiumInflatableCastle:
   - Item:
       Name: NationsConverter\q_sculpt\y_deco\Castle.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
