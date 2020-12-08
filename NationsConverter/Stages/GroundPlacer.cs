@@ -23,6 +23,52 @@ namespace NationsConverter.Stages
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Materials/GrassTexGreenPhy.Mat.Gbx", "Materials", true); // False crashes GBX.NET
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/u_blue/BlueGround.Item.Gbx", "Items/NationsConverter/z_terrain/u_blue");
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/w_grass/GrassGround.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/w_grass/GrassEdgeStraight2.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
+            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/z_terrain/w_grass/GrassEdgeCornerIn2.Item.Gbx", "Items/NationsConverter/z_terrain/w_grass");
+
+            map.PlaceAnchoredObject(
+               (@"NationsConverter\z_terrain\w_grass\GrassEdgeCornerIn2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+               (7, 1, 7) * map.Collection.GetBlockSize(),
+               (0, 0, 0));
+            map.PlaceAnchoredObject(
+               (@"NationsConverter\z_terrain\w_grass\GrassEdgeCornerIn2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+               (7, 1, 41) * map.Collection.GetBlockSize(),
+               ((float)Math.PI/2, 0, 0));
+            map.PlaceAnchoredObject(
+               (@"NationsConverter\z_terrain\w_grass\GrassEdgeCornerIn2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+               (41, 1, 41) * map.Collection.GetBlockSize(),
+               ((float)Math.PI, 0, 0));
+            map.PlaceAnchoredObject(
+               (@"NationsConverter\z_terrain\w_grass\GrassEdgeCornerIn2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+               (41, 1, 7) * map.Collection.GetBlockSize(),
+               (-(float)Math.PI / 2, 0, 0));
+
+            for (var d = 0; d < 4; d++)
+            {
+                for (var i = 0; i < 32; i++)
+                {
+                    if (d == 0)
+                        map.PlaceAnchoredObject(
+                           (@"NationsConverter\z_terrain\w_grass\GrassEdgeStraight2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                           (7, 1, i + 9) * map.Collection.GetBlockSize(),
+                           ((float)Math.PI / 2, 0, 0));
+                    if (d == 1)
+                        map.PlaceAnchoredObject(
+                           (@"NationsConverter\z_terrain\w_grass\GrassEdgeStraight2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                           (i + 9, 1, 41) * map.Collection.GetBlockSize(),
+                           ((float)Math.PI, 0, 0));
+                    if (d == 2)
+                        map.PlaceAnchoredObject(
+                           (@"NationsConverter\z_terrain\w_grass\GrassEdgeStraight2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                           (41, 1, 39 - i) * map.Collection.GetBlockSize(),
+                           (-(float)Math.PI / 2, 0, 0));
+                    if (d == 3)
+                        map.PlaceAnchoredObject(
+                           (@"NationsConverter\z_terrain\w_grass\GrassEdgeStraight2.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                           (39 - i, 1, 7) * map.Collection.GetBlockSize(),
+                           (0, 0, 0));
+                }
+            }
 
             var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
 
