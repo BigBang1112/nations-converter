@@ -1588,8 +1588,7 @@ Blocks:
     - Name: NationsConverter\tb_TM2RoadDirt\p_bankedTransition\TM2RoadDirtTiltToRoadCurveL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2WoodWallSlopeR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, -16]
-      OffsetRot: [180, 0, 0]
+      OffsetPivot: [16, 0, 16]
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtHillTiltCornerRight:
@@ -1597,8 +1596,7 @@ Blocks:
     - Name: NationsConverter\tb_TM2RoadDirt\p_bankedTransition\TM2RoadDirtTiltToRoadCurveR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2WoodWallSlopeL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, -16]
-      OffsetRot: [180, 0, 0]
+      OffsetPivot: [16, 0, 16]
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtHillTiltToRoadSlope: ~
@@ -2306,6 +2304,7 @@ Blocks:
         OffsetY: 2
         OffsetDir: -1
     OffsetPivotByBlockModel: true
+    OffsetCoordByBlockModel: true
   StadiumFabricPillarAir:
   - Ground:
       Item:
