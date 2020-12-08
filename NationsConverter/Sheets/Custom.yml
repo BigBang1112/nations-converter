@@ -766,6 +766,16 @@ Blocks:
     - Name: NationsConverter\u_platform\o_obstacle\CircuitBump.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumCircuitBumpUp2:
+  - Items:
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, -16]
+    - Name: NationsConverter\u_platform\o_obstacle\CircuitBump.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 0]
+      OffsetPos: [0, 8, 0]
+    OffsetPivotByBlockModel: true
   StadiumCircuitPillar1:
   - Items:
     - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
