@@ -375,20 +375,26 @@ Blocks:
   StadiumPlatformToRoad2:
   - Blocks:
     - Name: PlatformTechToRoadTech
+      OffsetDir: 2
     - Name: PlatformTechBase
+      OffsetCoord: [0, 0, 1]
     Item:
       Name: NationsConverter\v_wallRide\x_base\PlatformToRoadL.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
+    OffsetCoordByBlockModel: true
       
   StadiumPlatformToRoad2Mirror:
   - Blocks:
     - Name: PlatformTechToRoadTech
+      OffsetDir: 2
     - Name: PlatformTechBase
+      OffsetCoord: [0, 0, 1]
     Item:
       Name: NationsConverter\v_wallRide\x_base\PlatformToRoadR.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
+    OffsetCoordByBlockModel: true
 
   StadiumPlatformRoad:
   - Items:

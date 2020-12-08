@@ -71,7 +71,7 @@ namespace NationsConverter.Stages
                 {
                     var center = new Vec3();
 
-                    if (conversion.Center == null)
+                    if (conversion.OffsetCoordByBlockModel)
                     {
                         var allCoords = conversion.Blocks.Select(x => new Int3(x.OffsetCoord[0], x.OffsetCoord[1], x.OffsetCoord[2])).ToArray();
                         var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
@@ -80,19 +80,14 @@ namespace NationsConverter.Stages
 
                         center = (min + max) * .5f;
                     }
-                    else center = (Vec3)conversion.Center;
 
                     foreach (var c in conversion.Blocks)
                     {
                         var offsetCoord = (Int3)c.OffsetCoord;
 
-                        if (offsetCoord != default)
+                        if (offsetCoord != default || center != default)
                         {
-                            offsetCoord = new Int3(
-                                System.Convert.ToInt32(Math.Cos(radians) * (offsetCoord.X - center.X) - Math.Sin(radians) * (offsetCoord.Z - center.Z) + center.X),
-                                offsetCoord.Y, // not supported yet
-                                System.Convert.ToInt32(Math.Sin(radians) * (offsetCoord.X - center.X) + Math.Cos(radians) * (offsetCoord.Z - center.Z) + center.Z)
-                            );
+                            offsetCoord = (Int3)AdditionalMath.RotateAroundCenter(offsetCoord, center, radians);
                         }
 
                         ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + offsetCoord);
