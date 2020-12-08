@@ -153,11 +153,13 @@ namespace NationsConverter.Stages
                 }
                 return true;
             }).ToList();
+            
+            var itemOffset = default(Vec3);
+            if (version >= GameVersion.TM2)
+                itemOffset = parameters.Stadium2RelativeOffset * (1, 0, 1);
 
             map.AnchoredObjects = map.AnchoredObjects.Where(x =>
             {
-                var offset = default(Int3);
-
                 foreach (var block in map.Blocks)
                 {
                     if (parameters.Definitions.TryGetValue(block.Name, out Conversion[] variants))
@@ -198,10 +200,10 @@ namespace NationsConverter.Stages
                                                 }
 
                                                 foreach (var unit in newCoords)
-                                                    if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                                    if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
                                                         return false;
                                             }
-                                            else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
+                                            else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
                                                 return false;
                                         }
 
