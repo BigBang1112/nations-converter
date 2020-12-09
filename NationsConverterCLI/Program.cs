@@ -45,10 +45,10 @@ namespace NationsConverterCLI
             {
                 fileName
             };
-
+            
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
-            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Official.yml");
+            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Stock.yml");
             var sheets = new Sheet[]
             {
                 YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Custom.yml")

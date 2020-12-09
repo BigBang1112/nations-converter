@@ -7,21 +7,21 @@ namespace NationsConverter
 {
     public class SheetManager
     {
-        public Sheet OfficialSheet { get; }
+        public Sheet StockSheet { get; }
         public List<Sheet> AdditionalSheets { get; set; }
 
         public Definitions Definitions { get; private set; }
 
-        public SheetManager(Sheet officialSheet, params Sheet[] sheets)
+        public SheetManager(Sheet stockSheet, params Sheet[] sheets)
         {
-            OfficialSheet = officialSheet;
+            StockSheet = stockSheet;
             AdditionalSheets = sheets.ToList();
             Definitions = new Definitions();
         }
 
         public void UpdateDefinitions()
         {
-            var definitions = OfficialSheet.Blocks;
+            var definitions = StockSheet.Blocks;
 
             foreach (var s in AdditionalSheets) // Merge block sheets, upper is prioritized
             {
