@@ -680,22 +680,62 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1In.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerInLeftBottom:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerInBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerInLeftTop:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerInBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerInRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerInBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerInRightBottom: 
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerInBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
   StadiumCircuitBorderCornerOut:
   - Item:
       Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1Out.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetRot: [90, 0, 0]
+  StadiumCircuitSlopeCornerInLeftBottom:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerOutBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerOutLeftTop:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerOutBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerOutRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBorderSlopeCornerOutRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\u_dentiCurve1\DentiCurve1CornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
       
   StadiumCircuitBorderGTCurve2In:
   - Item:
       Name: NationsConverter\u_platform\t_dentiCurve2\DentiCurve2In.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
+  StadiumCircuitBorderSlopeGTCurve2InLeftBottom: ~
+  StadiumCircuitBorderSlopeGTCurve2InLeftTop: ~
+  StadiumCircuitBorderSlopeGTCurve2InRightTop: ~
+  StadiumCircuitBorderSlopeGTCurve2InRightBottom: ~
   StadiumCircuitBorderGTCurve2Out:
   - Item:
       Name: NationsConverter\u_platform\t_dentiCurve2\DentiCurve2Out.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
+  StadiumCircuitBorderSlopeGTCurve2OutLeftBottom: ~
+  StadiumCircuitBorderSlopeGTCurve2OutLeftTop: ~
+  StadiumCircuitBorderSlopeGTCurve2OutRightTop: ~
+  StadiumCircuitBorderSlopeGTCurve2OutRightBottom: ~
 
   StadiumCircuitBorderGTCurve3In:
   - Item:
