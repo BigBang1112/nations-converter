@@ -1491,15 +1491,10 @@ Blocks:
   - Block: *stadiumInflatableTube
   StadiumInflatableAdvert:
   - ~
-  - Blocks: &stadiumInflatableAdvert
-    - Name: TechnicsScreen2x1StraightX2
-      OffsetCoord: [-1, 0, 0]
-    OffsetDir: 1
-    Center: [0, 0, 0]
   - ~
-  - Blocks: *stadiumInflatableAdvert
-    OffsetDir: 1
-    Center: [0, 0, 0]
+  - ~
+  - ~
+  - ~
   StadiumAirship:
   - Macroblock: StadiumAirship.Macroblock.Gbx
   StadiumAirshipDiag: ~
