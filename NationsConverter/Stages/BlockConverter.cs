@@ -81,16 +81,29 @@ namespace NationsConverter.Stages
                         center = (min + max) * .5f;
                     }
 
-                    foreach (var c in conversion.Blocks)
+                    if (center != default)
                     {
-                        var offsetCoord = (Int3)c.OffsetCoord;
+                        var newCoords = new List<Vec3>();
 
-                        if (offsetCoord != default || center != default)
+                        foreach (var c in conversion.Blocks)
+                            newCoords.Add(AdditionalMath.RotateAroundCenter((Int3)c.OffsetCoord, center, radians));
+
+                        var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
+                        newCoords = newCoords.Select(x => x - newMin).ToList();
+
+                        for(var i = 0; i < conversion.Blocks.Length; i++)
                         {
-                            offsetCoord = (Int3)AdditionalMath.RotateAroundCenter(offsetCoord, center, radians);
-                        }
+                            var c = conversion.Blocks[i];
 
-                        ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + offsetCoord);
+                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var c in conversion.Blocks)
+                        {
+                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord);
+                        }
                     }
                 }
 
