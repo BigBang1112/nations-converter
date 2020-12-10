@@ -451,6 +451,24 @@ Blocks:
 
 # Platform
 
+  StadiumPlatformLoopStart:
+  - Block:
+      Name: PlatformTechLoopStart
+      OffsetDir: 2
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureUnder.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumPlatformLoopEnd:
+  - Block:
+      Name: PlatformTechLoopEnd
+      OffsetDir: 2
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureAbove.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+      OffsetRot: [180, 0, 0]
+
   StadiumPlatformToRoad2:
   - Blocks:
     - Name: PlatformTechToRoadTech
