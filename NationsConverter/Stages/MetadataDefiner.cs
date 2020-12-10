@@ -19,7 +19,7 @@ namespace NationsConverter.Stages
             map.ScriptMetadata.Declare("MadeWithNationsConverter", true);
             map.ScriptMetadata.Declare("NC_Assembly", assembly.FullName);
             map.ScriptMetadata.Declare("NC_GBXNET_Assembly", assemblyGBXNET.FullName);
-            map.ScriptMetadata.Declare("NC_EarlyAccess", true);
+            map.ScriptMetadata.Declare("NC_EarlyAccess", false);
         }
     }
 }
