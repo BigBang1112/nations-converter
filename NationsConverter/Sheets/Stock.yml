@@ -369,7 +369,11 @@ Blocks:
   StadiumPlatformWall1Birds: *stadiumPlatformWall
   StadiumPlatformWallCheckpointV: *stadiumPlatformWall
   StadiumPlatformWallCheckpointH: [ PlatformTechWallCheckpointRight ]
-  StadiumPlatformWall1Screen: *stadiumPlatformWall
+  StadiumPlatformWall1Screen:
+  - Block:
+      Name: TechnicsScreen4x1Straight
+      Skinnable: true
+      OffsetDir: 3
   StadiumPlatformWallPub2:
   - Block:
       Name: TechnicsScreen2x1Straight

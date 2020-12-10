@@ -29,6 +29,8 @@ namespace NationsConverter
         {
             Temporary = new ConverterTemporary();
 
+            map.RemoveChunk<CGameCtnChallenge.Chunk03043040>(); // Temporary solution
+
             UnassignedCleaner.Process(map, version, Parameters);
             BaseConverter.Process(map, version, Parameters);
             GroundMaker.Process(map, version, Parameters, Temporary);

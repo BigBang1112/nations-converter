@@ -293,15 +293,24 @@ namespace NationsConverter.Stages
                 {
                     if(referenceBlock.Skin != null)
                     {
-                        if (skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\Any\\".Length), out SkinDefinition def))
+                        SkinDefinition def = null;
+                        if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl) || skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\".Length), out def))
                         {
                             var skin = new CGameCtnBlockSkin();
                             skin.Text = "!4";
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                            if (def.Primary != null) skin.PackDesc.FilePath = $"Skins\\Any\\{def.Primary}";
-                            if (def.Secondary != null) skin.SecondaryPackDesc.FilePath = $"Skins\\Any\\{def.Secondary}";
+                            if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl))
+                            {
+                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(referenceBlock.Skin.PackDesc.LocatorUrl)}";
+                                skin.PackDesc.LocatorUrl = referenceBlock.Skin.PackDesc.LocatorUrl;
+                            }
+                            else
+                            {
+                                if (def.Primary != null) skin.PackDesc.FilePath = $"Skins\\{def.Primary}";
+                                if (def.Secondary != null) skin.SecondaryPackDesc.FilePath = $"Skins\\{def.Secondary}";
+                            }
 
                             block.Skin = skin;
                             block.Author = "Nadeo";
