@@ -305,6 +305,17 @@ Blocks:
       Item:
         Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
+  
+  StadiumLoopLeft:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainLooping.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumLoopRight:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainLoopingMirror.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
 
   StadiumGrassCheckpoint:
   - Item:
@@ -612,7 +623,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
-
+      
 # Circuit
 
   StadiumCircuitBase:
