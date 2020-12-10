@@ -1331,6 +1331,7 @@ Blocks:
       OffsetCoord: [-1, 0, 0]
       OffsetDir: 3
       Ghost: true
+    OffsetCoordByBlockModel: true
   StadiumTubeRoadLightSystem:
   - ~
   - Block:

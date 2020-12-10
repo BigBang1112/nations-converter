@@ -81,19 +81,19 @@ namespace NationsConverter.Stages
                         var size = max - min + (1, 1, 1);
 
                         center = (min + max) * .5f;
-                    }
 
-                    if (center != default)
-                    {
                         var newCoords = new List<Vec3>();
 
                         foreach (var c in conversion.Blocks)
                             newCoords.Add(AdditionalMath.RotateAroundCenter((Int3)c.OffsetCoord, center, radians));
 
-                        var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
-                        newCoords = newCoords.Select(x => x - newMin).ToList();
+                        if (center != default)
+                        {
+                            var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
+                            newCoords = newCoords.Select(x => x - newMin).ToList();
+                        }
 
-                        for(var i = 0; i < conversion.Blocks.Length; i++)
+                        for (var i = 0; i < conversion.Blocks.Length; i++)
                         {
                             var c = conversion.Blocks[i];
 
