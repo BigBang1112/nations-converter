@@ -71,6 +71,71 @@ Blocks:
       OffsetPos2: [0, 8, 0]
   - ~
   - ~
+  StadiumPool2:
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterCurveIn.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [-90, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightK.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [180, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterDiag.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [90, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightY.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [90, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightX.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightSide.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightJ.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraightT.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterCurveOut.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [-90, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterCurve.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [-90, 0, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterEnd.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\WaterSingle.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+  - ~
+  - ~
   StadiumWater:
   - Item:
       Name: NationsConverter\z_terrain\z_water\Water.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -639,6 +704,7 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerIn.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
   StadiumCircuitBorderSlopeDiagInLeftBottom:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q

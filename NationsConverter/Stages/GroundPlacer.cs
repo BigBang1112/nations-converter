@@ -70,7 +70,7 @@ namespace NationsConverter.Stages
                 }
             }
 
-            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater" };
+            var dirtBlocks = new string[] { "StadiumDirt", "StadiumDirtHill", "StadiumPool", "StadiumWater", "StadiumPool2" };
 
             var grassCoords = new List<Int3>();
 
@@ -83,7 +83,9 @@ namespace NationsConverter.Stages
                     foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
                     || (version <= GameVersion.TMUF &&
                        (o.Coord == (x - 1, 1, z - 1) // TMNF hill
-                    || o.Coord == (x - 1, -1, z - 1))))) // TMNF base
+                    || o.Coord == (x - 1, -1, z - 1))) // TMNF base
+
+                    || (version >= GameVersion.TM2 && o.Name == "StadiumPool2" && o.Coord == (x, -1, z)))) 
                     {
                         if (dirtBlocks.Contains(groundBlock.Name))
                         {
