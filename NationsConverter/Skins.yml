@@ -1,0 +1,29 @@
+﻿# TM1
+
+Advertisement\SignLeft.bik:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Left.webm
+Advertisement\SignRight.bik:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Right.webm
+Advertisement\SignUp.bik:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Top.webm
+Advertisement\SignDown.bik:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Bottom.webm
+
+# TM2
+
+Advertisement\SignLeft.dds:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Left.webm
+Advertisement\SignRight.dds:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Right.webm
+Advertisement\SignUp.dds:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Top.webm
+Advertisement\SignDown.dds:
+  Primary: Advertisement2x1\Off.tga
+  Secondary: Advertisement2x1\Bottom.webm

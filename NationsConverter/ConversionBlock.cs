@@ -19,6 +19,8 @@
         public bool? Bit17 { get; set; }
         public bool? Bit21 { get; set; }
 
+        public bool Skinnable { get; set; }
+
         public static implicit operator ConversionBlock(string name) => new ConversionBlock() { Name = name };
     }
 }

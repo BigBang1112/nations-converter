@@ -14,6 +14,8 @@ namespace NationsConverter.Stages
     {
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
+            var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
+
             var macroblocks = new Dictionary<string, CGameCtnMacroBlockInfo>();
             var log = new HashSet<string>();
 
@@ -286,6 +288,26 @@ namespace NationsConverter.Stages
 
                 if (conversionBlock.Flags.HasValue)
                     block.Flags = conversionBlock.Flags.Value;
+
+                if(conversionBlock.Skinnable)
+                {
+                    if(referenceBlock.Skin != null)
+                    {
+                        if (skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\Any\\".Length), out SkinDefinition def))
+                        {
+                            var skin = new CGameCtnBlockSkin();
+                            skin.Text = "!4";
+                            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+                            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
+
+                            if (def.Primary != null) skin.PackDesc.FilePath = $"Skins\\Any\\{def.Primary}";
+                            if (def.Secondary != null) skin.SecondaryPackDesc.FilePath = $"Skins\\Any\\{def.Secondary}";
+
+                            block.Skin = skin;
+                            block.Author = "Nadeo";
+                        }
+                    }
+                }
 
                 block.IsGround = block.Coord.Y == 0;
 

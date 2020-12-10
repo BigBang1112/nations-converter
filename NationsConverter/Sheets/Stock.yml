@@ -375,6 +375,7 @@ Blocks:
       Name: TechnicsScreen2x1Straight
       OffsetDir: 3
       Ghost: true
+      Skinnable: true
   StadiumPlatformWall2FreeWheeling: *stadiumPlatformWall2
   StadiumPlatformWall2ForceAcceleration: *stadiumPlatformWall2
   StadiumPlatformWall2NoGrip: *stadiumPlatformWall2
