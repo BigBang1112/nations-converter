@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NationsConverterGUI"
-        mc:Ignorable="d" Icon="favicon.ico"
-        Title="MainWindow" Width="800" Height="450"
-        MinWidth="400" MinHeight="200"
+        mc:Ignorable="d" Icon="favicon.ico" x:Name="windowMainWindow"
+        Title="Nations Converter" Width="800" Height="600"
+        MinWidth="700" MinHeight="500"
         Style="{DynamicResource ThemeWindow}" MouseDown="Window_MouseDown" AllowsTransparency="true" Background="Transparent">
 
     <Border BorderThickness="4 0" BorderBrush="{DynamicResource BackgroundColor2}" Background="{DynamicResource BackgroundColor1}" CornerRadius="5" Margin="5">
@@ -34,25 +34,19 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="50"/>
                     <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <Image Source="favicon.ico" Width="30" Height="30"/>
                 <StackPanel Grid.Column="1" Orientation="Horizontal">
-                    <TextBlock Foreground="#20E425" VerticalAlignment="Center" Style="{DynamicResource ThemeTextBlock}" Text="Nations " FontSize="16" FontWeight="DemiBold" Margin="0 3 0 0"/>
-                    <TextBlock Foreground="#24DBE6" VerticalAlignment="Center" Style="{DynamicResource ThemeTextBlock}" Text="Converter" FontSize="16" FontWeight="DemiBold" Margin="0 3 0 0"/>
+                    <TextBlock Foreground="#20E425" VerticalAlignment="Center" Text="Nations " FontSize="16" FontWeight="DemiBold" Margin="0 3 0 0"/>
+                    <TextBlock Foreground="#24DBE6" VerticalAlignment="Center" Text="Converter" FontSize="16" FontWeight="DemiBold" Margin="0 3 0 0"/>
                 </StackPanel>
 
-
-                <Menu Grid.Column="2">
-                    <MenuItem Header="" FontFamily="Segoe MDL2 Assets" Background="AliceBlue">
-                        <MenuItem Header="_Open"/>
-                        <MenuItem Header="_Close"/>
-                        <MenuItem Header="_Save"/>
-                    </MenuItem>
-                </Menu>
-                
-                <TextBlock Grid.Column="3" Foreground="{DynamicResource Color3}" VerticalAlignment="Center" Margin="10 3 10 0" FontWeight="Bold">UPDATE to 1.0.1</TextBlock>
-                <StackPanel Grid.Column="4" Orientation="Horizontal" Margin="0 3 0 0">
+                <Image Grid.Column="3" Source="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" Margin="10"/>
+                <!--https://www.paypal.com/donate?hosted_button_id=5JLY9NQSMRENU-->
+                <TextBlock Grid.Column="4" Foreground="{DynamicResource Color3}" VerticalAlignment="Center" Margin="10 3 10 0" FontWeight="Bold">UPDATE to 1.0.1</TextBlock>
+                <StackPanel Grid.Column="5" Orientation="Horizontal" Margin="0 3 0 0">
                     <Button x:Name="buttonMaximize" Width="35" FontFamily="Segoe MDL2 Assets" Content="" Click="buttonMinimize_Click" FontSize="10"/>
                     <Button x:Name="buttonClose" Width="35" FontFamily="Segoe MDL2 Assets" Content="" Click="buttonClose_Click" FontSize="10"/>
                 </StackPanel>
@@ -62,16 +56,18 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="8"/>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="250"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="150"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
                     <ListView x:Name="listViewMaps" ItemsSource="{Binding Maps}" Height="150" AllowDrop="True" ScrollViewer.CanContentScroll="False"
-                              Drop="listViewMaps_Drop" KeyDown="listViewMaps_KeyDown">
+                              Drop="listViewMaps_Drop" KeyDown="listViewMaps_KeyDown" SelectionChanged="listViewMaps_SelectionChanged">
                         <ListView.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Horizontal"/>
@@ -90,11 +86,85 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
+                    <TextBlock x:Name="textBlockDragDropMsg" Text="Drag and drop your maps here..." HorizontalAlignment="Center" VerticalAlignment="Center" IsHitTestVisible="False"/>
+
+                    <Grid Grid.Row="1" Background="{DynamicResource BackgroundColor2}" Margin="0 6" Height="25">
+                        <TextBlock x:Name="textBlockLoadMapMsg" FontSize="12" VerticalAlignment="Center" Margin="10 0"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Background="{DynamicResource BackgroundColor2}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="6"/>
+                            <RowDefinition Height="45"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="Conversion block specification" HorizontalAlignment="Center" Margin="10"/>
+                        <ListView x:Name="listViewPlacedBlocks" Grid.Row="1" ItemsSource="{Binding SelectedMapSheetBlocks}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Height="32">
+                                        <TextBlock VerticalAlignment="Center" Margin="5 0" Text="{Binding Value.BlockName}"/>
+                                        <ComboBox x:Name="comboBoxSheet" ItemsSource="{Binding Value.Conversions}" Width="100" Height="20" SelectedIndex="{Binding Value.SelectedSheet}" Margin="5 0" SelectionChanged="comboBoxSheet_SelectionChanged">
+                                            <ComboBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <TextBlock Text="{Binding Value.SheetName}" Foreground="{DynamicResource BackgroundColor1}"/>
+                                                </DataTemplate>
+                                            </ComboBox.ItemTemplate>
+                                        </ComboBox>
+                                        <ItemsControl ItemsSource="{Binding Value.Icons}" Margin="10 0">
+                                            <ItemsControl.ItemsPanel>
+                                                <ItemsPanelTemplate>
+                                                    <StackPanel Orientation="Horizontal"/>
+                                                </ItemsPanelTemplate>
+                                            </ItemsControl.ItemsPanel>
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Image Width="32" Height="32" Source="{Binding}" RenderOptions.BitmapScalingMode="Fant"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <StackPanel Grid.Row="2" Background="{DynamicResource BackgroundColor1}" />
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Embedded objects total size:" Margin="20 0" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Text="2kB" HorizontalAlignment="Right" Margin="20 0" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                        </Grid>
+                    </Grid>
                 </Grid>
 
-                <GroupBox Grid.Column="2">
-                    
-                </GroupBox>
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="8"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical" Background="{DynamicResource BackgroundColor2}">
+                        <Border Height="250" BorderBrush="{DynamicResource BackgroundColor1}" BorderThickness="2" Margin="4 4 4 10" CornerRadius="1">
+                            <Viewbox Stretch="UniformToFill">
+                                <Image x:Name="imageThumbnail"/>
+                            </Viewbox>
+                        </Border>
+                        <TextBlock HorizontalAlignment="Center" x:Name="textBlockMapName" FontWeight="Bold"/>
+                    </StackPanel>
+
+                    <Grid Grid.Row="2" Background="{DynamicResource BackgroundColor2}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Button x:Name="buttonConvert" Grid.Row="1" Height="40" Content="CONVERT" FontWeight="Bold" Margin="5" Click="buttonConvert_Click" Background="#004C00"/>
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     </Border>
