@@ -633,6 +633,13 @@ Blocks:
       Name: NationsConverter\u_platform\z_platform\PlatformSlopeToFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
     Block: StructureBase
+  StadiumCircuitToRoadMain:
+  - Block:
+      Name: TrackWallToRoadTech
+      OffsetY: 1
+    Item:
+      Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
 
   StadiumCircuitTurbo:
   - Item:
