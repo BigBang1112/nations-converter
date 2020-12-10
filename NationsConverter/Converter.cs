@@ -23,6 +23,7 @@ namespace NationsConverter
         public DupeCleaner DupeCleaner { get; } = new DupeCleaner();
         public DefaultGroundRemover DefaultGroundRemover { get; } = new DefaultGroundRemover();
         public MetadataDefiner MetadataDefiner { get; } = new MetadataDefiner();
+        public AdvertisementAdder AdvertisementAdder { get; } = new AdvertisementAdder();
         public MapUidChanger MapUidChanger { get; } = new MapUidChanger();
 
         public void Convert(CGameCtnChallenge map, int version)
@@ -41,6 +42,7 @@ namespace NationsConverter
             MapChunkCleaner.Process(map, version, Parameters);
             DefaultGroundRemover.Process(map, version, Parameters);
             MetadataDefiner.Process(map, version, Parameters);
+            AdvertisementAdder.Process(map, version, Parameters);
             //MapUidChanger.Process(map, version, Parameters);
         }
 
