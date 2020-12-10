@@ -2,11 +2,15 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using NationsConverter;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -55,6 +59,10 @@ namespace NationsConverterGUI
         public Sheet[] Sheets { get; }
 
         DispatcherTimer loadMapMsgTimer;
+        string ncVersion;
+        WebClient web = new WebClient();
+        Task<string> versionRequest;
+        string repositoryName = "nations-converter";
 
         public MainWindow()
         {
@@ -74,6 +82,12 @@ namespace NationsConverterGUI
             loadMapMsgTimer.Interval = TimeSpan.FromSeconds(2);
             loadMapMsgTimer.Tick += LoadMapMsgTimer_Tick;
 
+            var assembly = Assembly.GetExecutingAssembly();
+            ncVersion = assembly.GetName().Version.ToString(3);
+
+            textBlockVersion.Text = ncVersion;
+            textBlockVersion.Foreground = Brushes.White;
+
             Collectors = new Dictionary<string, Task<GameBox<CGameItemModel>>>();
 
             foreach(var fileName in Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + "UserData", "*.Gbx", SearchOption.AllDirectories))
@@ -88,6 +102,10 @@ namespace NationsConverterGUI
                     return null;
                 });
             }
+
+            web.Headers.Add(HttpRequestHeader.UserAgent, "Nations Converter");
+            web.DownloadStringCompleted += AppVersion_DownloadStringCompleted;
+            versionRequest = web.DownloadStringTaskAsync($"https://api.github.com/repos/bigbang1112/{repositoryName}/releases");
         }
 
         private void Maps_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -141,14 +159,22 @@ namespace NationsConverterGUI
                             {
                                 if (gbx is GameBox<CGameCtnChallenge> gbxMap)
                                 {
-                                    if (gbxMap.MainNode.Collection == "Stadium")
+                                    var map = gbxMap.MainNode;
+                                    if (map.TitleID == "Trackmania")
+                                        LoadMapMessage($"No worries, I'm not developing Trackmania 3 ;)", Brushes.Red);
+                                    else if (map.Collection == "Stadium")
                                     {
-                                        listViewMaps.Dispatcher.Invoke(() => Maps.Add(new ListViewMapItem(gbxMap)));
-                                        LoadMapMessage($"{Formatter.Deformat(gbxMap.MainNode.MapName)} loaded successfully!", Brushes.Green);
-                                        return gbxMap;
+                                        if (map.GetChunk<CGameCtnChallenge.Chunk03043051>() == null)
+                                        {
+                                            LoadMapMessage($"Not only I'm not developing Trackmania 3, but you also didn't resave your conversion! Bruh", Brushes.Red);
+                                        }
+                                        else
+                                        {
+                                            listViewMaps.Dispatcher.Invoke(() => Maps.Add(new ListViewMapItem(gbxMap)));
+                                            LoadMapMessage($"{Formatter.Deformat(map.MapName)} loaded successfully!", Brushes.Green);
+                                            return gbxMap;
+                                        }
                                     }
-                                    else
-                                        LoadMapMessage($"{Formatter.Deformat(gbxMap.MainNode.MapName)} is not a Stadium map.", Brushes.Red);
                                 }
                                 else
                                     LoadMapMessage($"{file} is not a map.", Brushes.Red);
@@ -378,7 +404,7 @@ namespace NationsConverterGUI
 
         private void buttonConvert_Click(object sender, RoutedEventArgs e)
         {
-            
+            MessageBox.Show("Conversion completed.\nPlease calculate shadows and resave your map(s)!");
         }
 
         private void comboBoxSheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -392,6 +418,51 @@ namespace NationsConverterGUI
 
                 SelectedMap.Updated = false;
                 UpdateSelectedMapSheet();
+            }
+        }
+
+        private void buttonDonate_Click(object sender, RoutedEventArgs e)
+        {
+            OpenURL("https://www.paypal.com/donate?hosted_button_id=5JLY9NQSMRENU");
+        }
+
+        private void buttonVersion_Click(object sender, RoutedEventArgs e)
+        {
+            OpenURL($"https://github.com/BigBang1112/{repositoryName}/releases");
+        }
+
+        void OpenURL(string url)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            };
+
+            Process.Start(psi);
+        }
+
+        private void AppVersion_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
+        {
+            if (e.Error == null)
+            {
+                dynamic releases = JsonConvert.DeserializeObject(e.Result);
+                if (releases.Count > 0)
+                {
+                    var release = releases[0];
+                    var version = release.tag_name.Value.Substring(1);
+
+                    if (version == ncVersion)
+                    {
+                        textBlockVersion.Text = version;
+                        textBlockVersion.Foreground = Brushes.Green;
+                    }
+                    else
+                    {
+                        textBlockVersion.Text = $"UPDATE to {version}";
+                        textBlockVersion.Foreground = Brushes.Yellow;
+                    }
+                }
             }
         }
     }

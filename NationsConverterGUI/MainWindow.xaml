@@ -43,9 +43,16 @@
                     <TextBlock Foreground="#24DBE6" VerticalAlignment="Center" Text="Converter" FontSize="16" FontWeight="DemiBold" Margin="0 3 0 0"/>
                 </StackPanel>
 
-                <Image Grid.Column="3" Source="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" Margin="10"/>
-                <!--https://www.paypal.com/donate?hosted_button_id=5JLY9NQSMRENU-->
-                <TextBlock Grid.Column="4" Foreground="{DynamicResource Color3}" VerticalAlignment="Center" Margin="10 3 10 0" FontWeight="Bold">UPDATE to 1.0.1</TextBlock>
+                <Button x:Name="buttonDonate" Grid.Column="3" Margin="10" Click="buttonDonate_Click">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Grid.Column="4" Margin="10 3 10 3" Width="140" x:Name="buttonVersion" Click="buttonVersion_Click">
+                    <TextBlock x:Name="textBlockVersion" VerticalAlignment="Center" FontWeight="Bold"/>
+                </Button>
                 <StackPanel Grid.Column="5" Orientation="Horizontal" Margin="0 3 0 0">
                     <Button x:Name="buttonMaximize" Width="35" FontFamily="Segoe MDL2 Assets" Content="" Click="buttonMinimize_Click" FontSize="10"/>
                     <Button x:Name="buttonClose" Width="35" FontFamily="Segoe MDL2 Assets" Content="" Click="buttonClose_Click" FontSize="10"/>
