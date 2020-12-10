@@ -39,7 +39,7 @@ namespace NationsConverter
             MapChunkCleaner.Process(map, version, Parameters);
             DefaultGroundRemover.Process(map, version, Parameters);
             MetadataDefiner.Process(map, version, Parameters);
-            MapUidChanger.Process(map, version, Parameters);
+            //MapUidChanger.Process(map, version, Parameters);
         }
 
         static Converter()
