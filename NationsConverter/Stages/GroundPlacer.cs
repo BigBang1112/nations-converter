@@ -124,7 +124,7 @@ namespace NationsConverter.Stages
 
             var blocks = map.Blocks.ToArray();
 
-            map.Blocks = blocks.AsParallel().Where(x =>
+            map.Blocks = blocks.Where(x =>
             {
                 if (x.Name == "StadiumDirt")
                     temporary.DirtCoords.Add(x.Coord);
