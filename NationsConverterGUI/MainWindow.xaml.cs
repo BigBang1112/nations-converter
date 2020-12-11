@@ -109,6 +109,12 @@ namespace NationsConverterGUI
                     File.ReadAllText("StadiumBlockModels.json")
                 );
 
+#if NET452
+
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+
+#endif
+
             web.Headers.Add(HttpRequestHeader.UserAgent, "Nations Converter");
             web.DownloadStringCompleted += AppVersion_DownloadStringCompleted;
             versionRequest = web.DownloadStringTaskAsync($"https://api.github.com/repos/bigbang1112/{repositoryName}/releases");
