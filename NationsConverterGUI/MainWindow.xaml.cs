@@ -187,9 +187,10 @@ namespace NationsConverterGUI
                                     LoadMapMessage($"{file} is not a map.", Brushes.Red);
                             }
                         }
-                        catch
+                        catch(Exception ex)
                         {
-                            LoadMapMessage($"An error occured when loading {System.IO.Path.GetFileName(file)}.", Brushes.Red);
+                            LoadMapMessage($"An error occured when loading {System.IO.Path.GetFileName(file)}.", Brushes.Red, 5);
+                            MessageBox.Show(ex.ToString(), "Exception on map load", MessageBoxButton.OK, MessageBoxImage.Error);
                         }
 
                         return null;
@@ -393,12 +394,13 @@ namespace NationsConverterGUI
             listViewPlacedBlocks.ItemsSource = SelectedMapSheetBlocks;
         }
 
-        private void LoadMapMessage(string text, Brush color)
+        private void LoadMapMessage(string text, Brush color, int time = 2)
         {
             textBlockLoadMapMsg.Dispatcher.Invoke(() =>
             {
                 textBlockLoadMapMsg.Foreground = color;
                 textBlockLoadMapMsg.Text = text;
+                loadMapMsgTimer.Interval = TimeSpan.FromSeconds(time);
                 loadMapMsgTimer.Start();
             });
         }
@@ -442,14 +444,21 @@ namespace NationsConverterGUI
                     else
                         version = GameVersion.TM2;
 
-                    converter.Convert(map.Map, version);
-
-                    map.GBX.Save($"output/{System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetFileNameWithoutExtension(map.GBX.FileName))}.Map.Gbx");
-
-                    textBlockProgress.Dispatcher.Invoke(() =>
+                    try
                     {
-                        textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}";
-                    });
+                        converter.Convert(map.Map, version);
+
+                        map.GBX.Save($"output/{System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetFileNameWithoutExtension(map.GBX.FileName))}.Map.Gbx");
+
+                        textBlockProgress.Dispatcher.Invoke(() =>
+                        {
+                            textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}";
+                        });
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Exception while converting", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }));
             }
 
