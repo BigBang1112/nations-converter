@@ -80,10 +80,14 @@ namespace NationsConverter.Stages
                 {
                     var dirtBlockExists = false;
 
+                    Int3 coord = (x, 0, z);
+                    if (version <= GameVersion.TMUF)
+                        coord -= (1, 0, 1);
+
                     foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
                     || (version <= GameVersion.TMUF &&
-                       (o.Coord == (x - 1, 1, z - 1) // TMNF hill
-                    || o.Coord == (x - 1, -1, z - 1))) // TMNF base
+                       (o.Coord == coord + (0, 1, 0) // TMNF hill
+                    ||  o.Coord == coord + (0, -1, 0))) // TMNF base
 
                     || (version >= GameVersion.TM2 && o.Name == "StadiumPool2" && o.Coord == (x, -1, z)))) 
                     {
@@ -94,7 +98,7 @@ namespace NationsConverter.Stages
                         }
                     }
 
-                    var fabricExists = map.Blocks.Where(o => o.Coord.XZ == (x, 0, z) && o.Name == "StadiumFabricCross1x1").Count() > 0;
+                    var fabricExists = map.Blocks.Where(o => o.Coord.XZ == coord && o.Name == "StadiumFabricCross1x1").Count() > 0;
 
                     if (fabricExists)
                     {
@@ -251,17 +255,18 @@ namespace NationsConverter.Stages
                                                     if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
                                                         return false;
                                             }
-                                            else if (block.Coord + (1, 1, 1) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
+                                            else if ((block.Coord + (1, 1, 1)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
                                                 return false;
                                         }
 
                                         return true;
                                     }
 
-                                    if (!DoRemoveGround(conversion)) return false;
-
                                     if (block.IsGround && conversion.Ground != null)
-                                        DoRemoveGround(conversion.Ground);
+                                        if (!DoRemoveGround(conversion.Ground))
+                                            return false;
+
+                                    if (!DoRemoveGround(conversion)) return false;
                                 }
                             }
                         }
