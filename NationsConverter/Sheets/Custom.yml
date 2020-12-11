@@ -432,7 +432,7 @@ Blocks:
     OffsetPivotByBlockModel: true
   StadiumRoadTiltTransition2DiagRight:
   - Item:
-      Name: NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagLeft.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Name: NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagRight.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
     OffsetPivotByBlockModel: true
