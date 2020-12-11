@@ -767,38 +767,47 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [-90, 0, 0]
   StadiumCircuitBorderSlopeDiagInLeftTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
   StadiumCircuitBorderSlopeDiagInRightTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
   StadiumCircuitBorderSlopeDiagInRightBottom:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
   StadiumCircuitBorderDiagOut: 
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOut.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
   StadiumCircuitBorderSlopeDiagOutLeftBottom:
   - Item:
-      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutLeftTop:
-  - Item:
-      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutRightTop:
-  - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutRightBottom:
+      OffsetRot: [-90, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutLeftTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
 
   StadiumCircuitBorderCornerIn:
   - Item:
