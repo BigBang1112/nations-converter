@@ -2503,10 +2503,21 @@ Blocks:
 # Inflatables
   
   StadiumFabricStraight1x1:
-  - Item:
-      Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricStraight1x1_Air.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
-      OffsetPivot: [16, 0, 16]
-    OffsetPivotByBlockModel: true
+  - Air:
+      Item:
+        Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricStraight1x1_Air.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+      OffsetPivotByBlockModel: true
+    Ground:
+      Items:
+      - Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricStraight1x1_Ground.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\BlueFabricRamp.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [-16, 0, 16]
+      OffsetPivotByBlockModel: true
+      RemoveGround: true
   StadiumFabricPillarAir:
   - Air:
       Item:
@@ -2518,7 +2529,6 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\u_blue\BlueFabricRamp.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
-        OffsetRot: [180, 0, 0]
       RemoveGround: true
   StadiumFabricCornerIn:
   - Air:
@@ -2559,8 +2569,13 @@ Blocks:
       - Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCornerOut_Ground.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\u_blue\BlueFabricRampCurveIn.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [-16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
-        OffsetRot: [180, 0, 0]
+      - Name: NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, -16]
+      - Name: NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [-16, 0, -16]
       RemoveGround: true
       OffsetPivotByBlockModel: true
   StadiumFabricPillarCornerOut:
@@ -2574,9 +2589,7 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\z_terrain\u_blue\BlueFabricRampCurveIn.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
-        OffsetRot: [180, 0, 0]
       RemoveGround: true
-      OffsetPivotByBlockModel: true
   StadiumFabricCross1x1:
   - Item:
       Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCross1x1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
@@ -2587,8 +2600,10 @@ Blocks:
   StadiumFabricPillarScreenSmall: ~
   StadiumFabricRamp:
   - Air:
-      Item:
-        Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRamp_Air.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      Items:
+      - Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRamp_Air.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\BlueFabricRamp.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
         OffsetPivot: [16, 0, 16]
   - Ground:
       Item:
