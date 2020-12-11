@@ -189,7 +189,7 @@ namespace NationsConverterGUI
                         }
                         catch
                         {
-                            LoadMapMessage($"An error occured when loading {file}.", Brushes.Red);
+                            LoadMapMessage($"An error occured when loading {System.IO.Path.GetFileName(file)}.", Brushes.Red);
                         }
 
                         return null;
@@ -457,7 +457,7 @@ namespace NationsConverterGUI
 
             textBlockProgress.Text = $"Conversion progress: {Maps.Count}/{Maps.Count}";
 
-            MessageBox.Show("Conversion completed, your map is available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
+            MessageBox.Show("Conversion completed, your map(s) are available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
         }
 
         private void comboBoxSheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
