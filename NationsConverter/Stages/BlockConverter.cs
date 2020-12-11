@@ -344,7 +344,6 @@ namespace NationsConverter.Stages
 
             var sortedLog = log.ToList();
             sortedLog.Sort();
-            File.WriteAllText($"{Converter.LocalDirectory}/missing_blocks.txt", string.Join("\n", sortedLog));
         }
 
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)

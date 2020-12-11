@@ -141,6 +141,11 @@ Blocks:
       Name: NationsConverter\z_terrain\z_water\Water.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
       OffsetPos2: [0, 8, 0]
+  StadiumWater2:
+  - Item:
+      Name: NationsConverter\z_terrain\z_water\Water.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
   StadiumDirt: # TMNF
   - Item:
       Name: NationsConverter\z_terrain\v_dirt\DirtGround.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
@@ -375,6 +380,11 @@ Blocks:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumRoadMainYShapedCurve2:
+  - Item:
+      Name: NationsConverter\y_roadFlat\t_split\TechRoadSplit.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
   
   StadiumRoadMainGTDiag4x3:
   - Item:
@@ -757,38 +767,47 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+      OffsetRot: [-90, 0, 0]
   StadiumCircuitBorderSlopeDiagInLeftTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
   StadiumCircuitBorderSlopeDiagInRightTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
   StadiumCircuitBorderSlopeDiagInRightBottom:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerInBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
   StadiumCircuitBorderDiagOut: 
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOut.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
   StadiumCircuitBorderSlopeDiagOutLeftBottom:
   - Item:
-      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutLeftTop:
-  - Item:
-      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
-      OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutRightTop:
-  - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
-  StadiumCircuitBorderSlopeDiagOutRightBottom:
+      OffsetRot: [-90, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutLeftTop:
   - Item:
       Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTL.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutRightTop:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedTR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitBorderSlopeDiagOutRightBottom:
+  - Item:
+      Name: NationsConverter\u_platform\v_dentiDiag\DentiDiagCornerOutBankedBR.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
 
   StadiumCircuitBorderCornerIn:
   - Item:
@@ -1652,8 +1671,23 @@ Blocks:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
-
-  StadiumRoadDirtToRoadB: ~
+  StadiumRoadDirtToRoadB:
+  - Item:
+      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHalf.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
 
   StadiumRoadDirtHillSlope2:
   - Items:
