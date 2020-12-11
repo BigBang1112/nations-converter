@@ -82,6 +82,9 @@ namespace NationsConverter.Stages
 
                         center = (min + max) * .5f;
 
+                        if (conversion.Center != null)
+                            center = (Vec3)conversion.Center;
+
                         var newCoords = new List<Vec3>();
 
                         foreach (var c in conversion.Blocks)
