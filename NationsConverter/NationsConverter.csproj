@@ -24,28 +24,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="UserData\Items\NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagLeft.Item.Gbx" />
+	  <None Remove="UserData\Items\NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagRight.Item.Gbx" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="GBX.NET" Version="0.5.4" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="YamlDotNet" Version="9.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="Resources.Designer.cs">
-			<DesignTime>True</DesignTime>
-			<AutoGen>True</AutoGen>
-			<DependentUpon>Resources.resx</DependentUpon>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-		<EmbeddedResource Update="Resources.resx">
-			<Generator>PublicResXFileCodeGenerator</Generator>
-			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-		</EmbeddedResource>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <None Update="Skins.yml">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="StadiumBlockModels.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>

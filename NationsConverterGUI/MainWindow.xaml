@@ -115,7 +115,7 @@
                                         <ComboBox x:Name="comboBoxSheet" ItemsSource="{Binding Value.Conversions}" Width="100" Height="20" SelectedIndex="{Binding Value.SelectedSheet}" Margin="5 0" SelectionChanged="comboBoxSheet_SelectionChanged">
                                             <ComboBox.ItemTemplate>
                                                 <DataTemplate>
-                                                    <TextBlock Text="{Binding Value.SheetName}" Foreground="{DynamicResource BackgroundColor1}"/>
+                                                    <TextBlock Text="{Binding Value.SheetName}"/>
                                                 </DataTemplate>
                                             </ComboBox.ItemTemplate>
                                         </ComboBox>
@@ -142,7 +142,7 @@
                                 <ColumnDefinition Width="100"/>
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Embedded objects total size:" Margin="20 0" VerticalAlignment="Center"/>
-                            <TextBlock Grid.Column="2" Text="2kB" HorizontalAlignment="Right" Margin="20 0" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+                            <TextBlock Grid.Column="2" Text="?kB" HorizontalAlignment="Right" Margin="20 0" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -169,6 +169,7 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
+                        <TextBlock x:Name="textBlockProgress" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <Button x:Name="buttonConvert" Grid.Row="1" Height="40" Content="CONVERT" FontWeight="Bold" Margin="5" Click="buttonConvert_Click" Background="#004C00"/>
                     </Grid>
                 </Grid>

@@ -1,4 +1,5 @@
 ﻿using GBX.NET;
+using GBX.NET.BlockInfo;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using NationsConverter;
@@ -103,6 +104,11 @@ namespace NationsConverterGUI
                 });
             }
 
+            BlockInfoManager.BlockModels
+                = JsonConvert.DeserializeObject<Dictionary<string, BlockModel>>(
+                    File.ReadAllText("StadiumBlockModels.json")
+                );
+
             web.Headers.Add(HttpRequestHeader.UserAgent, "Nations Converter");
             web.DownloadStringCompleted += AppVersion_DownloadStringCompleted;
             versionRequest = web.DownloadStringTaskAsync($"https://api.github.com/repos/bigbang1112/{repositoryName}/releases");
@@ -162,18 +168,13 @@ namespace NationsConverterGUI
                                     var map = gbxMap.MainNode;
                                     if (map.TitleID == "Trackmania")
                                         LoadMapMessage($"No worries, I'm not developing Trackmania 3 ;)", Brushes.Red);
+                                    else if(map.Collection.ID == 26)
+                                        LoadMapMessage($"Not only I'm not developing Trackmania 3, but you also didn't resave your conversion! Bruh", Brushes.Red);
                                     else if (map.Collection == "Stadium")
                                     {
-                                        if (map.GetChunk<CGameCtnChallenge.Chunk03043051>() == null)
-                                        {
-                                            LoadMapMessage($"Not only I'm not developing Trackmania 3, but you also didn't resave your conversion! Bruh", Brushes.Red);
-                                        }
-                                        else
-                                        {
-                                            listViewMaps.Dispatcher.Invoke(() => Maps.Add(new ListViewMapItem(gbxMap)));
-                                            LoadMapMessage($"{Formatter.Deformat(map.MapName)} loaded successfully!", Brushes.Green);
-                                            return gbxMap;
-                                        }
+                                        listViewMaps.Dispatcher.Invoke(() => Maps.Add(new ListViewMapItem(gbxMap)));
+                                        LoadMapMessage($"{Formatter.Deformat(map.MapName)} loaded successfully!", Brushes.Green);
+                                        return gbxMap;
                                     }
                                 }
                                 else
@@ -402,9 +403,55 @@ namespace NationsConverterGUI
             loadMapMsgTimer.Stop();
         }
 
-        private void buttonConvert_Click(object sender, RoutedEventArgs e)
+        private async void buttonConvert_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Conversion completed.\nPlease calculate shadows and resave your map(s)!");
+            var sheetMgr = new SheetManager(Sheets[0], new Sheet[] { Sheets[1] });
+            sheetMgr.UpdateDefinitions();
+
+            Directory.CreateDirectory("output");
+
+            textBlockProgress.Text = $"Conversion progress: 0/{Maps.Count}";
+
+            var conversions = new List<Task>();
+
+            foreach(var map in Maps)
+            {
+                conversions.Add(Task.Run(() =>
+                {
+                    var converter = new Converter()
+                    {
+                        Parameters = new ConverterParameters
+                        {
+                            Definitions = sheetMgr.Definitions
+                        }
+                    };
+
+                    converter.EmbedManager.CopyUsedEmbed(map.Map, sheetMgr.Definitions);
+
+                    var chunk01F = map.Map.GetChunk<CGameCtnChallenge.Chunk0304301F>();
+
+                    int version;
+                    if (chunk01F.Version <= 1)
+                        version = GameVersion.TMUF;
+                    else
+                        version = GameVersion.TM2;
+
+                    converter.Convert(map.Map, version);
+
+                    map.GBX.Save($"output/{System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetFileNameWithoutExtension(map.GBX.FileName))}.Map.Gbx");
+
+                    textBlockProgress.Dispatcher.Invoke(() =>
+                    {
+                        textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}";
+                    });
+                }));
+            }
+
+            await Task.WhenAll(conversions);
+
+            textBlockProgress.Text = $"Conversion progress: {Maps.Count}/{Maps.Count}";
+
+            MessageBox.Show("Conversion completed, your map is available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
         }
 
         private void comboBoxSheet_SelectionChanged(object sender, SelectionChangedEventArgs e)
