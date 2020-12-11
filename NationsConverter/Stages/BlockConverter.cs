@@ -231,7 +231,23 @@ namespace NationsConverter.Stages
                     if(conversion.Ground != null)
                         ProcessConversion(referenceBlock, conversion.Ground);
 
-                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x => x.XZ == referenceBlock.Coord.XZ))
+                    var blockModelExists = BlockInfoManager.BlockModels.TryGetValue(referenceBlock.Name, out BlockModel blockModel);
+
+                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x =>
+                    {
+                        if(blockModelExists)
+                        {
+                            if(blockModel.Ground.Length > 1)
+                            {
+                                foreach(var unit in blockModel.Ground)
+                                {
+                                    if (x.XZ == referenceBlock.Coord.XZ + ((Int3)unit.Coord).XZ)
+                                        return true;
+                                }
+                            }
+                        }
+                        return x.XZ == referenceBlock.Coord.XZ;
+                    }))
                         ProcessConversion(referenceBlock, conversion.DirtGround);
                     else if (conversion.FabricGround != null && blocks.Exists(x => x.Coord.XZ == referenceBlock.Coord.XZ && x.Name == "StadiumFabricCross1x1"))
                         ProcessConversion(referenceBlock, conversion.FabricGround);
