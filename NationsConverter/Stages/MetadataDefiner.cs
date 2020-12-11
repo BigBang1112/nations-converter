@@ -17,6 +17,8 @@ namespace NationsConverter.Stages
 
             map.CreateChunk<CGameCtnChallenge.Chunk03043044>();
             map.ScriptMetadata.Declare("MadeWithNationsConverter", true);
+            map.ScriptMetadata.Declare("NC_OriginalAuthorLogin", map.AuthorLogin);
+            map.ScriptMetadata.Declare("NC_OriginalAuthorNickname", map.AuthorNickname);
             map.ScriptMetadata.Declare("NC_Assembly", assembly.FullName);
             map.ScriptMetadata.Declare("NC_GBXNET_Assembly", assemblyGBXNET.FullName);
             map.ScriptMetadata.Declare("NC_EarlyAccess", false);
