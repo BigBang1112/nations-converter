@@ -1657,8 +1657,23 @@ Blocks:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
-
-  StadiumRoadDirtToRoadB: ~
+  StadiumRoadDirtToRoadB:
+  - Item:
+      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHalf.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
 
   StadiumRoadDirtHillSlope2:
   - Items:
