@@ -38,14 +38,14 @@ namespace NationsConverterCLI
 
             BlockInfoManager.BlockModels
                 = JsonConvert.DeserializeObject<Dictionary<string, BlockModel>>(
-                    Encoding.ASCII.GetString(Resources.StadiumBlockModels)
+                    File.ReadAllText("StadiumBlockModels.json")
                 );
 
             List<string> files = new List<string>
             {
                 fileName
             };
-            
+
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
             var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Stock.yml");
