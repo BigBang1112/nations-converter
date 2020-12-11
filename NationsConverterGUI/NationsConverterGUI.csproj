@@ -1,14 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net5.0-windows;netcoreapp3.1;net452</TargetFrameworks>
-    <UseWPF>true</UseWPF>
-	<PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFrameworks>net5.0-windows;net452</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<Platforms>x86</Platforms>
+		<PlatformTarget>x86</PlatformTarget>
+		<ApplicationIcon>favicon.ico</ApplicationIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <None Remove="favicon.ico" />
+	  <None Remove="Fonts\Raleway.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="favicon.ico" />
+	</ItemGroup>
 
 </Project>

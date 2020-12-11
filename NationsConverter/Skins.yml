@@ -1,0 +1,42 @@
+﻿# TM1
+
+Any\Advertisement\SignLeft.bik:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Left.webm
+Any\Advertisement\SignRight.bik:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Right.webm
+Any\Advertisement\SignUp.bik:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Top.webm
+Any\Advertisement\SignDown.bik:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Bottom.webm
+
+# TM2
+
+Any\Advertisement\SignLeft.dds:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Left.webm
+Any\Advertisement\SignRight.dds:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Right.webm
+Any\Advertisement\SignUp.dds:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Top.webm
+Any\Advertisement\SignDown.dds:
+  Primary: Any\Advertisement2x1\Off.tga
+  Secondary: Any\Advertisement2x1\Bottom.webm
+
+Stadium\CircuitScreen\Left.webm:
+  Primary: Any\Advertisement4x1\Off.tga
+  Secondary: Any\Advertisement4x1\Left.webm
+Stadium\CircuitScreen\Right.webm:
+  Primary: Any\Advertisement4x1\Off.tga
+  Secondary: Any\Advertisement4x1\Right.webm
+Stadium\CircuitScreen\Up.webm:
+  Primary: Any\Advertisement4x1\Off.tga
+  Secondary: Any\Advertisement4x1\Top.webm
+Stadium\CircuitScreen\Down.webm:
+  Primary: Any\Advertisement4x1\Off.tga
+  Secondary: Any\Advertisement4x1\Bottom.webm

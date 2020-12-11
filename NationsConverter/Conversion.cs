@@ -21,9 +21,16 @@ namespace NationsConverter
 
         public Conversion Air { get; set; }
         public Conversion Ground { get; set; }
+        public Conversion DirtGround { get; set; }
+        public Conversion GrassGround { get; set; }
+        public Conversion FabricGround { get; set; }
 
         public bool RemoveGround { get; set; }
         public bool OffsetPivotByBlockModel { get; set; }
+        public bool OffsetCoordByBlockModel { get; set; }
+
+        public bool MakeFabric { get; set; }
+        public bool MakeFabricOnGround { get; set; }
 
         public static implicit operator Conversion(string blockName) => new Conversion() { Block = new ConversionBlock() { Name = blockName } };
     }

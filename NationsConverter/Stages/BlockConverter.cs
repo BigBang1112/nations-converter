@@ -12,8 +12,10 @@ namespace NationsConverter.Stages
 {
     public class BlockConverter : IStage
     {
-        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
+            var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
+
             var macroblocks = new Dictionary<string, CGameCtnMacroBlockInfo>();
             var log = new HashSet<string>();
 
@@ -71,7 +73,7 @@ namespace NationsConverter.Stages
                 {
                     var center = new Vec3();
 
-                    if (conversion.Center == null)
+                    if (conversion.OffsetCoordByBlockModel)
                     {
                         var allCoords = conversion.Blocks.Select(x => new Int3(x.OffsetCoord[0], x.OffsetCoord[1], x.OffsetCoord[2])).ToArray();
                         var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
@@ -79,23 +81,34 @@ namespace NationsConverter.Stages
                         var size = max - min + (1, 1, 1);
 
                         center = (min + max) * .5f;
-                    }
-                    else center = (Vec3)conversion.Center;
 
-                    foreach (var c in conversion.Blocks)
-                    {
-                        var offsetCoord = (Int3)c.OffsetCoord;
+                        if (conversion.Center != null)
+                            center = (Vec3)conversion.Center;
 
-                        if (offsetCoord != default)
+                        var newCoords = new List<Vec3>();
+
+                        foreach (var c in conversion.Blocks)
+                            newCoords.Add(AdditionalMath.RotateAroundCenter((Int3)c.OffsetCoord, center, radians));
+
+                        if (center != default)
                         {
-                            offsetCoord = new Int3(
-                                System.Convert.ToInt32(Math.Cos(radians) * (offsetCoord.X - center.X) - Math.Sin(radians) * (offsetCoord.Z - center.Z) + center.X),
-                                offsetCoord.Y, // not supported yet
-                                System.Convert.ToInt32(Math.Sin(radians) * (offsetCoord.X - center.X) + Math.Cos(radians) * (offsetCoord.Z - center.Z) + center.Z)
-                            );
+                            var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
+                            newCoords = newCoords.Select(x => x - newMin).ToList();
                         }
 
-                        ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + offsetCoord);
+                        for (var i = 0; i < conversion.Blocks.Length; i++)
+                        {
+                            var c = conversion.Blocks[i];
+
+                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]);
+                        }
+                    }
+                    else
+                    {
+                        foreach (var c in conversion.Blocks)
+                        {
+                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord);
+                        }
                     }
                 }
 
@@ -172,13 +185,7 @@ namespace NationsConverter.Stages
                 if (conversion.Macroblock != null)
                 {
                     if (!macroblocks.TryGetValue(conversion.Macroblock, out CGameCtnMacroBlockInfo macro))
-                    {
                         macro = macroblocks[conversion.Macroblock] = GameBox.Parse<CGameCtnMacroBlockInfo>($"{Converter.LocalDirectory}/Macroblocks/{conversion.Macroblock}").MainNode;
-                        
-                        if (version <= GameVersion.TMUF) // TODO: Fix in GBX.NET
-                            foreach(var obj in macro.AnchoredObjects)
-                                obj.AbsolutePositionInMap += parameters.Stadium2RelativeOffset * (1, 0, 1);
-                    }
                     map.PlaceMacroblock(macro, referenceBlock.Coord + (0, conversion.OffsetY, 0), Dir.Add(referenceBlock.Direction, (Direction)conversion.OffsetDir));
                 }
 
@@ -222,9 +229,35 @@ namespace NationsConverter.Stages
                         freeBlock.Author = "Nadeo";
                 }
 
-                if (conversion.Ground != null && referenceBlock.IsGround)
-                    ProcessConversion(referenceBlock, conversion.Ground);
-                if (conversion.Air != null && !referenceBlock.IsGround)
+                if (referenceBlock.IsGround)
+                {
+                    if(conversion.Ground != null)
+                        ProcessConversion(referenceBlock, conversion.Ground);
+
+                    var blockModelExists = BlockInfoManager.BlockModels.TryGetValue(referenceBlock.Name, out BlockModel blockModel);
+
+                    if (conversion.DirtGround != null && temporary.DirtCoords.Exists(x =>
+                    {
+                        if(blockModelExists)
+                        {
+                            if(blockModel.Ground.Length > 1)
+                            {
+                                foreach(var unit in blockModel.Ground)
+                                {
+                                    if (x.XZ == referenceBlock.Coord.XZ + ((Int3)unit.Coord).XZ)
+                                        return true;
+                                }
+                            }
+                        }
+                        return x.XZ == referenceBlock.Coord.XZ;
+                    }))
+                        ProcessConversion(referenceBlock, conversion.DirtGround);
+                    else if (conversion.FabricGround != null && blocks.Exists(x => x.Coord.XZ == referenceBlock.Coord.XZ && x.Name == "StadiumFabricCross1x1"))
+                        ProcessConversion(referenceBlock, conversion.FabricGround);
+                    else if (conversion.GrassGround != null)
+                        ProcessConversion(referenceBlock, conversion.GrassGround);
+                }
+                else if (conversion.Air != null)
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
@@ -275,6 +308,35 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Flags.HasValue)
                     block.Flags = conversionBlock.Flags.Value;
 
+                if(conversionBlock.Skinnable)
+                {
+                    if(referenceBlock.Skin != null)
+                    {
+                        SkinDefinition def = null;
+                        if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl) || skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\".Length), out def))
+                        {
+                            var skin = new CGameCtnBlockSkin();
+                            skin.Text = "!4";
+                            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+                            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
+
+                            if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl))
+                            {
+                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(referenceBlock.Skin.PackDesc.LocatorUrl)}";
+                                skin.PackDesc.LocatorUrl = referenceBlock.Skin.PackDesc.LocatorUrl;
+                            }
+                            else
+                            {
+                                if (def.Primary != null) skin.PackDesc.FilePath = $"Skins\\{def.Primary}";
+                                if (def.Secondary != null) skin.SecondaryPackDesc.FilePath = $"Skins\\{def.Secondary}";
+                            }
+
+                            block.Skin = skin;
+                            block.Author = "Nadeo";
+                        }
+                    }
+                }
+
                 block.IsGround = block.Coord.Y == 0;
 
                 map.Blocks.Add(block);
@@ -283,6 +345,11 @@ namespace NationsConverter.Stages
             var sortedLog = log.ToList();
             sortedLog.Sort();
             File.WriteAllText($"{Converter.LocalDirectory}/missing_blocks.txt", string.Join("\n", sortedLog));
+        }
+
+        public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
+        {
+            throw new NotImplementedException();
         }
     }
 }

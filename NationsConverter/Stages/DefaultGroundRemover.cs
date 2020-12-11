@@ -12,9 +12,9 @@ namespace NationsConverter.Stages
         {
             map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Blocks/NationsConverter/NoGround.Block.Gbx", "Blocks/NationsConverter");
 
-            for (var x = 0; x < 32; x++)
+            for (var x = 0-1; x < 32+1; x++)
             {
-                for (var z = 0; z < 32; z++)
+                for (var z = 0-1; z < 32+1; z++)
                 {
                     Int3 coord = (x + 8, 0, z + 8);
                     if (version <= GameVersion.TMUF)

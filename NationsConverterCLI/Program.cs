@@ -30,12 +30,15 @@ namespace NationsConverterCLI
 
             var assembly = Assembly.GetExecutingAssembly();
             var localDirectory = Path.GetDirectoryName(assembly.Location);
+            var outputDirectory = localDirectory;
+            if (args.Length >= 2)
+                outputDirectory = args[1];
 
             Log.OnLogEvent += Log_LoggedMainEvent;
 
             BlockInfoManager.BlockModels
                 = JsonConvert.DeserializeObject<Dictionary<string, BlockModel>>(
-                    Encoding.ASCII.GetString(Resources.StadiumBlockModels)
+                    File.ReadAllText("StadiumBlockModels.json")
                 );
 
             List<string> files = new List<string>
@@ -45,7 +48,7 @@ namespace NationsConverterCLI
 
             var maps = new List<GameBox<CGameCtnChallenge>>();
 
-            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Official.yml");
+            var sheet = YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Stock.yml");
             var sheets = new Sheet[]
             {
                 YamlManager.Parse<Sheet>(localDirectory + "/Sheets/Custom.yml")
@@ -90,7 +93,7 @@ namespace NationsConverterCLI
 
                 converter.Convert(map, version);
 
-                gbxMap.Save($"{localDirectory}/{map.MapName}.Map.Gbx");
+                gbxMap.Save($"{outputDirectory}/{Path.GetFileNameWithoutExtension(Path.GetFileNameWithoutExtension(gbxMap.FileName))}.Map.Gbx");
             }
         }
 

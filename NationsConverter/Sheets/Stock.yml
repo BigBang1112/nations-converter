@@ -1,0 +1,1541 @@
+﻿Name: Stock
+Version: 1
+
+Blocks:
+
+# Terraformation
+
+  StadiumPool:
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  - PlatformIceBase
+  StadiumWater:
+  - Block:
+      Name: PlatformIceBase
+      OffsetCoord: [0, 1, 0]
+      OffsetCoord2: [0, 0, 0]
+  StadiumDirt: # TMNF
+  - PlatformDirtBase
+  StadiumDirtBorder:
+  - PlatformDirtBase
+  - ~
+  - ~
+  - ~
+  - ~
+  - PlatformDirtBase
+  - ~
+  - ~
+  - ~
+  - PlatformDirtBase
+
+  StadiumDirtHill:
+  - PlatformDirtBase
+  - ~
+  - PlatformDirtBase
+  - ~
+  - ~
+  - PlatformDirtBase
+  - PlatformDirtBase
+  - PlatformDirtBase
+  - ~
+  - PlatformDirtBase
+  - PlatformDirtBase
+  - PlatformDirtBase
+  - PlatformDirtBase
+
+# RoadMain
+
+  StadiumRoadMain:
+  - ~
+  - Air:
+      Block:
+        Name: RoadTechStraight
+        Variant: 0
+    Ground:
+      Block:
+        Name: TrackWallToRoadTech
+        Variant: 0
+  - Block:
+      Name: RoadTechCurve1
+      Variant: 0
+  - Block:
+      Name: RoadTechStraight
+      Variant: 0
+  - Block:
+      Name: RoadTechBranchTShaped
+      Variant: 0
+  - Block:
+      Name: RoadTechBranchCross
+      Variant: 0
+
+  StadiumRoadMainGTCurve2: [ RoadTechCurve2 ]
+  StadiumRoadMainGTCurve3: [ RoadTechCurve3 ]
+  StadiumRoadMainGTCurve4: [ RoadTechCurve4 ]
+  StadiumRoadMainGTCurve5: [ RoadTechCurve5 ]
+  StadiumLoopLeft: [ RoadTechDiagLeftLoop11X ]
+  StadiumLoopRight: [ RoadTechDiagRightLoop11X ]
+  StadiumRoadMainBirds: [ RoadTechStraight ]
+
+  StadiumRoadMainCheckpoint: [ RoadTechCheckpoint ]
+  StadiumRoadMainStartLine: [ RoadTechStart ]
+  StadiumRoadMainFinishLine: [ RoadTechFinish ]
+  StadiumRoadMainStartFinishLine: [ RoadTechMultilap ]
+  StadiumGrassCheckpoint: [ PlatformGrassCheckpoint ]
+  StadiumGrassBirds: ~
+
+  StadiumRoadMainTurbo: [ RoadTechSpecialTurbo ]
+  # StadiumRoadMainTurboRoulette: [ RoadTechSpecialTurboRoulette ]
+  StadiumRoadMainBumper: ~ #
+  StadiumRoadMainBumper2: ~ #
+  StadiumRoadMainFW: [ RoadTechSpecialNoEngine ]
+  StadiumRoadMainForceAcceleration: ~ #
+  StadiumRoadMainNoGrip: ~ #
+  StadiumRoadMainNoSteering: [ RoadTechSpecialNoSteering ]
+
+  StadiumHolePillar:
+  - Blocks:
+    - Name: RoadTechStraight
+    - Name: StructureBase
+      Ghost: true
+  StadiumHolePillar2Front:
+  - Block: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [4, 2, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-4, 2, 0]
+  StadiumHolePillar2Line:
+  - Block: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 2, 8]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 2, -8]
+  StadiumHolePillar3:
+  - Block: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 2, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 2, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 2, -10]
+  StadiumHole: [ RoadTechStraight ] #
+  StadiumRoadStretch: [ RoadTechStraight ] #
+  StadiumRoadStretchZ: [ RoadTechStraight ] #
+  StadiumBump1InGround: [ RoadTechStraight ] #
+  StadiumBump1: #
+  - Block:
+      Name: RoadTechStraight
+      OffsetY: 1
+  StadiumRamp:
+  - Block:
+      Name: RoadTechRampMed
+      OffsetDir: 2
+  StadiumRampLow:
+  - Block:
+      Name: RoadTechRampLow
+      OffsetDir: 2
+  StadiumRoadMainInBeam: [ RoadTechStraight ] #
+  StadiumRoadMainXBeam: [ RoadTechStraight ] #
+  StadiumRoadMainGTDiag2x2: [ RoadTechChicaneX2Left ]
+  StadiumRoadMainGTDiag2x2Mirror: [ RoadTechChicaneX2Right ]
+  StadiumRoadMainGTDiag3x2: [ RoadTechChicaneX3Left ]
+  StadiumRoadMainGTDiag3x2Mirror: [ RoadTechChicaneX3Right ]
+  StadiumRoadMainGTDiag4x3: ~ #
+  StadiumRoadMainGTDiag4x3Mirror:
+  - Macroblock: StadiumRoadMainGTDiag4x3Mirror.Macroblock.Gbx
+  StadiumRoadMainYShapedDiag2: [ RoadTechBranchYShaped2X3 ]
+  StadiumRoadMainYShapedCurve2: ~ #
+
+# Slope
+
+  StadiumRoadMainSlopeBase2: [ RoadTechSlopeBase2 ]
+  StadiumRoadMainSlopeBase: [ RoadTechSlopeBase ]
+  StadiumRoadMainSlopeBase1x2: [ RoadTechSlopeBase2x1 ]
+  StadiumRoadMainSlopeStraight: [ RoadTechSlopeStraight ]
+  StadiumRoadMainBiSlopeStart: [ RoadTechSlopeStart2x1 ]
+  StadiumRoadMainBiSlopeEnd: [ RoadTechSlopeEnd2x1 ]
+  StadiumRoadMainSlopeUTop: [ RoadTechSlopeUTop ]
+  StadiumRoadMainSlopeUBottom: [ RoadTechSlopeUBottom ]
+  StadiumRoadMainSlopeUBottomInGround: [ RoadTechSlopeUBottomInGround ]
+
+  StadiumRoadMainCheckpointUp: [ RoadTechCheckpointSlopeUp ]
+  StadiumRoadMainCheckpointDown: [ RoadTechCheckpointSlopeDown ]
+
+  StadiumRoadMainTurboUp: [ RoadTechSpecialTurboSlopeUp ]
+  StadiumRoadMainTurboDown: [ RoadTechSpecialTurboSlopeDown ]
+  # StadiumRoadMainTurboRouletteDown: [ RoadTechSpecialTurboRouletteSlopeDown ]
+  # StadiumRoadMainTurboRouletteUp: [ RoadTechSpecialTurboRouletteSlopeUp ]
+
+  StadiumRoadMainFWSlope: [ RoadTechSpecialNoEngineSlope ]
+  StadiumRoadMainForceAccelerationSlope: ~ #
+
+  StadiumHolePillarSlope:
+  - Blocks:
+    - Name: RoadTechSlopeStraight
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    - Name: StructureBase
+      Ghost: true
+  StadiumHoleSlope: [ RoadTechSlopeStraight ] #
+  StadiumRoadStretchSlope: [ RoadTechSlopeStraight ] #
+  StadiumBump1Slope: [ RoadTechSlopeStraight ] #
+  StadiumRoadMainInBeamSlope: [ RoadTechSlopeStraight ] #
+  StadiumRoadMainXBeamSlope: [ RoadTechSlopeStraight ] #
+
+  StadiumRoadMainGTDiag2x2Slope: [ RoadTechChicaneX2SlopeLeft ]
+  StadiumRoadMainGTDiag2x2SlopeMirror: [ RoadTechChicaneX2SlopeRight ]
+  StadiumRoadMainGTDiag3x2Slope: [ RoadTechChicaneX3SlopeLeft ]
+  StadiumRoadMainGTDiag3x2SlopeMirror: [ RoadTechChicaneX3SlopeRight ]
+  StadiumRoadMainGTDiag4x3Slope:
+  - Macroblock: StadiumRoadMainGTDiag4x3Slope.Macroblock.Gbx
+  StadiumRoadMainGTDiag4x3SlopeMirror:
+  - Macroblock: StadiumRoadMainGTDiag4x3SlopeMirror.Macroblock.Gbx
+
+  StadiumRoadMainYShapedDiag2SlopeUp: [ RoadTechBranchYShaped2X3SlopeUp ]
+  StadiumRoadMainYShapedDiag2SlopeDown: [ RoadTechBranchYShaped2X3SlopeDown ]
+
+# RoadTilt
+
+  StadiumRoadTiltStraight:
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+  StadiumRoadTiltTransition1Left: 
+  - Block:
+      Name: RoadTechTiltTransition1DownLeft
+      OffsetDir: 2
+  StadiumRoadTiltTransition1Right: 
+  - Block:
+      Name: RoadTechTiltTransition1DownRight
+      OffsetDir: 2
+  StadiumRoadTiltTransition2Left:
+  - Block:
+      Name: RoadTechTiltTransition2DownLeft
+      OffsetDir: 2
+  StadiumRoadTiltTransition2Right:
+  - Block:
+      Name: RoadTechTiltTransition2DownRight
+      OffsetDir: 2
+  StadiumRoadTiltTransition2CurveLeft:
+  - Block:
+      Name: RoadTechTiltTransition2DownLeftCurveIn
+      OffsetDir: 2
+  StadiumRoadTiltTransition2CurveRight:
+  - Block:
+      Name: RoadTechTiltTransition2DownRightCurveIn
+      OffsetDir: 2
+  StadiumRoadTiltTransition2DiagLeft:
+  - Macroblock: StadiumRoadTiltTransition2DiagLeft.Macroblock.Gbx
+  StadiumRoadTiltTransition2DiagRight:
+  - Macroblock: StadiumRoadTiltTransition2DiagRight.Macroblock.Gbx
+  StadiumRoadTiltStraightBirds:
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+
+  StadiumRoadMainCheckpointLeft: [ RoadTechCheckpointTiltRight ]
+  StadiumRoadMainCheckpointRight: [ RoadTechCheckpointTiltLeft ]
+
+  StadiumRoadMainTurboLeft: [ RoadTechSpecialTurboTiltRight ]
+  StadiumRoadMainTurboRight: [ RoadTechSpecialTurboTiltLeft ]
+  # StadiumRoadMainTurboRouletteLeft: [ RoadTechSpecialTurboRouletteTiltLeft ]
+  # StadiumRoadMainTurboRouletteRight: [ RoadTechSpecialTurboRouletteTiltRight ]
+
+  StadiumRoadMainFWTilt: [ RoadTechSpecialNoEngineTilt ]
+  StadiumRoadMainForceAccelerationTilt: ~ #
+
+  StadiumRoadTiltCorner: [ RoadTechTiltCurve1 ]
+  StadiumRoadTiltGTCurve2: [ RoadTechTiltCurve2 ]
+  StadiumRoadTiltGTCurve3: [ RoadTechTiltCurve3 ]
+  StadiumRoadTiltGTCurve4: [ RoadTechTiltCurve4 ]
+  StadiumRoadMainGTDiag2x2Tilt:
+  - Block:
+      Name: RoadTechChicaneX2TiltLeft
+      OffsetDir: 2
+  StadiumRoadMainGTDiag2x2TiltMirror: [ RoadTechChicaneX2TiltRight ]
+  StadiumRoadMainGTDiag3x2Tilt:
+  - Block:
+      Name: RoadTechChicaneX3TiltLeft
+      OffsetDir: 2
+  StadiumRoadMainGTDiag3x2TiltMirror: [ RoadTechChicaneX3TiltRight ]
+
+  StadiumRoadTiltCornerDownLeft: [ RoadTechTiltCurve1DownLeft ]
+  StadiumRoadTiltCornerDownRight:
+  - Block:
+      Name: RoadTechTiltCurve1DownRight
+      OffsetDir: 1
+  StadiumRoadTiltCornerUpLeft:
+  - Block:
+      Name: RoadTechTiltCurve1UpLeft
+      OffsetDir: 3
+  StadiumRoadTiltCornerUpRight:
+  - Block:
+      Name: RoadTechTiltCurve1UpRight
+      OffsetDir: 2
+  StadiumRoadTiltGTCurve2DownLeft: [ RoadTechTiltCurve2DownLeft ]
+  StadiumRoadTiltGTCurve2DownRight: 
+  - Block:
+      Name: RoadTechTiltCurve2DownRight
+      OffsetDir: 1
+  StadiumRoadTiltGTCurve2UpLeft:
+  - Block:
+      Name: RoadTechTiltCurve2UpLeft
+      OffsetDir: 3
+  StadiumRoadTiltGTCurve2UpRight:
+  - Block:
+      Name: RoadTechTiltCurve2UpRight
+      OffsetDir: 2
+  
+  StadiumHolePillarTilt:
+  - Blocks:
+    - Name: RoadTechTiltStraight
+      OffsetDir: 2
+    - Name: StructureBase
+      Ghost: true
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+  StadiumHoleTilt: #
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+  StadiumStretchTilt: #
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+  StadiumBump1Tilt: #
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+  StadiumRoadMainInBeamTilt: #
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+  StadiumRoadMainXBeamTilt: #
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
+
+# Platform
+
+  StadiumPlatformLoopStart:
+  - Block:
+      Name: PlatformTechLoopStart
+      OffsetDir: 2
+  StadiumPlatformLoopEnd:
+  - Block:
+      Name: PlatformTechLoopEnd
+      OffsetDir: 2
+  StadiumPlatformLoopStartCorner: [ PlatformTechLoopStartCurve1In ]
+  StadiumPlatformLoopEndCorner: [ PlatformTechLoopEndCurve1In ]
+
+  StadiumPlatformWall1: &stadiumPlatformWall
+  - Block:
+      Name: PlatformTechWallStraight
+      OffsetDir: 3
+      Ghost: true
+  StadiumPlatformWallBorder: *stadiumPlatformWall
+  StadiumPlatformWall2: &stadiumPlatformWall2
+  - Blocks:
+    - Name: PlatformTechWallStraight
+      OffsetDir: 3
+      Ghost: true
+    - Name: PlatformTechWallStraight
+      OffsetDir: 3
+      OffsetY: 1
+      Ghost: true
+  StadiumPlatformWall4:
+  - Block:
+      Name: PlatformTechWallStraight4
+      OffsetDir: 3
+      Ghost: true
+
+  StadiumPlatformWall1Birds: *stadiumPlatformWall
+  StadiumPlatformWallCheckpointV: *stadiumPlatformWall
+  StadiumPlatformWallCheckpointH: [ PlatformTechWallCheckpointRight ]
+  StadiumPlatformWall1Screen:
+  - Block:
+      Name: TechnicsScreen4x1Straight
+      Skinnable: true
+      OffsetDir: 3
+  StadiumPlatformWallPub2:
+  - Block:
+      Name: TechnicsScreen2x1Straight
+      OffsetDir: 3
+      Ghost: true
+      Skinnable: true
+  StadiumPlatformWall2FreeWheeling: *stadiumPlatformWall2
+  StadiumPlatformWall2ForceAcceleration: *stadiumPlatformWall2
+  StadiumPlatformWall2NoGrip: *stadiumPlatformWall2
+  StadiumPlatformWall2NoSteering: *stadiumPlatformWall2
+
+  StadiumPlatformGridStraight: [ PlatformTechBase ]
+  StadiumPlatformGridStraightBirds: [ PlatformTechBase ]
+  StadiumPlatformGridCheckpoint: [ PlatformTechCheckpoint ]
+  StadiumPlatformToRoad: [ PlatformTechToRoadTech ]
+  StadiumPlatformToRoad2:
+  - Macroblock: StadiumPlatformToRoad2.Macroblock.Gbx
+  StadiumPlatformToRoad2Mirror:
+  - Macroblock: StadiumPlatformToRoad2Mirror.Macroblock.Gbx
+  StadiumPlatformGridToCircuit: [ PlatformTechToRoadTech ]
+
+  StadiumPlatformGridTurbo: [ PlatformTechSpecialTurbo ]
+  StadiumPlatformGridBumper: ~ #
+  StadiumPlatformGridBumper2: ~ #
+  StadiumPlatformGridFW: [ PlatformTechSpecialNoEngine ]
+  StadiumPlatformGridForceAcceleration: ~ #
+  StadiumPlatformGridNoGrip: ~ #
+  StadiumPlatformGridNoSteering: ~ #
+
+  StadiumPlatformCornerWall1: [ PlatformTechWallCurve1 ]
+  StadiumPlatformCornerWall2:
+  - Blocks:
+    - Name: PlatformTechWallCurve1
+    - Name: PlatformTechWallCurve1
+      OffsetY: 1
+  StadiumPlatformCornerWall4: [ PlatformTechWallCurve1x4 ]
+  StadiumPlatformGTCurve2Wall1: [ PlatformTechWallCurve2 ]
+  StadiumPlatformGTCurve2Wall2:
+  - Blocks:
+    - Name: PlatformTechWallCurve2
+    - Name: PlatformTechWallCurve2
+      OffsetY: 1
+  StadiumPlatformGTCurve2Wall4: [ PlatformTechWallCurve2x4 ]
+  StadiumPlatformGTCurve3Wall1: [ PlatformTechWallCurve3 ]
+  StadiumPlatformGTCurve3Wall2:
+  - Blocks:
+    - Name: PlatformTechWallCurve3
+    - Name: PlatformTechWallCurve3
+      OffsetY: 1
+  StadiumPlatformGTCurve3Wall4: [ PlatformTechWallCurve3x4 ]
+  StadiumPlatformGTCurve4Wall1: ~ #
+  StadiumPlatformGTCurve4Wall2: ~ #
+  StadiumPlatformGTCurve4Wall4: ~ #
+
+  StadiumPlatformRoad:
+  - Blocks: &stadiumPlatformRoad
+    - Name: PlatformTechBase
+      OffsetY: 1
+      Variant: 0
+    - Name: TrackWallBranchCross
+      Variant: 0
+  - Blocks: 
+    - Name: PlatformTechBase
+      OffsetY: 1
+      Variant: 0
+    - Name: TrackWallDeadendRound
+      OffsetDir: 2
+      Variant: 0
+  - Blocks: *stadiumPlatformRoad
+  - Blocks: *stadiumPlatformRoad
+  - Blocks: *stadiumPlatformRoad
+  - Blocks: *stadiumPlatformRoad
+  StadiumPlatformSlope2Straight:
+  - Blocks:
+    - Name: PlatformTechSlope2Straight
+    - Name: StructureBase
+      Ghost: true
+  StadiumPlatformBiSlope2StartSmall:
+  - Blocks:
+    - Name: PlatformTechSlope2Start
+      OffsetY: 1
+    - Name: StructureBase
+  StadiumPlatformBiSlope2Start:
+  - Blocks:
+    - Name: PlatformTechSlope2Start
+      OffsetY: 1
+    - Name: StructureBase
+  StadiumPlatformBiSlope2End: [ PlatformTechSlope2End ]
+
+  StadiumPlatformTurbo:
+  - Blocks:
+    - Name: PlatformTechSpecialTurbo
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+
+  StadiumPlatformTurboDown:
+  - Block:
+      Name: PlatformTechSpecialTurboSlope2Down
+      OffsetY: 1
+  StadiumPlatformTurboLeft:
+  - Block:
+      Name: PlatformTechSpecialTurboTilt2Left
+      OffsetY: 1
+  StadiumPlatformTurboRight:
+  - Block:
+      Name: PlatformTechSpecialTurboTilt2Right
+      OffsetY: 1
+  StadiumPlatformTurboUp:
+  - Block:
+      Name: PlatformTechSpecialTurboSlope2Up
+      OffsetY: 1
+  StadiumPlatformBumper: ~
+  StadiumPlatformBumper2: ~
+
+  StadiumPlatformFW:
+  - Blocks:
+    - Name: PlatformTechSpecialNoEngine
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+  StadiumPlatformForceAcceleration: ~
+  StadiumPlatformNoGrip: ~
+  StadiumPlatformNoSteering:
+  - Blocks:
+    - Name: PlatformTechSpecialNoSteering
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+  StadiumPlatformFWSlope2: [ PlatformTechSpecialNoEngineSlope2 ]
+  StadiumPlatformForceAccelerationSlope2: ~
+  StadiumPlatformNoGripSlope2: ~
+  StadiumPlatformNoSteeringSlope2: [ PlatformTechSpecialNoSteeringSlope2 ]
+  
+  StadiumPlatformMultilap:
+  - Blocks:
+    - Name: PlatformTechMultilap
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+  StadiumPlatformCheckpoint:
+  - Blocks:
+    - Name: PlatformTechCheckpoint
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+  StadiumPlatformCheckpointDown:
+  - Block:
+      Name: PlatformTechCheckpointSlope2Down
+      OffsetY: 1
+  StadiumPlatformCheckpointLeft:
+  - Block:
+      Name: PlatformTechCheckpointSlope2Left
+      OffsetY: 1
+  StadiumPlatformCheckpointRight:
+  - Block:
+      Name: PlatformTechCheckpointSlope2Right
+      OffsetY: 1
+
+  StadiumPlatformCheckpointUp:
+  - Block:
+      Name: PlatformTechCheckpointSlope2Up
+      OffsetY: 1
+
+  StadiumCheckpointRingHRoad:
+  - FreeBlock:
+      Name: GateCheckpoint
+      OffsetPos: [0, 20, 0]
+      OffsetRot: [0, -90, 0]
+  - ~
+  - ~
+  - ~
+  - ~
+  - FreeBlock:
+      Name: GateCheckpoint
+      OffsetPos: [0, 20, 0]
+      OffsetRot: [0, -90, 0]
+  StadiumCheckpointRingV:
+  - Block:
+      Name: GateCheckpoint
+      Flags: 0x410000
+  StadiumCheckpointRing2x1V: ~
+  StadiumCheckpointRing2x1H: ~
+
+  StadiumPlatformToRoadMain:
+  - Blocks:
+    - Name: PlatformTechToRoadTech
+      OffsetY: 1
+    - Name: TrackWallBranchCross
+
+# Circuit
+
+  StadiumCircuitBase: &stadiumCircuitBase
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitSlopeStart:
+  - Blocks:
+    - Name: PlatformTechSlope2Start
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitSlopeStraight:
+  - Blocks:
+    - Name: PlatformTechSlope2Straight
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitSlopeEnd:
+  - Blocks:
+    - Name: PlatformTechSlope2End
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitToRoadMain:
+  - Blocks:
+    - Name: PlatformTechToRoadTech
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+
+  StadiumCircuitTurbo:
+  - Blocks:
+    - Name: PlatformTechSpecialTurbo
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitTurboLeft:
+  - Blocks:
+    - Name: PlatformTechSpecialTurboTilt2Left
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitTurboUp:
+  - Blocks:
+    - Name: PlatformTechSpecialTurboSlope2Up
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitTurboRight:
+  - Blocks:
+    - Name: PlatformTechSpecialTurboTilt2Right
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitTurboDown:
+  - Blocks:
+    - Name: PlatformTechSpecialTurboSlope2Down
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBumper: ~
+  StadiumCircuitBumper2: ~
+
+  StadiumCircuitFreeWheeling:
+  - Blocks:
+    - Name: PlatformTechSpecialNoEngine
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitForceAcceleration: ~
+  StadiumCircuitNoGrip: ~
+  StadiumCircuitNoSteering:
+  - Blocks:
+    - Name: PlatformTechSpecialNoSteering
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitFreeWheelingSlope2Air:
+  - Blocks:
+    - Name: PlatformTechSpecialNoEngineSlope2
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitForceAccelerationSlope2Air: ~
+  StadiumCircuitNoGripSlope2Air: ~
+  StadiumCircuitNoSteeringSlope2Air:
+  - Blocks:
+    - Name: PlatformTechSpecialNoSteeringSlope2
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+
+  StadiumCircuitBorderStraight:
+  - Macroblock: StadiumCircuitBorderStraight.Macroblock.Gbx
+    OffsetDir: 1
+  StadiumCircuitBorderSlopeStraightLeft:
+  - Macroblock: StadiumCircuitBorderSlopeStraightLeft.Macroblock.Gbx
+  StadiumCircuitBorderSlopeStraightTop:
+  - Macroblock: StadiumCircuitBorderSlopeStraightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeStraightRight:
+  - Macroblock: StadiumCircuitBorderSlopeStraightRight.Macroblock.Gbx
+  StadiumCircuitBorderSlopeStraightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeStraightBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeStartLeft:
+  - Blocks:
+    - Name: OpenTechZoneStraightSlope2StartLeft
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBorderSlopeStartRight:
+  - Blocks:
+    - Name: OpenTechZoneStraightSlope2StartRight
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBorderSlopeEndLeft:
+  - Blocks:
+    - Name: OpenTechZoneStraightSlope2EndLeft
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBorderSlopeEndRight:
+  - Blocks:
+    - Name: OpenTechZoneStraightSlope2EndRight
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  
+  StadiumCircuitBorderDiagIn:
+  - Macroblock: StadiumCircuitBorderCornerIn.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagInLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInLeftBottom.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagInLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagInRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeDiagInRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagInRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInRightBottom.Macroblock.Gbx
+  StadiumCircuitBorderDiagOut: 
+  - Macroblock: StadiumCircuitBorderCornerOut.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagOutLeftBottom:
+  - Macroblock: StadiumCircuitSlopeCornerInLeftBottom.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagOutLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagOutRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeDiagOutRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutRightBottom.Macroblock.Gbx
+    OffsetY: -1
+
+  StadiumCircuitBorderCornerIn:
+  - Macroblock: StadiumCircuitBorderCornerIn.Macroblock.Gbx
+    OffsetDir: 1
+  StadiumCircuitBorderSlopeCornerInLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInLeftBottom.Macroblock.Gbx
+  StadiumCircuitBorderSlopeCornerInLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeCornerInRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeDiagInRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeCornerInRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerInRightBottom.Macroblock.Gbx
+  StadiumCircuitBorderCornerOut:
+  - Macroblock: StadiumCircuitBorderCornerOut.Macroblock.Gbx
+  StadiumCircuitSlopeCornerInLeftBottom:
+  - Macroblock: StadiumCircuitSlopeCornerInLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeCornerOutLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeCornerOutRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeCornerOutRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeCornerOutRightBottom.Macroblock.Gbx
+    OffsetY: -1
+  
+  StadiumCircuitBorderGTCurve2In:
+  - Macroblock: StadiumCircuitBorderGTCurve2In.Macroblock.Gbx
+    OffsetDir: 1
+  StadiumCircuitBorderSlopeGTCurve2InLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2InLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve2InLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2InLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve2InRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2InRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve2InRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2InRightBottom.Macroblock.Gbx
+  StadiumCircuitBorderGTCurve2Out:
+  - Macroblock: StadiumCircuitBorderGTCurve2Out.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve2OutLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2OutLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve2OutLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2OutLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve2OutRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2OutRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve2OutRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve2OutRightBottom.Macroblock.Gbx
+    OffsetY: -1
+
+  StadiumCircuitBorderGTCurve3In:
+  - Macroblock: StadiumCircuitBorderGTCurve3In.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3InLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve3InLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3InRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3InRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3InRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3InRightBottom.Macroblock.Gbx
+  StadiumCircuitBorderGTCurve3Out:
+  - Macroblock: StadiumCircuitBorderGTCurve3Out.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3OutLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve3OutLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3OutRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve3OutRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightBottom.Macroblock.Gbx
+
+  StadiumCircuitBorderGTCurve4In:
+  - Macroblock: StadiumCircuitBorderGTCurve4In.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4InLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve4InLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4InRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4InRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4InRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4InRightBottom.Macroblock.Gbx
+  StadiumCircuitBorderGTCurve4Out:
+  - Macroblock: StadiumCircuitBorderGTCurve4Out.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4OutLeftBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4OutLeftBottom.Macroblock.Gbx
+    OffsetY: -1
+  StadiumCircuitBorderSlopeGTCurve4OutLeftTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4OutLeftTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4OutRightTop:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4OutRightTop.Macroblock.Gbx
+  StadiumCircuitBorderSlopeGTCurve4OutRightBottom:
+  - Macroblock: StadiumCircuitBorderSlopeGTCurve4OutRightBottom.Macroblock.Gbx
+
+  StadiumCircuitLoopStart:
+  - Block:
+      Name: PlatformTechLoopStart
+      OffsetDir: 2
+      OffsetY: 1
+  StadiumCircuitLoopStartCorner:
+  - Block:
+      Name: PlatformTechLoopStartCurve1In
+  StadiumCircuitRampBig:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    FreeBlocks:
+    - Name: PlatformTechToDecoWall
+      OffsetPos: [0, 10, 0]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitRampSmall1x05:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    FreeBlocks:
+    - Name: PlatformTechToDecoWall
+      OffsetPos: [0, 8.25, 0]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitRampSmall1x1: ~
+  StadiumCircuitHole:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBumpUp:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitBumpUp2:
+  - Macroblock: StadiumCircuitBumpUp2.Macroblock.Gbx
+  StadiumCircuitBumpDown: 
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+  StadiumCircuitPillar1:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+  StadiumCircuitPillar2:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, -5]
+  StadiumCircuitPillar3:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, -10]
+  StadiumCircuitPillar5:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 10, -10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 10, -10]
+  StadiumCircuitPillar6:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 10, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [5, 10, -10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 10, 0]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-5, 10, -10]
+  StadiumCircuitPillar7:
+  - Blocks:
+    - Name: PlatformTechBase
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+    - Name: StructureBase
+      OffsetY: 1
+      Ghost: true
+    Items:
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 10, -5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [10, 10, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, 10]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 10, 5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [-10, 10, -5]
+    - Name: ObstaclePillar2m
+      OffsetPos: [0, 10, -10]
+
+  StadiumCircuitBorderStraightLeft: # TMNF
+  - Blocks:
+    - Name: OpenTechZoneStraight
+      OffsetDir: 3
+      OffsetY: 1
+    - Name: DecoWallBasePillar
+
+  StadiumCircuitBorderSlopeCornerOutLeftBottom: # TMNF
+  - Blocks:
+    - Name: OpenTechZoneCurve1OutSlope2UpRight
+    - Name: DecoWallBasePillar
+      OffsetY: -1
+
+# RoadDirt
+
+  StadiumRoadDirtFenceStraight: ~
+  StadiumRoadDirtFenceCorner: ~
+  StadiumRoadDirt: ~
+  StadiumRoadDirtGTCurve2: ~
+  StadiumRoadDirtGTCurve3: ~
+  StadiumRoadDirtGTCurve4: ~
+  StadiumRoadDirtDiagonaleRight: ~
+  StadiumRoadDirtDiagonaleLeft: ~
+  StadiumRoadDirtStraightBirds: ~
+
+  StadiumRoadDirtCheckpoint: ~
+  StadiumRoadDirtMultiLap: ~
+
+  StadiumRoadDirtTurbo: ~
+  StadiumRoadDirtFreeWheeling: ~
+  StadiumRoadDirtForceAcceleration: ~
+  StadiumRoadDirtNoGrip: ~
+  StadiumRoadDirtNoSteering: ~
+
+  StadiumRoadDirtHighFenceStraight: ~
+  StadiumRoadDirtHighFenceCorner: ~
+  StadiumRoadDirtHigh: ~
+  StadiumRoadDirtHighGTCurve2: ~
+  StadiumRoadDirtHighGTCurve3: ~
+  StadiumRoadDirtHighGTCurve4: ~
+  StadiumRoadDirtHighFenceStraightBirds: ~
+
+  StadiumRoadDirtHighCheckpoint: ~
+  StadiumRoadDirtHighMultiLap: ~
+
+  StadiumRoadDirtHighTurbo: ~
+  StadiumRoadDirtHighFreeWheeling: ~
+  StadiumRoadDirtHighForceAcceleration: ~
+  StadiumRoadDirtHighNoGrip: ~
+  StadiumRoadDirtHighNoSteering: ~
+
+  StadiumRoadDirtToRoadDirtHigh: ~
+  StadiumRoadDirtToRoadDirtHigh2: ~
+  StadiumRoadDirtToRoadDirtHighBridge: ~
+  StadiumRoadDirtToRoadDirtHighCross: ~
+  StadiumRoadDirtHighToRoad: ~
+  StadiumRoadDirtToRoad: ~
+  StadiumRoadDirtToRoadB: ~
+
+  StadiumRoadDirtHillSlope2: ~
+  StadiumRoadDirtHillSlope: ~
+  StadiumRoadDirtHillWave: ~
+  StadiumRoadDirtHillSlopeGT2Bis: ~
+  StadiumRoadDirtHillSlopeGT2: ~
+
+  StadiumRoadDirtWave_x2: ~
+  StadiumRoadDirtWave_x1: ~
+  StadiumRoadDirtToRoadGrass: ~
+  StadiumDirtDeadendDoor: ~
+  StadiumDirtDeadendSpot: ~
+  StadiumDirtDeadendTent1: ~
+
+  StadiumRoadDirtHillTiltStraight: ~
+  StadiumRoadDirtHillTiltCornerIn: ~
+  StadiumRoadDirtHillTiltGTCurve3In: ~
+  StadiumRoadDirtHillTiltGTCurve4In: ~
+  StadiumRoadDirtHillTiltCornerOut: ~
+  StadiumRoadDirtHillTiltCheckpointLeft: ~
+  StadiumRoadDirtHillTiltCheckpointRight: ~
+
+  StadiumRoadDirtHillTiltToRoadLeft: ~
+  StadiumRoadDirtHillTiltToRoadRight: ~
+  StadiumRoadDirtHillTiltCornerLeft: ~
+  StadiumRoadDirtHillTiltCornerRight: ~
+  StadiumRoadDirtHillTiltToRoadSlope: ~
+  StadiumRoadDirtHillTiltToRoadSlopeMirror: ~
+  StadiumRoadDirtHillTiltToRoadSlopeX2: ~
+  StadiumRoadDirtHillTiltToRoadSlopeX2Mirror: ~
+  StadiumRoadDirtHillTiltToRoadSlopeX4: ~
+  StadiumRoadDirtHillTiltToRoadSlopeX4Mirror: ~
+
+# Trench
+
+  StadiumTrenchStraight: ~
+  StadiumTrenchStraightTunnel: ~
+  StadiumTrenchCorner: ~
+  StadiumTrenchCross: ~
+  StadiumTrenchCrossTunnel: ~
+  StadiumTrenchGTCurve2: ~
+  StadiumTrenchGTCurve3: ~
+  StadiumTrenchGTCurve3Tunnel: ~
+  StadiumTrenchGTCurve2Tunnel: ~
+
+  StadiumTrenchCheckpoint: ~
+  StadiumTrenchMultiLap: ~
+  StadiumTrenchFreeWheeling: ~
+  StadiumTrenchTurbo: ~
+  StadiumTrenchStraightScreen: ~
+  StadiumTrenchInPillar: ~
+
+  StadiumTrenchToRoadMain: ~
+  StadiumTrenchToRoadMainX2: ~
+  StadiumTrenchToRoadMainBiSlopeStart: ~
+  StadiumTrenchXRoadMain: ~
+  StadiumTrenchToRoadDirt: ~
+  StadiumTrenchToRoadDirtX2: ~
+  StadiumTrenchToPlatformBiSlopeStart: ~
+  StadiumTrenchToLoopStart: ~
+
+# Bridges
+  
+  StadiumSculptBridgeSuspendSlope2:
+  - Macroblock: StadiumSculptBridgeSuspendSlope2.Macroblock.Gbx
+  StadiumSculptBridgeSuspendSlope2Mirror:
+  - Macroblock: StadiumSculptBridgeSuspendSlope2Mirror.Macroblock.Gbx
+  StadiumSculptBridgeSuspendSlopeEnd:
+  - Macroblock: StadiumSculptBridgeSuspendSlopeEnd.Macroblock.Gbx
+  StadiumSculptBridgeSuspendSlopeEndMirror:
+  - Macroblock: StadiumSculptBridgeSuspendSlopeEndMirror.Macroblock.Gbx
+
+  StadiumSculptBridgePillar:
+  - Macroblock: StadiumSculptBridgePillar.Macroblock.Gbx
+    OffsetDir: 1
+  StadiumSculptBridgePillarMirror:
+  - Macroblock: StadiumSculptBridgePillar.Macroblock.Gbx
+    OffsetDir: 3
+  StadiumSculptBridgeSlopeStart:
+  - Macroblock: StadiumSculptBridgeSlopeStartAir.Macroblock.Gbx
+  StadiumSculptBridgeSlopeStartMirror:
+  - Macroblock: StadiumSculptBridgeSlopeStartMirrorAir.Macroblock.Gbx
+  StadiumSculptBridgeSlopeEnd:
+  - Macroblock: StadiumSculptBridgeSlopeEnd.Macroblock.Gbx
+  StadiumSculptBridgeSlopeEndMirror:
+  - Macroblock: StadiumSculptBridgeSlopeEndMirror.Macroblock.Gbx
+  StadiumSculptBridgeStraight:
+  - Macroblock: StadiumSculptBridgeStraight.Macroblock.Gbx
+  StadiumSculptBridgeStraightSmall:
+  - Blocks:
+    - Name: TrackWallStraight
+    - Name: StructureDeadendInTrackWallStraight
+      OffsetY: 1
+
+  StadiumTubePillarCap: [ StructureBase ]
+  StadiumTubeV1: [ StructureBase ]
+  StadiumTubeV4:
+  - Blocks:
+    - Name: StructureBase
+    - Name: StructureBase
+      OffsetY: 1
+    - Name: StructureBase
+      OffsetY: 2
+    - Name: StructureBase
+      OffsetY: 3
+  StadiumTubeV8:
+  - Blocks:
+    - Name: StructureBase
+    - Name: StructureBase
+      OffsetY: 1
+    - Name: StructureBase
+      OffsetY: 2
+    - Name: StructureBase
+      OffsetY: 3
+    - Name: StructureBase
+      OffsetY: 4
+    - Name: StructureBase
+      OffsetY: 5
+    - Name: StructureBase
+      OffsetY: 6
+    - Name: StructureBase
+      OffsetY: 7
+  StadiumTube: [ StructureBase ]
+  StadiumTubePillar: [ StructureBase ]
+  StadiumTubePillarBranch:
+  - Blocks:
+    - Name: StructureBase
+    - Name: StructureSupportDeadend
+      Ghost: true
+  StadiumTubePillarBranch2: ~
+  StadiumTubePillarBranch4: ~
+  StadiumTubeVDiag1: ~
+  StadiumTubeVDiag2: ~
+  StadiumTubeVDiag4: ~
+  StadiumTubeVDiag8: ~
+  StadiumTubeVDiag16: ~
+
+  StadiumTubeRoad:
+  - StructureCross
+  - Block:
+      Name: StructureDeadend
+      OffsetDir: 2
+  - StructureCorner
+  - StructureStraight
+  - StructureTShaped
+  - StructureCross
+  StadiumTubeRoadDown:
+  - Block:
+      Name: StructureCross
+      Ghost: true
+  - Block:
+      Name: StructureDeadend
+      OffsetDir: 2
+      Ghost: true
+  - Block:
+      Name: StructureCorner
+      Ghost: true
+  - Block:
+      Name: StructureStraight
+      Ghost: true
+  - Block:
+      Name: StructureTShaped
+      Ghost: true
+  - Block:
+      Name: StructureCross
+      Ghost: true
+  StadiumTubeRoadUp:
+  - StructureCross
+  - Block:
+      Name: StructureDeadend
+      OffsetDir: 2
+  - StructureCorner
+  - StructureStraight
+  - StructureTShaped
+  - StructureCross
+  StadiumTubeRoadCross:
+  - Block:
+      Name: StructureCross
+      Ghost: true
+  - Block:
+      Name: StructureDeadend
+      Ghost: true
+      OffsetDir: 2
+  - Block:
+      Name: StructureCorner
+      Ghost: true
+  - Block:
+      Name: StructureStraight
+      Ghost: true
+  - Block:
+      Name: StructureTShaped
+      Ghost: true
+  - Block:
+      Name: StructureCross
+      Ghost: true
+  StadiumTubeCurve1: ~
+  StadiumTubeCurve2: ~
+
+  StadiumControlRoadGlass:
+  - Block:
+      Name: TrackWallBranchCross
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, -30.5]
+      OffsetRot: [0, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, 30.5]
+      OffsetRot: [180, 0, 0]
+  - Block:
+      Name: TrackWallStraight
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -1, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -1, 0]
+      OffsetRot: [-90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, -30.5]
+      OffsetRot: [0, 0, 0]
+  - TrackWallBranchCross
+  - Block:
+      Name: TrackWallStraight
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -1, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -1, 0]
+      OffsetRot: [-90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+  - TrackWallBranchTShaped
+  - TrackWallBranchCross
+  StadiumControlRoadPub:
+  - TrackWallBranchCross
+  - TrackWallStraight
+  - TrackWallBranchCross
+  - Block:
+      Name: StructureStraightInTrackWallStraight
+      OffsetDir: 1
+  - PlatformBase
+  - PlatformBase
+  StadiumControlRoadCamera:
+  - Block:
+      Name: TrackWallBranchCross
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, -30.5]
+      OffsetRot: [0, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, 30.5]
+      OffsetRot: [180, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+  - Block:
+      Name: TrackWallStraight
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -1, 0]
+      OffsetRot: [90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -1, 0]
+      OffsetRot: [-90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [0, -5, -30.5]
+      OffsetRot: [0, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+  - TrackWallBranchCross
+  - Block:
+      Name: TrackWallStraight
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -1, 0]
+      OffsetRot: [90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [30.5, -5, 0]
+      OffsetRot: [90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -1, 0]
+      OffsetRot: [-90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+    - Name: StageTechnicsLight
+      OffsetPos: [-30.5, -5, 0]
+      OffsetRot: [-90, 0, 0]
+      Skin: Stadium\LightColors\Off.dds
+  - TrackWallBranchTShaped
+  - TrackWallBranchCross
+  StadiumControlCameraPub:
+  - Block:
+      Name: TrackWallStraight
+  StadiumControlLight:
+  - Block:
+      Name: TrackWallStraight
+  StadiumControlLightBase:
+  - Blocks:
+    - Name: StructureSupportCross
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, -1]
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, 1]
+      OffsetDir: 2
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [-1, 0, 0]
+      OffsetDir: 3
+      Ghost: true
+    OffsetCoordByBlockModel: true
+  StadiumTubeRoadLightSystem:
+  - Block:
+      Name: StructureBase
+  - Block:
+      Name: StructureDeadend
+      OffsetDir: 2
+      Ghost: true
+  - Block:
+      Name: StructureCorner
+    FreeBlock:
+      Name: StageTechnicsLight
+      OffsetPos: [10, -1.25, -10]
+      OffsetRot: [45, 0, 0]
+  - Block:
+      Name: StructureStraight
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [17.5, 0, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: StageTechnicsLight
+      OffsetPos: [-17.5, 0, 0]
+      OffsetRot: [-90, 0, 0]
+  - Block:
+      Name: StructureTShaped
+    FreeBlocks:
+    - Name: StageTechnicsLight
+      OffsetPos: [17.5, 0, 0]
+      OffsetRot: [90, 0, 0]
+  - Block:
+      Name: StructureCross
+  StadiumTubeRoadSoundSystem:
+  - Blocks:
+    - Name: StructureSupportCross
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, -1]
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, 1]
+      OffsetDir: 2
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [-1, 0, 0]
+      OffsetDir: 3
+      Ghost: true
+    OffsetCoordByBlockModel: true
+  - Blocks:
+    - Name: StructureSupportTShaped
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, -1]
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [-1, 0, 0]
+      OffsetDir: 3
+      Ghost: true
+    Center: [0, 0, 0]
+    OffsetCoordByBlockModel: true
+  - Blocks:
+    - Name: StructureSupportCorner
+      OffsetDir: 2
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [0, 0, -1]
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    Center: [0, 0, 0]
+    OffsetCoordByBlockModel: true
+  - Blocks:
+    - Name: StructureSupportStraight
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [-1, 0, 0]
+      OffsetDir: 3
+      Ghost: true
+    Center: [0, 0, 0]
+    OffsetCoordByBlockModel: true
+  - Blocks:
+    - Name: StructureSupportStraight
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+    - Name: StageTechnicsLightToStructure
+      OffsetCoord: [1, 0, 0]
+      OffsetDir: 1
+      Ghost: true
+    Center: [0, 0, 0]
+    OffsetCoordByBlockModel: true
+  - Blocks:
+    - Name: StructureSupportCross
+      Ghost: true
+    - Name: StructureCross
+      Ghost: true
+
+# Inflatables
+
+  StadiumFabricStraight1x1:
+  - Macroblock: StadiumFabricStraight1x1.Macroblock.Gbx
+  StadiumFabricPillarAir:
+  - Blocks:
+    - Name: PlatformTechWallStraight
+    - Name: PlatformTechWallStraight
+      OffsetY: 1
+    - Name: PlatformTechWallStraight
+      OffsetY: 2
+  StadiumFabricCornerIn:
+  - Macroblock: StadiumFabricCornerIn.Macroblock.Gbx
+  StadiumFabricPillarCornerInAir: ~
+  StadiumFabricCornerOut: ~
+  StadiumFabricPillarCornerOut: ~
+  StadiumFabricCross1x1: [ PlatformTechBaseFlip ]
+  StadiumFabricCross3x3: ~
+  StadiumFabricCross3x3Screen: ~
+  StadiumFabricPillarAirScreen: ~
+  StadiumFabricPillarScreenSmall: ~
+  StadiumFabricRamp: ~
+  StadiumFabricRampCornerOut: ~
+  StadiumFabricRampCornerIn: ~
+  
+  StadiumInflatableSupport:
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallCurve1
+  - DecoWallCurve1
+  - DecoWallCurve1
+  - DecoWallCurve1
+  StadiumInflatablePillar:
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallBasePillar
+  - DecoWallCurve1
+  - DecoWallCurve1
+  - DecoWallCurve1
+  - DecoWallCurve1
+  StadiumInflatableTube:
+  - Block: &stadiumInflatableTube
+      Name: StructureDeadendInTrackWallStraight
+      OffsetDir: 1
+  - Block: *stadiumInflatableTube
+  - Block: *stadiumInflatableTube
+  - Block: *stadiumInflatableTube
+  - Block: *stadiumInflatableTube
+  StadiumInflatableAdvert:
+  - ~
+  - ~
+  - ~
+  - ~
+  - ~
+  StadiumAirship:
+  - Macroblock: StadiumAirship.Macroblock.Gbx
+  StadiumAirshipDiag: ~
+  StadiumInflatableCastle: ~
+  StadiumInflatableCastleDoor: ~
+  StadiumInflatableCastleBig: ~
+  StadiumInflatableCactus: ~
+  StadiumInflatableSnowTree: ~
+  StadiumInflatablePalmTree: ~
+
+  StadiumSculptA:
+  - Macroblock: StadiumSculptA.Macroblock.Gbx
+  StadiumSculptB: ~
+  StadiumSculptC: ~
+  StadiumSculptArchRingEnd:
+  - Macroblock: StadiumSculptArchRingEndArt.Macroblock.Gbx
+  StadiumSculptArchRingEndMirror:
+  - Macroblock: StadiumSculptArchRingEndMirrorArt.Macroblock.Gbx
+  StadiumSculptArchRingStart:
+  - Macroblock: StadiumSculptArchRingEndArt.Macroblock.Gbx
+  StadiumSculptArchRingStartMirror:
+  - Macroblock: StadiumSculptArchRingEndMirrorArt.Macroblock.Gbx
+  StadiumPodium: ~
+  
+  StadiumDecoTowerCore6: ~
+  StadiumDecoTowerCore: ~
+  StadiumDecoTowerBeam: ~
+  StadiumDecoTowerA: ~
+  StadiumDecoTowerB: ~
+  StadiumDecoTowerC: ~
+  StadiumDecoTowerD: ~
