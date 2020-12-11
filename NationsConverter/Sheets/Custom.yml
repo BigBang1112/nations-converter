@@ -375,6 +375,11 @@ Blocks:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumRoadMainYShapedCurve2:
+  - Item:
+      Name: NationsConverter\y_roadFlat\t_split\TechRoadSplit.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
   
   StadiumRoadMainGTDiag4x3:
   - Item:
