@@ -953,7 +953,7 @@ Blocks:
     
   StadiumCircuitLoopStart:
   - Item:
-      Name: NationsConverter\u_platform\o_obstacle\StadiumCircuitLoopStart_Ground.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
+      Name: NationsConverter\u_platform\o_obstacle\CircuitLoopStart.Item.Gbx 26 pTuyJG9STcCN_11BiU3t0Q
       OffsetPivot: [16, 0, 16]
   StadiumCircuitRampBig:
   - Items:
