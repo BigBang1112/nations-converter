@@ -12,7 +12,7 @@ A web interface is planned for the future.
 
 Every converted map adds some metadata that can be used in gamemodes or map editor plugins.
 
-**Included since version** describes the version of the [Nations Converter library](NationsConverter/NationsConverter.csproj) (unless bracket note)
+**Included since version** describes the version of the [Nations Converter library](NationsConverter/NationsConverter.csproj#L6) (unless bracket note)
 
 - `Boolean MadeWithNationsConverter`
   - **Example value:** True
