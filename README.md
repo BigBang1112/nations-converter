@@ -45,4 +45,4 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
 
 ### Usage in ManiaScript
 
-`declare metadata Text MadeWithNationsConverter for Map`
+`declare metadata Boolean MadeWithNationsConverter for Map;`
