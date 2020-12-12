@@ -14,15 +14,34 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
 
 **Included since version** describes the version of the [Nations Converter library](NationsConverter/NationsConverter.csproj) (unless bracket note)
 
-| Type | Variable | Example value | Included since version | Description
-| --- | --- | --- | --- | ---
-| Boolean | MadeWithNationsConverter | True | 0.1.0 | Track was made with (or with assist) of this tool. Always true.
-| Text | NC_Assembly | NationsConverterGUI, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null | 0.1.0 | User interface project version the conversion was made.
-| Boolean | NC_EarlyAccess | False | 0.1.0 | Conversion was made in early access. False since 1.0.0 (GUI)
-| Text | NC_GBXNET_Assembly | GBX.NET, Version=0.5.4.0, Culture=neutral, PublicKeyToken=null | 1.0.0 (GUI) | GBX.NET version used for the GBX parse.
-| Text | NC_OriginalAuthorLogin | bigbang1112 | 1.0.1 (GUI) | Login of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
-| Text | NC_OriginalAuthorNickname | $h[bigbang1112]$fff$o$n$t$iBigBang1112$h  $z$40F | 1.0.1 (GUI) | Formatted nickname of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
-| Text | NC_Lib_Assembly | NationsConverter, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null | 1.0.2 | Version of the conversion processing library used on this map.
+- `Boolean MadeWithNationsConverter`
+  - **Example value:** True
+  - **Included since version:** 0.1.0
+  - **Description:** Track was made with (or with assist) of this tool. Always true.
+- `Text NC_Assembly`
+  - **Example value:** NationsConverterGUI, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null
+  - **Included since version:** 0.1.0
+  - **Description:** User interface project version the conversion was made.
+- `Boolean NC_EarlyAccess`
+  - **Example value:** False
+  - **Included since version:** 0.1.0
+  - **Description:** Conversion was made in early access. False since 1.0.0 (GUI)
+- `Text NC_GBXNET_Assembly`
+  - **Example value:** GBX.NET, Version=0.5.4.0, Culture=neutral, PublicKeyToken=null
+  - **Included since version:** 1.0.0 (GUI)
+  - **Description:** GBX.NET version used for the GBX parse.
+- `Text NC_OriginalAuthorLogin`
+  - **Example value:** bigbang1112
+  - **Included since version:** 1.0.1 (GUI)
+  - **Description:** Login of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
+- `Text NC_OriginalAuthorNickname`
+  - **Example value:** $h[bigbang1112]$fff$o$n$t$iBigBang1112$h  $z$40F
+  - **Included since version:** 1.0.1 (GUI)
+  - **Description:** Formatted nickname of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
+- `Text NC_Lib_Assembly`
+  - **Example value:** NationsConverter, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null
+  - **Included since version:** 1.0.2
+  - **Description:** Version of the conversion processing library used on this map.
 
 ### Usage in ManiaScript
 
