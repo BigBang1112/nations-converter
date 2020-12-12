@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 		<PlatformTarget>x86</PlatformTarget>
-		<Version>1.0.0</Version>
+		<Version>1.0.2</Version>
 		<Authors>BigBang1112</Authors>
 		<Product>Nations Converter</Product>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -21,11 +21,6 @@
 		<Content Include="UserData\**">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="UserData\Items\NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagLeft.Item.Gbx" />
-	  <None Remove="UserData\Items\NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagRight.Item.Gbx" />
 	</ItemGroup>
 
 	<ItemGroup>
