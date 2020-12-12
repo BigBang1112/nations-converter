@@ -447,6 +447,21 @@ Blocks:
       OffsetPos: [0, 8, 0]
     OffsetPivotByBlockModel: true
 
+  StadiumRoadMainCheckpointLeft:
+  - Block:
+      Name: RoadTechCheckpointTiltRight
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureUnderPlatformTech.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+  StadiumRoadMainCheckpointRight:
+  - Block:
+      Name: RoadTechCheckpointTiltLeft
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureUnderPlatformTech.Item.Gbx 26 akPfIM0aSzuHuaaDWptBbQ
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [-90, 0, 0]
+
   StadiumHolePillarTilt:
   - Blocks:
     - Name: RoadTechTiltStraight
