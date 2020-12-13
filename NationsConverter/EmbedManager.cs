@@ -70,7 +70,7 @@ namespace NationsConverter
                                         try
                                         {
                                             var itemName = conversionItem.Name.Split(' ');
-                                            if (itemName.Length >= 3 && itemName[2] != "Nadeo")
+                                            if (itemName.Length > 0 && itemName[0].StartsWith("NationsConverter"))
                                                 map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/{itemName[0]}", $"Items/{Path.GetDirectoryName(itemName[0])}");
                                         }
                                         catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
