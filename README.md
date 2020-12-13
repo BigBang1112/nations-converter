@@ -37,7 +37,7 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
 - `Text NC_OriginalAuthorNickname`
   - **Example value:** $h[bigbang1112]$fff$o$n$t$iBigBang1112$h  $z$40F
   - **Included since version:** 1.0.1 (GUI)
-  - **Description:** Formatted nickname of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
+  - **Description:** Formatted nickname of the original author name. Empty text on maps made in TMUF and lower versions.
 - `Text NC_Lib_Assembly`
   - **Example value:** NationsConverter, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null
   - **Included since version:** 1.0.2
