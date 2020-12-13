@@ -11,6 +11,7 @@ namespace NationsConverter.Stages
         {
             map.RemoveChunk<CGameCtnChallenge.Chunk03043019>();
             map.RemoveChunk<CGameCtnChallenge.Chunk03043029>();
+            map.Password = null;
 
             if (version >= GameVersion.TM2)
             {
