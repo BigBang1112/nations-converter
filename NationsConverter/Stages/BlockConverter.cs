@@ -147,6 +147,8 @@ namespace NationsConverter.Stages
                         int.TryParse(meta[1], out collection);
                         if(meta.Length == 3) author = meta[2];
                     }
+                    if (name.StartsWith("NationsConverter"))
+                        author = "Nations Converter Team";
 
                     var offsetPivot = default(Vec3);
                     if (conversionItem.OffsetPivot != null)
