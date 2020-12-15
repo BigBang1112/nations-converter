@@ -8,7 +8,9 @@ namespace NationsConverter.Stages
         {
             map.ChallengeParameters.MapType = "TrackMania\\TM_Race";
 
-            if(version < GameVersion.TM2)
+            map.ChallengeParameters.RemoveChunk<CGameCtnChallengeParameters.Chunk0305B006>(); // Causes "Couldn't load map" on ESWC
+
+            if (version < GameVersion.TM2)
                 map.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00E>();
 
             map.Kind = CGameCtnChallenge.TrackKind.InProgress;

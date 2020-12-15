@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 		<PlatformTarget>x86</PlatformTarget>
-		<Version>1.0.2</Version>
+		<Version>1.1.0</Version>
 		<Authors>BigBang1112</Authors>
 		<Product>Nations Converter</Product>
 		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GBX.NET" Version="0.5.4" />
+		<PackageReference Include="GBX.NET" Version="0.6.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="YamlDotNet" Version="9.1.0" />
 	</ItemGroup>
