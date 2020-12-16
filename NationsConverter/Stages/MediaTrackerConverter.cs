@@ -18,6 +18,10 @@ namespace NationsConverter.Stages
             {
                 offsetCoord *= (3, 1, 3);
                 //offset -= MainConverter.Parameters.Stadium2RelativeOffset;
+
+                map.ClipIntro?.Tracks?.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom));
+                Array.ForEach(map.ClipGroupInGame?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom)));
+                Array.ForEach(map.ClipGroupEndRace?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom)));
             }
 
             if(version >= GameVersion.TM2)
