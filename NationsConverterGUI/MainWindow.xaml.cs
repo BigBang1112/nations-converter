@@ -422,7 +422,10 @@ namespace NationsConverterGUI
 
             var conversions = new List<Task>();
 
-            foreach(var map in Maps)
+            var ignoreMediaTracker = checkBoxIgnoreMediaTracker.IsChecked.GetValueOrDefault();
+            checkBoxIgnoreMediaTracker.IsEnabled = false;
+
+            foreach (var map in Maps)
             {
                 conversions.Add(Task.Run(() =>
                 {
@@ -430,7 +433,8 @@ namespace NationsConverterGUI
                     {
                         Parameters = new ConverterParameters
                         {
-                            Definitions = sheetMgr.Definitions
+                            Definitions = sheetMgr.Definitions,
+                            IgnoreMediaTracker = ignoreMediaTracker
                         }
                     };
 
@@ -465,6 +469,7 @@ namespace NationsConverterGUI
             await Task.WhenAll(conversions);
 
             textBlockProgress.Text = $"Conversion progress: {Maps.Count}/{Maps.Count}";
+            checkBoxIgnoreMediaTracker.IsEnabled = true;
 
             MessageBox.Show("Conversion completed, your map(s) are available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
         }
