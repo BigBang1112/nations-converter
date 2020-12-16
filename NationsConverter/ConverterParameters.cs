@@ -13,6 +13,7 @@ namespace NationsConverter
         public Vec3 Stadium2RelativeOffset { get; set; }
 
         public Definitions Definitions { get; set; }
+        public bool IgnoreMediaTracker { get; set; }
 
         public ConverterParameters()
         {

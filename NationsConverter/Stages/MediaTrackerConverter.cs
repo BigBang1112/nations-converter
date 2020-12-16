@@ -38,6 +38,9 @@ namespace NationsConverter.Stages
             map.TransferMediaTrackerTo049();
             map.OffsetMediaTrackerCameras(offset);
             map.OffsetMediaTrackerTriggers(offsetCoord);
+
+            if (parameters.IgnoreMediaTracker)
+                map.RemoveChunk<CGameCtnChallenge.Chunk03043049>();
         }
     }
 }

@@ -70,6 +70,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="150"/>
                         <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
@@ -98,8 +99,12 @@
                     <Grid Grid.Row="1" Background="{DynamicResource BackgroundColor2}" Margin="0 6" Height="25">
                         <TextBlock x:Name="textBlockLoadMapMsg" FontSize="12" VerticalAlignment="Center" Margin="10 0"/>
                     </Grid>
+                    
+                    <Grid Grid.Row="2" Background="{DynamicResource BackgroundColor2}" Margin="0 0 0 6" Height="35">
+                        <CheckBox x:Name="checkBoxIgnoreMediaTracker" Content="Ignore MediaTracker" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 0"/>
+                    </Grid>
 
-                    <Grid Grid.Row="2" Background="{DynamicResource BackgroundColor2}">
+                    <Grid Grid.Row="3" Background="{DynamicResource BackgroundColor2}">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>

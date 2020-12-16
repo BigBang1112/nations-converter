@@ -14,6 +14,7 @@ namespace NationsConverter
         {
             var previousEmbed = map.Embeds; // TODO: maybe later some kind of embed transfer support
 
+            map.Embeds.Clear();
             map.RemoveChunk<CGameCtnChallenge.Chunk03043054>(); // TODO: Fix 0x054 properly for MP3 maps
 
             map.CreateChunk<CGameCtnChallenge.Chunk03043054>();
