@@ -43,7 +43,7 @@ namespace NationsConverter
             DefaultGroundRemover.Process(map, version, Parameters);
             MetadataDefiner.Process(map, version, Parameters);
             AdvertisementAdder.Process(map, version, Parameters);
-            //MapUidChanger.Process(map, version, Parameters);
+            MapUidChanger.Process(map, version, Parameters);
         }
 
         static Converter()

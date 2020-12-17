@@ -10,8 +10,7 @@ namespace NationsConverter.Stages
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters)
         {
             map.RemoveChunk<CGameCtnChallenge.Chunk03043019>();
-            map.RemoveChunk<CGameCtnChallenge.Chunk03043029>();
-            map.Password = null;
+            map.CrackPassword();
 
             if (version >= GameVersion.TM2)
             {
