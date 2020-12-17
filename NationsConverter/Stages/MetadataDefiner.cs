@@ -29,6 +29,8 @@ namespace NationsConverter.Stages
             map.ScriptMetadata.Declare("NC_OriginalAuthorNickname", map.AuthorNickname);
 
             map.ScriptMetadata.Declare("NC_Lib_Assembly", assemblyLIB.FullName);
+
+            map.ScriptMetadata.Declare("NC_OriginalMapUid", map.MapUid);
         }
     }
 }
