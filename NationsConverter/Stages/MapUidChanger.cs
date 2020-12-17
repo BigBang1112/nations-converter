@@ -18,7 +18,7 @@ namespace NationsConverter.Stages
                 stringChars[i] = chars[random.Next(chars.Length)];
             }
 
-            //map.MapUid = new string(stringChars);
+            map.MapUid = new string(stringChars);
         }
     }
 }
