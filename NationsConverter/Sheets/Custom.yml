@@ -1352,6 +1352,9 @@ Blocks:
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 1.655, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -6, 0]
     GrassGround:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
@@ -2419,6 +2422,23 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassStraight.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: 7FF
+      Offset: [10, -5, 12]
+    - Color: 7FF
+      Offset: [10, -5, 4]
+    - Color: 7FF
+      Offset: [10, -5, -4]
+    - Color: 7FF
+      Offset: [10, -5, -12]
+    - Color: 7FF
+      Offset: [-10, -5, 12]
+    - Color: 7FF
+      Offset: [-10, -5, 4]
+    - Color: 7FF
+      Offset: [-10, -5, -4]
+    - Color: 7FF
+      Offset: [-10, -5, -12]
     Air:
       Items:
       - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx

@@ -82,6 +82,28 @@ namespace NationsConverter
                                         }
                                     }
 
+                                    if (c.Light != null)
+                                        ImportLight(c.Light);
+
+                                    if (c.Lights != null)
+                                        foreach (var conversionLight in c.Lights)
+                                            ImportLight(conversionLight);
+
+                                    void ImportLight(ConversionLight conversionLight)
+                                    {
+                                        if (conversionLight == null) return;
+
+                                        try
+                                        {
+                                            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/Lights/Light_{conversionLight.Color}.Item.Gbx",
+                                                $"Items/NationsConverter/Lights");
+                                        }
+                                        catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
+                                        {
+
+                                        }
+                                    }
+
                                     if (c.Ground != null && block.IsGround)
                                         Import(c.Ground);
 
