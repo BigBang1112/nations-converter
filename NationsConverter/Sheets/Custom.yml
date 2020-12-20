@@ -416,6 +416,10 @@ Blocks:
   - Item:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadTechSlopeStraightObstacleTM2.Item.Gbx
       OffsetPivot: [16, 0, 16]
+  StadiumRoadStretchSlope:
+  - Item:
+      Name: NationsConverter\x_roadSlope\v_obstacle\TechNarrowCenterSlope.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumBump1Slope:
   - Item:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadBump1Slope.Item.Gbx
@@ -481,6 +485,10 @@ Blocks:
       Name: NationsConverter\w_roadTilt\t_obstacle\RoadTechTiltHole.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetRot: [180, 0, 0]
+  StadiumStretchTilt:
+  - Item:
+      Name: NationsConverter\w_roadTilt\t_obstacle\TechNarrowCenterTilt.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumBump1Tilt:
   - Item:
       Name: NationsConverter\w_roadTilt\t_obstacle\RoadBump1Tilt.Item.Gbx
