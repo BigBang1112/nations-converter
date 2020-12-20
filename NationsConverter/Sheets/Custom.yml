@@ -380,6 +380,23 @@ Blocks:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumRoadMainInBeam:
+  - Block: RoadTechStraight
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
+      OffsetPos: [4, 0, 0]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
+      OffsetPos: [-4, 0, 0]
+      OffsetRot: [90, 0, 0]
+  StadiumRoadMainXBeam:
+  - Block: RoadTechStraight
+    Items: 
+    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
+      OffsetPos: [0, 0, 4]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
+      OffsetPos: [0, 0, -4]
+
   StadiumRoadMainYShapedCurve2:
   - Item:
       Name: NationsConverter\y_roadFlat\t_split\TechRoadSplit.Item.Gbx
