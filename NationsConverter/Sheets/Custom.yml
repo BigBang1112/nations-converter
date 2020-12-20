@@ -909,12 +909,12 @@ Blocks:
   StadiumCircuitBorderSlopeGTCurve2OutRightTop:
   - Item:
       Name: NationsConverter\u_platform\t_dentiCurve2\DentiCurve2CornerOutBankedTR.Item.Gbx
-      OffsetPivot: [16, 0, 16]
+      OffsetPivot: [-16, 0, 16]
     OffsetPivotByBlockModel: true
   StadiumCircuitBorderSlopeGTCurve2OutRightBottom:
   - Item:
       Name: NationsConverter\u_platform\t_dentiCurve2\DentiCurve2CornerOutBankedBR.Item.Gbx
-      OffsetPivot: [16, 0, 16]
+      OffsetPivot: [-16, 0, 16]
     OffsetPivotByBlockModel: true
 
   StadiumCircuitBorderGTCurve3In:
