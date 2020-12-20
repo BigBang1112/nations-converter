@@ -380,6 +380,50 @@ Blocks:
       Name: NationsConverter\y_roadFlat\v_obstacle\RoadBump1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+  StadiumRamp:
+  - Air:
+      Items:
+      - Name: NationsConverter\y_roadFlat\z_road\TechRoadToAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetRot: [180, 0, 0]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHigh.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHigh.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHighPillar.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
+  StadiumRampLow:
+  - Air:
+      Items:
+      - Name: NationsConverter\y_roadFlat\z_road\TechRoadToAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetRot: [180, 0, 0]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLow.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\z_road\TechRoadToGround.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLow.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
+      - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLowPillar.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 2, 0]
+        OffsetRot: [180, 0, 0]
   StadiumRoadMainInBeam:
   - Block: RoadTechStraight
     Items:
