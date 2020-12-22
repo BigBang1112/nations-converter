@@ -748,7 +748,6 @@ Blocks:
   - Macroblock: StadiumCircuitBorderGTCurve3In.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3InLeftBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftBottom.Macroblock.Gbx
-    OffsetY: -1
   StadiumCircuitBorderSlopeGTCurve3InLeftTop:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3InRightTop:
@@ -766,12 +765,12 @@ Blocks:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3OutRightBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightBottom.Macroblock.Gbx
+    OffsetY: -1
 
   StadiumCircuitBorderGTCurve4In:
   - Macroblock: StadiumCircuitBorderGTCurve4In.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve4InLeftBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftBottom.Macroblock.Gbx
-    OffsetY: -1
   StadiumCircuitBorderSlopeGTCurve4InLeftTop:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve4InRightTop:
@@ -798,6 +797,7 @@ Blocks:
   StadiumCircuitLoopStartCorner:
   - Block:
       Name: PlatformTechLoopStartCurve1In
+      OffsetY: 1
   StadiumCircuitRampBig:
   - Blocks:
     - Name: PlatformTechBase
