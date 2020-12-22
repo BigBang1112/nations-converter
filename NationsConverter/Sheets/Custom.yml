@@ -2469,6 +2469,23 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassDeadend.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: 7FF
+      Offset: [10, -5, -12]
+    - Color: 7FF
+      Offset: [10, -5, -4]
+    - Color: 7FF
+      Offset: [9, -5, 4]
+    - Color: 7FF
+      Offset: [4, -5, 12]
+    - Color: 7FF
+      Offset: [-10, -5, -12]
+    - Color: 7FF
+      Offset: [-10, -5, -4]
+    - Color: 7FF
+      Offset: [-9, -5, 4]
+    - Color: 7FF
+      Offset: [-4, -5, 12]
     Air:
       Item:
         Name: NationsConverter\r_support\v_control\ControlGlassDeadendAir.Item.Gbx
@@ -2480,6 +2497,17 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassCorner.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: 7FF
+      Offset: [-10, -5, -12]
+    - Color: 7FF
+      Offset: [-8, -5, -4]
+    - Color: 7FF
+      Offset: [-2, -5, 2]
+    - Color: 7FF
+      Offset: [4, -5, 8]
+    - Color: 7FF
+      Offset: [12, -5, 10]
     Air:
       Item:
         Name: NationsConverter\r_support\v_control\ControlGlassCornerAir.Item.Gbx
@@ -2764,8 +2792,16 @@ Blocks:
   - Item:
       Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCross1x1.Item.Gbx
       OffsetPivot: [16, 0, 16]
-  StadiumFabricCross3x3: ~
-  StadiumFabricCross3x3Screen: ~
+  StadiumFabricCross3x3:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCross3x3.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumFabricCross3x3Screen:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCross3x3Screen.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
   StadiumFabricPillarAirScreen: ~
   StadiumFabricPillarScreenSmall: ~
   StadiumFabricRamp:
