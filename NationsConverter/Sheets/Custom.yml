@@ -2802,8 +2802,15 @@ Blocks:
       Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricCross3x3Screen.Item.Gbx
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
-  StadiumFabricPillarAirScreen: ~
-  StadiumFabricPillarScreenSmall: ~
+  StadiumFabricPillarAirScreen:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricPillarAirScreen_Ground.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    OffsetPivotByBlockModel: true
+  StadiumFabricPillarScreenSmall:
+  - Item:
+      Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricPillarScreenSmall_Ground.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumFabricRamp:
   - Air:
       Items:
