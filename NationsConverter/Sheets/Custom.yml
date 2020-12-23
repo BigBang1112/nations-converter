@@ -2252,7 +2252,30 @@ Blocks:
       OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
-  StadiumTrenchToRoadMainBiSlopeStart: ~
+  StadiumTrenchToRoadMainBiSlopeStart:
+  - Item:
+      Name: NationsConverter\s_underground\TM2TrenchToRoadSlope.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadX2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadX2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadX2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
   StadiumTrenchXRoadMain:
   - Item:
       Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx
