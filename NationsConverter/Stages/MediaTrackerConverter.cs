@@ -22,7 +22,7 @@ namespace NationsConverter.Stages
 
             if(version >= GameVersion.TM2)
             {
-                offsetCoord += (16, -8, 16);
+                offsetCoord += (0, -8, 0); // +(16, 0, 16) for newer tracks
             }
 
             map.TransferMediaTrackerTo049();
