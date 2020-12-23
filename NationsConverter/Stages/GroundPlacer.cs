@@ -106,8 +106,6 @@ namespace NationsConverter.Stages
 
                         if (fabricExists)
                         {
-                            grassCoords.Add((x, 1, z));
-
                             map.PlaceAnchoredObject(
                                 (@"NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
                                 (x, 1, z) * map.Collection.GetBlockSize(),
