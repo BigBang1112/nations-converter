@@ -327,6 +327,9 @@ Blocks:
       Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 1.655, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -6, 0]
 
   StadiumHolePillar:
   - Blocks:
@@ -688,6 +691,9 @@ Blocks:
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 8, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -14, 0]
   StadiumPlatformCheckpointDown:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
@@ -701,6 +707,9 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 15.9, 0]
       OffsetRot: [0, -26.5, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -20, 0]
   StadiumPlatformCheckpointLeft:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
@@ -714,6 +723,9 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 15.9, 0]
       OffsetRot: [0, 0, 26.5]
+    Light:
+      Color: FFF
+      Offset: [0, -20, 0]
   StadiumPlatformCheckpointRight:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
@@ -727,6 +739,9 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 15.9, 0]
       OffsetRot: [0, 0, -26.5]
+    Light:
+      Color: FFF
+      Offset: [0, -20, 0]
   StadiumPlatformCheckpointUp:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
@@ -738,6 +753,9 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 15.9, 0]
       OffsetRot: [0, 26.5, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -20, 0]
 
   StadiumPlatformToRoadMain:
   - Block:
@@ -2127,6 +2145,9 @@ Blocks:
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 2, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -4, 0]
     GrassGround:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx
@@ -2479,6 +2500,23 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassBase.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: 7FF
+      Offset: [9, -5, 4]
+    - Color: 7FF
+      Offset: [4, -5, 12]
+    - Color: 7FF
+      Offset: [-9, -5, 4]
+    - Color: 7FF
+      Offset: [-4, -5, 12]
+    - Color: 7FF
+      Offset: [-9, -5, -4]
+    - Color: 7FF
+      Offset: [-4, -5, -12]
+    - Color: 7FF
+      Offset: [9, -5, -4]
+    - Color: 7FF
+      Offset: [4, -5, -12]
     Air:
       Item:
         Name: NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx
@@ -2571,6 +2609,15 @@ Blocks:
   - Item:
       Name: NationsConverter\r_support\v_control\ControlGlassT.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: 7FF
+      Offset: [-10, -5, 12]
+    - Color: 7FF
+      Offset: [-10, -5, 4]
+    - Color: 7FF
+      Offset: [-10, -5, -4]
+    - Color: 7FF
+      Offset: [-10, -5, -12]
     Air:
       Item:
         Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx
