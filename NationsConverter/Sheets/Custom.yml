@@ -991,6 +991,10 @@ Blocks:
       Name: NationsConverter\u_platform\s_dentiCurve3\DentiCurve3In.Item.Gbx
       OffsetPivot: [16, 0, 16]
     OffsetPivotByBlockModel: true
+  StadiumCircuitBorderSlopeGTCurve3InLeftBottom: ~
+  StadiumCircuitBorderSlopeGTCurve3InLeftTop: ~
+  StadiumCircuitBorderSlopeGTCurve3InRightTop: ~
+  StadiumCircuitBorderSlopeGTCurve3InRightBottom: ~
   StadiumCircuitBorderGTCurve3Out:
   - Item:
       Name: NationsConverter\u_platform\s_dentiCurve3\DentiCurve3Out.Item.Gbx
@@ -1876,9 +1880,26 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\z_terrain\w_grass\GrassGround.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\r_obstacle\DirtDoor.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Light:
+      Color: FFF
+      Offset: [0, -5, 4]
     RemoveGround: true
-  StadiumDirtDeadendSpot: ~
-  StadiumDirtDeadendTent1: ~
+  StadiumDirtDeadendSpot:
+  - Item:
+      Name: NationsConverter\tb_TM2RoadDirt\r_obstacle\DirtSpot.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Light:
+      Color: FFF
+      Offset: [0, -5, 8]
+  StadiumDirtDeadendTent1:
+  - Item:
+      Name: NationsConverter\tb_TM2RoadDirt\r_obstacle\DirtTent1.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Light:
+      Color: FFF
+      Offset: [0, -5, 8]
 
   StadiumRoadDirtHillTiltStraight:
   - Item:
