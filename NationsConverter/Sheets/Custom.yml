@@ -2731,6 +2731,92 @@ Blocks:
       Item:
         Name: NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx
         OffsetPivot: [16, 0, 16]
+  StadiumTubeRoadLightSystem:
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, 0]
+    - Color: FFF
+      Offset: [-8, -4, 0]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightDeadendStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, -8]
+    - Color: FFF
+      Offset: [-8, -4, -8]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightCornerStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, 8]
+    - Color: FFF
+      Offset: [8, -4, -8]
+    - Color: FFF
+      Offset: [-8, -4, -8]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightStraightStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, 8]
+    - Color: FFF
+      Offset: [-8, -4, 8]
+    - Color: FFF
+      Offset: [8, -4, -8]
+    - Color: FFF
+      Offset: [-8, -4, -8]
+    - Color: FFF
+      Offset: [8, -4, 0]
+    - Color: FFF
+      Offset: [-8, -4, 0]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightTStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, 8]
+    - Color: FFF
+      Offset: [-8, -4, 8]
+    - Color: FFF
+      Offset: [8, -4, -8]
+    - Color: FFF
+      Offset: [-8, -4, -8]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeLightCrossStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [8, -4, 8]
+    - Color: FFF
+      Offset: [-8, -4, 8]
+    - Color: FFF
+      Offset: [8, -4, -8]
+    - Color: FFF
+      Offset: [-8, -4, -8]
+  StadiumTubeRoadSoundSystem:
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundDeadendStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundCornerStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundStraightStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundTStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  - Item:
+      Name: NationsConverter\r_support\v_control\TubeSoundCrossStructure.Item.Gbx
+      OffsetPivot: [16, 0, 16]
 
 # Inflatables
   
