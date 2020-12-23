@@ -425,6 +425,9 @@ namespace NationsConverterGUI
             var ignoreMediaTracker = checkBoxIgnoreMediaTracker.IsChecked.GetValueOrDefault();
             checkBoxIgnoreMediaTracker.IsEnabled = false;
 
+            var christmasMode = checkBoxChristmasMode.IsChecked.GetValueOrDefault();
+            checkBoxChristmasMode.IsEnabled = false;
+
             foreach (var map in Maps)
             {
                 conversions.Add(Task.Run(() =>
@@ -434,11 +437,12 @@ namespace NationsConverterGUI
                         Parameters = new ConverterParameters
                         {
                             Definitions = sheetMgr.Definitions,
-                            IgnoreMediaTracker = ignoreMediaTracker
+                            IgnoreMediaTracker = ignoreMediaTracker,
+                            ChristmasMode = christmasMode
                         }
                     };
 
-                    converter.EmbedManager.CopyUsedEmbed(map.Map, sheetMgr.Definitions);
+                    converter.EmbedManager.CopyUsedEmbed(map.Map, sheetMgr.Definitions, converter.Parameters);
 
                     var chunk01F = map.Map.GetChunk<CGameCtnChallenge.Chunk0304301F>();
 
@@ -455,9 +459,8 @@ namespace NationsConverterGUI
                         map.GBX.Save($"output/{System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetFileNameWithoutExtension(map.GBX.FileName))}.Map.Gbx");
 
                         textBlockProgress.Dispatcher.Invoke(() =>
-                        {
-                            textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}";
-                        });
+                            textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}"
+                        );
                     }
                     catch (Exception ex)
                     {
@@ -470,6 +473,7 @@ namespace NationsConverterGUI
 
             textBlockProgress.Text = $"Conversion progress: {Maps.Count}/{Maps.Count}";
             checkBoxIgnoreMediaTracker.IsEnabled = true;
+            checkBoxChristmasMode.IsEnabled = true;
 
             MessageBox.Show("Conversion completed, your map(s) are available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
         }

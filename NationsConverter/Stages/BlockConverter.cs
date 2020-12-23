@@ -14,6 +14,8 @@ namespace NationsConverter.Stages
     {
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
+            var random = new Random(map.MapUid.GetHashCode());
+
             var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
 
             var macroblocks = new Dictionary<string, CGameCtnMacroBlockInfo>();
@@ -141,7 +143,11 @@ namespace NationsConverter.Stages
                 {
                     if (conversionLight == null) return;
 
-                    PlaceObject($"NationsConverter\\Lights\\Light_{conversionLight.Color}.Item.Gbx", default, default, (Vec3)conversionLight.Offset, default);
+                    var color = conversionLight.Color;
+                    if (parameters.ChristmasMode)
+                        color = LightManager.ChirstmasLights[random.Next(LightManager.ChirstmasLights.Length)].ToString("X3");
+
+                    PlaceObject($"NationsConverter\\Lights\\Light_{color}.Item.Gbx", default, default, (Vec3)conversionLight.Offset, default);
                 }
 
                 void PlaceObject(string convName, Vec3 convOffsetPos, Vec3 convOffsetPos2, Vec3 convOffsetPivot, Vec3 convOffsetRot)

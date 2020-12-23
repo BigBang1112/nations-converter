@@ -14,6 +14,7 @@ namespace NationsConverter
 
         public Definitions Definitions { get; set; }
         public bool IgnoreMediaTracker { get; set; }
+        public bool ChristmasMode { get; set; }
 
         public ConverterParameters()
         {
