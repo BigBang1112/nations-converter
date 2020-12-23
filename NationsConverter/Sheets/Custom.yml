@@ -2686,6 +2686,51 @@ Blocks:
       Item:
         Name: NationsConverter\r_support\v_control\ControlCameraStraightGround.Item.Gbx
         OffsetPivot: [16, 0, 16]
+  StadiumControlLight:
+  - Item:
+      Name: NationsConverter\r_support\v_control\ControlLight.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [18, 2, 12]
+    - Color: FFF
+      Offset: [18, 2, 4]
+    - Color: FFF
+      Offset: [18, 2, -4]
+    - Color: FFF
+      Offset: [18, 2, -12]
+    - Color: FFF
+      Offset: [-18, 2, 12]
+    - Color: FFF
+      Offset: [-18, 2, 4]
+    - Color: FFF
+      Offset: [-18, 2, -4]
+    - Color: FFF
+      Offset: [-18, 2, -12]
+    Air:
+      Items:
+      - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\r_support\v_control\ControlGlassStraightAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetRot: [180, 0, 0]
+  StadiumControlLightBase:
+  - Item:
+      Name: NationsConverter\r_support\v_control\ControlLightBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Lights:
+    - Color: FFF
+      Offset: [12, 2, 12]
+    - Color: FFF
+      Offset: [-12, 2, 12]
+    - Color: FFF
+      Offset: [12, 2, -12]
+    - Color: FFF
+      Offset: [-12, 2, -12]
+    Air:
+      Item:
+        Name: NationsConverter\r_support\v_control\ControlGlassBaseAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
 
 # Inflatables
   
