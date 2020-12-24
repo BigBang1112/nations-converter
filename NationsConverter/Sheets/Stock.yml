@@ -97,7 +97,7 @@ Blocks:
   StadiumGrassBirds: ~
 
   StadiumRoadMainTurbo: [ RoadTechSpecialTurbo ]
-  # StadiumRoadMainTurboRoulette: [ RoadTechSpecialTurboRoulette ]
+  StadiumRoadMainTurboRoulette: [ RoadTechSpecialTurbo ]
   StadiumRoadMainBumper: ~ #
   StadiumRoadMainBumper2: ~ #
   StadiumRoadMainFW: [ RoadTechSpecialNoEngine ]
@@ -178,8 +178,8 @@ Blocks:
 
   StadiumRoadMainTurboUp: [ RoadTechSpecialTurboSlopeUp ]
   StadiumRoadMainTurboDown: [ RoadTechSpecialTurboSlopeDown ]
-  # StadiumRoadMainTurboRouletteDown: [ RoadTechSpecialTurboRouletteSlopeDown ]
-  # StadiumRoadMainTurboRouletteUp: [ RoadTechSpecialTurboRouletteSlopeUp ]
+  StadiumRoadMainTurboRouletteDown: [ RoadTechSpecialTurboSlopeUp ]
+  StadiumRoadMainTurboRouletteUp: [ RoadTechSpecialTurboSlopeDown ]
 
   StadiumRoadMainFWSlope: [ RoadTechSpecialNoEngineSlope ]
   StadiumRoadMainForceAccelerationSlope: ~ #
@@ -254,10 +254,14 @@ Blocks:
 
   StadiumRoadMainTurboLeft: [ RoadTechSpecialTurboTiltRight ]
   StadiumRoadMainTurboRight: [ RoadTechSpecialTurboTiltLeft ]
-  # StadiumRoadMainTurboRouletteLeft: [ RoadTechSpecialTurboRouletteTiltLeft ]
-  # StadiumRoadMainTurboRouletteRight: [ RoadTechSpecialTurboRouletteTiltRight ]
+  StadiumRoadMainTurboRouletteLeft: [ RoadTechSpecialTurboTiltRight ]
+  StadiumRoadMainTurboRouletteRight: [ RoadTechSpecialTurboTiltLeft ]
 
-  StadiumRoadMainFWTilt: [ RoadTechSpecialNoEngineTilt ]
+  StadiumRoadMainFWTilt:
+  - Block:
+      Name: RoadTechSpecialNoEngineTilt
+      OffsetDir: 2
+      
   StadiumRoadMainForceAccelerationTilt: ~ #
 
   StadiumRoadTiltCorner: [ RoadTechTiltCurve1 ]
@@ -401,7 +405,7 @@ Blocks:
   StadiumPlatformGridFW: [ PlatformTechSpecialNoEngine ]
   StadiumPlatformGridForceAcceleration: ~ #
   StadiumPlatformGridNoGrip: ~ #
-  StadiumPlatformGridNoSteering: ~ #
+  StadiumPlatformGridNoSteering: [ PlatformTechSpecialNoSteering ]
 
   StadiumPlatformCornerWall1: [ PlatformTechWallCurve1 ]
   StadiumPlatformCornerWall2:
