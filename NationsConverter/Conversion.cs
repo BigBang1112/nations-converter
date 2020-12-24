@@ -13,6 +13,9 @@ namespace NationsConverter
         public ConversionItem[] Items { get; set; }
         public ConversionFreeBlock FreeBlock { get; set; }
         public ConversionFreeBlock[] FreeBlocks { get; set; }
+        public ConversionLight Light { get; set; }
+        public ConversionLight[] Lights { get; set; }
+
         public int[] Size { get; set; }
         public float[] Center { get; set; }
         public int OffsetDir { get; set; }

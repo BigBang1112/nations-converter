@@ -72,7 +72,7 @@ namespace NationsConverterCLI
                 var mapGbx = GameBox.Parse<CGameCtnChallenge>(f);
                 var map = mapGbx.MainNode;
 
-                converter.EmbedManager.CopyUsedEmbed(map, sheetMgr.Definitions);
+                converter.EmbedManager.CopyUsedEmbed(map, sheetMgr.Definitions, converter.Parameters);
 
                 maps.Add(mapGbx);
             }

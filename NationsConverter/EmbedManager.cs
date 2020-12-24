@@ -10,7 +10,7 @@ namespace NationsConverter
 {
     public class EmbedManager
     {
-        public void CopyUsedEmbed(CGameCtnChallenge map, Definitions definitions)
+        public void CopyUsedEmbed(CGameCtnChallenge map, Definitions definitions, ConverterParameters parameters)
         {
             var previousEmbed = map.Embeds; // TODO: maybe later some kind of embed transfer support
 
@@ -79,6 +79,39 @@ namespace NationsConverter
                                         catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
                                         {
 
+                                        }
+                                    }
+
+                                    if (parameters.ChristmasMode)
+                                    {
+                                        foreach(var color in LightManager.ChirstmasLights)
+                                        {
+                                            map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/Lights/Light_{color:X3}.Item.Gbx",
+                                                $"Items/NationsConverter/Lights");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (c.Light != null)
+                                            ImportLight(c.Light);
+
+                                        if (c.Lights != null)
+                                            foreach (var conversionLight in c.Lights)
+                                                ImportLight(conversionLight);
+
+                                        void ImportLight(ConversionLight conversionLight)
+                                        {
+                                            if (conversionLight == null) return;
+
+                                            try
+                                            {
+                                                map.ImportFileToEmbed($"{Converter.LocalDirectory}/UserData/Items/NationsConverter/Lights/Light_{conversionLight.Color}.Item.Gbx",
+                                                    $"Items/NationsConverter/Lights");
+                                            }
+                                            catch (Exception e) when (e is DirectoryNotFoundException || e is FileNotFoundException)
+                                            {
+
+                                            }
                                         }
                                     }
 

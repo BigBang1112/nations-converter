@@ -14,6 +14,8 @@ namespace NationsConverter.Stages
     {
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
+            var random = new Random(map.MapUid.GetHashCode());
+
             var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
 
             var macroblocks = new Dictionary<string, CGameCtnMacroBlockInfo>();
@@ -119,11 +121,38 @@ namespace NationsConverter.Stages
                     foreach (var item in conversion.Items)
                         PlaceItem(item);
 
+                if (conversion.Light != null)
+                    PlaceLight(conversion.Light);
+
+                if (conversion.Lights != null)
+                    foreach (var light in conversion.Lights)
+                        PlaceLight(light);
+
                 void PlaceItem(ConversionItem conversionItem)
                 {
                     if (conversionItem == null) return;
 
-                    var offsetPos = (Vec3)conversionItem.OffsetPos;
+                    PlaceObject(conversionItem.Name,
+                        (Vec3)conversionItem.OffsetPos,
+                        (Vec3)conversionItem.OffsetPos2,
+                        (Vec3)conversionItem.OffsetPivot,
+                        (Vec3)conversionItem.OffsetRot);
+                }
+
+                void PlaceLight(ConversionLight conversionLight)
+                {
+                    if (conversionLight == null) return;
+
+                    var color = conversionLight.Color;
+                    if (parameters.ChristmasMode)
+                        color = LightManager.ChirstmasLights[random.Next(LightManager.ChirstmasLights.Length)].ToString("X3");
+
+                    PlaceObject($"NationsConverter\\Lights\\Light_{color}.Item.Gbx", default, default, (Vec3)conversionLight.Offset, default);
+                }
+
+                void PlaceObject(string convName, Vec3 convOffsetPos, Vec3 convOffsetPos2, Vec3 convOffsetPivot, Vec3 convOffsetRot)
+                {
+                    var offsetPos = convOffsetPos;
 
                     var center = new Vec3(0, 0, 0);
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
@@ -131,15 +160,14 @@ namespace NationsConverter.Stages
                     if (version <= GameVersion.TMUF)
                     {
                         offsetPos -= parameters.Stadium2RelativeOffset.XZ;
-                        if (conversionItem.OffsetPos2 != null)
-                            offsetPos += (Vec3)conversionItem.OffsetPos2;
+                        offsetPos += convOffsetPos2;
                     }
 
                     var name = "";
                     var collection = 26;
                     var author = "Nadeo";
-                    if (conversionItem.Name == null) throw new Exception();
-                    var meta = conversionItem.Name.Split(' ');
+                    if (convName == null) throw new Exception();
+                    var meta = convName.Split(' ');
                     if (meta.Length == 0) throw new Exception();
                     name = meta[0];
                     if (meta.Length > 1)
@@ -150,9 +178,7 @@ namespace NationsConverter.Stages
                     if (name.StartsWith("NationsConverter"))
                         author = "Nations Converter Team";
 
-                    var offsetPivot = default(Vec3);
-                    if (conversionItem.OffsetPivot != null)
-                        offsetPivot = (Vec3)conversionItem.OffsetPivot;
+                    var offsetPivot = convOffsetPivot;
 
                     if(conversion.OffsetPivotByBlockModel)
                     {
@@ -180,7 +206,7 @@ namespace NationsConverter.Stages
                     map.PlaceAnchoredObject(
                         new Meta(name, collection, author),
                         referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 8, 16),
-                        (-radians, 0, 0) - AdditionalMath.ToRadians((Vec3)conversionItem.OffsetRot),
+                        (-radians, 0, 0) - AdditionalMath.ToRadians(convOffsetRot),
                         -offsetPivot);
                 }
 

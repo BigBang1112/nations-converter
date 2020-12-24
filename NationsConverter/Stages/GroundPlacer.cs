@@ -104,17 +104,17 @@ namespace NationsConverter.Stages
                     {
                         grassCoords.Add((x, 1, z));
 
-                        map.PlaceAnchoredObject(
-                            (@"NationsConverter\z_terrain\w_grass\GrassGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
-                            (x, 1, z) * map.Collection.GetBlockSize(),
-                            (0, 0, 0));
-
                         if (fabricExists)
                         {
-                            grassCoords.Add((x, 1, z));
-
                             map.PlaceAnchoredObject(
                                 (@"NationsConverter\z_terrain\u_blue\BlueGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
+                                (x, 1, z) * map.Collection.GetBlockSize(),
+                                (0, 0, 0));
+                        }
+                        else
+                        {
+                            map.PlaceAnchoredObject(
+                                (@"NationsConverter\z_terrain\w_grass\GrassGround.Item.Gbx", new Collection(26), "pTuyJG9STcCN_11BiU3t0Q"),
                                 (x, 1, z) * map.Collection.GetBlockSize(),
                                 (0, 0, 0));
                         }

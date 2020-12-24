@@ -3,10 +3,10 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 		<PlatformTarget>x86</PlatformTarget>
-		<Version>1.1.2</Version>
+		<Version>1.2.0</Version>
 		<Authors>BigBang1112</Authors>
 		<Product>Nations Converter</Product>
-		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
 		<Platforms>x86</Platforms>
 	</PropertyGroup>
@@ -21,10 +21,17 @@
 		<Content Include="UserData\**">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
+
+		<Content Include="..\README.md">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="..\LICENSE">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GBX.NET" Version="0.6.0" />
+		<PackageReference Include="GBX.NET" Version="0.6.2" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="YamlDotNet" Version="9.1.0" />
 	</ItemGroup>

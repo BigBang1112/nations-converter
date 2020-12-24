@@ -97,7 +97,7 @@ Blocks:
   StadiumGrassBirds: ~
 
   StadiumRoadMainTurbo: [ RoadTechSpecialTurbo ]
-  # StadiumRoadMainTurboRoulette: [ RoadTechSpecialTurboRoulette ]
+  StadiumRoadMainTurboRoulette: [ RoadTechSpecialTurbo ]
   StadiumRoadMainBumper: ~ #
   StadiumRoadMainBumper2: ~ #
   StadiumRoadMainFW: [ RoadTechSpecialNoEngine ]
@@ -178,8 +178,8 @@ Blocks:
 
   StadiumRoadMainTurboUp: [ RoadTechSpecialTurboSlopeUp ]
   StadiumRoadMainTurboDown: [ RoadTechSpecialTurboSlopeDown ]
-  # StadiumRoadMainTurboRouletteDown: [ RoadTechSpecialTurboRouletteSlopeDown ]
-  # StadiumRoadMainTurboRouletteUp: [ RoadTechSpecialTurboRouletteSlopeUp ]
+  StadiumRoadMainTurboRouletteDown: [ RoadTechSpecialTurboSlopeUp ]
+  StadiumRoadMainTurboRouletteUp: [ RoadTechSpecialTurboSlopeDown ]
 
   StadiumRoadMainFWSlope: [ RoadTechSpecialNoEngineSlope ]
   StadiumRoadMainForceAccelerationSlope: ~ #
@@ -254,10 +254,14 @@ Blocks:
 
   StadiumRoadMainTurboLeft: [ RoadTechSpecialTurboTiltRight ]
   StadiumRoadMainTurboRight: [ RoadTechSpecialTurboTiltLeft ]
-  # StadiumRoadMainTurboRouletteLeft: [ RoadTechSpecialTurboRouletteTiltLeft ]
-  # StadiumRoadMainTurboRouletteRight: [ RoadTechSpecialTurboRouletteTiltRight ]
+  StadiumRoadMainTurboRouletteLeft: [ RoadTechSpecialTurboTiltRight ]
+  StadiumRoadMainTurboRouletteRight: [ RoadTechSpecialTurboTiltLeft ]
 
-  StadiumRoadMainFWTilt: [ RoadTechSpecialNoEngineTilt ]
+  StadiumRoadMainFWTilt:
+  - Block:
+      Name: RoadTechSpecialNoEngineTilt
+      OffsetDir: 2
+      
   StadiumRoadMainForceAccelerationTilt: ~ #
 
   StadiumRoadTiltCorner: [ RoadTechTiltCurve1 ]
@@ -401,7 +405,7 @@ Blocks:
   StadiumPlatformGridFW: [ PlatformTechSpecialNoEngine ]
   StadiumPlatformGridForceAcceleration: ~ #
   StadiumPlatformGridNoGrip: ~ #
-  StadiumPlatformGridNoSteering: ~ #
+  StadiumPlatformGridNoSteering: [ PlatformTechSpecialNoSteering ]
 
   StadiumPlatformCornerWall1: [ PlatformTechWallCurve1 ]
   StadiumPlatformCornerWall2:
@@ -748,7 +752,6 @@ Blocks:
   - Macroblock: StadiumCircuitBorderGTCurve3In.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3InLeftBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftBottom.Macroblock.Gbx
-    OffsetY: -1
   StadiumCircuitBorderSlopeGTCurve3InLeftTop:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3InLeftTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3InRightTop:
@@ -766,12 +769,12 @@ Blocks:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve3OutRightBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve3OutRightBottom.Macroblock.Gbx
+    OffsetY: -1
 
   StadiumCircuitBorderGTCurve4In:
   - Macroblock: StadiumCircuitBorderGTCurve4In.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve4InLeftBottom:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftBottom.Macroblock.Gbx
-    OffsetY: -1
   StadiumCircuitBorderSlopeGTCurve4InLeftTop:
   - Macroblock: StadiumCircuitBorderSlopeGTCurve4InLeftTop.Macroblock.Gbx
   StadiumCircuitBorderSlopeGTCurve4InRightTop:
@@ -798,6 +801,7 @@ Blocks:
   StadiumCircuitLoopStartCorner:
   - Block:
       Name: PlatformTechLoopStartCurve1In
+      OffsetY: 1
   StadiumCircuitRampBig:
   - Blocks:
     - Name: PlatformTechBase

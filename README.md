@@ -42,6 +42,10 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
   - **Example value:** NationsConverter, Version=1.0.2.0, Culture=neutral, PublicKeyToken=null
   - **Included since version:** 1.0.2
   - **Description:** Version of the conversion processing library used on this map.
+- `Text NC_OriginalMapUid`
+  - **Example value:** JtPkBe105hUkDkQOoieBVFZTDK9
+  - **Included since version:** 1.2.0
+  - **Description:** Map UID of the map converted before the new UID was set. Useful for original map identification.
 
 ### Usage in ManiaScript
 

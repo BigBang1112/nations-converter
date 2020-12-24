@@ -18,21 +18,11 @@ namespace NationsConverter.Stages
             {
                 offsetCoord *= (3, 1, 3);
                 //offset -= MainConverter.Parameters.Stadium2RelativeOffset;
-
-                map.ClipIntro?.Tracks?.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom));
-                Array.ForEach(map.ClipGroupInGame?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom)));
-                Array.ForEach(map.ClipGroupEndRace?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockFxBloom)));
             }
 
             if(version >= GameVersion.TM2)
             {
-                offsetCoord -= (0, 8, 0);
-
-                map.ClipIntro?.Tracks?.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockCameraGame));
-                Array.ForEach(map.ClipGroupInGame?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockCameraGame)));
-                Array.ForEach(map.ClipGroupEndRace?.Clips ?? new CGameCtnMediaClip[0], x => x.Tracks.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockCameraGame)));
-                map.ClipAmbiance?.Tracks?.ForEach(y => y.Blocks.RemoveAll(z => z is CGameCtnMediaBlockCameraGame));
-                // TODO: fix the 0x007 chunk of CameraGame in GBX.NET
+                offsetCoord += (0, -8, 0); // +(16, 0, 16) for newer tracks
             }
 
             map.TransferMediaTrackerTo049();
