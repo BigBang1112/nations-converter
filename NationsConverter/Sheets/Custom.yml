@@ -331,6 +331,27 @@ Blocks:
       Color: FFF
       Offset: [0, -6, 0]
 
+  StadiumRoadMainBumper:
+  - Item:
+      Name: NationsConverter\y_roadFlat\x_turbo\StadiumRoadMainBumper.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumRoadMainBumper2:
+  - Item:
+      Name: NationsConverter\y_roadFlat\x_turbo\StadiumRoadMainBumper2.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumRoadMainForceAcceleration:
+  - Item:
+      Name: NationsConverter\y_roadFlat\w_special\StadiumRoadMainForceAcceleration.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumRoadMainNoGrip:
+  - Item:
+      Name: NationsConverter\y_roadFlat\w_special\StadiumRoadMainNoGrip.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumRoadMainNoSteering:
+  - Item:
+      Name: NationsConverter\y_roadFlat\w_special\StadiumRoadMainNoSteering.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+
   StadiumHolePillar:
   - Blocks:
     - Name: RoadTechStraight
@@ -502,6 +523,22 @@ Blocks:
 
 # RoadTilt
 
+  StadiumRoadMainForceAccelerationTilt:
+  - Item:
+      Name: NationsConverter\w_roadTilt\w_special\StadiumRoadMainForceAccelerationTilt.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumRoadMainNoGripTilt:
+  - Item:
+      Name: NationsConverter\w_roadTilt\w_special\StadiumRoadMainNoGripTilt.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumRoadMainNoSteeringTilt:
+  - Item:
+      Name: NationsConverter\w_roadTilt\w_special\StadiumRoadMainNoSteeringTilt.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+
   StadiumRoadTiltTransition2DiagLeft:
   - Item:
       Name: NationsConverter\w_roadTilt\z_basic\RoadTechTiltTransition2DiagLeft.Item.Gbx
@@ -603,6 +640,23 @@ Blocks:
     OffsetPivotByBlockModel: true
     OffsetCoordByBlockModel: true
 
+  StadiumPlatformGridBumper:
+  - Item:
+      Name: NationsConverter\v_wallRide\w_special\StadiumPlatformGridBumper.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformGridBumper2:
+  - Item:
+      Name: NationsConverter\v_wallRide\w_special\StadiumPlatformGridBumper2.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformGridForceAcceleration:
+  - Item:
+      Name: NationsConverter\v_wallRide\w_special\StadiumPlatformGridForceAcceleration.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformGridNoGrip:
+  - Item:
+      Name: NationsConverter\v_wallRide\w_special\StadiumPlatformGridNoGrip.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+
   StadiumPlatformRoad:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
@@ -680,6 +734,67 @@ Blocks:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\v_wallRide\t_turbo\PlatformTurboPlateUp.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+
+  StadiumPlatformBumper:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformBumperPlate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformBumper2:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformBumper2Plate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformFW:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformFW.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformForceAcceleration:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformForceAccelerationPlate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformNoGrip:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformNoGripPlate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformNoSteering:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformNoSteeringPlate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformFWSlope2:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformFWSlope2.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformForceAccelerationSlope2:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformForceAccelerationSlope2Plate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformNoGripSlope2:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformNoGripSlope2Plate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumPlatformNoSteeringSlope2:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeAirBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformNoSteeringSlope2Plate.Item.Gbx
       OffsetPivot: [16, 0, 16]
       
   StadiumPlatformCheckpoint:
@@ -815,6 +930,51 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\y_boost\PlatformBoostDown.Item.Gbx
       OffsetPivot: [16, 0, 16]
+
+  StadiumCircuitBumper:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitBumper.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitBumper2:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitBumper2.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitFreeWheeling:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitFreeWheeling.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitForceAcceleration:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitForceAcceleration.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitNoGrip:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitNoGrip.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitNoSteering:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitNoSteering.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumCircuitFreeWheelingSlope2Air:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitFreeWheelingSlope2Air.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitForceAccelerationSlope2Air:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitForceAccelerationSlope2Air.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitNoGripSlope2Air:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitNoGripSlope2Air.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumCircuitNoSteeringSlope2Air:
+  - Item:
+      Name: NationsConverter\u_platform\x_special\StadiumCircuitNoSteeringSlope2Air.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
 
   StadiumCircuitBorderStraight:
   - Item:
@@ -1500,10 +1660,82 @@ Blocks:
         Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
-  StadiumRoadDirtFreeWheeling: ~
-  StadiumRoadDirtForceAcceleration: ~
-  StadiumRoadDirtNoGrip: ~
-  StadiumRoadDirtNoSteering: ~
+  StadiumRoadDirtFreeWheeling:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFW.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
+  StadiumRoadDirtForceAcceleration:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\StadiumRoadDirtForceAcceleration.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
+  StadiumRoadDirtNoGrip:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\StadiumRoadDirtNoGrip.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
+  StadiumRoadDirtNoSteering:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\StadiumRoadDirtNoSteering.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    RemoveGround: true
 
   StadiumRoadDirtHighFenceStraight:
   - Items:
