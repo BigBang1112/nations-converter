@@ -44,7 +44,7 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
   - **Description:** Version of the conversion processing library used on this map.
 - `Text NC_OriginalMapUid`
   - **Example value:** JtPkBe105hUkDkQOoieBVFZTDK9
-  - **Included since version:** 1.1.3
+  - **Included since version:** 1.2.0
   - **Description:** Map UID of the map converted before the new UID was set. Useful for original map identification.
 
 ### Usage in ManiaScript
