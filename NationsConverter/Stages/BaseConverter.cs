@@ -19,6 +19,9 @@ namespace NationsConverter.Stages
             map.Decoration.ID = "48x48" + map.Decoration.ID;
             map.Collection = new Collection(26); // 26 is TM® Stadium env
             map.Size = (48, 40, 48);
+
+            if (version >= GameVersion.TM2)
+                map.ThumbnailPosition += (8, 0, 8) * map.Collection.GetBlockSize();
         }
     }
 }
