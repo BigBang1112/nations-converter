@@ -1619,7 +1619,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 1.655, 0]
+      OffsetPos: [0, 1.645, 0]
     Light:
       Color: FFF
       Offset: [0, -6, 0]
@@ -1642,8 +1642,12 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\tb_TM2RoadDirt\z_low\TM2RoadDirtStraightFence.Item.Gbx
       OffsetPivot: [16, 0, 16]
-    - Name: NationsConverter\y_roadFlat\y_waypoint\multiLap.Item.Gbx
+    - Name: NationsConverter\tb_TM2RoadDirt\y_lowWaypoint\FlatMultilapOpt1Dirt.Item.Gbx
       OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 1.645, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -6, 0]
     GrassGround:
       Item:
         Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
