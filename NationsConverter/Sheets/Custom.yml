@@ -2564,7 +2564,35 @@ Blocks:
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     RemoveGround: true
-  StadiumTrenchInPillar: ~
+  StadiumTrenchInPillar:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraightBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchStraightTopOpen.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureGround.Item.Gbx
+      OffsetPos: [0, 1.661, 0]
+      OffsetPivot: [16, 0, 16]
+    Blocks:
+    - Name: StructureBase
+    - Name: StructureBase
+      OffsetY: 1
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
 
   StadiumTrenchToRoadMain:
   - Item:
