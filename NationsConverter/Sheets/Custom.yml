@@ -2390,7 +2390,28 @@ Blocks:
         OffsetPos: [0, 8, 0]
     RemoveGround: true
   StadiumTrenchCross: ~
-  StadiumTrenchCrossTunnel: ~
+  StadiumTrenchCrossTunnel:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraightXBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchStraightXTopClosed.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraightXClosed.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraightXClosed.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraightXClosed.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchGTCurve2:
   - Items:
     - Name: NationsConverter\s_underground\TM2TrenchCurve2Based.Item.Gbx
@@ -2755,7 +2776,34 @@ Blocks:
       OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
-  StadiumTrenchToPlatformBiSlopeStart: ~
+  StadiumTrenchToPlatformBiSlopeStart:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchToPlatform.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchToPlatformClipLeft.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchToPlatformClipRight.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
   StadiumTrenchToLoopStart:
   - Items:
     - Name: NationsConverter\s_underground\TM2TrenchToLoopStart.Item.Gbx
