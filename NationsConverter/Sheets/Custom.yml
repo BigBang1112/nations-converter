@@ -2502,7 +2502,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatCheckpointOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 2, 0]
+      OffsetPos: [0, 1.661, 0]
     Light:
       Color: FFF
       Offset: [0, -4, 0]
@@ -2528,7 +2528,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     - Name: NationsConverter\y_roadFlat\y_waypoint\FlatMultilapOpt1.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos: [0, 2, 0]
+      OffsetPos: [0, 1.661, 0]
     Light:
       Color: FFF
       Offset: [0, -4, 0]
