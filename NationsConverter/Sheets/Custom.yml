@@ -429,7 +429,7 @@ Blocks:
         OffsetRot: [180, 0, 0]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHigh.Item.Gbx
         OffsetPivot: [16, 0, 16]
-        OffsetPos: [0, 2, 0]
+        OffsetPos: [0, 1.996, 0]
         OffsetRot: [180, 0, 0]
     Ground:
       Items:
@@ -437,7 +437,7 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHigh.Item.Gbx
         OffsetPivot: [16, 0, 16]
-        OffsetPos: [0, 2, 0]
+        OffsetPos: [0, 1.996, 0]
         OffsetRot: [180, 0, 0]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampHighPillar.Item.Gbx
         OffsetPivot: [16, 0, 16]
@@ -451,7 +451,7 @@ Blocks:
         OffsetRot: [180, 0, 0]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLow.Item.Gbx
         OffsetPivot: [16, 0, 16]
-        OffsetPos: [0, 2, 0]
+        OffsetPos: [0, 1.996, 0]
         OffsetRot: [180, 0, 0]
     Ground:
       Items:
@@ -459,7 +459,7 @@ Blocks:
         OffsetPivot: [16, 0, 16]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLow.Item.Gbx
         OffsetPivot: [16, 0, 16]
-        OffsetPos: [0, 2, 0]
+        OffsetPos: [0, 1.996, 0]
         OffsetRot: [180, 0, 0]
       - Name: NationsConverter\y_roadFlat\v_obstacle\RoadMainRampLowPillar.Item.Gbx
         OffsetPivot: [16, 0, 16]
@@ -2731,7 +2731,34 @@ Blocks:
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumTrenchToPlatformBiSlopeStart: ~
-  StadiumTrenchToLoopStart: ~
+  StadiumTrenchToLoopStart:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchToLoopStart.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchToPlatformClipLeft.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchToPlatformClipRight.Item.Gbx
+      OffsetPivot: [16, -1, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchToRoadX1_2.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+      OffsetPivotByBlockModel: true
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
 
 # Bridges
   
