@@ -365,7 +365,7 @@ namespace NationsConverter.Stages
                 if (referenceBlock.WaypointSpecialProperty != null)
                     block.WaypointSpecialProperty = referenceBlock.WaypointSpecialProperty;
 
-                block.IsGround = block.Coord.Y == 0;
+                block.IsGround = false;
 
                 if (conversionBlock.Flags.HasValue)
                     block.Flags = conversionBlock.Flags.Value;
