@@ -2249,8 +2249,10 @@ Blocks:
 # Trench
 
   StadiumTrenchStraight:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraightBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchStraightTopOpen.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
@@ -2269,22 +2271,24 @@ Blocks:
         OffsetPos: [0, 8, 0]
     RemoveGround: true
   StadiumTrenchStraightTunnel:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraightBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchStraightTopClosed.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraightClosed.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     DirtGround:
       Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraightClosed.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     FabricGround:
       Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraightClosed.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     RemoveGround: true
@@ -2312,8 +2316,10 @@ Blocks:
   StadiumTrenchCross: ~
   StadiumTrenchCrossTunnel: ~
   StadiumTrenchGTCurve2:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchCurve2.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchCurve2Based.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchCurve2TopOpen.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
@@ -2336,8 +2342,10 @@ Blocks:
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumTrenchGTCurve3:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchCurve3.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchCurve3Base.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchCurve3TopOpen.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
@@ -2360,48 +2368,52 @@ Blocks:
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumTrenchGTCurve3Tunnel:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchCurve3.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchCurve3Base.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchCurve3TopClosed.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve3.Item.Gbx
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve3ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
     DirtGround:
       Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve3.Item.Gbx
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve3ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
     FabricGround:
       Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve3.Item.Gbx
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve3ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumTrenchGTCurve2Tunnel:
-  - Item:
-      Name: NationsConverter\s_underground\TM2TrenchCurve2.Item.Gbx
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchCurve2Based.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchCurve2TopClosed.Item.Gbx
       OffsetPivot: [16, 0, 16]
     GrassGround:
       Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve2.Item.Gbx
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchCurve2ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
     DirtGround:
       Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve2.Item.Gbx
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchCurve2ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
     FabricGround:
       Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve2.Item.Gbx
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchCurve2ClosedHalf.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
       OffsetPivotByBlockModel: true
