@@ -814,6 +814,18 @@ Blocks:
     - Name: NationsConverter\v_wallRide\t_turbo\StadiumPlatformNoSteeringSlope2Plate.Item.Gbx
       OffsetPivot: [16, 0, 16]
       
+  StadiumPlatformMultilap:
+  - Items:
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\v_wallRide\u_platform\PlatformPlate.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatMultilapOpt1.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -14, 0]
   StadiumPlatformCheckpoint:
   - Items:
     - Name: NationsConverter\v_wallRide\u_platform\PlatformBase.Item.Gbx
@@ -2466,7 +2478,32 @@ Blocks:
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     RemoveGround: true
-  StadiumTrenchMultiLap: ~
+  StadiumTrenchMultiLap:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraight.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\y_roadFlat\y_waypoint\FlatMultilapOpt1.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 2, 0]
+    Light:
+      Color: FFF
+      Offset: [0, -4, 0]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchFreeWheeling: ~
   StadiumTrenchTurbo:
   - Item:
