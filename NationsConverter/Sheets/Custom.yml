@@ -2217,7 +2217,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     Light:
       Color: FFF
-      Offset: [-16, -10, 0]
+      Offset: [-12, -10, 0]
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtHillTiltCheckpointRight:
@@ -2228,7 +2228,7 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     Light:
       Color: FFF
-      Offset: [16, -10, 0]
+      Offset: [12, -10, 0]
     RemoveGround: true
     OffsetPivotByBlockModel: true
   StadiumRoadDirtHillTiltToRoadLeft:
