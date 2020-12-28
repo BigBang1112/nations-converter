@@ -501,6 +501,22 @@ Blocks:
 
 # Slope
 
+  StadiumRoadMainCheckpointUp:
+  - Block:
+      Name: RoadTechCheckpointSlopeUp
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureUnderPlatformTech.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumRoadMainCheckpointDown:
+  - Block:
+      Name: RoadTechCheckpointSlopeDown
+    Item:
+      Name: NationsConverter\r_support\x_pipe\StructureUnderPlatformTech.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [0, 0, 0]
+      
+
   StadiumHolePillarSlope:
   - Blocks:
     - Name: RoadTechSlopeStraight
@@ -519,9 +535,12 @@ Blocks:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadTechSlopeStraightObstacleTM2.Item.Gbx
       OffsetPivot: [16, 0, 16]
   StadiumRoadStretchSlope:
-  - Item:
-      Name: NationsConverter\x_roadSlope\v_obstacle\TechNarrowCenterSlope.Item.Gbx
+  - Items:
+    - Name: NationsConverter\x_roadSlope\v_obstacle\TechNarrowCenterSlope.Item.Gbx
       OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\r_support\x_pipe\StructureUnderPlatformTech.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [0, 0, 0]
   StadiumBump1Slope:
   - Item:
       Name: NationsConverter\x_roadSlope\v_obstacle\RoadBump1Slope.Item.Gbx
