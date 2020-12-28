@@ -2209,8 +2209,28 @@ Blocks:
       OffsetPivot: [16, 0, 16]
     RemoveGround: true
     OffsetPivotByBlockModel: true
-  StadiumRoadDirtHillTiltCheckpointLeft: ~
-  StadiumRoadDirtHillTiltCheckpointRight: ~
+  StadiumRoadDirtHillTiltCheckpointLeft:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2RoadDirtTiltCheckpointLeft.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2RoadDirtTiltCheckpointLeftCP.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Light:
+      Color: FFF
+      Offset: [-16, -10, 0]
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
+  StadiumRoadDirtHillTiltCheckpointRight:
+  - Items:
+    - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2RoadDirtTiltCheckpointRight.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\tb_TM2RoadDirt\q_banked\TM2RoadDirtTiltCheckpointRightCP.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Light:
+      Color: FFF
+      Offset: [16, -10, 0]
+    RemoveGround: true
+    OffsetPivotByBlockModel: true
   StadiumRoadDirtHillTiltToRoadLeft:
   - Item:
       Name: NationsConverter\tb_TM2RoadDirt\p_bankedTransition\TM2RoadDirtTiltToRoadL.Item.Gbx
