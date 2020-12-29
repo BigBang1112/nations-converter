@@ -333,9 +333,6 @@ namespace NationsConverter.Stages
                 if (conversionBlock.Bit21.HasValue)
                     block.Bit21 = conversionBlock.Bit21.Value;
 
-                if (conversionBlock.Flags.HasValue)
-                    block.Flags = conversionBlock.Flags.Value;
-
                 if(conversionBlock.Skinnable)
                 {
                     if(referenceBlock.Skin != null)
@@ -365,7 +362,13 @@ namespace NationsConverter.Stages
                     }
                 }
 
-                block.IsGround = block.Coord.Y == 0;
+                if (referenceBlock.WaypointSpecialProperty != null)
+                    block.WaypointSpecialProperty = referenceBlock.WaypointSpecialProperty;
+
+                block.IsGround = false;
+
+                if (conversionBlock.Flags.HasValue)
+                    block.Flags = conversionBlock.Flags.Value;
 
                 map.Blocks.Add(block);
             }

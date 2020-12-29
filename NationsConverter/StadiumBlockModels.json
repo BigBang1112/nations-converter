@@ -8103,7 +8103,14 @@
   },
   "StadiumRoadDirtMultiLap": {
     "Air": [],
-    "Ground": []
+    "Ground": [
+      {
+        "Coord": [ 0, 0, 0 ]
+      },
+      {
+        "Coord": [ 0, 1, 0 ]
+      }
+    ]
   },
   "StadiumRoadDirtTurbo": {
     "Air": [],
