@@ -430,17 +430,18 @@ namespace NationsConverterGUI
 
             foreach (var map in Maps)
             {
+                var converter = new Converter()
+                {
+                    Parameters = new ConverterParameters
+                    {
+                        Definitions = sheetMgr.Definitions,
+                        IgnoreMediaTracker = ignoreMediaTracker,
+                        ChristmasMode = christmasMode
+                    }
+                };
+
                 conversions.Add(Task.Run(() =>
                 {
-                    var converter = new Converter()
-                    {
-                        Parameters = new ConverterParameters
-                        {
-                            Definitions = sheetMgr.Definitions,
-                            IgnoreMediaTracker = ignoreMediaTracker,
-                            ChristmasMode = christmasMode
-                        }
-                    };
 
                     converter.EmbedManager.CopyUsedEmbed(map.Map, sheetMgr.Definitions, converter.Parameters);
 
@@ -457,6 +458,8 @@ namespace NationsConverterGUI
                         converter.Convert(map.Map, version);
 
                         map.GBX.Save($"output/{System.IO.Path.GetFileNameWithoutExtension(System.IO.Path.GetFileNameWithoutExtension(map.GBX.FileName))}.Map.Gbx");
+
+                        map.Converted = true;
 
                         textBlockProgress.Dispatcher.Invoke(() =>
                             textBlockProgress.Text = $"Conversion progress: {conversions.Where(x => x.IsCompleted).Count()}/{Maps.Count}"
@@ -476,6 +479,10 @@ namespace NationsConverterGUI
             checkBoxChristmasMode.IsEnabled = true;
 
             MessageBox.Show("Conversion completed, your map(s) are available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
+
+            for (var i = Maps.Count - 1; i >= 0; i--)
+                if (Maps[i].Converted)
+                    Maps.RemoveAt(i);
         }
 
         private void comboBoxSheet_SelectionChanged(object sender, SelectionChangedEventArgs e)

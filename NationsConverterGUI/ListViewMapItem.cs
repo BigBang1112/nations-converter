@@ -20,6 +20,7 @@ namespace NationsConverterGUI
         public CGameCtnChallenge Map => GBX.MainNode;
         public SortedDictionary<string, SheetBlock> SheetBlocks { get; }
         public bool Updated { get; set; }
+        public bool Converted { get; set; }
 
         public ListViewMapItem(GameBox<CGameCtnChallenge> gbx)
         {
