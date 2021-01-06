@@ -442,7 +442,6 @@ namespace NationsConverterGUI
 
                 conversions.Add(Task.Run(() =>
                 {
-
                     converter.EmbedManager.CopyUsedEmbed(map.Map, sheetMgr.Definitions, converter.Parameters);
 
                     var chunk01F = map.Map.GetChunk<CGameCtnChallenge.Chunk0304301F>();
