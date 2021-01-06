@@ -651,6 +651,10 @@ Blocks:
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 24, 0]
       OffsetRot: [180, 0, 0]
+  StadiumPlatformWallBorder:
+  - Item:
+      Name: NationsConverter\v_wallRide\y_wall\StadiumPlatformWallBorder.Item.Gbx
+      OffsetPivot: [16, 8, 16]
 
   StadiumPlatformToRoad2:
   - Blocks:
