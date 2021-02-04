@@ -465,22 +465,97 @@ Blocks:
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 2, 0]
         OffsetRot: [180, 0, 0]
+
+  ### iNDEX ###
+
+  StadiumDecoTowerBeam:
+  - Item:
+      Name: NationsConverter\y_roadFlat\v_obstacle\StadiumBeams_noBottom.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [0, 0, 0]
+    Ground:
+      Item:
+        Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0] #perfekt
+        OffsetRot: [90, 0, 0]
   StadiumRoadMainInBeam:
   - Block: RoadTechStraight
     Items:
-    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
-      OffsetPos: [4, 0, 0]
-      OffsetRot: [90, 0, 0]
-    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
-      OffsetPos: [-4, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumBeams_noBottom.Item.Gbx
+      OffsetPos: [16, 0, -16]
       OffsetRot: [90, 0, 0]
   StadiumRoadMainXBeam:
   - Block: RoadTechStraight
-    Items: 
-    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
-      OffsetPos: [0, 0, 4]
-    - Name: NationsConverter\y_roadFlat\v_obstacle\Beam.Item.Gbx
-      OffsetPos: [0, 0, -4]
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumBeams_noBottom.Item.Gbx
+      OffsetPos: [-16, 0, -16]
+      OffsetRot: [0, 0, 0]
+  StadiumRoadMainInBeamSlope:
+  - Block: RoadTechSlopeStraight
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [0, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Slope_Addon_TMblack.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 4, 0] 
+      OffsetRot: [0, 0, 0]
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+        OffsetRot: [0, 0, 0]
+  StadiumRoadMainXBeamSlope:
+  - Block: RoadTechSlopeStraight
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Tilt_Addon_TMblack.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 4.655, 0] 
+      OffsetRot: [90, 0, 0]
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+        OffsetRot: [90, 0, 0]
+  StadiumRoadMainInBeamTilt:
+  - Block: RoadTechTiltStraight
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [0, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Tilt_Addon_TMblack.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 4.655, 0] 
+      OffsetRot: [180, 0, 0] #90-180
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+        OffsetRot: [0, 0, 0]
+  StadiumRoadMainXBeamTilt:
+  - Block: RoadTechTiltStraight
+    Items:
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Slope_Addon_TMblack.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 4, 0] 
+      OffsetRot: [90, 0, 0]
+    Ground:
+      Items:
+      - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+        OffsetRot: [90, 0, 0]
+### iNDEX ###
 
   StadiumRoadMainYShapedCurve2:
   - Item:
@@ -3632,3 +3707,165 @@ Blocks:
   - Item:
       Name: NationsConverter\q_sculpt\x_sculpt\Podium.Item.Gbx
       OffsetPivot: [16, 0, 16]
+  StadiumDecoTowerCore:
+  - Item:
+      Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_Addon_red.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+  StadiumDecoTowerCore6:
+  - Items:
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 16, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 32, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 40, 0]
+    Ground:
+      Item:
+        Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_Addon_red.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 1.655, 0]
+        OffsetRot: [0, 0, 0]
+  StadiumDecoTowerA:
+  - Items:
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 16, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 32, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 40, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+  StadiumDecoTowerB:
+  - Items:
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 16, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 32, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 40, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+  StadiumDecoTowerD:
+  - Items:
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 16, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 32, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 40, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [180, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [270, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [270, 0, 0]
+  StadiumDecoTowerC:
+  - Items:
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 8, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 16, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 24, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 32, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTower_A.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetPos: [0, 40, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [90, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerA_Light_noDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [270, 0, 0]
+    - Name: NationsConverter\q_sculpt\y_deco\IDX_TM2_StadiumDecoTowerAD_TMDecal.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+      OffsetRot: [270, 0, 0]
