@@ -13,7 +13,7 @@ namespace NationsConverter.Stages
             if (version < GameVersion.TM2)
                 map.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00E>();
 
-            map.Kind = CGameCtnChallenge.TrackKind.InProgress;
+            map.Kind = CGameCtnChallenge.MapKind.InProgress;
         }
     }
 }

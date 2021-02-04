@@ -204,7 +204,7 @@ namespace NationsConverter.Stages
                     }
 
                     map.PlaceAnchoredObject(
-                        new Meta(name, collection, author),
+                        new Ident(name, collection, author),
                         referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 8, 16),
                         (-radians, 0, 0) - AdditionalMath.ToRadians(convOffsetRot),
                         -offsetPivot);
