@@ -1338,6 +1338,10 @@ Blocks:
   - Item:
       Name: NationsConverter\u_platform\o_obstacle\CircuitLoopStart.Item.Gbx
       OffsetPivot: [16, 0, 16]
+  StadiumCircuitLoopStartCorner:
+  - Item:
+      Name: NationsConverter\u_platform\o_obstacle\CircuitLoopStart_BaseForCorner05c.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumCircuitRampBig:
   - Items:
     - Name: NationsConverter\u_platform\z_platform\PlatformFlat.Item.Gbx
