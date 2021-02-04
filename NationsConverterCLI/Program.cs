@@ -35,6 +35,7 @@ namespace NationsConverterCLI
                 outputDirectory = args[1];
 
             Log.OnLogEvent += Log_LoggedMainEvent;
+            Log.OnPushEvent += Log_PushMainEvent;
 
             BlockInfoManager.BlockModels
                 = JsonConvert.DeserializeObject<Dictionary<string, BlockModel>>(
@@ -102,6 +103,18 @@ namespace NationsConverterCLI
             Console.ForegroundColor = color;
             Console.WriteLine(text);
             Console.ResetColor();
+        }
+
+        static void Log_PushMainEvent(int amount)
+        {
+            for (var i = 0; i < amount; i++)
+            {
+                int currentLineCursor = Console.CursorTop;
+                Console.SetCursorPosition(0, Console.CursorTop);
+                Console.Write(new string(' ', Console.WindowWidth));
+                Console.SetCursorPosition(0, currentLineCursor);
+                Console.CursorTop--;
+            }
         }
     }
 }
