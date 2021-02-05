@@ -11,12 +11,22 @@ namespace NationsConverter
         public List<Sheet> AdditionalSheets { get; set; }
 
         public Definitions Definitions { get; private set; }
+        public Dictionary<string, ItemSkinPack[]> ItemSkinPacks { get; set; }
 
         public SheetManager(Sheet stockSheet, params Sheet[] sheets)
         {
             StockSheet = stockSheet;
             AdditionalSheets = sheets.ToList();
             Definitions = new Definitions();
+            ItemSkinPacks = stockSheet.ItemSkinPacks;
+
+            foreach (var sheet in sheets)
+            {
+                foreach(var pair in sheet.ItemSkinPacks)
+                {
+                    ItemSkinPacks[pair.Key] = pair.Value;
+                }
+            }
         }
 
         public void UpdateDefinitions()

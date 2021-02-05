@@ -13,6 +13,7 @@ namespace NationsConverter
         public Vec3 Stadium2RelativeOffset { get; set; }
 
         public Definitions Definitions { get; set; }
+        public Dictionary<string, ItemSkinPack[]> ItemSkinPacks { get; set; }
         public bool IgnoreMediaTracker { get; set; }
         public bool ChristmasMode { get; set; }
 

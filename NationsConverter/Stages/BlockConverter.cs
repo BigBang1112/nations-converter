@@ -128,6 +128,49 @@ namespace NationsConverter.Stages
                     foreach (var light in conversion.Lights)
                         PlaceLight(light);
 
+                if (referenceBlock.Skin != null)
+                {
+                    if (conversion.HasItemSkinPack)
+                    {
+                        if (parameters.ItemSkinPacks.TryGetValue(referenceBlock.Name, out ItemSkinPack[] set))
+                        {
+                            if (set.Length > referenceBlock.Variant)
+                            {
+                                var variant = set[referenceBlock.Variant.Value];
+
+                                if (variant != null)
+                                {
+                                    var skinFile = referenceBlock.Skin.PackDesc.FilePath;
+                                    if (skinFile.StartsWith("Skins\\"))
+                                        skinFile = skinFile.Substring("Skins\\".Length);
+                                    else
+                                        throw new Exception();
+
+                                    if (variant.Skins.TryGetValue(skinFile, out string itemName))
+                                    {
+                                        foreach (var item in variant.Items)
+                                        {
+                                            var offsetRot = default(Vec3);
+                                            if (item.OffsetRot != null)
+                                                offsetRot = (Vec3)item.OffsetRot;
+
+                                            var offsetPos = default(Vec3);
+                                            if (item.OffsetPos != null)
+                                                offsetPos = (Vec3)item.OffsetPos;
+
+                                            PlaceObject(itemName, offsetPos, default, (16, 0, 16), offsetRot);
+
+                                            var itemFilePath = $"{Converter.LocalDirectory}/UserData/Items/{itemName}";
+                                            if (!map.Embeds.ContainsKey(itemFilePath))
+                                                map.ImportFileToEmbed(itemFilePath, $"Items/{Path.GetDirectoryName(itemName)}");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 void PlaceItem(ConversionItem conversionItem)
                 {
                     if (conversionItem == null) return;
@@ -338,7 +381,8 @@ namespace NationsConverter.Stages
                     if(referenceBlock.Skin != null)
                     {
                         SkinDefinition def = null;
-                        if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl) || skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\".Length), out def))
+                        if ((!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl) && !referenceBlock.Skin.PackDesc.LocatorUrl.StartsWith("file://"))
+                            || skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\".Length), out def))
                         {
                             var skin = new CGameCtnBlockSkin();
                             skin.Text = "!4";

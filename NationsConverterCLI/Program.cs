@@ -62,7 +62,8 @@ namespace NationsConverterCLI
             {
                 Parameters = new ConverterParameters
                 {
-                    Definitions = sheetMgr.Definitions
+                    Definitions = sheetMgr.Definitions,
+                    ItemSkinPacks = sheetMgr.ItemSkinPacks
                 }
             };
 

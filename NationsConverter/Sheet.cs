@@ -10,5 +10,6 @@ namespace NationsConverter
         public string Name { get; set; }
         public bool RemoveGround { get; set; }
         public Definitions Blocks { get; set; }
+        public Dictionary<string, ItemSkinPack[]> ItemSkinPacks { get; set; } = new Dictionary<string, ItemSkinPack[]>();
     }
 }

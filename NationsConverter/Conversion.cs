@@ -35,6 +35,8 @@ namespace NationsConverter
         public bool MakeFabric { get; set; }
         public bool MakeFabricOnGround { get; set; }
 
+        public bool HasItemSkinPack { get; set; }
+
         public static implicit operator Conversion(string blockName) => new Conversion() { Block = new ConversionBlock() { Name = blockName } };
     }
 }

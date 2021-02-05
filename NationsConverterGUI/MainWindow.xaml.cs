@@ -435,6 +435,7 @@ namespace NationsConverterGUI
                     Parameters = new ConverterParameters
                     {
                         Definitions = sheetMgr.Definitions,
+                        ItemSkinPacks = sheetMgr.ItemSkinPacks,
                         IgnoreMediaTracker = ignoreMediaTracker,
                         ChristmasMode = christmasMode
                     }
