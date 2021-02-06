@@ -20,6 +20,11 @@ namespace NationsConverter.Stages
             map.Collection = new Collection(26); // 26 is TM® Stadium env
             map.Size = (48, 40, 48);
 
+            if (parameters.ClassicMod)
+                map.ModPackDesc = new FileRef(3, Convert.FromBase64String("4a/2cmSyYjq4kgH6L3ujXSNvOBQTD9qzHabu1Ebpz8Y="),
+                    "Skins\\Stadium\\Mod\\ClassicStadium.zip",
+                    "http://maniacdn.net/adamkooo/ClassicStadium.zip");
+
             if (version >= GameVersion.TM2)
                 map.ThumbnailPosition += (8, 0, 8) * map.Collection.GetBlockSize();
         }

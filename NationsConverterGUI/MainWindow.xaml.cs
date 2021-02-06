@@ -425,8 +425,8 @@ namespace NationsConverterGUI
             var ignoreMediaTracker = checkBoxIgnoreMediaTracker.IsChecked.GetValueOrDefault();
             checkBoxIgnoreMediaTracker.IsEnabled = false;
 
-            var christmasMode = checkBoxChristmasMode.IsChecked.GetValueOrDefault();
-            checkBoxChristmasMode.IsEnabled = false;
+            var classicMod = checkBoxClassicMod.IsChecked.GetValueOrDefault();
+            checkBoxClassicMod.IsEnabled = false;
 
             foreach (var map in Maps)
             {
@@ -437,7 +437,7 @@ namespace NationsConverterGUI
                         Definitions = sheetMgr.Definitions,
                         ItemSkinPacks = sheetMgr.ItemSkinPacks,
                         IgnoreMediaTracker = ignoreMediaTracker,
-                        ChristmasMode = christmasMode
+                        ClassicMod = classicMod
                     }
                 };
 
@@ -476,7 +476,7 @@ namespace NationsConverterGUI
 
             textBlockProgress.Text = $"Conversion progress: {Maps.Count}/{Maps.Count}";
             checkBoxIgnoreMediaTracker.IsEnabled = true;
-            checkBoxChristmasMode.IsEnabled = true;
+            checkBoxClassicMod.IsEnabled = true;
 
             MessageBox.Show("Conversion completed, your map(s) are available in the 'output' folder.\nPlease calculate shadows and resave your map(s)!", "Conversion completed!");
 

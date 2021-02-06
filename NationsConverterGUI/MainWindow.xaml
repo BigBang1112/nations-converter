@@ -101,7 +101,7 @@
                     </Grid>
 
                     <Grid Grid.Row="2" Background="{DynamicResource BackgroundColor2}" Margin="0 0 0 6" Height="35">
-                        <CheckBox x:Name="checkBoxChristmasMode" Content="Christmas mode" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0"/>
+                        <CheckBox x:Name="checkBoxClassicMod" Content="Classic mod" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0"/>
                         <CheckBox x:Name="checkBoxIgnoreMediaTracker" Content="Ignore MediaTracker" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 0"/>
                     </Grid>
 

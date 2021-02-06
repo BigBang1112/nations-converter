@@ -16,6 +16,7 @@ namespace NationsConverter
         public Dictionary<string, ItemSkinPack[]> ItemSkinPacks { get; set; }
         public bool IgnoreMediaTracker { get; set; }
         public bool ChristmasMode { get; set; }
+        public bool ClassicMod { get; set; }
 
         public ConverterParameters()
         {
