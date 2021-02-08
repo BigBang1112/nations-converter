@@ -53,3 +53,7 @@ Every converted map adds some metadata that can be used in gamemodes or map edit
 ### Usage in ManiaScript
 
 `declare metadata Boolean MadeWithNationsConverter for Map;`
+
+## License
+
+The source code files fall under [GNU General Public License v3.0](LICENSE). Markdown, custom items and blocks are usable with [The Unlicense](https://unlicense.org/) with an appreciation of author mention.
