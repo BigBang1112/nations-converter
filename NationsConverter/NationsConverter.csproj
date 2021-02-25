@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 		<PlatformTarget>x86</PlatformTarget>
-		<Version>1.3.0</Version>
+		<Version>1.3.1</Version>
 		<Authors>BigBang1112</Authors>
 		<Product>Nations Converter</Product>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
