@@ -819,7 +819,10 @@ Blocks:
       Item:
         Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeGround.Item.Gbx
         OffsetPivot: [16, 0, 16]
-  StadiumPlatformBiSlope2StartSmall: ~
+  StadiumPlatformBiSlope2StartSmall:
+  - Item:
+      Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeGround.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumPlatformBiSlope2Start:
   - Item:
       Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeAir.Item.Gbx
