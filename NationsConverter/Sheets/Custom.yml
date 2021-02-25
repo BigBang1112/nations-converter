@@ -524,37 +524,41 @@ Blocks:
         OffsetPos: [0, 1.655, 0]
         OffsetRot: [90, 0, 0]
   StadiumRoadMainInBeamTilt:
-  - Block: RoadTechTiltStraight
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
     Items:
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [0, 0, 0]
+      OffsetRot: [180, 0, 0]
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Tilt_Addon_TMblack.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 4.655, 0] 
-      OffsetRot: [180, 0, 0] #90-180
+      OffsetRot: [0, 0, 0] #90-180
     Ground:
       Items:
       - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 1.655, 0]
-        OffsetRot: [0, 0, 0]
+        OffsetRot: [180, 0, 0]
   StadiumRoadMainXBeamTilt:
-  - Block: RoadTechTiltStraight
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
     Items:
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [90, 0, 0]
+      OffsetRot: [-90, 0, 0]
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Slope_Addon_TMblack.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 4, 0] 
-      OffsetRot: [90, 0, 0]
+      OffsetRot: [-90, 0, 0]
     Ground:
       Items:
       - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 1.655, 0]
-        OffsetRot: [90, 0, 0]
+        OffsetRot: [-90, 0, 0]
 ### iNDEX ###
 
   StadiumRoadMainYShapedCurve2:
@@ -819,15 +823,23 @@ Blocks:
       Item:
         Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeGround.Item.Gbx
         OffsetPivot: [16, 0, 16]
-  StadiumPlatformBiSlope2StartSmall: ~
+  StadiumPlatformBiSlope2StartSmall:
+  - Item:
+      Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeGround.Item.Gbx
+      OffsetPivot: [16, 0, 16]
   StadiumPlatformBiSlope2Start:
   - Item:
       Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeAir.Item.Gbx
       OffsetPivot: [16, 0, 16]
   StadiumPlatformBiSlope2End:
-  - Item:
-      Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx
-      OffsetPivot: [16, 0, 16]
+  - Air:
+      Item:
+        Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatGround.Item.Gbx
+        OffsetPivot: [16, 0, 16]
   
   StadiumPlatformTurbo:
   - Items:
@@ -2125,21 +2137,31 @@ Blocks:
   StadiumRoadDirtHighNoSteering: ~
 
   StadiumRoadDirtToRoadDirtHigh:
-  - Item:
-      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
-      OffsetPivot: [16, 0, 16]
-    GrassGround:
-      Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+  - GrassGround:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     DirtGround:
-      Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     FabricGround:
-      Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
         OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtHill:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHighHill.Item.Gbx
+        OffsetPivot: [16, -16, 16]
+      - Name: NationsConverter\z_terrain\x_dirtHill\HoleDirtHill1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetRot: [180, 0, 0]
     RemoveGround: true
   StadiumRoadDirtToRoadDirtHigh2:
   - Items:
@@ -2205,20 +2227,29 @@ Blocks:
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
   StadiumRoadDirtToRoadB:
-  - Item:
-      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHalf.Item.Gbx
-      OffsetPivot: [16, 0, 16]
-    DirtGround:
-      Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+  - DirtGround:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     GrassGround:
-      Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     FabricGround:
-      Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtHill:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, -16, 16]
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHill.Item.Gbx
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
 
@@ -2484,7 +2515,28 @@ Blocks:
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 8, 0]
     RemoveGround: true
-  StadiumTrenchCross: ~
+  StadiumTrenchCross:
+  - Items:
+    - Name: NationsConverter\s_underground\TM2TrenchStraightXBase.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    - Name: NationsConverter\s_underground\TM2TrenchStraightXTopOpen.Item.Gbx
+      OffsetPivot: [16, 0, 16]
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\w_grass\HoleGrassTrenchStraightXOpen.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    DirtGround:
+      Item:
+        Name: NationsConverter\z_terrain\v_dirt\HoleDirtTrenchStraightXOpen.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    FabricGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\HoleBlueTrenchStraightXOpen.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetPos: [0, 8, 0]
+    RemoveGround: true
   StadiumTrenchCrossTunnel:
   - Items:
     - Name: NationsConverter\s_underground\TM2TrenchStraightXBase.Item.Gbx
@@ -3628,35 +3680,52 @@ Blocks:
       Items:
       - Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRamp_Air.Item.Gbx
         OffsetPivot: [16, 0, 16]
-      - Name: NationsConverter\z_terrain\u_blue\BlueFabricRamp.Item.Gbx
-        OffsetPivot: [16, 0, 16]
-  - Ground:
+    Ground:
       Item:
         Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRamp_Ground.Item.Gbx
         OffsetPivot: [16, 0, 16]
       RemoveGround: true
+    DirtGround:
+      Item: ~
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\BlueFabricRamp.Item.Gbx
+        OffsetPivot: [16, 0, 16]
   StadiumFabricRampCornerOut:
   - Air:
       Item:
         Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRampCornerOut_Air.Item.Gbx
         OffsetPivot: [16, 0, 16]
-  - Ground:
+    Ground:
       Item:
         Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRampCornerOut_Ground.Item.Gbx
         OffsetPivot: [16, 0, 16]
       RemoveGround: true
+    DirtGround:
+      Item: ~
+    GrassGround:
+      Item:
+        Name: NationsConverter\z_terrain\u_blue\BlueFabricRampCurveIn.Item.Gbx
+        OffsetPivot: [16, 0, 16]
   StadiumFabricRampCornerIn:
   - Air:
       Item:
         Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRampCornerIn_Air.Item.Gbx
         OffsetPivot: [16, 0, 16]
       OffsetPivotByBlockModel: true
-  - Ground:
+    Ground:
       Item:
         Name: NationsConverter\q_sculpt\z_roof\TM2_iNDEX_StadiumFabricRampCornerIn_Ground.Item.Gbx
         OffsetPivot: [16, 0, 16]
       OffsetPivotByBlockModel: true
       RemoveGround: true
+    DirtGround:
+      Item: ~
+    GrassGround:
+      Items:
+      - Name: NationsConverter\z_terrain\u_blue\BlueFabricRampCurveOut2.Item.Gbx
+        OffsetPivot: [16, 0, -16]
+      OffsetPivotByBlockModel: true
 
   StadiumInflatableCastle:
   - Item:

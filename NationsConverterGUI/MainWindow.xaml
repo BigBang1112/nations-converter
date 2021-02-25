@@ -113,7 +113,8 @@
                             <RowDefinition Height="45"/>
                         </Grid.RowDefinitions>
                         <TextBlock Text="Conversion block specification" HorizontalAlignment="Center" Margin="10"/>
-                        <ListView x:Name="listViewPlacedBlocks" Grid.Row="1" ItemsSource="{Binding SelectedMapSheetBlocks}">
+                        <TextBlock Text="Coming soon" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+                        <ListView x:Name="listViewPlacedBlocks" Grid.Row="1" ItemsSource="{Binding SelectedMapSheetBlocks}" Visibility="Hidden">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal" Height="32">

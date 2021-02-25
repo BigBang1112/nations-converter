@@ -129,6 +129,9 @@ namespace NationsConverter.Stages
                 if (x.Name == "StadiumDirt")
                     temporary.DirtCoords.Add(x.Coord);
 
+                if (x.Name == "StadiumDirtHill")
+                    temporary.DirtHillCoords.Add(x.Coord);
+
                 if (x.Name == "StadiumDirt" || x.Name == "StadiumDirtHill" || x.Name == "StadiumDirtBorder")
                 {
                     var dirtBlock = x;

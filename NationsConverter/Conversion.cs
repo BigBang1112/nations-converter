@@ -27,6 +27,7 @@ namespace NationsConverter
         public Conversion DirtGround { get; set; }
         public Conversion GrassGround { get; set; }
         public Conversion FabricGround { get; set; }
+        public Conversion DirtHill { get; set; }
 
         public bool RemoveGround { get; set; }
         public bool OffsetPivotByBlockModel { get; set; }
