@@ -147,8 +147,8 @@ namespace NationsConverter.Stages
                                     var skinFile = referenceBlock.Skin.PackDesc.FilePath;
                                     if (skinFile.StartsWith("Skins\\"))
                                         skinFile = skinFile.Substring("Skins\\".Length);
-                                    else
-                                        throw new Exception();
+                                    else if (referenceBlock.Skin.PackDesc.Version > 1)
+                                        throw new Exception("Skin with unknown folder.");
 
                                     if (variant.Skins.TryGetValue(skinFile, out string itemName))
                                     {
