@@ -2137,21 +2137,31 @@ Blocks:
   StadiumRoadDirtHighNoSteering: ~
 
   StadiumRoadDirtToRoadDirtHigh:
-  - Item:
-      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
-      OffsetPivot: [16, 0, 16]
-    GrassGround:
-      Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+  - GrassGround:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     DirtGround:
-      Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     FabricGround:
-      Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHigh1.Item.Gbx
         OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtHill:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadDirtHighHill.Item.Gbx
+        OffsetPivot: [16, -16, 16]
+      - Name: NationsConverter\z_terrain\x_dirtHill\HoleDirtHill1.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+        OffsetRot: [180, 0, 0]
     RemoveGround: true
   StadiumRoadDirtToRoadDirtHigh2:
   - Items:
@@ -2217,20 +2227,29 @@ Blocks:
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
   StadiumRoadDirtToRoadB:
-  - Item:
-      Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHalf.Item.Gbx
-      OffsetPivot: [16, 0, 16]
-    DirtGround:
-      Item:
-        Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
+  - DirtGround:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\v_dirt\HoleDirtStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     GrassGround:
-      Item:
-        Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\w_grass\HoleGrassStraight.Item.Gbx
         OffsetPivot: [16, 0, 16]
     FabricGround:
-      Item:
-        Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+      - Name: NationsConverter\z_terrain\u_blue\HoleBlueStraight.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    DirtHill:
+      Items:
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoad.Item.Gbx
+        OffsetPivot: [16, -16, 16]
+      - Name: NationsConverter\tb_TM2RoadDirt\t_transition\TM2RoadDirtToRoadHill.Item.Gbx
         OffsetPivot: [16, 0, 16]
     RemoveGround: true
 
