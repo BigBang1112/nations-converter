@@ -380,19 +380,23 @@ namespace NationsConverter.Stages
                 {
                     if(referenceBlock.Skin != null)
                     {
+                        var packDesc = referenceBlock.Skin.PackDesc;
+                        var fileUrl = "file://";
+                        var skinsFolder = "Skins\\";
+
                         SkinDefinition def = null;
-                        if ((!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl) && !referenceBlock.Skin.PackDesc.LocatorUrl.StartsWith("file://"))
-                            || skins.TryGetValue(referenceBlock.Skin.PackDesc.FilePath.Substring("Skins\\".Length), out def))
+                        if ((!string.IsNullOrEmpty(packDesc.LocatorUrl) && !packDesc.LocatorUrl.StartsWith(fileUrl))
+                            || (packDesc.FilePath.Length >= skinsFolder.Length && skins.TryGetValue(packDesc.FilePath.Substring(skinsFolder.Length), out def)))
                         {
                             var skin = new CGameCtnBlockSkin();
                             skin.Text = "!4";
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                            if (!string.IsNullOrEmpty(referenceBlock.Skin.PackDesc.LocatorUrl))
+                            if (!string.IsNullOrEmpty(packDesc.LocatorUrl))
                             {
-                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(referenceBlock.Skin.PackDesc.LocatorUrl)}";
-                                skin.PackDesc.LocatorUrl = referenceBlock.Skin.PackDesc.LocatorUrl;
+                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(packDesc.LocatorUrl)}";
+                                skin.PackDesc.LocatorUrl = packDesc.LocatorUrl;
                             }
                             else
                             {
