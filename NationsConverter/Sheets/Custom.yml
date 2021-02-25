@@ -524,37 +524,41 @@ Blocks:
         OffsetPos: [0, 1.655, 0]
         OffsetRot: [90, 0, 0]
   StadiumRoadMainInBeamTilt:
-  - Block: RoadTechTiltStraight
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
     Items:
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [0, 0, 0]
+      OffsetRot: [180, 0, 0]
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Tilt_Addon_TMblack.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 4.655, 0] 
-      OffsetRot: [180, 0, 0] #90-180
+      OffsetRot: [0, 0, 0] #90-180
     Ground:
       Items:
       - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 1.655, 0]
-        OffsetRot: [0, 0, 0]
+        OffsetRot: [180, 0, 0]
   StadiumRoadMainXBeamTilt:
-  - Block: RoadTechTiltStraight
+  - Block:
+      Name: RoadTechTiltStraight
+      OffsetDir: 2
     Items:
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam2X.Item.Gbx # missing -
       OffsetPivot: [16, 0, 16]
-      OffsetRot: [90, 0, 0]
+      OffsetRot: [-90, 0, 0]
     - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Slope_Addon_TMblack.Item.Gbx
       OffsetPivot: [16, 0, 16]
       OffsetPos: [0, 4, 0] 
-      OffsetRot: [90, 0, 0]
+      OffsetRot: [-90, 0, 0]
     Ground:
       Items:
       - Name: NationsConverter\y_roadFlat\v_obstacle\StadiumRoadMainBeam_Addon_TMblack.Item.Gbx
         OffsetPivot: [16, 0, 16]
         OffsetPos: [0, 1.655, 0]
-        OffsetRot: [90, 0, 0]
+        OffsetRot: [-90, 0, 0]
 ### iNDEX ###
 
   StadiumRoadMainYShapedCurve2:
@@ -828,9 +832,14 @@ Blocks:
       Name: NationsConverter\v_wallRide\u_platform\PlatformFlatToSlopeAir.Item.Gbx
       OffsetPivot: [16, 0, 16]
   StadiumPlatformBiSlope2End:
-  - Item:
-      Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx
-      OffsetPivot: [16, 0, 16]
+  - Air:
+      Item:
+        Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatAir.Item.Gbx
+        OffsetPivot: [16, 0, 16]
+    Ground:
+      Item:
+        Name: NationsConverter\v_wallRide\u_platform\PlatformSlopeToFlatGround.Item.Gbx
+        OffsetPivot: [16, 0, 16]
   
   StadiumPlatformTurbo:
   - Items:
