@@ -70,10 +70,12 @@ namespace NationsConverter.Stages
 
             void ProcessConversion(CGameCtnBlock referenceBlock, Conversion conversion)
             {
+                List<CGameCtnBlock> placedBlocks = new List<CGameCtnBlock>();
+
                 var radians = ((int)referenceBlock.Direction + conversion.OffsetDir) % 4 * (float)(Math.PI / 2);
 
                 if (conversion.Block != null) // If a Block property is defined
-                    ConvertBlock(referenceBlock, conversion, conversion.Block);
+                    placedBlocks.Add(ConvertBlock(referenceBlock, conversion, conversion.Block));
 
                 if (conversion.Blocks != null) // If a Blocks property is defined
                 {
@@ -106,14 +108,14 @@ namespace NationsConverter.Stages
                         {
                             var c = conversion.Blocks[i];
 
-                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]);
+                            placedBlocks.Add(ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]));
                         }
                     }
                     else
                     {
                         foreach (var c in conversion.Blocks)
                         {
-                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord);
+                            placedBlocks.Add(ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord));
                         }
                     }
                 }
@@ -149,6 +151,17 @@ namespace NationsConverter.Stages
                                         skinFile = skinFile.Substring("Skins\\".Length);
                                     else if (referenceBlock.Skin.PackDesc.Version > 1)
                                         throw new Exception("Skin with unknown folder.");
+
+                                    // Previous skins should be removed
+                                    foreach (var b in placedBlocks)
+                                    {
+                                        if (b.Skin != null)
+                                        {
+                                            // Set the skin texture of the sign to black for cleanness
+                                            b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
+                                            b.Skin.SecondaryPackDesc = new FileRef();
+                                        }
+                                    }
 
                                     if (variant.Skins.TryGetValue(skinFile, out string itemName))
                                     {
@@ -338,7 +351,7 @@ namespace NationsConverter.Stages
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
-            void ConvertBlock(CGameCtnBlock referenceBlock, Conversion conversion, ConversionBlock conversionBlock,
+            CGameCtnBlock ConvertBlock(CGameCtnBlock referenceBlock, Conversion conversion, ConversionBlock conversionBlock,
                 Int3? newCoord = null)
             {
                 var block = new CGameCtnBlock(conversionBlock.Name,
@@ -455,6 +468,8 @@ namespace NationsConverter.Stages
                     block.Flags = conversionBlock.Flags.Value;
 
                 map.Blocks.Add(block);
+
+                return block;
             }
 
             var sortedLog = log.ToList();
