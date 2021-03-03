@@ -17,7 +17,7 @@ namespace NationsConverter.Stages
         {
             var random = new Random(map.MapUid.GetHashCode());
 
-            var skinLocatorTasks = new Dictionary<string, Task<bool>>();
+            var skinLocatorTasks = new Dictionary<Uri, Task<bool>>();
             var skinsWithLocator = new List<CGameCtnBlockSkin>();
 
             var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
@@ -400,11 +400,10 @@ namespace NationsConverter.Stages
                     if(referenceBlock.Skin != null)
                     {
                         var packDesc = referenceBlock.Skin.PackDesc;
-                        var fileUrl = "file://";
                         var skinsFolder = "Skins\\";
 
                         SkinDefinition def = null;
-                        if ((!string.IsNullOrEmpty(packDesc.LocatorUrl) && !packDesc.LocatorUrl.StartsWith(fileUrl))
+                        if ((packDesc.LocatorUrl != null && !packDesc.LocatorUrl.IsFile)
                             || (packDesc.FilePath.Length >= skinsFolder.Length && skins.TryGetValue(packDesc.FilePath.Substring(skinsFolder.Length), out def)))
                         {
                             var skin = new CGameCtnBlockSkin();
@@ -412,40 +411,33 @@ namespace NationsConverter.Stages
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                            if (!string.IsNullOrEmpty(packDesc.LocatorUrl))
+                            if (packDesc.LocatorUrl != null)
                             {
-                                if (Uri.TryCreate(packDesc.LocatorUrl, UriKind.Absolute, out Uri uri))
+                                if (!skinLocatorTasks.ContainsKey(packDesc.LocatorUrl))
                                 {
-                                    if (!skinLocatorTasks.ContainsKey(packDesc.LocatorUrl))
+                                    skinLocatorTasks.Add(packDesc.LocatorUrl, Task.Run(() =>
                                     {
-                                        skinLocatorTasks.Add(packDesc.LocatorUrl, Task.Run(() =>
+                                        var request = WebRequest.Create(packDesc.LocatorUrl);
+                                        request.Method = "HEAD";
+
+                                        try
                                         {
-                                            var request = WebRequest.Create(packDesc.LocatorUrl);
-                                            request.Method = "HEAD";
-
-                                            try
+                                            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                                             {
-                                                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                                                {
-                                                    return response.StatusCode == HttpStatusCode.OK;
-                                                }
+                                                return response.StatusCode == HttpStatusCode.OK;
                                             }
-                                            catch
-                                            {
-                                                return false;
-                                            }
-                                        }));
-                                    }
-
-                                    skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(packDesc.LocatorUrl)}";
-                                    skin.PackDesc.LocatorUrl = packDesc.LocatorUrl;
-
-                                    skinsWithLocator.Add(skin);
+                                        }
+                                        catch
+                                        {
+                                            return false;
+                                        }
+                                    }));
                                 }
-                                else
-                                {
 
-                                }
+                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(packDesc.LocatorUrl.LocalPath)}";
+                                skin.PackDesc.LocatorUrl = packDesc.LocatorUrl;
+
+                                skinsWithLocator.Add(skin);
                             }
                             else
                             {
@@ -477,7 +469,7 @@ namespace NationsConverter.Stages
 
             if (skinsWithLocator.Count > 0)
             {
-                var finished = new List<string>();
+                var finished = new List<Uri>();
 
                 while (finished.Count < skinLocatorTasks.Count)
                 {
@@ -498,7 +490,7 @@ namespace NationsConverter.Stages
                                         Log.Write($"HEAD requests failed with {skin.PackDesc.LocatorUrl}");
 
                                         skin.PackDesc.FilePath = "";
-                                        skin.PackDesc.LocatorUrl = "";
+                                        skin.PackDesc.LocatorUrl = null;
                                     }
 
                                     finished.Add(skin.PackDesc.LocatorUrl);

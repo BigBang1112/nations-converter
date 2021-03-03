@@ -31,7 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="GBX.NET" Version="0.8.0" />
+		<PackageReference Include="GBX.NET" Version="0.9.0-rc" />
 		<PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
 		<PackageReference Include="YamlDotNet" Version="9.1.4" />
 	</ItemGroup>
