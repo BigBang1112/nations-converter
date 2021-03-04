@@ -152,19 +152,22 @@ namespace NationsConverter.Stages
                                     else if (referenceBlock.Skin.PackDesc.Version > 1)
                                         throw new Exception("Skin with unknown folder.");
 
-                                    // Previous skins should be removed
-                                    foreach (var b in placedBlocks)
-                                    {
-                                        if (b.Skin != null)
-                                        {
-                                            // Set the skin texture of the sign to black for cleanness
-                                            b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
-                                            b.Skin.SecondaryPackDesc = new FileRef();
-                                        }
-                                    }
-
                                     if (variant.Skins.TryGetValue(skinFile, out string itemName))
                                     {
+                                        // Previous skins should be removed
+                                        foreach (var b in placedBlocks)
+                                        {
+                                            if (b.Skin != null)
+                                            {
+                                                // Set the skin texture of the sign to black for cleanness
+                                                b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
+                                                b.Skin.SecondaryPackDesc = new FileRef();
+
+                                                skinsWithLocator.Remove(b.Skin);
+                                                // Remove the skin from locators if there is one for some reason, to avoid null exception
+                                            }
+                                        }
+
                                         foreach (var item in variant.Items)
                                         {
                                             var offsetRot = default(Vec3);
