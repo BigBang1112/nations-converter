@@ -22,7 +22,10 @@ namespace NationsConverter.Stages
 
             if(version >= GameVersion.TM2)
             {
-                offsetCoord += (0, -8, 0); // +(16, 0, 16) for newer tracks
+                offsetCoord += (0, -8, 0);
+
+                if (map.GetChunk<CGameCtnChallenge.Chunk03043049>()?.TriggerSize == (3, 1, 3))
+                    offsetCoord += (16, 0, 16);
             }
 
             map.TransferMediaTrackerTo049();
