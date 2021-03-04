@@ -211,8 +211,11 @@ namespace NationsConverter.Stages
             }).ToList();
             
             var itemOffset = default(Vec3);
-            if (version >= GameVersion.TM2)
-                itemOffset = parameters.Stadium2RelativeOffset * (1, 0, 1);
+
+            if (version <= GameVersion.TMUF)
+            {
+                itemOffset = (0, -1, 0);
+            }
 
             map.AnchoredObjects = map.AnchoredObjects.Where(x =>
             {
@@ -256,10 +259,10 @@ namespace NationsConverter.Stages
                                                 }
 
                                                 foreach (var unit in newCoords)
-                                                    if ((block.Coord + (1, 1, 1) + (Int3)(unit - newMin)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
+                                                    if ((block.Coord + (0, 1, 0) + (Int3)(unit - newMin) + itemOffset) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
                                                         return false;
                                             }
-                                            else if ((block.Coord + (1, 1, 1)) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap - itemOffset)
+                                            else if ((block.Coord + (0, 1, 0) + itemOffset) * map.Collection.GetBlockSize() == x.AbsolutePositionInMap)
                                                 return false;
                                         }
 

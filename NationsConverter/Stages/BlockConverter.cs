@@ -17,7 +17,7 @@ namespace NationsConverter.Stages
         {
             var random = new Random(map.MapUid.GetHashCode());
 
-            var skinLocatorTasks = new Dictionary<string, Task<bool>>();
+            var skinLocatorTasks = new Dictionary<Uri, Task<bool>>();
             var skinsWithLocator = new List<CGameCtnBlockSkin>();
 
             var skins = YamlManager.Parse<Dictionary<string, SkinDefinition>>("Skins.yml");
@@ -70,10 +70,12 @@ namespace NationsConverter.Stages
 
             void ProcessConversion(CGameCtnBlock referenceBlock, Conversion conversion)
             {
+                List<CGameCtnBlock> placedBlocks = new List<CGameCtnBlock>();
+
                 var radians = ((int)referenceBlock.Direction + conversion.OffsetDir) % 4 * (float)(Math.PI / 2);
 
                 if (conversion.Block != null) // If a Block property is defined
-                    ConvertBlock(referenceBlock, conversion, conversion.Block);
+                    placedBlocks.Add(ConvertBlock(referenceBlock, conversion, conversion.Block));
 
                 if (conversion.Blocks != null) // If a Blocks property is defined
                 {
@@ -106,14 +108,14 @@ namespace NationsConverter.Stages
                         {
                             var c = conversion.Blocks[i];
 
-                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]);
+                            placedBlocks.Add(ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)newCoords[i]));
                         }
                     }
                     else
                     {
                         foreach (var c in conversion.Blocks)
                         {
-                            ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord);
+                            placedBlocks.Add(ConvertBlock(referenceBlock, conversion, c, referenceBlock.Coord + (Int3)c.OffsetCoord));
                         }
                     }
                 }
@@ -149,6 +151,17 @@ namespace NationsConverter.Stages
                                         skinFile = skinFile.Substring("Skins\\".Length);
                                     else if (referenceBlock.Skin.PackDesc.Version > 1)
                                         throw new Exception("Skin with unknown folder.");
+
+                                    // Previous skins should be removed
+                                    foreach (var b in placedBlocks)
+                                    {
+                                        if (b.Skin != null)
+                                        {
+                                            // Set the skin texture of the sign to black for cleanness
+                                            b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
+                                            b.Skin.SecondaryPackDesc = new FileRef();
+                                        }
+                                    }
 
                                     if (variant.Skins.TryGetValue(skinFile, out string itemName))
                                     {
@@ -204,10 +217,9 @@ namespace NationsConverter.Stages
                     var center = new Vec3(0, 0, 0);
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
 
-                    if (version <= GameVersion.TMUF)
+                    if (version >= GameVersion.TM2)
                     {
-                        offsetPos -= parameters.Stadium2RelativeOffset.XZ;
-                        offsetPos += convOffsetPos2;
+                        offsetPos += parameters.Stadium2RelativeOffset + convOffsetPos2;
                     }
 
                     var name = "";
@@ -252,7 +264,7 @@ namespace NationsConverter.Stages
 
                     map.PlaceAnchoredObject(
                         new Ident(name, collection, author),
-                        referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 8, 16),
+                        referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 0, 16),
                         (-radians, 0, 0) - AdditionalMath.ToRadians(convOffsetRot),
                         -offsetPivot);
                 }
@@ -338,7 +350,7 @@ namespace NationsConverter.Stages
                     ProcessConversion(referenceBlock, conversion.Air);
             }
 
-            void ConvertBlock(CGameCtnBlock referenceBlock, Conversion conversion, ConversionBlock conversionBlock,
+            CGameCtnBlock ConvertBlock(CGameCtnBlock referenceBlock, Conversion conversion, ConversionBlock conversionBlock,
                 Int3? newCoord = null)
             {
                 var block = new CGameCtnBlock(conversionBlock.Name,
@@ -387,11 +399,10 @@ namespace NationsConverter.Stages
                     if(referenceBlock.Skin != null)
                     {
                         var packDesc = referenceBlock.Skin.PackDesc;
-                        var fileUrl = "file://";
                         var skinsFolder = "Skins\\";
 
                         SkinDefinition def = null;
-                        if ((!string.IsNullOrEmpty(packDesc.LocatorUrl) && !packDesc.LocatorUrl.StartsWith(fileUrl))
+                        if ((packDesc.LocatorUrl != null && !packDesc.LocatorUrl.IsFile)
                             || (packDesc.FilePath.Length >= skinsFolder.Length && skins.TryGetValue(packDesc.FilePath.Substring(skinsFolder.Length), out def)))
                         {
                             var skin = new CGameCtnBlockSkin();
@@ -399,40 +410,33 @@ namespace NationsConverter.Stages
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
                             skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                            if (!string.IsNullOrEmpty(packDesc.LocatorUrl))
+                            if (packDesc.LocatorUrl != null)
                             {
-                                if (Uri.TryCreate(packDesc.LocatorUrl, UriKind.Absolute, out Uri uri))
+                                if (!skinLocatorTasks.ContainsKey(packDesc.LocatorUrl))
                                 {
-                                    if (!skinLocatorTasks.ContainsKey(packDesc.LocatorUrl))
+                                    skinLocatorTasks.Add(packDesc.LocatorUrl, Task.Run(() =>
                                     {
-                                        skinLocatorTasks.Add(packDesc.LocatorUrl, Task.Run(() =>
+                                        var request = WebRequest.Create(packDesc.LocatorUrl);
+                                        request.Method = "HEAD";
+
+                                        try
                                         {
-                                            var request = WebRequest.Create(packDesc.LocatorUrl);
-                                            request.Method = "HEAD";
-
-                                            try
+                                            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                                             {
-                                                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                                                {
-                                                    return response.StatusCode == HttpStatusCode.OK;
-                                                }
+                                                return response.StatusCode == HttpStatusCode.OK;
                                             }
-                                            catch
-                                            {
-                                                return false;
-                                            }
-                                        }));
-                                    }
-
-                                    skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(packDesc.LocatorUrl)}";
-                                    skin.PackDesc.LocatorUrl = packDesc.LocatorUrl;
-
-                                    skinsWithLocator.Add(skin);
+                                        }
+                                        catch
+                                        {
+                                            return false;
+                                        }
+                                    }));
                                 }
-                                else
-                                {
 
-                                }
+                                skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(packDesc.LocatorUrl.LocalPath)}";
+                                skin.PackDesc.LocatorUrl = packDesc.LocatorUrl;
+
+                                skinsWithLocator.Add(skin);
                             }
                             else
                             {
@@ -455,6 +459,8 @@ namespace NationsConverter.Stages
                     block.Flags = conversionBlock.Flags.Value;
 
                 map.Blocks.Add(block);
+
+                return block;
             }
 
             var sortedLog = log.ToList();
@@ -462,7 +468,7 @@ namespace NationsConverter.Stages
 
             if (skinsWithLocator.Count > 0)
             {
-                var finished = new List<string>();
+                var finished = new List<Uri>();
 
                 while (finished.Count < skinLocatorTasks.Count)
                 {
@@ -483,7 +489,7 @@ namespace NationsConverter.Stages
                                         Log.Write($"HEAD requests failed with {skin.PackDesc.LocatorUrl}");
 
                                         skin.PackDesc.FilePath = "";
-                                        skin.PackDesc.LocatorUrl = "";
+                                        skin.PackDesc.LocatorUrl = null;
                                     }
 
                                     finished.Add(skin.PackDesc.LocatorUrl);

@@ -10,65 +10,79 @@ Blocks:
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterCurveIn.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [-90, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightK.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [180, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterDiag.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [90, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightY.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [90, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightX.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightSide.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightL.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightJ.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraightT.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterCurveOut.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [-90, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterCurve.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
       OffsetRot: [-90, 0, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterStraight.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterEnd.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - Item:
       Name: NationsConverter\z_terrain\z_water\WaterSingle.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   - ~
   - ~
   StadiumPool2:
@@ -140,7 +154,8 @@ Blocks:
   - Item:
       Name: NationsConverter\z_terrain\z_water\Water.Item.Gbx
       OffsetPivot: [16, 0, 16]
-      OffsetPos2: [0, 8, 0]
+      OffsetPos: [0, 8, 0]
+      OffsetPos2: [0, -8, 0]
   StadiumWater2:
   - Item:
       Name: NationsConverter\z_terrain\z_water\Water.Item.Gbx

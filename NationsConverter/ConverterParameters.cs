@@ -22,7 +22,7 @@ namespace NationsConverter
         {
             StadiumOffsetCoord = (8, 0, 8);
             StadiumOffset = StadiumOffsetCoord * 32f;
-            Stadium2RelativeOffsetCoord = (-1, -2, -1);
+            Stadium2RelativeOffsetCoord = (0, 1, 0);
             Stadium2RelativeOffset = Stadium2RelativeOffsetCoord * (32, 8, 32);
         }
     }

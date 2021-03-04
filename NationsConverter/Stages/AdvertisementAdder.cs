@@ -18,8 +18,8 @@ namespace NationsConverter.Stages
                     skin.Text = "!4";
                     skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
 
-                    var ncImgUrl = "http://bigbang1112.eu/nc/NCStartBlock1.png";
-                    skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(ncImgUrl)}";
+                    var ncImgUrl = new Uri("http://bigbang1112.eu/nc/NCStartBlock1.png", UriKind.Absolute);
+                    skin.PackDesc.FilePath = $"Skins\\Any\\{Path.GetFileName(ncImgUrl.LocalPath)}";
                     skin.PackDesc.LocatorUrl = ncImgUrl;
 
                     block.Skin = skin;

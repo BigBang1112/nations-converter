@@ -349,12 +349,16 @@ Blocks:
   StadiumPlatformLoopStartCorner: [ PlatformTechLoopStartCurve1In ]
   StadiumPlatformLoopEndCorner: [ PlatformTechLoopEndCurve1In ]
 
-  StadiumPlatformWall1: &stadiumPlatformWall
+  StadiumPlatformWall1:
   - Block:
       Name: PlatformTechWallStraight
       OffsetDir: 3
       Ghost: true
-  StadiumPlatformWallBorder: *stadiumPlatformWall
+  StadiumPlatformWallBorder:
+  - Block:
+      Name: PlatformTechWallStraight
+      OffsetDir: 3
+      Ghost: true
   StadiumPlatformWall2: &stadiumPlatformWall2
   - Blocks:
     - Name: PlatformTechWallStraight
@@ -370,8 +374,16 @@ Blocks:
       OffsetDir: 3
       Ghost: true
 
-  StadiumPlatformWall1Birds: *stadiumPlatformWall
-  StadiumPlatformWallCheckpointV: *stadiumPlatformWall
+  StadiumPlatformWall1Birds:
+  - Block:
+      Name: PlatformTechWallStraight
+      OffsetDir: 3
+      Ghost: true
+  StadiumPlatformWallCheckpointV:
+  - Block:
+      Name: PlatformTechWallStraight
+      OffsetDir: 3
+      Ghost: true
   StadiumPlatformWallCheckpointH: [ PlatformTechWallCheckpointRight ]
   StadiumPlatformWall1Screen:
   - Block:
