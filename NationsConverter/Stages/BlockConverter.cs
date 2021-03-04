@@ -217,10 +217,9 @@ namespace NationsConverter.Stages
                     var center = new Vec3(0, 0, 0);
                     offsetPos = AdditionalMath.RotateAroundCenter(offsetPos, center, radians);
 
-                    if (version <= GameVersion.TMUF)
+                    if (version >= GameVersion.TM2)
                     {
-                        offsetPos -= parameters.Stadium2RelativeOffset.XZ;
-                        offsetPos += convOffsetPos2;
+                        offsetPos += parameters.Stadium2RelativeOffset + convOffsetPos2;
                     }
 
                     var name = "";
@@ -265,7 +264,7 @@ namespace NationsConverter.Stages
 
                     map.PlaceAnchoredObject(
                         new Ident(name, collection, author),
-                        referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 8, 16),
+                        referenceBlock.Coord * new Vec3(32, 8, 32) + offsetPos + (16, 0, 16),
                         (-radians, 0, 0) - AdditionalMath.ToRadians(convOffsetRot),
                         -offsetPivot);
                 }
