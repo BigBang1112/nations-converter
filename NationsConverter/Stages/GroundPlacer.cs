@@ -81,12 +81,10 @@ namespace NationsConverter.Stages
                     var dirtBlockExists = false;
 
                     Int3 coord = (x, 0, z);
-                    if (version <= GameVersion.TMUF)
-                        coord -= (1, 0, 1);
 
                     foreach (var groundBlock in map.Blocks.Where(o => o.Coord == (x, 0, z)
                     || (version <= GameVersion.TMUF &&
-                       (o.Coord == coord + (0, 1, 0) // TMNF hill
+                       (o.Coord == coord + (0, 2, 0) // TMNF hill
                     ||  o.Coord == coord + (0, -1, 0))) // TMNF base
 
                     || (version >= GameVersion.TM2 && (o.Name == "StadiumPool2" || o.Name == "StadiumWater2") && o.Coord == (x, -1, z)))) 
@@ -98,7 +96,7 @@ namespace NationsConverter.Stages
                         }
                     }
 
-                    var fabricExists = map.Blocks.Where(o => o.Coord.XZ == coord && o.Name == "StadiumFabricCross1x1").Count() > 0;
+                    var fabricExists = map.Blocks.Count(o => o.Coord.XZ == coord && o.Name == "StadiumFabricCross1x1") > 0;
 
                     if (!dirtBlockExists)
                     {
