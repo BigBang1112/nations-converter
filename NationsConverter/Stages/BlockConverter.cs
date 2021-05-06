@@ -1,6 +1,7 @@
 ﻿using GBX.NET;
 using GBX.NET.BlockInfo;
 using GBX.NET.Engines.Game;
+using GBX.NET.Engines.GameData;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -462,6 +463,16 @@ namespace NationsConverter.Stages
 
                 if (referenceBlock.WaypointSpecialProperty != null)
                     block.WaypointSpecialProperty = referenceBlock.WaypointSpecialProperty;
+
+                if (version <= GameVersion.TMUF)
+                {
+                    if (referenceBlock.Name.Contains("Checkpoint"))
+                    {
+                        var waypoint = new CGameWaypointSpecialProperty();
+                        waypoint.CreateChunk<CGameWaypointSpecialProperty.Chunk2E009000>();
+                        block.WaypointSpecialProperty = waypoint;
+                    }
+                }
 
                 block.IsGround = false;
 
