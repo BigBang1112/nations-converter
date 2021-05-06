@@ -1,6 +1,7 @@
 ﻿using GBX.NET;
 using GBX.NET.BlockInfo;
 using GBX.NET.Engines.Game;
+using GBX.NET.Engines.GameData;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -84,8 +85,8 @@ namespace NationsConverter.Stages
                     if (conversion.OffsetCoordByBlockModel)
                     {
                         var allCoords = conversion.Blocks.Select(x => new Int3(x.OffsetCoord[0], x.OffsetCoord[1], x.OffsetCoord[2])).ToArray();
-                        var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
-                        var max = new Int3(allCoords.Select(x => x.X).Max(), allCoords.Select(x => x.Y).Max(), allCoords.Select(x => x.Z).Max());
+                        var min = new Int3(allCoords.Min(x => x.X), allCoords.Min(x => x.Y), allCoords.Min(x => x.Z));
+                        var max = new Int3(allCoords.Max(x => x.X), allCoords.Max(x => x.Y), allCoords.Max(x => x.Z));
                         var size = max - min + (1, 1, 1);
 
                         center = (min + max) * .5f;
@@ -100,9 +101,9 @@ namespace NationsConverter.Stages
 
                         if (center != default)
                         {
-                            var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
-                            newCoords = newCoords.Select(x => x - newMin).ToList();
-                        }
+                            var newMin = new Vec3(newCoords.Min(x => x.X), newCoords.Min(x => x.Y), newCoords.Min(x => x.Z));
+							newCoords = newCoords.Select(x => x - newMin).ToList();
+						}
 
                         for (var i = 0; i < conversion.Blocks.Length; i++)
                         {
@@ -157,15 +158,22 @@ namespace NationsConverter.Stages
                                         // Previous skins should be removed
                                         foreach (var b in placedBlocks)
                                         {
-                                            if (b.Skin != null)
+                                            if (b.Skin == null) // If the official sign set doesn't include the skin variant, create a new skin
                                             {
-                                                // Set the skin texture of the sign to black for cleanness
-                                                b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
-                                                b.Skin.SecondaryPackDesc = new FileRef();
+                                                var skin = new CGameCtnBlockSkin { Text = "!4" };
+                                                skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+                                                skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                                                skinsWithLocator.Remove(b.Skin);
-                                                // Remove the skin from locators if there is one for some reason, to avoid null exception
+                                                b.Skin = skin;
+                                                b.Author = "Nadeo";
                                             }
+
+                                            // Set the skin texture of the sign to black for cleanness
+                                            b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
+                                            b.Skin.SecondaryPackDesc = new FileRef();
+
+                                            skinsWithLocator.Remove(b.Skin);
+                                            // Remove the skin from locators if there is one for some reason, to avoid null exception
                                         }
 
                                         foreach (var item in variant.Items)
@@ -250,8 +258,8 @@ namespace NationsConverter.Stages
                         else if(BlockInfoManager.BlockModels[referenceBlock.Name].Air != null)
                             allCoords = BlockInfoManager.BlockModels[referenceBlock.Name].Air.Select(x => (Int3)x.Coord);
 
-                        var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
-                        var max = new Int3(allCoords.Select(x => x.X).Max(), allCoords.Select(x => x.Y).Max(), allCoords.Select(x => x.Z).Max());
+                        var min = new Int3(allCoords.Min(x => x.X), allCoords.Min(x => x.Y), allCoords.Min(x => x.Z));
+                        var max = new Int3(allCoords.Max(x => x.X), allCoords.Max(x => x.Y), allCoords.Max(x => x.Z));
                         var box = max - min;
 
                         var directions = new Int3[]
@@ -455,6 +463,16 @@ namespace NationsConverter.Stages
 
                 if (referenceBlock.WaypointSpecialProperty != null)
                     block.WaypointSpecialProperty = referenceBlock.WaypointSpecialProperty;
+
+                if (version <= GameVersion.TMUF)
+                {
+                    if (referenceBlock.Name.Contains("Checkpoint"))
+                    {
+                        var waypoint = new CGameWaypointSpecialProperty();
+                        waypoint.CreateChunk<CGameWaypointSpecialProperty.Chunk2E009000>();
+                        block.WaypointSpecialProperty = waypoint;
+                    }
+                }
 
                 block.IsGround = false;
 
