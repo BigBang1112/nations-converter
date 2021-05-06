@@ -85,8 +85,8 @@ namespace NationsConverter.Stages
                     if (conversion.OffsetCoordByBlockModel)
                     {
                         var allCoords = conversion.Blocks.Select(x => new Int3(x.OffsetCoord[0], x.OffsetCoord[1], x.OffsetCoord[2])).ToArray();
-                        var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
-                        var max = new Int3(allCoords.Select(x => x.X).Max(), allCoords.Select(x => x.Y).Max(), allCoords.Select(x => x.Z).Max());
+                        var min = new Int3(allCoords.Min(x => x.X), allCoords.Min(x => x.Y), allCoords.Min(x => x.Z));
+                        var max = new Int3(allCoords.Max(x => x.X), allCoords.Max(x => x.Y), allCoords.Max(x => x.Z));
                         var size = max - min + (1, 1, 1);
 
                         center = (min + max) * .5f;
@@ -101,9 +101,9 @@ namespace NationsConverter.Stages
 
                         if (center != default)
                         {
-                            var newMin = new Vec3(newCoords.Select(x => x.X).Min(), newCoords.Select(x => x.Y).Min(), newCoords.Select(x => x.Z).Min());
-                            newCoords = newCoords.Select(x => x - newMin).ToList();
-                        }
+                            var newMin = new Vec3(newCoords.Min(x => x.X), newCoords.Min(x => x.Y), newCoords.Min(x => x.Z));
+							newCoords = newCoords.Select(x => x - newMin).ToList();
+						}
 
                         for (var i = 0; i < conversion.Blocks.Length; i++)
                         {
@@ -258,8 +258,8 @@ namespace NationsConverter.Stages
                         else if(BlockInfoManager.BlockModels[referenceBlock.Name].Air != null)
                             allCoords = BlockInfoManager.BlockModels[referenceBlock.Name].Air.Select(x => (Int3)x.Coord);
 
-                        var min = new Int3(allCoords.Select(x => x.X).Min(), allCoords.Select(x => x.Y).Min(), allCoords.Select(x => x.Z).Min());
-                        var max = new Int3(allCoords.Select(x => x.X).Max(), allCoords.Select(x => x.Y).Max(), allCoords.Select(x => x.Z).Max());
+                        var min = new Int3(allCoords.Min(x => x.X), allCoords.Min(x => x.Y), allCoords.Min(x => x.Z));
+                        var max = new Int3(allCoords.Max(x => x.X), allCoords.Max(x => x.Y), allCoords.Max(x => x.Z));
                         var box = max - min;
 
                         var directions = new Int3[]
