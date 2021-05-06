@@ -12,11 +12,13 @@ namespace NationsConverter.Stages
     {
         public void Process(CGameCtnChallenge map, int version, ConverterParameters parameters, ConverterTemporary temporary)
         {
+            var isEarly = map.BuildVersion == "date=2013-02-27_11_18 Svn=49165 GameVersion=3.3.0";
+
             map.Blocks.ForEach(x =>
             {
                 x.Coord += (8, 0, 8); // Shift the block by 8x0x8 positions to center the blocks for the new Stadium
 
-                if (version >= GameVersion.TM2)
+                if (version >= GameVersion.TM2 && !isEarly)
                     x.Coord -= (0, 8, 0);
             });
 
