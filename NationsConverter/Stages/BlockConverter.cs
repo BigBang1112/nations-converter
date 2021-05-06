@@ -157,15 +157,22 @@ namespace NationsConverter.Stages
                                         // Previous skins should be removed
                                         foreach (var b in placedBlocks)
                                         {
-                                            if (b.Skin != null)
+                                            if (b.Skin == null) // If the official sign set doesn't include the skin variant, create a new skin
                                             {
-                                                // Set the skin texture of the sign to black for cleanness
-                                                b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
-                                                b.Skin.SecondaryPackDesc = new FileRef();
+                                                var skin = new CGameCtnBlockSkin { Text = "!4" };
+                                                skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+                                                skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
 
-                                                skinsWithLocator.Remove(b.Skin);
-                                                // Remove the skin from locators if there is one for some reason, to avoid null exception
+                                                b.Skin = skin;
+                                                b.Author = "Nadeo";
                                             }
+
+                                            // Set the skin texture of the sign to black for cleanness
+                                            b.Skin.PackDesc = new FileRef(3, FileRef.DefaultChecksum, "Skins\\Any\\Advertisement2x1\\Off.tga", "");
+                                            b.Skin.SecondaryPackDesc = new FileRef();
+
+                                            skinsWithLocator.Remove(b.Skin);
+                                            // Remove the skin from locators if there is one for some reason, to avoid null exception
                                         }
 
                                         foreach (var item in variant.Items)
