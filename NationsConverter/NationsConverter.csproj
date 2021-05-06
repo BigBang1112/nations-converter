@@ -3,9 +3,10 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 		<PlatformTarget>x86</PlatformTarget>
-		<Version>1.3.3</Version>
+		<Version>1.3.4</Version>
 		<Authors>BigBang1112</Authors>
 		<Product>Nations Converter</Product>
+		<Company>BigBang1112</Company>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 		<ApplicationIcon>favicon.ico</ApplicationIcon>
 		<Platforms>x86</Platforms>
