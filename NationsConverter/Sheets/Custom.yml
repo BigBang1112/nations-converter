@@ -4190,7 +4190,7 @@ ItemSkinPacks:
       Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Wrong_Way.Item.Gbx
-      Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_TM2.Item.Gbx
+      Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Left_TM2.Item.Gbx
       Any\Advertisement\SignRight.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Right_TM2.Item.Gbx
       Any\Advertisement\SignUp.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Up_TM2.Item.Gbx
       Any\Advertisement\SignDown.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down_TM2.Item.Gbx
@@ -4210,7 +4210,7 @@ ItemSkinPacks:
       Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Wrong_Way.Item.Gbx
-      Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_TM2.Item.Gbx
+      Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Left_TM2.Item.Gbx
       Any\Advertisement\SignRight.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Right_TM2.Item.Gbx
       Any\Advertisement\SignUp.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Up_TM2.Item.Gbx
       Any\Advertisement\SignDown.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down_TM2.Item.Gbx
