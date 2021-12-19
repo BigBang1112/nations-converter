@@ -4013,16 +4013,16 @@ ItemSkinPacks:
     - OffsetRot: [180, 0, 0]
     - OffsetRot: [270, 0, 0]
     Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Left_4X.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Right_4X.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Up_4X.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Down_4X.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Left_4X_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Right_4X_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Up_4X_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Down_4X_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_Warning_4X.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubBase_OneCredit\PubBase_WrongWay_4X.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Left_4X.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Right_4X.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Up_4X.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Down_4X.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Left_4X_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Right_4X_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Up_4X_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Down_4X_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_Warning_4X.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubBase_OneCredit\PubBase_WrongWay_4X.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubBase_OneCredit\PubBase_Left_TM2_4X.Item.Gbx
@@ -4032,16 +4032,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWarning.dds: NationsConverter\Signs\PubBase_OneCredit\PubBase_Warning_TM2_4X.Item.Gbx
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\PubBase_OneCredit\PubBase_WrongWay_TM2_4X.Item.Gbx
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_WrongWay.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_WrongWay.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Left_TM2.Item.Gbx
@@ -4051,16 +4051,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWarning.dds: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_Warning_TM2.Item.Gbx
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\PubDeadendStructure\PubDeadendStructure_WrongWay_TM2.Item.Gbx
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_WrongWay.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_WrongWay.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Left_TM2.Item.Gbx
@@ -4070,16 +4070,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWarning.dds: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_Warning_TM2.Item.Gbx
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\PubCornerStructure\PubCornerStructure_WrongWay_TM2.Item.Gbx
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubStraight\PubStraight_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubStraight\PubStraight_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubStraight\PubStraight_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubStraight\PubStraight_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubStraight\PubStraight_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubStraight\PubStraight_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubStraight\PubStraight_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubStraight\PubStraight_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubStraight\PubStraight_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubStraight\PubStraight_WrongWay.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubStraight\PubStraight_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubStraight\PubStraight_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubStraight\PubStraight_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubStraight\PubStraight_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubStraight\PubStraight_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubStraight\PubStraight_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubStraight\PubStraight_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubStraight\PubStraight_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubStraight\PubStraight_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubStraight\PubStraight_WrongWay.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubStraight\PubStraight_Left_TM2.Item.Gbx
@@ -4089,16 +4089,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWarning.dds: NationsConverter\Signs\PubStraight\PubStraight_Warning_TM2.Item.Gbx
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\PubStraight\PubStraight_WrongWay_TM2.Item.Gbx
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubTStructure\PubTStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubTStructure\PubTStructure_WrongWay.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubTStructure\PubTStructure_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubTStructure\PubTStructure_WrongWay.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubTStructure\PubTStructure_Left_TM2.Item.Gbx
@@ -4113,16 +4113,16 @@ ItemSkinPacks:
     - OffsetRot: [180, 0, 0]
     - OffsetRot: [270, 0, 0]
     Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Left_4X.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Right_4X.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Up_4X.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Down_4X.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Left_4X_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Right_4X_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Up_4X_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Down_4X_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Warning_4X.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_WrongWay_4X.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Left_4X.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Right_4X.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Up_4X.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Down_4X.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Left_4X_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Right_4X_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Up_4X_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Down_4X_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Warning_4X.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_WrongWay_4X.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\PubCrossStructure\PubCrossStructure_Left_TM2_4x.Item.Gbx
@@ -4136,16 +4136,16 @@ ItemSkinPacks:
     - OffsetRot: [0, 0, 0]
     - OffsetRot: [180, 0, 0]
     Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\ControlPub\ControlPub_Left_2X.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\ControlPub\ControlPub_Right_2X.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\ControlPub\ControlPub_Up_2X.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\ControlPub\ControlPub_Down_2X.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\ControlPub\ControlPub_Left_2X_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\ControlPub\ControlPub_Right_2X_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\ControlPub\ControlPub_Up_2X_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\ControlPub\ControlPub_Down_2X_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\ControlPub\ControlPub_Warning_2X.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\ControlPub\ControlPub_WrongWay_2X.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\ControlPub\ControlPub_Left_2X.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\ControlPub\ControlPub_Right_2X.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\ControlPub\ControlPub_Up_2X.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\ControlPub\ControlPub_Down_2X.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\ControlPub\ControlPub_Left_2X_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\ControlPub\ControlPub_Right_2X_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\ControlPub\ControlPub_Up_2X_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\ControlPub\ControlPub_Down_2X_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\ControlPub\ControlPub_Warning_2X.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\ControlPub\ControlPub_WrongWay_2X.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\ControlPub\ControlPub_Left_TM2.Item.Gbx
@@ -4158,16 +4158,16 @@ ItemSkinPacks:
   - Items:
     - OffsetRot: [-90, 0, 0]
     Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\Signs2x1\IDX_Sign_WrongWay.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\Signs2x1\IDX_Sign_WrongWay.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\Signs2x1\IDX_Sign_Left_TM2.Item.Gbx
@@ -4178,16 +4178,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\Signs2x1\IDX_Sign_WrongWay_TM2.Item.Gbx
   StadiumFabricPillarAirScreen:
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Wrong_Way.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Wrong_Way.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_TM2.Item.Gbx
@@ -4198,16 +4198,16 @@ ItemSkinPacks:
       Any\Advertisement\SignWrongWay.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarAirScreen_Ground_Wrong_Way_TM2.Item.Gbx
   StadiumFabricPillarScreenSmall:
   - Skins:
-      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Left.Item.Gbx
-      Any\Advertisement\SignRight.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Right.Item.Gbx
-      Any\Advertisement\SignUp.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Up.Item.Gbx
-      Any\Advertisement\SignDown.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down.Item.Gbx
+      Any\Advertisement\SignLeft.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.bik: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Wrong_Way.Item.Gbx
-      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Left.Item.Gbx
-      Any\Advertisement\SignRight.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Right.Item.Gbx
-      Any\Advertisement\SignUp.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Up.Item.Gbx
-      Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down.Item.Gbx
+      Any\Advertisement\SignLeft.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Left_v2.Item.Gbx
+      Any\Advertisement\SignRight.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Right_v2.Item.Gbx
+      Any\Advertisement\SignUp.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Up_v2.Item.Gbx
+      Any\Advertisement\SignDown.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Down_v2.Item.Gbx
       Any\Advertisement\SignWarning.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Warning.Item.Gbx
       Any\Advertisement\SignWrongWay.webm: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_Wrong_Way.Item.Gbx
       Any\Advertisement\SignLeft.dds: NationsConverter\Signs\StadiumFabricPillarScreens\IDX_StadiumFabricPillarScreenSmall_Ground_TM2.Item.Gbx
