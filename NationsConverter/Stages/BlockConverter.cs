@@ -466,7 +466,7 @@ namespace NationsConverter.Stages
 
                 if (version <= GameVersion.TMUF)
                 {
-                    if (referenceBlock.Name.Contains("Checkpoint"))
+                    if (map.Checkpoints.Contains(referenceBlock.Coord))
                     {
                         var waypoint = new CGameWaypointSpecialProperty();
                         waypoint.CreateChunk<CGameWaypointSpecialProperty.Chunk2E009000>();
