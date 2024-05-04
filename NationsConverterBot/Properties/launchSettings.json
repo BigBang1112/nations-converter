@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NationsConverterBot": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

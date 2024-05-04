@@ -1,0 +1,57 @@
+﻿@page "/"
+@using KristofferStrube.Blazor.FileSystem
+@using KristofferStrube.Blazor.FileSystemAccess
+@inject IFileSystemAccessService FileSystemAccessService;
+
+<button @onclick="OpenDictoryPicker" class="btn btn-primary">Open Directory</button>
+<ul>
+    @foreach (var file in Files)
+    {
+        <li>@file</li>
+    }
+</ul>
+
+@code {
+    private List<string> Files = new();
+
+    protected async Task OpenDictoryPicker()
+    {
+        try
+        {
+            var directoryHandle = await FileSystemAccessService.ShowDirectoryPickerAsync();
+
+            await foreach (var file in GetFiles(directoryHandle))
+            {
+                Files.Add(await file.GetNameAsync());
+                StateHasChanged();
+            }
+        }
+        catch (JSException ex)
+        {
+            Console.WriteLine(ex);
+        }
+        finally
+        {
+
+        }
+    }
+
+    private async IAsyncEnumerable<FileSystemFileHandle> GetFiles(FileSystemDirectoryHandle directoryHandle)
+    {
+        foreach (var handle in await directoryHandle.ValuesAsync())
+        {
+            switch (handle)
+            {
+                case FileSystemFileHandle fileHandle:
+                    yield return fileHandle;
+                    break;
+                case FileSystemDirectoryHandle dirHandle:
+                    await foreach (var file in GetFiles(dirHandle))
+                    {
+                        yield return file;
+                    }
+                    break;
+            }
+        }
+    }
+}
