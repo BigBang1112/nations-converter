@@ -5,9 +5,17 @@
 @using NationsConverterBuilder.Models
 @using NationsConverterBuilder.Services
 
-@inject ISetupService SetupService
+@inject SetupService SetupService
+@inject GeneralBuildService GeneralBuildService
 
-<img src="img/logo.webp" height="200" />
+<header>
+    <div>
+        <img src="img/logo.webp" height="200" />
+    </div>
+    <aside>
+        <button class="build" @onclick="() => GeneralBuildService.BuildAsync()">BUILD</button>
+    </aside>
+</header>
 
 <div class="browser">
     <div class="browsable-line">
@@ -15,7 +23,7 @@
         {
             if (SetupService.Collections.TryGetValue(name, out var collection))
             {
-                <button class="browsable directory" @onclick="() => SetupCollectionBlocks(collection)">@collection.DisplayName</button>
+                <button class="browsable directory @(name == SelectedCollection ? "selected" : "")" @onclick="() => SetupCollectionBlocks(collection)">@collection.DisplayName</button>
             }
         }
     </div>
@@ -29,19 +37,20 @@
                 <div class="browsable-line">
                     @foreach (var (name, _) in currentDirs)
                     {
-                        <button class="browsable directory" @onclick="() => VisitDirectory(0, name)">@name</button>
+                        <button class="browsable directory @(SelectedDirectories.Count > 0 && name == SelectedDirectories[0] ? "selected" : "")" @onclick="() => VisitDirectory(0, name)">@name</button>
                     }
                 </div>
 
-                @foreach (var dir in SelectedDirectories)
+                @for (var i = 0; i < SelectedDirectories.Count; i++)
                 {
+                    var dir = SelectedDirectories[i];
                     var dirs = currentDirs[dir].Directories;
                     var currentBlocks = currentDirs[dir].Blocks;
 
                     <div class="browsable-line">
                         @foreach (var (name, _) in dirs)
                         {
-                            <button class="browsable directory" @onclick="() => VisitDirectory(SelectedDirectories.IndexOf(dir) + 1, name)">@name</button>
+                            <button class="browsable directory @(SelectedDirectories.Count > i + 1 && name == SelectedDirectories[i + 1] ? "selected" : "")" @onclick="() => VisitDirectory(SelectedDirectories.IndexOf(dir) + 1, name)">@name</button>
                         }
 
                         @foreach (var block in currentBlocks)
@@ -97,43 +106,4 @@
 
         SelectedDirectories.Add(name);
     }
-
-    /*protected async Task OpenDictoryPicker()
-        {
-        try
-            {
-            var directoryHandle = await FileSystemAccessService.ShowDirectoryPickerAsync();
-
-            await foreach (var fileHandle in GetFiles(directoryHandle))
-                {
-                try
-                    {
-                    var file = await fileHandle.GetFileAsync();
-                    var data = await file.ArrayBufferAsync();
-                    using var stream = new MemoryStream(data);
-                    var node = Gbx.ParseHeaderNode(stream);
-
-                    if (node is CGameCtnCollection collection)
-                        {
-                        stream.Position = 0;
-                        collection = (CGameCtnCollection)Gbx.ParseNode(stream)!;
-                        Files.Add(collection.Collection);
-                        StateHasChanged();
-                }
-                }
-                catch (Exception ex)
-                {
-
-            }
-        }
-        }
-        catch (JSException ex)
-            {
-            Console.WriteLine(ex);
-        }
-        finally
-        {
-
-    }
-    }*/
 }

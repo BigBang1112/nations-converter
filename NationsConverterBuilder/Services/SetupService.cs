@@ -5,15 +5,7 @@ using NationsConverterBuilder.Models;
 
 namespace NationsConverterBuilder.Services;
 
-internal interface ISetupService
-{
-    Dictionary<string, CollectionModel> Collections { get; }
-
-    Task SetupCollectionsAsync(CancellationToken cancellationToken = default);
-    Task SetupCollectionAsync(CollectionModel collection, CancellationToken cancellationToken = default);
-}
-
-internal sealed class SetupService : ISetupService
+internal sealed class SetupService
 {
     private readonly string dataDirPath;
 

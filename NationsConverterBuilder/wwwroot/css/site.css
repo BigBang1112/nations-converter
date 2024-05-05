@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
 
 a, button, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+    margin: 0;
     border: 0;
     font-weight: inherit;
     font-style: inherit;
@@ -43,10 +44,26 @@ body {
     background-color: #222;
 }
 
+header {
+    display: flex;
+}
+
+    header div {
+        flex-grow: 1;
+    }
+
+aside {
+    background: #444;
+    width: 50%;
+    border-radius: 0 0 0 50px;
+    padding: 40px;
+}
+
 .browser {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px 20px;
 }
 
 .env-browser {
@@ -77,7 +94,6 @@ body {
     border: none;
     text-decoration: none;
     border-radius: 10px;
-    cursor: pointer;
 }
 
 .browsable-line {
@@ -91,17 +107,37 @@ body {
 .browsable.directory {
     background-color: #E2B031;
     border-top: 5px solid white;
+    cursor: pointer;
 }
 
     .browsable.directory:hover {
         background-color: #EDC050;
     }
 
-.browsable.block {
+    .browsable.directory.selected {
+        background-color: #FFD375;
+    }
+
+.browsable.block, button {
     background-color: #B5E7FF;
     border-bottom: 5px solid #66CCFF;
+    cursor: pointer;
 }
 
-     .browsable.block:hover {
-          background-color: #C5F0FF;
-     }
+    .browsable.block:hover,
+    .browsable.block.selected,
+    button:hover {
+        background-color: #C5F0FF;
+    }
+
+button {
+    color: #111;
+}
+
+    button.build {
+        width: 200px;
+        height: 75px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        border-radius: 10px;
+    }

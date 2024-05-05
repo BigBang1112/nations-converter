@@ -10,7 +10,8 @@ builder.Services.AddServerSideBlazor().AddHubOptions(o =>
 
 builder.Services.AddDirectoryBrowser();
 
-builder.Services.AddScoped<ISetupService, SetupService>();
+builder.Services.AddScoped<SetupService>();
+builder.Services.AddScoped<GeneralBuildService>();
 
 var app = builder.Build();
 
