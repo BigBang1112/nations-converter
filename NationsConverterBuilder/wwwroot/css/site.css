@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
+a, button, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
 #blazor-error-ui {
     background: lightyellow;
     bottom: 0;
@@ -26,3 +37,71 @@
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+body {
+    font-family: 'Kanit', Rubik, sans-serif;
+    background-color: #222;
+}
+
+.browser {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.env-browser {
+    display: flex;
+    gap: 10px;
+}
+
+.env-folders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 70%;
+}
+
+.env-root-blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-left: 3px solid white;
+    padding-left: 10px;
+    height: min-content;
+}
+
+.browsable {
+    min-width: 104px;
+    height: 104px;
+    flex-shrink: 0;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.browsable-line {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    gap: 5px;
+    padding: 5px;
+}
+
+.browsable.directory {
+    background-color: #E2B031;
+    border-top: 5px solid white;
+}
+
+    .browsable.directory:hover {
+        background-color: #EDC050;
+    }
+
+.browsable.block {
+    background-color: #B5E7FF;
+    border-bottom: 5px solid #66CCFF;
+}
+
+     .browsable.block:hover {
+          background-color: #C5F0FF;
+     }

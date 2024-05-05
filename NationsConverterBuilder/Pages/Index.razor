@@ -1,57 +1,139 @@
 ﻿@page "/"
-@using KristofferStrube.Blazor.FileSystem
-@using KristofferStrube.Blazor.FileSystemAccess
-@inject IFileSystemAccessService FileSystemAccessService;
 
-<button @onclick="OpenDictoryPicker" class="btn btn-primary">Open Directory</button>
-<ul>
-    @foreach (var file in Files)
-    {
-        <li>@file</li>
-    }
-</ul>
+@using GBX.NET
+@using GBX.NET.Engines.Game
+@using NationsConverterBuilder.Models
+@using NationsConverterBuilder.Services
 
-@code {
-    private List<string> Files = new();
+@inject ISetupService SetupService
 
-    protected async Task OpenDictoryPicker()
-    {
-        try
+<img src="img/logo.webp" height="200" />
+
+<div class="browser">
+    <div class="browsable-line">
+        @foreach (var name in new[] { "Alpine", "Rally", "Speed", "Island", "Bay", "Coast", "Stadium" })
         {
-            var directoryHandle = await FileSystemAccessService.ShowDirectoryPickerAsync();
-
-            await foreach (var file in GetFiles(directoryHandle))
+            if (SetupService.Collections.TryGetValue(name, out var collection))
             {
-                Files.Add(await file.GetNameAsync());
-                StateHasChanged();
+                <button class="browsable directory" @onclick="() => SetupCollectionBlocks(collection)">@collection.DisplayName</button>
             }
         }
-        catch (JSException ex)
+    </div>
+
+    @if (SelectedCollection is not null)
+    {
+        var currentDirs = SetupService.Collections[SelectedCollection].BlockDirectories;
+
+        <div class="env-browser">
+            <div class="env-folders">
+                <div class="browsable-line">
+                    @foreach (var (name, _) in currentDirs)
+                    {
+                        <button class="browsable directory" @onclick="() => VisitDirectory(0, name)">@name</button>
+                    }
+                </div>
+
+                @foreach (var dir in SelectedDirectories)
+                {
+                    var dirs = currentDirs[dir].Directories;
+                    var currentBlocks = currentDirs[dir].Blocks;
+
+                    <div class="browsable-line">
+                        @foreach (var (name, _) in dirs)
+                        {
+                            <button class="browsable directory" @onclick="() => VisitDirectory(SelectedDirectories.IndexOf(dir) + 1, name)">@name</button>
+                        }
+
+                        @foreach (var block in currentBlocks)
+                        {
+                            <button class="browsable block"><CollectorIcon Name="@block.Key" WebpData="@block.Value.WebpIcon" /></button>
+                        }
+                    </div>
+
+                    currentDirs = dirs;
+                }
+
+            </div>
+            <div class="env-root-blocks">
+                @foreach (var (name, block) in SetupService.Collections[SelectedCollection].RootBlocks)
+                {
+                    <button class="browsable block"><CollectorIcon Name="@name" WebpData="@block.WebpIcon" /></button>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    public string? SelectedCollection { get; set; }
+
+    public List<string> SelectedDirectories { get; } = new();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
         {
+            await SetupService.SetupCollectionsAsync();
+            StateHasChanged();
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    private async Task SetupCollectionBlocks(CollectionModel collection)
+    {
+        await SetupService.SetupCollectionAsync(collection);
+
+        SelectedDirectories.Clear();
+        SelectedCollection = collection.Id;
+    }
+
+    private void VisitDirectory(int index, string name)
+    {
+        if (index < SelectedDirectories.Count)
+        {
+            SelectedDirectories.RemoveRange(index, SelectedDirectories.Count - index);
+        }
+
+        SelectedDirectories.Add(name);
+    }
+
+    /*protected async Task OpenDictoryPicker()
+        {
+        try
+            {
+            var directoryHandle = await FileSystemAccessService.ShowDirectoryPickerAsync();
+
+            await foreach (var fileHandle in GetFiles(directoryHandle))
+                {
+                try
+                    {
+                    var file = await fileHandle.GetFileAsync();
+                    var data = await file.ArrayBufferAsync();
+                    using var stream = new MemoryStream(data);
+                    var node = Gbx.ParseHeaderNode(stream);
+
+                    if (node is CGameCtnCollection collection)
+                        {
+                        stream.Position = 0;
+                        collection = (CGameCtnCollection)Gbx.ParseNode(stream)!;
+                        Files.Add(collection.Collection);
+                        StateHasChanged();
+                }
+                }
+                catch (Exception ex)
+                {
+
+            }
+        }
+        }
+        catch (JSException ex)
+            {
             Console.WriteLine(ex);
         }
         finally
         {
 
-        }
     }
-
-    private async IAsyncEnumerable<FileSystemFileHandle> GetFiles(FileSystemDirectoryHandle directoryHandle)
-    {
-        foreach (var handle in await directoryHandle.ValuesAsync())
-        {
-            switch (handle)
-            {
-                case FileSystemFileHandle fileHandle:
-                    yield return fileHandle;
-                    break;
-                case FileSystemDirectoryHandle dirHandle:
-                    await foreach (var file in GetFiles(dirHandle))
-                    {
-                        yield return file;
-                    }
-                    break;
-            }
-        }
-    }
+    }*/
 }

@@ -1,9 +1,16 @@
-using KristofferStrube.Blazor.FileSystemAccess;
+using Microsoft.Extensions.FileProviders;
+using NationsConverterBuilder.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
-builder.Services.AddFileSystemAccessService();
+builder.Services.AddServerSideBlazor().AddHubOptions(o =>
+{
+    o.MaximumReceiveMessageSize = int.MaxValue;
+});
+
+builder.Services.AddDirectoryBrowser();
+
+builder.Services.AddScoped<ISetupService, SetupService>();
 
 var app = builder.Build();
 
@@ -15,7 +22,16 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions()
+{
+    ServeUnknownFileTypes = true
+});
+
+app.UseDirectoryBrowser(new DirectoryBrowserOptions()
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.WebRootPath, "data")),
+    RequestPath = "/data",
+});
 
 app.UseRouting();
 

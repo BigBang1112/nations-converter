@@ -9,9 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KristofferStrube.Blazor.FileSystemAccess" Version="3.2.2" />
+    <PackageReference Include="GBX.NET" Version="2.0.2" />
+    <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.0.0" />
+    <PackageReference Include="GBX.NET.LZO" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.4" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\data\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>
