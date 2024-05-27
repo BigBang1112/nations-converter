@@ -12,6 +12,7 @@ builder.Services.AddDirectoryBrowser();
 
 builder.Services.AddScoped<SetupService>();
 builder.Services.AddScoped<GeneralBuildService>();
+builder.Services.AddScoped<ItemMakerService>();
 
 var app = builder.Build();
 

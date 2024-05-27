@@ -6,7 +6,7 @@ namespace NationsConverterBuilder.Services;
 
 internal sealed class ItemMakerService
 {
-    public CGameItemModel Build()
+    public CGameItemModel Build(CPlugSolid solid)
     {
         var material = new CPlugMaterialUserInst
         {

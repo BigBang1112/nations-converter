@@ -72,6 +72,7 @@ internal sealed class SetupService
                 {
                     Name = blockInfoNode.Ident.Id,
                     Node = blockInfoNode,
+                    GbxFilePath = blockInfoFilePath,
                     WebpIcon = webpData
                 });
                 continue;
@@ -92,6 +93,7 @@ internal sealed class SetupService
                     {
                         Name = blockInfoNode.Ident.Id,
                         Node = blockInfoNode,
+                        GbxFilePath = blockInfoFilePath,
                         WebpIcon = webpData
                     });
                 }
