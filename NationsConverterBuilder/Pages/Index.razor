@@ -2,8 +2,6 @@
 
 @using GBX.NET
 @using GBX.NET.Engines.Game
-@using NationsConverterBuilder.Models
-@using NationsConverterBuilder.Services
 
 @inject SetupService SetupService
 @inject GeneralBuildService GeneralBuildService
@@ -26,7 +24,13 @@
                 <button class="browsable directory @(name == SelectedCollection ? "selected" : "")" @onclick="() => SetupCollectionBlocks(collection)">@collection.DisplayName</button>
             }
         }
+
+        @if (IsLoading)
+        {
+            <Loader></Loader>
+        }
     </div>
+
 
     @if (SelectedCollection is not null)
     {
@@ -78,6 +82,8 @@
 
     public List<string> SelectedDirectories { get; } = new();
 
+    public bool IsLoading { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -91,7 +97,13 @@
 
     private async Task SetupCollectionBlocks(CollectionModel collection)
     {
+        IsLoading = true;
+        StateHasChanged();
+        await Task.Delay(20);
+
         await SetupService.SetupCollectionAsync(collection);
+
+        IsLoading = false;
 
         SelectedDirectories.Clear();
         SelectedCollection = collection.Id;
