@@ -113,6 +113,15 @@ internal sealed class ItemMakerService
         };
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
+        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = // lightmap data, matches *faced* indices count
+        [
+            (0, 1), (1, 1), (1, 0), (0, 0),
+            (1.27f, 2.27f), (2.27f, 2.27f), (2.27f, 1.27f), (1.27f, 1.27f),
+            (0, 3.54f), (1, 3.54f), (1, 2.54f), (0, 2.54f),
+            (0, 2.27f), (1, 2.27f), (1, 1.27f), (0, 1.27f),
+            (2.54f, 1), (3.54f, 1), (3.54f, 0), (2.54f, 0),
+            (1.27f, 1), (2.27f, 1), (2.27f, 0), (1.27f, 0)
+        ];
 
         return plugCrystal;
     }
