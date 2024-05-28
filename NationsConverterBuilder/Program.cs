@@ -1,6 +1,8 @@
 using Microsoft.Extensions.FileProviders;
 using NationsConverterBuilder.Services;
 
+GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor().AddHubOptions(o =>

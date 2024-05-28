@@ -11,13 +11,13 @@
         grid-area: 1/1;
         border: 8px solid;
         border-radius: 50%;
-        border-color: #766DF4 #766DF4 #0000 #0000;
+        border-color: #fff #fff #0000 #0000;
         mix-blend-mode: darken;
         animation: s4 1s infinite linear;
     }
 
     .custom-loader::after {
-        border-color: #0000 #0000 #E4E4ED #E4E4ED;
+        border-color: #0000 #0000 #C5F0FF #C5F0FF;
         animation-direction: reverse;
     }
 
