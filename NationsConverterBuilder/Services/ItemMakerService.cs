@@ -6,6 +6,13 @@ namespace NationsConverterBuilder.Services;
 
 internal sealed class ItemMakerService
 {
+    private readonly ILogger<ItemMakerService> logger;
+
+    public ItemMakerService(ILogger<ItemMakerService> logger)
+    {
+        this.logger = logger;
+    }
+
     public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid)
     {
         if (solid.Tree is not CPlugTree tree)
@@ -13,8 +20,7 @@ internal sealed class ItemMakerService
             throw new ArgumentException("Solid must have a tree");
         }
 
-        var layers = GetAllChildren(tree).Where(x => x.Visual is not null).ToList();
-
+        //
         var material = new CPlugMaterialUserInst
         {
             IsUsingGameMaterial = true,
@@ -27,9 +33,9 @@ internal sealed class ItemMakerService
         material.CreateChunk<CPlugMaterialUserInst.Chunk090FD002>();
         var crystalMaterial = new CPlugCrystal.Material() { MaterialUserInst = material, MaterialName = "" };
 
-        var group = new CPlugCrystal.Part { Name = "DefaultCube", U02 = 1, U03 = -1, U04 = -1 };
+        /*var groupTest = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
 
-        var crystal = new CPlugCrystal.Crystal
+        var crystalTest = new CPlugCrystal.Crystal
         {
             Version = 37,
             VisualLevels =
@@ -40,7 +46,7 @@ internal sealed class ItemMakerService
             ],
             IsEmbeddedCrystal = true,
             U01 = 4,
-            Groups = [group],
+            Groups = [groupTest],
             Positions =
             [
                 (-2, 0, -2),
@@ -59,61 +65,127 @@ internal sealed class ItemMakerService
                     new CPlugCrystal.Vertex(3, (0, 4)),
                     new CPlugCrystal.Vertex(2, (0, 0)),
                     new CPlugCrystal.Vertex(1, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
                 new CPlugCrystal.Face([
                     new CPlugCrystal.Vertex(5, (4, 4)),
                     new CPlugCrystal.Vertex(6, (0, 4)),
                     new CPlugCrystal.Vertex(7, (0, 0)),
                     new CPlugCrystal.Vertex(4, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
                 new CPlugCrystal.Face([
                     new CPlugCrystal.Vertex(4, (4, 4)),
                     new CPlugCrystal.Vertex(7, (0, 4)),
                     new CPlugCrystal.Vertex(3, (0, 0)),
                     new CPlugCrystal.Vertex(0, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
                 new CPlugCrystal.Face([
                     new CPlugCrystal.Vertex(5, (4, 4)),
                     new CPlugCrystal.Vertex(4, (0, 4)),
                     new CPlugCrystal.Vertex(0, (0, 0)),
                     new CPlugCrystal.Vertex(1, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
                 new CPlugCrystal.Face([
                     new CPlugCrystal.Vertex(6, (4, 4)),
                     new CPlugCrystal.Vertex(5, (0, 4)),
                     new CPlugCrystal.Vertex(1, (0, 0)),
                     new CPlugCrystal.Vertex(2, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
                 new CPlugCrystal.Face([
                     new CPlugCrystal.Vertex(7, (4, 4)),
                     new CPlugCrystal.Vertex(6, (0, 4)),
                     new CPlugCrystal.Vertex(2, (0, 0)),
                     new CPlugCrystal.Vertex(3, (4, 0))
-                ], group, crystalMaterial, null),
+                ], groupTest, crystalMaterial, null),
             ]
-        };
+        };*/
+        //
 
-        var geoLayer = new CPlugCrystal.GeometryLayer
+        var groups = new List<CPlugCrystal.Part>();
+        var positions = new List<Vec3>();
+        var faces = new List<CPlugCrystal.Face>();
+
+        var indicesOffset = 0;
+
+        foreach (var t in GetAllChildren(tree).Where(x => x.Visual is not null))
         {
-            Ver = 2,
-            GeometryVersion = 1,
-            Crystal = crystal,
-            LayerId = "Layer0",
-            LayerName = "nice",
-            Collidable = true,
-            IsEnabled = true,
-            IsVisible = true,
-            U02 = [0]
+            if (t.Visual is not CPlugVisualIndexedTriangles visual)
+            {
+                logger.LogWarning("Unsupported visual type: {Type}", t.Visual?.GetType().Name);
+                continue;
+            }
+
+            if (visual.IndexBuffer is null)
+            {
+                logger.LogWarning("Visual has no index buffer");
+                continue;
+            }
+
+            var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
+            groups.Add(group);
+
+            positions.AddRange(visual.Vertices.Select(x => x.Position));
+
+            foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
+            {
+                var verts = new CPlugCrystal.Vertex[indices.Length];
+                for (int i = 0; i < indices.Length; i++)
+                {
+                    var uv = visual.TexCoords.FirstOrDefault()?.TexCoords[indices[i]].UV ?? (0, 0);
+                    verts[i] = new CPlugCrystal.Vertex(indices[i] + indicesOffset, uv);
+                }
+
+                faces.Add(new CPlugCrystal.Face(
+                    verts,
+                    group,
+                    crystalMaterial,
+                    null
+                ));
+            }
+
+            indicesOffset += visual.Vertices.Length;
+        }
+
+        var crystal = new CPlugCrystal.Crystal
+        {
+            Version = 37,
+            VisualLevels =
+            [
+                new CPlugCrystal.VisualLevel { U01 = 4, U02 = 64 },
+                new CPlugCrystal.VisualLevel { U01 = 2, U02 = 128 },
+                new CPlugCrystal.VisualLevel { U01 = 1, U02 = 192 },
+            ],
+            IsEmbeddedCrystal = true,
+            U01 = 4,
+            Groups = groups.ToArray(),
+            Positions = positions.ToArray(),
+            Faces = faces.ToArray()
         };
 
         var plugCrystal = new CPlugCrystal
         {
             Materials = [crystalMaterial],
-            Layers = [geoLayer]
+            Layers =
+            [
+                new CPlugCrystal.GeometryLayer
+                {
+                    Ver = 2,
+                    GeometryVersion = 1,
+                    Crystal = crystal,
+                    LayerId = "Layer0",
+                    LayerName = "Geometry",
+                    Collidable = true,
+                    IsEnabled = true,
+                    IsVisible = true,
+                    U02 = [0]
+                }
+            ]
         };
+
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = // lightmap data, matches *faced* indices count
+
+        // lightmap data, matches *faced* indices count
+        /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 
         [
             (0, 1), (1, 1), (1, 0), (0, 0),
             (1.27f, 2.27f), (2.27f, 2.27f), (2.27f, 1.27f), (1.27f, 1.27f),
@@ -121,7 +193,7 @@ internal sealed class ItemMakerService
             (0, 2.27f), (1, 2.27f), (1, 1.27f), (0, 1.27f),
             (2.54f, 1), (3.54f, 1), (3.54f, 0), (2.54f, 0),
             (1.27f, 1), (2.27f, 1), (2.27f, 0), (1.27f, 0)
-        ];
+        ];*/
 
         return plugCrystal;
     }
@@ -229,6 +301,16 @@ internal sealed class ItemMakerService
 
         foreach (var child in tree.Children)
         {
+            if (child is CPlugTreeVisualMip mip)
+            {
+                foreach (var descendant in GetAllChildren(mip.Levels.First().Value))
+                {
+                    yield return descendant;
+                }
+
+                continue;
+            }
+
             yield return child;
 
             foreach (var descendant in GetAllChildren(child))
