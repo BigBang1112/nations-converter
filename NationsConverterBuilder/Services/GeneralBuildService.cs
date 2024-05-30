@@ -30,6 +30,7 @@ internal sealed class GeneralBuildService
             await setupService.SetupCollectionAsync(collection, cancellationToken);
 
             RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories);
+            GenerateBlocks(collection.DisplayName, collection.RootBlocks);
         });
     }
 
@@ -38,57 +39,61 @@ internal sealed class GeneralBuildService
         foreach (var (dirName, dir) in dirs)
         {
             RecurseBlockDirectories(collectionName, dir.Directories);
+            GenerateBlocks(collectionName, dir.Blocks);
+        }
+    }
 
-            foreach (var (name, block) in dir.Blocks)
+    private void GenerateBlocks(string collectionName, IDictionary<string, BlockInfoModel> blocks)
+    {
+        foreach (var (name, block) in blocks)
+        {
+            block.Node = (CGameCtnBlockInfo)Gbx.ParseNode(block.GbxFilePath)!;
+
+            var webpData = RawIconToWebpIcon(block.Node);
+
+            var dirPath = string.IsNullOrWhiteSpace(block.Node.PageName)
+                ? Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, "Other", name)
+                : Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, block.Node.PageName, name);
+
+            for (int i = 0; i < block.Node.GroundMobils!.Length; i++)
             {
-                block.Node = (CGameCtnBlockInfo)Gbx.ParseNode(block.GbxFilePath)!;
+                var groundMobilSubVariants = block.Node.GroundMobils![i];
 
-                var webpData = RawIconToWebpIcon(block.Node);
-
-                var dirPath = string.IsNullOrWhiteSpace(block.Node.PageName)
-                    ? Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, "Other", name)
-                    : Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, block.Node.PageName, name);
-
-                for (int i = 0; i < block.Node.GroundMobils!.Length; i++)
+                for (int j = 0; j < groundMobilSubVariants.Length; j++)
                 {
-                    var groundMobilSubVariants = block.Node.GroundMobils![i];
-
-                    for (int j = 0; j < groundMobilSubVariants.Length; j++)
+                    GenerateSubVariant(new()
                     {
-                        GenerateSubVariant(new()
-                        {
-                            Node = groundMobilSubVariants[j],
-                            BlockInfo = block.Node,
-                            CollectionName = collectionName,
-                            DirectoryPath = dirPath,
-                            ModifierType = "Ground",
-                            VariantIndex = i,
-                            SubVariantIndex = j,
-                            WebpData = webpData,
-                            BlockName = name
-                        });
-                    }
+                        Node = groundMobilSubVariants[j],
+                        BlockInfo = block.Node,
+                        CollectionName = collectionName,
+                        DirectoryPath = dirPath,
+                        ModifierType = "Ground",
+                        VariantIndex = i,
+                        SubVariantIndex = j,
+                        WebpData = webpData,
+                        BlockName = name
+                    });
                 }
+            }
 
-                for (int i = 0; i < block.Node.AirMobils!.Length; i++)
+            for (int i = 0; i < block.Node.AirMobils!.Length; i++)
+            {
+                var airMobilSubVariants = block.Node.AirMobils![i];
+
+                for (int j = 0; j < airMobilSubVariants.Length; j++)
                 {
-                    var airMobilSubVariants = block.Node.AirMobils![i];
-
-                    for (int j = 0; j < airMobilSubVariants.Length; j++)
+                    GenerateSubVariant(new()
                     {
-                        GenerateSubVariant(new()
-                        {
-                            Node = airMobilSubVariants[j],
-                            BlockInfo = block.Node,
-                            CollectionName = collectionName,
-                            DirectoryPath = dirPath,
-                            ModifierType = "Air",
-                            VariantIndex = i,
-                            SubVariantIndex = j,
-                            WebpData = webpData,
-                            BlockName = name
-                        });
-                    }
+                        Node = airMobilSubVariants[j],
+                        BlockInfo = block.Node,
+                        CollectionName = collectionName,
+                        DirectoryPath = dirPath,
+                        ModifierType = "Air",
+                        VariantIndex = i,
+                        SubVariantIndex = j,
+                        WebpData = webpData,
+                        BlockName = name
+                    });
                 }
             }
         }

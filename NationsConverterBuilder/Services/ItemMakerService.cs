@@ -144,7 +144,8 @@ internal sealed class ItemMakerService
                 material = matName switch
                 {
                     "SpeedAsphalt" => CreateMaterial("Material\\RoadTech", CPlugSurface.MaterialId.Asphalt),
-                    "SpeedSandBorder" => CreateMaterial("Material_BlockCustom\\CustomSand", CPlugSurface.MaterialId.Sand),
+                    "SpeedSandBorder" => CreateMaterial("Material\\CustomSand", CPlugSurface.MaterialId.Sand),
+                    "AlpineIce" => CreateMaterial("Material_BlockCustom\\CustomIce", CPlugSurface.MaterialId.Ice),
                     _ => CreateMaterial()
                 };
 
