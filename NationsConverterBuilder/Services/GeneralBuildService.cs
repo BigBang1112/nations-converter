@@ -1,14 +1,9 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Plug;
-using GBX.NET.Engines.Scene;
-using GBX.NET.Imaging.SkiaSharp;
 using NationsConverterBuilder.Models;
 using SkiaSharp;
-using System.Collections;
-using System.IO;
 using System.Runtime.InteropServices;
-using System.Xml.Linq;
 
 namespace NationsConverterBuilder.Services;
 
@@ -16,11 +11,14 @@ internal sealed class GeneralBuildService
 {
     private readonly SetupService setupService;
     private readonly ItemMakerService itemMaker;
+    private readonly string dataDirPath;
 
-    public GeneralBuildService(SetupService setupService, ItemMakerService itemMaker)
+    public GeneralBuildService(SetupService setupService, ItemMakerService itemMaker, IWebHostEnvironment hostEnvironment)
     {
         this.setupService = setupService;
         this.itemMaker = itemMaker;
+
+        dataDirPath = Path.Combine(hostEnvironment.WebRootPath, "data");
     }
 
     public async Task BuildAsync(CancellationToken cancellationToken = default)
@@ -29,21 +27,30 @@ internal sealed class GeneralBuildService
         {
             await setupService.SetupCollectionAsync(collection, cancellationToken);
 
-            RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories);
-            GenerateBlocks(collection.DisplayName, collection.RootBlocks);
+            var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
+            map.MapName = collection.DisplayName;
+
+            var index = 0;
+
+            RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories, map, ref index);
+            GenerateBlocks(collection.DisplayName, collection.RootBlocks, map, ref index);
+
+            var mapOutput = Path.Combine("E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT");
+            Directory.CreateDirectory(mapOutput);
+            map.Save(Path.Combine(mapOutput, $"{collection.DisplayName}.Map.Gbx"));
         });
     }
 
-    private void RecurseBlockDirectories(string collectionName, IDictionary<string, BlockDirectoryModel> dirs)
+    private void RecurseBlockDirectories(string collectionName, IDictionary<string, BlockDirectoryModel> dirs, CGameCtnChallenge map, ref int index)
     {
         foreach (var (dirName, dir) in dirs)
         {
-            RecurseBlockDirectories(collectionName, dir.Directories);
-            GenerateBlocks(collectionName, dir.Blocks);
+            RecurseBlockDirectories(collectionName, dir.Directories, map, ref index);
+            GenerateBlocks(collectionName, dir.Blocks, map, ref index);
         }
     }
 
-    private void GenerateBlocks(string collectionName, IDictionary<string, BlockInfoModel> blocks)
+    private void GenerateBlocks(string collectionName, IDictionary<string, BlockInfoModel> blocks, CGameCtnChallenge map, ref int index)
     {
         foreach (var (name, block) in blocks)
         {
@@ -51,9 +58,14 @@ internal sealed class GeneralBuildService
 
             var webpData = RawIconToWebpIcon(block.Node);
 
-            var dirPath = string.IsNullOrWhiteSpace(block.Node.PageName)
-                ? Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, "Other", name)
-                : Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, block.Node.PageName, name);
+            var pageName = string.IsNullOrWhiteSpace(block.Node.PageName) ? "Other" : block.Node.PageName;
+
+            if (pageName[^1] is '/' or '\\')
+            {
+                pageName = pageName[..^1];
+            }
+
+            var dirPath = Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, pageName, name);
 
             for (int i = 0; i < block.Node.GroundMobils!.Length; i++)
             {
@@ -61,6 +73,11 @@ internal sealed class GeneralBuildService
 
                 for (int j = 0; j < groundMobilSubVariants.Length; j++)
                 {
+                    map.PlaceAnchoredObject(
+                        new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Ground_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
+                        (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
+                    index++;
+
                     GenerateSubVariant(new()
                     {
                         Node = groundMobilSubVariants[j],
@@ -82,6 +99,11 @@ internal sealed class GeneralBuildService
 
                 for (int j = 0; j < airMobilSubVariants.Length; j++)
                 {
+                    map.PlaceAnchoredObject(
+                        new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Air_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
+                        (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
+                    index++;
+
                     GenerateSubVariant(new()
                     {
                         Node = airMobilSubVariants[j],
