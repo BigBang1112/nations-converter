@@ -13,6 +13,26 @@ internal sealed class ItemMakerService
         this.logger = logger;
     }
 
+    private static CPlugCrystal.Material CreateMaterial(string materialName, CPlugSurface.MaterialId surfaceId)
+    {
+        var material = new CPlugMaterialUserInst
+        {
+            IsUsingGameMaterial = true,
+            Link = $"Stadium\\Media\\{materialName}",
+            SurfacePhysicId = (byte)surfaceId,
+            TextureSizeInMeters = 1
+        };
+        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD000>().Version = 11;
+        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD001>().Version = 5;
+        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD002>();
+        return new CPlugCrystal.Material() { MaterialUserInst = material, MaterialName = "" };
+    }
+
+    private static CPlugCrystal.Material CreateMaterial()
+    {
+        return CreateMaterial("Material\\PlatformTech", CPlugSurface.MaterialId.Asphalt);
+    }
+
     public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid)
     {
         if (solid.Tree is not CPlugTree tree)
@@ -21,18 +41,8 @@ internal sealed class ItemMakerService
         }
 
         //
-        var material = new CPlugMaterialUserInst
-        {
-            IsUsingGameMaterial = true,
-            Link = "Stadium\\Media\\Material\\PlatformTech",
-            SurfacePhysicId = 16,
-            TextureSizeInMeters = 1
-        };
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD000>().Version = 11;
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD001>().Version = 5;
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD002>();
-        var crystalMaterial = new CPlugCrystal.Material() { MaterialUserInst = material, MaterialName = "" };
-
+        
+        
         /*var groupTest = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
 
         var crystalTest = new CPlugCrystal.Crystal
@@ -103,6 +113,7 @@ internal sealed class ItemMakerService
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
         var faces = new List<CPlugCrystal.Face>();
+        var materials = new Dictionary<string, CPlugCrystal.Material>();
 
         var indicesOffset = 0;
 
@@ -118,6 +129,26 @@ internal sealed class ItemMakerService
             {
                 logger.LogWarning("Visual has no index buffer");
                 continue;
+            }
+
+            var matName = t.ShaderFile is null ? null : GbxPath.GetFileNameWithoutExtension(t.ShaderFile.FilePath);
+
+            CPlugCrystal.Material material;
+
+            if (materials.TryGetValue(matName ?? "", out var mat))
+            {
+                material = mat;
+            }
+            else
+            {
+                material = matName switch
+                {
+                    "SpeedAsphalt" => CreateMaterial("Material\\RoadTech", CPlugSurface.MaterialId.Asphalt),
+                    "SpeedSandBorder" => CreateMaterial("Material_BlockCustom\\CustomSand", CPlugSurface.MaterialId.Sand),
+                    _ => CreateMaterial()
+                };
+
+                materials.Add(matName ?? "", material);
             }
 
             var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
@@ -137,7 +168,7 @@ internal sealed class ItemMakerService
                 faces.Add(new CPlugCrystal.Face(
                     verts,
                     group,
-                    crystalMaterial,
+                    material,
                     null
                 ));
             }
@@ -163,7 +194,7 @@ internal sealed class ItemMakerService
 
         var plugCrystal = new CPlugCrystal
         {
-            Materials = [crystalMaterial],
+            Materials = materials.Values.ToArray(),
             Layers =
             [
                 new CPlugCrystal.GeometryLayer
@@ -184,6 +215,8 @@ internal sealed class ItemMakerService
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
 
+        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = faces.SelectMany(x => x.Vertices).Select(x => x.TexCoord).ToArray();
+
         // lightmap data, matches *faced* indices count
         /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 
         [
@@ -198,7 +231,7 @@ internal sealed class ItemMakerService
         return plugCrystal;
     }
 
-    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData)
+    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize)
     {
         var entityModelEdition = new CGameCommonItemEntityModelEdition
         {
@@ -215,11 +248,11 @@ internal sealed class ItemMakerService
         var placementParams = new CGameItemPlacementParam
         {
             Flags = 1,
-            FlyVStep = 8,
-            GridSnapHOffset = 16,
-            GridSnapHStep = 32,
-            GridSnapVStep = 8,
-            PivotPositions = [(16, 0, 16)],
+            FlyVStep = blockSize.Y,
+            GridSnapHOffset = blockSize.X / 2,
+            GridSnapHStep = blockSize.X,
+            GridSnapVStep = blockSize.Y,
+            PivotPositions = [(blockSize.X / 2, 0, blockSize.X / 2)],
             PivotSnapDistance = -1,
             PlacementClass = new()
             {

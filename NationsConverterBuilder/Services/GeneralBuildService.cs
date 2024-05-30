@@ -134,7 +134,7 @@ internal sealed class GeneralBuildService
         Directory.CreateDirectory(subVariant.DirectoryPath);
 
         var crystal = itemMaker.CreateCrystalFromSolid(solid);
-        var finalItem = itemMaker.Build(crystal, subVariant.WebpData);
+        var finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
 
         finalItem.Save(Path.Combine(subVariant.DirectoryPath, $"{subVariant.BlockName}_{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx"));
     }
