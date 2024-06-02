@@ -4,7 +4,7 @@ using GBX.NET.Engines.Scene;
 
 namespace NationsConverterBuilder.Models;
 
-public sealed class SubVariantModel
+internal sealed class SubVariantModel
 {
     public required External<CSceneMobil> Node { get; init; }
     public required string CollectionName { get; init; }

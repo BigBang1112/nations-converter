@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Engines.GameData;
 using GBX.NET.Engines.Plug;
 using NationsConverterBuilder.Models;
 using SkiaSharp;
@@ -67,18 +68,18 @@ internal sealed class GeneralBuildService
 
             var dirPath = Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, pageName, name);
 
-            for (int i = 0; i < block.Node.GroundMobils!.Length; i++)
+            for (byte i = 0; i < block.Node.GroundMobils!.Length; i++)
             {
                 var groundMobilSubVariants = block.Node.GroundMobils![i];
 
-                for (int j = 0; j < groundMobilSubVariants.Length; j++)
+                for (byte j = 0; j < groundMobilSubVariants.Length; j++)
                 {
                     map.PlaceAnchoredObject(
                         new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Ground_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
                         (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
                     index++;
 
-                    GenerateSubVariant(new()
+                    var item = GenerateSubVariant(new()
                     {
                         Node = groundMobilSubVariants[j],
                         BlockInfo = block.Node,
@@ -90,21 +91,26 @@ internal sealed class GeneralBuildService
                         WebpData = webpData,
                         BlockName = name
                     });
+
+                    if (item is not null)
+                    {
+                        block.Items[("Ground", i, j)] = item;
+                    }
                 }
             }
 
-            for (int i = 0; i < block.Node.AirMobils!.Length; i++)
+            for (byte i = 0; i < block.Node.AirMobils!.Length; i++)
             {
                 var airMobilSubVariants = block.Node.AirMobils![i];
 
-                for (int j = 0; j < airMobilSubVariants.Length; j++)
+                for (byte j = 0; j < airMobilSubVariants.Length; j++)
                 {
                     map.PlaceAnchoredObject(
                         new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Air_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
                         (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
                     index++;
 
-                    GenerateSubVariant(new()
+                    var item = GenerateSubVariant(new()
                     {
                         Node = airMobilSubVariants[j],
                         BlockInfo = block.Node,
@@ -116,6 +122,11 @@ internal sealed class GeneralBuildService
                         WebpData = webpData,
                         BlockName = name
                     });
+
+                    if (item is not null)
+                    {
+                        block.Items[("Air", i, j)] = item;
+                    }
                 }
             }
         }
@@ -151,11 +162,11 @@ internal sealed class GeneralBuildService
         return iconStream.ToArray();
     }
 
-    private void GenerateSubVariant(SubVariantModel subVariant)
+    private CGameItemModel? GenerateSubVariant(SubVariantModel subVariant)
     {
         if (subVariant.Node.Node?.Item?.Solid?.Tree is not CPlugSolid solid)
         {
-            return;
+            return null;
         }
 
         Directory.CreateDirectory(subVariant.DirectoryPath);
@@ -164,5 +175,7 @@ internal sealed class GeneralBuildService
         var finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
 
         finalItem.Save(Path.Combine(subVariant.DirectoryPath, $"{subVariant.BlockName}_{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx"));
+
+        return finalItem;
     }
 }

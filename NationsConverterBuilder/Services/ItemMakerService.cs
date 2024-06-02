@@ -1,26 +1,44 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.GameData;
 using GBX.NET.Engines.Plug;
+using Microsoft.Extensions.Options;
+using NationsConverterBuilder.Models;
 
 namespace NationsConverterBuilder.Services;
 
 internal sealed class ItemMakerService
 {
+    private readonly UvModifierService uvModifierService;
+    private readonly IOptions<InitOptions> initOptions;
     private readonly ILogger<ItemMakerService> logger;
 
-    public ItemMakerService(ILogger<ItemMakerService> logger)
+    public ItemMakerService(UvModifierService uvModifierService, IOptions<InitOptions> initOptions, ILogger<ItemMakerService> logger)
     {
+        this.uvModifierService = uvModifierService;
+        this.initOptions = initOptions;
         this.logger = logger;
     }
 
-    private static CPlugCrystal.Material CreateMaterial(string materialName, CPlugSurface.MaterialId surfaceId)
+    private static CPlugCrystal.Material CreateMaterial(MaterialModel materialModel)
     {
+        var csts = materialModel.Color is null ? null : new CPlugMaterialUserInst.Cst[]
+        {
+            new()
+            {
+                U01 = "TargetColor",
+                U02 = "Real",
+                U03 = 3,
+            }
+        };
+
         var material = new CPlugMaterialUserInst
         {
             IsUsingGameMaterial = true,
-            Link = $"Stadium\\Media\\{materialName}",
-            SurfacePhysicId = (byte)surfaceId,
-            TextureSizeInMeters = 1
+            Link = $"Stadium\\Media\\{materialModel.Link}",
+            SurfacePhysicId = (byte)(materialModel.Surface ?? CPlugSurface.MaterialId.Asphalt),
+            TextureSizeInMeters = 1,
+            Csts = csts,
+            Color = materialModel.Color
         };
         material.CreateChunk<CPlugMaterialUserInst.Chunk090FD000>().Version = 11;
         material.CreateChunk<CPlugMaterialUserInst.Chunk090FD001>().Version = 5;
@@ -30,7 +48,11 @@ internal sealed class ItemMakerService
 
     private static CPlugCrystal.Material CreateMaterial()
     {
-        return CreateMaterial("Material\\PlatformTech", CPlugSurface.MaterialId.Asphalt);
+        return CreateMaterial(new()
+        {
+            Link = "Material\\PlatformTech",
+            Surface = CPlugSurface.MaterialId.Asphalt
+        });
     }
 
     public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid)
@@ -133,6 +155,7 @@ internal sealed class ItemMakerService
 
             var matName = t.ShaderFile is null ? null : GbxPath.GetFileNameWithoutExtension(t.ShaderFile.FilePath);
 
+            var decal = default(CPlugCrystal.Material);
             CPlugCrystal.Material material;
 
             if (materials.TryGetValue(matName ?? "", out var mat))
@@ -141,40 +164,83 @@ internal sealed class ItemMakerService
             }
             else
             {
-                material = matName switch
+                if (matName is not null && initOptions.Value.Materials.TryGetValue(matName, out var matModel))
                 {
-                    "SpeedAsphalt" => CreateMaterial("Material\\RoadTech", CPlugSurface.MaterialId.Asphalt),
-                    "SpeedSandBorder" => CreateMaterial("Material\\CustomSand", CPlugSurface.MaterialId.Sand),
-                    "AlpineIce" => CreateMaterial("Material_BlockCustom\\CustomIce", CPlugSurface.MaterialId.Ice),
-                    _ => CreateMaterial()
-                };
+                    if (matModel.Remove)
+                    {
+                        continue;
+                    }
+
+                    if (matModel.UvModifiers is not null)
+                    {
+                        uvModifierService.ApplyUvModifiers(visual, matModel.UvModifiers);
+                    }
+
+                    if (matModel.Decal is not null)
+                    {
+                        decal = CreateMaterial(new() { Link = matModel.Decal, Surface = CPlugSurface.MaterialId.NotCollidable });
+                        materials.Add(Guid.NewGuid().ToString(), decal);
+                    }
+
+                    material = matModel.Link is null
+                        ? CreateMaterial()
+                        : CreateMaterial(matModel);
+                }
+                else
+                {
+                    material = CreateMaterial();
+                }
 
                 materials.Add(matName ?? "", material);
             }
 
-            var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
-            groups.Add(group);
+            var decalMode = false;
 
-            positions.AddRange(visual.Vertices.Select(x => x.Position));
-
-            foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
+            do
             {
-                var verts = new CPlugCrystal.Vertex[indices.Length];
-                for (int i = 0; i < indices.Length; i++)
+                var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
+                groups.Add(group);
+
+                if (decalMode)
                 {
-                    var uv = visual.TexCoords.FirstOrDefault()?.TexCoords[indices[i]].UV ?? (0, 0);
-                    verts[i] = new CPlugCrystal.Vertex(indices[i] + indicesOffset, uv);
+                    var offset = decalMode ? 0.01f : 0;
+                    positions.AddRange(visual.Vertices.Select(x => x.Position + (0, offset, 0)));
+                }
+                else
+                {
+                    positions.AddRange(visual.Vertices.Select(x => x.Position));
                 }
 
-                faces.Add(new CPlugCrystal.Face(
-                    verts,
-                    group,
-                    material,
-                    null
-                ));
-            }
+                foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
+                {
+                    var verts = new CPlugCrystal.Vertex[indices.Length];
+                    for (int i = 0; i < indices.Length; i++)
+                    {
+                        var uv = visual.TexCoords.FirstOrDefault()?.TexCoords[indices[i]].UV ?? (0, 0);
+                        verts[i] = new CPlugCrystal.Vertex(indices[i] + indicesOffset, uv);
+                    }
 
-            indicesOffset += visual.Vertices.Length;
+                    faces.Add(new CPlugCrystal.Face(
+                        verts,
+                        group,
+                        decalMode ? decal : material,
+                        null
+                    ));
+                }
+
+                indicesOffset += visual.Vertices.Length;
+
+                if (decal is not null)
+                {
+                    if (decalMode)
+                    {
+                        break;
+                    }
+
+                    decalMode = true;
+                }
+            }
+            while (decalMode);
         }
 
         var crystal = new CPlugCrystal.Crystal
@@ -301,7 +367,7 @@ internal sealed class ItemMakerService
         item.CreateChunk<CGameCtnCollector.Chunk2E001011>().Version = 1;
         item.CreateChunk<CGameCtnCollector.Chunk2E001012>().U02 = 1;
         item.CreateChunk<CGameItemModel.Chunk2E002008>();
-        item.CreateChunk<CGameItemModel.Chunk2E002009>().Version = 10; // will change
+        item.CreateChunk<CGameItemModel.Chunk2E002009>();
         item.CreateChunk<CGameItemModel.Chunk2E00200C>();
         item.CreateChunk<CGameItemModel.Chunk2E002012>();
         item.CreateChunk<CGameItemModel.Chunk2E002015>();
