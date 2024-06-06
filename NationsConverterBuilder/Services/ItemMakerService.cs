@@ -62,85 +62,60 @@ internal sealed class ItemMakerService
             throw new ArgumentException("Solid must have a tree");
         }
 
-        //
-        
-        
-        /*var groupTest = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
-
-        var crystalTest = new CPlugCrystal.Crystal
-        {
-            Version = 37,
-            VisualLevels =
-            [
-                new CPlugCrystal.VisualLevel { U01 = 4, U02 = 64 },
-                new CPlugCrystal.VisualLevel { U01 = 2, U02 = 128 },
-                new CPlugCrystal.VisualLevel { U01 = 1, U02 = 192 },
-            ],
-            IsEmbeddedCrystal = true,
-            U01 = 4,
-            Groups = [groupTest],
-            Positions =
-            [
-                (-2, 0, -2),
-                (-2, 0, 2),
-                (2, 0, 2),
-                (2, 0, -2),
-                (-2, 4, -2),
-                (-2, 4, 2),
-                (2, 4, 2),
-                (2, 4, -2)
-            ],
-            Faces =
-            [
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(0, (4, 4)),
-                    new CPlugCrystal.Vertex(3, (0, 4)),
-                    new CPlugCrystal.Vertex(2, (0, 0)),
-                    new CPlugCrystal.Vertex(1, (4, 0))
-                ], groupTest, crystalMaterial, null),
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(5, (4, 4)),
-                    new CPlugCrystal.Vertex(6, (0, 4)),
-                    new CPlugCrystal.Vertex(7, (0, 0)),
-                    new CPlugCrystal.Vertex(4, (4, 0))
-                ], groupTest, crystalMaterial, null),
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(4, (4, 4)),
-                    new CPlugCrystal.Vertex(7, (0, 4)),
-                    new CPlugCrystal.Vertex(3, (0, 0)),
-                    new CPlugCrystal.Vertex(0, (4, 0))
-                ], groupTest, crystalMaterial, null),
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(5, (4, 4)),
-                    new CPlugCrystal.Vertex(4, (0, 4)),
-                    new CPlugCrystal.Vertex(0, (0, 0)),
-                    new CPlugCrystal.Vertex(1, (4, 0))
-                ], groupTest, crystalMaterial, null),
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(6, (4, 4)),
-                    new CPlugCrystal.Vertex(5, (0, 4)),
-                    new CPlugCrystal.Vertex(1, (0, 0)),
-                    new CPlugCrystal.Vertex(2, (4, 0))
-                ], groupTest, crystalMaterial, null),
-                new CPlugCrystal.Face([
-                    new CPlugCrystal.Vertex(7, (4, 4)),
-                    new CPlugCrystal.Vertex(6, (0, 4)),
-                    new CPlugCrystal.Vertex(2, (0, 0)),
-                    new CPlugCrystal.Vertex(3, (4, 0))
-                ], groupTest, crystalMaterial, null),
-            ]
-        };*/
-        //
-
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
         var faces = new List<CPlugCrystal.Face>();
         var materials = new Dictionary<string, CPlugCrystal.Material>();
+        var layers = new List<CPlugCrystal.Layer>();
+
+        var collisionMat = CreateMaterial(new()
+        {
+            Link = "Editors\\MeshEditorMedia\\Materials\\Asphalt",
+            Surface = CPlugSurface.MaterialId.Asphalt
+        });
+        var collisionIndicesOffset = 0;
+        var collisionGroups = new List<CPlugCrystal.Part>();
+        var collisionPositions = new List<Vec3>();
+        var collisionFaces = new List<CPlugCrystal.Face>();
 
         var indicesOffset = 0;
 
-        foreach (var t in GetAllChildren(tree).Where(x => x.Visual is not null))
+        foreach (var t in GetAllChildren(tree))
         {
+            if (t.Surface is CPlugSurface surface)
+            {
+                materials.TryAdd("_Collision", collisionMat);
+
+                if (surface.Geom?.Surf is CPlugSurface.Mesh collisionMesh)
+                {
+                    var collisionGroup = new CPlugCrystal.Part() { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
+                    collisionGroups.Add(collisionGroup);
+
+                    collisionPositions.AddRange(collisionMesh.Vertices);
+                    collisionFaces.AddRange(collisionMesh.CookedTriangles?
+                        .Select(tri => new CPlugCrystal.Face([
+                            new CPlugCrystal.Vertex(tri.U02.X + collisionIndicesOffset, default),
+                            new CPlugCrystal.Vertex(tri.U02.Y + collisionIndicesOffset, default),
+                            new CPlugCrystal.Vertex(tri.U02.Z + collisionIndicesOffset, default)
+                        ],
+                        collisionGroup,
+                        collisionMat, // this material should be related to each surface material instead
+                        null
+                        )) ?? []);
+
+                    collisionIndicesOffset += collisionMesh.Vertices.Length;
+                }
+                else
+                {
+                    logger.LogWarning("Unsupported collision surface type: {Type}", surface.Geom?.Surf?.GetType().Name);
+                }
+            }
+
+            if (t.Visual is null)
+            {
+                continue;
+            }
+
             if (t.Visual is not CPlugVisualIndexedTriangles visual)
             {
                 logger.LogWarning("Unsupported visual type: {Type}", t.Visual?.GetType().Name);
@@ -243,6 +218,38 @@ internal sealed class ItemMakerService
             while (decalMode);
         }
 
+        if (collisionFaces.Count > 0)
+        {
+            var collisionCrystal = new CPlugCrystal.Crystal
+            {
+                Version = 37,
+                VisualLevels =
+                [
+                    new CPlugCrystal.VisualLevel { U01 = 4, U02 = 64 },
+                    new CPlugCrystal.VisualLevel { U01 = 2, U02 = 128 },
+                    new CPlugCrystal.VisualLevel { U01 = 1, U02 = 192 },
+                ],
+                IsEmbeddedCrystal = true,
+                U01 = 4,
+                Groups = collisionGroups.ToArray(),
+                Positions = collisionPositions.ToArray(),
+                Faces = collisionFaces.ToArray()
+            };
+
+            layers.Add(new CPlugCrystal.GeometryLayer
+            {
+                Ver = 2,
+                GeometryVersion = 1,
+                Crystal = collisionCrystal,
+                LayerId = "Layer0",
+                LayerName = "Collisions",
+                Collidable = true,
+                IsEnabled = true,
+                IsVisible = false,
+                U02 = [0]
+            });
+        }
+
         var crystal = new CPlugCrystal.Crystal
         {
             Version = 37,
@@ -259,24 +266,23 @@ internal sealed class ItemMakerService
             Faces = faces.ToArray()
         };
 
+        layers.Add(new CPlugCrystal.GeometryLayer
+        {
+            Ver = 2,
+            GeometryVersion = 1,
+            Crystal = crystal,
+            LayerId = "Layer1",
+            LayerName = "Geometry",
+            Collidable = collisionFaces.Count == 0,
+            IsEnabled = true,
+            IsVisible = true,
+            U02 = [0]
+        });
+
         var plugCrystal = new CPlugCrystal
         {
             Materials = materials.Values.ToArray(),
-            Layers =
-            [
-                new CPlugCrystal.GeometryLayer
-                {
-                    Ver = 2,
-                    GeometryVersion = 1,
-                    Crystal = crystal,
-                    LayerId = "Layer0",
-                    LayerName = "Geometry",
-                    Collidable = true,
-                    IsEnabled = true,
-                    IsVisible = true,
-                    U02 = [0]
-                }
-            ]
+            Layers = layers
         };
 
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
@@ -403,7 +409,7 @@ internal sealed class ItemMakerService
         {
             if (child is CPlugTreeVisualMip mip)
             {
-                foreach (var descendant in GetAllChildren(mip.Levels.First().Value))
+                foreach (var descendant in GetAllChildren(mip.Levels.OrderBy(x => x.Key).First().Value))
                 {
                     yield return descendant;
                 }
