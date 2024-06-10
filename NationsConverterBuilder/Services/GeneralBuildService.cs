@@ -24,9 +24,9 @@ internal sealed class GeneralBuildService
 
     public async Task BuildAsync(CancellationToken cancellationToken = default)
     {
-        await Parallel.ForEachAsync(setupService.Collections.Values, cancellationToken, async (collection, cancellationToken) =>
+        await Parallel.ForEachAsync(setupService.Collections.Values, cancellationToken, (collection, cancellationToken) =>
         {
-            await setupService.SetupCollectionAsync(collection, cancellationToken);
+            setupService.SetupCollection(collection);
 
             var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
             map.MapName = collection.DisplayName;
@@ -39,6 +39,8 @@ internal sealed class GeneralBuildService
             var mapOutput = Path.Combine("E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT");
             Directory.CreateDirectory(mapOutput);
             map.Save(Path.Combine(mapOutput, $"{collection.DisplayName}.Map.Gbx"));
+
+            return ValueTask.CompletedTask;
         });
     }
 
@@ -55,11 +57,11 @@ internal sealed class GeneralBuildService
     {
         foreach (var (name, block) in blocks)
         {
-            block.Node = (CGameCtnBlockInfo)Gbx.ParseNode(block.GbxFilePath)!;
+            var node = (CGameCtnBlockInfo)Gbx.ParseNode(block.GbxFilePath)!;
 
-            var webpData = RawIconToWebpIcon(block.Node);
+            var webpData = RawIconToWebpIcon(node);
 
-            var pageName = string.IsNullOrWhiteSpace(block.Node.PageName) ? "Other" : block.Node.PageName;
+            var pageName = string.IsNullOrWhiteSpace(node.PageName) ? "Other" : node.PageName;
 
             if (pageName[^1] is '/' or '\\')
             {
@@ -68,21 +70,21 @@ internal sealed class GeneralBuildService
 
             var dirPath = Path.Combine("E:\\TrackmaniaUserData\\Items\\NC2OUTPUT", collectionName, pageName, name);
 
-            for (byte i = 0; i < block.Node.GroundMobils!.Length; i++)
+            for (byte i = 0; i < node.GroundMobils!.Length; i++)
             {
-                var groundMobilSubVariants = block.Node.GroundMobils![i];
+                var groundMobilSubVariants = node.GroundMobils![i];
 
                 for (byte j = 0; j < groundMobilSubVariants.Length; j++)
                 {
                     map.PlaceAnchoredObject(
                         new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Ground_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                        (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
+                        (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
                     index++;
 
                     var item = GenerateSubVariant(new()
                     {
                         Node = groundMobilSubVariants[j],
-                        BlockInfo = block.Node,
+                        BlockInfo = node,
                         CollectionName = collectionName,
                         DirectoryPath = dirPath,
                         ModifierType = "Ground",
@@ -94,26 +96,26 @@ internal sealed class GeneralBuildService
 
                     if (item is not null)
                     {
-                        block.Items[("Ground", i, j)] = item;
+                        //block.Items[("Ground", i, j)] = item;
                     }
                 }
             }
 
-            for (byte i = 0; i < block.Node.AirMobils!.Length; i++)
+            for (byte i = 0; i < node.AirMobils!.Length; i++)
             {
-                var airMobilSubVariants = block.Node.AirMobils![i];
+                var airMobilSubVariants = node.AirMobils![i];
 
                 for (byte j = 0; j < airMobilSubVariants.Length; j++)
                 {
                     map.PlaceAnchoredObject(
                         new($"NC2OUTPUT\\{collectionName}\\{pageName.Replace('/', '\\')}\\{name}\\{name}_Air_{i}_{j}.Item.Gbx", 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                        (index / 64 * 128, 64, index % 64 * 128), (0, 0, 0));
+                        (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
                     index++;
 
                     var item = GenerateSubVariant(new()
                     {
                         Node = airMobilSubVariants[j],
-                        BlockInfo = block.Node,
+                        BlockInfo = node,
                         CollectionName = collectionName,
                         DirectoryPath = dirPath,
                         ModifierType = "Air",
@@ -125,7 +127,7 @@ internal sealed class GeneralBuildService
 
                     if (item is not null)
                     {
-                        block.Items[("Air", i, j)] = item;
+                        //block.Items[("Air", i, j)] = item;
                     }
                 }
             }

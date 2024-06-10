@@ -101,7 +101,7 @@
         StateHasChanged();
         await Task.Delay(20);
 
-        await SetupService.SetupCollectionAsync(collection);
+        SetupService.SetupCollection(collection);
 
         IsLoading = false;
 

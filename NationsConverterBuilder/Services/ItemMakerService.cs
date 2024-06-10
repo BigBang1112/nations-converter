@@ -94,9 +94,9 @@ internal sealed class ItemMakerService
                     collisionPositions.AddRange(collisionMesh.Vertices);
                     collisionFaces.AddRange(collisionMesh.CookedTriangles?
                         .Select(tri => new CPlugCrystal.Face([
-                            new CPlugCrystal.Vertex(tri.U02.X + collisionIndicesOffset, default),
-                            new CPlugCrystal.Vertex(tri.U02.Y + collisionIndicesOffset, default),
-                            new CPlugCrystal.Vertex(tri.U02.Z + collisionIndicesOffset, default)
+                            new(tri.U02.X + collisionIndicesOffset, default),
+                            new(tri.U02.Y + collisionIndicesOffset, default),
+                            new(tri.U02.Z + collisionIndicesOffset, default)
                         ],
                         collisionGroup,
                         collisionMat, // this material should be related to each surface material instead
@@ -288,7 +288,9 @@ internal sealed class ItemMakerService
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
 
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = faces.SelectMany(x => x.Vertices).Select(x => x.TexCoord).ToArray();
+        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = faces.SelectMany(x => x.Vertices)
+            .Select(x => x.TexCoord)
+            .ToArray();
 
         // lightmap data, matches *faced* indices count
         /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 

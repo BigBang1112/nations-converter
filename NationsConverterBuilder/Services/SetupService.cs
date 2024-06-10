@@ -38,18 +38,18 @@ internal sealed class SetupService
         }
     }
 
-    public async Task SetupCollectionAsync(CollectionModel collection, CancellationToken cancellationToken = default)
+    public void SetupCollection(CollectionModel collection)
     {
         if (collection.IsLoaded || collection.Node.FolderBlockInfo is null)
         {
             return;
         }
-        
-        foreach (var blockInfoFilePath in Directory.EnumerateFiles(Path.Combine(dataDirPath, collection.Node.FolderBlockInfo), "*.Gbx", SearchOption.AllDirectories))
-        {
-            var blockInfoNode = (CGameCtnBlockInfo?)Gbx.ParseHeaderNode(blockInfoFilePath);
 
-            if (blockInfoNode is null)
+        var folderBlockInfoPath = Path.Combine(dataDirPath, collection.Node.FolderBlockInfo);
+
+        foreach (var blockInfoFilePath in Directory.EnumerateFiles(folderBlockInfoPath, "*.Gbx", SearchOption.AllDirectories).AsParallel())
+        {
+            if (Gbx.ParseHeaderNode(blockInfoFilePath) is not CGameCtnBlockInfo blockInfoNode)
             {
                 continue;
             }
@@ -71,7 +71,7 @@ internal sealed class SetupService
                 collection.RootBlocks.TryAdd(blockInfoNode.Ident.Id, new BlockInfoModel
                 {
                     Name = blockInfoNode.Ident.Id,
-                    Node = blockInfoNode,
+                    NodeHeader = blockInfoNode,
                     GbxFilePath = blockInfoFilePath,
                     WebpIcon = webpData
                 });
@@ -92,7 +92,7 @@ internal sealed class SetupService
                     directory.Blocks.TryAdd(blockInfoNode.Ident.Id, new BlockInfoModel
                     {
                         Name = blockInfoNode.Ident.Id,
-                        Node = blockInfoNode,
+                        NodeHeader = blockInfoNode,
                         GbxFilePath = blockInfoFilePath,
                         WebpIcon = webpData
                     });
