@@ -14,7 +14,7 @@ builder.Services.AddServerSideBlazor().AddHubOptions(o =>
 builder.Services.AddDirectoryBrowser();
 
 builder.Services.AddScoped<SetupService>();
-builder.Services.AddScoped<GeneralBuildService>();
+builder.Services.AddScoped<InitStageService>();
 builder.Services.AddScoped<ItemMakerService>();
 builder.Services.AddScoped<UvModifierService>();
 

@@ -2,7 +2,7 @@
 using GBX.NET.Engines.GameData;
 using GBX.NET.Engines.Plug;
 using Microsoft.Extensions.Options;
-using NationsConverterBuilder.Models;
+using NationsConverterBuilder.Extensions;
 
 namespace NationsConverterBuilder.Services;
 
@@ -19,291 +19,73 @@ internal sealed class ItemMakerService
         this.logger = logger;
     }
 
-    private static CPlugCrystal.Material CreateMaterial(MaterialModel materialModel)
-    {
-        var csts = materialModel.Color is null ? null : new CPlugMaterialUserInst.Cst[]
-        {
-            new()
-            {
-                U01 = "TargetColor",
-                U02 = "Real",
-                U03 = 3,
-            }
-        };
-
-        var material = new CPlugMaterialUserInst
-        {
-            IsUsingGameMaterial = true,
-            Link = $"Stadium\\Media\\{materialModel.Link}",
-            SurfacePhysicId = (byte)(materialModel.Surface ?? CPlugSurface.MaterialId.Asphalt),
-            TextureSizeInMeters = 1,
-            Csts = csts,
-            Color = materialModel.Color
-        };
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD000>().Version = 11;
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD001>().Version = 5;
-        material.CreateChunk<CPlugMaterialUserInst.Chunk090FD002>();
-        return new CPlugCrystal.Material() { MaterialUserInst = material, MaterialName = "" };
-    }
-
-    private static CPlugCrystal.Material CreateMaterial()
-    {
-        return CreateMaterial(new()
-        {
-            Link = "Material\\PlatformTech",
-            Surface = CPlugSurface.MaterialId.Asphalt
-        });
-    }
-
-    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid)
+    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid, string subCategory)
     {
         if (solid.Tree is not CPlugTree tree)
         {
             throw new ArgumentException("Solid must have a tree");
         }
 
-        var groups = new List<CPlugCrystal.Part>();
-        var positions = new List<Vec3>();
-        var faces = new List<CPlugCrystal.Face>();
-        var materials = new Dictionary<string, CPlugCrystal.Material>();
-        var layers = new List<CPlugCrystal.Layer>();
+        var matDict = new Dictionary<string, CPlugMaterialUserInst>();
 
-        var collisionMat = CreateMaterial(new()
+        return tree.ToCrystal(matFile =>
         {
-            Link = "Editors\\MeshEditorMedia\\Materials\\Asphalt",
-            Surface = CPlugSurface.MaterialId.Asphalt
-        });
-        var collisionIndicesOffset = 0;
-        var collisionGroups = new List<CPlugCrystal.Part>();
-        var collisionPositions = new List<Vec3>();
-        var collisionFaces = new List<CPlugCrystal.Face>();
+            var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
 
-        var indicesOffset = 0;
+            if (matDict.TryGetValue(matName, out var mat))
+            {
+                return mat;
+            }
 
-        foreach (var t in GetAllChildren(tree))
+            if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
+            {
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
+            }
+
+            if (material.Remove)
+            {
+                return null;
+            }
+
+            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
+            {
+                if (subCategoryMaterial.Remove)
+                {
+                    return null;
+                }
+
+                if (!string.IsNullOrEmpty(subCategoryMaterial.Link))
+                {
+                    return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, subCategoryMaterial.Color);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(material.Link))
+            {
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, material.Color);
+            }
+
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
+        },
+        (matFile, uvSetIndex, uvs) =>
         {
-            if (t.Surface is CPlugSurface surface)
+            var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+
+            if (!initOptions.Value.Materials.TryGetValue(matName, out var material) || material.UvModifiers is null)
             {
-                materials.TryAdd("_Collision", collisionMat);
-
-                if (surface.Geom?.Surf is CPlugSurface.Mesh collisionMesh)
-                {
-                    var collisionGroup = new CPlugCrystal.Part() { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
-                    collisionGroups.Add(collisionGroup);
-
-                    collisionPositions.AddRange(collisionMesh.Vertices);
-                    collisionFaces.AddRange(collisionMesh.CookedTriangles?
-                        .Select(tri => new CPlugCrystal.Face([
-                            new(tri.U02.X + collisionIndicesOffset, default),
-                            new(tri.U02.Y + collisionIndicesOffset, default),
-                            new(tri.U02.Z + collisionIndicesOffset, default)
-                        ],
-                        collisionGroup,
-                        collisionMat, // this material should be related to each surface material instead
-                        null
-                        )) ?? []);
-
-                    collisionIndicesOffset += collisionMesh.Vertices.Length;
-                }
-                else
-                {
-                    logger.LogWarning("Unsupported collision surface type: {Type}", surface.Geom?.Surf?.GetType().Name);
-                }
+                return;
             }
 
-            if (t.Visual is null)
+            uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
+
+            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
             {
-                continue;
-            }
-
-            if (t.Visual is not CPlugVisualIndexedTriangles visual)
-            {
-                logger.LogWarning("Unsupported visual type: {Type}", t.Visual?.GetType().Name);
-                continue;
-            }
-
-            if (visual.IndexBuffer is null)
-            {
-                logger.LogWarning("Visual has no index buffer");
-                continue;
-            }
-
-            var matName = t.ShaderFile is null ? null : GbxPath.GetFileNameWithoutExtension(t.ShaderFile.FilePath);
-
-            var decal = default(CPlugCrystal.Material);
-            CPlugCrystal.Material material;
-
-            if (materials.TryGetValue(matName ?? "", out var mat))
-            {
-                material = mat;
-            }
-            else
-            {
-                if (matName is not null && initOptions.Value.Materials.TryGetValue(matName, out var matModel))
+                if (subCategoryMaterial.UvModifiers is not null)
                 {
-                    if (matModel.Remove)
-                    {
-                        continue;
-                    }
-
-                    if (matModel.UvModifiers is not null)
-                    {
-                        uvModifierService.ApplyUvModifiers(visual, matModel.UvModifiers);
-                    }
-
-                    if (matModel.Decal is not null)
-                    {
-                        decal = CreateMaterial(new() { Link = matModel.Decal, Surface = CPlugSurface.MaterialId.NotCollidable });
-                        materials.Add(Guid.NewGuid().ToString(), decal);
-                    }
-
-                    material = matModel.Link is null
-                        ? CreateMaterial()
-                        : CreateMaterial(matModel);
-                }
-                else
-                {
-                    material = CreateMaterial();
-                }
-
-                materials.Add(matName ?? "", material);
-            }
-
-            var decalMode = false;
-
-            do
-            {
-                var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
-                groups.Add(group);
-
-                if (decalMode)
-                {
-                    var offset = decalMode ? 0.01f : 0;
-                    positions.AddRange(visual.Vertices.Select(x => x.Position + (0, offset, 0)));
-                }
-                else
-                {
-                    positions.AddRange(visual.Vertices.Select(x => x.Position));
-                }
-
-                foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
-                {
-                    var verts = new CPlugCrystal.Vertex[indices.Length];
-                    for (int i = 0; i < indices.Length; i++)
-                    {
-                        var uv = visual.TexCoords.FirstOrDefault()?.TexCoords[indices[i]].UV ?? (0, 0);
-                        verts[i] = new CPlugCrystal.Vertex(indices[i] + indicesOffset, uv);
-                    }
-
-                    faces.Add(new CPlugCrystal.Face(
-                        verts,
-                        group,
-                        decalMode ? decal : material,
-                        null
-                    ));
-                }
-
-                indicesOffset += visual.Vertices.Length;
-
-                if (decal is not null)
-                {
-                    if (decalMode)
-                    {
-                        break;
-                    }
-
-                    decalMode = true;
+                    uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
                 }
             }
-            while (decalMode);
-        }
-
-        if (collisionFaces.Count > 0)
-        {
-            var collisionCrystal = new CPlugCrystal.Crystal
-            {
-                Version = 37,
-                VisualLevels =
-                [
-                    new CPlugCrystal.VisualLevel { U01 = 4, U02 = 64 },
-                    new CPlugCrystal.VisualLevel { U01 = 2, U02 = 128 },
-                    new CPlugCrystal.VisualLevel { U01 = 1, U02 = 192 },
-                ],
-                IsEmbeddedCrystal = true,
-                U01 = 4,
-                Groups = collisionGroups.ToArray(),
-                Positions = collisionPositions.ToArray(),
-                Faces = collisionFaces.ToArray()
-            };
-
-            layers.Add(new CPlugCrystal.GeometryLayer
-            {
-                Ver = 2,
-                GeometryVersion = 1,
-                Crystal = collisionCrystal,
-                LayerId = "Layer0",
-                LayerName = "Collisions",
-                Collidable = true,
-                IsEnabled = true,
-                IsVisible = false,
-                U02 = [0]
-            });
-        }
-
-        var crystal = new CPlugCrystal.Crystal
-        {
-            Version = 37,
-            VisualLevels =
-            [
-                new CPlugCrystal.VisualLevel { U01 = 4, U02 = 64 },
-                new CPlugCrystal.VisualLevel { U01 = 2, U02 = 128 },
-                new CPlugCrystal.VisualLevel { U01 = 1, U02 = 192 },
-            ],
-            IsEmbeddedCrystal = true,
-            U01 = 4,
-            Groups = groups.ToArray(),
-            Positions = positions.ToArray(),
-            Faces = faces.ToArray()
-        };
-
-        layers.Add(new CPlugCrystal.GeometryLayer
-        {
-            Ver = 2,
-            GeometryVersion = 1,
-            Crystal = crystal,
-            LayerId = "Layer1",
-            LayerName = "Geometry",
-            Collidable = collisionFaces.Count == 0,
-            IsEnabled = true,
-            IsVisible = true,
-            U02 = [0]
-        });
-
-        var plugCrystal = new CPlugCrystal
-        {
-            Materials = materials.Values.ToArray(),
-            Layers = layers
-        };
-
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
-
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = faces.SelectMany(x => x.Vertices)
-            .Select(x => x.TexCoord)
-            .ToArray();
-
-        // lightmap data, matches *faced* indices count
-        /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 
-        [
-            (0, 1), (1, 1), (1, 0), (0, 0),
-            (1.27f, 2.27f), (2.27f, 2.27f), (2.27f, 1.27f), (1.27f, 1.27f),
-            (0, 3.54f), (1, 3.54f), (1, 2.54f), (0, 2.54f),
-            (0, 2.27f), (1, 2.27f), (1, 1.27f), (0, 1.27f),
-            (2.54f, 1), (3.54f, 1), (3.54f, 0), (2.54f, 0),
-            (1.27f, 1), (2.27f, 1), (2.27f, 0), (1.27f, 0)
-        ];*/
-
-        return plugCrystal;
+        }, lod: 0, logger);
     }
 
     public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize)
