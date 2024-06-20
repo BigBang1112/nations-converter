@@ -71,19 +71,19 @@ internal sealed class ItemMakerService
         {
             var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
 
-            if (!initOptions.Value.Materials.TryGetValue(matName, out var material) || material.UvModifiers is null)
+            if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
             {
                 return;
             }
 
-            uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
-
-            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
+            if (material.UvModifiers is not null)
             {
-                if (subCategoryMaterial.UvModifiers is not null)
-                {
-                    uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
-                }
+                uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
+            }
+
+            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial) && subCategoryMaterial.UvModifiers is not null)
+            {
+                uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
             }
         }, lod: 0, logger);
     }
