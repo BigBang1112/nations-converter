@@ -76,14 +76,14 @@ internal sealed class ItemMakerService
                 return;
             }
 
-            if (material.UvModifiers is not null)
-            {
-                uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
-            }
-
             if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial) && subCategoryMaterial.UvModifiers is not null)
             {
                 uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
+            }
+
+            if (material.UvModifiers is not null)
+            {
+                uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
             }
         }, lod: 0, logger);
     }
