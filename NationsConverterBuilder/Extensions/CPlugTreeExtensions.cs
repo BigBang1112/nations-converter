@@ -102,43 +102,10 @@ public static class CPlugTreeExtensions
                 }
             }
 
-            /*else
-            {
-
-                if (matName is not null && initOptions.Value.Materials.TryGetValue(matName, out var matModel))
-                {
-                    if (matModel.Remove)
-                    {
-                        continue;
-                    }
-
-                    if (matModel.UvModifiers is not null)
-                    {
-                        uvModifierService.ApplyUvModifiers(visual, matModel.UvModifiers);
-                    }
-
-                    if (matModel.Decal is not null)
-                    {
-                        decal = CreateMaterial(new() { Link = matModel.Decal, Surface = CPlugSurface.MaterialId.NotCollidable });
-                        materials.Add(Guid.NewGuid().ToString(), decal);
-                    }
-
-                    material = matModel.Link is null
-                        ? CreateMaterial()
-                        : CreateMaterial(matModel);
-                }
-                else
-                {
-                    material = CreateMaterial();
-                }
-
-                materials.Add(matName ?? "", material);
-            }*/
-
             var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
             groups.Add(group);
 
-            positions.AddRange(ApplyRotationMatrix(visual.Vertices.Select(x => x.Position), loc));
+            positions.AddRange(ApplyLocation(visual.Vertices.Select(x => x.Position), loc));
 
             foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
             {
@@ -227,13 +194,10 @@ public static class CPlugTreeExtensions
 
     private static IEnumerable<(CPlugTree, Iso4)> GetAllChildren(CPlugTree tree, int lod = 0, Iso4 location = default)
     {
-        var treeLocation = tree.Translation.GetValueOrDefault(Iso4.Identity);
-
-        location = new Iso4(
-            location.XX + treeLocation.XX, location.XY + treeLocation.XY, location.XZ + treeLocation.XZ,
-            location.YX + treeLocation.YX, location.YY + treeLocation.YY, location.YZ + treeLocation.YZ,
-            location.ZX + treeLocation.ZX, location.ZY + treeLocation.ZY, location.ZZ + treeLocation.ZZ,
-            location.TX + treeLocation.TX, location.TY + treeLocation.TY, location.TZ + treeLocation.TZ);
+        if (location == default)
+        {
+            location = Iso4.Identity;
+        }
 
         if (tree.Children is null)
         {
@@ -242,22 +206,52 @@ public static class CPlugTreeExtensions
 
         foreach (var child in tree.Children)
         {
-            var c = child;
+            var childLocation = child.Translation.GetValueOrDefault(Iso4.Identity);
 
-            if (c is CPlugTreeVisualMip mip)
-            {
-                c = GetLodTree(mip, lod);
-            }
-            else
-            {
-                yield return (c, location);
-            }
+            var newLocation = MultiplyAddIso4(location, childLocation);
 
-            foreach (var descendant in GetAllChildren(c, lod, location))
+            if (child is CPlugTreeVisualMip mip)
+            {
+                var lodChild = GetLodTree(mip, lod);
+
+                newLocation = MultiplyAddIso4(newLocation, lodChild.Translation.GetValueOrDefault(Iso4.Identity));
+
+                foreach (var descendant in GetAllChildren(lodChild, lod, newLocation))
+                {
+                    yield return descendant;
+                }
+
+                continue;
+            }
+            
+            yield return (child, newLocation);
+
+            foreach (var descendant in GetAllChildren(child, lod, newLocation))
             {
                 yield return descendant;
             }
         }
+    }
+
+    private static Iso4 MultiplyAddIso4(Iso4 a, Iso4 b)
+    {
+        return new Iso4(
+            a.XX * b.XX + a.XY * b.YX + a.XZ * b.ZX,
+            a.XX * b.XY + a.XY * b.YY + a.XZ * b.ZY,
+            a.XX * b.XZ + a.XY * b.YZ + a.XZ * b.ZZ,
+
+            a.YX * b.XX + a.YY * b.YX + a.YZ * b.ZX,
+            a.YX * b.XY + a.YY * b.YY + a.YZ * b.ZY,
+            a.YX * b.XZ + a.YY * b.YZ + a.YZ * b.ZZ,
+
+            a.ZX * b.XX + a.ZY * b.YX + a.ZZ * b.ZX,
+            a.ZX * b.XY + a.ZY * b.YY + a.ZZ * b.ZY,
+            a.ZX * b.XZ + a.ZY * b.YZ + a.ZZ * b.ZZ,
+
+            a.TX + b.TX,
+            a.TY + b.TY,
+            a.TZ + b.TZ
+        );
     }
 
     private static CPlugTree GetLodTree(CPlugTreeVisualMip mip, int lod)
@@ -314,7 +308,7 @@ public static class CPlugTreeExtensions
             var group = new CPlugCrystal.Part() { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
             groups.Add(group);
 
-            positions.AddRange(ApplyRotationMatrix(collisionMesh.Vertices, location));
+            positions.AddRange(ApplyLocation(collisionMesh.Vertices, location));
             faces.AddRange(collisionMesh.CookedTriangles?
                 .Select(tri => new CPlugCrystal.Face([
                     new(tri.U02.X + indicesOffset, default),
@@ -364,12 +358,17 @@ public static class CPlugTreeExtensions
         };
     }
 
-    private static IEnumerable<Vec3> ApplyRotationMatrix(IEnumerable<Vec3> vertices, Iso4 location)
+    private static IEnumerable<Vec3> ApplyLocation(IEnumerable<Vec3> vertices, Iso4 location)
     {
+        if (location == Iso4.Identity)
+        {
+            return vertices;
+        }
+
         return vertices.Select(v => new Vec3(
-            v.X * location.XX + v.Y * location.YX + v.Z * location.ZX + location.TX,
-            v.X * location.XY + v.Y * location.YY + v.Z * location.ZY + location.TY,
-            v.X * location.XZ + v.Y * location.YZ + v.Z * location.ZZ + location.TZ
+            v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
+            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
+            v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
         ));
     }
 }
