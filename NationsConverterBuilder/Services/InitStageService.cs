@@ -2,7 +2,10 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Plug;
 using GBX.NET.Imaging.SkiaSharp;
+using NationsConverterBuilder.Converters;
 using NationsConverterBuilder.Models;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace NationsConverterBuilder.Services;
 
@@ -14,10 +17,22 @@ internal sealed class InitStageService
 
     private readonly string dataDirPath;
     private readonly string itemsDirPath;
+    private readonly string sheetsDirPath;
     private readonly string? initItemsOutputPath;
     private readonly string? initMapsOutputPath;
 
     private static readonly string[] subCategories = ["Balanced", "Mod", "Modless"];
+
+    private static readonly JsonSerializerOptions jsonOptions = new()
+    {
+        WriteIndented = false,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+    };
+
+    static InitStageService()
+    {
+        jsonOptions.Converters.Add(new JsonInt3Converter());
+    }
 
     public InitStageService(
         SetupService setupService,
@@ -32,6 +47,7 @@ internal sealed class InitStageService
 
         dataDirPath = Path.Combine(hostEnvironment.WebRootPath, "data");
         itemsDirPath = Path.Combine(hostEnvironment.WebRootPath, "items");
+        sheetsDirPath = Path.Combine(hostEnvironment.WebRootPath, "sheets");
 
         initItemsOutputPath = config["InitItemsOutputPath"];
         initMapsOutputPath = config["InitMapsOutputPath"];
@@ -53,8 +69,15 @@ internal sealed class InitStageService
 
                 var index = 0;
 
-                RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories, map, subCategory, ref index);
-                ProcessBlocks(collection.DisplayName, collection.RootBlocks, map, subCategory, ref index);
+                var convs = new Dictionary<string, ConversionModel>();
+
+                RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories, map, subCategory, convs, ref index);
+                ProcessBlocks(collection.DisplayName, collection.RootBlocks, map, subCategory, convs, ref index);
+
+                using (var sheetJsonStream = File.Create(Path.Combine(sheetsDirPath, $"{collection.DisplayName}.json")))
+                {
+                    JsonSerializer.Serialize(sheetJsonStream, convs, jsonOptions);
+                }
 
                 if (!string.IsNullOrEmpty(initMapsOutputPath))
                 {
@@ -69,31 +92,48 @@ internal sealed class InitStageService
         await Task.WhenAll(tasks);
     }
 
-    private void RecurseBlockDirectories(string collectionName, IDictionary<string, BlockDirectoryModel> dirs, CGameCtnChallenge map, string subCategory, ref int index)
+    private void RecurseBlockDirectories(
+        string collectionName,
+        IDictionary<string, BlockDirectoryModel> dirs,
+        CGameCtnChallenge map,
+        string subCategory,
+        IDictionary<string, ConversionModel> convs,
+        ref int index)
     {
         foreach (var (dirName, dir) in dirs)
         {
-            RecurseBlockDirectories(collectionName, dir.Directories, map, subCategory, ref index);
-            ProcessBlocks(collectionName, dir.Blocks, map, subCategory, ref index);
+            RecurseBlockDirectories(collectionName, dir.Directories, map, subCategory, convs, ref index);
+            ProcessBlocks(collectionName, dir.Blocks, map, subCategory, convs, ref index);
         }
     }
 
-    private void ProcessBlocks(string collectionName, IDictionary<string, BlockInfoModel> blocks, CGameCtnChallenge map, string subCategory, ref int index)
+    private void ProcessBlocks(
+        string collectionName,
+        IDictionary<string, BlockInfoModel> blocks,
+        CGameCtnChallenge map,
+        string subCategory,
+        IDictionary<string, ConversionModel> convs,
+        ref int index)
     {
-        foreach (var (_, block) in blocks)
+        foreach (var (name, block) in blocks)
         {
-            ProcessBlock(collectionName, map, block, subCategory, ref index);
+            var conv = ProcessBlock(collectionName, map, block, subCategory, ref index);
+
+            if (conv is not null)
+            {
+                convs.Add(name, conv);
+            }
         }
     }
 
-    private void ProcessBlock(string collectionName, CGameCtnChallenge map, BlockInfoModel block, string subCategory, ref int index)
+    private ConversionModel? ProcessBlock(string collectionName, CGameCtnChallenge map, BlockInfoModel block, string subCategory, ref int index)
     {
         var node = (CGameCtnBlockInfo?)Gbx.ParseNode(block.GbxFilePath);
 
         if (node is null)
         {
             logger.LogError("Failed to parse block info for {BlockName}", block.Name);
-            return;
+            return null;
         }
 
         node.UpgradeIconToWebP();
@@ -160,6 +200,8 @@ internal sealed class InitStageService
                 }
             }
         }
+
+        return GetBlockConversionModel(node, pageName);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge map, ref int index)
@@ -188,5 +230,61 @@ internal sealed class InitStageService
         map.PlaceAnchoredObject(
             new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
                 (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+    }
+
+    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName)
+    {
+        var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+        var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+
+        var airSize = airUnits.Length > 0 ? new Int3(airUnits.Max(x => x.X) + 1, airUnits.Max(x => x.Y) + 1, airUnits.Max(x => x.Z) + 1) : default(Int3?);
+        var groundSize = groundUnits.Length > 0 ? new Int3(groundUnits.Max(x => x.X) + 1, groundUnits.Max(x => x.Y) + 1, groundUnits.Max(x => x.Z) + 1) : default(Int3?);
+
+        var airVariants = node.AirMobils?.Length ?? 0;
+        var groundVariants = node.GroundMobils?.Length ?? 0;
+
+        var airSubVariants = node.AirMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
+        var groundSubVariants = node.GroundMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
+
+        var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
+        var commonSize = airSize == groundSize ? airSize : null;
+        var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
+        var commonSubVariants = airSubVariants.SequenceEqual(groundSubVariants) ? airSubVariants : null;
+
+        var airConvModel = default(ConversionModifierModel);
+        var groundConvModel = default(ConversionModifierModel);
+
+        if (airUnits.Length > 0)
+        {
+            airConvModel = new()
+            {
+                Units = commonUnits is null ? airUnits : null,
+                Size = commonSize is null ? airSize : null,
+                Variants = commonVariants is null ? airVariants : null,
+                SubVariants = commonSubVariants is null ? airSubVariants : null,
+            };
+        }
+
+        if (groundUnits.Length > 0)
+        {
+            groundConvModel = new()
+            {
+                Units = commonUnits is null ? groundUnits : null,
+                Size = commonSize is null ? groundSize : null,
+                Variants = commonVariants is null ? groundVariants : null,
+                SubVariants = commonSubVariants is null ? groundSubVariants : null,
+            };
+        }
+
+        return new ConversionModel
+        {
+            PageName = pageName,
+            Units = commonUnits,
+            Size = commonSize,
+            Variants = commonVariants,
+            SubVariants = commonSubVariants,
+            Air = airConvModel,
+            Ground = groundConvModel
+        };
     }
 }
