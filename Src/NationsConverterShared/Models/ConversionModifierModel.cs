@@ -1,6 +1,6 @@
 ﻿using GBX.NET;
 
-namespace NationsConverterBuilder.Models;
+namespace NationsConverterShared.Models;
 
 public sealed class ConversionModifierModel
 {
@@ -8,4 +8,5 @@ public sealed class ConversionModifierModel
     public Int3? Size { get; set; }
     public int? Variants { get; set; }
     public int?[]? SubVariants { get; set; }
+    public ConversionClipModel[]? Clips { get; set; }
 }

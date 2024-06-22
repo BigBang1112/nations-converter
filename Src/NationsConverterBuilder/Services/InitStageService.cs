@@ -4,6 +4,7 @@ using GBX.NET.Engines.Plug;
 using GBX.NET.Imaging.SkiaSharp;
 using NationsConverterBuilder.Converters;
 using NationsConverterBuilder.Models;
+using NationsConverterShared.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -25,7 +26,7 @@ internal sealed class InitStageService
 
     private static readonly JsonSerializerOptions jsonOptions = new()
     {
-        WriteIndented = false,
+        WriteIndented = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
 
@@ -61,31 +62,31 @@ internal sealed class InitStageService
         {
             setupService.SetupCollection(collection);
 
-            tasks.Add(Parallel.ForEachAsync(subCategories, cancellationToken, (subCategory, cancellationToken) =>
+            tasks.Add(Parallel.ForEachAsync(subCategories, cancellationToken, async (subCategory, cancellationToken) =>
             {
+                var displayName = collection.DisplayName;
+
                 var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
-                map.MapName = collection.DisplayName;
+                map.MapName = displayName;
                 map.ScriptMetadata!.Declare("NC2_IsConverted", true);
 
                 var index = 0;
 
                 var convs = new Dictionary<string, ConversionModel>();
 
-                RecurseBlockDirectories(collection.DisplayName, collection.BlockDirectories, map, subCategory, convs, ref index);
-                ProcessBlocks(collection.DisplayName, collection.RootBlocks, map, subCategory, convs, ref index);
+                RecurseBlockDirectories(displayName, collection.BlockDirectories, map, subCategory, convs, ref index);
+                ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
 
-                using (var sheetJsonStream = File.Create(Path.Combine(sheetsDirPath, $"{collection.DisplayName}.json")))
+                using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))
                 {
-                    JsonSerializer.Serialize(sheetJsonStream, convs, jsonOptions);
+                    await JsonSerializer.SerializeAsync(sheetJsonStream, convs, jsonOptions, cancellationToken: cancellationToken);
                 }
 
                 if (!string.IsNullOrEmpty(initMapsOutputPath))
                 {
                     Directory.CreateDirectory(Path.Combine(initMapsOutputPath, subCategory));
-                    map.Save(Path.Combine(initMapsOutputPath, subCategory, $"{collection.DisplayName}.Map.Gbx"));
+                    map.Save(Path.Combine(initMapsOutputPath, subCategory, $"{displayName}.Map.Gbx"));
                 }
-
-                return ValueTask.CompletedTask;
             }));
         }
 
@@ -246,10 +247,14 @@ internal sealed class InitStageService
         var airSubVariants = node.AirMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
         var groundSubVariants = node.GroundMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
 
+        var airClips = GetConversionClipModels(node.AirBlockUnitInfos).ToArray();
+        var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos).ToArray();
+
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
         var commonSize = airSize == groundSize ? airSize : null;
         var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
         var commonSubVariants = airSubVariants.SequenceEqual(groundSubVariants) ? airSubVariants : null;
+        var commonClips = airClips.SequenceEqual(groundClips) ? airClips : null;
 
         var airConvModel = default(ConversionModifierModel);
         var groundConvModel = default(ConversionModifierModel);
@@ -258,10 +263,11 @@ internal sealed class InitStageService
         {
             airConvModel = new()
             {
-                Units = commonUnits is null ? airUnits : null,
+                Units = commonUnits is null && airUnits.Length > 0 ? airUnits : null,
                 Size = commonSize is null ? airSize : null,
                 Variants = commonVariants is null ? airVariants : null,
-                SubVariants = commonSubVariants is null ? airSubVariants : null,
+                SubVariants = commonSubVariants is null && airSubVariants.Length > 0 ? airSubVariants : null,
+                Clips = commonClips is null && airClips.Length > 0 ? airClips : null
             };
         }
 
@@ -269,22 +275,54 @@ internal sealed class InitStageService
         {
             groundConvModel = new()
             {
-                Units = commonUnits is null ? groundUnits : null,
+                Units = commonUnits is null && groundUnits.Length > 0 ? groundUnits : null,
                 Size = commonSize is null ? groundSize : null,
                 Variants = commonVariants is null ? groundVariants : null,
-                SubVariants = commonSubVariants is null ? groundSubVariants : null,
+                SubVariants = commonSubVariants is null && groundSubVariants.Length > 0 ? groundSubVariants : null,
+                Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null
             };
         }
 
         return new ConversionModel
         {
             PageName = pageName,
-            Units = commonUnits,
+            Units = commonUnits?.Length == 0 ? null : commonUnits,
             Size = commonSize,
             Variants = commonVariants,
-            SubVariants = commonSubVariants,
+            SubVariants = commonSubVariants?.Length == 0 ? null : commonSubVariants,
+            Clips = commonClips?.Length == 0 ? null : commonClips,
             Air = airConvModel,
             Ground = groundConvModel
         };
+    }
+
+    private static IEnumerable<ConversionClipModel> GetConversionClipModels(CGameCtnBlockUnitInfo[]? blockUnitInfos)
+    {
+        if (blockUnitInfos is null)
+        {
+            yield break;
+        }
+
+        foreach (var unit in blockUnitInfos)
+        {
+            if (unit.Clips is null)
+            {
+                continue;
+            }
+
+            for (var i = 0; i < unit.Clips.Length; i++)
+            {
+                var clip = unit.Clips[i];
+                if (clip.Node is not null)
+                {
+                    yield return new ConversionClipModel
+                    {
+                        Name = clip.Node.Ident.Id,
+                        Offset = unit.RelativeOffset,
+                        Dir = (Direction)i
+                    };
+                }
+            }
+        }
     }
 }

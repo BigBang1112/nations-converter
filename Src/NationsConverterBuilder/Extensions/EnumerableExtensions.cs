@@ -1,4 +1,4 @@
-﻿namespace NationsConverterBuilder;
+﻿namespace NationsConverterBuilder.Extensions;
 
 public static class EnumerableExtensions
 {

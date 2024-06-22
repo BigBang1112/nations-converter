@@ -1,0 +1,11642 @@
+{
+  "RallySignPillar": {
+    "PageName": "Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallySquareTowerPillar": {
+    "PageName": "Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyFieldTetrisURoadLow": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          4
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        5,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            2,
+            0,
+            4
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            2,
+            2,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisURoadMediumMirror": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        3,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            4
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisDiagRoadLowToRoadHigh": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          5,
+          0
+        ]
+      ],
+      "Size": [
+        3,
+        6,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisDiagRoadMediumMirror": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            1,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            1,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisURoadMedium": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        5,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            2,
+            0,
+            4
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            2,
+            2,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisStraightRoadMedium": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisDiagRoadLowToRoadHighMirror": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        6,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            2,
+            2,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisDiagRoadMedium": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            1,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            1,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFieldTetrisURoadLowMirror": {
+    "PageName": "Frontier/FieldTetris",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        5,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            4
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyRockyGrassCliffTransitionCastleToRoadWood": {
+    "PageName": "Frontier/RockyGrass",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            3,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRockyGrassHillTransitionRoadMediumtoCastle": {
+    "PageName": "Frontier/RockyGrass",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRockyGrassHillTransitionRoadHighToRoadMedium": {
+    "PageName": "Frontier/RockyGrass",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRockyGrassCliffTunnelEntry": {
+    "PageName": "Frontier/RockyGrass",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyBridgeMedium": {
+    "PageName": "Frontier/Bridges",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        3
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        3
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyCastleDrawBridgeSpeedUp": {
+    "PageName": "Frontier/Bridges",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyBridgeLow": {
+    "PageName": "Frontier/Bridges",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleDrawBridge": {
+    "PageName": "Frontier/Bridges",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyBridgeHigh": {
+    "PageName": "Frontier/Bridges",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadLowHillSlope": {
+    "PageName": "Frontier/HillSlopes",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRoadHighHillSlope": {
+    "PageName": "Frontier/HillSlopes",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRoadMediumHillSlope": {
+    "PageName": "Frontier/HillSlopes",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleHillBridgeGround": {
+    "PageName": "Frontier/HillSlopes",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyBridgeMediumPillar": {
+    "PageName": "Frontier",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyBridgeHighPillar": {
+    "PageName": "Frontier",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyCastleHillBridgeAir": {
+    "PageName": "Frontier",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFlat": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHills2": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyRockyGrass": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHills3": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHills1": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "Lake": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyMediumOverLowCrossGround": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyHighToLowCurveMirror": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyHighOverLowCrossGround": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyMediumToHigh": {
+    "PageName": "Transition",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadWoodStraightPillar": {
+    "PageName": "Transition",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadWoodToCastlePillar": {
+    "PageName": "Transition",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyHighToLow": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyHighToLowCurve": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyLowToMedium": {
+    "PageName": "Transition",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleBiSlopePillar": {
+    "PageName": "RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        5
+      ]
+    }
+  },
+  "RallyCastleRampPillar": {
+    "PageName": "RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyCastleTowerPillar": {
+    "PageName": "RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        3
+      ]
+    }
+  },
+  "RallyCastleHillBridgePillar": {
+    "PageName": "RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyFieldFenceAutoCenter": {
+    "PageName": "Decor/FieldAuto",
+    "Variants": 9,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        3,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "RallyFieldFenceAutoTShaped": {
+    "PageName": "Decor/FieldAuto",
+    "Variants": 9,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        null,
+        4,
+        4,
+        4,
+        4,
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "RallyFieldAuto": {
+    "PageName": "Decor/FieldAuto",
+    "Variants": 9,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "RallyFieldFenceAutoCorner": {
+    "PageName": "Decor/FieldAuto",
+    "Variants": 9,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "RallyFieldGrassStraight3x3": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        3,
+        5,
+        3
+      ],
+      "SubVariants": [
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            2,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldGrassCornerIn": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "Size": [
+        3,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyFieldClips": {
+    "PageName": "Decor/Field",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyFieldClipLeft",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyFieldClipRight",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    }
+  },
+  "RallyFieldClips2": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFieldCornerOut": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFieldStraight": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        3
+      ],
+      "SubVariants": [
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFieldGrassCornerOut": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        3,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            2,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyFieldCornerIn": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "Size": [
+        3,
+        3,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            1,
+            0,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyFieldGrassStraight": {
+    "PageName": "Decor/Field",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        3
+      ],
+      "SubVariants": [
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "RallyFieldClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClipRight",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyFieldClip2",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallySignLeftWay": {
+    "PageName": "Decor/Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallySignRightWay": {
+    "PageName": "Decor/Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyAdvertising": {
+    "PageName": "Decor/Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallySignWarning": {
+    "PageName": "Decor/Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallySignWrongWay": {
+    "PageName": "Decor/Signs",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadLamp": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ]
+    }
+  },
+  "RallyCastleTowerSpeedUp": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ]
+    }
+  },
+  "RallyHouseGround4": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyWindmill": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyCastleTower": {
+    "PageName": "Decor/HouseDecor",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallySquareTower": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "RallyHouseGround3": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHouseGround2": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHouseGround": {
+    "PageName": "Decor/HouseDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyFieldFenceTreeStraight": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        5
+      ]
+    }
+  },
+  "RallyFieldFenceBushStraightAdvert": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyFieldFenceDiag": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        3
+      ]
+    }
+  },
+  "RallyFieldFenceTreeCornerOut": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        4
+      ]
+    }
+  },
+  "RallyFieldFenceBushCornerOut": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        4
+      ]
+    }
+  },
+  "RallyFieldFenceStraight": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        2
+      ]
+    }
+  },
+  "RallyFieldFenceCornerOut": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        2
+      ]
+    }
+  },
+  "RallyFieldFenceRamp": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyFieldFenceBushStraight": {
+    "PageName": "Decor/FieldFence",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        3
+      ]
+    }
+  },
+  "RallyTreeGround1": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        4
+      ]
+    }
+  },
+  "RallyHill2SpeedUp": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        4,
+        2,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHill1SpeedUp": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          5,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          5,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        2,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyGrassCheckPoint": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHill3SpeedUp": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0
+        ],
+        [
+          5,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        2,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHill2": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHill1": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyHill3": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyRockDecor2": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyTreeGround1SpeedUp": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        4
+      ]
+    }
+  },
+  "RallyTreeGroundBig": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyRockDecor": {
+    "PageName": "Decor/NaturalDecor",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyCastleDrawBridgePillar": {
+    "PageName": "CastleMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        2
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyCastleCrossPillar": {
+    "PageName": "CastleMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyMediumOverLowCrossPillar": {
+    "PageName": "CastleMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Air": {
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleReplacementCrossPillar": {
+    "PageName": "CastleMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyTunnelCheckpoint": {
+    "PageName": "Tunnel/TunnelMain",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyTunnelTurbo": {
+    "PageName": "Tunnel/TunnelMain",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyTunnelGTCurve3": {
+    "PageName": "Tunnel/TunnelMain",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ]
+      ],
+      "Size": [
+        3,
+        2,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyTunnelGTCurve2": {
+    "PageName": "Tunnel/TunnelMain",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyTunnelRoadSlope": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyTunnelRoad": {
+    "PageName": "Tunnel/TunnelMain",
+    "Variants": 6,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyTunnelEntry": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyTunnelExit": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyTunnelRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyRoadHigh": {
+    "PageName": "RoadHigh/RoadHighMain",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        4
+      ]
+    }
+  },
+  "RallyHighStartLine": {
+    "PageName": "RoadHigh/RoadHighMain",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyHighFinish": {
+    "PageName": "RoadHigh/RoadHighMain",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadWoodSlope": {
+    "PageName": "RoadHigh/RoadHighMain",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "RallyHighCheckpoint": {
+    "PageName": "RoadHigh/RoadHighMain",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadHighCornerRockOutside": {
+    "PageName": "RoadHigh/RoadHighMisc",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        3
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        }
+      ]
+    }
+  },
+  "RallyRoadHighGT2": {
+    "PageName": "RoadHigh/RoadHighMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          1,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadHighGT1": {
+    "PageName": "RoadHigh/RoadHighMisc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadHighStraightRock": {
+    "PageName": "RoadHigh/RoadHighMisc",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadHighClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyHighSupportStartLine": {
+    "PageName": "RoadHigh/RoadHighSupport",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadWoodSupportSlope": {
+    "PageName": "RoadHigh/RoadHighSupport",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "RallyRoadWoodSupport": {
+    "PageName": "RoadHigh/RoadHighSupport",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        4
+      ]
+    }
+  },
+  "RallyHighSupportCheckpoint": {
+    "PageName": "RoadHigh/RoadHighSupport",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyHighFinishSupport": {
+    "PageName": "RoadHigh/RoadHighSupport",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadHighClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadWoodPillar": {
+    "PageName": "RoadHigh",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Ground": {
+      "SubVariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "RallyRoad": {
+    "PageName": "RoadLow",
+    "Variants": 6,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyFinish": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRock": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyRoadSpeedUp": {
+    "PageName": "RoadLow",
+    "Variants": 6,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1,
+        1,
+        1,
+        4,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    }
+  },
+  "RallyRockMirror": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyTruncMirror": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyStartLine": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyHouseGround5": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyTrunc": {
+    "PageName": "RoadLow",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    }
+  },
+  "RallyCheckPoint": {
+    "PageName": "RoadLow",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleTurboRoulette": {
+    "PageName": "RoadCastle/Misc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyFreeWheeling": {
+    "PageName": "RoadCastle/Misc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyCastleTurbo": {
+    "PageName": "RoadCastle/Misc",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyCastleBiSlopeStart": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyStartFinishLine": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyMediumStartLine": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadMediumFinish": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyCastleBiSlopeEnd": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyMediumCheckpointSpeedUp": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ]
+    }
+  },
+  "RallyRoadCastle": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  },
+  "RallyMediumCheckPoint": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRoadCastleSlope": {
+    "PageName": "RoadCastle/RoadMedium",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  },
+  "RallyCastleGrid": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleRamp": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleBridge": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "RallyCastleReplacementCross": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleReplacementArchPillar": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Units": [
+      [
+        2,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyRampart": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        2
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleReplacementArch": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        3,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleCross": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyCastleRampSpeedUp": {
+    "PageName": "RoadCastle/CastleMisc",
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "RallyRoadCastlePillarClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "RallyRoadCastleClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    }
+  },
+  "RallyGT8": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGTCurve2": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT3": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          1,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          1,
+          0,
+          2
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT6": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 3
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT5": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          2,
+          0,
+          2
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT1": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT4": {
+    "PageName": "RoadCastle/Tetris",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "Hills1ToHills2": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "RallyFieldClip2": {
+    "PageName": "Other",
+    "Variants": 1,
+    "SubVariants": [
+      null
+    ],
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "RallyTunnelRoadClip": {
+    "PageName": "Other",
+    "Variants": 1,
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyCastleBridgePillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "HillsToHills": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "Hills2ToHills3": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "RallyGT8Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    }
+  },
+  "RallyRoadWoodSlopePillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "RallyClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    }
+  },
+  "RallyFieldClipRight": {
+    "PageName": "Other",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "ForestToLake": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        3,
+        3,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1
+      ]
+    }
+  },
+  "RallyRoadCastlePillarClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyGT1Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "ForestToHills1": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    }
+  },
+  "RallyCastleStartPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadCastleSlopePillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        6,
+        6,
+        6,
+        6
+      ]
+    }
+  },
+  "RallyRockyGrassHills": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1
+      ]
+    }
+  },
+  "RallyGT3Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          1,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          1,
+          0,
+          2
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyCastleFinishPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadCastleClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        2
+      ]
+    }
+  },
+  "RallyCastleStraightPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyCastleCheckpointPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadCastlePillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        3,
+        6,
+        6,
+        6,
+        6,
+        3
+      ]
+    }
+  },
+  "RallyGT5Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          2,
+          0,
+          2
+        ],
+        "Dir": 3
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRoadHighClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyGT4Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyCastleGridPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {},
+    "Air": {}
+  },
+  "RallyFieldClipLeft": {
+    "PageName": "Other",
+    "Variants": 1,
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "RallyRockyGrassCliffs": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        3,
+        4,
+        4,
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        8,
+        4
+      ]
+    }
+  },
+  "RallyGT2Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyRockyGrassClip": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    }
+  },
+  "RallyMultiLapPillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  },
+  "RallyGT6Pillar": {
+    "PageName": "Other",
+    "Units": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          2,
+          0,
+          0
+        ],
+        "Dir": 3
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          2
+        ],
+        "Dir": 1
+      }
+    ],
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    }
+  }
+}
