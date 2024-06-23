@@ -1,7 +1,6 @@
 {
   "CoastRenderCube": {
     "PageName": "Test",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18,11 +17,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheCroisetteCorner": {
     "PageName": "Corniche/Croisette",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -99,11 +98,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheCroisetteWall": {
     "PageName": "Corniche/Croisette",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -160,11 +159,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheCroisetteBase1": {
     "PageName": "Corniche/Croisette",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -276,11 +275,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheCroisette": {
     "PageName": "Corniche/Croisette",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -337,11 +336,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheTransitionSlope": {
     "PageName": "Corniche/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -503,11 +502,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheTransitionCornerMirror": {
     "PageName": "Corniche/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -564,11 +563,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheTransitionTShaped": {
     "PageName": "Corniche/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -639,11 +638,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheTransitionCorner": {
     "PageName": "Corniche/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -700,11 +699,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheTransitionSlopeMirror": {
     "PageName": "Corniche/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -866,11 +865,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheGT3x2Mirror": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1022,11 +1021,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheDeadendWall": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1088,11 +1087,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheDeadend": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1154,11 +1153,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheBase1": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1270,11 +1269,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheGT3x2": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1426,11 +1425,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheCorner": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1507,11 +1506,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheGT2": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1643,11 +1642,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheDeadendBridge": {
     "PageName": "Corniche/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1709,11 +1708,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastWaterCircuitLamp": {
     "PageName": "Deco/Vegetation",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1730,11 +1729,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastPineTrees3": {
     "PageName": "Deco/Vegetation",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1761,11 +1760,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastPineTrees2": {
     "PageName": "Deco/Vegetation",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1787,10 +1786,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitLamp": {
     "PageName": "Deco/Vegetation",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1806,13 +1808,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastPineTrees": {
     "PageName": "Deco/Vegetation",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1829,11 +1828,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheClipRight": {
     "PageName": "Deco/Corniche",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1850,11 +1849,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCornicheClipLeft": {
     "PageName": "Deco/Corniche",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1871,11 +1870,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastDecoSailing": {
     "PageName": "Deco/Boats",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1907,11 +1906,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastDecoYacht": {
     "PageName": "Deco/Boats",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2073,11 +2072,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastDecoFishBoat": {
     "PageName": "Deco/Boats",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2099,11 +2098,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastDecoBoats": {
     "PageName": "Deco/Boats",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2155,11 +2154,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastDecoMarina": {
     "PageName": "Deco/Boats",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2181,14 +2180,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadSignsSupport": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -2261,10 +2257,16 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "CoastFreeSignPillar": {
     "PageName": "Deco/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2280,13 +2282,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterSignsSupport": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2328,10 +2327,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastFreeSignWaterPillar": {
     "PageName": "Deco/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2347,13 +2349,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterSigns": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2390,10 +2389,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastAdvertRoad": {
     "PageName": "Deco/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2434,13 +2436,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastFreeSignsL": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2472,11 +2471,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastFreeSignsWaterL": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2498,10 +2497,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadSigns": {
     "PageName": "Deco/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2537,13 +2539,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastFreeSignsWaterT": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2560,11 +2559,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastFreeSignsLMirror": {
     "PageName": "Deco/Signs",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2596,10 +2595,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastFreeSignsT": {
     "PageName": "Deco/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2615,13 +2617,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastVillage2A": {
     "PageName": "Deco/Village",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2658,11 +2657,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastVillage1": {
     "PageName": "Deco/Village",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2689,11 +2688,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastVillage2B": {
     "PageName": "Deco/Village",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2735,10 +2734,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastWaterCircuitLampPillar": {
     "PageName": "Deco",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2754,12 +2756,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastCircuitLampPillar": {
     "PageName": "Deco",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2775,12 +2777,19 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastHarbor": {
     "PageName": "Terraformation",
+    "Ground": {
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 0
+    },
     "Units": [
       [
         0,
@@ -2792,19 +2801,19 @@
       1,
       1,
       1
-    ],
-    "Ground": {
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 0
-    }
+    ]
   },
   "CoastSea": {
     "PageName": "Terraformation",
+    "Ground": {
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 0
+    },
     "Units": [
       [
         0,
@@ -2816,19 +2825,19 @@
       1,
       1,
       1
-    ],
-    "Ground": {
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 0
-    }
+    ]
   },
   "CoastDirt": {
     "PageName": "Terraformation",
+    "Ground": {
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 0
+    },
     "Units": [
       [
         0,
@@ -2840,20 +2849,10 @@
       1,
       1,
       1
-    ],
-    "Ground": {
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 0
-    }
+    ]
   },
   "CoastRoadWaterTransitionCliffAir": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2890,11 +2889,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTransitionCliffGround": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2946,11 +2945,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelEntryGround": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3002,11 +3001,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadTransitionCircuit": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3043,11 +3042,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitTransitionCliffBiSlope4UShaped": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3377,11 +3376,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadTransitionCliffGround": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3433,11 +3432,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadTransitionCliffSlope3": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3504,11 +3503,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitTransitionCliffBiSlope4UShapedMirror": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3838,11 +3837,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadTransitionCliffAir": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3879,11 +3878,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitTransitionCliffBiSlope4": {
     "PageName": "Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4033,11 +4032,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighCross": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4163,11 +4162,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBridgeGT4x4Mirror": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4377,11 +4376,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighStraight": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4441,11 +4440,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighCheckpoint": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4515,11 +4514,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighGTCurve2": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4589,11 +4588,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBridgeGT4x4": {
     "PageName": "Circuit/High",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4803,11 +4802,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderCornerOutAdvert": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4844,11 +4843,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTurbo2Left": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4894,11 +4893,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTurboLeft": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4944,11 +4943,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTurbo2Right": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4994,11 +4993,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTurboRight": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5044,11 +5043,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadTurbo2": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5103,11 +5102,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderStraightAdvertB": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5153,11 +5152,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderStraightAdvert": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5203,11 +5202,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadTurbo": {
     "PageName": "Circuit/Misc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5262,11 +5261,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope4GTCurve4": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5411,11 +5410,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope4GTCurve4Mirror": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5560,11 +5559,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope2": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5634,11 +5633,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope4": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5728,11 +5727,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope2GTCurve2Mirror": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5802,11 +5801,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighBiSlope2GTCurve2": {
     "PageName": "Circuit/HighGT",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5876,11 +5875,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTransitionRight": {
     "PageName": "Circuit/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5926,11 +5925,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTransitionSmallLeft": {
     "PageName": "Circuit/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5967,11 +5966,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTransitionSmallRight": {
     "PageName": "Circuit/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6008,11 +6007,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderTransitionLeft": {
     "PageName": "Circuit/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6058,11 +6057,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastStuntCircuitRoad": {
     "PageName": "Circuit/Stunt",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -6127,11 +6126,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "CoastStuntHawkRampPillar": {
     "PageName": "Circuit/Stunt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6209,11 +6208,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderRampMirror": {
     "PageName": "Circuit/Stunt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6264,11 +6263,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderRamp": {
     "PageName": "Circuit/Stunt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6319,11 +6318,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadRamp": {
     "PageName": "Circuit/Stunt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6351,14 +6350,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastStuntHawkRamp": {
     "PageName": "Circuit/Stunt",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -6430,11 +6426,14 @@
         1,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "CoastCircuitRoad": {
     "PageName": "Circuit/Main",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -6494,11 +6493,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "CoastCircuitRoadStartLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6531,11 +6530,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitStartFinishLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6605,11 +6604,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitFinishLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6661,11 +6660,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitCheckpoint": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6735,11 +6734,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadFinishLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6772,11 +6771,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadCheckpoint": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6818,11 +6817,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitStartLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6874,11 +6873,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadStartFinishLine": {
     "PageName": "Circuit/Main",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6915,11 +6914,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderDiagOutFull": {
     "PageName": "Circuit/Diag",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6974,11 +6973,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderDiagOut": {
     "PageName": "Circuit/Diag",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7015,11 +7014,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderDiagIn": {
     "PageName": "Circuit/Diag",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7074,11 +7073,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderStraight": {
     "PageName": "Circuit/Diag",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7124,11 +7123,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderDiagInFull": {
     "PageName": "Circuit/Diag",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7183,11 +7182,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve2Full": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7257,11 +7256,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve2In": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7349,11 +7348,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderCornerOut": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7390,11 +7389,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve3Out": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7507,11 +7506,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve2Out": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7581,11 +7580,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderCornerIn": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7640,11 +7639,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve3Full": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7769,11 +7768,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitBorderGTCurve3In": {
     "PageName": "Circuit/Curves",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7899,11 +7898,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitClipRight": {
     "PageName": "Circuit",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7920,11 +7919,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighClipLeft": {
     "PageName": "Circuit",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7941,11 +7940,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitRoadClip": {
     "PageName": "Circuit",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7962,11 +7961,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitClipLeft": {
     "PageName": "Circuit",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7983,11 +7982,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastCircuitHighClipRight": {
     "PageName": "Circuit",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8004,11 +8003,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelCheckpoint": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8050,11 +8049,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelSlope4": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8146,11 +8145,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelEntryAir": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8202,11 +8201,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelGTCurve3": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8298,11 +8297,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelGTCurve2": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8374,11 +8373,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelCorner": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8420,11 +8419,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelTurbo2": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8466,11 +8465,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelTurbo": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8512,11 +8511,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelSlopeBase": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8588,11 +8587,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastTunnelStraight": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8634,10 +8633,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadBiSlopeStartGTCurve2Mirror": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -8703,12 +8705,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBiSlopeEndGTCurve2Mirror": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -8774,12 +8776,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBiSlopeEnd": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8830,12 +8832,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBiSlopeStartGTCurve2": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8901,12 +8903,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBiSlopeEndGTCurve2": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8972,12 +8974,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBiSlopeStart": {
     "PageName": "Road/BiSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9023,12 +9025,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadBumper": {
     "PageName": "Road/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9064,12 +9066,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadHole2": {
     "PageName": "Road/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9105,12 +9107,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadHole": {
     "PageName": "Road/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9146,12 +9148,93 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadGTCurve3": {
     "PageName": "Road/GT",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ]
+    },
     "Size": [
       3,
       1,
@@ -9180,7 +9263,10 @@
         ],
         "Dir": 3
       }
-    ],
+    ]
+  },
+  "CoastRoadGTBiSlope1Curve3": {
+    "PageName": "Road/GT",
     "Ground": {
       "Units": [
         [
@@ -9222,6 +9308,46 @@
           2,
           0,
           2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
         ]
       ]
     },
@@ -9261,12 +9387,44 @@
           2,
           0,
           2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
         ]
       ]
-    }
-  },
-  "CoastRoadGTBiSlope1Curve3": {
-    "PageName": "Road/GT",
+    },
     "Size": [
       3,
       2,
@@ -9295,168 +9453,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          2,
-          0,
-          1
-        ],
-        [
-          0,
-          0,
-          2
-        ],
-        [
-          1,
-          0,
-          2
-        ],
-        [
-          2,
-          0,
-          2
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          2,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          2
-        ],
-        [
-          2,
-          1,
-          2
-        ],
-        [
-          0,
-          1,
-          2
-        ]
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          2,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          2
-        ],
-        [
-          2,
-          0,
-          2
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          2,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          2
-        ],
-        [
-          2,
-          1,
-          2
-        ]
-      ]
-    }
+    ]
   },
   "CoastRoadLoopLeft": {
     "PageName": "Road/GT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9533,41 +9535,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadGTDiag4": {
     "PageName": "Road/GT",
-    "Size": [
-      2,
-      2,
-      4
-    ],
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
-    "Clips": [
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      },
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          1,
-          0,
-          3
-        ],
-        "Dir": 0
-      }
-    ],
     "Ground": {
       "Units": [
         [
@@ -9715,39 +9686,39 @@
           3
         ]
       ]
-    }
+    },
+    "Size": [
+      2,
+      2,
+      4
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          1,
+          0,
+          3
+        ],
+        "Dir": 0
+      }
+    ]
   },
   "CoastRoadGTDiag4Mirror": {
     "PageName": "Road/GT",
-    "Size": [
-      2,
-      2,
-      4
-    ],
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
-    "Clips": [
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          3
-        ],
-        "Dir": 0
-      },
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          1,
-          0,
-          0
-        ],
-        "Dir": 2
-      }
-    ],
     "Ground": {
       "Units": [
         [
@@ -9895,10 +9866,41 @@
           3
         ]
       ]
-    }
+    },
+    "Size": [
+      2,
+      2,
+      4
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          3
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          1,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
   },
   "CoastRoadLoopRight": {
     "PageName": "Road/GT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -9975,12 +9977,168 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadGTBiSlope1Curve3Mirror": {
     "PageName": "Road/GT",
+    "Ground": {
+      "Units": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ]
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
     "Size": [
       3,
       2,
@@ -10009,168 +10167,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {
-      "Units": [
-        [
-          2,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          2,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          2,
-          0,
-          2
-        ],
-        [
-          1,
-          0,
-          2
-        ],
-        [
-          0,
-          0,
-          2
-        ],
-        [
-          2,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          2,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          2
-        ],
-        [
-          0,
-          1,
-          2
-        ],
-        [
-          2,
-          1,
-          2
-        ]
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          2,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          2,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          2
-        ],
-        [
-          0,
-          0,
-          2
-        ],
-        [
-          2,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          2,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          2
-        ],
-        [
-          0,
-          1,
-          2
-        ]
-      ]
-    }
+    ]
   },
   "CoastRoadGTCurve2": {
     "PageName": "Road/GT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10221,12 +10223,30 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadSupportFull": {
     "PageName": "Road/RoadMain",
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1,
+        3,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
     "Units": [
       [
         0,
@@ -10282,31 +10302,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        2,
-        2,
-        2,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1,
-        3,
-        2,
-        3,
-        2,
-        2
-      ]
-    }
+    ]
   },
   "CoastRoadOpen": {
     "PageName": "Road/RoadMain",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -10366,10 +10365,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "CoastRoadStartLine": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10401,13 +10403,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadSupport": {
     "PageName": "Road/RoadMain",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -10532,11 +10531,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "CoastRoadCheckpointSupport": {
     "PageName": "Road/RoadMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10583,10 +10582,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadCheckpoint": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10627,12 +10629,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadFinish": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10664,63 +10666,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoad": {
     "PageName": "Road/RoadMain",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 6,
-    "Clips": [
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 0
-      },
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 1
-      },
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      },
-      {
-        "Name": "CoastRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 3
-      }
-    ],
     "Ground": {
       "SubVariants": [
         1,
@@ -10740,11 +10689,61 @@
         2,
         1
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "CoastRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
   },
   "CoastRoadSlopeStraightAir": {
     "PageName": "Road/Slopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10786,10 +10785,13 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadSlopeBase": {
     "PageName": "Road/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10830,13 +10832,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadSlopeStraightSupport": {
     "PageName": "Road/Slopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10883,14 +10882,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastSlopeBaseSupport": {
     "PageName": "Road/Slopes",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -10973,10 +10969,16 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "CoastRoadTurbo": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11012,12 +11014,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadRamp1L": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11049,12 +11051,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadRamp1R": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11086,13 +11088,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadTurboSupport": {
     "PageName": "Road/Ramps",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -11151,10 +11150,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadTurbo2": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11190,12 +11192,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadRamp2": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11222,12 +11224,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadTurboRoulette": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11263,12 +11265,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadRamp3L": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11295,12 +11297,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadRamp3R": {
     "PageName": "Road/Ramps",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11327,12 +11329,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterTurboSupport": {
     "PageName": "RoadWater/Turbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11373,13 +11375,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterTurbo2": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11416,11 +11415,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2Turbo2UpSupport": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11467,11 +11466,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2Turbo2DownSupport": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11518,11 +11517,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2TurboDownSupport": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11569,11 +11568,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2TurboUpSupport": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11620,11 +11619,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTurbo": {
     "PageName": "RoadWater/Turbos",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11661,11 +11660,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeEndGTCurve2": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11732,11 +11731,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeEnd": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11788,11 +11787,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeStart": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11839,11 +11838,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeStartGTCurve2": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11910,11 +11909,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeStartGTCurve2Mirror": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11981,11 +11980,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBiSlopeEndGTCurve2Mirror": {
     "PageName": "RoadWater/BiSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12052,11 +12051,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTBiSlope1Curve3": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12158,11 +12157,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTDiag4": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12254,11 +12253,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTBiSlope1Curve3Mirror": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12360,11 +12359,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTDiag4Mirror": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12456,11 +12455,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTCurve2": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12512,11 +12511,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterGTCurve3": {
     "PageName": "RoadWater/GT",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12583,10 +12582,31 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSupport": {
     "PageName": "RoadWater/RoadMain",
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1,
+        3,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
     "Units": [
       [
         0,
@@ -12642,31 +12662,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1,
-        3,
-        2,
-        3,
-        2,
-        2
-      ]
-    }
+    ]
   },
   "CoastRoadWaterFinish": {
     "PageName": "RoadWater/RoadMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12699,11 +12698,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWater": {
     "PageName": "RoadWater/RoadMain",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -12763,10 +12762,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "CoastRoadWaterCheckpointSupport": {
     "PageName": "RoadWater/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12812,13 +12814,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterCheckpoint": {
     "PageName": "RoadWater/RoadMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12860,11 +12859,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterStartLine": {
     "PageName": "RoadWater/RoadMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12897,53 +12896,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlopeStraightSupport": {
     "PageName": "RoadWater/Slopes",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        1,
-        0
-      ],
-      [
-        0,
-        2,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      3,
-      1
-    ],
-    "Variants": 1,
-    "Clips": [
-      {
-        "Name": "CoastRoadWaterClip",
-        "Offset": [
-          0,
-          1,
-          0
-        ],
-        "Dir": 2
-      },
-      {
-        "Name": "CoastRoadWaterClip",
-        "Offset": [
-          0,
-          2,
-          0
-        ],
-        "Dir": 0
-      }
-    ],
     "Ground": {
       "SubVariants": [
         1
@@ -12953,10 +12910,55 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      3,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "CoastRoadWaterClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "CoastRoadWaterClip",
+        "Offset": [
+          0,
+          2,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
   },
   "CoastRoadWaterSlopeBaseSupport": {
     "PageName": "RoadWater/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13002,13 +13004,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastRoadWaterSlopeStraight": {
     "PageName": "RoadWater/Slopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13050,11 +13049,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlopeBase": {
     "PageName": "RoadWater/Slopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13096,11 +13095,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterBumper": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13137,11 +13136,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterRamp2": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13169,11 +13168,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterRamp1R": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13206,11 +13205,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterRamp1L": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13243,11 +13242,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterHole2": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13284,11 +13283,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterRamp3R": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13316,11 +13315,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterRamp3L": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13348,11 +13347,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterHole": {
     "PageName": "RoadWater/Ramps",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13389,11 +13388,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2BiSlopeEnd": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13435,11 +13434,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2StraightSupport": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13486,11 +13485,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2Base": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13537,11 +13536,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2BiSlopeStart": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13583,11 +13582,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2Straight": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13634,11 +13633,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterSlope2BaseSupport": {
     "PageName": "RoadWater/Slope2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13685,11 +13684,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTwistedGT2x3Mirror": {
     "PageName": "RoadWater/Twisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13796,11 +13795,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTwistedGT2x3": {
     "PageName": "RoadWater/Twisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13907,11 +13906,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTwistedGT2x2": {
     "PageName": "RoadWater/Twisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14003,11 +14002,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterTwistedGT2x2Mirror": {
     "PageName": "RoadWater/Twisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14099,23 +14098,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastRoadWaterPillar": {
     "PageName": "Other",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 6,
     "Ground": {
       "SubVariants": [
         1,
@@ -14135,11 +14122,23 @@
         3,
         3
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6
   },
   "CoastTunnelClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14166,10 +14165,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "CoastSeaClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -14182,20 +14192,20 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "CoastHarborClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -14208,17 +14218,7 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "CoastWaterCliff": {
     "PageName": "Other",
@@ -14256,19 +14256,6 @@
   },
   "CoastRoadWaterPillarStraight": {
     "PageName": "Other",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         1
@@ -14278,10 +14265,7 @@
       "SubVariants": [
         3
       ]
-    }
-  },
-  "CoastRoadPillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -14294,7 +14278,10 @@
       1,
       1
     ],
-    "Variants": 6,
+    "Variants": 1
+  },
+  "CoastRoadPillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         4,
@@ -14314,10 +14301,7 @@
         3,
         3
       ]
-    }
-  },
-  "CoastDirtClip": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -14330,7 +14314,10 @@
       1,
       1
     ],
-    "Variants": 1,
+    "Variants": 6
+  },
+  "CoastDirtClip": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         1
@@ -14340,10 +14327,25 @@
       "SubVariants": [
         null
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
   },
   "CoastRoadClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14359,9 +14361,7 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "CoastDirtCliff": {
     "PageName": "Other",
@@ -14443,6 +14443,16 @@
   },
   "CoastPillarStraight": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        4
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        3
+      ]
+    },
     "Units": [
       [
         0,
@@ -14455,21 +14465,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        4
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        3
-      ]
-    }
+    "Variants": 1
   },
   "CoastRoadWaterClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14486,6 +14485,7 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   }
 }

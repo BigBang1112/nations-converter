@@ -1,7 +1,6 @@
 {
   "SpeedRockToRockToBridge": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -58,11 +57,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRockToRockToBridgeArch3": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -154,11 +153,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarSand6": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -225,11 +224,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarSand10": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -316,11 +315,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarWater6": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -387,11 +386,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarRock8": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -468,11 +467,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarWater10": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -559,11 +558,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgePillarRock4": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -620,11 +619,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRockToRockToBridgeArch5": {
     "PageName": "Bridge/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -741,11 +740,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeGTCurve4": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -867,11 +866,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeTurbo": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -913,11 +912,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeTurboRoulette": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -959,11 +958,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeToRoad": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1005,11 +1004,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeRamp": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1042,11 +1041,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeStraight": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1088,11 +1087,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBridgeSlopeBase4": {
     "PageName": "Bridge/BridgeSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1174,11 +1173,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadGTCurve4": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1260,11 +1259,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadLeft2x1": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1316,11 +1315,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadLeft4x1": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1392,11 +1391,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadGTCurve4InMirror": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1483,11 +1482,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadStraight": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1529,11 +1528,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadGTCurve4In": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1620,11 +1619,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadRight4x1": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1696,11 +1695,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadGTCurve4Mirror": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1782,11 +1781,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverRoadToRoadRight2x1": {
     "PageName": "River/Road",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1838,11 +1837,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisStraightUpCorner": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1964,11 +1963,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisStraightUp": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2120,11 +2119,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisStraightUpDiagRight": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2261,11 +2260,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisStraightUpDiagLeft": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2402,11 +2401,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisStraightUpBase1": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2533,11 +2532,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisBridgeDiagRight": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2689,11 +2688,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverTetrisBridgeDiagLeft": {
     "PageName": "River/Tetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2845,10 +2844,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedFreeSignWrongWay": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2864,25 +2866,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedAdvertising": {
     "PageName": "Decors/Signs",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         4
@@ -2892,10 +2879,25 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
   },
   "SpeedFreeSignLeft": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2911,12 +2913,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedFreeSignWarning": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2932,12 +2934,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoadSignThisWay": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2973,12 +2975,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoadSignWrongWay": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3014,12 +3016,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedFreeSignRight": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3035,12 +3037,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoadSignWarning": {
     "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3076,13 +3078,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicDerrick": {
     "PageName": "Decors/MetalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3114,11 +3113,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicContainers": {
     "PageName": "Decors/MetalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3135,11 +3134,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicBarrels": {
     "PageName": "Decors/MetalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3156,11 +3155,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedPipelineRoad": {
     "PageName": "Decors/MetalDecor",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -3220,11 +3219,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "SpeedClassicReservoir": {
     "PageName": "Decors/MetalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3263,10 +3262,21 @@
       "SubVariants": [
         null
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicRocks": {
     "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -3279,21 +3289,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "SpeedRocks2": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3325,11 +3324,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicMountain": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3521,11 +3520,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedSaguarosGround": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3542,11 +3541,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedSandCheckpoint": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3563,11 +3562,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicPeak": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3849,11 +3848,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRocksArch": {
     "PageName": "Decors/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3890,11 +3889,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedCliffRoad2": {
     "PageName": "RoadTwisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3961,11 +3960,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedCliffRoad": {
     "PageName": "RoadTwisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4017,7 +4016,8 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRock": {
     "PageName": "Terraformation",
@@ -4147,6 +4147,8 @@
   },
   "SpeedTiltTransitionRight": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4183,12 +4185,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTiltCornerAir": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4204,12 +4206,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTiltTShaped": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4236,12 +4238,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTiltStraightAir": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4257,12 +4259,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedSpinRight": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4348,12 +4350,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTiltTransitionLeft": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4390,12 +4392,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTiltCornerInside": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4411,12 +4413,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedSpinLeft": {
     "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4502,12 +4504,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGaragePillar": {
     "PageName": "Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4561,12 +4563,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopePillar": {
     "PageName": "GarageSlope",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4607,12 +4609,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeHole": {
     "PageName": "GarageSlope",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4653,12 +4655,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageTurboSlopeRight": {
     "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4699,12 +4701,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageTurboSlopeUp": {
     "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4745,12 +4747,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageTurboSlopeDown": {
     "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4791,12 +4793,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageTurboSlopeLeft": {
     "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4837,12 +4839,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageTurbo": {
     "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4896,12 +4898,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGaragePillarRoad": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4960,12 +4962,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoadStraightToGarage": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5001,12 +5003,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageToRoadAir": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5060,12 +5062,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageHoleRoad": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5124,12 +5126,26 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGaragePillarSlope": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -5166,26 +5182,26 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1
-      ]
-    }
+    ]
   },
   "SpeedGarageHoleSlope": {
     "PageName": "Parking/GarageMisc",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -5222,26 +5238,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1
-      ]
-    }
+    ]
   },
   "SpeedGarageToSlope": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5288,12 +5290,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageCheckpoint": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5329,12 +5331,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageHatSlopeBottom": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5385,12 +5387,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageToSlopeMirror": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5437,12 +5439,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageRoad": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5501,12 +5503,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageBiSlopeEnd": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5552,49 +5554,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlope": {
     "PageName": "Parking/Garage",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        1,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      2,
-      1
-    ],
-    "Clips": [
-      {
-        "Name": "SpeedGarageRoadClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      },
-      {
-        "Name": "SpeedGarageRoadClip",
-        "Offset": [
-          0,
-          1,
-          0
-        ],
-        "Dir": 0
-      }
-    ],
     "Ground": {
       "Variants": 2,
       "SubVariants": [
@@ -5610,10 +5573,49 @@
         1,
         1
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
   },
   "SpeedGarageHatSlopeTop": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5654,12 +5656,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageBiSlopeStart": {
     "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5705,12 +5707,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT3b": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5761,12 +5763,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT2b": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5797,12 +5799,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT2": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5833,12 +5835,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT5b": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5919,12 +5921,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT4b": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5990,12 +5992,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT4": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6061,12 +6063,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT3": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6117,12 +6119,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedGarageSlopeGT5": {
     "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6203,13 +6205,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTunnelRoad": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -6269,7 +6268,8 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "SpeedTunnelSlope": {
     "PageName": "Tunnel/TunnelMain",
@@ -6322,7 +6322,6 @@
   },
   "SpeedTunnelTurbo": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6359,11 +6358,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadGTCurve3": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6420,11 +6419,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadGTCurve2": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6476,11 +6475,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadCheckpoint": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6517,11 +6516,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelDesertToRockEntry2": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6568,11 +6567,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelExit": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6614,11 +6613,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelDesertToRockEntry1": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6665,11 +6664,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry3": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6721,11 +6720,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry2": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6777,11 +6776,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry1": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6833,11 +6832,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRockToRockEntry3": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6894,11 +6893,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry1_Old": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6950,11 +6949,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry3_Old": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7006,11 +7005,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRoadEntry2_Old": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7062,11 +7061,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRockToRockEntry2": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7123,11 +7122,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedTunnelRockToRockEntry1": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7184,10 +7183,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedCliffRoadAir": {
     "PageName": "Tunnel/CliffRoads",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7238,13 +7240,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRockToRockLacets": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7571,11 +7570,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedDesertToRockToRoad": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7622,11 +7621,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRockToRockLacetsBis": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7968,11 +7967,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRockToRockToRoad": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8029,11 +8028,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedCliffRoad3": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8105,11 +8104,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedCliffBridgeAir": {
     "PageName": "Tunnel/CliffRoads",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8146,10 +8145,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedToll2": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8185,12 +8187,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedHoleAir": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8226,12 +8228,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedHumpRoad2": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8267,13 +8269,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedPlankAir": {
     "PageName": "Road/RoadHazardStraight",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8310,10 +8309,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedJumpInRoad": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8349,12 +8351,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedToll": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8390,12 +8392,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedHumpRoad": {
     "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8431,13 +8433,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedBiSlopeEnd": {
     "PageName": "Road/RoadTwisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8484,10 +8483,13 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedLoopRight": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -8568,12 +8570,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedLoopLeft": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8654,12 +8656,26 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedSlope": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -8696,26 +8712,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1
-      ]
-    }
+    ]
   },
   "SpeedGtCurve3": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8771,12 +8773,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicGtCurve": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8827,12 +8829,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicJump": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8859,12 +8861,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedBiSlopeStart": {
     "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8910,13 +8912,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedBiSlopeStraight": {
     "PageName": "Road/RoadTwisted",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8958,10 +8957,13 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedClassicCheckpoint": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8997,12 +8999,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicFinish": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9029,12 +9031,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTurboRoulette": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9070,12 +9072,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicTurbo": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9111,12 +9113,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedFreeWheeling": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9152,12 +9154,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedStartFinishLine": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9193,12 +9195,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoadLamp": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9257,12 +9259,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedClassicStartLine": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9289,12 +9291,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRoad": {
     "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9353,13 +9355,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedRocksRoad": {
     "PageName": "Road/RoadHazardSlalom",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9396,11 +9395,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedFallenContainers": {
     "PageName": "Road/RoadHazardSlalom",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9442,10 +9441,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedBarrelJump": {
     "PageName": "Road/RoadHazardSlalom",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9481,13 +9483,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedPipelineRoadClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9504,7 +9503,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "DesertToDesert2": {
     "PageName": "Other",
@@ -9542,7 +9542,6 @@
   },
   "SpeedRiverRoadClipRight": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9559,10 +9558,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedRiverClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -9575,17 +9585,7 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "DesertToRiver": {
     "PageName": "Other",
@@ -9725,6 +9725,8 @@
   },
   "SpeedGarageRoadClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9740,12 +9742,20 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedTunnelClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -9758,17 +9768,7 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        null
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1
-      ]
-    }
+    "Variants": 1
   },
   "RockToRock": {
     "PageName": "Other",
@@ -9840,6 +9840,16 @@
   },
   "SpeedRockClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -9852,20 +9862,20 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "SpeedClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -9878,21 +9888,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "SpeedRiverRoadClipLeft": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9909,13 +9908,16 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "SpeedPylon": {
     "PageName": "Other"
   },
   "SpeedRoadClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9931,13 +9933,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "SpeedBridgeClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9954,6 +9953,7 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   }
 }

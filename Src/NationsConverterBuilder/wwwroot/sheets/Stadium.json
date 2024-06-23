@@ -1,10 +1,6 @@
 {
   "StadiumSculptBridgeSlopeStartMirror": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -109,11 +105,14 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumSculptBridgeSlopeEndMirror": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -176,10 +175,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgePillarMirror": {
     "PageName": "Decors/Bridge",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -240,13 +242,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumSculptBridgeStraight": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -298,14 +297,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgeSlopeStart": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -410,11 +406,14 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumSculptBridgeStraightSmall": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -447,11 +446,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgeSlopeEnd": {
     "PageName": "Decors/Bridge",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -514,10 +513,13 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgePillar": {
     "PageName": "Decors/Bridge",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -578,13 +580,10 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumSculptBridgeSuspendSlopeEnd": {
     "PageName": "Decors/BridgeSuspend",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -999,11 +998,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgeSuspendSlope2Mirror": {
     "PageName": "Decors/BridgeSuspend",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1487,11 +1486,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgeSuspendSlopeEndMirror": {
     "PageName": "Decors/BridgeSuspend",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1906,11 +1905,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptBridgeSuspendSlope2": {
     "PageName": "Decors/BridgeSuspend",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2409,10 +2408,13 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumControlLight": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2448,13 +2450,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeRoadLightSystem": {
     "PageName": "Decors/Control",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -2514,10 +2513,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumControlRoadPub": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2576,13 +2578,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeRoadSoundSystem": {
     "PageName": "Decors/Control",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -2642,10 +2641,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumControlLightBase": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2661,12 +2663,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumControlRoadGlass": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2725,12 +2727,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumControlCameraPub": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2766,12 +2768,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumControlRoadCamera": {
     "PageName": "Decors/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2830,16 +2832,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumFabricPillarCornerOut": {
     "PageName": "Decors/Fabric",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -2877,14 +2873,14 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumFabricPillarCornerInAir": {
     "PageName": "Decors/Fabric",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -2962,14 +2958,14 @@
         3,
         2
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumFabricPillarAir": {
     "PageName": "Decors/Fabric",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -3007,10 +3003,16 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumFabricCornerOut": {
     "PageName": "Decors/Fabric",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3066,13 +3068,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumFabricStraight1x1Air": {
     "PageName": "Decors/Fabric",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3124,19 +3123,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumFabricStraight1x1": {
     "PageName": "Decors/Fabric",
-    "Size": [
-      2,
-      6,
-      1
-    ],
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -3219,10 +3210,202 @@
           0
         ]
       ]
-    }
+    },
+    "Size": [
+      2,
+      6,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumFabricCornerIn": {
     "PageName": "Decors/Fabric",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ]
+    },
     "Size": [
       2,
       6,
@@ -3231,194 +3414,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {
-      "Units": [
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          0,
-          2,
-          1
-        ],
-        [
-          0,
-          3,
-          0
-        ],
-        [
-          0,
-          3,
-          1
-        ],
-        [
-          0,
-          4,
-          0
-        ],
-        [
-          0,
-          4,
-          1
-        ],
-        [
-          0,
-          5,
-          0
-        ],
-        [
-          0,
-          5,
-          1
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          1,
-          2,
-          0
-        ],
-        [
-          1,
-          2,
-          1
-        ],
-        [
-          1,
-          3,
-          0
-        ],
-        [
-          1,
-          3,
-          1
-        ],
-        [
-          1,
-          4,
-          0
-        ],
-        [
-          1,
-          5,
-          0
-        ]
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          0,
-          2,
-          1
-        ],
-        [
-          0,
-          3,
-          0
-        ],
-        [
-          0,
-          3,
-          1
-        ],
-        [
-          0,
-          4,
-          0
-        ],
-        [
-          0,
-          4,
-          1
-        ],
-        [
-          0,
-          5,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          1,
-          2,
-          0
-        ],
-        [
-          1,
-          2,
-          1
-        ],
-        [
-          1,
-          3,
-          0
-        ],
-        [
-          1,
-          4,
-          0
-        ]
-      ]
-    }
+    ]
   },
   "StadiumFabricCross3x3": {
     "PageName": "Decors/Fabric2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3515,11 +3514,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumFabricCross3x3Screen": {
     "PageName": "Decors/Fabric2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3741,11 +3740,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumFabricPillarAirScreen": {
     "PageName": "Decors/Fabric2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3787,11 +3786,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableTube": {
     "PageName": "Decors/Fabric2",
-    "Variants": 9,
     "Air": {
       "Units": [
         [
@@ -3827,11 +3826,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 9
   },
   "StadiumFabricCross1x1": {
     "PageName": "Decors/Fabric2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3848,11 +3847,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableAdvert": {
     "PageName": "Decors/Fabric2",
-    "Variants": 9,
     "Air": {
       "Units": [
         [
@@ -3912,11 +3911,11 @@
         null,
         null
       ]
-    }
+    },
+    "Variants": 9
   },
   "StadiumInflatableSupport": {
     "PageName": "Decors/Fabric2",
-    "Variants": 9,
     "Air": {
       "Units": [
         [
@@ -3941,10 +3940,13 @@
         1,
         1
       ]
-    }
+    },
+    "Variants": 9
   },
   "StadiumTubeRoad": {
     "PageName": "Decors/PillarRoad",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4003,12 +4005,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeRoadCross": {
     "PageName": "Decors/PillarRoad",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4067,12 +4069,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeRoadDown": {
     "PageName": "Decors/PillarRoad",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4131,12 +4133,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeRoadUp": {
     "PageName": "Decors/PillarRoad",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4195,13 +4197,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumSculptArchRingStartMirror": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4528,11 +4527,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptB": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4604,11 +4603,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptA": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4680,11 +4679,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptArchRingEndMirror": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5046,11 +5045,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptC": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5122,11 +5121,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptArchRingEnd": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5493,11 +5492,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumSculptArchRingStart": {
     "PageName": "Decors/Flame",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5819,11 +5818,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableCastleBig": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5880,11 +5879,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatablePalmTree": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5906,11 +5905,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableCastle": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5937,11 +5936,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumAirship": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6113,11 +6112,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableCactus": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6139,11 +6138,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableSnowTree": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6165,11 +6164,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumInflatableCastleDoor": {
     "PageName": "Decors/Inflat",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6216,11 +6215,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumTubePillarBranch": {
     "PageName": "Decors/Pillar",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6237,10 +6236,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumTubeV1": {
     "PageName": "Decors/Pillar",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6256,12 +6258,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubePillarCap": {
     "PageName": "Decors/Pillar",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6277,12 +6279,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTube": {
     "PageName": "Decors/Pillar",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6298,12 +6300,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeV8": {
     "PageName": "Decors/Pillar",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6354,12 +6356,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubeV4": {
     "PageName": "Decors/Pillar",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6390,13 +6392,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainYShapedDiag2SlopeUp": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6497,11 +6496,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag2x2SlopeMirror": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6573,11 +6572,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag4x3SlopeMirror": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6694,11 +6693,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainYShapedDiag2SlopeDown": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6799,11 +6798,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag3x2SlopeMirror": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6895,11 +6894,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag3x2Slope": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6991,11 +6990,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag2x2Slope": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7067,11 +7066,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag4x3Slope": {
     "PageName": "Slope/GTDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7183,11 +7182,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumHolePillarSlope": {
     "PageName": "Slope/Hazards",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7229,11 +7228,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadStretchSlope": {
     "PageName": "Slope/Hazards",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7275,11 +7274,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumHoleSlope": {
     "PageName": "Slope/Hazards",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7321,11 +7320,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumBump1Slope": {
     "PageName": "Slope/Hazards",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7367,11 +7366,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainCheckpointDown": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7413,11 +7412,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainTurboDown": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7459,11 +7458,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainTurboRouletteUp": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7505,11 +7504,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainTurboRouletteDown": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7551,11 +7550,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainTurboUp": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7597,11 +7596,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainCheckpointUp": {
     "PageName": "Slope/Race",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7643,11 +7642,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainBiSlopeEnd": {
     "PageName": "Slope/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7699,11 +7698,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainSlopeUTop": {
     "PageName": "Slope/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7740,10 +7739,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainBiSlopeStart": {
     "PageName": "Slope/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7794,12 +7796,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainSlopeUBottom": {
     "PageName": "Slope/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7840,12 +7842,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainSlopeBase2": {
     "PageName": "Slope/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7891,12 +7893,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainSlopeStraight": {
     "PageName": "Slope/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7937,12 +7939,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainSlopeBase": {
     "PageName": "Slope/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7983,12 +7985,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumInflatablePillar": {
     "PageName": "Tube/Control",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8012,12 +8014,12 @@
       1,
       1,
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumTubePillar": {
     "PageName": "Tube\\Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8033,9 +8035,7 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumDirt": {
     "PageName": "Terraformation",
@@ -8102,6 +8102,8 @@
   },
   "StadiumRoadTiltGTCurve3": {
     "PageName": "RoadTilt/GTCurves",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8197,13 +8199,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag2x2TiltMirror": {
     "PageName": "RoadTilt/GTCurves",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8280,11 +8279,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag3x2Tilt": {
     "PageName": "RoadTilt/GTCurves",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8366,11 +8365,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag2x2Tilt": {
     "PageName": "RoadTilt/GTCurves",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8437,11 +8436,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag3x2TiltMirror": {
     "PageName": "RoadTilt/GTCurves",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8523,10 +8522,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadTiltGTCurve4": {
     "PageName": "RoadTilt/GTCurves",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8647,12 +8649,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltCorner": {
     "PageName": "RoadTilt/GTCurves",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8693,12 +8695,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltGTCurve2": {
     "PageName": "RoadTilt/GTCurves",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8764,13 +8766,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumStretchTilt": {
     "PageName": "RoadTilt/Hazards",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8812,10 +8811,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumBump1Tilt": {
     "PageName": "RoadTilt/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8856,12 +8858,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHoleTilt": {
     "PageName": "RoadTilt/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8902,12 +8904,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHolePillarTilt": {
     "PageName": "RoadTilt/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8948,12 +8950,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurboLeft": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8994,12 +8996,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurboRouletteRight": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9040,12 +9042,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainCheckpointLeft": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9091,12 +9093,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurboRouletteLeft": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9137,12 +9139,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurboRight": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9183,12 +9185,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainCheckpointRight": {
     "PageName": "RoadTilt/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9234,12 +9236,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2DiagRight": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9310,12 +9312,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2DiagLeft": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9386,12 +9388,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition1Left": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9432,12 +9434,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition1Right": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9478,12 +9480,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2Left": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9534,12 +9536,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2CurveLeft": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9610,12 +9612,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2Right": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9666,12 +9668,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltStraight": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9712,12 +9714,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltTransition2CurveRight": {
     "PageName": "RoadTilt/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -9788,13 +9790,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltGTCurve2DownLeft": {
     "PageName": "RoadTilt/GTCurves2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9861,10 +9860,13 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadTiltCornerUpRight": {
     "PageName": "RoadTilt/GTCurves2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9905,12 +9907,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltGTCurve2UpLeft": {
     "PageName": "RoadTilt/GTCurves2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9976,13 +9978,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltGTCurve2DownRight": {
     "PageName": "RoadTilt/GTCurves2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10049,10 +10048,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadTiltCornerUpLeft": {
     "PageName": "RoadTilt/GTCurves2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10093,13 +10095,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltCornerDownLeft": {
     "PageName": "RoadTilt/GTCurves2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10141,11 +10140,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadTiltCornerDownRight": {
     "PageName": "RoadTilt/GTCurves2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10187,10 +10186,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadTiltGTCurve2UpRight": {
     "PageName": "RoadTilt/GTCurves2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10256,13 +10258,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPlatformCheckpoint": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10289,11 +10288,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformCheckpointDown": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10325,11 +10324,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCheckpointRingV": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10361,11 +10360,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformCheckpointRight": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10397,11 +10396,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformCheckpointLeft": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10433,11 +10432,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformCheckpointUp": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10469,11 +10468,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCheckpointRingHRoad": {
     "PageName": "Platform/Checkpoints",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -10533,11 +10532,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumPlatformGTCurve3Wall4": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10649,11 +10648,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformGTCurve2Wall4": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10725,11 +10724,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformGTCurve3Wall1": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10766,11 +10765,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformGTCurve3Wall2": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10832,11 +10831,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformGTCurve2Wall2": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10878,11 +10877,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformGTCurve2Wall1": {
     "PageName": "Platform/GTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10909,11 +10908,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformToRoadMain": {
     "PageName": "Platform/Transition",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10946,10 +10945,13 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformToRoad2": {
     "PageName": "Platform/Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10981,12 +10983,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPlatformToRoad2Mirror": {
     "PageName": "Platform/Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11018,12 +11020,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPlatformToRoad": {
     "PageName": "Platform/Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11050,12 +11052,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPlatformLoopStart": {
     "PageName": "Platform/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11086,13 +11088,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPlatformWallPub2": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11114,11 +11113,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformWall1": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11135,11 +11134,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformLoopEnd": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11171,11 +11170,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformWall2": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11197,11 +11196,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformWallBorder": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11218,11 +11217,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformWall4": {
     "PageName": "Platform/Main",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11254,11 +11253,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformTurboUp": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11285,11 +11284,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformTurboDown": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11316,11 +11315,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformTurboRight": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11347,11 +11346,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformTurbo": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11368,11 +11367,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformBiSlope2End": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11389,11 +11388,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformRoad": {
     "PageName": "Platform/Road",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -11453,11 +11452,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumPlatformBiSlope2Start": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11479,11 +11478,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformSlope2Straight": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11505,11 +11504,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumPlatformTurboLeft": {
     "PageName": "Platform/Road",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -11536,10 +11535,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainGTDiag4x3Mirror": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11615,12 +11617,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag3x2Mirror": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11681,12 +11683,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag2x2Mirror": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11737,12 +11739,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag4x3": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11818,12 +11820,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainYShapedCurve2": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11893,12 +11895,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainYShapedDiag2": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11968,12 +11970,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag2x2": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12024,12 +12026,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTDiag3x2": {
     "PageName": "RoadMain/GTDiag",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12090,12 +12092,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHolePillar3": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12131,12 +12133,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHolePillar2Front": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12172,12 +12174,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRamp": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12204,12 +12206,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumBump1": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12250,12 +12252,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHolePillar2Line": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12291,12 +12293,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHolePillar": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12332,12 +12334,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRampLow": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12364,12 +12366,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadStretch": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12405,12 +12407,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumHole": {
     "PageName": "RoadMain/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12446,12 +12448,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainStartLine": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12483,12 +12485,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainStartFinishLine": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12529,12 +12531,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurbo": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12570,12 +12572,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainTurboRoulette": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12611,12 +12613,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainFW": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12652,13 +12654,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumGrassCheckpoint": {
     "PageName": "RoadMain/Race",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -12680,10 +12679,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainCheckpoint": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12724,12 +12726,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainFinishLine": {
     "PageName": "RoadMain/Race",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12761,12 +12763,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTCurve5": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12867,12 +12869,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTCurve4": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12958,12 +12960,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTCurve3": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13034,12 +13036,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMainGTCurve2": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13090,12 +13092,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumLoopRight": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         2,
@@ -13272,12 +13274,30 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadMain": {
     "PageName": "RoadMain/Main",
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        4,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -13328,30 +13348,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        4,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    }
+    ]
   },
   "StadiumLoopLeft": {
     "PageName": "RoadMain/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13528,13 +13530,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderSlopeStraightRight": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13566,11 +13565,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeStraightBottom": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13597,11 +13596,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeEndLeft": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13628,11 +13627,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeEndRight": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13659,10 +13658,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeStartRight": {
     "PageName": "Circuit/SlopeBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13688,12 +13690,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderSlopeStartLeft": {
     "PageName": "Circuit/SlopeBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13719,13 +13721,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderSlopeStraightTop": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13752,11 +13751,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeStraightLeft": {
     "PageName": "Circuit/SlopeBorders",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13788,10 +13787,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderDiagOut": {
     "PageName": "Circuit/FlatBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13812,12 +13814,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderCornerIn": {
     "PageName": "Circuit/FlatBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13838,12 +13840,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderStraight": {
     "PageName": "Circuit/FlatBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13864,12 +13866,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderDiagIn": {
     "PageName": "Circuit/FlatBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13890,12 +13892,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderCornerOut": {
     "PageName": "Circuit/FlatBorders",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13916,12 +13918,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve4Out": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14012,12 +14014,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve2In": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14058,12 +14060,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve3In": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14129,12 +14131,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve4In": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14215,12 +14217,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve2Out": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14261,12 +14263,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderGTCurve3Out": {
     "PageName": "Circuit/FlatGTCurve",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14347,13 +14349,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBorderSlopeCornerOutLeftTop": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14380,11 +14379,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerInLeftBottom": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14416,11 +14415,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerOutRightTop": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14447,11 +14446,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitSlopeCornerInLeftBottom": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14478,11 +14477,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerOutRightBottom": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14509,11 +14508,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerInRightBottom": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14545,11 +14544,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerInLeftTop": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14581,11 +14580,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeCornerInRightTop": {
     "PageName": "Circuit/SlopeCorner",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14617,11 +14616,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagOutRightBottom": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14648,11 +14647,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagInRightTop": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14684,11 +14683,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagOutRightTop": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14715,11 +14714,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagOutLeftBottom": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14746,11 +14745,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagInLeftTop": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14782,11 +14781,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagInRightBottom": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14818,11 +14817,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagInLeftBottom": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14854,11 +14853,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeDiagOutLeftTop": {
     "PageName": "Circuit/SlopeDiag",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -14885,10 +14884,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitPillar7": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14909,12 +14911,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitPillar6": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14935,12 +14937,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitPillar3": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14961,12 +14963,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitPillar1": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14987,12 +14989,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBumpUp": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15013,12 +15015,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitPillar2": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15039,12 +15041,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitHole": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15060,12 +15062,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitBumpUp2": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15096,12 +15098,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitPillar5": {
     "PageName": "Circuit/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15122,12 +15124,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitRampBig": {
     "PageName": "Circuit/Ramp",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15148,12 +15150,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitRampSmall1x1": {
     "PageName": "Circuit/Ramp",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15174,12 +15176,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitLoopStart": {
     "PageName": "Circuit/Ramp",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15215,12 +15217,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitRampSmall1x05": {
     "PageName": "Circuit/Ramp",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15241,12 +15243,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitTurbo": {
     "PageName": "Circuit/FlatBase",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15262,13 +15264,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitTurboUp": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15295,11 +15294,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitSlopeEnd": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15321,10 +15320,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBase": {
     "PageName": "Circuit/FlatBase",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15340,13 +15342,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitTurboRight": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15373,11 +15372,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitTurboDown": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15404,11 +15403,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitTurboLeft": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15435,10 +15434,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitSlopeStart": {
     "PageName": "Circuit/FlatBase",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -15459,16 +15461,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumCircuitSlopeStraight": {
     "PageName": "Circuit/FlatBase",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Air": {
       "Units": [
         [
@@ -15492,11 +15488,14 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "StadiumCircuitBorderSlopeGTCurve2OutLeftTop": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15563,11 +15562,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2OutRightBottom": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15629,11 +15628,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2InLeftBottom": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15695,11 +15694,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2OutRightTop": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15766,11 +15765,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2InRightTop": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15837,11 +15836,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2InRightBottom": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15903,11 +15902,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2InLeftTop": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -15974,11 +15973,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumCircuitBorderSlopeGTCurve2OutLeftBottom": {
     "PageName": "Circuit/SlopeGTCurve",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -16040,11 +16039,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillSlopeGT2": {
     "PageName": "RoadDirt/TransitionsFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16126,11 +16125,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillSlope": {
     "PageName": "RoadDirt/TransitionsFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16177,11 +16176,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillSlopeGT2Bis": {
     "PageName": "RoadDirt/TransitionsFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16268,11 +16267,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillSlope2": {
     "PageName": "RoadDirt/TransitionsFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16329,11 +16328,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillWave": {
     "PageName": "RoadDirt/TransitionsFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16395,11 +16394,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltToRoadRight": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16471,11 +16470,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltCornerOut": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16532,11 +16531,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltCornerLeft": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16593,11 +16592,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltCornerIn": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16684,11 +16683,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltStraight": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16740,11 +16739,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltCornerRight": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16801,11 +16800,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltToRoadLeft": {
     "PageName": "RoadDirt/HillTilt",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16877,11 +16876,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumDirtDeadendSpot": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16903,11 +16902,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtWave_x1": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16944,11 +16943,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtWave_x2": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -16985,11 +16984,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumDirtDeadendDoor": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17011,11 +17010,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoadGrass": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17052,11 +17051,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumDirtDeadendTent1": {
     "PageName": "RoadDirt/Decors",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17078,11 +17077,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHighToRoad": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17124,11 +17123,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoadDirtHigh2": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17170,11 +17169,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoad": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17211,11 +17210,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoadDirtHighCross": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17270,11 +17269,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoadDirtHigh": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17311,11 +17310,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtToRoadDirtHighBridge": {
     "PageName": "RoadDirt/Transitions",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17375,11 +17374,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHighFenceStraight": {
     "PageName": "RoadDirt/RoadHigh",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17421,11 +17420,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHighFenceCorner": {
     "PageName": "RoadDirt/RoadHigh",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17467,11 +17466,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHigh": {
     "PageName": "RoadDirt/RoadHigh",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -17531,11 +17530,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumRoadDirtHighGTCurve3": {
     "PageName": "RoadDirt/RoadHigh",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17637,11 +17636,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHighCheckpoint": {
     "PageName": "RoadDirt/RoadHigh",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17688,11 +17687,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtGTCurve3": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17779,11 +17778,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtGTCurve2": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17840,11 +17839,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirt": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -17904,11 +17903,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "StadiumRoadDirtDiagonaleLeft": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -17990,11 +17989,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtFenceStraight": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18031,11 +18030,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtTurbo": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18072,11 +18071,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtDiagonaleRight": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18158,11 +18157,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtFenceCorner": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18199,11 +18198,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtCheckpoint": {
     "PageName": "RoadDirt/RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18245,11 +18244,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltClipRight": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18266,10 +18265,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadMainClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -18285,12 +18287,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltClipRight": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -18311,12 +18313,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadTiltClipLeft": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -18337,25 +18339,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumWaterClip": {
     "PageName": "Other",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         1
@@ -18365,11 +18352,23 @@
       "SubVariants": [
         null
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
   },
   "StadiumRoadDirtHillTiltClipLeft": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18386,7 +18385,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumDirtBorder": {
     "PageName": "Other",
@@ -18424,7 +18424,6 @@
   },
   "StadiumRoadDirtParkClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18441,10 +18440,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumDirtClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -18457,17 +18467,7 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "StadiumDirtHill": {
     "PageName": "Other",
@@ -18510,6 +18510,8 @@
   },
   "StadiumCarterRoadClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -18525,9 +18527,7 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumPool": {
     "PageName": "Other",
@@ -18565,6 +18565,8 @@
   },
   "StadiumTubeRoadClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -18580,13 +18582,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "StadiumRoadDirtClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18603,11 +18602,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "StadiumRoadDirtHighClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -18624,13 +18623,24 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "PylonStadium": {
     "PageName": "Other"
   },
   "StadiumGrassClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -18643,16 +18653,6 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   }
 }

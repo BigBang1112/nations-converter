@@ -2,7 +2,7 @@
 
 namespace NationsConverterShared.Models;
 
-public sealed class ConversionModifierModel
+public class ConversionModifierModel
 {
     public Int3[]? Units { get; set; }
     public Int3? Size { get; set; }

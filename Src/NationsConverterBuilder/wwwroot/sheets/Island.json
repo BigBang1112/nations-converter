@@ -1,6 +1,8 @@
 {
   "IslandHighWayCorner": {
     "PageName": "HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -36,12 +38,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlope": {
     "PageName": "Croisette/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -87,12 +89,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlopeBase": {
     "PageName": "Croisette/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -133,12 +135,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlopeStart": {
     "PageName": "Croisette/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -179,12 +181,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlopeEnd": {
     "PageName": "Croisette/Slopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -225,12 +227,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlalomJump": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -266,12 +268,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSlalomJumpMirror": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -307,12 +309,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteTurbo": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -348,12 +350,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteTurbo2": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -389,12 +391,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisette": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -453,12 +455,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteSupport": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -517,12 +519,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteCheckpoint": {
     "PageName": "Croisette/Main",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -558,12 +560,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteStraightPilar": {
     "PageName": "Croisette",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -579,12 +581,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisettePillar": {
     "PageName": "Croisette",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -605,13 +607,10 @@
       1,
       1,
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandDecorRock1": {
     "PageName": "Decors/DecorVarious",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -633,11 +632,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandDecorVegetation1": {
     "PageName": "Decors/DecorVarious",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -659,11 +658,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHotel": {
     "PageName": "Decors/DecorVarious",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -732,14 +731,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAntenne": {
     "PageName": "Decors/DecorVarious",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -802,11 +798,14 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "IslandJettyBeachL": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -828,11 +827,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandClubBeach": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -854,11 +853,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandJettyBeach2": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -880,11 +879,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandClubKioskBeach": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -906,11 +905,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandClubBeach2": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -932,11 +931,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandJettyBeachR": {
     "PageName": "Decors/Club",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -958,10 +957,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSignsAdvert": {
     "PageName": "Decors/DecorLandSigns",
+    "Ground": {
+      "SubVariants": [
+        4
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -979,20 +989,12 @@
       2,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        4
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1
-      ]
-    }
+    "Variants": 1
   },
   "IslandSignsLightRamp": {
     "PageName": "Decors/DecorLandSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1008,13 +1010,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandFloodLight": {
     "PageName": "Decors/DecorLandSigns",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1031,10 +1030,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSignsAdvertSupport": {
     "PageName": "Decors/DecorLandSigns",
+    "Ground": {
+      "SubVariants": [
+        4
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -1052,21 +1062,10 @@
       2,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        4
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1
-      ]
-    }
+    "Variants": 1
   },
   "IslandDecorAdvertisement": {
     "PageName": "Decors/DecorLandSigns",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1088,10 +1087,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHighWayAdvertisement": {
     "PageName": "Decors/DecorLandSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1132,13 +1134,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSignsSupport": {
     "PageName": "Decors/DecorLandSigns",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -1155,10 +1154,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSigns": {
     "PageName": "Decors/DecorLandSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1174,12 +1176,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaSignsLightRamp": {
     "PageName": "Decors/DecorSeaSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1195,12 +1197,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaSignsAdvert": {
     "PageName": "Decors/DecorSeaSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1221,12 +1223,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaSigns": {
     "PageName": "Decors/DecorSeaSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1242,12 +1244,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaSignsAdvertSupport": {
     "PageName": "Decors/DecorSeaSigns",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1268,13 +1270,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandBeachRocks": {
     "PageName": "Decors/DecorFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1296,11 +1295,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHills6DecoTree": {
     "PageName": "Decors/DecorFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1347,11 +1346,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHillsDecoTree": {
     "PageName": "Decors/DecorFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1378,11 +1377,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandBeachTrees": {
     "PageName": "Decors/DecorFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1404,11 +1403,11 @@
       "SubVariants": [
         5
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHills6DecoRock": {
     "PageName": "Decors/DecorFrontier",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1455,10 +1454,13 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpacePlateformLaunch2": {
     "PageName": "Decors/Space",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1484,16 +1486,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSpacePlateformLaunch1": {
     "PageName": "Decors/Space",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -1571,11 +1567,14 @@
         4,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "IslandSpaceAntenne2": {
     "PageName": "Decors/Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1612,11 +1611,11 @@
       "SubVariants": [
         3
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceAntenne1": {
     "PageName": "Decors/Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1658,11 +1657,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceBuilding": {
     "PageName": "Decors/Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1704,14 +1703,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceLaunch1": {
     "PageName": "Decors/Space",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -1789,10 +1785,16 @@
         4,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "IslandSpaceLaunch2": {
     "PageName": "Decors/Space",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1818,16 +1820,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSpaceLaunch3": {
     "PageName": "Decors/Space",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -1890,10 +1886,24 @@
         1,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "IslandSignsLightRampPillar": {
     "PageName": "Decors/DecorBuilt",
+    "Ground": {
+      "SubVariants": [
+        4
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -1906,20 +1916,12 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        4
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1
-      ]
-    }
+    "Variants": 1
   },
   "IslandSeaSignsLightRampPillar": {
     "PageName": "Decors/DecorBuilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -1935,13 +1937,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandAirportRoadGrass": {
     "PageName": "Decors/Airport",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -2001,11 +2000,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "IslandAirportTarmac": {
     "PageName": "Decors/Airport",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2042,11 +2041,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAirportTransitionToHighWay": {
     "PageName": "Decors/Airport",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2088,11 +2087,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAirportRoad": {
     "PageName": "Decors/Airport",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -2152,11 +2151,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "IslandAirportCheckpoint": {
     "PageName": "Decors/Airport",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2193,11 +2192,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAirportPlane": {
     "PageName": "Decors/Airport",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2234,11 +2233,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAirportHangar": {
     "PageName": "Decors/Airport",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2275,11 +2274,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandJettySea": {
     "PageName": "Decors/Jetty",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2296,11 +2295,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandClubKioskSea": {
     "PageName": "Decors/Jetty",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2317,11 +2316,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandChalutier": {
     "PageName": "Decors/Jetty",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2343,11 +2342,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandCommitee": {
     "PageName": "Decors/Jetty",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2369,11 +2368,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandClubMarina": {
     "PageName": "Decors/Jetty",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2395,10 +2394,13 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHighWayUTurnSlopeLeft": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2489,12 +2491,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTDiag": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2545,12 +2547,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTYShaped": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2625,12 +2627,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTBranchLeft": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2700,12 +2702,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTDiagMirror": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2756,12 +2758,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTBranchRight": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2831,12 +2833,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTCurve3": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2907,12 +2909,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayGTCurve2": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2963,12 +2965,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayUTurnSlopeRight": {
     "PageName": "HighWay/HighWayGT",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3059,12 +3061,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltCorner": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3085,12 +3087,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltStraight": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3111,12 +3113,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltGTCurve3": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3197,12 +3199,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltGTCurve2": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3248,12 +3250,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltTransitionMirror": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3295,12 +3297,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTiltTransition": {
     "PageName": "HighWay/HighWayTilt",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3342,12 +3344,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTurbo": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3383,12 +3385,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayCheckpoint": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3424,12 +3426,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWay": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3488,12 +3490,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTurbo2": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3529,12 +3531,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTurboRoulette": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3570,12 +3572,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWaySupport": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3634,12 +3636,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayFinish": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3666,12 +3668,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayStartLine": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3698,12 +3700,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayStartFinishLine": {
     "PageName": "HighWay/HighWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3739,13 +3741,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandRoadWallStraight": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3817,11 +3816,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallTransitionTiltStraightLeft": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3909,11 +3908,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallCorner": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -3985,11 +3984,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallGTCurve1SlopeRight": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4161,11 +4160,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallGTCurve1": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4317,11 +4316,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallTransitionTiltStraightRight": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4414,11 +4413,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallGTCurve1SlopeLeft": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4590,11 +4589,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallTransitionTiltLeft": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4712,11 +4711,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandRoadWallTransitionTiltRight": {
     "PageName": "HighWay/RoadWall",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -4834,10 +4833,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHighWayBiSlopeEnd": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4888,12 +4890,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayMonoRamp2": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4925,12 +4927,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayTriRamp": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4967,12 +4969,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayMonoRamp": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5004,12 +5006,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWaySlopeBase": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5050,12 +5052,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWaySlope": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5096,12 +5098,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayBiSlopeStart": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5152,12 +5154,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayHawkRamp": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5204,12 +5206,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayRamp": {
     "PageName": "HighWay/HighWaySlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5236,12 +5238,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayBump3": {
     "PageName": "HighWay/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5277,12 +5279,33 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayHoleCenter": {
     "PageName": "HighWay/Hazards",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          1,
+          0
+        ]
+      ]
+    },
     "Size": [
       1,
       2,
@@ -5311,33 +5334,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          0,
-          1,
-          0
-        ]
-      ]
-    }
+    ]
   },
   "IslandHighWayMonoBump3": {
     "PageName": "HighWay/Hazards",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5373,12 +5375,38 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayHoleSides": {
     "PageName": "HighWay/Hazards",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          2,
+          0
+        ]
+      ]
+    },
     "Size": [
       1,
       3,
@@ -5407,42 +5435,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ]
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          0,
-          2,
-          0
-        ]
-      ]
-    }
+    ]
   },
   "IslandHighWayMonoBump": {
     "PageName": "HighWay/Hazards",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -5515,11 +5511,14 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "IslandTunnelEntry": {
     "PageName": "HighWay/Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5566,10 +5565,21 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHighWaySupportPillar": {
     "PageName": "HighWay",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        4
+      ]
+    },
     "Units": [
       [
         0,
@@ -5582,20 +5592,12 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        4
-      ]
-    }
+    "Variants": 1
   },
   "IslandHighWayStraight": {
     "PageName": "HighWay",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5631,12 +5633,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHighWayPillar": {
     "PageName": "HighWay",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5657,12 +5659,19 @@
       1,
       1,
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandGrass": {
     "PageName": "Terraformation",
+    "Ground": {
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 0
+    },
     "Units": [
       [
         0,
@@ -5674,16 +5683,7 @@
       1,
       1,
       1
-    ],
-    "Ground": {
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 0
-    }
+    ]
   },
   "IslandSea": {
     "PageName": "Terraformation",
@@ -5708,6 +5708,8 @@
   },
   "IslandSeaWayGTCurve3Pillar": {
     "PageName": "SeaWay2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5728,12 +5730,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayGTCurve2Pillar": {
     "PageName": "SeaWay2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5754,13 +5756,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHills6HighWayBridgeAir": {
     "PageName": "Transition",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -5797,10 +5796,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWayToPlatform": {
     "PageName": "Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5841,13 +5843,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHills6HighWayBridgeGround": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5919,11 +5918,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHills6HighwaySlopeGT3": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6145,11 +6144,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularTransitionToPlatform": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6231,11 +6230,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHills6HighwaySlopeGT3Mirror": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6457,10 +6456,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWayToCroisette": {
     "PageName": "Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6496,12 +6498,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandCroisetteToHighway": {
     "PageName": "Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6537,12 +6539,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayToHighWay": {
     "PageName": "Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6578,13 +6580,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHotelPillar": {
     "PageName": "Buildings",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6623,11 +6622,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandDecorRock2": {
     "PageName": "Buildings",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6649,11 +6648,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandAntennePillar": {
     "PageName": "Buildings",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6702,11 +6701,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceLaunch1Pillar": {
     "PageName": "Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6750,11 +6749,11 @@
       "SubVariants": [
         8
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceLaunch3Pillar": {
     "PageName": "Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6823,11 +6822,11 @@
       "SubVariants": [
         3
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpaceLaunch2Pillar": {
     "PageName": "Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6871,11 +6870,11 @@
       "SubVariants": [
         8
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpacePlateformLaunch1Pillar": {
     "PageName": "Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6919,11 +6918,11 @@
       "SubVariants": [
         8
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSpacePlateformLaunch2Pillar": {
     "PageName": "Decor/Space",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6967,10 +6966,13 @@
       "SubVariants": [
         8
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWay": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7029,12 +7031,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayTurbo2": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7070,12 +7072,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWaySupport": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7134,12 +7136,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayTurboRoulette": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7175,12 +7177,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayCheckpoint": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7216,12 +7218,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayHole": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7257,12 +7259,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayHoleRamp": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7298,12 +7300,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayTurbo": {
     "PageName": "SeaWay/SeaWayMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7339,12 +7341,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayBiSlopeEnd": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7395,12 +7397,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayGTCurve3": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7456,12 +7458,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWaySlope": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7502,12 +7504,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayGTCurve2": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7558,12 +7560,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayBiSlopeStart": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7614,13 +7616,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayBigSlopeXCrossBase": {
     "PageName": "SeaWay/SeaWayXtreme",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -7830,11 +7829,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWayScrew360Mirror": {
     "PageName": "SeaWay/SeaWayXtreme",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8141,10 +8140,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWaySlopeBase": {
     "PageName": "SeaWay/SeaWayXtreme",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8185,13 +8187,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayScrew360": {
     "PageName": "SeaWay/SeaWayXtreme",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8518,10 +8517,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandSeaWayBiSlopePillar": {
     "PageName": "SeaWay",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8542,12 +8544,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayPillar": {
     "PageName": "SeaWay",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8568,12 +8570,12 @@
       1,
       1,
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaWayStraightPillar": {
     "PageName": "SeaWay",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8589,13 +8591,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandTunnelCheckpoint": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8637,11 +8636,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelTurbo": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8683,11 +8682,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelStraight": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8729,11 +8728,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelGTCurve2": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8805,11 +8804,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCorner": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8851,11 +8850,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelGTCurve3": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8947,11 +8946,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelTurbo2": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -8993,11 +8992,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularSlopeBaseCorner": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9059,11 +9058,11 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularSlopeBaseGTCurve2Mirror": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9165,11 +9164,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularGTCurve2": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9261,11 +9260,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularGTCurve3": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9397,11 +9396,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularSlopeBase": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9463,11 +9462,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularSlopeBaseCornerMirror": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9529,11 +9528,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularSlopeBaseGTCurve2": {
     "PageName": "Tunnel/Circular2",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9635,11 +9634,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelEntry3": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9706,11 +9705,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelEntry1": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9777,11 +9776,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelExitBiSlopeEnd": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9838,11 +9837,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelExit": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -9894,11 +9893,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularExitRamp": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9971,11 +9970,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularExit": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10023,11 +10022,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelEntry2": {
     "PageName": "Tunnel/TunnelEntry",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -10094,11 +10093,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelSlope2": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10150,11 +10149,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelBiSlope2End": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10201,11 +10200,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelBiSlope2Start": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10252,11 +10251,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelSlope2Base": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10308,11 +10307,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelSlope2HoleBase": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10382,11 +10381,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelBiSlope2Start2": {
     "PageName": "Tunnel/TunnelSlopes",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10453,11 +10452,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularWallV": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10509,11 +10508,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularTransition": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10574,11 +10573,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularTurbo": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10630,11 +10629,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularCheckpoint": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10686,11 +10685,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularWallH": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10742,11 +10741,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircular": {
     "PageName": "Tunnel/Circular",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -10821,11 +10820,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "IslandTunnelCircularTurbo2": {
     "PageName": "Tunnel/Circular",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10877,11 +10876,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHighWayTunnelClip": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10903,11 +10902,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandTunnelCircularClip": {
     "PageName": "Tunnel",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10939,10 +10938,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformGTSlope5": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11093,12 +11095,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope3": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11189,12 +11191,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope5b": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11345,12 +11347,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope4b": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11471,12 +11473,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope3b": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11567,12 +11569,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope2b": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11623,12 +11625,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope4": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11749,12 +11751,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformGTSlope2": {
     "PageName": "FreeRide/FreeRideGTSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11805,12 +11807,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformLoopGT4Start": {
     "PageName": "FreeRide/FreeRideLoop",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11872,12 +11874,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformLoopGT4CornerStart": {
     "PageName": "FreeRide/FreeRideLoop",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12038,13 +12040,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformLoopWall": {
     "PageName": "FreeRide/FreeRideLoop",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12061,11 +12060,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformLoopWallCorner": {
     "PageName": "FreeRide/FreeRideLoop",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12092,11 +12091,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformLoopGT4End": {
     "PageName": "FreeRide/FreeRideLoop",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12148,11 +12147,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformLoopGT4CornerEnd": {
     "PageName": "FreeRide/FreeRideLoop",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -12294,10 +12293,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformSlope2TurboUp": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12343,12 +12345,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2TurboDown": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12394,12 +12396,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformTurboRoulette": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12435,12 +12437,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2TurboRight": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12486,12 +12488,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformTurbo": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12527,12 +12529,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2TurboLeft": {
     "PageName": "FreeRide/FreeRideTurbo",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12578,63 +12580,10 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformRoadSupport": {
     "PageName": "FreeRide/FreeRideMain",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 6,
-    "Clips": [
-      {
-        "Name": "IslandPlatformClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 0
-      },
-      {
-        "Name": "IslandPlatformClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 1
-      },
-      {
-        "Name": "IslandPlatformClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      },
-      {
-        "Name": "IslandPlatformClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 3
-      }
-    ],
     "Ground": {
       "SubVariants": [
         5,
@@ -12654,10 +12603,63 @@
         1,
         1
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "Clips": [
+      {
+        "Name": "IslandPlatformClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "IslandPlatformClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "IslandPlatformClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "IslandPlatformClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
   },
   "IslandPlatformRoadPillar": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12678,12 +12680,12 @@
       1,
       1,
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformStartLine": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12720,12 +12722,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformStartFinishLine": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12771,12 +12773,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformCheckpoint": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12817,12 +12819,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformFloodLight": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12848,12 +12850,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformRoad": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12912,12 +12914,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformFinishLine": {
     "PageName": "FreeRide/FreeRideMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -12954,12 +12956,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2Support": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13005,12 +13007,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformCheckpointSlopeLeft": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13061,12 +13063,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformBiSlope2End": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13107,12 +13109,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformCheckpointSlopeRight": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13163,12 +13165,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13214,12 +13216,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformBasePillar": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13235,12 +13237,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformToSlope2Mirror": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13272,12 +13274,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformToSlope2": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13309,12 +13311,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformBiSlope2Start": {
     "PageName": "FreeRide/FreeRideSlopes",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13355,12 +13357,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformTurbo2": {
     "PageName": "FreeRide/FreeRideTurbo2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13396,12 +13398,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2Turbo2Up": {
     "PageName": "FreeRide/FreeRideTurbo2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13447,12 +13449,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2Turbo2Left": {
     "PageName": "FreeRide/FreeRideTurbo2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13498,12 +13500,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2Turbo2Down": {
     "PageName": "FreeRide/FreeRideTurbo2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13549,12 +13551,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope2Turbo2Right": {
     "PageName": "FreeRide/FreeRideTurbo2",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13600,12 +13602,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformBiSlopeStart": {
     "PageName": "FreeRide/FreeRideSlopeSimple",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13656,12 +13658,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformBiSlopeEnd": {
     "PageName": "FreeRide/FreeRideSlopeSimple",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13712,12 +13714,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlopeSupport": {
     "PageName": "FreeRide/FreeRideSlopeSimple",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13758,12 +13760,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandPlatformSlope": {
     "PageName": "FreeRide/FreeRideSlopeSimple",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13804,13 +13806,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandRoadWallClipRight": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13827,7 +13826,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandBeach": {
     "PageName": "Other",
@@ -13865,6 +13865,8 @@
   },
   "IslandCroisetteClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13880,13 +13882,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandAirportRoadClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -13903,7 +13902,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandHills": {
     "PageName": "Other",
@@ -13949,7 +13949,6 @@
   },
   "IslandRoadWallClipLeft": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -13966,10 +13965,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandPlatformClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -13985,12 +13987,20 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandSeaClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -14003,21 +14013,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "IslandAirportRoadGrassClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -14034,10 +14033,21 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "IslandGrassClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -14050,20 +14060,12 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "IslandSeaWayClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14079,9 +14081,7 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "IslandHills6": {
     "PageName": "Other",
@@ -14144,6 +14144,8 @@
   },
   "IslandHighWayClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -14159,8 +14161,6 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   }
 }

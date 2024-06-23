@@ -2,14 +2,9 @@
 
 namespace NationsConverterShared.Models;
 
-public sealed class ConversionModel
+public sealed class ConversionModel : ConversionModifierModel
 {
     public string PageName { get; set; } = "";
-    public Int3[]? Units { get; set; }
-    public Int3? Size { get; set; }
-    public int? Variants { get; set; }
-    public int?[]? SubVariants { get; set; }
-    public ConversionClipModel[]? Clips { get; set; }
     public ConversionModifierModel? Ground { get; set; }
     public ConversionModifierModel? Air { get; set; }
 }

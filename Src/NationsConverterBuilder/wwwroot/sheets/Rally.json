@@ -1,6 +1,8 @@
 {
   "RallySignPillar": {
     "PageName": "Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -16,12 +18,20 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallySquareTowerPillar": {
     "PageName": "Signs",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -34,21 +44,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    "Variants": 1
   },
   "RallyFieldTetrisURoadLow": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -286,11 +285,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisURoadMediumMirror": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -478,11 +477,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisDiagRoadLowToRoadHigh": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -755,11 +754,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisDiagRoadMediumMirror": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -887,11 +886,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisURoadMedium": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1099,11 +1098,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisStraightRoadMedium": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1201,11 +1200,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisDiagRoadLowToRoadHighMirror": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1473,11 +1472,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisDiagRoadMedium": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1605,11 +1604,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldTetrisURoadLowMirror": {
     "PageName": "Frontier/FieldTetris",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1862,11 +1861,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockyGrassCliffTransitionCastleToRoadWood": {
     "PageName": "Frontier/RockyGrass",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1932,11 +1931,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockyGrassHillTransitionRoadMediumtoCastle": {
     "PageName": "Frontier/RockyGrass",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -1987,11 +1986,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockyGrassHillTransitionRoadHighToRoadMedium": {
     "PageName": "Frontier/RockyGrass",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2033,11 +2032,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockyGrassCliffTunnelEntry": {
     "PageName": "Frontier/RockyGrass",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2089,14 +2088,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyBridgeMedium": {
     "PageName": "Frontier/Bridges",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -2217,11 +2213,14 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyCastleDrawBridgeSpeedUp": {
     "PageName": "Frontier/Bridges",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2296,11 +2295,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyBridgeLow": {
     "PageName": "Frontier/Bridges",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2337,11 +2336,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleDrawBridge": {
     "PageName": "Frontier/Bridges",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2406,10 +2405,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyBridgeHigh": {
     "PageName": "Frontier/Bridges",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2450,13 +2452,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadLowHillSlope": {
     "PageName": "Frontier/HillSlopes",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2503,11 +2502,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRoadHighHillSlope": {
     "PageName": "Frontier/HillSlopes",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2554,11 +2553,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRoadMediumHillSlope": {
     "PageName": "Frontier/HillSlopes",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2605,11 +2604,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleHillBridgeGround": {
     "PageName": "Frontier/HillSlopes",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -2674,10 +2673,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyBridgeMediumPillar": {
     "PageName": "Frontier",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -2723,12 +2725,20 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyBridgeHighPillar": {
     "PageName": "Frontier",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -2746,21 +2756,10 @@
       1,
       2
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    "Variants": 1
   },
   "RallyCastleHillBridgeAir": {
     "PageName": "Frontier",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -2797,7 +2796,8 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFlat": {
     "PageName": "Terraformation",
@@ -2927,10 +2927,6 @@
   },
   "RallyMediumOverLowCrossGround": {
     "PageName": "Transition",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -3039,11 +3035,14 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyHighToLowCurveMirror": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3095,11 +3094,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHighOverLowCrossGround": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3154,10 +3153,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyMediumToHigh": {
     "PageName": "Transition",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3193,12 +3195,20 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadWoodStraightPillar": {
     "PageName": "Transition",
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -3211,7 +3221,10 @@
       1,
       1
     ],
-    "Variants": 1,
+    "Variants": 1
+  },
+  "RallyRoadWoodToCastlePillar": {
+    "PageName": "Transition",
     "Ground": {
       "SubVariants": [
         2
@@ -3221,10 +3234,7 @@
       "SubVariants": [
         6
       ]
-    }
-  },
-  "RallyRoadWoodToCastlePillar": {
-    "PageName": "Transition",
+    },
     "Units": [
       [
         0,
@@ -3248,21 +3258,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        2
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyHighToLow": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3299,11 +3298,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHighToLowCurve": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3355,11 +3354,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyLowToMedium": {
     "PageName": "Transition",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3396,10 +3395,21 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleBiSlopePillar": {
     "PageName": "RoadMedium",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        5
+      ]
+    },
     "Units": [
       [
         0,
@@ -3437,20 +3447,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        5
-      ]
-    }
+    ]
   },
   "RallyCastleRampPillar": {
     "PageName": "RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3477,12 +3479,20 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyCastleTowerPillar": {
     "PageName": "RoadMedium",
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        3
+      ]
+    },
     "Units": [
       [
         0,
@@ -3495,20 +3505,12 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        2
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        3
-      ]
-    }
+    "Variants": 1
   },
   "RallyCastleHillBridgePillar": {
     "PageName": "RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -3544,13 +3546,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyFieldFenceAutoCenter": {
     "PageName": "Decor/FieldAuto",
-    "Variants": 9,
     "Ground": {
       "Units": [
         [
@@ -3575,11 +3574,11 @@
         null,
         null
       ]
-    }
+    },
+    "Variants": 9
   },
   "RallyFieldFenceAutoTShaped": {
     "PageName": "Decor/FieldAuto",
-    "Variants": 9,
     "Ground": {
       "Units": [
         [
@@ -3604,11 +3603,11 @@
         null,
         null
       ]
-    }
+    },
+    "Variants": 9
   },
   "RallyFieldAuto": {
     "PageName": "Decor/FieldAuto",
-    "Variants": 9,
     "Ground": {
       "Units": [
         [
@@ -3633,11 +3632,11 @@
         2,
         2
       ]
-    }
+    },
+    "Variants": 9
   },
   "RallyFieldFenceAutoCorner": {
     "PageName": "Decor/FieldAuto",
-    "Variants": 9,
     "Ground": {
       "Units": [
         [
@@ -3662,11 +3661,11 @@
         3,
         3
       ]
-    }
+    },
+    "Variants": 9
   },
   "RallyFieldGrassStraight3x3": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -3866,11 +3865,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldGrassCornerIn": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4020,10 +4019,21 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldClips": {
     "PageName": "Decor/Field",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -4056,21 +4066,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    ]
   },
   "RallyFieldClips2": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4107,11 +4106,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldCornerOut": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4226,11 +4225,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldStraight": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4310,11 +4309,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldGrassCornerOut": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4424,11 +4423,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldCornerIn": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4568,11 +4567,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldGrassStraight": {
     "PageName": "Decor/Field",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4687,10 +4686,13 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallySignLeftWay": {
     "PageName": "Decor/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4706,12 +4708,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallySignRightWay": {
     "PageName": "Decor/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4727,12 +4729,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyAdvertising": {
     "PageName": "Decor/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4773,12 +4775,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallySignWarning": {
     "PageName": "Decor/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4794,12 +4796,12 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallySignWrongWay": {
     "PageName": "Decor/Signs",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -4815,12 +4817,43 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadLamp": {
     "PageName": "Decor/HouseDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ]
+    },
     "Variants": 6,
     "SubVariants": [
       1,
@@ -4867,47 +4900,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ]
-    }
+    ]
   },
   "RallyCastleTowerSpeedUp": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -4950,11 +4946,14 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyHouseGround4": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -4976,11 +4975,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyWindmill": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5032,10 +5031,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleTower": {
     "PageName": "Decor/HouseDecor",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -5056,16 +5058,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallySquareTower": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -5098,11 +5094,14 @@
         1,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyHouseGround3": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5119,11 +5118,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHouseGround2": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5145,11 +5144,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHouseGround": {
     "PageName": "Decor/HouseDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5176,11 +5175,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceTreeStraight": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5212,11 +5211,11 @@
       "SubVariants": [
         5
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceBushStraightAdvert": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5238,11 +5237,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceDiag": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5269,11 +5268,11 @@
       "SubVariants": [
         3
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceTreeCornerOut": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5305,11 +5304,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceBushCornerOut": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5326,11 +5325,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceStraight": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5347,11 +5346,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceCornerOut": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5368,11 +5367,11 @@
       "SubVariants": [
         2
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceRamp": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5399,11 +5398,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyFieldFenceBushStraight": {
     "PageName": "Decor/FieldFence",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5420,11 +5419,11 @@
       "SubVariants": [
         3
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTreeGround1": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5446,11 +5445,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill2SpeedUp": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5622,11 +5621,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill1SpeedUp": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5798,11 +5797,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyGrassCheckPoint": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5819,11 +5818,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill3SpeedUp": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -5995,11 +5994,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill2": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6091,11 +6090,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill1": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6187,11 +6186,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHill3": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6283,11 +6282,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockDecor2": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6309,11 +6308,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTreeGround1SpeedUp": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6340,11 +6339,11 @@
       "SubVariants": [
         4
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTreeGroundBig": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6381,11 +6380,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockDecor": {
     "PageName": "Decor/NaturalDecor",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -6402,28 +6401,11 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleDrawBridgePillar": {
     "PageName": "CastleMisc",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        0,
-        1
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      2
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         1
@@ -6491,10 +6473,30 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1
   },
   "RallyCastleCrossPillar": {
     "PageName": "CastleMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6548,28 +6550,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyMediumOverLowCrossPillar": {
     "PageName": "CastleMisc",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Clips": [
         {
@@ -6631,10 +6615,28 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyCastleReplacementCrossPillar": {
     "PageName": "CastleMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -6688,13 +6690,10 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyTunnelCheckpoint": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6736,11 +6735,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTunnelTurbo": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6782,11 +6781,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTunnelGTCurve3": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6868,11 +6867,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTunnelGTCurve2": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -6944,7 +6943,8 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTunnelRoadSlope": {
     "PageName": "Tunnel/TunnelMain",
@@ -7002,7 +7002,6 @@
   },
   "RallyTunnelRoad": {
     "PageName": "Tunnel/TunnelMain",
-    "Variants": 6,
     "Air": {
       "Units": [
         [
@@ -7067,11 +7066,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "RallyTunnelEntry": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7118,11 +7117,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTunnelExit": {
     "PageName": "Tunnel/TunnelMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7174,10 +7173,31 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRoadHigh": {
     "PageName": "RoadHigh/RoadHighMain",
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        4,
+        3,
+        4,
+        3,
+        2,
+        4
+      ]
+    },
     "Units": [
       [
         0,
@@ -7228,30 +7248,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        4,
-        3,
-        4,
-        3,
-        2,
-        4
-      ]
-    }
+    ]
   },
   "RallyHighStartLine": {
     "PageName": "RoadHigh/RoadHighMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7278,12 +7280,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyHighFinish": {
     "PageName": "RoadHigh/RoadHighMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7310,12 +7312,26 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadWoodSlope": {
     "PageName": "RoadHigh/RoadHighMain",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
     "Units": [
       [
         0,
@@ -7352,26 +7368,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        4,
-        4,
-        4,
-        4
-      ]
-    }
+    ]
   },
   "RallyHighCheckpoint": {
     "PageName": "RoadHigh/RoadHighMain",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7407,13 +7409,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadHighCornerRockOutside": {
     "PageName": "RoadHigh/RoadHighMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7450,10 +7449,13 @@
           "Dir": 1
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRoadHighGT2": {
     "PageName": "RoadHigh/RoadHighMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7504,12 +7506,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadHighGT1": {
     "PageName": "RoadHigh/RoadHighMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7560,13 +7562,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadHighStraightRock": {
     "PageName": "RoadHigh/RoadHighMisc",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7603,10 +7602,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHighSupportStartLine": {
     "PageName": "RoadHigh/RoadHighSupport",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7633,12 +7635,26 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadWoodSupportSlope": {
     "PageName": "RoadHigh/RoadHighSupport",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
     "Units": [
       [
         0,
@@ -7675,26 +7691,30 @@
         ],
         "Dir": 0
       }
-    ],
+    ]
+  },
+  "RallyRoadWoodSupport": {
+    "PageName": "RoadHigh/RoadHighSupport",
     "Ground": {
-      "Variants": 2,
       "SubVariants": [
+        1,
+        1,
+        1,
+        1,
         1,
         1
       ]
     },
     "Air": {
-      "Variants": 4,
       "SubVariants": [
         4,
+        3,
         4,
-        4,
+        3,
+        2,
         4
       ]
-    }
-  },
-  "RallyRoadWoodSupport": {
-    "PageName": "RoadHigh/RoadHighSupport",
+    },
     "Units": [
       [
         0,
@@ -7745,30 +7765,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        4,
-        3,
-        4,
-        3,
-        2,
-        4
-      ]
-    }
+    ]
   },
   "RallyHighSupportCheckpoint": {
     "PageName": "RoadHigh/RoadHighSupport",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7804,12 +7806,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyHighFinishSupport": {
     "PageName": "RoadHigh/RoadHighSupport",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -7836,25 +7838,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadWoodPillar": {
     "PageName": "RoadHigh",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 6,
     "Ground": {
       "SubVariants": [
         2,
@@ -7874,11 +7861,23 @@
         6,
         6
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6
   },
   "RallyRoad": {
     "PageName": "RoadLow",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -7943,11 +7942,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "RallyFinish": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -7975,11 +7974,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRock": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8016,11 +8015,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRoadSpeedUp": {
     "PageName": "RoadLow",
-    "Variants": 6,
     "Ground": {
       "Units": [
         [
@@ -8090,11 +8089,11 @@
           "Dir": 3
         }
       ]
-    }
+    },
+    "Variants": 6
   },
   "RallyRockMirror": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8131,11 +8130,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTruncMirror": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8172,11 +8171,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyStartLine": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8204,11 +8203,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyHouseGround5": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8260,23 +8259,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyTrunc": {
     "PageName": "RoadLow",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         1
@@ -8306,11 +8293,23 @@
       "SubVariants": [
         null
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
   },
   "RallyCheckPoint": {
     "PageName": "RoadLow",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -8347,10 +8346,13 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleTurboRoulette": {
     "PageName": "RoadCastle/Misc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8386,12 +8388,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyFreeWheeling": {
     "PageName": "RoadCastle/Misc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8427,12 +8429,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyCastleTurbo": {
     "PageName": "RoadCastle/Misc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8468,12 +8470,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyCastleBiSlopeStart": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8528,12 +8530,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyStartFinishLine": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8569,12 +8571,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyMediumStartLine": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8606,12 +8608,12 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadMediumFinish": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8643,12 +8645,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyCastleBiSlopeEnd": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8703,36 +8705,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyMediumCheckpointSpeedUp": {
     "PageName": "RoadCastle/RoadMedium",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
-    "Clips": [
-      {
-        "Name": "RallyRoadCastleClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 0
-      },
-      {
-        "Name": "RallyRoadCastleClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      }
-    ],
     "Ground": {
       "Units": [
         [
@@ -8775,10 +8751,54 @@
         3,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastleClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
   },
   "RallyRoadCastle": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
     "Units": [
       [
         0,
@@ -8829,30 +8849,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        1,
-        2,
-        2,
-        2,
-        2,
-        1
-      ]
-    }
+    ]
   },
   "RallyMediumCheckPoint": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -8893,12 +8895,26 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRoadCastleSlope": {
     "PageName": "RoadCastle/RoadMedium",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        2,
+        2,
+        2,
+        2
+      ]
+    },
     "Units": [
       [
         0,
@@ -8944,27 +8960,10 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        2,
-        2
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        2,
-        2,
-        2,
-        2
-      ]
-    }
+    ]
   },
   "RallyCastleGrid": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9024,14 +9023,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleRamp": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -9100,11 +9096,14 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyCastleBridge": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9184,14 +9183,11 @@
           "Dir": 0
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleReplacementCross": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -9318,10 +9314,16 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyCastleReplacementArchPillar": {
     "PageName": "RoadCastle/CastleMisc",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         2,
@@ -9337,13 +9339,10 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyRampart": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9380,11 +9379,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleReplacementArch": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -9436,14 +9435,11 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleCross": {
     "PageName": "RoadCastle/CastleMisc",
-    "Variants": 1,
-    "SubVariants": [
-      1
-    ],
     "Ground": {
       "Units": [
         [
@@ -9616,14 +9612,14 @@
           "Dir": 2
         }
       ]
-    }
-  },
-  "RallyCastleRampSpeedUp": {
-    "PageName": "RoadCastle/CastleMisc",
+    },
     "Variants": 1,
     "SubVariants": [
       1
-    ],
+    ]
+  },
+  "RallyCastleRampSpeedUp": {
+    "PageName": "RoadCastle/CastleMisc",
     "Ground": {
       "Units": [
         [
@@ -9707,10 +9703,16 @@
           "Dir": 2
         }
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
   },
   "RallyGT8": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         2,
@@ -9781,12 +9783,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGTCurve2": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9847,12 +9849,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT3": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -9913,12 +9915,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT6": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         1,
@@ -9984,12 +9986,12 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT5": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10055,12 +10057,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT1": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10111,12 +10113,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT4": {
     "PageName": "RoadCastle/Tetris",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10186,9 +10188,7 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "Hills1ToHills2": {
     "PageName": "Other",
@@ -10226,10 +10226,6 @@
   },
   "RallyFieldClip2": {
     "PageName": "Other",
-    "Variants": 1,
-    "SubVariants": [
-      null
-    ],
     "Ground": {
       "Units": [
         [
@@ -10243,11 +10239,14 @@
         1,
         1
       ]
-    }
+    },
+    "Variants": 1,
+    "SubVariants": [
+      null
+    ]
   },
   "RallyTunnelRoadClip": {
     "PageName": "Other",
-    "Variants": 1,
     "Air": {
       "Units": [
         [
@@ -10269,10 +10268,13 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyCastleBridgePillar": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -10313,9 +10315,7 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "HillsToHills": {
     "PageName": "Other",
@@ -10387,6 +10387,16 @@
   },
   "RallyGT8Pillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         2,
@@ -10454,33 +10464,10 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyRoadClip": {
     "PageName": "Other",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
     "Ground": {
       "SubVariants": [
         1
@@ -10490,10 +10477,7 @@
       "SubVariants": [
         null
       ]
-    }
-  },
-  "RallyRoadWoodSlopePillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -10506,6 +10490,10 @@
       1,
       1
     ],
+    "Variants": 1
+  },
+  "RallyRoadWoodSlopePillar": {
+    "PageName": "Other",
     "Ground": {
       "Variants": 2,
       "SubVariants": [
@@ -10521,10 +10509,32 @@
         6,
         6
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ]
   },
   "RallyClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
     "Units": [
       [
         0,
@@ -10537,21 +10547,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        null
-      ]
-    }
+    "Variants": 1
   },
   "RallyFieldClipRight": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -10568,7 +10567,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "ForestToLake": {
     "PageName": "Other",
@@ -10606,6 +10606,16 @@
   },
   "RallyRoadCastlePillarClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        2
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -10618,20 +10628,20 @@
       1,
       1
     ],
-    "Variants": 1,
+    "Variants": 1
+  },
+  "RallyGT1Pillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
-        2
+        1
       ]
     },
     "Air": {
       "SubVariants": [
         6
       ]
-    }
-  },
-  "RallyGT1Pillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -10679,17 +10689,7 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "ForestToHills1": {
     "PageName": "Other",
@@ -10727,6 +10727,16 @@
   },
   "RallyCastleStartPillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -10750,20 +10760,26 @@
         ],
         "Dir": 0
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyRoadCastleSlopePillar": {
     "PageName": "Other",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        2,
+        2
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -10795,23 +10811,7 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "Variants": 2,
-      "SubVariants": [
-        2,
-        2
-      ]
-    },
-    "Air": {
-      "Variants": 4,
-      "SubVariants": [
-        6,
-        6,
-        6,
-        6
-      ]
-    }
+    ]
   },
   "RallyRockyGrassHills": {
     "PageName": "Other",
@@ -10849,6 +10849,16 @@
   },
   "RallyGT3Pillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -10906,20 +10916,20 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyCastleFinishPillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -10943,20 +10953,20 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyRoadCastleClip": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        2
+      ]
+    },
     "Units": [
       [
         0,
@@ -10969,53 +10979,10 @@
       1,
       1
     ],
-    "Variants": 1,
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        2
-      ]
-    }
+    "Variants": 1
   },
   "RallyCastleStraightPillar": {
     "PageName": "Other",
-    "Units": [
-      [
-        0,
-        0,
-        0
-      ]
-    ],
-    "Size": [
-      1,
-      1,
-      1
-    ],
-    "Variants": 1,
-    "Clips": [
-      {
-        "Name": "RallyRoadCastlePillarClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 0
-      },
-      {
-        "Name": "RallyRoadCastlePillarClip",
-        "Offset": [
-          0,
-          0,
-          0
-        ],
-        "Dir": 2
-      }
-    ],
     "Ground": {
       "SubVariants": [
         2
@@ -11025,10 +10992,7 @@
       "SubVariants": [
         6
       ]
-    }
-  },
-  "RallyCastleCheckpointPillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -11061,7 +11025,10 @@
         ],
         "Dir": 2
       }
-    ],
+    ]
+  },
+  "RallyCastleCheckpointPillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         1
@@ -11071,10 +11038,63 @@
       "SubVariants": [
         6
       ]
-    }
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "Clips": [
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "RallyRoadCastlePillarClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
   },
   "RallyRoadCastlePillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        3,
+        6,
+        6,
+        6,
+        6,
+        3
+      ]
+    },
     "Units": [
       [
         0,
@@ -11125,30 +11145,20 @@
         ],
         "Dir": 3
       }
-    ],
+    ]
+  },
+  "RallyGT5Pillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
-        2,
-        2,
-        2,
-        2,
-        2,
         1
       ]
     },
     "Air": {
       "SubVariants": [
-        3,
-        6,
-        6,
-        6,
-        6,
-        3
+        6
       ]
-    }
-  },
-  "RallyGT5Pillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -11211,20 +11221,12 @@
         ],
         "Dir": 3
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyRoadHighClip": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11240,12 +11242,20 @@
     "Variants": 1,
     "SubVariants": [
       1
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyGT4Pillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -11312,20 +11322,12 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   },
   "RallyCastleGridPillar": {
     "PageName": "Other",
+    "Ground": {},
+    "Air": {},
     "Units": [
       [
         0,
@@ -11361,13 +11363,10 @@
         ],
         "Dir": 2
       }
-    ],
-    "Ground": {},
-    "Air": {}
+    ]
   },
   "RallyFieldClipLeft": {
     "PageName": "Other",
-    "Variants": 1,
     "Ground": {
       "Units": [
         [
@@ -11384,7 +11383,8 @@
       "SubVariants": [
         1
       ]
-    }
+    },
+    "Variants": 1
   },
   "RallyRockyGrassCliffs": {
     "PageName": "Other",
@@ -11422,6 +11422,16 @@
   },
   "RallyGT2Pillar": {
     "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        6
+      ]
+    },
     "Units": [
       [
         0,
@@ -11479,7 +11489,10 @@
         ],
         "Dir": 1
       }
-    ],
+    ]
+  },
+  "RallyRockyGrassClip": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         1
@@ -11487,12 +11500,9 @@
     },
     "Air": {
       "SubVariants": [
-        6
+        null
       ]
-    }
-  },
-  "RallyRockyGrassClip": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -11505,7 +11515,10 @@
       1,
       1
     ],
-    "Variants": 1,
+    "Variants": 1
+  },
+  "RallyMultiLapPillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         1
@@ -11513,12 +11526,9 @@
     },
     "Air": {
       "SubVariants": [
-        null
+        6
       ]
-    }
-  },
-  "RallyMultiLapPillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         0,
@@ -11551,7 +11561,10 @@
         ],
         "Dir": 2
       }
-    ],
+    ]
+  },
+  "RallyGT6Pillar": {
+    "PageName": "Other",
     "Ground": {
       "SubVariants": [
         1
@@ -11561,10 +11574,7 @@
       "SubVariants": [
         6
       ]
-    }
-  },
-  "RallyGT6Pillar": {
-    "PageName": "Other",
+    },
     "Units": [
       [
         1,
@@ -11627,16 +11637,6 @@
         ],
         "Dir": 1
       }
-    ],
-    "Ground": {
-      "SubVariants": [
-        1
-      ]
-    },
-    "Air": {
-      "SubVariants": [
-        6
-      ]
-    }
+    ]
   }
 }
