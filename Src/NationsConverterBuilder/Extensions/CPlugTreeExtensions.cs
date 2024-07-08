@@ -206,7 +206,7 @@ public static class CPlugTreeExtensions
 
         foreach (var child in tree.Children)
         {
-            var childLocation = child.Translation.GetValueOrDefault(Iso4.Identity);
+            var childLocation = child.Location.GetValueOrDefault(Iso4.Identity);
 
             var newLocation = MultiplyAddIso4(location, childLocation);
 
@@ -214,7 +214,7 @@ public static class CPlugTreeExtensions
             {
                 var lodChild = GetLodTree(mip, lod);
 
-                newLocation = MultiplyAddIso4(newLocation, lodChild.Translation.GetValueOrDefault(Iso4.Identity));
+                newLocation = MultiplyAddIso4(newLocation, lodChild.Location.GetValueOrDefault(Iso4.Identity));
 
                 foreach (var descendant in GetAllChildren(lodChild, lod, newLocation))
                 {

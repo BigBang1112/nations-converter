@@ -40,10 +40,7 @@ public class NationsConverterTool
             MapName = map.MapName,
             MapType = "TrackMania\\TM_Race",
             OffzoneTriggerSize = (3, 1, 3),
-            ScriptMetadata = new CScriptTraitsMetadata
-            {
-                Traits = new Dictionary<string, CScriptTraitsMetadata.ScriptTrait>()
-            },
+            ScriptMetadata = new CScriptTraitsMetadata(),
             Size = (48, 40, 48),
             TitleId = "TMStadium",
             Xml = @"<header type=""map"" exever=""3.3.0"" exebuild=""2024-04-30_16_52"" title=""TMStadium"" lightmap=""0""><ident uid=""oSkQiOPge_EZhc81RXE44jk3VCa"" name=""Base"" author=""akPfIM0aSzuHuaaDWptBbQ"" authorzone=""World|Europe|Czechia|Jihoceský kraj""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""TrackMania\TM_Race"" mapstyle="""" validated=""0"" nblaps=""0"" displaycost=""203"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""-1"" silver=""-1"" gold=""-1"" authortime=""-1"" authorscore=""0""/><deps></deps></header>",
@@ -55,8 +52,18 @@ public class NationsConverterTool
             ThumbnailNearClipPlane = -1,
             ThumbnailFov = 90
         };
+		convertedMap.ScriptMetadata!.Declare("MadeWithNationsConverter", true);
+		convertedMap.ScriptMetadata!.Declare("NC_OriginalAuthorLogin", map.AuthorLogin);
+		convertedMap.ScriptMetadata!.Declare("NC_OriginalAuthorNickname", map.AuthorNickname ?? string.Empty);
+		convertedMap.ScriptMetadata!.Declare("NC_OriginalMapUid", map.MapUid);
+		convertedMap.ScriptMetadata!.Declare("NC2_IsConverted", true);
+		convertedMap.ScriptMetadata!.Declare("NC2_ConvertedAt", DateTime.UtcNow.ToString("s"));
+		convertedMap.ScriptMetadata!.Declare("NC2_Version", "");
+		convertedMap.ScriptMetadata!.Declare("NC2_CLI_Version", "");
+		convertedMap.ScriptMetadata!.Declare("NC2_Web_Version", "");
+		convertedMap.ScriptMetadata!.Declare("NC2_GBXNET_Version", "");
 
-        convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043002>().Version = 13;
+		convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043002>().Version = 13;
         convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043003>().Version = 11;
         convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043004>().Version = 6;
         convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043005>();

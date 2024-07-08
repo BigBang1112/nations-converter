@@ -68,9 +68,11 @@ internal sealed class InitStageService
 
                 var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
                 map.MapName = displayName;
+                map.ScriptMetadata!.Declare("MadeWithNationsConverter", true);
                 map.ScriptMetadata!.Declare("NC2_IsConverted", true);
+                map.ScriptMetadata!.Declare("NC2_ConvertedAt", DateTime.UtcNow.ToString("s"));
 
-                var index = 0;
+				var index = 0;
 
                 var convs = new Dictionary<string, ConversionModel>();
 
