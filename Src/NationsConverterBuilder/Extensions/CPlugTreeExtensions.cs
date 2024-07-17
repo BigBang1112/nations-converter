@@ -293,16 +293,26 @@ public static class CPlugTreeExtensions
                 continue;
             }
 
-            var surfMat = (CPlugSurface.MaterialId?)surface.Materials?[0].SurfaceId ?? CPlugSurface.MaterialId.Concrete;
-
-            if (!materials.TryGetValue(surfMat, out var collisionMat))
+            if (surface.Materials is null)
             {
+                throw new Exception("Collision surface has no materials, which is weird");
+            }
+
+            foreach (var material in surface.Materials)
+            {
+                var surfId = (CPlugSurface.MaterialId)material.SurfaceId;
+
+                if (materials.TryGetValue(surfId, out var collisionMat))
+                {
+                    continue;
+                }
+
                 collisionMat = new CPlugCrystal.Material
                 {
-                    MaterialUserInst = CPlugMaterialUserInstExtensions.Create("Editors\\MeshEditorMedia\\Materials\\Asphalt", surfMat)
+                    MaterialUserInst = CPlugMaterialUserInstExtensions.Create("Editors\\MeshEditorMedia\\Materials\\Asphalt", surfId)
                 };
 
-                materials.Add(surfMat, collisionMat);
+                materials.Add(surfId, collisionMat);
             }
 
             var group = new CPlugCrystal.Part() { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
@@ -316,7 +326,7 @@ public static class CPlugTreeExtensions
                         new(tri.U02.Z + indicesOffset, default)
                 ],
                 group,
-                collisionMat, // this material should be related to each surface material instead
+                materials[(CPlugSurface.MaterialId)surface.Materials[tri.U03].SurfaceId], // this material should be related to each surface material instead
                 null
                 )) ?? []);
 
