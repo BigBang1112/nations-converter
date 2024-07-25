@@ -1,4 +1,5 @@
-﻿using GBX.NET.Engines.Game;
+﻿using GBX.NET;
+using GBX.NET.Engines.Game;
 using System.Collections.Concurrent;
 
 namespace NationsConverterBuilder.Models;
@@ -11,4 +12,5 @@ internal sealed class CollectionModel
     public ConcurrentDictionary<string, BlockDirectoryModel> BlockDirectories { get; } = new();
     public ConcurrentDictionary<string, BlockInfoModel> RootBlocks { get; } = new();
     public bool IsLoaded { get; set; }
+    public Dictionary<Int3, DecorationModel> Decorations { get; set; } = [];
 }
