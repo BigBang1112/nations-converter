@@ -20,11 +20,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Discord.Net" Version="3.15.2" />
+		<PackageReference Include="Discord.Net" Version="3.15.3" />
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-		<PackageReference Include="Serilog" Version="4.0.0" />
+		<PackageReference Include="Serilog" Version="4.0.1" />
 		<PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
 		<PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
 	</ItemGroup>
@@ -37,6 +37,10 @@
 
 	<ItemGroup>
 	  <Folder Include="Migrations\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
 	</ItemGroup>
 
 </Project>

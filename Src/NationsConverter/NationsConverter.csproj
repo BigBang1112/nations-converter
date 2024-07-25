@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GBX.NET.Tool" Version="0.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NationsConverterShared\NationsConverterShared.csproj" />
   </ItemGroup>
 

@@ -257,12 +257,12 @@ public static class CPlugTreeExtensions
     private static CPlugTree GetLodTree(CPlugTreeVisualMip mip, int lod)
     {
         return mip.Levels
-            .OrderBy(x => x.Key)
-            .Select(x => x.Value)
+            .OrderBy(x => x.FarZ)
+            .Select(x => x.Tree)
             .ElementAtOrDefault(lod) ?? mip.Levels
-                .OrderBy(x => x.Key)
+                .OrderBy(x => x.FarZ)
                 .First()
-                .Value;
+                .Tree;
     }
 
     private static CPlugCrystal.GeometryLayer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger)
@@ -326,7 +326,7 @@ public static class CPlugTreeExtensions
                         new(tri.U02.Z + indicesOffset, default)
                 ],
                 group,
-                materials[(CPlugSurface.MaterialId)surface.Materials[tri.U03].SurfaceId], // this material should be related to each surface material instead
+                materials[(CPlugSurface.MaterialId)surface.Materials[tri.U03].SurfaceId],
                 null
                 )) ?? []);
 

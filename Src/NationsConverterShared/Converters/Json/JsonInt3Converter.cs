@@ -3,7 +3,7 @@ using System.Text.Json.Serialization;
 using System.Text.Json;
 using GBX.NET;
 
-namespace NationsConverterBuilder.Converters;
+namespace NationsConverterShared.Converters.Json;
 
 public class JsonInt3Converter : JsonConverter<Int3>
 {

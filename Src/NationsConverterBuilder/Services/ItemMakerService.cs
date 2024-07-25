@@ -193,7 +193,7 @@ internal sealed class ItemMakerService
         {
             if (child is CPlugTreeVisualMip mip)
             {
-                foreach (var descendant in GetAllChildren(mip.Levels.OrderBy(x => x.Key).First().Value))
+                foreach (var descendant in GetAllChildren(mip.Levels.OrderBy(x => x.FarZ).First().Tree))
                 {
                     yield return descendant;
                 }

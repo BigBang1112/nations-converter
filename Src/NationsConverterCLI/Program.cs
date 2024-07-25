@@ -1,25 +1,20 @@
 ﻿using GBX.NET;
-using GBX.NET.Components;
-using GBX.NET.Engines.Game;
 using GBX.NET.Hashing;
-using GBX.NET.LZO;
+using GBX.NET.Tool.CLI;
 using NationsConverter;
+using NationsConverterCLI;
+using NationsConverterShared.Converters.Json;
+using System.Text.Json;
 
-Gbx.LZO = new MiniLZO();
 Gbx.CRC32 = new CRC32();
 
-foreach (var fileName in args)
+var jsonOptions = new JsonSerializerOptions
 {
-    var gbx = Gbx.Parse(fileName);
+    WriteIndented = true,
+    Converters = { new JsonInt3Converter() }
+};
 
-    if (gbx is not Gbx<CGameCtnChallenge> gbxMap)
-    {
-        Console.WriteLine($"File '{fileName}' is not a map file.");
-        continue;
-    }
-
-    var converter = new NationsConverterTool(gbxMap);
-    var convertedMap = converter.ConvertMap();
-
-    convertedMap.Save("E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT\\" + Path.GetFileName(fileName));
-}
+await ToolConsole<NationsConverterTool>.RunAsync(args, new()
+{
+    JsonSerializerContext = new AppJsonContext(jsonOptions)
+});

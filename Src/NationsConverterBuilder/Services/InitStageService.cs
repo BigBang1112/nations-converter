@@ -2,7 +2,7 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Plug;
 using GBX.NET.Imaging.SkiaSharp;
-using NationsConverterBuilder.Converters;
+using NationsConverterShared.Converters.Json;
 using NationsConverterBuilder.Models;
 using NationsConverterShared.Models;
 using System.Text.Json;
@@ -26,7 +26,7 @@ internal sealed class InitStageService
 
     private static readonly JsonSerializerOptions jsonOptions = new()
     {
-        WriteIndented = true,
+        WriteIndented = false,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
 
