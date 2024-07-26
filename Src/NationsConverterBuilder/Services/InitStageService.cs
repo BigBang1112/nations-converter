@@ -229,10 +229,7 @@ internal sealed class InitStageService
 
         var itemPath = Path.Combine(subVariant.DirectoryPath, $"{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
 
-        lock (PadLock)
-        {
-            finalItem.Save(Path.Combine(itemsDirPath, itemPath));
-        }
+        finalItem.Save(Path.Combine(itemsDirPath, itemPath));
 
         if (!string.IsNullOrEmpty(initItemsOutputPath))
         {

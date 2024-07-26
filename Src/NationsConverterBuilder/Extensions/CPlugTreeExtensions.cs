@@ -150,19 +150,25 @@ public static class CPlugTreeExtensions
             Crystal = crystal,
             LayerId = "Layer0",
             LayerName = "Geometry",
-            Collidable = true,
+            Collidable = false,
             IsEnabled = true,
             IsVisible = true,
+            CrystalEnabled = false,
             U02 = [0]
         });
 
-        var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger);
+        var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, out var newMaterials);
 
         if (collisionLayer is not null)
         {
-            // wtf, collision layer can have different collision surface types, so there will be more than 1 material
             layers.Add(collisionLayer);
-            materials["_Collision"] = collisionLayer.Crystal!.Faces[0].Material!;
+
+            var i = 0;
+            foreach (var newMaterial in newMaterials)
+            {
+                materials.Add($"_Collision" + i, newMaterial);
+                i++;
+            }
         }
 
         var plugCrystal = new CPlugCrystal
@@ -196,7 +202,7 @@ public static class CPlugTreeExtensions
     {
         if (location == default)
         {
-            location = Iso4.Identity;
+            location = tree.Location.GetValueOrDefault(Iso4.Identity);
         }
 
         if (tree.Children is null)
@@ -265,7 +271,7 @@ public static class CPlugTreeExtensions
                 .Tree;
     }
 
-    private static CPlugCrystal.GeometryLayer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger)
+    private static CPlugCrystal.GeometryLayer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger, out IEnumerable<CPlugCrystal.Material> newMaterials)
     {
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
@@ -335,6 +341,7 @@ public static class CPlugTreeExtensions
 
         if (groups.Count == 0)
         {
+            newMaterials = [];
             return null;
         }
 
@@ -354,6 +361,8 @@ public static class CPlugTreeExtensions
             Faces = faces.ToArray()
         };
 
+        newMaterials = materials.Values;
+
         return new CPlugCrystal.GeometryLayer
         {
             Ver = 2,
@@ -364,6 +373,7 @@ public static class CPlugTreeExtensions
             Collidable = true,
             IsEnabled = true,
             IsVisible = false,
+            CrystalEnabled = false,
             U02 = [0]
         };
     }
