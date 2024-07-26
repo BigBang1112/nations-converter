@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 
 namespace NationsConverter;
 
@@ -8,12 +9,14 @@ internal sealed class MapConverter
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
     private readonly NationsConverterConfig config;
+    private readonly ILogger logger;
 
-    public MapConverter(CGameCtnChallenge map, CGameCtnChallenge convertedMap, NationsConverterConfig config)
+    public MapConverter(CGameCtnChallenge map, CGameCtnChallenge convertedMap, NationsConverterConfig config, ILogger logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;
         this.config = config;
+        this.logger = logger;
     }
 
     public void Convert()
@@ -97,22 +100,17 @@ internal sealed class MapConverter
             var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", environment, conversion.PageName, block.Name);
             var itemPath = Path.Combine(dirPath, $"{modifierType}_{block.Variant.Value}_{block.SubVariant.Value}.Item.Gbx");
 
-            var pos = block.Coord;
-
-            switch (block.Direction)
+            var pos = block.Direction switch
             {
-                case Direction.East:
-                    pos += new Int3(blockCoordSize.Z, 0, 0);
-                    break;
-                case Direction.South:
-                    pos += new Int3(blockCoordSize.X, 0, blockCoordSize.Z);
-                    break;
-                case Direction.West:
-                    pos += new Int3(0, 0, blockCoordSize.X);
-                    break;
-            }
+                Direction.East => block.Coord + (blockCoordSize.Z, 0, 0),
+                Direction.South => block.Coord + (blockCoordSize.X, 0, blockCoordSize.Z),
+                Direction.West => block.Coord + (0, 0, blockCoordSize.X),
+                _ => block.Coord
+            };
 
             var dir = -(int)block.Direction * MathF.PI / 2;
+
+            logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", block.Name, pos, dir);
 
             convertedMap.PlaceAnchoredObject(
                 new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),

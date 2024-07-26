@@ -2,21 +2,23 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Script;
 using GBX.NET.Tool;
+using Microsoft.Extensions.Logging;
 using System.Text;
 using TmEssentials;
 
 namespace NationsConverter;
 
-public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
+public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger) : ITool,
     IProductive<Gbx<CGameCtnChallenge>>,
     IConfigurable<NationsConverterConfig>
 {
-    const string BuildDate = "2024-07-02_14_35";
-    const string BuildGit = "127172-c8715502da1";
-    const string ExeVersion = "3.3.0";
+    private const string BuildDate = "2024-07-02_14_35";
+    private const string BuildGit = "127172-c8715502da1";
+    private const string ExeVersion = "3.3.0";
 
     private readonly Gbx<CGameCtnChallenge> gbxMap = gbxMap;
     private readonly CGameCtnChallenge map = gbxMap.Node;
+    private readonly ILogger logger = logger;
 
     public NationsConverterConfig Config { get; } = new();
 
@@ -24,7 +26,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
     {
         var convertedMap = CreateBaseMap();
 
-        var mapConverter = new MapConverter(map, convertedMap, Config);
+        var mapConverter = new MapConverter(map, convertedMap, Config, logger);
         mapConverter.Convert();
 
         var fileNameWithoutExtension = gbxMap.FilePath is null
