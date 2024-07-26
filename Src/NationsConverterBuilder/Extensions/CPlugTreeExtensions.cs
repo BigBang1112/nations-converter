@@ -28,7 +28,7 @@ public static class CPlugTreeExtensions
 
         var indicesOffset = 0;
 
-        foreach (var (t, loc) in GetAllChildren(tree, lod))
+        foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
         {
             if (t.Visual is null)
             {
@@ -205,6 +205,20 @@ public static class CPlugTreeExtensions
             location = tree.Location.GetValueOrDefault(Iso4.Identity);
         }
 
+        if (tree is CPlugTreeVisualMip mip)
+        {
+            var lodChild = GetLodTree(mip, lod);
+
+            var newLocation = MultiplyAddIso4(location, lodChild.Location.GetValueOrDefault(Iso4.Identity));
+
+            yield return (lodChild, newLocation);
+
+            foreach (var descendant in GetAllChildren(lodChild, lod, newLocation))
+            {
+                yield return descendant;
+            }
+        }
+
         if (tree.Children is null)
         {
             yield break;
@@ -215,20 +229,6 @@ public static class CPlugTreeExtensions
             var childLocation = child.Location.GetValueOrDefault(Iso4.Identity);
 
             var newLocation = MultiplyAddIso4(location, childLocation);
-
-            if (child is CPlugTreeVisualMip mip)
-            {
-                var lodChild = GetLodTree(mip, lod);
-
-                newLocation = MultiplyAddIso4(newLocation, lodChild.Location.GetValueOrDefault(Iso4.Identity));
-
-                foreach (var descendant in GetAllChildren(lodChild, lod, newLocation))
-                {
-                    yield return descendant;
-                }
-
-                continue;
-            }
             
             yield return (child, newLocation);
 
