@@ -22,9 +22,27 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
 
     public Gbx<CGameCtnChallenge> Produce()
     {
+        var convertedMap = CreateBaseMap();
+
+        var mapConverter = new MapConverter(map, convertedMap, Config);
+        mapConverter.Convert();
+
+        var fileNameWithoutExtension = gbxMap.FilePath is null
+            ? TextFormatter.Deformat(map.MapName)
+            : GbxPath.GetFileNameWithoutExtension(gbxMap.FilePath);
+
+        return new Gbx<CGameCtnChallenge>(convertedMap)
+        {
+            FilePath = Path.Combine("Maps", "GbxTools", "NationsConverter", $"{fileNameWithoutExtension}.Map.Gbx")
+        };
+    }
+
+    private CGameCtnChallenge CreateBaseMap()
+    {
         var newMapUid = $"{Convert.ToBase64String(Encoding.ASCII.GetBytes(Guid.NewGuid().ToString()))[..10]}{map.MapUid.Substring(9, 14)}NC2";
         var authorLogin = "akPfIM0aSzuHuaaDWptBbQ";
         var authorZone = "World|Europe|Czechia|Jihoceský kraj";
+        var mapType = "TrackMania\\TM_Race";
 
         var convertedMap = new CGameCtnChallenge
         {
@@ -36,7 +54,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
             BuildVersion = $"date={BuildDate} git={BuildGit} GameVersion={ExeVersion}",
             ChallengeParameters = new CGameCtnChallengeParameters
             {
-                MapType = "TrackMania\\TM_Race",
+                MapType = mapType,
                 TimeLimit = new TimeInt32(0, 1, 0)
             },
             ClipTriggerSize = (3, 1, 3),
@@ -45,12 +63,12 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
             Decoration = new("48x48Screen155Day", 26, "Nadeo"),
             MapInfo = new(newMapUid, 26, authorLogin),
             MapName = map.MapName,
-            MapType = "TrackMania\\TM_Race",
+            MapType = mapType,
             OffzoneTriggerSize = (3, 1, 3),
             ScriptMetadata = new CScriptTraitsMetadata(),
             Size = (48, 40, 48),
             TitleId = "TMStadium",
-            Xml = $@"<header type=""map"" exever=""{ExeVersion}"" exebuild=""{BuildDate}"" title=""TMStadium"" lightmap=""0""><ident uid=""{newMapUid}"" name=""Base"" author=""{authorLogin}"" authorzone=""{authorZone}""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""TrackMania\TM_Race"" mapstyle="""" validated=""0"" nblaps=""0"" displaycost=""203"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""-1"" silver=""-1"" gold=""-1"" authortime=""-1"" authorscore=""0""/><deps></deps></header>",
+            Xml = $@"<header type=""map"" exever=""{ExeVersion}"" exebuild=""{BuildDate}"" title=""TMStadium"" lightmap=""0""><ident uid=""{newMapUid}"" name=""Base"" author=""{authorLogin}"" authorzone=""{authorZone}""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""{mapType}"" mapstyle="""" validated=""0"" nblaps=""0"" displaycost=""203"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""-1"" silver=""-1"" gold=""-1"" authortime=""-1"" authorscore=""0""/><deps></deps></header>",
             CustomMusicPackDesc = PackDesc.Empty,
             ModPackDesc = PackDesc.Empty,
             Kind = CGameCtnChallenge.MapKind.InProgress,
@@ -138,13 +156,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap) : ITool,
         convertedMap.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00E>();
         convertedMap.ScriptMetadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
 
-        var fileNameWithoutExtension = gbxMap.FilePath is null
-            ? TextFormatter.Deformat(map.MapName)
-            : GbxPath.GetFileNameWithoutExtension(gbxMap.FilePath);
-
-        return new Gbx<CGameCtnChallenge>(convertedMap)
-        {
-            FilePath = Path.Combine("Maps", "GbxTools", "NationsConverter", $"{fileNameWithoutExtension}.Map.Gbx")
-        };
+        return convertedMap;
     }
 }
