@@ -13,4 +13,5 @@ internal sealed class CollectionModel
     public ConcurrentDictionary<string, BlockInfoModel> RootBlocks { get; } = new();
     public bool IsLoaded { get; set; }
     public Dictionary<Int3, DecorationModel> Decorations { get; set; } = [];
+    public Int3 BlockSize { get; set; }
 }

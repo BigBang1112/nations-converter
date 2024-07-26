@@ -1,0 +1,8 @@
+[*.cs]
+csharp_style_prefer_range_operator = false
+csharp_style_namespace_declarations = file_scoped
+csharp_style_prefer_primary_constructors = false
+
+dotnet_style_require_accessibility_modifiers = always
+dotnet_diagnostic.IDE0040.severity = warning
+dotnet_diagnostic.IDE0305.severity = none

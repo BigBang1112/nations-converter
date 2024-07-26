@@ -24,6 +24,8 @@ internal sealed class InitStageService
 
     private static readonly string[] subCategories = ["Balanced", "Mod", "Modless"];
 
+    private static readonly object PadLock = new();
+
     private static readonly JsonSerializerOptions jsonOptions = new()
     {
         WriteIndented = false,
@@ -65,6 +67,11 @@ internal sealed class InitStageService
             tasks.Add(Parallel.ForEachAsync(subCategories, cancellationToken, async (subCategory, cancellationToken) =>
             {
                 var displayName = collection.DisplayName;
+
+                foreach (var (size, deco) in collection.Decorations)
+                {
+                    ProcessDecoration(collection, deco, subCategory, size);
+                }
 
                 var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
                 map.MapName = displayName;
@@ -222,7 +229,10 @@ internal sealed class InitStageService
 
         var itemPath = Path.Combine(subVariant.DirectoryPath, $"{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
 
-        finalItem.Save(Path.Combine(itemsDirPath, itemPath));
+        lock (PadLock)
+        {
+            finalItem.Save(Path.Combine(itemsDirPath, itemPath));
+        }
 
         if (!string.IsNullOrEmpty(initItemsOutputPath))
         {
@@ -325,6 +335,31 @@ internal sealed class InitStageService
                     };
                 }
             }
+        }
+    }
+
+    private void ProcessDecoration(CollectionModel collection, DecorationModel decoration, string subCategory, Int3 decoSize)
+    {
+        if (decoration.Solid is null)
+        {
+            return;
+        }
+
+        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", collection.DisplayName, "Decorations");
+
+        Directory.CreateDirectory(Path.Combine(itemsDirPath, dirPath));
+
+        var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, subCategory);
+        var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize);
+
+        var itemPath = Path.Combine(dirPath, $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}.Item.Gbx");
+
+        finalItem.Save(Path.Combine(itemsDirPath, itemPath));
+
+        if (!string.IsNullOrEmpty(initItemsOutputPath))
+        {
+            Directory.CreateDirectory(Path.Combine(initItemsOutputPath, dirPath));
+            File.Copy(Path.Combine(itemsDirPath, itemPath), Path.Combine(initItemsOutputPath, itemPath), true);
         }
     }
 }

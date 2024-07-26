@@ -92,7 +92,8 @@ internal sealed class SetupService
                 Id = collection.Collection,
                 DisplayName = collection.DisplayName ?? collection.Collection,
                 Node = collection,
-                Decorations = decorations
+                Decorations = decorations,
+                BlockSize = ((int)collection.SquareSize, (int)collection.SquareHeight, (int)collection.SquareSize)
             });
         }
     }
