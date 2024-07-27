@@ -57,9 +57,9 @@
                             <button class="browsable directory @(SelectedDirectories.Count > i + 1 && name == SelectedDirectories[i + 1] ? "selected" : "")" @onclick="() => VisitDirectory(SelectedDirectories.IndexOf(dir) + 1, name)">@name</button>
                         }
 
-                        @foreach (var block in currentBlocks)
+                        @foreach (var (name, block) in currentBlocks)
                         {
-                            <button class="browsable block"><CollectorIcon Name="@block.Key" WebpData="@block.Value.WebpIcon" /></button>
+                            <button class="browsable block @(SelectedBlock == block ? "selected" : "")" @onclick="() => SelectBlock(block)"><CollectorIcon Name="@name" WebpData="@block.WebpIcon" /></button>
                         }
                     </div>
 
@@ -70,10 +70,19 @@
             <div class="env-root-blocks">
                 @foreach (var (name, block) in SetupService.Collections[SelectedCollection].RootBlocks)
                 {
-                    <button class="browsable block"><CollectorIcon Name="@name" WebpData="@block.WebpIcon" /></button>
+                    <button class="browsable block @(SelectedBlock == block ? "selected" : "")" @onclick="() => SelectBlock(block)"><CollectorIcon Name="@name" WebpData="@block.WebpIcon" /></button>
                 }
             </div>
         </div>
+    }
+</div>
+
+<div class="block-info">
+    @if (SelectedBlock is not null)
+    {
+        <h2>@SelectedBlock.Name</h2>
+        <p>Materials: @string.Join(", ", GetAllMaterialNames(SelectedBlock))</p>
+        
     }
 </div>
 
@@ -83,6 +92,13 @@
     public List<string> SelectedDirectories { get; } = new();
 
     public bool IsLoading { get; set; }
+
+    private BlockInfoModel? SelectedBlock { get; set; }
+
+    private void SelectBlock(BlockInfoModel block)
+    {
+        SelectedBlock = block;
+    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -117,5 +133,74 @@
         }
 
         SelectedDirectories.Add(name);
+    }
+
+    private HashSet<string> GetAllMaterialNames(BlockInfoModel block)
+    {
+        var node = (CGameCtnBlockInfo?)Gbx.ParseNode(block.GbxFilePath);
+
+        if (node is null)
+        {
+            return new();
+        }
+
+        var materials = new HashSet<string>();
+
+        foreach (var mat in GetAllMaterialNames(node.AirMobils))
+        {
+            materials.Add(mat);
+        }
+
+        foreach (var mat in GetAllMaterialNames(node.GroundMobils))
+        {
+            materials.Add(mat);
+        }
+
+        return materials;
+    }
+
+    private IEnumerable<string> GetAllMaterialNames(External<GBX.NET.Engines.Scene.CSceneMobil>[][]? mobils)
+    {
+        if (mobils is null)
+        {
+            yield break;
+        }
+
+        foreach (var subMobils in mobils)
+        {
+            foreach (var subMobil in subMobils)
+            {
+                if (subMobil.GetNode()?.Item?.Solid?.Tree is not GBX.NET.Engines.Plug.CPlugSolid solid)
+                {
+                    continue;
+                }
+
+                foreach (var mat in GetAllMaterialNames(solid.Tree as GBX.NET.Engines.Plug.CPlugTree))
+                {
+                    yield return mat;
+                }
+            }
+        }
+    }
+
+    private IEnumerable<string> GetAllMaterialNames(GBX.NET.Engines.Plug.CPlugTree? tree)
+    {
+        if (tree is null)
+        {
+            yield break;
+        }
+
+        if (tree.ShaderFile is not null)
+        {
+            yield return GbxPath.GetFileNameWithoutExtension(tree.ShaderFile.FilePath);
+        }
+
+        foreach (var child in tree.Children)
+        {
+            foreach (var mat in GetAllMaterialNames(child))
+            {
+                yield return mat;
+            }
+        }
     }
 }
