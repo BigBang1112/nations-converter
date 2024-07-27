@@ -48,5 +48,23 @@ internal sealed class UvModifierService
                 uvs[i] = new Vec2(cos * x - sin * y + 0.5f, sin * x + cos * y + 0.5f);
             }
         }
+
+        if (uvModifiers.TranslateX != 0)
+        {
+            for (var i = 0; i < uvs.Length; i++)
+            {
+                var x = uvs[i].X + uvModifiers.TranslateX;
+                uvs[i] = new Vec2(x, uvs[i].Y);
+            }
+        }
+
+        if (uvModifiers.TranslateY != 0)
+        {
+            for (var i = 0; i < uvs.Length; i++)
+            {
+                var y = uvs[i].Y + uvModifiers.TranslateY;
+                uvs[i] = new Vec2(uvs[i].X, y);
+            }
+        }
     }
 }
