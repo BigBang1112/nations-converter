@@ -1,6 +1,7 @@
 ﻿using GBX.NET.Components;
 using GBX.NET.Engines.Plug;
 using GBX.NET;
+using GBX.NET.Serialization.Chunking;
 
 namespace NationsConverterBuilder.Extensions;
 
@@ -60,7 +61,7 @@ public static class CPlugSolidExtensions
                 {
                     material = new CPlugSolid2Model.Material
                     {
-                        MaterialUserInst = CPlugMaterialUserInstExtensions.Create()
+                        MaterialUserInst = CPlugMaterialUserInstExtensions.Create("PlatformTech")
                     };
                 }
                 else
@@ -70,6 +71,12 @@ public static class CPlugSolidExtensions
                     if (inst is null)
                     {
                         continue;
+                    }
+
+                    if (inst.Link?.StartsWith(@"Stadium\Media\Material\") == true)
+                    {
+                        inst.Link = inst.Link.Substring(@"Stadium\Media\Material\".Length);
+                        inst.IsUsingGameMaterial = false;
                     }
 
                     material = new CPlugSolid2Model.Material() { MaterialUserInst = inst };
@@ -84,8 +91,71 @@ public static class CPlugSolidExtensions
                 materialIndices[material] = matIndex;
             }
 
-            // This is mutating, BlockInfo instance needs to be reparsed if this object is needed later
+            /*var vertexStream = new CPlugVertexStream
+            {
+                Positions = ApplyLocation(visual.Vertices.Select(v => v.Position), loc).ToArray(),
+            };
+            var vertexChunk000 = vertexStream.CreateChunk<CPlugVertexStream.Chunk09056000>();
+            vertexChunk000.Version = 1;
+            vertexChunk000.U01 = true;
+
+            foreach (var field in typeof(CPlugVertexStream).GetFields(System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic))
+            {
+                switch (field.Name)
+                {
+                    case "count":
+                        field.SetValue(vertexStream, vertexStream.Positions.Length);
+                        break;
+                    case "flags":
+                        field.SetValue(vertexStream, 3u);
+                        break;
+                    case "dataDecls":
+                        var decls = new List<CPlugVertexStream.DataDecl>
+                        {
+                            new()
+                            {
+                                Flags1 = 0xA00400
+                            }
+                        };
+
+                        if (visual.TexCoords.Length > 0)
+                        {
+                            decls.Add(new()
+                            {
+                                Flags1 = 0x20A0020A,
+                                Flags2 = 64,
+                                Offset = 16
+                            });
+                        }
+
+                        field.SetValue(vertexStream, decls.ToArray());
+                        break;
+                    case "uvs":
+                        var uvs = (SortedDictionary<int, Vec2[]>)field.GetValue(vertexStream)!;
+                        for (var i = 0; i < visual.TexCoords.Length; i++)
+                        {
+                            uvs[i] = visual.TexCoords[i].TexCoords.Select(v => v.UV).ToArray();
+                            uvModifiers?.Invoke(t.ShaderFile, matIndex, uvs[i]);
+                        }
+                        field.SetValue(vertexStream, uvs);
+                        break;
+                }
+            }*/
+
+            // This will mutate CPlugVisual, BlockInfo instance needs to be reparsed if this object is needed later
             ApplyLocation(visual.Vertices, loc);
+            /*visual.Vertices = [];
+            visual.VertexStreams = [vertexStream];*/
+            //visual.Flags = 168;
+
+            // Uses different index storing method
+            visual.IndexBuffer.Chunks.Remove<CPlugIndexBuffer.Chunk09057000>();
+            visual.IndexBuffer.CreateChunk<CPlugIndexBuffer.Chunk09057001>();
+
+            visual.Chunks.Remove<CPlugVisual.Chunk09006004>();
+            visual.Chunks.Remove<CPlugVisual.Chunk0900600E>();
+            visual.CreateChunk<CPlugVisual.Chunk0900600F>().Version = 4; // TMT version
+            visual.CreateChunk<CPlugVisual.Chunk09006010>();
 
             var shadedGeom = new CPlugSolid2Model.ShadedGeom
             {
@@ -106,6 +176,22 @@ public static class CPlugSolidExtensions
             MaterialsFolderName = @"Stadium\Media\Material\",
             VisCstType = 1,
             Visuals = visuals.ToArray(),
+            ShadedGeoms = shadedGeoms.ToArray(),
+            /*PreLightGenerator = new() // crashes more often
+            {
+                Version = 1,
+                U01 = 1,
+                U02 = 8.016032f, // can change
+                U03 = true,
+                U04 = 0.001f,
+                U05 = 0.001f,
+                U06 = 0.999f,
+                U07 = 0.995f,
+                U08 = 3.4028235E+38f,
+                U09 = 3.4028235E+38f,
+                U10 = -3.4028235E+38f,
+                U11 = -3.4028235E+38f,
+            }*/
         };
         var chunk000 = solid2.CreateChunk<CPlugSolid2Model.Chunk090BB000>();
         chunk000.Version = 32;
@@ -113,6 +199,7 @@ public static class CPlugSolidExtensions
         chunk000.U07 = 1;
         chunk000.U15 = 1;
         chunk000.U16 = 1;
+        solid2.Chunks.Add(new SkippableChunk(0x090BB002) { Data = new byte[8] });
 
         return new CPlugStaticObjectModel
         {
@@ -215,5 +302,19 @@ public static class CPlugSolidExtensions
                 )
             };
         }
+    }
+
+    private static IEnumerable<Vec3> ApplyLocation(IEnumerable<Vec3> vertices, Iso4 location)
+    {
+        if (location == Iso4.Identity)
+        {
+            return vertices;
+        }
+
+        return vertices.Select(v => new Vec3(
+            v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
+            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
+            v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
+        ));
     }
 }
