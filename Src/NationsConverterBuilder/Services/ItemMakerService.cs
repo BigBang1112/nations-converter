@@ -1,4 +1,5 @@
 ﻿using GBX.NET;
+using GBX.NET.Components;
 using GBX.NET.Engines.GameData;
 using GBX.NET.Engines.Plug;
 using Microsoft.Extensions.Options;
@@ -30,66 +31,97 @@ internal sealed class ItemMakerService
 
         return tree.ToCrystal(matFile =>
         {
-            var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+            return GetMaterialLink(matFile, matDict, subCategory);
+        },
+        (matFile, uvSetIndex, uvs) =>
+        {
+            ApplyUvModifiers(matFile, uvSetIndex, uvs, subCategory);
+        },
+        lod: 0, logger);
+    }
 
-            if (matDict.TryGetValue(matName, out var mat))
-            {
-                return mat;
-            }
+    public CPlugStaticObjectModel CreateStaticObjectFromSolid(CPlugSolid solid, string subCategory)
+    {
+        var matDict = new Dictionary<string, CPlugMaterialUserInst>();
 
-            if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
-            {
-                return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
-            }
+        return solid.ToStaticObject(matFile =>
+        {
+            return GetMaterialLink(matFile, matDict, subCategory);
+        },
+        (matFile, uvSetIndex, uvs) =>
+        {
+            ApplyUvModifiers(matFile, uvSetIndex, uvs, subCategory);
+        },
+        lod: 0, logger);
+    }
 
-            if (material.Remove)
+    private CPlugMaterialUserInst? GetMaterialLink(
+        GbxRefTableFile matFile,
+        Dictionary<string, CPlugMaterialUserInst> matDict,
+        string subCategory)
+    {
+        var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+
+        if (matDict.TryGetValue(matName, out var mat))
+        {
+            return mat;
+        }
+
+        if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
+        {
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
+        }
+
+        if (material.Remove)
+        {
+            return null;
+        }
+
+        if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
+        {
+            if (subCategoryMaterial.Remove)
             {
                 return null;
             }
 
-            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
+            if (!string.IsNullOrEmpty(subCategoryMaterial.Link))
             {
-                if (subCategoryMaterial.Remove)
-                {
-                    return null;
-                }
-
-                if (!string.IsNullOrEmpty(subCategoryMaterial.Link))
-                {
-                    return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, subCategoryMaterial.Color);
-                }
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, subCategoryMaterial.Color);
             }
+        }
 
-            if (!string.IsNullOrEmpty(material.Link))
-            {
-                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, material.Color);
-            }
-
-            return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
-        },
-        (matFile, uvSetIndex, uvs) =>
+        if (!string.IsNullOrEmpty(material.Link))
         {
-            var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, material.Color);
+        }
 
-            if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
-            {
-                return;
-            }
+        return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
+    }
 
-            if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial) && subCategoryMaterial.UvModifiers is not null)
-            {
-                uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
-            }
+    private void ApplyUvModifiers(GbxRefTableFile matFile, int uvSetIndex, Vec2[] uvs, string subCategory)
+    {
+        var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
 
-            if (material.UvModifiers is not null)
-            {
-                uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
-            }
-        }, lod: 0, logger);
+        if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
+        {
+            return;
+        }
+
+        if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial) && subCategoryMaterial.UvModifiers is not null)
+        {
+            uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.UvModifiers);
+        }
+
+        if (material.UvModifiers is not null)
+        {
+            uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
+        }
     }
 
     public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize)
     {
+        var item = CreateGenericItem(webpData, blockSize);
+
         var entityModelEdition = new CGameCommonItemEntityModelEdition
         {
             InventoryOccupation = 1000,
@@ -102,6 +134,31 @@ internal sealed class ItemMakerService
         chunk000.U15 = true;
         entityModelEdition.CreateChunk<CGameCommonItemEntityModelEdition.Chunk2E026001>().Data = new byte[8];
 
+        item.EntityModelEdition = entityModelEdition;
+
+        return item;
+    }
+
+    public CGameItemModel Build(CPlugStaticObjectModel staticObject, byte[]? webpData, Int3 blockSize)
+    {
+        var item = CreateGenericItem(webpData, blockSize);
+
+        var entityModel = new CGameCommonItemEntityModel
+        {
+            StaticObject = staticObject
+        };
+        var chunk000 = entityModel.CreateChunk<CGameCommonItemEntityModel.Chunk2E027000>();
+        chunk000.Version = 4;
+        chunk000.U03 = Iso4.Identity;
+        chunk000.U12 = Iso4.Identity;
+
+        item.EntityModel = entityModel;
+
+        return item;
+    }
+
+    private CGameItemModel CreateGenericItem(byte[]? webpData, Int3 blockSize)
+    {
         var placementParams = new CGameItemPlacementParam
         {
             Flags = 1,
@@ -138,7 +195,6 @@ internal sealed class ItemMakerService
             OrbitalRadiusBase = -1,
             PageName = "Items",
             ProdState = CGameCtnCollector.EProdState.Release,
-            EntityModelEdition = entityModelEdition,
             WaypointType = CGameItemModel.EWaypointType.None,
             IconWebP = webpData
         };
@@ -180,33 +236,5 @@ internal sealed class ItemMakerService
         item.CreateChunk<CGameItemModel.Chunk2E002027>();
 
         return item;
-    }
-
-    private static IEnumerable<CPlugTree> GetAllChildren(CPlugTree tree)
-    {
-        if (tree.Children is null)
-        {
-            yield break;
-        }
-
-        foreach (var child in tree.Children)
-        {
-            if (child is CPlugTreeVisualMip mip)
-            {
-                foreach (var descendant in GetAllChildren(mip.Levels.OrderBy(x => x.FarZ).First().Tree))
-                {
-                    yield return descendant;
-                }
-
-                continue;
-            }
-
-            yield return child;
-
-            foreach (var descendant in GetAllChildren(child))
-            {
-                yield return descendant;
-            }
-        }
     }
 }

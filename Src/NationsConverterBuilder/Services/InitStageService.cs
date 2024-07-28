@@ -7,6 +7,7 @@ using NationsConverterBuilder.Models;
 using NationsConverterShared.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using GBX.NET.Engines.GameData;
 
 namespace NationsConverterBuilder.Services;
 
@@ -136,6 +137,8 @@ internal sealed class InitStageService
         }
     }
 
+    private static readonly string[] technologies = ["MM_Collision", "Solid2"];
+
     private ConversionModel? ProcessBlock(string collectionName, CGameCtnChallenge map, BlockInfoModel block, string subCategory, ref int index)
     {
         var node = (CGameCtnBlockInfo?)Gbx.ParseNode(block.GbxFilePath);
@@ -155,58 +158,73 @@ internal sealed class InitStageService
             pageName = pageName[..^1];
         }
 
-        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", collectionName, pageName, block.Name);
+        var mapTechnology = "MM_Collision";
 
-        if (node.GroundMobils is not null)
+        foreach (var technology in technologies)
         {
-            for (byte i = 0; i < node.GroundMobils.Length; i++)
+            var dirPath = Path.Combine("NC2", "Solid", subCategory, technology, collectionName, pageName, block.Name);
+
+            if (node.GroundMobils is not null)
             {
-                var groundMobilSubVariants = node.GroundMobils[i];
-
-                for (byte j = 0; j < groundMobilSubVariants.Length; j++)
+                for (byte i = 0; i < node.GroundMobils.Length; i++)
                 {
-                    ProcessSubVariant(new()
-                    {
-                        Node = groundMobilSubVariants[j],
-                        BlockInfo = node,
-                        CollectionName = collectionName,
-                        DirectoryPath = dirPath,
-                        ModifierType = "Ground",
-                        VariantIndex = i,
-                        SubVariantIndex = j,
-                        WebpData = node.IconWebP,
-                        BlockName = block.Name,
-                        SubCategory = subCategory
-                    }, map, ref index);
+                    var groundMobilSubVariants = node.GroundMobils[i];
 
-                    index++;
+                    for (byte j = 0; j < groundMobilSubVariants.Length; j++)
+                    {
+                        ProcessSubVariant(new()
+                        {
+                            Node = groundMobilSubVariants[j],
+                            BlockInfo = node,
+                            CollectionName = collectionName,
+                            DirectoryPath = dirPath,
+                            ModifierType = "Ground",
+                            VariantIndex = i,
+                            SubVariantIndex = j,
+                            WebpData = node.IconWebP,
+                            BlockName = block.Name,
+                            SubCategory = subCategory,
+                            Technology = technology,
+                            MapTechnology = mapTechnology
+                        }, map, ref index);
+
+                        if (technology == mapTechnology)
+                        {
+                            index++;
+                        }
+                    }
                 }
             }
-        }
 
-        if (node.AirMobils is not null)
-        {
-            for (byte i = 0; i < node.AirMobils.Length; i++)
+            if (node.AirMobils is not null)
             {
-                var airMobilSubVariants = node.AirMobils[i];
-
-                for (byte j = 0; j < airMobilSubVariants.Length; j++)
+                for (byte i = 0; i < node.AirMobils.Length; i++)
                 {
-                    ProcessSubVariant(new()
-                    {
-                        Node = airMobilSubVariants[j],
-                        BlockInfo = node,
-                        CollectionName = collectionName,
-                        DirectoryPath = dirPath,
-                        ModifierType = "Air",
-                        VariantIndex = i,
-                        SubVariantIndex = j,
-                        WebpData = node.IconWebP,
-                        BlockName = block.Name,
-                        SubCategory = subCategory
-                    }, map, ref index);
+                    var airMobilSubVariants = node.AirMobils[i];
 
-                    index++;
+                    for (byte j = 0; j < airMobilSubVariants.Length; j++)
+                    {
+                        ProcessSubVariant(new()
+                        {
+                            Node = airMobilSubVariants[j],
+                            BlockInfo = node,
+                            CollectionName = collectionName,
+                            DirectoryPath = dirPath,
+                            ModifierType = "Air",
+                            VariantIndex = i,
+                            SubVariantIndex = j,
+                            WebpData = node.IconWebP,
+                            BlockName = block.Name,
+                            SubCategory = subCategory,
+                            Technology = technology,
+                            MapTechnology = mapTechnology
+                        }, map, ref index);
+
+                        if (technology == mapTechnology)
+                        {
+                            index++;
+                        }
+                    }
                 }
             }
         }
@@ -224,8 +242,21 @@ internal sealed class InitStageService
 
         Directory.CreateDirectory(Path.Combine(itemsDirPath, subVariant.DirectoryPath));
 
-        var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.SubCategory);
-        var finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
+        CGameItemModel finalItem;
+        switch (subVariant.Technology)
+        {
+            case "MM_Collision":
+                var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.SubCategory);
+                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
+                break;
+            case "Solid2":
+                var staticObject = itemMaker.CreateStaticObjectFromSolid(solid, subVariant.SubCategory);
+                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
+                break;
+            default:
+                //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
+                return;
+        }
 
         var itemPath = Path.Combine(subVariant.DirectoryPath, $"{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
 
@@ -237,9 +268,12 @@ internal sealed class InitStageService
             File.Copy(Path.Combine(itemsDirPath, itemPath), Path.Combine(initItemsOutputPath, itemPath), true);
         }
 
-        map.PlaceAnchoredObject(
-            new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+        if (subVariant.Technology == subVariant.MapTechnology)
+        {
+            map.PlaceAnchoredObject(
+                new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
+                    (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+        }
     }
 
     private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName)

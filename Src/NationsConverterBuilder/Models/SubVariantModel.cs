@@ -16,4 +16,6 @@ internal sealed class SubVariantModel
     public required byte[]? WebpData { get; init; }
     public required string BlockName { get; init; }
     public required string SubCategory { get; init; }
+    public required string Technology { get; init; }
+    public required string MapTechnology { get; init; }
 }

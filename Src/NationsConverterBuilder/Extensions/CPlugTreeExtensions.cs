@@ -271,6 +271,20 @@ public static class CPlugTreeExtensions
                 .Tree;
     }
 
+    private static IEnumerable<Vec3> ApplyLocation(IEnumerable<Vec3> vertices, Iso4 location)
+    {
+        if (location == Iso4.Identity)
+        {
+            return vertices;
+        }
+
+        return vertices.Select(v => new Vec3(
+            v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
+            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
+            v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
+        ));
+    }
+
     private static CPlugCrystal.GeometryLayer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger, out IEnumerable<CPlugCrystal.Material> newMaterials)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -376,19 +390,5 @@ public static class CPlugTreeExtensions
             CrystalEnabled = false,
             U02 = [0]
         };
-    }
-
-    private static IEnumerable<Vec3> ApplyLocation(IEnumerable<Vec3> vertices, Iso4 location)
-    {
-        if (location == Iso4.Identity)
-        {
-            return vertices;
-        }
-
-        return vertices.Select(v => new Vec3(
-            v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
-            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
-            v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
-        ));
     }
 }
