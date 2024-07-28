@@ -294,7 +294,7 @@ public static class CPlugTreeExtensions
 
         var indicesOffset = 0;
 
-        foreach (var (child, location) in GetAllChildren(tree))
+        foreach (var (child, location) in GetAllChildren(tree).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
         {
             if (child.Surface is null)
             {
