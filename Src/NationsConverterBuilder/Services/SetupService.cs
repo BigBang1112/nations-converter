@@ -105,6 +105,19 @@ internal sealed class SetupService
             return;
         }
 
+        foreach (var zone in collection.Node.CompleteListZoneList ?? [])
+        {
+            if (zone.Node is CGameCtnZoneFrontier frontier)
+            {
+                if (frontier.BlockInfoFrontier is null)
+                {
+                    continue;
+                }
+
+                collection.TerrainZones.Add(frontier.BlockInfoFrontier.Ident.Id, frontier);
+            }
+        }
+
         var folderBlockInfoPath = Path.Combine(dataDirPath, collection.Node.FolderBlockInfo);
 
         foreach (var blockInfoFilePath in Directory.EnumerateFiles(folderBlockInfoPath, "*.Gbx", SearchOption.AllDirectories).AsParallel())
@@ -133,7 +146,8 @@ internal sealed class SetupService
                     Name = blockInfoNode.Ident.Id,
                     NodeHeader = blockInfoNode,
                     GbxFilePath = blockInfoFilePath,
-                    WebpIcon = webpData
+                    WebpIcon = webpData,
+                    TerrainZone = collection.TerrainZones.GetValueOrDefault(blockInfoNode.Ident.Id)
                 });
                 continue;
             }
@@ -154,7 +168,8 @@ internal sealed class SetupService
                         Name = blockInfoNode.Ident.Id,
                         NodeHeader = blockInfoNode,
                         GbxFilePath = blockInfoFilePath,
-                        WebpIcon = webpData
+                        WebpIcon = webpData,
+                        TerrainZone = collection.TerrainZones.GetValueOrDefault(blockInfoNode.Ident.Id)
                     });
                 }
 

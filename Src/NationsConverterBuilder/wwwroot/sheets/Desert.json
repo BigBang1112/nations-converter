@@ -9538,7 +9538,8 @@
         2,
         4
       ]
-    }
+    },
+    "Height": 3
   },
   "SpeedRiverRoadClipRight": {
     "PageName": "Other",
@@ -9653,7 +9654,8 @@
         2,
         4
       ]
-    }
+    },
+    "Height": 3
   },
   "Desert2ToDesert3": {
     "PageName": "Other",
@@ -9687,7 +9689,8 @@
         1,
         1
       ]
-    }
+    },
+    "Height": 6
   },
   "SpeedToCanyon": {
     "PageName": "Other",
@@ -9802,7 +9805,8 @@
         3,
         3
       ]
-    }
+    },
+    "Height": 4
   },
   "DesertToRock": {
     "PageName": "Other",
@@ -9836,7 +9840,8 @@
         2,
         1
       ]
-    }
+    },
+    "Height": 2
   },
   "SpeedRockClip": {
     "PageName": "Other",

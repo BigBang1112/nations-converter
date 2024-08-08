@@ -10222,7 +10222,8 @@
         3,
         3
       ]
-    }
+    },
+    "Height": 4
   },
   "RallyFieldClip2": {
     "PageName": "Other",
@@ -10349,7 +10350,8 @@
         3,
         3
       ]
-    }
+    },
+    "Height": 2
   },
   "Hills2ToHills3": {
     "PageName": "Other",
@@ -10383,7 +10385,8 @@
         3,
         3
       ]
-    }
+    },
+    "Height": 6
   },
   "RallyGT8Pillar": {
     "PageName": "Other",
@@ -10723,7 +10726,8 @@
         3,
         3
       ]
-    }
+    },
+    "Height": 2
   },
   "RallyCastleStartPillar": {
     "PageName": "Other",
@@ -10845,7 +10849,8 @@
         2,
         1
       ]
-    }
+    },
+    "Height": 1
   },
   "RallyGT3Pillar": {
     "PageName": "Other",
@@ -11418,7 +11423,8 @@
         8,
         4
       ]
-    }
+    },
+    "Height": 3
   },
   "RallyGT2Pillar": {
     "PageName": "Other",

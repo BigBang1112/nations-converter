@@ -1,1 +1,9964 @@
-{"SpeedRockToRockToBridge":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,4,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,4,0],"Dir":2}]},"Variants":1},"SpeedRockToRockToBridgeArch3":{"PageName":"Bridge/Bridge","Air":{"Units":[[0,0,0],[0,1,0],[0,1,1],[0,2,0],[0,2,1],[0,2,2],[0,3,0],[0,3,1],[0,3,2],[0,4,0],[0,4,1],[0,4,2]],"Size":[1,5,3],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,4,0],"Dir":2},{"Name":"SpeedBridgeClip","Offset":[0,4,2],"Dir":0}]},"Variants":1},"SpeedBridgePillarSand6":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0]],"Size":[1,7,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,6,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,6,0],"Dir":2}]},"Variants":1},"SpeedBridgePillarSand10":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],[0,7,0],[0,8,0],[0,9,0],[0,10,0]],"Size":[1,11,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,10,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,10,0],"Dir":2}]},"Variants":1},"SpeedBridgePillarWater6":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0]],"Size":[1,7,1],"SubVariants":[2],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,6,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,6,0],"Dir":2}]},"Variants":1},"SpeedBridgePillarRock8":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],[0,7,0],[0,8,0]],"Size":[1,9,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,8,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,8,0],"Dir":2}]},"Variants":1},"SpeedBridgePillarWater10":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0],[0,5,0],[0,6,0],[0,7,0],[0,8,0],[0,9,0],[0,10,0]],"Size":[1,11,1],"SubVariants":[2],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,10,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,10,0],"Dir":2}]},"Variants":1},"SpeedBridgePillarRock4":{"PageName":"Bridge/Bridge","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,4,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,4,0],"Dir":2}]},"Variants":1},"SpeedRockToRockToBridgeArch5":{"PageName":"Bridge/Bridge","Air":{"Units":[[0,0,0],[0,1,0],[0,1,1],[0,2,0],[0,2,1],[0,2,2],[0,2,3],[0,3,0],[0,3,1],[0,3,2],[0,3,3],[0,3,4],[0,4,0],[0,4,1],[0,4,2],[0,4,3],[0,4,4]],"Size":[1,5,5],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,4,0],"Dir":2},{"Name":"SpeedBridgeClip","Offset":[0,4,4],"Dir":0}]},"Variants":1},"SpeedBridgeGTCurve4":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,0,1],[0,0,2],[0,1,0],[0,1,1],[0,1,2],[1,0,1],[1,0,2],[1,0,3],[1,1,1],[1,1,2],[1,1,3],[2,0,2],[2,0,3],[2,1,2],[2,1,3],[3,0,3],[3,1,3]],"Size":[4,2,4],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2},{"Name":"SpeedBridgeClip","Offset":[3,1,3],"Dir":3}]},"Variants":1},"SpeedBridgeTurbo":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedBridgeTurboRoulette":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedBridgeToRoad":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedBridgeRamp":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedBridgeStraight":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedBridgeSlopeBase4":{"PageName":"Bridge/BridgeSlopes","Air":{"Units":[[0,0,0],[0,0,1],[0,1,0],[0,1,1],[0,2,1],[0,2,2],[0,3,2],[0,4,2],[0,4,3],[0,5,3]],"Size":[1,6,4],"SubVariants":[1],"Clips":[{"Name":"SpeedBridgeClip","Offset":[0,1,0],"Dir":2},{"Name":"SpeedBridgeClip","Offset":[0,5,3],"Dir":0}]},"Variants":1},"SpeedRiverRoadToRoadGTCurve4":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[1,0,0],[1,0,1],[1,0,2],[2,0,1],[2,0,2],[2,0,3],[3,0,2],[3,0,3]],"Size":[4,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRiverRoadClipLeft","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[2,0,3],"Dir":0}]},"Variants":1},"SpeedRiverRoadToRoadLeft2x1":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[1,0,0],[1,0,1]],"Size":[2,1,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRiverRoadClipLeft","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[1,0,1],"Dir":3}]},"Variants":1},"SpeedRiverRoadToRoadLeft4x1":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[1,0,0],[1,0,1],[2,0,0],[2,0,1],[3,0,0],[3,0,1]],"Size":[4,1,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRiverRoadClipLeft","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[3,0,1],"Dir":3}]},"Variants":1},"SpeedRiverRoadToRoadGTCurve4InMirror":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,1],[2,0,2],[2,0,3],[3,0,2],[3,0,3]],"Size":[4,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRiverRoadClipRight","Offset":[3,0,3],"Dir":3}]},"Variants":1},"SpeedRiverRoadStraight":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1]],"Size":[1,1,2],"SubVariants":[8],"Clips":[{"Name":"SpeedRiverRoadClipRight","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRiverRoadClipLeft","Offset":[0,0,0],"Dir":3}]},"Variants":1},"SpeedRiverRoadToRoadGTCurve4In":{"PageName":"River/Road","Ground":{"Units":[[0,0,2],[0,0,3],[1,0,1],[1,0,2],[1,0,3],[2,0,0],[2,0,1],[2,0,2],[3,0,0],[3,0,1],[3,0,2]],"Size":[4,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRiverRoadClipLeft","Offset":[0,0,3],"Dir":1},{"Name":"SpeedRoadClip","Offset":[3,0,0],"Dir":2}]},"Variants":1},"SpeedRiverRoadToRoadRight4x1":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[1,0,0],[1,0,1],[2,0,0],[2,0,1],[3,0,0],[3,0,1]],"Size":[4,1,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRiverRoadClipRight","Offset":[3,0,1],"Dir":3}]},"Variants":1},"SpeedRiverRoadToRoadGTCurve4Mirror":{"PageName":"River/Road","Ground":{"Units":[[0,0,2],[0,0,3],[1,0,1],[1,0,2],[1,0,3],[2,0,0],[2,0,1],[2,0,2],[3,0,0],[3,0,1]],"Size":[4,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[1,0,3],"Dir":0},{"Name":"SpeedRiverRoadClipRight","Offset":[3,0,1],"Dir":3}]},"Variants":1},"SpeedRiverRoadToRoadRight2x1":{"PageName":"River/Road","Ground":{"Units":[[0,0,0],[0,0,1],[1,0,0],[1,0,1]],"Size":[2,1,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRiverRoadClipRight","Offset":[1,0,1],"Dir":3}]},"Variants":1},"SpeedRiverTetrisStraightUpCorner":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[4,0,1],[4,0,2],[4,0,3],[4,0,4]],"Size":[5,1,5],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[2,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[4,0,2],"Dir":3}]},"Variants":1},"SpeedRiverTetrisStraightUp":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[0,0,3],[1,0,0],[1,0,1],[1,0,2],[1,0,3],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[4,0,0],[4,0,1],[4,0,2],[4,0,3],[5,0,0],[5,0,1],[5,0,2],[5,0,3]],"Size":[6,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[5,0,1],"Dir":3}]},"Variants":1},"SpeedRiverTetrisStraightUpDiagRight":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,1],[0,0,2],[0,0,3],[1,0,0],[1,0,1],[1,0,2],[1,0,3],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[4,0,0],[4,0,1],[4,0,2],[5,0,0],[5,0,1],[5,0,2]],"Size":[6,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[5,0,0],"Dir":3}]},"Variants":1},"SpeedRiverTetrisStraightUpDiagLeft":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[4,0,0],[4,0,1],[4,0,2],[4,0,3],[5,0,1],[5,0,2],[5,0,3]],"Size":[6,1,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[5,0,1],"Dir":3}]},"Variants":1},"SpeedRiverTetrisStraightUpBase1":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[0,0,3],[1,0,0],[1,0,1],[1,0,2],[1,0,3],[1,0,4],[2,0,1],[2,0,2],[2,0,3],[2,0,4],[3,0,1],[3,0,2],[3,0,3],[3,0,4],[4,0,3],[4,0,4]],"Size":[5,1,5],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":1},{"Name":"SpeedRoadClip","Offset":[3,0,4],"Dir":0}]},"Variants":1},"SpeedRiverTetrisBridgeDiagRight":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,0],[2,0,1],[2,0,2],[3,0,0],[3,0,1],[3,0,2],[4,0,0],[4,0,1],[4,0,2],[5,0,0],[5,0,1],[5,0,2],[6,0,0],[6,0,1],[6,0,2],[7,0,0],[7,0,1],[7,0,2]],"Size":[8,1,3],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[7,0,2],"Dir":3}]},"Variants":1},"SpeedRiverTetrisBridgeDiagLeft":{"PageName":"River/Tetris","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,0],[2,0,1],[2,0,2],[3,0,0],[3,0,1],[3,0,2],[4,0,0],[4,0,1],[4,0,2],[5,0,0],[5,0,1],[5,0,2],[6,0,0],[6,0,1],[6,0,2],[7,0,0],[7,0,1],[7,0,2]],"Size":[8,1,3],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,2],"Dir":1},{"Name":"SpeedRoadClip","Offset":[7,0,0],"Dir":3}]},"Variants":1},"SpeedFreeSignWrongWay":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedAdvertising":{"PageName":"Decors/Signs","Ground":{"SubVariants":[4]},"Air":{"SubVariants":[1]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"SpeedFreeSignLeft":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedFreeSignWarning":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedRoadSignThisWay":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedRoadSignWrongWay":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedFreeSignRight":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedRoadSignWarning":{"PageName":"Decors/Signs","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedClassicDerrick":{"PageName":"Decors/MetalDecor","Ground":{"Units":[[0,0,0],[0,0,1],[0,1,0],[0,1,1]],"Size":[1,2,2],"SubVariants":[1]},"Variants":1},"SpeedClassicContainers":{"PageName":"Decors/MetalDecor","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedClassicBarrels":{"PageName":"Decors/MetalDecor","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedPipelineRoad":{"PageName":"Decors/MetalDecor","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1,1,1,1,1,1],"Clips":[{"Name":"SpeedPipelineRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedPipelineRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedPipelineRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedPipelineRoadClip","Offset":[0,0,0],"Dir":3}]},"Variants":6},"SpeedClassicReservoir":{"PageName":"Decors/MetalDecor","Ground":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1]},"Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[null]},"Variants":1},"SpeedClassicRocks":{"PageName":"Decors/NaturalDecor","Ground":{"SubVariants":[1]},"Air":{"SubVariants":[null]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"SpeedRocks2":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0],[1,0,0],[0,1,0],[1,1,0]],"Size":[2,2,1],"SubVariants":[1]},"Variants":1},"SpeedClassicMountain":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[0,0,2],[1,0,2],[2,0,2],[3,0,2],[4,0,2],[5,0,2],[6,0,2],[0,0,3],[1,0,3],[2,0,3],[3,0,3],[4,0,3],[5,0,3],[6,0,3],[0,1,0],[1,1,0],[0,1,1],[1,1,1],[0,1,2],[1,1,2],[2,1,2],[3,1,2],[4,1,2],[5,1,2],[6,1,2],[0,1,3],[1,1,3],[2,1,3],[3,1,3],[4,1,3],[5,1,3],[6,1,3]],"Size":[7,2,4],"SubVariants":[1]},"Variants":1},"SpeedSaguarosGround":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedSandCheckpoint":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedClassicPeak":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[1,0,0],[1,0,1],[1,0,2],[2,0,0],[2,0,1],[2,0,2],[0,1,0],[0,1,1],[0,1,2],[1,1,0],[1,1,1],[1,1,2],[2,1,0],[2,1,1],[2,1,2],[0,2,0],[0,2,1],[0,2,2],[1,2,0],[1,2,1],[1,2,2],[2,2,0],[2,2,1],[2,2,2],[0,3,0],[0,3,1],[0,3,2],[1,3,0],[1,3,1],[1,3,2],[2,3,0],[2,3,1],[2,3,2],[0,4,0],[0,4,1],[0,4,2],[1,4,0],[1,4,1],[1,4,2],[2,4,0],[2,4,1],[2,4,2],[0,5,0],[0,5,1],[0,5,2],[1,5,0],[1,5,1],[1,5,2],[2,5,0],[2,5,1],[2,5,2]],"Size":[3,6,3],"SubVariants":[1]},"Variants":1},"SpeedRocksArch":{"PageName":"Decors/NaturalDecor","Ground":{"Units":[[0,0,0],[2,0,0],[0,1,0],[1,1,0],[2,1,0]],"Size":[3,2,1],"SubVariants":[1]},"Variants":1},"SpeedCliffRoad2":{"PageName":"RoadTwisted","Air":{"Units":[[0,1,0],[0,2,0],[0,3,0],[0,0,1],[0,1,1],[0,2,1],[0,3,1]],"Size":[1,4,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,3,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":0}]},"Variants":1},"SpeedCliffRoad":{"PageName":"RoadTwisted","Air":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,3,0],"Dir":2}]},"Variants":1},"SpeedRock":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"Canyon":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"River":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"Desert3":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"Desert2":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"SpeedBase":{"PageName":"Terraformation","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]}},"SpeedTiltTransitionRight":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,0,2]],"Size":[1,1,3],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedTiltCornerAir":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedTiltTShaped":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":1}]},"SpeedTiltStraightAir":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedSpinRight":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,1],[1,0,0],[1,0,1],[2,0,0],[2,0,1],[3,0,0],[3,0,1],[0,1,0],[0,1,1],[1,1,0],[1,1,1],[2,1,1],[0,0,0],[3,1,0],[3,1,1]],"Size":[4,2,2],"Variants":1,"SubVariants":[1]},"SpeedTiltTransitionLeft":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,0,2]],"Size":[1,1,3],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedTiltCornerInside":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedSpinLeft":{"PageName":"RoadTilt","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[2,0,0],[0,0,1],[1,0,1],[2,0,1],[3,0,1],[1,1,1],[2,1,0],[2,1,1],[3,1,0],[3,1,1],[3,0,0],[0,1,0],[0,1,1]],"Size":[4,2,2],"Variants":1,"SubVariants":[1]},"SpeedGaragePillar":{"PageName":"Garage","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedGarageSlopePillar":{"PageName":"GarageSlope","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageSlopeHole":{"PageName":"GarageSlope","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageTurboSlopeRight":{"PageName":"Parking/GarageTurbos","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":3}]},"SpeedGarageTurboSlopeUp":{"PageName":"Parking/GarageTurbos","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageTurboSlopeDown":{"PageName":"Parking/GarageTurbos","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":2}]},"SpeedGarageTurboSlopeLeft":{"PageName":"Parking/GarageTurbos","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":1}]},"SpeedGarageTurbo":{"PageName":"Parking/GarageTurbos","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedGaragePillarRoad":{"PageName":"Parking/GarageMisc","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":6,"SubVariants":[1,1,1,1,1,1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedRoadStraightToGarage":{"PageName":"Parking/GarageMisc","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedGarageToRoadAir":{"PageName":"Parking/GarageMisc","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedGarageHoleRoad":{"PageName":"Parking/GarageMisc","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":6,"SubVariants":[1,1,1,1,1,1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedGaragePillarSlope":{"PageName":"Parking/GarageMisc","Ground":{"Variants":2,"SubVariants":[1,1]},"Air":{"Variants":4,"SubVariants":[1,1,1,1]},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageHoleSlope":{"PageName":"Parking/GarageMisc","Ground":{"Variants":2,"SubVariants":[1,1]},"Air":{"Variants":4,"SubVariants":[1,1,1,1]},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageToSlope":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,0,2],[0,1,1],[0,1,2]],"Size":[1,2,3],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedGarageCheckpoint":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedGarageHatSlopeBottom":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,1,0],[0,1,1],[0,0,0],[0,0,1]],"Size":[1,2,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,1],"Dir":0}]},"SpeedGarageToSlopeMirror":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,0,2],[0,1,1],[0,1,2]],"Size":[1,2,3],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedGarageRoad":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":6,"SubVariants":[1,1,1,1,1,2],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedGarageBiSlopeEnd":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,1,1]],"Size":[1,2,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,1],"Dir":0}]},"SpeedGarageSlope":{"PageName":"Parking/Garage","Ground":{"Variants":2,"SubVariants":[1,1]},"Air":{"Variants":4,"SubVariants":[1,1,1,1]},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGarageHatSlopeTop":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1]],"Size":[1,1,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,0,1],"Dir":0}]},"SpeedGarageBiSlopeStart":{"PageName":"Parking/Garage","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,1,1]],"Size":[1,2,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedGarageRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedGarageRoadClip","Offset":[0,1,1],"Dir":0}]},"SpeedGarageSlopeGT3b":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[2,0,1],[0,0,2],[1,0,2],[2,0,2]],"Size":[3,1,3],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT2b":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1]],"Size":[2,1,2],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT2":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1]],"Size":[2,1,2],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT5b":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[0,0,2],[1,0,2],[2,0,2],[1,0,3],[2,0,3],[3,0,3],[4,0,3],[2,0,4],[3,0,4],[4,0,4]],"Size":[5,1,5],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT4b":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[0,0,2],[1,0,2],[2,0,2],[3,0,2],[1,0,3],[2,0,3],[3,0,3]],"Size":[4,1,4],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT4":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[0,0,2],[1,0,2],[2,0,2],[3,0,2],[1,0,3],[2,0,3],[3,0,3]],"Size":[4,1,4],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT3":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[2,0,1],[0,0,2],[1,0,2],[2,0,2]],"Size":[3,1,3],"Variants":1,"SubVariants":[1]},"SpeedGarageSlopeGT5":{"PageName":"Parking/GarageSlopeGT","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1],[0,0,2],[1,0,2],[2,0,2],[1,0,3],[2,0,3],[3,0,3],[4,0,3],[2,0,4],[3,0,4],[4,0,4]],"Size":[5,1,5],"Variants":1,"SubVariants":[1]},"SpeedTunnelRoad":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1,1,1,3,1,1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":3}]},"Variants":6},"SpeedTunnelSlope":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Variants":4,"SubVariants":[1,1,1,1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedTunnelClip","Offset":[0,1,0],"Dir":0}]}},"SpeedTunnelTurbo":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadGTCurve3":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0],[0,0,1],[1,0,1],[1,0,2],[2,0,2]],"Size":[3,1,3],"SubVariants":[1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedTunnelClip","Offset":[2,0,2],"Dir":3}]},"Variants":1},"SpeedTunnelRoadGTCurve2":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1]],"Size":[2,1,2],"SubVariants":[1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedTunnelClip","Offset":[1,0,1],"Dir":3}]},"Variants":1},"SpeedTunnelRoadCheckpoint":{"PageName":"Tunnel/TunnelMain","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedTunnelDesertToRockEntry2":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0]],"Size":[1,3,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedTunnelExit":{"PageName":"Tunnel/TunnelMisc","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0}]},"Variants":1},"SpeedTunnelDesertToRockEntry1":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0]],"Size":[1,3,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry3":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,2,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,2,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry2":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry1":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedTunnelRockToRockEntry3":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,2,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,2,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry1_Old":{"PageName":"Tunnel/TunnelMisc","Air":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry3_Old":{"PageName":"Tunnel/TunnelMisc","Air":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,2,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,2,0],"Dir":2}]},"Variants":1},"SpeedTunnelRoadEntry2_Old":{"PageName":"Tunnel/TunnelMisc","Air":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedTunnelRockToRockEntry2":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,1,0],"Dir":2}]},"Variants":1},"SpeedTunnelRockToRockEntry1":{"PageName":"Tunnel/TunnelMisc","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedTunnelClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedCliffRoadAir":{"PageName":"Tunnel/CliffRoads","Ground":{},"Air":{},"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],"Size":[1,4,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,3,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,3,0],"Dir":2}]},"SpeedRockToRockLacets":{"PageName":"Tunnel/CliffRoads","Ground":{"Units":[[0,0,3],[1,0,0],[1,0,1],[1,0,2],[1,0,3],[1,1,0],[1,1,1],[1,1,2],[1,1,3],[1,2,0],[1,2,1],[1,2,2],[1,3,0],[1,3,1],[1,4,0],[1,4,1],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[2,1,0],[2,1,1],[2,1,2],[2,1,3],[2,2,0],[2,2,1],[2,2,2],[2,3,0],[2,3,1],[2,4,0],[2,4,1],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[3,1,0],[3,1,1],[3,1,2],[3,1,3],[3,2,0],[3,2,1],[3,2,2],[3,3,0],[3,3,1],[3,3,2],[3,4,0],[3,4,1],[4,0,1],[4,0,2],[4,0,3],[4,1,1],[4,1,2],[4,1,3],[4,2,1],[4,2,2],[4,3,1],[4,3,2],[4,4,1],[4,4,2]],"Size":[5,5,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,3],"Dir":1},{"Name":"SpeedRoadClip","Offset":[3,4,0],"Dir":3}]},"Variants":1},"SpeedDesertToRockToRoad":{"PageName":"Tunnel/CliffRoads","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0]],"Size":[1,3,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,2,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,2,0],"Dir":2}]},"Variants":1},"SpeedRockToRockLacetsBis":{"PageName":"Tunnel/CliffRoads","Ground":{"Units":[[0,0,0],[0,0,1],[0,0,2],[0,0,3],[0,1,0],[0,1,1],[0,1,2],[0,1,3],[0,2,0],[0,2,1],[0,2,2],[0,3,1],[0,3,2],[0,4,1],[0,4,2],[1,0,0],[1,0,1],[1,0,2],[1,0,3],[1,1,0],[1,1,1],[1,1,2],[1,1,3],[1,2,0],[1,2,1],[1,2,2],[1,3,0],[1,3,1],[1,4,0],[1,4,1],[2,0,0],[2,0,1],[2,0,2],[2,0,3],[2,1,0],[2,1,1],[2,1,2],[2,1,3],[2,2,0],[2,2,1],[2,2,2],[2,3,0],[2,3,1],[2,4,0],[2,4,1],[3,0,0],[3,0,1],[3,0,2],[3,0,3],[3,1,0],[3,1,1],[3,1,2],[3,1,3],[3,2,0],[3,2,1],[3,2,2],[3,3,0],[3,3,1],[3,4,0],[3,4,1],[4,0,3],[4,1,3]],"Size":[5,5,4],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[1,4,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[4,0,3],"Dir":3}]},"Variants":1},"SpeedRockToRockToRoad":{"PageName":"Tunnel/CliffRoads","Ground":{"Units":[[0,0,0],[0,1,0],[0,2,0],[0,3,0],[0,4,0]],"Size":[1,5,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,4,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,4,0],"Dir":2}]},"Variants":1},"SpeedCliffRoad3":{"PageName":"Tunnel/CliffRoads","Ground":{"Units":[[0,2,0],[0,3,0],[0,0,1],[0,1,1],[0,2,1],[0,3,1],[0,0,2],[0,1,2]],"Size":[1,4,3],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,3,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,0,2],"Dir":0}]},"Variants":1},"SpeedCliffBridgeAir":{"PageName":"Tunnel/CliffRoads","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedToll2":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedHoleAir":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedHumpRoad2":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedPlankAir":{"PageName":"Road/RoadHazardStraight","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedJumpInRoad":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedToll":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedHumpRoad":{"PageName":"Road/RoadHazardStraight","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedBiSlopeEnd":{"PageName":"Road/RoadTwisted","Air":{"Units":[[0,0,0],[0,0,1],[0,1,1]],"Size":[1,2,2],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,1,1],"Dir":0}]},"Variants":1},"SpeedLoopRight":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[1,0,1],[0,0,0],[0,1,0],[1,1,0],[0,1,1],[1,1,1],[0,2,0],[1,2,0],[0,2,1],[1,2,1]],"Size":[2,3,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[1,0,1],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0}]},"SpeedLoopLeft":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[0,0,1],[1,0,0],[0,1,0],[1,1,0],[0,1,1],[1,1,1],[0,2,0],[1,2,0],[0,2,1],[1,2,1]],"Size":[2,3,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,1],"Dir":2},{"Name":"SpeedRoadClip","Offset":[1,0,0],"Dir":0}]},"SpeedSlope":{"PageName":"Road/RoadTwisted","Ground":{"Variants":2,"SubVariants":[1,1]},"Air":{"Variants":4,"SubVariants":[1,1,1,1]},"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0}]},"SpeedGtCurve3":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[1,0,1],[1,0,2],[2,0,2]],"Size":[3,1,3],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[2,0,2],"Dir":3}]},"SpeedClassicGtCurve":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[0,0,0],[1,0,0],[0,0,1],[1,0,1]],"Size":[2,1,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[1,0,1],"Dir":3}]},"SpeedClassicJump":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedBiSlopeStart":{"PageName":"Road/RoadTwisted","Ground":{},"Air":{},"Units":[[0,0,0],[0,0,1],[0,1,1]],"Size":[1,2,2],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,1,1],"Dir":0}]},"SpeedBiSlopeStraight":{"PageName":"Road/RoadTwisted","Air":{"Units":[[0,0,0],[0,1,0]],"Size":[1,2,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,1,0],"Dir":0}]},"Variants":1},"SpeedClassicCheckpoint":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedClassicFinish":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedTurboRoulette":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedClassicTurbo":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedFreeWheeling":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedStartFinishLine":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedRoadLamp":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":6,"SubVariants":[1,1,1,1,1,1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedClassicStartLine":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0}]},"SpeedRoad":{"PageName":"Road/RoadMain","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":6,"SubVariants":[1,1,1,1,1,1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":1},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":3}]},"SpeedRocksRoad":{"PageName":"Road/RoadHazardSlalom","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedFallenContainers":{"PageName":"Road/RoadHazardSlalom","Ground":{"Units":[[0,0,0],[1,0,0]],"Size":[2,1,1],"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"Variants":1},"SpeedBarrelJump":{"PageName":"Road/RoadHazardSlalom","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1],"Clips":[{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":0},{"Name":"SpeedRoadClip","Offset":[0,0,0],"Dir":2}]},"SpeedPipelineRoadClip":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"DesertToDesert2":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[4,1,1,1,1,4,2,2,2,4,2,2,2,4]}},"SpeedRiverRoadClipRight":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedRiverClip":{"PageName":"Other","Ground":{"SubVariants":[1]},"Air":{"SubVariants":[null]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"DesertToRiver":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[9,1,1,1,1,7,1,1,1,10,3,6,1,1]}},"DesertToDesert":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[8,1,1,1,1,8,2,2,2,8,2,2,2,4]}},"Desert2ToDesert3":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[4,1,1,1,1,4,1,1,1,4,2,1,1,1]}},"SpeedToCanyon":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[2,1,1,1,1,3,2,2,2,3,2,2,2,1]}},"SpeedGarageRoadClip":{"PageName":"Other","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedTunnelClip":{"PageName":"Other","Ground":{"SubVariants":[null]},"Air":{"SubVariants":[1]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"RockToRock":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[2,1,2,1,1,5,1,1,1,3,1,1,3,3]}},"DesertToRock":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"Variants":14,"SubVariants":[2,1,2,1,2,4,1,1,2,2,2,2,2,1]}},"SpeedRockClip":{"PageName":"Other","Ground":{"SubVariants":[1]},"Air":{"SubVariants":[null]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"SpeedClip":{"PageName":"Other","Ground":{"SubVariants":[1]},"Air":{"SubVariants":[null]},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1},"SpeedRiverRoadClipLeft":{"PageName":"Other","Ground":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1},"SpeedPylon":{"PageName":"Other"},"SpeedRoadClip":{"PageName":"Other","Ground":{},"Air":{},"Units":[[0,0,0]],"Size":[1,1,1],"Variants":1,"SubVariants":[1]},"SpeedBridgeClip":{"PageName":"Other","Air":{"Units":[[0,0,0]],"Size":[1,1,1],"SubVariants":[1]},"Variants":1}}
+{
+  "SpeedRockToRockToBridge": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRockToRockToBridgeArch3": {
+    "PageName": "Bridge/Bridge",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            4,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarSand6": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        7,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            6,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            6,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarSand10": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          10,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        11,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            10,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            10,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarWater6": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        7,
+        1
+      ],
+      "SubVariants": [
+        2
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            6,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            6,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarRock8": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        9,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            8,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            8,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarWater10": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          7,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          10,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        11,
+        1
+      ],
+      "SubVariants": [
+        2
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            10,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            10,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgePillarRock4": {
+    "PageName": "Bridge/Bridge",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRockToRockToBridgeArch5": {
+    "PageName": "Bridge/Bridge",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          0,
+          4,
+          4
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            4,
+            4
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeGTCurve4": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        4,
+        2,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            3,
+            1,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeTurbo": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeTurboRoulette": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeToRoad": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeRamp": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeStraight": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBridgeSlopeBase4": {
+    "PageName": "Bridge/BridgeSlopes",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          0,
+          5,
+          3
+        ]
+      ],
+      "Size": [
+        1,
+        6,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedBridgeClip",
+          "Offset": [
+            0,
+            5,
+            3
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadGTCurve4": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRiverRoadClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            2,
+            0,
+            3
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadLeft2x1": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRiverRoadClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadLeft4x1": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRiverRoadClipLeft",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            3,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadGTCurve4InMirror": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRiverRoadClipRight",
+          "Offset": [
+            3,
+            0,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadStraight": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        2
+      ],
+      "SubVariants": [
+        8
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRiverRoadClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRiverRoadClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadGTCurve4In": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRiverRoadClipLeft",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            3,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadRight4x1": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRiverRoadClipRight",
+          "Offset": [
+            3,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadGTCurve4Mirror": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        4,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            1,
+            0,
+            3
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRiverRoadClipRight",
+          "Offset": [
+            3,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverRoadToRoadRight2x1": {
+    "PageName": "River/Road",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRiverRoadClipRight",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisStraightUpCorner": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          4
+        ]
+      ],
+      "Size": [
+        5,
+        1,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            2,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            4,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisStraightUp": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            5,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisStraightUpDiagRight": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        6,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            5,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisStraightUpDiagLeft": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          3
+        ]
+      ],
+      "Size": [
+        6,
+        1,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            5,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisStraightUpBase1": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          4
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          4
+        ]
+      ],
+      "Size": [
+        5,
+        1,
+        5
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            3,
+            0,
+            4
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisBridgeDiagRight": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          1
+        ],
+        [
+          7,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        8,
+        1,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            7,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverTetrisBridgeDiagLeft": {
+    "PageName": "River/Tetris",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          1
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          1
+        ],
+        [
+          6,
+          0,
+          2
+        ],
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          1
+        ],
+        [
+          7,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        8,
+        1,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            7,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedFreeSignWrongWay": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedAdvertising": {
+    "PageName": "Decors/Signs",
+    "Ground": {
+      "SubVariants": [
+        4
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "SpeedFreeSignLeft": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedFreeSignWarning": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedRoadSignThisWay": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedRoadSignWrongWay": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedFreeSignRight": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedRoadSignWarning": {
+    "PageName": "Decors/Signs",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedClassicDerrick": {
+    "PageName": "Decors/MetalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicContainers": {
+    "PageName": "Decors/MetalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicBarrels": {
+    "PageName": "Decors/MetalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedPipelineRoad": {
+    "PageName": "Decors/MetalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedPipelineRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedPipelineRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedPipelineRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedPipelineRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 6
+  },
+  "SpeedClassicReservoir": {
+    "PageName": "Decors/MetalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        null
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicRocks": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "SpeedRocks2": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicMountain": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          5,
+          0,
+          2
+        ],
+        [
+          6,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          5,
+          0,
+          3
+        ],
+        [
+          6,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          5,
+          1,
+          2
+        ],
+        [
+          6,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          5,
+          1,
+          3
+        ],
+        [
+          6,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        7,
+        2,
+        4
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedSaguarosGround": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedSandCheckpoint": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicPeak": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          2,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          1,
+          5,
+          2
+        ],
+        [
+          2,
+          5,
+          0
+        ],
+        [
+          2,
+          5,
+          1
+        ],
+        [
+          2,
+          5,
+          2
+        ]
+      ],
+      "Size": [
+        3,
+        6,
+        3
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRocksArch": {
+    "PageName": "Decors/NaturalDecor",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        3,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedCliffRoad2": {
+    "PageName": "RoadTwisted",
+    "Air": {
+      "Units": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            3,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            1
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedCliffRoad": {
+    "PageName": "RoadTwisted",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            3,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRock": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "Canyon": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "River": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "Desert3": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "Desert2": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "SpeedBase": {
+    "PageName": "Terraformation",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    }
+  },
+  "SpeedTiltTransitionRight": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedTiltCornerAir": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedTiltTShaped": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      }
+    ]
+  },
+  "SpeedTiltStraightAir": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedSpinRight": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      4,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedTiltTransitionLeft": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedTiltCornerInside": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedSpinLeft": {
+    "PageName": "RoadTilt",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        3,
+        0,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        1
+      ],
+      [
+        3,
+        1,
+        0
+      ],
+      [
+        3,
+        1,
+        1
+      ],
+      [
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      4,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGaragePillar": {
+    "PageName": "Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGarageSlopePillar": {
+    "PageName": "GarageSlope",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageSlopeHole": {
+    "PageName": "GarageSlope",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageTurboSlopeRight": {
+    "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGarageTurboSlopeUp": {
+    "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageTurboSlopeDown": {
+    "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedGarageTurboSlopeLeft": {
+    "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 1
+      }
+    ]
+  },
+  "SpeedGarageTurbo": {
+    "PageName": "Parking/GarageTurbos",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGaragePillarRoad": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedRoadStraightToGarage": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedGarageToRoadAir": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGarageHoleRoad": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGaragePillarSlope": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageHoleSlope": {
+    "PageName": "Parking/GarageMisc",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageToSlope": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedGarageCheckpoint": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedGarageHatSlopeBottom": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageToSlopeMirror": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedGarageRoad": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedGarageBiSlopeEnd": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageSlope": {
+    "PageName": "Parking/Garage",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageHatSlopeTop": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageBiSlopeStart": {
+    "PageName": "Parking/Garage",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedGarageRoadClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGarageSlopeGT3b": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT2b": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT2": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT5b": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        3,
+        0,
+        3
+      ],
+      [
+        4,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        4
+      ],
+      [
+        3,
+        0,
+        4
+      ],
+      [
+        4,
+        0,
+        4
+      ]
+    ],
+    "Size": [
+      5,
+      1,
+      5
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT4b": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        3,
+        0,
+        3
+      ]
+    ],
+    "Size": [
+      4,
+      1,
+      4
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT4": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        3,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        3,
+        0,
+        3
+      ]
+    ],
+    "Size": [
+      4,
+      1,
+      4
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT3": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedGarageSlopeGT5": {
+    "PageName": "Parking/GarageSlopeGT",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ],
+      [
+        1,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        3
+      ],
+      [
+        3,
+        0,
+        3
+      ],
+      [
+        4,
+        0,
+        3
+      ],
+      [
+        2,
+        0,
+        4
+      ],
+      [
+        3,
+        0,
+        4
+      ],
+      [
+        4,
+        0,
+        4
+      ]
+    ],
+    "Size": [
+      5,
+      1,
+      5
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedTunnelRoad": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 6
+  },
+  "SpeedTunnelSlope": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    }
+  },
+  "SpeedTunnelTurbo": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadGTCurve3": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "Size": [
+        3,
+        1,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            2,
+            0,
+            2
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadGTCurve2": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadCheckpoint": {
+    "PageName": "Tunnel/TunnelMain",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelDesertToRockEntry2": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelExit": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelDesertToRockEntry1": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry3": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry2": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry1": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRockToRockEntry3": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry1_Old": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry3_Old": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRoadEntry2_Old": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRockToRockEntry2": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedTunnelRockToRockEntry1": {
+    "PageName": "Tunnel/TunnelMisc",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedTunnelClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedCliffRoadAir": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        3,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      4,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          3,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          3,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedRockToRockLacets": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          3,
+          2
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          2
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          2
+        ],
+        [
+          4,
+          1,
+          3
+        ],
+        [
+          4,
+          2,
+          1
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          4,
+          3,
+          1
+        ],
+        [
+          4,
+          3,
+          2
+        ],
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          4,
+          4,
+          2
+        ]
+      ],
+      "Size": [
+        5,
+        5,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            3
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            3,
+            4,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedDesertToRockToRoad": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRockToRockLacetsBis": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          0
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ],
+        [
+          2,
+          4,
+          1
+        ],
+        [
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          0,
+          3
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          3,
+          0
+        ],
+        [
+          3,
+          3,
+          1
+        ],
+        [
+          3,
+          4,
+          0
+        ],
+        [
+          3,
+          4,
+          1
+        ],
+        [
+          4,
+          0,
+          3
+        ],
+        [
+          4,
+          1,
+          3
+        ]
+      ],
+      "Size": [
+        5,
+        5,
+        4
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            1,
+            4,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            4,
+            0,
+            3
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRockToRockToRoad": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            4,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedCliffRoad3": {
+    "PageName": "Tunnel/CliffRoads",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        3
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            3,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            2
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedCliffBridgeAir": {
+    "PageName": "Tunnel/CliffRoads",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedToll2": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedHoleAir": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedHumpRoad2": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedPlankAir": {
+    "PageName": "Road/RoadHazardStraight",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedJumpInRoad": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedToll": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedHumpRoad": {
+    "PageName": "Road/RoadHazardStraight",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedBiSlopeEnd": {
+    "PageName": "Road/RoadTwisted",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            1
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedLoopRight": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      3,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedLoopLeft": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        2,
+        0
+      ],
+      [
+        1,
+        2,
+        0
+      ],
+      [
+        0,
+        2,
+        1
+      ],
+      [
+        1,
+        2,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      3,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          1
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          1,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedSlope": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {
+      "Variants": 2,
+      "SubVariants": [
+        1,
+        1
+      ]
+    },
+    "Air": {
+      "Variants": 4,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          1,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedGtCurve3": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        2
+      ],
+      [
+        2,
+        0,
+        2
+      ]
+    ],
+    "Size": [
+      3,
+      1,
+      3
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          2,
+          0,
+          2
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedClassicGtCurve": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1
+      ]
+    ],
+    "Size": [
+      2,
+      1,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          1,
+          0,
+          1
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedClassicJump": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedBiSlopeStart": {
+    "PageName": "Road/RoadTwisted",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        1
+      ]
+    ],
+    "Size": [
+      1,
+      2,
+      2
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          1,
+          1
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedBiSlopeStraight": {
+    "PageName": "Road/RoadTwisted",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedClassicCheckpoint": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedClassicFinish": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedTurboRoulette": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedClassicTurbo": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedFreeWheeling": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedStartFinishLine": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedRoadLamp": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedClassicStartLine": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      }
+    ]
+  },
+  "SpeedRoad": {
+    "PageName": "Road/RoadMain",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 6,
+    "SubVariants": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 1
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 3
+      }
+    ]
+  },
+  "SpeedRocksRoad": {
+    "PageName": "Road/RoadHazardSlalom",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedFallenContainers": {
+    "PageName": "Road/RoadHazardSlalom",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "SpeedRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedBarrelJump": {
+    "PageName": "Road/RoadHazardSlalom",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ],
+    "Clips": [
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 0
+      },
+      {
+        "Name": "SpeedRoadClip",
+        "Offset": [
+          0,
+          0,
+          0
+        ],
+        "Dir": 2
+      }
+    ]
+  },
+  "SpeedPipelineRoadClip": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "DesertToDesert2": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        2,
+        2,
+        4,
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "Height": 3
+  },
+  "SpeedRiverRoadClipRight": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedRiverClip": {
+    "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "DesertToRiver": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        9,
+        1,
+        1,
+        1,
+        1,
+        7,
+        1,
+        1,
+        1,
+        10,
+        3,
+        6,
+        1,
+        1
+      ]
+    }
+  },
+  "DesertToDesert": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        8,
+        1,
+        1,
+        1,
+        1,
+        8,
+        2,
+        2,
+        2,
+        8,
+        2,
+        2,
+        2,
+        4
+      ]
+    },
+    "Height": 3
+  },
+  "Desert2ToDesert3": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        4,
+        1,
+        1,
+        1,
+        1,
+        4,
+        1,
+        1,
+        1,
+        4,
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    "Height": 6
+  },
+  "SpeedToCanyon": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        3,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        1
+      ]
+    }
+  },
+  "SpeedGarageRoadClip": {
+    "PageName": "Other",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedTunnelClip": {
+    "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "RockToRock": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        2,
+        1,
+        2,
+        1,
+        1,
+        5,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1,
+        3,
+        3
+      ]
+    },
+    "Height": 4
+  },
+  "DesertToRock": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 14,
+      "SubVariants": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        4,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1
+      ]
+    },
+    "Height": 2
+  },
+  "SpeedRockClip": {
+    "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "SpeedClip": {
+    "PageName": "Other",
+    "Ground": {
+      "SubVariants": [
+        1
+      ]
+    },
+    "Air": {
+      "SubVariants": [
+        null
+      ]
+    },
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1
+  },
+  "SpeedRiverRoadClipLeft": {
+    "PageName": "Other",
+    "Ground": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  },
+  "SpeedPylon": {
+    "PageName": "Other"
+  },
+  "SpeedRoadClip": {
+    "PageName": "Other",
+    "Ground": {},
+    "Air": {},
+    "Units": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "Size": [
+      1,
+      1,
+      1
+    ],
+    "Variants": 1,
+    "SubVariants": [
+      1
+    ]
+  },
+  "SpeedBridgeClip": {
+    "PageName": "Other",
+    "Air": {
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "SubVariants": [
+        1
+      ]
+    },
+    "Variants": 1
+  }
+}

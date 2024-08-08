@@ -108,6 +108,11 @@ internal sealed class MapConverter
                 _ => block.Coord
             };
 
+            if (conversion.Height.HasValue)
+            {
+                pos -= (0, conversion.Height.Value, 0);
+            }
+
             var dir = -(int)block.Direction * MathF.PI / 2;
 
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", block.Name, pos, dir);

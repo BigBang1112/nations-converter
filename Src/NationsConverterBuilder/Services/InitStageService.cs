@@ -29,7 +29,7 @@ internal sealed class InitStageService
 
     private static readonly JsonSerializerOptions jsonOptions = new()
     {
-        WriteIndented = false,
+        WriteIndented = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
 
@@ -229,7 +229,9 @@ internal sealed class InitStageService
             }
         }
 
-        return GetBlockConversionModel(node, pageName);
+        var height = block.TerrainZone?.Height is 0 ? null : block.TerrainZone?.Height;
+
+        return GetBlockConversionModel(node, pageName, height);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge map, ref int index)
@@ -276,7 +278,7 @@ internal sealed class InitStageService
         }
     }
 
-    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName)
+    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height)
     {
         var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
         var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
@@ -335,7 +337,8 @@ internal sealed class InitStageService
             SubVariants = commonSubVariants?.Length == 0 ? null : commonSubVariants,
             Clips = commonClips?.Length == 0 ? null : commonClips,
             Air = airConvModel,
-            Ground = groundConvModel
+            Ground = groundConvModel,
+            Height = height
         };
     }
 

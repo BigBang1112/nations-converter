@@ -14252,7 +14252,8 @@
         6,
         1
       ]
-    }
+    },
+    "Height": 3
   },
   "CoastRoadWaterPillarStraight": {
     "PageName": "Other",
@@ -14405,7 +14406,8 @@
         4,
         4
       ]
-    }
+    },
+    "Height": 3
   },
   "CoastQuay": {
     "PageName": "Other",
@@ -14439,7 +14441,8 @@
         1,
         1
       ]
-    }
+    },
+    "Height": 1
   },
   "CoastPillarStraight": {
     "PageName": "Other",
