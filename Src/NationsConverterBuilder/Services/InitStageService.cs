@@ -68,10 +68,17 @@ internal sealed class InitStageService
             tasks.Add(Parallel.ForEachAsync(subCategories, cancellationToken, async (subCategory, cancellationToken) =>
             {
                 var displayName = collection.DisplayName;
+                
+                var decorationConvs = new Dictionary<string, ConversionDecorationModel>();
 
                 foreach (var (size, deco) in collection.Decorations)
                 {
                     ProcessDecoration(collection, deco, subCategory, size);
+
+                    decorationConvs.Add($"{size.X}x{size.Y}x{size.Z}", new ConversionDecorationModel
+                    {
+                        BaseHeight = deco.BaseHeight
+                    });
                 }
 
                 var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
@@ -87,9 +94,15 @@ internal sealed class InitStageService
                 RecurseBlockDirectories(displayName, collection.BlockDirectories, map, subCategory, convs, ref index);
                 ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
 
-                using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))
+                var convSet = new ConversionSetModel
                 {
-                    await JsonSerializer.SerializeAsync(sheetJsonStream, convs, jsonOptions, cancellationToken: cancellationToken);
+                    Blocks = convs,
+                    Decorations = decorationConvs
+                };
+
+                await using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))
+                {
+                    await JsonSerializer.SerializeAsync(sheetJsonStream, convSet, jsonOptions, cancellationToken: cancellationToken);
                 }
 
                 if (!string.IsNullOrEmpty(initMapsOutputPath))
@@ -158,7 +171,7 @@ internal sealed class InitStageService
             pageName = pageName[..^1];
         }
 
-        var mapTechnology = "MM_Collision";
+        var mapTechnology = "Solid2";
 
         foreach (var technology in technologies)
         {

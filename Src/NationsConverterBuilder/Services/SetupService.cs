@@ -83,7 +83,8 @@ internal sealed class SetupService
 
                 decorations.Add(deco.DecoSize.Size, new DecorationModel
                 {
-                    Solid = sceneSolid
+                    Solid = sceneSolid,
+                    BaseHeight = deco.DecoSize.BaseHeightBase,
                 });
             }
 

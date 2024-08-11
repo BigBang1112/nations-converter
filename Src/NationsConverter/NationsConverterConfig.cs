@@ -9,17 +9,17 @@ public class NationsConverterConfig : Config
     public string? UserDataFolder { get; set; }
 
     [ExternalFile("Snow")]
-    public Dictionary<string, ConversionModel> Snow { get; set; } = [];
+    public ConversionSetModel Snow { get; set; } = new();
     [ExternalFile("Rally")]
-    public Dictionary<string, ConversionModel> Rally { get; set; } = [];
+    public ConversionSetModel Rally { get; set; } = new();
     [ExternalFile("Desert")]
-    public Dictionary<string, ConversionModel> Desert { get; set; } = [];
+    public ConversionSetModel Desert { get; set; } = new();
     [ExternalFile("Island")]
-    public Dictionary<string, ConversionModel> Island { get; set; } = [];
+    public ConversionSetModel Island { get; set; } = new();
     [ExternalFile("Bay")]
-    public Dictionary<string, ConversionModel> Bay { get; set; } = [];
+    public ConversionSetModel Bay { get; set; } = new();
     [ExternalFile("Coast")]
-    public Dictionary<string, ConversionModel> Coast { get; set; } = [];
+    public ConversionSetModel Coast { get; set; } = new();
     [ExternalFile("Stadium")]
-    public Dictionary<string, ConversionModel> Stadium { get; set; } = [];
+    public ConversionSetModel Stadium { get; set; } = new();
 }
