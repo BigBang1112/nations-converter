@@ -20,7 +20,7 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
         this.logger = logger;
     }
 
-    public override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion, string environment, Int3 blockSize)
+    protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
     {
         Int3 blockCoordSize;
         int maxSubVariants;
@@ -65,7 +65,7 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
 
         var subCategory = "Modless";
 
-        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", environment, conversion.PageName, block.Name);
+        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, block.Name);
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{block.Variant.GetValueOrDefault()}_{block.SubVariant.GetValueOrDefault()}.Item.Gbx");
 
         var pos = block.Direction switch
@@ -87,6 +87,6 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
 
         convertedMap.PlaceAnchoredObject(
             new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                pos * blockSize, (dir, 0, 0));
+                pos * BlockSize, (dir, 0, 0));
     }
 }

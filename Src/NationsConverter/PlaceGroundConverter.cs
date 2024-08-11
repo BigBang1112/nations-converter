@@ -21,7 +21,7 @@ internal sealed class PlaceGroundConverter : BlockConverter
         this.map = map;
     }
 
-    public override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion, string environment, Int3 blockSize)
+    protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
     {
         if (block.IsGround)
         {
@@ -29,12 +29,12 @@ internal sealed class PlaceGroundConverter : BlockConverter
         }
     }
 
-    protected override void Convert(string environment, ConversionSetModel conversionSet)
+    public override void Convert()
     {
-        var baseHeight = conversionSet.Decorations
+        var baseHeight = ConversionSet.Decorations
             .GetValueOrDefault($"{map.Size.X}x{map.Size.Y}x{map.Size.Z}")?.BaseHeight ?? 0;
 
-        base.Convert(environment, conversionSet);
+        base.Convert();
 
 
     }
