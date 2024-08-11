@@ -14,4 +14,10 @@
     <ProjectReference Include="..\NationsConverterShared\NationsConverterShared.csproj" />
   </ItemGroup>
 
+    <ItemGroup>
+        <Content Include="UserData\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
 </Project>

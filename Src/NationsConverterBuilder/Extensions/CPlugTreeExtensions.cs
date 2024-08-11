@@ -39,7 +39,7 @@ public static class CPlugTreeExtensions
 
             if (t.ShaderFile is null)
             {
-                logger?.LogWarning("Visual has no shader link, this is weird.");
+                logger?.LogWarning("Visual has no shader link, this is weird. Material has been probably directly embedded, it doesn't have a name.");
                 continue;
             }
 

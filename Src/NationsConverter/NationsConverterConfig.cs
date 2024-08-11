@@ -5,6 +5,9 @@ namespace NationsConverter;
 
 public class NationsConverterConfig : Config
 {
+    public bool CopyItems { get; set; } = true;
+    public string? UserDataFolder { get; set; }
+
     [ExternalFile("Snow")]
     public Dictionary<string, ConversionModel> Snow { get; set; } = [];
     [ExternalFile("Rally")]

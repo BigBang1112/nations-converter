@@ -24,10 +24,25 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
 
     public Gbx<CGameCtnChallenge> Produce()
     {
+        if (map.Collection.GetValueOrDefault().Number == 26)
+        {
+            throw new InvalidOperationException("Map is already a TM2020 map");
+        }
+
         var convertedMap = CreateBaseMap();
 
         var mapConverter = new MapConverter(map, convertedMap, Config, logger);
         mapConverter.Convert();
+
+        if (Config.CopyItems)
+        {
+            if (string.IsNullOrWhiteSpace(Config.UserDataFolder))
+            {
+                throw new InvalidOperationException("UserDataFolder is not set");
+            }
+
+            CopyDirectory("UserData", Config.UserDataFolder, true);
+        }
 
         var fileNameWithoutExtension = gbxMap.FilePath is null
             ? TextFormatter.Deformat(map.MapName)
@@ -44,7 +59,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
         var newMapUid = $"{Convert.ToBase64String(Encoding.ASCII.GetBytes(Guid.NewGuid().ToString()))[..10]}{map.MapUid.Substring(9, 14)}NC2";
         var authorLogin = "akPfIM0aSzuHuaaDWptBbQ";
         var authorZone = "World|Europe|Czechia|Jihoceský kraj";
-        var mapType = "TrackMania\\TM_Race";
+        var mapType = "TrackMania\\TM_Race"; // either Race, Arkady's Platform, or Zai's Stunt
 
         var convertedMap = new CGameCtnChallenge
         {
@@ -159,5 +174,38 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
         convertedMap.ScriptMetadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
 
         return convertedMap;
+    }
+
+    private static void CopyDirectory(string sourceDir, string destinationDir, bool recursive)
+    {
+        // Get information about the source directory
+        var dir = new DirectoryInfo(sourceDir);
+
+        // Check if the source directory exists
+        if (!dir.Exists)
+            throw new DirectoryNotFoundException($"Source directory not found: {dir.FullName}");
+
+        // Cache directories before we start copying
+        DirectoryInfo[] dirs = dir.GetDirectories();
+
+        // Create the destination directory
+        Directory.CreateDirectory(destinationDir);
+
+        // Get the files in the source directory and copy to the destination directory
+        foreach (FileInfo file in dir.GetFiles())
+        {
+            string targetFilePath = Path.Combine(destinationDir, file.Name);
+            file.CopyTo(targetFilePath, overwrite: true);
+        }
+
+        // If recursive and copying subdirectories, recursively call this method
+        if (recursive)
+        {
+            foreach (DirectoryInfo subDir in dirs)
+            {
+                string newDestinationDir = Path.Combine(destinationDir, subDir.Name);
+                CopyDirectory(subDir.FullName, newDestinationDir, true);
+            }
+        }
     }
 }

@@ -24,7 +24,7 @@ public static class CPlugMaterialUserInstExtensions
             SurfacePhysicId = (byte)surface,
             TextureSizeInMeters = 1,
             Csts = csts,
-            Color = color
+            Color = color,
         };
         material.CreateChunk<CPlugMaterialUserInst.Chunk090FD000>().Version = 11;
         material.CreateChunk<CPlugMaterialUserInst.Chunk090FD001>().Version = 5;
