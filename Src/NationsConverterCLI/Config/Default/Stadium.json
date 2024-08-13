@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "StadiumGrass",
   "Decorations": {
     "32x32x32": {
       "BaseHeight": 0
@@ -8062,7 +8063,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "StadiumGrass": {
       "PageName": "Terraformation",
@@ -8083,7 +8085,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "StadiumWater": {
       "PageName": "Terraformation",
@@ -8104,7 +8107,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "StadiumRoadTiltGTCurve3": {
       "PageName": "RoadTilt/GTCurves",
@@ -18426,7 +18430,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "StadiumRoadDirtParkClip": {
       "PageName": "Other",
@@ -18513,7 +18518,7 @@
           1
         ]
       },
-      "Height": 2
+      "ZoneHeight": 2
     },
     "StadiumCarterRoadClip": {
       "PageName": "Other",
@@ -18568,7 +18573,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "StadiumTubeRoadClip": {
       "PageName": "Other",

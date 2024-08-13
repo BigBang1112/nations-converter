@@ -108,14 +108,20 @@ internal sealed class SetupService
 
         foreach (var zone in collection.Node.CompleteListZoneList ?? [])
         {
-            if (zone.Node is CGameCtnZoneFrontier frontier)
+            switch (zone.Node)
             {
-                if (frontier.BlockInfoFrontier is null)
-                {
-                    continue;
-                }
-
-                collection.TerrainZones.Add(frontier.BlockInfoFrontier.Ident.Id, frontier);
+                case CGameCtnZoneFrontier frontier:
+                    if (frontier.BlockInfoFrontier is not null)
+                    {
+                        collection.TerrainZones.Add(frontier.BlockInfoFrontier.Ident.Id, frontier);
+                    }
+                    break;
+                case CGameCtnZoneFlat flat:
+                    if (flat.BlockInfoFlat is not null)
+                    {
+                        collection.TerrainZones.Add(flat.BlockInfoFlat.Ident.Id, flat);
+                    }
+                    break;
             }
         }
 

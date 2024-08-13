@@ -94,10 +94,15 @@ internal sealed class InitStageService
                 RecurseBlockDirectories(displayName, collection.BlockDirectories, map, subCategory, convs, ref index);
                 ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
 
+                // TODO: Replace with DefaultZone node
+                var defaultZoneIndex = collection.Node.Chunks.Get<CGameCtnCollection.Chunk03033009>()?.U01 - 1 ?? 0;
+                var defaultZone = (collection.Node.CompleteListZoneList?[defaultZoneIndex].Node as CGameCtnZoneFlat)?.BlockInfoFlat?.Ident.Id;
+
                 var convSet = new ConversionSetModel
                 {
                     Blocks = convs,
-                    Decorations = decorationConvs
+                    Decorations = decorationConvs,
+                    DefaultZoneBlock = defaultZone
                 };
 
                 await using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))
@@ -242,9 +247,7 @@ internal sealed class InitStageService
             }
         }
 
-        var height = block.TerrainZone?.Height is 0 ? null : block.TerrainZone?.Height;
-
-        return GetBlockConversionModel(node, pageName, height);
+        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge map, ref int index)
@@ -351,7 +354,7 @@ internal sealed class InitStageService
             Clips = commonClips?.Length == 0 ? null : commonClips,
             Air = airConvModel,
             Ground = groundConvModel,
-            Height = height
+            ZoneHeight = height
         };
     }
 

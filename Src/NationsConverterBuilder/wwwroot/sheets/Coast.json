@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "CoastSea",
   "Decorations": {
     "36x36x36": {
       "BaseHeight": 3
@@ -2799,6 +2800,7 @@
       "Air": {
         "Variants": 0
       },
+      "ZoneHeight": 0,
       "Units": [
         [
           0,
@@ -2823,6 +2825,7 @@
       "Air": {
         "Variants": 0
       },
+      "ZoneHeight": 0,
       "Units": [
         [
           0,
@@ -2847,6 +2850,7 @@
       "Air": {
         "Variants": 0
       },
+      "ZoneHeight": 0,
       "Units": [
         [
           0,
@@ -14262,7 +14266,7 @@
           1
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "CoastRoadWaterPillarStraight": {
       "PageName": "Other",
@@ -14416,7 +14420,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "CoastQuay": {
       "PageName": "Other",
@@ -14451,7 +14455,7 @@
           1
         ]
       },
-      "Height": 1
+      "ZoneHeight": 1
     },
     "CoastPillarStraight": {
       "PageName": "Other",

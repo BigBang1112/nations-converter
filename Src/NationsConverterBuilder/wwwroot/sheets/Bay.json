@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "BaySea",
   "Decorations": {
     "36x36x36": {
       "BaseHeight": 4
@@ -3116,7 +3117,8 @@
         "SubVariants": [
           12
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "BaySea": {
       "PageName": "Terraformation",
@@ -3137,7 +3139,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "BayRoadTransitionEsplanadeGround": {
       "PageName": "Transitions",
@@ -8167,7 +8170,8 @@
           3,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "BayRoadClip": {
       "PageName": "Other",
@@ -8338,7 +8342,7 @@
           1
         ]
       },
-      "Height": 4
+      "ZoneHeight": 4
     },
     "BaySeaClip": {
       "PageName": "Other",

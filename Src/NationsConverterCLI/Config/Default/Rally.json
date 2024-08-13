@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "RallyFlat",
   "Decorations": {
     "10x18x150": {
       "BaseHeight": 3
@@ -2836,7 +2837,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "RallyHills2": {
       "PageName": "Terraformation",
@@ -2857,7 +2859,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 4
     },
     "RallyRockyGrass": {
       "PageName": "Terraformation",
@@ -2878,7 +2881,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "RallyHills3": {
       "PageName": "Terraformation",
@@ -2899,7 +2903,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 6
     },
     "RallyHills1": {
       "PageName": "Terraformation",
@@ -2920,7 +2925,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 2
     },
     "Lake": {
       "PageName": "Terraformation",
@@ -2941,7 +2947,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "RallyMediumOverLowCrossGround": {
       "PageName": "Transition",
@@ -10241,7 +10248,7 @@
           3
         ]
       },
-      "Height": 4
+      "ZoneHeight": 4
     },
     "RallyFieldClip2": {
       "PageName": "Other",
@@ -10369,7 +10376,7 @@
           3
         ]
       },
-      "Height": 2
+      "ZoneHeight": 2
     },
     "Hills2ToHills3": {
       "PageName": "Other",
@@ -10404,7 +10411,7 @@
           3
         ]
       },
-      "Height": 6
+      "ZoneHeight": 6
     },
     "RallyGT8Pillar": {
       "PageName": "Other",
@@ -10623,7 +10630,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "RallyRoadCastlePillarClip": {
       "PageName": "Other",
@@ -10745,7 +10753,7 @@
           3
         ]
       },
-      "Height": 2
+      "ZoneHeight": 2
     },
     "RallyCastleStartPillar": {
       "PageName": "Other",
@@ -10868,7 +10876,7 @@
           1
         ]
       },
-      "Height": 1
+      "ZoneHeight": 1
     },
     "RallyGT3Pillar": {
       "PageName": "Other",
@@ -11442,7 +11450,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "RallyGT2Pillar": {
       "PageName": "Other",

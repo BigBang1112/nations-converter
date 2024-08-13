@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "SpeedBase",
   "Decorations": {
     "10x18x150": {
       "BaseHeight": 3
@@ -4056,7 +4057,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "Canyon": {
       "PageName": "Terraformation",
@@ -4077,7 +4079,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "River": {
       "PageName": "Terraformation",
@@ -4098,7 +4101,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "Desert3": {
       "PageName": "Terraformation",
@@ -4119,7 +4123,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 6
     },
     "Desert2": {
       "PageName": "Terraformation",
@@ -4140,7 +4145,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 3
     },
     "SpeedBase": {
       "PageName": "Terraformation",
@@ -4161,7 +4167,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "SpeedTiltTransitionRight": {
       "PageName": "RoadTilt",
@@ -9557,7 +9564,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "SpeedRiverRoadClipRight": {
       "PageName": "Other",
@@ -9638,7 +9645,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "DesertToDesert": {
       "PageName": "Other",
@@ -9673,7 +9681,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "Desert2ToDesert3": {
       "PageName": "Other",
@@ -9708,7 +9716,7 @@
           1
         ]
       },
-      "Height": 6
+      "ZoneHeight": 6
     },
     "SpeedToCanyon": {
       "PageName": "Other",
@@ -9742,7 +9750,8 @@
           2,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "SpeedGarageRoadClip": {
       "PageName": "Other",
@@ -9824,7 +9833,7 @@
           3
         ]
       },
-      "Height": 4
+      "ZoneHeight": 4
     },
     "DesertToRock": {
       "PageName": "Other",
@@ -9859,7 +9868,7 @@
           1
         ]
       },
-      "Height": 2
+      "ZoneHeight": 2
     },
     "SpeedRockClip": {
       "PageName": "Other",

@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "IslandSea",
   "Decorations": {
     "36x36x36": {
       "BaseHeight": 4
@@ -5681,6 +5682,7 @@
       "Air": {
         "Variants": 0
       },
+      "ZoneHeight": 0,
       "Units": [
         [
           0,
@@ -5713,7 +5715,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "IslandSeaWayGTCurve3Pillar": {
       "PageName": "SeaWay2",
@@ -13870,7 +13873,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "IslandCroisetteClip": {
       "PageName": "Other",
@@ -14150,7 +14154,7 @@
           1
         ]
       },
-      "Height": 6
+      "ZoneHeight": 6
     },
     "IslandHighWayClip": {
       "PageName": "Other",

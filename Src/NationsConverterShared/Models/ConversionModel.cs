@@ -5,7 +5,7 @@ public sealed class ConversionModel : ConversionModifierModel
     public string PageName { get; set; } = "";
     public ConversionModifierModel? Ground { get; set; }
     public ConversionModifierModel? Air { get; set; }
-    public int? Height { get; set; }
+    public int? ZoneHeight { get; set; }
 
     public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T?> propertyFunc)
         where T : struct

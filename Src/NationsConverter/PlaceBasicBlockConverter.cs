@@ -76,9 +76,9 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
             _ => block.Coord
         };
 
-        if (conversion.Height.HasValue)
+        if (conversion.ZoneHeight.HasValue)
         {
-            pos -= (0, conversion.Height.Value, 0);
+            pos -= (0, conversion.ZoneHeight.Value, 0);
         }
 
         var dir = -(int)block.Direction * MathF.PI / 2;

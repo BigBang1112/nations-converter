@@ -1,4 +1,5 @@
 {
+  "DefaultZoneBlock": "AlpineSnowBase",
   "Decorations": {
     "10x18x150": {
       "BaseHeight": 3
@@ -1235,7 +1236,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "AlpineTundra": {
       "PageName": "Terraformation",
@@ -1256,7 +1258,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "Ice0": {
       "PageName": "Terraformation",
@@ -1277,7 +1280,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "Snow1": {
       "PageName": "Terraformation",
@@ -1298,7 +1302,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 3
     },
     "AlpineSnowBase": {
       "PageName": "Terraformation",
@@ -1319,7 +1324,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "Snow3": {
       "PageName": "Terraformation",
@@ -1340,7 +1346,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 9
     },
     "Snow2": {
       "PageName": "Terraformation",
@@ -1361,7 +1368,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "ZoneHeight": 6
     },
     "AlpineRoadWoodTiltCornerInsideGround": {
       "PageName": "RoadTilt/GroundRoadTiltMisc",
@@ -11356,7 +11364,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "AlpinePylonWood": {
       "PageName": "Other"
@@ -11394,7 +11403,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "SnowToIce": {
       "PageName": "Other",
@@ -11428,7 +11437,8 @@
           1,
           1
         ]
-      }
+      },
+      "ZoneHeight": 0
     },
     "SnowToSnow1": {
       "PageName": "Other",
@@ -11463,7 +11473,7 @@
           4
         ]
       },
-      "Height": 3
+      "ZoneHeight": 3
     },
     "TundraHills": {
       "PageName": "Other",
@@ -11498,7 +11508,7 @@
           1
         ]
       },
-      "Height": 1
+      "ZoneHeight": 1
     },
     "AlpineSnowClip": {
       "PageName": "Other",
@@ -11585,7 +11595,7 @@
           4
         ]
       },
-      "Height": 9
+      "ZoneHeight": 9
     },
     "AlpineRoadWoodClip": {
       "PageName": "Other",
@@ -11641,7 +11651,7 @@
           1
         ]
       },
-      "Height": 1
+      "ZoneHeight": 1
     },
     "Snow1ToSnow2": {
       "PageName": "Other",
@@ -11676,7 +11686,7 @@
           4
         ]
       },
-      "Height": 6
+      "ZoneHeight": 6
     }
   }
 }
