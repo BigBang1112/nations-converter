@@ -309,7 +309,7 @@ public static class CPlugTreeExtensions
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
         var faces = new List<CPlugCrystal.Face>();
-        var materials = new Dictionary<CPlugSurface.MaterialId, CPlugCrystal.Material>();
+        var materials = new Dictionary<(CPlugSurface.MaterialId, byte), CPlugCrystal.Material>();
 
         var indicesOffset = 0;
 
@@ -339,21 +339,23 @@ public static class CPlugTreeExtensions
 
             foreach (var material in surface.Materials)
             {
-                var surfId = material.Material is null
-                    ? material.SurfaceId.GetValueOrDefault()
-                    : material.Material.SurfaceId;
+                var surfIdSet = GetSurfaceIdSet(material);
 
-                if (materials.TryGetValue(surfId, out var collisionMat))
+                if (materials.TryGetValue(surfIdSet, out var collisionMat))
                 {
                     continue;
                 }
 
+                var (surfId, gameplayId) = surfIdSet;
+
+                var fullMaterialName = $@"Editors\MeshEditorMedia\Materials\{surfId}";
+
                 collisionMat = new CPlugCrystal.Material
                 {
-                    MaterialUserInst = CPlugMaterialUserInstExtensions.Create("Editors\\MeshEditorMedia\\Materials\\Asphalt", surfId)
+                    MaterialUserInst = CPlugMaterialUserInstExtensions.Create(fullMaterialName, surfId, gameplayId)
                 };
 
-                materials.Add(surfId, collisionMat);
+                materials.Add(surfIdSet, collisionMat);
             }
 
             var group = new CPlugCrystal.Part() { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
@@ -365,18 +367,13 @@ public static class CPlugTreeExtensions
                 {
                     var material = surface.Materials[tri.U03];
 
-                    // SurfaceId is only true if Material is null, the surface should then be in the material object
-                    var surfaceId = material.Material is null
-                        ? material.SurfaceId.GetValueOrDefault()
-                        : material.Material.SurfaceId;
-
                     return new CPlugCrystal.Face([
                         new(tri.U02.X + indicesOffset, default),
                         new(tri.U02.Y + indicesOffset, default),
                         new(tri.U02.Z + indicesOffset, default)
                         ],
                         group,
-                        materials[surfaceId],
+                        materials[GetSurfaceIdSet(material)],
                         null
                     );
                 }) ?? []);
@@ -421,5 +418,28 @@ public static class CPlugTreeExtensions
             CrystalEnabled = false,
             U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
         };
+    }
+
+    private static (CPlugSurface.MaterialId, byte) GetSurfaceIdSet(CPlugSurface.SurfMaterial material)
+    {
+        var surfId = material.Material is null
+            ? material.SurfaceId.GetValueOrDefault()
+            : material.Material.SurfaceId;
+
+        byte gameplayId = surfId switch
+        {
+            CPlugSurface.MaterialId.Turbo_Deprecated => 1,
+            CPlugSurface.MaterialId.Turbo2_Deprecated => 2,
+            CPlugSurface.MaterialId.TurboRoulette_Deprecated => 3,
+            CPlugSurface.MaterialId.FreeWheeling_Deprecated => 4,
+            _ => 0
+        };
+
+        if (gameplayId != 0)
+        {
+            surfId = CPlugSurface.MaterialId.Concrete;
+        }
+
+        return (surfId, gameplayId);
     }
 }
