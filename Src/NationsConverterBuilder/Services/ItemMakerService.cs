@@ -118,9 +118,9 @@ internal sealed class ItemMakerService
         }
     }
 
-    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize)
+    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize, string name)
     {
-        var item = CreateGenericItem(webpData, blockSize);
+        var item = CreateGenericItem(webpData, blockSize, name);
 
         var entityModelEdition = new CGameCommonItemEntityModelEdition
         {
@@ -139,9 +139,9 @@ internal sealed class ItemMakerService
         return item;
     }
 
-    public CGameItemModel Build(CPlugStaticObjectModel staticObject, byte[]? webpData, Int3 blockSize)
+    public CGameItemModel Build(CPlugStaticObjectModel staticObject, byte[]? webpData, Int3 blockSize, string name)
     {
-        var item = CreateGenericItem(webpData, blockSize);
+        var item = CreateGenericItem(webpData, blockSize, name);
 
         var entityModel = new CGameCommonItemEntityModel
         {
@@ -157,7 +157,7 @@ internal sealed class ItemMakerService
         return item;
     }
 
-    private CGameItemModel CreateGenericItem(byte[]? webpData, Int3 blockSize)
+    private CGameItemModel CreateGenericItem(byte[]? webpData, Int3 blockSize, string name)
     {
         var placementParams = new CGameItemPlacementParam
         {
@@ -188,7 +188,7 @@ internal sealed class ItemMakerService
             ItemType = CGameItemModel.EItemType.Ornament,
             ItemTypeE = CGameItemModel.EItemType.Ornament,
             NadeoSkinFids = new GBX.NET.Engines.MwFoundations.CMwNod[7],
-            Name = "New Item",
+            Name = name,
             Description = "No Description",
             DefaultPlacement = placementParams,
             OrbitalPreviewAngle = 0.15f,

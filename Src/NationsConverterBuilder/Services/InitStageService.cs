@@ -263,11 +263,11 @@ internal sealed class InitStageService
         {
             case "MM_Collision":
                 var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.SubCategory);
-                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
+                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName);
                 break;
             case "Solid2":
                 var staticObject = itemMaker.CreateStaticObjectFromSolid(solid, subVariant.SubCategory);
-                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize());
+                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName);
                 break;
             default:
                 //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
@@ -398,7 +398,7 @@ internal sealed class InitStageService
         Directory.CreateDirectory(Path.Combine(itemsDirPath, dirPath));
 
         var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, subCategory);
-        var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize);
+        var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize, name: $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}");
 
         var itemPath = Path.Combine(dirPath, $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}.Item.Gbx");
 
