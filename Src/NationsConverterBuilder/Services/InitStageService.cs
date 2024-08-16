@@ -94,9 +94,7 @@ internal sealed class InitStageService
                 RecurseBlockDirectories(displayName, collection.BlockDirectories, map, subCategory, convs, ref index);
                 ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
 
-                // TODO: Replace with DefaultZone node
-                var defaultZoneIndex = collection.Node.Chunks.Get<CGameCtnCollection.Chunk03033009>()?.U01 - 1 ?? 0;
-                var defaultZone = (collection.Node.CompleteListZoneList?[defaultZoneIndex].Node as CGameCtnZoneFlat)?.BlockInfoFlat?.Ident.Id;
+                var defaultZone = (collection.Node.DefaultZone as CGameCtnZoneFlat)?.BlockInfoFlat?.Ident.Id;
 
                 var convSet = new ConversionSetModel
                 {

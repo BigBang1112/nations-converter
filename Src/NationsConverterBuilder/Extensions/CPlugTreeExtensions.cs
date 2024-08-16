@@ -173,7 +173,7 @@ public static class CPlugTreeExtensions
             IsEnabled = true,
             IsVisible = true,
             CrystalEnabled = false,
-            U02 = [0]
+            U02 = crystal.Groups.Select((_, i) => i).ToArray()
         });
 
         var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, out var newMaterials);
@@ -339,7 +339,9 @@ public static class CPlugTreeExtensions
 
             foreach (var material in surface.Materials)
             {
-                var surfId = (CPlugSurface.MaterialId)material.SurfaceId;
+                var surfId = material.Material is null
+                    ? material.SurfaceId.GetValueOrDefault()
+                    : material.Material.SurfaceId;
 
                 if (materials.TryGetValue(surfId, out var collisionMat))
                 {
@@ -359,15 +361,25 @@ public static class CPlugTreeExtensions
 
             positions.AddRange(ApplyLocation(collisionMesh.Vertices, location));
             faces.AddRange(collisionMesh.CookedTriangles?
-                .Select(tri => new CPlugCrystal.Face([
-                    new(tri.U02.X + indicesOffset, default),
+                .Select(tri =>
+                {
+                    var material = surface.Materials[tri.U03];
+
+                    // SurfaceId is only true if Material is null, the surface should then be in the material object
+                    var surfaceId = material.Material is null
+                        ? material.SurfaceId.GetValueOrDefault()
+                        : material.Material.SurfaceId;
+
+                    return new CPlugCrystal.Face([
+                        new(tri.U02.X + indicesOffset, default),
                         new(tri.U02.Y + indicesOffset, default),
                         new(tri.U02.Z + indicesOffset, default)
-                ],
-                group,
-                materials[(CPlugSurface.MaterialId)surface.Materials[tri.U03].SurfaceId],
-                null
-                )) ?? []);
+                        ],
+                        group,
+                        materials[surfaceId],
+                        null
+                    );
+                }) ?? []);
 
             indicesOffset += collisionMesh.Vertices.Length;
         }
@@ -407,7 +419,7 @@ public static class CPlugTreeExtensions
             IsEnabled = true,
             IsVisible = false,
             CrystalEnabled = false,
-            U02 = [0]
+            U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
         };
     }
 }
