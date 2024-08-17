@@ -95,7 +95,7 @@ internal sealed class InitStageService
                 ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
 
                 var defaultZone = (collection.Node.DefaultZone as CGameCtnZoneFlat)?.BlockInfoFlat?.Ident.Id;
-
+                
                 var convSet = new ConversionSetModel
                 {
                     Blocks = convs,
@@ -185,7 +185,7 @@ internal sealed class InitStageService
                 for (byte i = 0; i < node.GroundMobils.Length; i++)
                 {
                     var groundMobilSubVariants = node.GroundMobils[i];
-
+                    
                     for (byte j = 0; j < groundMobilSubVariants.Length; j++)
                     {
                         ProcessSubVariant(new()
