@@ -250,11 +250,17 @@ internal sealed class InitStageService
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge map, ref int index)
     {
-        if (subVariant.Node.Node?.Item?.Solid?.Tree is not CPlugSolid solid)
+        var mobil = subVariant.Node.Node;
+
+        if (mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
         {
             logger.LogError("Failed to get solid for {BlockName} {ModifierType} {VariantIndex} {SubVariantIndex}", subVariant.BlockName, subVariant.ModifierType, subVariant.VariantIndex, subVariant.SubVariantIndex);
             return;
         }
+
+        var spawnLoc = subVariant.ModifierType == "Air"
+            ? subVariant.BlockInfo.SpawnLocAir
+            : subVariant.BlockInfo.SpawnLocGround;
 
         Directory.CreateDirectory(Path.Combine(itemsDirPath, subVariant.DirectoryPath));
 
@@ -262,7 +268,7 @@ internal sealed class InitStageService
         switch (subVariant.Technology)
         {
             case "MM_Collision":
-                var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.SubCategory);
+                var crystal = itemMaker.CreateCrystalFromSolid(solid, mobil.ObjectLink, spawnLoc, subVariant.SubCategory);
                 finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName);
                 break;
             case "Solid2":
@@ -273,6 +279,8 @@ internal sealed class InitStageService
                 //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
                 return;
         }
+
+        finalItem.WaypointType = (CGameItemModel.EWaypointType)(int)subVariant.BlockInfo.WayPointType;
 
         var itemPath = Path.Combine(subVariant.DirectoryPath, $"{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
 
@@ -397,7 +405,7 @@ internal sealed class InitStageService
 
         Directory.CreateDirectory(Path.Combine(itemsDirPath, dirPath));
 
-        var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, subCategory);
+        var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, null, null, subCategory);
         var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize, name: $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}");
 
         var itemPath = Path.Combine(dirPath, $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}.Item.Gbx");

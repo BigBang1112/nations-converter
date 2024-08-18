@@ -2,6 +2,7 @@
 using GBX.NET.Components;
 using GBX.NET.Engines.GameData;
 using GBX.NET.Engines.Plug;
+using GBX.NET.Engines.Scene;
 using Microsoft.Extensions.Options;
 using NationsConverterBuilder.Extensions;
 
@@ -20,7 +21,7 @@ internal sealed class ItemMakerService
         this.logger = logger;
     }
 
-    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid, string subCategory)
+    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid, CSceneObjectLink[]? objectLinks, Iso4? spawnLoc, string subCategory)
     {
         if (solid.Tree is not CPlugTree tree)
         {
@@ -37,7 +38,10 @@ internal sealed class ItemMakerService
         {
             ApplyUvModifiers(matFile, uvSetIndex, uvs, subCategory);
         },
-        lod: 0, logger);
+        lod: 0,
+        objectLinks,
+        spawnLoc,
+        logger);
     }
 
     public CPlugStaticObjectModel CreateStaticObjectFromSolid(CPlugSolid solid, string subCategory)

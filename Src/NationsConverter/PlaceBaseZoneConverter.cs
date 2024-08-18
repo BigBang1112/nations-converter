@@ -63,7 +63,6 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
                     _ => unit
                 };
 
-                // instead of this min solution, it could be poss to just add half of the block size floored
                 if (alignedUnit.X < min.X)
                 {
                     min = min with { X = alignedUnit.X };

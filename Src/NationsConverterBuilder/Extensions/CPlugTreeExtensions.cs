@@ -1,6 +1,7 @@
 ﻿using GBX.NET;
 using GBX.NET.Components;
 using GBX.NET.Engines.Plug;
+using GBX.NET.Engines.Scene;
 
 namespace NationsConverterBuilder.Extensions;
 
@@ -18,6 +19,8 @@ public static class CPlugTreeExtensions
         Func<GbxRefTableFile, CPlugMaterialUserInst?>? materialLinks = null,
         Action<GbxRefTableFile, int, Vec2[]>? uvModifiers = null,
         int lod = 0,
+        CSceneObjectLink[]? objectLinks = null,
+        Iso4? spawnLoc = null,
         ILogger? logger = null)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -173,10 +176,10 @@ public static class CPlugTreeExtensions
             IsEnabled = true,
             IsVisible = true,
             CrystalEnabled = false,
-            U02 = crystal.Groups.Select((_, i) => i).ToArray()
+            //U02 = crystal.Groups.Select((_, i) => i).ToArray()
         });
 
-        var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, out var newMaterials);
+        var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, isTrigger: false, out var newMaterials);
 
         if (collisionLayer is not null)
         {
@@ -186,6 +189,35 @@ public static class CPlugTreeExtensions
             foreach (var newMaterial in newMaterials)
             {
                 materials.Add($"_Collision" + i, newMaterial);
+                i++;
+            }
+        }
+
+        foreach (var link in objectLinks ?? [])
+        {
+            if (link.Mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
+            {
+                continue;
+            }
+
+            if (solid.Tree is not CPlugTree t)
+            {
+                continue;
+            }
+
+            var linkLayer = CreateCollisionLayer(t, "Layer2", logger, isTrigger: true, out var newMaterials2);
+
+            if (linkLayer is null)
+            {
+                continue;
+            }
+
+            layers.Add(linkLayer);
+
+            var i = 0;
+            foreach (var newMaterial in newMaterials)
+            {
+                materials.Add($"_Trigger" + i, newMaterial);
                 i++;
             }
         }
@@ -304,7 +336,7 @@ public static class CPlugTreeExtensions
         ));
     }
 
-    private static CPlugCrystal.GeometryLayer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger, out IEnumerable<CPlugCrystal.Material> newMaterials)
+    private static CPlugCrystal.Layer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger, bool isTrigger, out IEnumerable<CPlugCrystal.Material> newMaterials)
     {
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
@@ -405,19 +437,29 @@ public static class CPlugTreeExtensions
 
         newMaterials = materials.Values;
 
-        return new CPlugCrystal.GeometryLayer
-        {
-            Ver = 2,
-            GeometryVersion = 1,
-            Crystal = collisionCrystal,
-            LayerId = layerId,
-            LayerName = "Collisions",
-            Collidable = true,
-            IsEnabled = true,
-            IsVisible = false,
-            CrystalEnabled = false,
-            U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
-        };
+        return isTrigger
+            ? new CPlugCrystal.TriggerLayer
+            {
+                Ver = 2,
+                Crystal = collisionCrystal,
+                LayerId = layerId,
+                LayerName = "Trigger",
+                IsEnabled = true,
+                CrystalEnabled = false,
+            }
+            : new CPlugCrystal.GeometryLayer
+            {
+                Ver = 2,
+                GeometryVersion = 1,
+                Crystal = collisionCrystal,
+                LayerId = layerId,
+                LayerName = "Collisions",
+                Collidable = true,
+                IsEnabled = true,
+                IsVisible = false,
+                CrystalEnabled = false,
+                //U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
+            };
     }
 
     private static (CPlugSurface.MaterialId, CPlugMaterialUserInst.GameplayId) GetSurfaceIdSet(CPlugSurface.SurfMaterial material)
