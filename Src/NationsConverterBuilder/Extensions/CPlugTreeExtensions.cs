@@ -39,7 +39,7 @@ public static class CPlugTreeExtensions
 
             if (t.ShaderFile is null)
             {
-                logger?.LogWarning("Visual has no shader link, this is weird. Material has been probably directly embedded, it doesn't have a name.");
+                logger?.LogWarning("Visual has no shader link, this is weird (crystal). Material has been probably directly embedded, it doesn't have a name.");
                 continue;
             }
 
@@ -309,7 +309,7 @@ public static class CPlugTreeExtensions
         var groups = new List<CPlugCrystal.Part>();
         var positions = new List<Vec3>();
         var faces = new List<CPlugCrystal.Face>();
-        var materials = new Dictionary<(CPlugSurface.MaterialId, byte), CPlugCrystal.Material>();
+        var materials = new Dictionary<(CPlugSurface.MaterialId, CPlugMaterialUserInst.GameplayId), CPlugCrystal.Material>();
 
         var indicesOffset = 0;
 
@@ -420,19 +420,19 @@ public static class CPlugTreeExtensions
         };
     }
 
-    private static (CPlugSurface.MaterialId, byte) GetSurfaceIdSet(CPlugSurface.SurfMaterial material)
+    private static (CPlugSurface.MaterialId, CPlugMaterialUserInst.GameplayId) GetSurfaceIdSet(CPlugSurface.SurfMaterial material)
     {
         var surfId = material.Material is null
             ? material.SurfaceId.GetValueOrDefault()
             : material.Material.SurfaceId;
 
-        byte gameplayId = surfId switch
+        var gameplayId = surfId switch
         {
-            CPlugSurface.MaterialId.Turbo_Deprecated => 1,
-            CPlugSurface.MaterialId.Turbo2_Deprecated => 2,
-            CPlugSurface.MaterialId.TurboRoulette_Deprecated => 3,
-            CPlugSurface.MaterialId.FreeWheeling_Deprecated => 4,
-            _ => 0
+            CPlugSurface.MaterialId.Turbo_Deprecated => CPlugMaterialUserInst.GameplayId.Turbo,
+            CPlugSurface.MaterialId.Turbo2_Deprecated => CPlugMaterialUserInst.GameplayId.Turbo2,
+            CPlugSurface.MaterialId.TurboRoulette_Deprecated => CPlugMaterialUserInst.GameplayId.TurboRoulette,
+            CPlugSurface.MaterialId.FreeWheeling_Deprecated => CPlugMaterialUserInst.GameplayId.FreeWheeling,
+            _ => CPlugMaterialUserInst.GameplayId.None
         };
 
         if (gameplayId != 0)

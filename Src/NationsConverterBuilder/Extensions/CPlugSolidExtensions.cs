@@ -32,7 +32,7 @@ public static class CPlugSolidExtensions
 
             if (t.ShaderFile is null)
             {
-                logger?.LogWarning("Visual has no shader link, this is weird.");
+                logger?.LogWarning("Visual has no shader link, this is weird (static object). Material has been probably directly embedded, it doesn't have a name.");
                 continue;
             }
 

@@ -199,9 +199,12 @@ internal sealed class ItemMakerService
             IconWebP = webpData
         };
         item.CreateChunk<CGameCtnCollector.HeaderChunk2E001003>().Version = 8;
-        var chunk004 = item.CreateChunk<CGameCtnCollector.HeaderChunk2E001004>();
-        chunk004.U01 = 1;
-        chunk004.IsHeavy = true;
+        if (webpData is not null)
+        {
+            var chunk004 = item.CreateChunk<CGameCtnCollector.HeaderChunk2E001004>();
+            chunk004.U01 = 1;
+            chunk004.IsHeavy = true;
+        }
         item.CreateChunk<CGameCtnCollector.HeaderChunk2E001006>();
         item.CreateChunk<CGameItemModel.HeaderChunk2E002000>();
         item.CreateChunk<CGameItemModel.HeaderChunk2E002001>();

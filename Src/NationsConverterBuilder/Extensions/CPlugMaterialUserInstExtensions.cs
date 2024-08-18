@@ -5,7 +5,11 @@ namespace NationsConverterBuilder.Extensions;
 
 public static class CPlugMaterialUserInstExtensions
 {
-    public static CPlugMaterialUserInst Create(string link = "Stadium\\Media\\Material\\PlatformTech", CPlugSurface.MaterialId surfaceId = CPlugSurface.MaterialId.Asphalt, byte gameplayId = 0, int[]? color = null)
+    public static CPlugMaterialUserInst Create(
+        string link = "Stadium\\Media\\Material\\PlatformTech",
+        CPlugSurface.MaterialId surfaceId = CPlugSurface.MaterialId.Asphalt,
+        CPlugMaterialUserInst.GameplayId gameplayId = CPlugMaterialUserInst.GameplayId.None,
+        int[]? color = null)
     {
         var csts = color is null ? null : new CPlugMaterialUserInst.Cst[]
         {
@@ -21,7 +25,7 @@ public static class CPlugMaterialUserInstExtensions
         {
             IsUsingGameMaterial = true,
             Link = link,
-            SurfacePhysicId = (byte)surfaceId,
+            SurfacePhysicId = surfaceId,
             SurfaceGameplayId = gameplayId,
             TextureSizeInMeters = 1,
             Csts = csts,
