@@ -56,9 +56,9 @@ internal sealed class PlaceGroundConverter : BlockConverter
                 var unit = units[i];
                 var alignedUnit = block.Direction switch
                 {
-                    Direction.East => (unit.Z, unit.Y, -unit.X),
+                    Direction.East => (-unit.Z, unit.Y, unit.X),
                     Direction.South => (-unit.X, unit.Y, -unit.Z),
-                    Direction.West => (-unit.Z, unit.Y, unit.X),
+                    Direction.West => (unit.Z, unit.Y, -unit.X),
                     _ => unit
                 };
 
