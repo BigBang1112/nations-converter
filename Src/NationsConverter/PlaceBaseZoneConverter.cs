@@ -43,7 +43,46 @@ internal sealed class PlaceGroundConverter : BlockConverter
             return;
         }
 
-        // TODO: Set more occupied places where there are ground blocks already by using block units
+        if (block.IsGround && block.Coord.Y == baseHeight + 1)
+        {
+            var units = conversion.GetProperty(x => x.Ground, x => x.Units) ?? [(0, 0, 0)];
+
+            Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+
+            var min = new Int3(int.MaxValue, int.MaxValue, int.MaxValue);
+
+            for (int i = 0; i < units.Length; i++)
+            {
+                var unit = units[i];
+                var alignedUnit = block.Direction switch
+                {
+                    Direction.East => (unit.Z, unit.Y, -unit.X),
+                    Direction.South => (-unit.X, unit.Y, -unit.Z),
+                    Direction.West => (-unit.Z, unit.Y, unit.X),
+                    _ => unit
+                };
+
+                // instead of this min solution, it could be poss to just add half of the block size floored
+                if (alignedUnit.X < min.X)
+                {
+                    min = min with { X = alignedUnit.X };
+                }
+
+                if (alignedUnit.Z < min.Z)
+                {
+                    min = min with { Z = alignedUnit.Z };
+                }
+
+                alignedUnits[i] = alignedUnit;
+            }
+
+            foreach (var unit in alignedUnits)
+            {
+                var pos = block.Coord + unit - min;
+
+                occupiedZone[pos.X, pos.Z] = true;
+            }
+        }
     }
 
     public override void Convert()

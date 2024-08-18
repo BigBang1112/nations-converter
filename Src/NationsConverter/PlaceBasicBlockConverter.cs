@@ -81,12 +81,12 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
             pos -= (0, conversion.ZoneHeight.Value, 0);
         }
 
-        var dir = -(int)block.Direction * MathF.PI / 2;
+        var rotRadians = -(int)block.Direction * MathF.PI / 2;
 
-        logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", block.Name, pos, dir);
+        logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", block.Name, pos, block.Direction);
 
         convertedMap.PlaceAnchoredObject(
             new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                pos * BlockSize, (dir, 0, 0));
+                pos * BlockSize, (rotRadians, 0, 0));
     }
 }
