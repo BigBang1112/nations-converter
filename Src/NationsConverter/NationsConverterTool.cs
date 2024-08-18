@@ -31,10 +31,13 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
 
         var convertedMap = CreateBaseMap();
 
-        var placeGroundConverter = new PlaceGroundConverter(map, convertedMap, Config, logger);
-        placeGroundConverter.Convert();
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, logger);
+        placeBaseZoneConverter.Convert();
 
-        var placeBasicBlockConverter = new PlaceBasicBlockConverter(map, convertedMap, Config, logger);
+        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, logger);
+        var coveredZoneBlocks = coveredZoneBlockInfoExtract.Extract();
+
+        var placeBasicBlockConverter = new PlaceBasicBlockConverter(map, convertedMap, Config, coveredZoneBlocks, logger);
         placeBasicBlockConverter.Convert();
 
         if (Config.CopyItems)

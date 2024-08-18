@@ -5,7 +5,7 @@ using NationsConverterShared.Models;
 
 namespace NationsConverter;
 
-internal sealed class PlaceGroundConverter : BlockConverter
+internal sealed class PlaceBaseZoneConverter : BlockConverter
 {
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
@@ -13,7 +13,7 @@ internal sealed class PlaceGroundConverter : BlockConverter
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
-    public PlaceGroundConverter(
+    public PlaceBaseZoneConverter(
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
@@ -43,6 +43,7 @@ internal sealed class PlaceGroundConverter : BlockConverter
             return;
         }
 
+        // If block is of ground type, it is considered occupied if it is at the base height + 1
         if (block.IsGround && block.Coord.Y == baseHeight + 1)
         {
             var units = conversion.GetProperty(x => x.Ground, x => x.Units) ?? [(0, 0, 0)];

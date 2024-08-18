@@ -8,20 +8,28 @@ namespace NationsConverter;
 internal sealed class PlaceBasicBlockConverter : BlockConverter
 {
     private readonly CGameCtnChallenge convertedMap;
+    private readonly HashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ILogger logger;
 
     public PlaceBasicBlockConverter(
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
+        HashSet<CGameCtnBlock> coveredZoneBlocks,
         ILogger logger) : base(map, config, logger)
     {
         this.convertedMap = convertedMap;
+        this.coveredZoneBlocks = coveredZoneBlocks;
         this.logger = logger;
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
     {
+        if (coveredZoneBlocks.Contains(block))
+        {
+            return;
+        }
+
         Int3 blockCoordSize;
         int maxSubVariants;
 
