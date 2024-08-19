@@ -176,7 +176,7 @@ public static class CPlugTreeExtensions
             IsEnabled = true,
             IsVisible = true,
             CrystalEnabled = false,
-            //U02 = crystal.Groups.Select((_, i) => i).ToArray()
+            U02 = crystal.Groups.Select((_, i) => i).ToArray()
         });
 
         var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, isTrigger: false, out var newMaterials);
@@ -220,6 +220,19 @@ public static class CPlugTreeExtensions
                 materials.Add($"_Trigger" + i, newMaterial);
                 i++;
             }
+        }
+
+        if (spawnLoc.HasValue)
+        {
+            layers.Add(new CPlugCrystal.SpawnPositionLayer
+            {
+                Ver = 2,
+                LayerId = "Layer3",
+                LayerName = "Spawn",
+                CrystalEnabled = false,
+                IsEnabled = true,
+                SpawnPosition = (spawnLoc.Value.TX, spawnLoc.Value.TY, spawnLoc.Value.TZ)
+            });
         }
 
         var plugCrystal = new CPlugCrystal
@@ -458,7 +471,7 @@ public static class CPlugTreeExtensions
                 IsEnabled = true,
                 IsVisible = false,
                 CrystalEnabled = false,
-                //U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
+                U02 = collisionCrystal.Groups.Select((_, i) => i).ToArray()
             };
     }
 
