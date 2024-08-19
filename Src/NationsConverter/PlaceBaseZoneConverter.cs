@@ -76,7 +76,10 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
         {
             var pos = block.Coord + unit - min;
 
-            occupiedZone[pos.X, pos.Z] = pos.Y == baseHeight + 1;
+            if (!occupiedZone[pos.X, pos.Z])
+            {
+                occupiedZone[pos.X, pos.Z] = pos.Y == baseHeight + 1;
+            }
         }
     }
 
