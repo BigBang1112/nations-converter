@@ -56,7 +56,7 @@ internal sealed class CoveredZoneBlockInfoExtract
                 continue;
             }
 
-            if (!block.IsGround || conversion.ZoneHeight is not null)
+            if (conversion.ZoneHeight is not null)
             {
                 continue;
             }
@@ -94,7 +94,9 @@ internal sealed class CoveredZoneBlockInfoExtract
 
     private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ConversionModel conversion)
     {
-        var units = conversion.GetProperty(x => x.Ground, x => x.Units) ?? [(0, 0, 0)];
+        var units = (block.IsGround
+            ? conversion.GetProperty(x => x.Ground, x => x.Units)
+            : conversion.GetProperty(x => x.Air, x => x.Units)) ?? [(0, 0, 0)];
 
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 

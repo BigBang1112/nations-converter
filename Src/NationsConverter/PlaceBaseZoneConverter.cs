@@ -30,11 +30,6 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
 
     protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
     {
-        if (!block.IsGround)
-        {
-            return;
-        }
-
         // If block is of zone type (ZoneHeight not null) it is automatically considered occupied
         // Block's height does not matter - tested on TMUnlimiter
         if (conversion.ZoneHeight.HasValue)
@@ -43,45 +38,45 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
             return;
         }
 
-        // If block is of ground type, it is considered occupied if it is at the base height + 1
-        if (block.IsGround && block.Coord.Y == baseHeight + 1)
+        // If block has ground variant, base ground is considered occupied if one of its units is at the base height + 1
+        // THX TOMEK0055 FOR ALL THE HELP!!!
+        var units = (block.IsGround
+            ? conversion.GetProperty(x => x.Ground, x => x.Units)
+            : conversion.GetProperty(x => x.Air, x => x.Units)) ?? [(0, 0, 0)];
+
+        Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+
+        var min = new Int3(int.MaxValue, 0, int.MaxValue);
+
+        for (int i = 0; i < units.Length; i++)
         {
-            var units = conversion.GetProperty(x => x.Ground, x => x.Units) ?? [(0, 0, 0)];
-
-            Span<Int3> alignedUnits = stackalloc Int3[units.Length];
-
-            var min = new Int3(int.MaxValue, int.MaxValue, int.MaxValue);
-
-            for (int i = 0; i < units.Length; i++)
+            var unit = units[i];
+            var alignedUnit = block.Direction switch
             {
-                var unit = units[i];
-                var alignedUnit = block.Direction switch
-                {
-                    Direction.East => (-unit.Z, unit.Y, unit.X),
-                    Direction.South => (-unit.X, unit.Y, -unit.Z),
-                    Direction.West => (unit.Z, unit.Y, -unit.X),
-                    _ => unit
-                };
+                Direction.East => (-unit.Z, unit.Y, unit.X),
+                Direction.South => (-unit.X, unit.Y, -unit.Z),
+                Direction.West => (unit.Z, unit.Y, -unit.X),
+                _ => unit
+            };
 
-                if (alignedUnit.X < min.X)
-                {
-                    min = min with { X = alignedUnit.X };
-                }
-
-                if (alignedUnit.Z < min.Z)
-                {
-                    min = min with { Z = alignedUnit.Z };
-                }
-
-                alignedUnits[i] = alignedUnit;
+            if (alignedUnit.X < min.X)
+            {
+                min = min with { X = alignedUnit.X };
             }
 
-            foreach (var unit in alignedUnits)
+            if (alignedUnit.Z < min.Z)
             {
-                var pos = block.Coord + unit - min;
-
-                occupiedZone[pos.X, pos.Z] = true;
+                min = min with { Z = alignedUnit.Z };
             }
+
+            alignedUnits[i] = alignedUnit;
+        }
+
+        foreach (var unit in alignedUnits)
+        {
+            var pos = block.Coord + unit - min;
+
+            occupiedZone[pos.X, pos.Z] = pos.Y == baseHeight + 1;
         }
     }
 
