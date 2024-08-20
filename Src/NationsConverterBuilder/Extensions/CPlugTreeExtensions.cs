@@ -31,8 +31,6 @@ public static class CPlugTreeExtensions
 
         var indicesOffset = 0;
 
-        //var hasAll00uvs = true;
-
         foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
         {
             if (t.Visual is null)
@@ -99,11 +97,6 @@ public static class CPlugTreeExtensions
                 for (var j = 0; j < texCoordSet.Length; j++)
                 {
                     uvSets[i][j] = texCoordSet[j].UV;
-
-                    /*if (uvSets[i][j] != (0, 0))
-                    {
-                        hasAll00uvs = false;
-                    }*/
                 }
 
                 if (uvModifiers is not null)
@@ -137,17 +130,23 @@ public static class CPlugTreeExtensions
             indicesOffset += visual.Vertices.Length;
         }
 
-        //if (hasAll00uvs)
-        //{
-            // these usually break
-            /*foreach (var face in faces)
+        // fixing invalid meshes caused probably by completely zeroed out UVs
+        foreach (var face in faces)
+        {
+            if (face.Vertices.Length != 3)
             {
-                for (int i = 0; i < face.Vertices.Length; i++)
-                {
-                    face.Vertices[i] = face.Vertices[i] with { TexCoord = (i, i) };
-                }
-            }*/
-        //}
+                continue;
+            }
+
+            if (face.Vertices[0].TexCoord == (0, 0)
+             && face.Vertices[1].TexCoord == (0, 0)
+             && face.Vertices[2].TexCoord == (0, 0))
+            {
+                face.Vertices[0] = face.Vertices[0] with { TexCoord = (0, 1) };
+                face.Vertices[1] = face.Vertices[1] with { TexCoord = (0, 0) };
+                face.Vertices[2] = face.Vertices[2] with { TexCoord = (1, 0) };
+            }
+        }
 
         var crystal = new CPlugCrystal.Crystal
         {
