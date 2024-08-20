@@ -32,11 +32,13 @@ internal sealed class InitStageService
         WriteIndented = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
+    private static readonly AppJsonContext jsonContext;
 
     static InitStageService()
     {
         jsonOptions.Converters.Add(new JsonInt3Converter());
         jsonOptions.Converters.Add(new JsonVec3Converter());
+        jsonContext = new(jsonOptions);
     }
 
     public InitStageService(
@@ -106,7 +108,7 @@ internal sealed class InitStageService
 
                 await using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))
                 {
-                    await JsonSerializer.SerializeAsync(sheetJsonStream, convSet, jsonOptions, cancellationToken: cancellationToken);
+                    await JsonSerializer.SerializeAsync(sheetJsonStream, convSet, jsonContext.ConversionSetModel, cancellationToken: cancellationToken);
                 }
 
                 if (!string.IsNullOrEmpty(initMapsOutputPath))
@@ -374,7 +376,14 @@ internal sealed class InitStageService
             Air = airConvModel,
             Ground = groundConvModel,
             ZoneHeight = height,
-            Waypoint = node.WayPointType is CGameCtnBlockInfo.EWayPointType.None ? null : node.WayPointType.ToString(),
+            Waypoint = node.WayPointType is CGameCtnBlockInfo.EWayPointType.None ? null : node.WayPointType switch
+            {
+                CGameCtnBlockInfo.EWayPointType.Start => WaypointType.Start,
+                CGameCtnBlockInfo.EWayPointType.StartFinish => WaypointType.StartFinish,
+                CGameCtnBlockInfo.EWayPointType.Checkpoint => WaypointType.Checkpoint,
+                CGameCtnBlockInfo.EWayPointType.Finish => WaypointType.Finish,
+                _ => null
+            },
             SpawnPos = commonSpawnPos
         };
     }
