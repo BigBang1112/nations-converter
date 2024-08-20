@@ -40,6 +40,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
         var placeBasicBlockConverter = new PlaceBasicBlockConverter(map, convertedMap, Config, coveredZoneBlocks, logger);
         placeBasicBlockConverter.Convert();
 
+        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, logger);
+        placeTransformationConverter.Convert();
+
         if (Config.CopyItems)
         {
             if (string.IsNullOrWhiteSpace(Config.UserDataFolder))

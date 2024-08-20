@@ -48,6 +48,14 @@ public sealed class ConversionModel : ConversionModifierModel
         throw new Exception("Property is null in both places.");
     }
 
+    public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T?> propertyFunc)
+        where T : struct
+    {
+        return block.IsGround
+            ? GetProperty(x => x.Ground, propertyFunc)
+            : GetProperty(x => x.Air, propertyFunc);
+    }
+
     public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T> propertyFunc)
     {
         return block.IsGround
