@@ -4528,7 +4528,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        2.1,
+        8
+      ]
     },
     "CoastCircuitHighGTCurve2": {
       "PageName": "Circuit/High",
@@ -6544,7 +6550,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Start",
+      "Variants": 1,
+      "SpawnPos": [
+        8,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitStartFinishLine": {
       "PageName": "Circuit/Main",
@@ -6618,7 +6630,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitFinishLine": {
       "PageName": "Circuit/Main",
@@ -6674,6 +6692,7 @@
           }
         ]
       },
+      "Waypoint": "Finish",
       "Variants": 1
     },
     "CoastCircuitCheckpoint": {
@@ -6748,7 +6767,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitRoadFinishLine": {
       "PageName": "Circuit/Main",
@@ -6785,6 +6810,7 @@
           }
         ]
       },
+      "Waypoint": "Finish",
       "Variants": 1
     },
     "CoastCircuitRoadCheckpoint": {
@@ -6831,7 +6857,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        8,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitStartLine": {
       "PageName": "Circuit/Main",
@@ -6887,7 +6919,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Start",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitRoadStartFinishLine": {
       "PageName": "Circuit/Main",
@@ -6928,7 +6966,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        8,
+        0.1,
+        8
+      ]
     },
     "CoastCircuitBorderDiagOutFull": {
       "PageName": "Circuit/Diag",
@@ -8061,8 +8105,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          8,
+          1,
+          8
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "CoastTunnelSlope4": {
@@ -10385,6 +10435,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -10416,6 +10467,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        8,
+        1.75,
+        8
       ]
     },
     "CoastRoadSupport": {
@@ -10594,14 +10650,21 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          8,
+          2,
+          8
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "CoastRoadCheckpoint": {
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -10642,12 +10705,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        8,
+        1.15,
+        8
       ]
     },
     "CoastRoadFinish": {
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -12712,6 +12781,7 @@
           }
         ]
       },
+      "Waypoint": "Finish",
       "Variants": 1
     },
     "CoastRoadWater": {
@@ -12782,6 +12852,7 @@
       "PageName": "RoadWater/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -12827,6 +12898,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        8,
+        5.1,
+        8
       ]
     },
     "CoastRoadWaterCheckpoint": {
@@ -12873,7 +12949,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        8,
+        1.15,
+        8
+      ]
     },
     "CoastRoadWaterStartLine": {
       "PageName": "RoadWater/RoadMain",
@@ -12910,7 +12992,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Start",
+      "Variants": 1,
+      "SpawnPos": [
+        8,
+        1.75,
+        8
+      ]
     },
     "CoastRoadWaterSlopeStraightSupport": {
       "PageName": "RoadWater/Slopes",

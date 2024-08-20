@@ -5842,8 +5842,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          -3.8,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "RallyHill3SpeedUp": {
@@ -6761,7 +6767,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        -3.9,
+        16
+      ]
     },
     "RallyTunnelTurbo": {
       "PageName": "Tunnel/TunnelMain",
@@ -7279,6 +7291,7 @@
       "PageName": "RoadHigh/RoadHighMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -7305,12 +7318,18 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        4,
+        14
       ]
     },
     "RallyHighFinish": {
       "PageName": "RoadHigh/RoadHighMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -7399,6 +7418,7 @@
       "PageName": "RoadHigh/RoadHighMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -7434,6 +7454,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        4,
+        14
       ]
     },
     "RallyRoadHighCornerRockOutside": {
@@ -7634,6 +7659,7 @@
       "PageName": "RoadHigh/RoadHighSupport",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -7660,6 +7686,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        4,
+        14
       ]
     },
     "RallyRoadWoodSupportSlope": {
@@ -7796,6 +7827,7 @@
       "PageName": "RoadHigh/RoadHighSupport",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -7831,12 +7863,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        4,
+        14
       ]
     },
     "RallyHighFinishSupport": {
       "PageName": "RoadHigh/RoadHighSupport",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -8000,6 +8038,7 @@
           }
         ]
       },
+      "Waypoint": "Finish",
       "Variants": 1
     },
     "RallyRock": {
@@ -8229,7 +8268,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Start",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        -2.8,
+        11.2
+      ]
     },
     "RallyHouseGround5": {
       "PageName": "RoadLow",
@@ -8372,7 +8417,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        -3.8,
+        11.2
+      ]
     },
     "RallyCastleTurboRoulette": {
       "PageName": "RoadCastle/Misc",
@@ -8559,8 +8610,21 @@
     },
     "RallyStartFinishLine": {
       "PageName": "RoadCastle/RoadMedium",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "SpawnPos": [
+          16,
+          3.7,
+          11.2
+        ]
+      },
+      "Air": {
+        "SpawnPos": [
+          16,
+          -1.4,
+          11.2
+        ]
+      },
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -8600,8 +8664,21 @@
     },
     "RallyMediumStartLine": {
       "PageName": "RoadCastle/RoadMedium",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "SpawnPos": [
+          16,
+          3.7,
+          11.2
+        ]
+      },
+      "Air": {
+        "SpawnPos": [
+          16,
+          -1.2,
+          11.2
+        ]
+      },
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -8639,6 +8716,7 @@
       "PageName": "RoadCastle/RoadMedium",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -8751,6 +8829,11 @@
           1,
           2,
           1
+        ],
+        "SpawnPos": [
+          16,
+          3.7,
+          11.2
         ]
       },
       "Air": {
@@ -8775,8 +8858,14 @@
           1,
           3,
           1
+        ],
+        "SpawnPos": [
+          16,
+          -1.4,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1,
       "SubVariants": [
         1
@@ -8878,8 +8967,21 @@
     },
     "RallyMediumCheckPoint": {
       "PageName": "RoadCastle/RoadMedium",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "SpawnPos": [
+          16,
+          3.7,
+          11.2
+        ]
+      },
+      "Air": {
+        "SpawnPos": [
+          16,
+          -1.4,
+          11.2
+        ]
+      },
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,

@@ -36,6 +36,7 @@ internal sealed class InitStageService
     static InitStageService()
     {
         jsonOptions.Converters.Add(new JsonInt3Converter());
+        jsonOptions.Converters.Add(new JsonVec3Converter());
     }
 
     public InitStageService(
@@ -174,7 +175,7 @@ internal sealed class InitStageService
             pageName = pageName[..^1];
         }
 
-        var mapTechnology = "Solid2";
+        var mapTechnology = "MM_Collision";
 
         foreach (var technology in technologies)
         {
@@ -317,11 +318,21 @@ internal sealed class InitStageService
         var airClips = GetConversionClipModels(node.AirBlockUnitInfos).ToArray();
         var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos).ToArray();
 
+        Vec3? airSpawnPos = node.WayPointType
+            is CGameCtnBlockInfo.EWayPointType.Start
+            or CGameCtnBlockInfo.EWayPointType.StartFinish
+            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocAir.TX, node.SpawnLocAir.TY, node.SpawnLocAir.TZ) : null;
+        Vec3? groundSpawnPos = node.WayPointType
+            is CGameCtnBlockInfo.EWayPointType.Start
+            or CGameCtnBlockInfo.EWayPointType.StartFinish
+            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.TX, node.SpawnLocGround.TY, node.SpawnLocGround.TZ) : null;
+
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
         var commonSize = airSize == groundSize ? airSize : null;
         var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
         var commonSubVariants = airSubVariants.SequenceEqual(groundSubVariants) ? airSubVariants : null;
         var commonClips = airClips.SequenceEqual(groundClips) ? airClips : null;
+        var commonSpawnPos = airSpawnPos == groundSpawnPos ? airSpawnPos : null;
 
         var airConvModel = default(ConversionModifierModel);
         var groundConvModel = default(ConversionModifierModel);
@@ -334,7 +345,8 @@ internal sealed class InitStageService
                 Size = commonSize is null ? airSize : null,
                 Variants = commonVariants is null ? airVariants : null,
                 SubVariants = commonSubVariants is null && airSubVariants.Length > 0 ? airSubVariants : null,
-                Clips = commonClips is null && airClips.Length > 0 ? airClips : null
+                Clips = commonClips is null && airClips.Length > 0 ? airClips : null,
+                SpawnPos = commonSpawnPos is null ? airSpawnPos : null
             };
         }
 
@@ -346,7 +358,8 @@ internal sealed class InitStageService
                 Size = commonSize is null ? groundSize : null,
                 Variants = commonVariants is null ? groundVariants : null,
                 SubVariants = commonSubVariants is null && groundSubVariants.Length > 0 ? groundSubVariants : null,
-                Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null
+                Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null,
+                SpawnPos = commonSpawnPos is null ? groundSpawnPos : null
             };
         }
 
@@ -360,7 +373,9 @@ internal sealed class InitStageService
             Clips = commonClips?.Length == 0 ? null : commonClips,
             Air = airConvModel,
             Ground = groundConvModel,
-            ZoneHeight = height
+            ZoneHeight = height,
+            Waypoint = node.WayPointType is CGameCtnBlockInfo.EWayPointType.None ? null : node.WayPointType.ToString(),
+            SpawnPos = commonSpawnPos
         };
     }
 

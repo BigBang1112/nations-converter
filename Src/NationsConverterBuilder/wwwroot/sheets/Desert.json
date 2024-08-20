@@ -3580,8 +3580,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          2.1,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "SpeedClassicPeak": {
@@ -5321,6 +5327,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -5356,6 +5363,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.1,
+        11.2
       ]
     },
     "SpeedGarageHatSlopeBottom": {
@@ -6542,7 +6554,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.1,
+        11.2
+      ]
     },
     "SpeedTunnelDesertToRockEntry2": {
       "PageName": "Tunnel/TunnelMisc",
@@ -8989,6 +9007,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -9024,12 +9043,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.1,
+        11.2
       ]
     },
     "SpeedClassicFinish": {
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -9185,6 +9210,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -9220,6 +9246,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.1,
+        11.2
       ]
     },
     "SpeedRoadLamp": {
@@ -9290,6 +9321,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -9316,6 +9348,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.6,
+        11.2
       ]
     },
     "SpeedRoad": {

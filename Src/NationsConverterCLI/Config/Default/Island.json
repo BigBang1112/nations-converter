@@ -535,6 +535,7 @@
       "PageName": "Croisette/Main",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -570,6 +571,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        2.1,
+        32
       ]
     },
     "IslandCroisetteStraightPilar": {
@@ -2203,7 +2209,13 @@
           1
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        32,
+        0.5,
+        32
+      ]
     },
     "IslandAirportPlane": {
       "PageName": "Decors/Airport",
@@ -3401,6 +3413,7 @@
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -3436,6 +3449,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        2.1,
+        32
       ]
     },
     "IslandHighWay": {
@@ -3652,6 +3670,7 @@
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -3684,6 +3703,7 @@
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -3710,12 +3730,18 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        32,
+        2.1,
+        48
       ]
     },
     "IslandHighWayStartFinishLine": {
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -3751,6 +3777,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        2.1,
+        32
       ]
     },
     "IslandRoadWallStraight": {
@@ -7195,6 +7226,7 @@
       "PageName": "SeaWay/SeaWayMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -7230,6 +7262,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        2.1,
+        32
       ]
     },
     "IslandSeaWayHole": {
@@ -8649,7 +8686,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        32,
+        2.1,
+        32
+      ]
     },
     "IslandTunnelTurbo": {
       "PageName": "Tunnel/TunnelMain",
@@ -10698,7 +10741,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        32,
+        2.1,
+        32
+      ]
     },
     "IslandTunnelCircularWallH": {
       "PageName": "Tunnel/Circular",
@@ -12698,6 +12747,7 @@
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -12734,12 +12784,18 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        32,
+        8.01,
+        48
       ]
     },
     "IslandPlatformStartFinishLine": {
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -12785,12 +12841,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        8.01,
+        32
       ]
     },
     "IslandPlatformCheckpoint": {
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -12831,6 +12893,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        32,
+        8.01,
+        32
       ]
     },
     "IslandPlatformFloodLight": {
@@ -12932,6 +12999,7 @@
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -13025,6 +13093,7 @@
       "PageName": "FreeRide/FreeRideSlopes",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -13075,6 +13144,11 @@
           ],
           "Dir": 1
         }
+      ],
+      "SpawnPos": [
+        32,
+        17,
+        32
       ]
     },
     "IslandPlatformBiSlope2End": {
@@ -13127,6 +13201,7 @@
       "PageName": "FreeRide/FreeRideSlopes",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -13177,6 +13252,11 @@
           ],
           "Dir": 3
         }
+      ],
+      "SpawnPos": [
+        32,
+        17,
+        32
       ]
     },
     "IslandPlatformSlope2": {

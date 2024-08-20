@@ -810,6 +810,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -836,12 +837,18 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        2.5,
+        20
       ]
     },
     "BayBridgeCheckpoint": {
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -877,6 +884,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.31,
+        16
       ]
     },
     "BayBridgeRoadSupport": {
@@ -947,6 +959,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -1069,6 +1082,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -1104,6 +1118,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.31,
+        16
       ]
     },
     "BayBridgeSuspPillar": {
@@ -2276,7 +2295,13 @@
           1
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.5,
+        16
+      ]
     },
     "BayDocksHarborDeadendSlopeL": {
       "PageName": "Deco/Docks/Harbor",
@@ -4764,6 +4789,7 @@
       "PageName": "Platform/Checkpoint",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4784,12 +4810,18 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "SpawnPos": [
+        16,
+        8.1,
+        16
       ]
     },
     "BayPlatformCheckpointRight": {
       "PageName": "Platform/Checkpoint",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4815,12 +4847,18 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
       ]
     },
     "BayPlatformCheckpointUp": {
       "PageName": "Platform/Checkpoint",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4846,12 +4884,18 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
       ]
     },
     "BayPlatformCheckpointDown": {
       "PageName": "Platform/Checkpoint",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4877,12 +4921,18 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
       ]
     },
     "BayPlatformCheckpointLeft": {
       "PageName": "Platform/Checkpoint",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4908,6 +4958,11 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
       ]
     },
     "BayFlatsRoad2Pillar": {
@@ -6076,7 +6131,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        2,
+        16
+      ]
     },
     "BayTunnelGTCurve3": {
       "PageName": "Tunnel/Main",
@@ -6492,6 +6553,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -6529,6 +6591,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -6560,6 +6623,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
       ]
     },
     "BayRoadGTCurve3Pillar": {
@@ -6612,6 +6680,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -6652,12 +6721,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
       ]
     },
     "BayRoadCheckpoint": {
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -6698,6 +6773,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
       ]
     },
     "BayRoadSupport": {

@@ -568,7 +568,13 @@
           1
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0,
+        16
+      ]
     },
     "AlpineIceCheckpoint": {
       "PageName": "Decors/IceDecor",
@@ -587,8 +593,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          0.5,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineIceRoadGTCurve2": {
@@ -2106,8 +2118,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          1.5,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineRoadWoodTiltTwistIn": {
@@ -2217,8 +2235,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          1.5,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineRoadWoodTiltTurboRight": {
@@ -2490,8 +2514,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          16,
+          3,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineRoadWoodTiltTwistOutGround": {
@@ -2678,8 +2708,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          16,
+          3,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineGreatWallRoadClipPillar": {
@@ -4140,7 +4176,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.5,
+        16
+      ]
     },
     "AlpineTunnelGTCurve3": {
       "PageName": "Tunnel/TunnelMain",
@@ -4938,6 +4980,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -4978,6 +5021,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.5,
+        16
       ]
     },
     "AlpineMetalTubeHWall": {
@@ -6851,8 +6899,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          16,
+          0.5,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineGreatWallStraightPillar2": {
@@ -6957,8 +7011,14 @@
             ],
             "Dir": 0
           }
+        ],
+        "SpawnPos": [
+          16,
+          0.5,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "AlpineGreatWallRoad": {
@@ -7115,7 +7175,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.5,
+        16
+      ]
     },
     "AlpineGreatWallToRoadWoodPillar": {
       "PageName": "GreatWall/Road",
@@ -9475,6 +9541,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -9563,6 +9630,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -9598,6 +9666,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.5,
+        16
       ]
     },
     "AlpineRoadWood": {
@@ -9668,6 +9741,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -9703,12 +9777,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.5,
+        16
       ]
     },
     "AlpineRoadWoodStartLine": {
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -9735,6 +9815,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        0.5,
+        11.2
       ]
     },
     "AlpineRoadWoodSlope": {

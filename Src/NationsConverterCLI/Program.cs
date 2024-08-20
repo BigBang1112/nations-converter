@@ -12,10 +12,10 @@ Gbx.CRC32 = new CRC32();
 var jsonOptions = new JsonSerializerOptions
 {
     WriteIndented = true,
-    Converters = { new JsonInt3Converter() }
+    Converters = { new JsonInt3Converter(), new JsonVec3Converter() }
 };
 
-var ymlStaticContext = new YmlStaticContext();
+//var ymlStaticContext = new YmlStaticContext();
 
 await ToolConsole<NationsConverterTool>.RunAsync(args, new()
 {

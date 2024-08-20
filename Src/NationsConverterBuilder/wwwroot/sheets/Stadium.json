@@ -7420,7 +7420,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        6,
+        16
+      ]
     },
     "StadiumRoadMainTurboDown": {
       "PageName": "Slope/Race",
@@ -7650,7 +7656,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        6.5,
+        16
+      ]
     },
     "StadiumRoadMainBiSlopeEnd": {
       "PageName": "Slope/Main",
@@ -9058,6 +9070,7 @@
       "PageName": "RoadTilt/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -9103,6 +9116,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        6,
+        16
       ]
     },
     "StadiumRoadMainTurboRouletteLeft": {
@@ -9201,6 +9219,7 @@
       "PageName": "RoadTilt/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -9246,6 +9265,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        6,
+        16
       ]
     },
     "StadiumRoadTiltTransition2DiagRight": {
@@ -10299,7 +10323,13 @@
           1
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        8,
+        16
+      ]
     },
     "StadiumPlatformCheckpointDown": {
       "PageName": "Platform/Checkpoints",
@@ -10333,8 +10363,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          8,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumCheckpointRingV": {
@@ -10371,7 +10407,13 @@
           1
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        8,
+        16
+      ]
     },
     "StadiumPlatformCheckpointRight": {
       "PageName": "Platform/Checkpoints",
@@ -10405,8 +10447,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          8,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumPlatformCheckpointLeft": {
@@ -10441,8 +10489,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          8,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumPlatformCheckpointUp": {
@@ -10477,8 +10531,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          8,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumCheckpointRingHRoad": {
@@ -10543,7 +10603,13 @@
           }
         ]
       },
-      "Variants": 6
+      "Waypoint": "Checkpoint",
+      "Variants": 6,
+      "SpawnPos": [
+        16,
+        8,
+        16
+      ]
     },
     "StadiumPlatformGTCurve3Wall4": {
       "PageName": "Platform/GTCurve",
@@ -12464,6 +12530,7 @@
       "PageName": "RoadMain/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -12495,12 +12562,18 @@
           ],
           "Dir": 0
         }
+      ],
+      "SpawnPos": [
+        16,
+        2.21,
+        11.2
       ]
     },
     "StadiumRoadMainStartFinishLine": {
       "PageName": "RoadMain/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -12541,6 +12614,11 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.57,
+        3.7
       ]
     },
     "StadiumRoadMainTurbo": {
@@ -12688,14 +12766,21 @@
         ],
         "SubVariants": [
           1
+        ],
+        "SpawnPos": [
+          16,
+          1.57,
+          11.2
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumRoadMainCheckpoint": {
       "PageName": "RoadMain/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -12736,12 +12821,18 @@
           ],
           "Dir": 2
         }
+      ],
+      "SpawnPos": [
+        16,
+        1.57,
+        11.2
       ]
     },
     "StadiumRoadMainFinishLine": {
       "PageName": "RoadMain/Race",
       "Ground": {},
       "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -17698,7 +17789,13 @@
           }
         ]
       },
-      "Variants": 1
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        8.2,
+        16
+      ]
     },
     "StadiumRoadDirtGTCurve3": {
       "PageName": "RoadDirt/RoadLow",
@@ -18253,8 +18350,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "SpawnPos": [
+          16,
+          8,
+          16
         ]
       },
+      "Waypoint": "Checkpoint",
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltClipRight": {
