@@ -40,9 +40,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
 
         // If block has ground variant, base ground is considered occupied if one of its units is at the base height + 1
         // THX TOMEK0055 FOR ALL THE HELP!!!
-        var units = (block.IsGround
-            ? conversion.GetProperty(x => x.Ground, x => x.Units)
-            : conversion.GetProperty(x => x.Air, x => x.Units)) ?? [(0, 0, 0)];
+        var units = conversion.GetProperty(block, x => x.Units) ?? [(0, 0, 0)];
 
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 

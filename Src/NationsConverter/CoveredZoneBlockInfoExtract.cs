@@ -94,9 +94,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
     private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ConversionModel conversion)
     {
-        var units = (block.IsGround
-            ? conversion.GetProperty(x => x.Ground, x => x.Units)
-            : conversion.GetProperty(x => x.Air, x => x.Units)) ?? [(0, 0, 0)];
+        var units = conversion.GetProperty(block, x => x.Units) ?? [(0, 0, 0)];
 
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 
@@ -113,7 +111,6 @@ internal sealed class CoveredZoneBlockInfoExtract
                 _ => unit
             };
 
-            // instead of this min solution, it could be poss to just add half of the block size floored
             if (alignedUnit.X < min.X)
             {
                 min = min with { X = alignedUnit.X };
