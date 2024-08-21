@@ -323,11 +323,11 @@ internal sealed class InitStageService
         Vec3? airSpawnPos = node.WayPointType
             is CGameCtnBlockInfo.EWayPointType.Start
             or CGameCtnBlockInfo.EWayPointType.StartFinish
-            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocAir.TX, node.SpawnLocAir.TY, node.SpawnLocAir.TZ) : null;
+            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocAir.GetValueOrDefault().TX, node.SpawnLocAir.GetValueOrDefault().TY, node.SpawnLocAir.GetValueOrDefault().TZ) : null;
         Vec3? groundSpawnPos = node.WayPointType
             is CGameCtnBlockInfo.EWayPointType.Start
             or CGameCtnBlockInfo.EWayPointType.StartFinish
-            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.TX, node.SpawnLocGround.TY, node.SpawnLocGround.TZ) : null;
+            or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.GetValueOrDefault().TX, node.SpawnLocGround.GetValueOrDefault().TY, node.SpawnLocGround.GetValueOrDefault().TZ) : null;
 
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
         var commonSize = airSize == groundSize ? airSize : null;
