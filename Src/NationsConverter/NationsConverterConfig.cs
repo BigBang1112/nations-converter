@@ -7,8 +7,9 @@ namespace NationsConverter;
 
 public class NationsConverterConfig : Config
 {
-    public bool CopyItems { get; set; } = true;
+    public bool CopyItems { get; set; } = false;
     public string? UserDataFolder { get; set; }
+    public bool IncludeDecoration { get; set; }
 
     [ExternalFile("Snow"), JsonIgnore, YamlIgnore]
     public ConversionSetModel Snow { get; set; } = new();

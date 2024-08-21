@@ -43,6 +43,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
         var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, logger);
         placeTransformationConverter.Convert();
 
+        var decorationConverter = new DecorationConverter(map, convertedMap, Config, logger);
+        decorationConverter.Convert();
+
         if (Config.CopyItems)
         {
             if (string.IsNullOrWhiteSpace(Config.UserDataFolder))
@@ -86,7 +89,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
             ClipTriggerSize = (3, 1, 3),
             DayDuration = new TimeInt32(0, 5, 0),
             DecoBaseHeightOffset = 8,
-            Decoration = new("48x48Screen155Day", 26, "Nadeo"),
             MapInfo = new(newMapUid, 26, authorLogin),
             MapName = map.MapName,
             MapType = mapType,
