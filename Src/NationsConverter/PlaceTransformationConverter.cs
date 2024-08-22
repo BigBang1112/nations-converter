@@ -41,23 +41,23 @@ internal sealed class PlaceTransformationConverter : BlockConverter
         }
 
         var blockCoordSize = conversion.GetProperty(block, x => x.Size);
-        
+
+        var spawnPos = conversion.GetProperty(block, x => x.SpawnPos);
+
         var pos = block.Direction switch
         {
-            Direction.East => block.Coord + (blockCoordSize.Z, 0, 0),
-            Direction.South => block.Coord + (blockCoordSize.X, 0, blockCoordSize.Z),
-            Direction.West => block.Coord + (0, 0, blockCoordSize.X),
-            _ => block.Coord
+            Direction.East => (block.Coord + (blockCoordSize.Z, 0, 0)) * BlockSize + new Vec3(-spawnPos.Z, spawnPos.Y, spawnPos.X),
+            Direction.South => (block.Coord + (blockCoordSize.X, 0, blockCoordSize.Z)) * BlockSize + new Vec3(-spawnPos.X, spawnPos.Y, -spawnPos.Z),
+            Direction.West => (block.Coord + (0, 0, blockCoordSize.X)) * BlockSize + new Vec3(spawnPos.Z, spawnPos.Y, -spawnPos.X),
+            _ => block.Coord * BlockSize + spawnPos
         };
 
         var rotRadians = -(int)block.Direction * MathF.PI / 2;
-        
-        var spawnPos = conversion.GetProperty(block, x => x.SpawnPos);
 
         logger.LogInformation("Placing transformation gate at {Pos} with rotation {Dir}...", pos, block.Direction);
 
         convertedMap.PlaceAnchoredObject(
             new($"GateGameplay{Environment}4m", 26, "Nadeo"),
-                pos * BlockSize + spawnPos, (rotRadians, 0, 0));
+                pos, (rotRadians, 0, 0));
     }
 }
