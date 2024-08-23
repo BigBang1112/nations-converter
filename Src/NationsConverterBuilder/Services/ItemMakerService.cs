@@ -41,6 +41,8 @@ internal sealed class ItemMakerService
         lod: 0,
         objectLinks,
         spawnLoc,
+        mergeVerticesDigitThreshold: 3,
+        matFile => GetDecalLink(matFile, matDict, subCategory),
         logger);
     }
 
@@ -120,6 +122,46 @@ internal sealed class ItemMakerService
         {
             uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
         }
+    }
+
+    private CPlugMaterialUserInst? GetDecalLink(
+        GbxRefTableFile matFile,
+        Dictionary<string, CPlugMaterialUserInst> matDict,
+        string subCategory)
+    {
+        var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+
+        if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
+        {
+            return null;
+        }
+
+        matName += "_Decal";
+
+        if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
+        {
+            if (!string.IsNullOrEmpty(subCategoryMaterial.Decal))
+            {
+                if (matDict.TryGetValue(matName, out var mat))
+                {
+                    return mat;
+                }
+
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Decal}", CPlugSurface.MaterialId.NotCollidable, color: subCategoryMaterial.Color);
+            }
+        }
+
+        if (!string.IsNullOrEmpty(material.Decal))
+        {
+            if (matDict.TryGetValue(matName, out var mat))
+            {
+                return mat;
+            }
+
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Decal}", CPlugSurface.MaterialId.NotCollidable, color: material.Color);
+        }
+
+        return null;
     }
 
     public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize, string name)

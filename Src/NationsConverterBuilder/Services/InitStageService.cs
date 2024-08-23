@@ -147,11 +147,19 @@ internal sealed class InitStageService
     {
         foreach (var (name, block) in blocks)
         {
-            var conv = ProcessBlock(collectionName, map, block, subCategory, ref index);
-
-            if (conv is not null)
+            try
             {
-                convs.Add(name, conv);
+                var conv = ProcessBlock(collectionName, map, block, subCategory, ref index);
+
+                if (conv is not null)
+                {
+                    convs.Add(name, conv);
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Failed to process block {BlockName}", block.Name);
+                throw;
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using GBX.NET;
+using GBX.NET.Comparers;
 using GBX.NET.Components;
 using GBX.NET.Engines.Plug;
 using GBX.NET.Engines.Scene;
@@ -21,6 +22,8 @@ public static class CPlugTreeExtensions
         int lod = 0,
         CSceneObjectLink[]? objectLinks = null,
         Iso4? spawnLoc = null,
+        int? mergeVerticesDigitThreshold = null,
+        Func<GbxRefTableFile, CPlugMaterialUserInst?>? decalLinks = null,
         ILogger? logger = null)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -28,6 +31,10 @@ public static class CPlugTreeExtensions
         var faces = new List<CPlugCrystal.Face>();
         var materials = new Dictionary<string, CPlugCrystal.Material>();
         var layers = new List<CPlugCrystal.Layer>();
+
+        var positionsDict = mergeVerticesDigitThreshold.HasValue
+            ? new Dictionary<Vec3, int>(new Vec3EqualityComparer(mergeVerticesDigitThreshold.Value))
+            : [];
 
         var indicesOffset = 0;
 
@@ -87,6 +94,18 @@ public static class CPlugTreeExtensions
                 materials[matName] = material;
             }
 
+            var decalMaterialInst = decalLinks?.Invoke(t.ShaderFile);
+            var decalMaterial = default(CPlugCrystal.Material);
+
+            if (decalMaterialInst is not null)
+            {
+                if (!materials.TryGetValue(matName + "_Decal", out decalMaterial))
+                {
+                    decalMaterial = new CPlugCrystal.Material() { MaterialUserInst = decalMaterialInst };
+                    materials[matName + "_Decal"] = decalMaterial;
+                }
+            }
+
             var uvSets = new Vec2[visual.TexCoords.Length][];
 
             for (var i = 0; i < visual.TexCoords.Length; i++)
@@ -105,32 +124,68 @@ public static class CPlugTreeExtensions
                 }
             }
 
-            var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
-            groups.Add(group);
+            var meshMode = MeshMode.Default;
 
-            positions.AddRange(ApplyLocation(visual.Vertices.Select(x => x.Position), loc));
-
-            foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
+            // Add mesh pieces until break
+            while (meshMode != MeshMode.None)
             {
-                var verts = new CPlugCrystal.Vertex[indices.Length];
-                for (int i = 0; i < indices.Length; i++)
+                var posOffset = meshMode == MeshMode.Decal ? new Vec3(0, 0.01f, 0) : new Vec3(0, 0, 0);
+
+                var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
+                groups.Add(group);
+
+                // add all unique positions to the dictionary
+                foreach (var pos in ApplyLocation(visual.Vertices.Select(x => x.Position), loc))
                 {
-                    var uv = uvSets.Length == 0 ? (0, 0) : uvSets[0][indices[i]];
-                    verts[i] = new CPlugCrystal.Vertex(indices[i] + indicesOffset, uv);
+                    if (!positionsDict.ContainsKey(pos + posOffset))
+                    {
+                        positionsDict[pos + posOffset] = positionsDict.Count;
+                    }
                 }
 
-                faces.Add(new CPlugCrystal.Face(
-                    verts,
-                    group,
-                    material,
-                    null
-                ));
-            }
+                foreach (var indices in visual.IndexBuffer.Indices.Chunk(3))
+                {
+                    var verts = new CPlugCrystal.Vertex[indices.Length];
+                    for (int i = 0; i < indices.Length; i++)
+                    {
+                        var pos = ApplyLocation(visual.Vertices[indices[i]].Position, loc) + posOffset;
+                        var index = positionsDict[pos];
+                        var uv = uvSets.Length == 0 ? (0, 0) : uvSets[0][indices[i]];
+                        verts[i] = new CPlugCrystal.Vertex(index, uv);
+                    }
 
-            indicesOffset += visual.Vertices.Length;
+                    // skip degenerate triangles
+                    if (verts[0].Index == verts[1].Index || verts[1].Index == verts[2].Index || verts[2].Index == verts[0].Index)
+                    {
+                        continue;
+                    }
+
+                    faces.Add(new CPlugCrystal.Face(
+                        verts,
+                        group,
+                        meshMode == MeshMode.Decal ? decalMaterial : material,
+                        null
+                    ));
+                }
+
+                indicesOffset += visual.Vertices.Length;
+
+                if (meshMode == MeshMode.Default && decalMaterial is not null)
+                {
+                    meshMode = MeshMode.Decal;
+                    continue;
+                }
+
+                meshMode = MeshMode.None;
+            }
         }
 
-        // fixing invalid meshes caused probably by completely zeroed out UVs
+        foreach (var pos in positionsDict.OrderBy(x => x.Value))
+        {
+            positions.Add(pos.Key);
+        }
+
+        // fixing invalid meshes caused probably by completely zeroed out UVs (more degenerate triangles)
         foreach (var face in faces)
         {
             if (face.Vertices.Length != 3)
@@ -341,11 +396,21 @@ public static class CPlugTreeExtensions
             return vertices;
         }
 
-        return vertices.Select(v => new Vec3(
-            v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
-            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
-            v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
-        ));
+        return vertices.Select(v => ApplyLocation(v, location));
+    }
+
+    private static Vec3 ApplyLocation(Vec3 vertex, Iso4 location)
+    {
+        if (location == Iso4.Identity)
+        {
+            return vertex;
+        }
+
+        return new Vec3(
+            vertex.X * location.XX + vertex.Y * location.XY + vertex.Z * location.XZ + location.TX,
+            vertex.X * location.YZ + vertex.Y * location.YY + vertex.Z * location.YZ + location.TY,
+            vertex.X * location.ZX + vertex.Y * location.ZY + vertex.Z * location.ZZ + location.TZ
+        );
     }
 
     private static CPlugCrystal.Layer? CreateCollisionLayer(CPlugTree tree, string layerId, ILogger? logger, bool isTrigger, out IEnumerable<CPlugCrystal.Material> newMaterials)
@@ -495,5 +560,12 @@ public static class CPlugTreeExtensions
         }
 
         return (surfId, gameplayId);
+    }
+
+    private enum MeshMode
+    {
+        None,
+        Default,
+        Decal
     }
 }
