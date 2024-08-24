@@ -10,5 +10,6 @@ internal sealed class MaterialModel
     public int[]? Color { get; set; }
     public bool Remove { get; set; }
     public string? Decal { get; set; }
+    public UvModifiersModel? DecalUvModifiers { get; set; }
     public Dictionary<string, MaterialSubCategoryModel> SubCategories { get; set; } = [];
 }

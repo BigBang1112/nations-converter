@@ -43,6 +43,10 @@ internal sealed class ItemMakerService
         spawnLoc,
         mergeVerticesDigitThreshold: 3,
         matFile => GetDecalLink(matFile, matDict, subCategory),
+        (matFile, uvSetIndex, uvs) =>
+        {
+            ApplyDecalUvModifiers(matFile, uvSetIndex, uvs, subCategory);
+        },
         logger);
     }
 
@@ -121,6 +125,26 @@ internal sealed class ItemMakerService
         if (material.UvModifiers is not null)
         {
             uvModifierService.ApplyUvModifiers(uvs, material.UvModifiers);
+        }
+    }
+
+    private void ApplyDecalUvModifiers(GbxRefTableFile matFile, int uvSetIndex, Vec2[] uvs, string subCategory)
+    {
+        var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
+
+        if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
+        {
+            return;
+        }
+
+        if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial) && subCategoryMaterial.DecalUvModifiers is not null)
+        {
+            uvModifierService.ApplyUvModifiers(uvs, subCategoryMaterial.DecalUvModifiers);
+        }
+
+        if (material.DecalUvModifiers is not null)
+        {
+            uvModifierService.ApplyUvModifiers(uvs, material.DecalUvModifiers);
         }
     }
 

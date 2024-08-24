@@ -24,6 +24,7 @@ public static class CPlugTreeExtensions
         Iso4? spawnLoc = null,
         int? mergeVerticesDigitThreshold = null,
         Func<GbxRefTableFile, CPlugMaterialUserInst?>? decalLinks = null,
+        Action<GbxRefTableFile, int, Vec2[]>? decalUvModifiers = null,
         ILogger? logger = null)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -106,29 +107,40 @@ public static class CPlugTreeExtensions
                 }
             }
 
-            var uvSets = new Vec2[visual.TexCoords.Length][];
-
-            for (var i = 0; i < visual.TexCoords.Length; i++)
-            {
-                var texCoordSet = visual.TexCoords[i].TexCoords;
-                uvSets[i] = new Vec2[texCoordSet.Length];
-
-                for (var j = 0; j < texCoordSet.Length; j++)
-                {
-                    uvSets[i][j] = texCoordSet[j].UV;
-                }
-
-                if (uvModifiers is not null)
-                {
-                    uvModifiers(t.ShaderFile, i, uvSets[i]);
-                }
-            }
-
             var meshMode = MeshMode.Default;
 
             // Add mesh pieces until break
             while (meshMode != MeshMode.None)
             {
+                var uvSets = new Vec2[visual.TexCoords.Length][];
+
+                for (var i = 0; i < visual.TexCoords.Length; i++)
+                {
+                    var texCoordSet = visual.TexCoords[i].TexCoords;
+                    uvSets[i] = new Vec2[texCoordSet.Length];
+
+                    for (var j = 0; j < texCoordSet.Length; j++)
+                    {
+                        uvSets[i][j] = texCoordSet[j].UV;
+                    }
+
+                    if (meshMode == MeshMode.Decal)
+                    {
+                        if (decalUvModifiers is null)
+                        {
+                            uvModifiers?.Invoke(t.ShaderFile, i, uvSets[i]);
+                        }
+                        else
+                        {
+                            decalUvModifiers(t.ShaderFile, i, uvSets[i]);
+                        }
+                    }
+                    else
+                    {
+                        uvModifiers?.Invoke(t.ShaderFile, i, uvSets[i]);
+                    }
+                }
+
                 var posOffset = meshMode == MeshMode.Decal ? new Vec3(0, 0.01f, 0) : new Vec3(0, 0, 0);
 
                 var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };

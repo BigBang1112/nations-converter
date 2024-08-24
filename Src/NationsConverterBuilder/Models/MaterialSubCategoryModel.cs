@@ -7,4 +7,5 @@ internal sealed class MaterialSubCategoryModel
     public int[]? Color { get; set; }
     public bool Remove { get; set; }
     public string? Decal { get; set; }
+    public UvModifiersModel? DecalUvModifiers { get; set; }
 }
