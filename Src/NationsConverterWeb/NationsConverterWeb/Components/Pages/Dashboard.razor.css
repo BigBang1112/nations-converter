@@ -68,3 +68,19 @@
         .grid a img.modeler {
             margin-left: auto;
         }
+
+.button {
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 5px;
+    padding: 3px 8px;
+    align-items: center;
+    gap: 8px;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+}
+
+    .button:hover {
+        background-color: #444;
+    }

@@ -101,6 +101,12 @@ app.MapGet("/login-discord", async (HttpContext context) =>
     });
 });
 
+app.MapGet("/logout", async (HttpContext context) =>
+{
+    await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    context.Response.Redirect("/");
+});
+
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
