@@ -101,7 +101,8 @@ app.UseAuthorization();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Items")),
-    RequestPath = "/items"
+    RequestPath = "/items",
+    ServeUnknownFileTypes = true
 });
 
 app.UseDirectoryBrowser(new DirectoryBrowserOptions
