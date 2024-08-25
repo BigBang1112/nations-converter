@@ -1,5 +1,29 @@
 ﻿@page "/dashboard"
-@attribute [Authorize(Roles = "Admin,Developer,Modeler")]
+@attribute [Authorize(Roles = "Gay")]
 
 <PageTitle>Nations Converter 2 - Dashboard</PageTitle>
 
+<h2>Welcome back @(globalName)!</h2>
+
+@code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private string? globalName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        var user = authState.User;
+
+        globalName = user.Identities
+            .FirstOrDefault()?
+            .Claims
+            .FirstOrDefault(c => c.Type == DiscordAdditionalClaims.GlobalName)?.Value
+            ?? user.Identity?.Name;
+    }
+}

@@ -11,6 +11,10 @@ html, body {
     color: white;
 }
 
+p {
+    margin: 10px 0;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -69,4 +73,10 @@ h1:focus {
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
+}
+
+footer {
+    margin-top: 20px;
+    color: gray;
+    text-align: center;
 }
