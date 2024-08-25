@@ -28,8 +28,7 @@
 
         globalName = user.Identities
             .FirstOrDefault()?
-            .Claims
-            .FirstOrDefault(c => c.Type == DiscordAdditionalClaims.GlobalName)?.Value
+            .FindFirst(DiscordAdditionalClaims.GlobalName)?.Value
             ?? user.Identity?.Name;
     }
 }

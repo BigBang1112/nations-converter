@@ -1,5 +1,6 @@
 ﻿@page "/"
 @rendermode InteractiveServer
+@inject NavigationManager NavManager
 
 <PageTitle>Nations Converter 2</PageTitle>
 
@@ -7,3 +8,27 @@
 
 <a href="/login-discord" id="button-discord">Sign in with Discord</a>
 
+@code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        if (authState.User.Identity?.IsAuthenticated == true)
+        {
+            if (authState.User.IsInRole("Admin") || authState.User.IsInRole("Developer") || authState.User.IsInRole("Modeler"))
+            {
+                NavManager.NavigateTo("/dashboard");
+            }
+            else
+            {
+                NavManager.NavigateTo("/thank-you");
+            }
+        }
+    }
+}

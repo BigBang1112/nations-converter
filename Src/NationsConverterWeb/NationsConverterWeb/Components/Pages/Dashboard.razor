@@ -1,14 +1,59 @@
 ﻿@page "/dashboard"
-@attribute [Authorize(Roles = "Gay")]
+@attribute [Authorize(Roles = "Admin,Developer,Modeler")]
+@inject AppDbContext Db
 
 <PageTitle>Nations Converter 2 - Dashboard</PageTitle>
 
 <h2>Welcome back @(globalName)!</h2>
 
+<div class="container">
+    <div class="primary">
+        <div class="categories">
+            <button>Modless</button>
+            <button disabled>Balanced</button>
+            <button disabled>Mod</button>
+        </div>
+        <div class="grid">
+            @if (currentDiscordUser?.User.IsAdmin == true)
+            {
+                <a href="dashboard/add" class="new"><img src="img/add.webp" width="32" height="32" /> Add block...</a>
+            }
+
+            @foreach (var block in blocks)
+            {
+                <a href="dashboard/SpeeedSOmeLongBlock"><img src="favicon.png" width="32" height="32" /> SpeeedSOmeLongBlock <img src="favicon.png" width="24" height="24" class="modeler" /></a>
+            }
+        </div>
+    </div>
+    <div class="members">
+        <h3>Developers & Modelers</h3>
+        @foreach (var discordUser in discordUsers.Where(x => x.User.IsStaff))
+        {
+            <div><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
+        }
+        <h3>Supporters</h3>
+        @if (discordUsers.Any(x => !x.User.IsStaff))
+        {
+            @foreach (var discordUser in discordUsers.Where(x => !x.User.IsStaff))
+            {
+                <div><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
+            }
+        }
+        else
+        {
+            <p>Nobody?</p>
+        }
+    </div>
+</div>
+
 @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
     private string? globalName;
+    private ulong? snowflake;
+    private DiscordUser? currentDiscordUser;
+    private DiscordUser[] discordUsers = [];
+    private Block[] blocks = [];
 
     protected override async Task OnInitializedAsync()
     {
@@ -22,8 +67,29 @@
 
         globalName = user.Identities
             .FirstOrDefault()?
-            .Claims
-            .FirstOrDefault(c => c.Type == DiscordAdditionalClaims.GlobalName)?.Value
+            .FindFirst(DiscordAdditionalClaims.GlobalName)?.Value
             ?? user.Identity?.Name;
+
+        if (!ulong.TryParse(user.Identities
+            .FirstOrDefault()?
+            .FindFirst(ClaimTypes.NameIdentifier)?.Value, out var snowflake))
+        {
+            return;
+        }
+
+        this.snowflake = snowflake;
+
+        discordUsers = await Db.DiscordUsers
+            .Include(x => x.User)
+            .OrderBy(x => x.User.IsAdmin)
+            .ThenBy(x => x.User.IsDeveloper)
+            .ThenBy(x => x.User.IsModeler)
+            .ThenBy(x => x.GlobalName)
+            .ThenBy(x => x.Username)
+            .ToArrayAsync();
+
+        currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
+
+        blocks = await Db.Blocks.ToArrayAsync();
     }
 }
