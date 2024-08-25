@@ -1,0 +1,20 @@
+﻿#logo {
+    max-width: 90%;
+}
+
+#button-discord {
+    display: block;
+    border: 2px solid #457;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    background-color: #346;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    #button-discord:hover {
+        background-color: #457;
+    }

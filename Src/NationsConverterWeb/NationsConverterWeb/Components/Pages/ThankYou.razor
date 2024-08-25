@@ -1,0 +1,37 @@
+﻿@page "/thank-you"
+@using Microsoft.AspNetCore.Components.Authorization
+@using NationsConverterWeb.Authentication
+@attribute [Authorize]
+
+<PageTitle>Nations Converter 2 - Thank you!</PageTitle>
+
+<h1><img id="logo" src="img/logo.webp" width="600" /></h1>
+
+<p>Thank you @globalName for the support!</p>
+
+<p>You will be notified on Discord though the Nations Converter bot once the tool is available.</p>
+
+<p>We will see your awesome Discord profile picture and name everytime we "go to work".</p>
+
+@code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private string? globalName;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        var user = authState.User;
+
+        globalName = user.Identities
+            .FirstOrDefault()?
+            .Claims
+            .FirstOrDefault(c => c.Type == DiscordAdditionalClaims.GlobalName)?.Value
+            ?? user.Identity?.Name;
+    }
+}
