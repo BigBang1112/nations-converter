@@ -2,7 +2,7 @@
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject AppDbContext Db
 
-<PageTitle>Nations Converter 2 - Dashboard</PageTitle>
+<PageTitle>Dashboard - Nations Converter 2</PageTitle>
 
 <h2>Welcome back @(globalName)!</h2>
 
@@ -21,7 +21,7 @@
 
             @foreach (var block in blocks)
             {
-                <a href="dashboard/SpeeedSOmeLongBlock"><img src="favicon.png" width="32" height="32" /> SpeeedSOmeLongBlock <img src="favicon.png" width="24" height="24" class="modeler" /></a>
+                <a href="dashboard/block/SpeeedSOmeLongBlock"><img src="favicon.png" width="32" height="32" /> SpeeedSOmeLongBlock <img src="favicon.png" width="24" height="24" class="modeler" /></a>
             }
         </div>
     </div>

@@ -25,6 +25,13 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
+    <Folder Include="Items\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Items\README.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

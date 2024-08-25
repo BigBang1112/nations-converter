@@ -1,9 +1,11 @@
 using AspNet.Security.OAuth.Discord;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using NationsConverterWeb;
 using NationsConverterWeb.Authentication;
 using NationsConverterWeb.Components;
@@ -25,8 +27,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
         options.Events.OnCreatingTicket = DiscordAuthenticationTicket.OnCreatingTicketAsync;
     });
-builder.Services.AddAuthorization();
+
+builder.Services.AddAuthorizationBuilder()
+    .SetFallbackPolicy(new AuthorizationPolicyBuilder()
+        .RequireAuthenticatedUser()
+        .RequireRole("Admin", "Developer", "Modeler") // This is weird and should be removed after first alpha is out
+        .Build());
+
 builder.Services.AddCascadingAuthenticationState();
+
+builder.Services.AddDirectoryBrowser();
 
 builder.Services.AddResponseCompression(options =>
 {
@@ -83,15 +93,27 @@ else
     app.UseHsts();
 }
 
+app.UseStaticFiles();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Items")),
+    RequestPath = "/items"
+});
+
+app.UseDirectoryBrowser(new DirectoryBrowserOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Items")),
+    RequestPath = "/items"
+});
 
 if (!app.Environment.IsDevelopment())
 {
     app.UseResponseCompression();
 }
-
-app.UseStaticFiles();
 
 app.MapGet("/login-discord", async (HttpContext context) =>
 {
@@ -99,7 +121,7 @@ app.MapGet("/login-discord", async (HttpContext context) =>
     {
         RedirectUri = "/dashboard"
     });
-});
+}).AllowAnonymous();
 
 app.MapGet("/logout", async (HttpContext context) =>
 {
