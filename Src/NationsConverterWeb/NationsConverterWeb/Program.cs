@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
+using NationsConverterWeb;
 using NationsConverterWeb.Authentication;
 using NationsConverterWeb.Components;
 
@@ -21,10 +23,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.AccessDeniedPath = "/";
         options.ClaimActions.MapJsonKey(DiscordAdditionalClaims.GlobalName, "global_name");
 
-        options.Events.OnCreatingTicket = async context =>
-        {
-            // add user to database
-        };
+        options.Events.OnCreatingTicket = DiscordAuthenticationTicket.OnCreatingTicketAsync;
     });
 builder.Services.AddAuthorization();
 builder.Services.AddCascadingAuthenticationState();
@@ -44,6 +43,9 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
     options.KnownNetworks.Clear();
     options.KnownProxies.Clear();
 });
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseInMemoryDatabase("InMemoryDb"));
 
 builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
 
