@@ -29,14 +29,14 @@
         <h3>Developers & Modelers</h3>
         @foreach (var discordUser in discordUsers.Where(x => x.User.IsStaff))
         {
-            <div><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
+            <div title="@discordUser.Username"><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
         }
         <h3>Supporters</h3>
         @if (discordUsers.Any(x => !x.User.IsStaff))
         {
             @foreach (var discordUser in discordUsers.Where(x => !x.User.IsStaff))
             {
-                <div><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
+                <div title="@discordUser.Username"><img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" /> @(discordUser.GlobalName ?? discordUser.Username)</div>
             }
         }
         else
