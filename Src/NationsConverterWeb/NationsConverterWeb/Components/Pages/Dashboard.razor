@@ -81,9 +81,9 @@
 
         discordUsers = await Db.DiscordUsers
             .Include(x => x.User)
-            .OrderBy(x => x.User.IsAdmin)
-            .ThenBy(x => x.User.IsDeveloper)
-            .ThenBy(x => x.User.IsModeler)
+            .OrderByDescending(x => x.User.IsAdmin)
+            .ThenByDescending(x => x.User.IsDeveloper)
+            .ThenByDescending(x => x.User.IsModeler)
             .ThenBy(x => x.GlobalName)
             .ThenBy(x => x.Username)
             .ToArrayAsync();
