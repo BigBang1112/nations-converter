@@ -1,0 +1,42 @@
+name: Docker Image Publish
+
+on:
+  workflow_dispatch:
+
+env:
+  BUILD_DIR: .
+  IMAGE_NAME: nations-converter-web
+
+permissions:
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Set lowercase repository_owner and tag_name without v
+      run: |
+        echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
+        echo "VERSION=${TAG#v}" >>${GITHUB_ENV}
+      env:
+        OWNER: '${{ github.repository_owner }}'
+        TAG: '${{ github.event.release.tag_name }}'
+      
+    - name: Build Docker Image
+      run: |
+        cd $BUILD_DIR
+        docker build . -f Src/NationsConverterWeb/NationsConverterWeb/Dockerfile -t ghcr.io/$OWNER_LC/$IMAGE_NAME -t ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME
+    
+    - name: Push the Docker image to ghcr.io
+      run: |
+        echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u USERNAME --password-stdin
+        docker push ghcr.io/$OWNER_LC/$IMAGE_NAME
+    
+    - name: Push the Docker image to hub.docker.com
+      run: |
+        echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        docker push ${{ secrets.DOCKER_USERNAME }}/$IMAGE_NAME
