@@ -45,7 +45,10 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("InMemoryDb"));
+{
+    var connectionStr = builder.Configuration.GetConnectionString("DefaultConnection");
+    options.UseMySql(connectionStr, ServerVersion.AutoDetect(connectionStr));
+});
 
 builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
 
@@ -55,6 +58,16 @@ builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    if (dbContext.Database.IsRelational())
+    {
+        dbContext.Database.Migrate();
+    }
+}
 
 app.UseForwardedHeaders();
 
