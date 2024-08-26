@@ -94,7 +94,8 @@ internal sealed class CoveredZoneBlockInfoExtract
 
     private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ConversionModel conversion)
     {
-        var units = conversion.GetProperty(block, x => x.Units) ?? [(0, 0, 0)];
+        // fallbacks should be less permissive in the future
+        var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
 
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 

@@ -30,39 +30,22 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
             return;
         }
 
-        Int3 blockCoordSize;
-        int maxSubVariants;
-
         if (block.IsClip)
         {
             // Resolve later
             return;
         }
 
-        if (block.IsGround)
+        // fallbacks should be less permissive in the future
+        var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
+        var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
+
+        if (block.Variant >= maxVariants)
         {
-            blockCoordSize = conversion.GetProperty(x => x.Ground, x => x.Size);
-            var maxVariants = conversion.GetProperty(x => x.Ground, x => x.Variants);
-
-            if (block.Variant >= maxVariants)
-            {
-                throw new ArgumentException("Block variant exceeds max variants");
-            }
-
-            maxSubVariants = conversion.GetProperty(x => x.Ground, x => x.SubVariants?[block.Variant.GetValueOrDefault()]);
+            throw new ArgumentException("Block variant exceeds max variants");
         }
-        else
-        {
-            blockCoordSize = conversion.GetProperty(x => x.Air, x => x.Size);
-            var maxVariants = conversion.GetProperty(x => x.Air, x => x.Variants);
 
-            if (block.Variant >= maxVariants)
-            {
-                throw new ArgumentException("Block variant exceeds max variants");
-            }
-
-            maxSubVariants = conversion.GetProperty(x => x.Air, x => x.SubVariants?[block.Variant.GetValueOrDefault()]);
-        }
+        var maxSubVariants = conversion.GetProperty(block, x => x.SubVariants?[block.Variant.GetValueOrDefault()], fallback: true);
 
         if (maxSubVariants == 0)
         {

@@ -13,10 +13,12 @@ public sealed class ConversionModel : ConversionModifierModel
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public WaypointType? Waypoint { get; set; }
 
-    public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T?> propertyFunc)
+    public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T?> propertyFunc, Func<ConversionModel, ConversionModifierModel?>? fallbackModifierFunc = null)
         where T : struct
     {
-        var modifier = modifierFunc(this) ?? throw new Exception("Modifier is not available.");
+        var modifier = modifierFunc(this)
+            ?? fallbackModifierFunc?.Invoke(this) // This fallback may be better to log as lower level
+            ?? throw new Exception("Modifier is not available.");
 
         if (propertyFunc(modifier) is T modifierValue)
         {
@@ -31,9 +33,11 @@ public sealed class ConversionModel : ConversionModifierModel
         throw new Exception("Property is null in both places.");
     }
 
-    public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T> propertyFunc)
+    public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T> propertyFunc, Func<ConversionModel, ConversionModifierModel?>? fallbackModifierFunc = null)
     {
-        var modifier = modifierFunc(this) ?? throw new Exception("Modifier is not available.");
+        var modifier = modifierFunc(this)
+            ?? fallbackModifierFunc?.Invoke(this) // This fallback may be better to log as lower level
+            ?? throw new Exception("Modifier is not available.");
 
         if (propertyFunc(modifier) is T modifierValue)
         {
@@ -48,18 +52,36 @@ public sealed class ConversionModel : ConversionModifierModel
         throw new Exception("Property is null in both places.");
     }
 
-    public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T?> propertyFunc)
+    public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T?> propertyFunc, bool fallback = false)
         where T : struct
     {
-        return block.IsGround
-            ? GetProperty(x => x.Ground, propertyFunc)
-            : GetProperty(x => x.Air, propertyFunc);
+        if (fallback)
+        {
+            return block.IsGround
+                ? GetProperty(x => x.Ground, propertyFunc, x => x.Air)
+                : GetProperty(x => x.Air, propertyFunc, x => x.Ground);
+        }
+        else
+        {
+            return block.IsGround
+                ? GetProperty(x => x.Ground, propertyFunc)
+                : GetProperty(x => x.Air, propertyFunc);
+        }
     }
 
-    public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T> propertyFunc)
+    public T GetProperty<T>(CGameCtnBlock block, Func<ConversionModifierModel, T> propertyFunc, bool fallback = false)
     {
-        return block.IsGround
-            ? GetProperty(x => x.Ground, propertyFunc)
-            : GetProperty(x => x.Air, propertyFunc);
+        if (fallback)
+        {
+            return block.IsGround
+                ? GetProperty(x => x.Ground, propertyFunc, x => x.Air)
+                : GetProperty(x => x.Air, propertyFunc, x => x.Ground);
+        }
+        else
+        {
+            return block.IsGround
+                ? GetProperty(x => x.Ground, propertyFunc)
+                : GetProperty(x => x.Air, propertyFunc);
+        }
     }
 }
