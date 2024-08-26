@@ -3279,7 +3279,7 @@
           1
         ],
         "SubVariants": [
-          null
+          0
         ]
       },
       "Variants": 1
@@ -3293,7 +3293,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -9633,7 +9633,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -9815,7 +9815,7 @@
       "PageName": "Other",
       "Ground": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Air": {
@@ -9916,7 +9916,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -9942,7 +9942,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [

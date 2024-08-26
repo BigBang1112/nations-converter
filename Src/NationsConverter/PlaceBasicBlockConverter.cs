@@ -64,9 +64,14 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
             maxSubVariants = conversion.GetProperty(x => x.Air, x => x.SubVariants?[block.Variant.GetValueOrDefault()]);
         }
 
-        if (block.SubVariant >= maxSubVariants)
+        if (maxSubVariants == 0)
         {
-            throw new ArgumentException("Block sub variant exceeds max sub variants");
+            logger.LogWarning("Block {BlockName} with variant {BlockVariant} has no sub variants defined. Skipping for now.", block.Name, block.Variant);
+            return;
+        }
+        else if (block.SubVariant >= maxSubVariants)
+        {
+            throw new ArgumentException($"Block sub variant ({block.SubVariant}) exceeds max sub variants ({maxSubVariants})");
         }
 
         var modifierType = block.IsGround ? "Ground" : "Air";

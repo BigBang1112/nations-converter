@@ -1627,7 +1627,7 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           8,
           8,
           8,
@@ -1652,7 +1652,7 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           13,
           13,
           13,
@@ -1686,7 +1686,7 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           1,
           1,
           1,
@@ -1711,7 +1711,7 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           14,
           14,
           14,
@@ -2093,15 +2093,15 @@
       ],
       "Variants": 9,
       "SubVariants": [
-        null,
+        0,
         1,
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayParvisDecorD": {
@@ -8372,7 +8372,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -8433,7 +8433,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [

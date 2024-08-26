@@ -3590,14 +3590,14 @@
         ],
         "SubVariants": [
           3,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 9
@@ -3618,15 +3618,15 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           4,
           4,
           4,
           4,
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 9
@@ -3676,11 +3676,11 @@
           1
         ],
         "SubVariants": [
-          null,
-          null,
-          null,
-          null,
-          null,
+          0,
+          0,
+          0,
+          0,
+          0,
           3,
           3,
           3,
@@ -4056,7 +4056,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -8361,7 +8361,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -10370,7 +10370,7 @@
       },
       "Variants": 1,
       "SubVariants": [
-        null
+        0
       ]
     },
     "RallyTunnelRoadClip": {
@@ -10605,7 +10605,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -10662,7 +10662,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -11634,7 +11634,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [

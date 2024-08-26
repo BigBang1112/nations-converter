@@ -322,8 +322,8 @@ internal sealed class InitStageService
         var airVariants = node.AirMobils?.Length ?? 0;
         var groundVariants = node.GroundMobils?.Length ?? 0;
 
-        var airSubVariants = node.AirMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
-        var groundSubVariants = node.GroundMobils?.Select(x => x.Length == 0 ? default(int?) : x.Length).ToArray() ?? [];
+        var airSubVariants = node.AirMobils?.Select(x => x.Length).ToArray() ?? [];
+        var groundSubVariants = node.GroundMobils?.Select(x => x.Length).ToArray() ?? [];
 
         var airClips = GetConversionClipModels(node.AirBlockUnitInfos).ToArray();
         var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos).ToArray();

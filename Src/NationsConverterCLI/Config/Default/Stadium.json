@@ -3812,15 +3812,15 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           1,
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ],
         "Clips": [
           {
@@ -3908,15 +3908,15 @@
           1
         ],
         "SubVariants": [
-          null,
+          0,
           1,
           1,
           1,
           1,
-          null,
-          null,
-          null,
-          null
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 9
@@ -8024,7 +8024,7 @@
       ],
       "Variants": 9,
       "SubVariants": [
-        null,
+        0,
         1,
         1,
         1,
@@ -18463,7 +18463,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -18566,7 +18566,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
@@ -18754,7 +18754,7 @@
       },
       "Air": {
         "SubVariants": [
-          null
+          0
         ]
       },
       "Units": [
