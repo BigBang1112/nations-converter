@@ -1,7 +1,5 @@
-﻿using GBX.NET;
-using GBX.NET.Engines.Game;
+﻿using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
-using Microsoft.VisualBasic;
 using NationsConverterShared.Models;
 using System.Text.RegularExpressions;
 
@@ -12,10 +10,8 @@ internal sealed partial class DecorationConverter
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
     private readonly NationsConverterConfig config;
-    private readonly ILogger logger;
 
     private readonly string environment;
-    private readonly ConversionSetModel conversionSet;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
     private static partial Regex MoodRegex();
@@ -25,25 +21,12 @@ internal sealed partial class DecorationConverter
         this.map = map;
         this.convertedMap = convertedMap;
         this.config = config;
-        this.logger = logger;
 
         environment = map.GetEnvironment() switch
         {
             "Alpine" => "Snow",
             "Speed" => "Desert",
             _ => map.GetEnvironment()
-        };
-
-        conversionSet = environment switch
-        {
-            "Snow" => config.Snow,
-            "Rally" => config.Rally,
-            "Desert" => config.Desert,
-            "Island" => config.Island,
-            "Bay" => config.Bay,
-            "Coast" => config.Coast,
-            "Stadium" => config.Stadium, // should not be always Solid category
-            _ => throw new ArgumentException("Environment not supported")
         };
     }
 
@@ -54,6 +37,11 @@ internal sealed partial class DecorationConverter
         var mapBase = config.IncludeDecoration
             ? "NoStadium48x48"
             : "48x48Screen155";
+
+        if (environment == "Island")
+        {
+            convertedMap.Size = new(90, 36, 90);
+        }
 
         convertedMap.Decoration = new($"{mapBase}{mood}", 26, "Nadeo");
 
