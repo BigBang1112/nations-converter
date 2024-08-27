@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterCLI", "Src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterShared", "Src\NationsConverterShared\NationsConverterShared.csproj", "{2A76492E-2D63-4ACC-A0DD-C0ECCFB94C6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationsConverterWeb", "Src\NationsConverterWeb\NationsConverterWeb\NationsConverterWeb.csproj", "{253A28AB-886E-4ADF-8A71-D0576085B8DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterWeb", "Src\NationsConverterWeb\NationsConverterWeb\NationsConverterWeb.csproj", "{253A28AB-886E-4ADF-8A71-D0576085B8DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationsConverterWeb.Client", "Src\NationsConverterWeb\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj", "{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterWeb.Client", "Src\NationsConverterWeb\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj", "{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

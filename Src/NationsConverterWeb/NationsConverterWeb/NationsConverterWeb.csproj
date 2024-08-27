@@ -25,13 +25,16 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Items\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Items\README.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
+    
+    <ItemGroup>
+        <Content Include="..\..\NationsConverterBuilder\wwwroot\items\**\*.Gbx">
+            <Link>Data\items\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="..\..\NationsConverterBuilder\wwwroot\sheets\**\*.json">
+            <Link>Data\sheets\%(RecursiveDir)%(Filename)%(Extension)</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 </Project>

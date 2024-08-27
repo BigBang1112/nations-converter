@@ -106,17 +106,20 @@ app.UseCookiePolicy(new CookiePolicyOptions
 app.UseAuthentication();
 app.UseAuthorization();
 
+var dataDir = Path.Combine(AppContext.BaseDirectory, "Data");
+Directory.CreateDirectory(dataDir);
+
 app.UseStaticFiles(new StaticFileOptions
 {
-    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Items")),
-    RequestPath = "/items",
+    FileProvider = new PhysicalFileProvider(dataDir),
+    RequestPath = "/data",
     ServeUnknownFileTypes = true
 });
 
 app.UseDirectoryBrowser(new DirectoryBrowserOptions
 {
-    FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Items")),
-    RequestPath = "/items"
+    FileProvider = new PhysicalFileProvider(dataDir),
+    RequestPath = "/data"
 });
 
 if (!app.Environment.IsDevelopment())
