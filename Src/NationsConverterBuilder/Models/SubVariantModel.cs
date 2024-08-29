@@ -18,4 +18,5 @@ internal sealed class SubVariantModel
     public required string SubCategory { get; init; }
     public required string Technology { get; init; }
     public required string MapTechnology { get; init; }
+    public required Int3[] Units { get; init; }
 }

@@ -5,6 +5,8 @@ using GBX.NET.Engines.Plug;
 using GBX.NET.Engines.Scene;
 using Microsoft.Extensions.Options;
 using NationsConverterBuilder.Extensions;
+using NationsConverterShared.Models;
+using System.Text.Json;
 
 namespace NationsConverterBuilder.Services;
 
@@ -188,9 +190,9 @@ internal sealed class ItemMakerService
         return null;
     }
 
-    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize, string name)
+    public CGameItemModel Build(CPlugCrystal plugCrystal, byte[]? webpData, Int3 blockSize, string name, ItemInfoModel itemInfo)
     {
-        var item = CreateGenericItem(webpData, blockSize, name);
+        var item = CreateGenericItem(webpData, blockSize, name, itemInfo);
 
         var entityModelEdition = new CGameCommonItemEntityModelEdition
         {
@@ -209,9 +211,9 @@ internal sealed class ItemMakerService
         return item;
     }
 
-    public CGameItemModel Build(CPlugStaticObjectModel staticObject, byte[]? webpData, Int3 blockSize, string name)
+    public CGameItemModel Build(CPlugStaticObjectModel staticObject, byte[]? webpData, Int3 blockSize, string name, ItemInfoModel itemInfo)
     {
-        var item = CreateGenericItem(webpData, blockSize, name);
+        var item = CreateGenericItem(webpData, blockSize, name, itemInfo);
 
         var entityModel = new CGameCommonItemEntityModel
         {
@@ -227,7 +229,7 @@ internal sealed class ItemMakerService
         return item;
     }
 
-    private CGameItemModel CreateGenericItem(byte[]? webpData, Int3 blockSize, string name)
+    private CGameItemModel CreateGenericItem(byte[]? webpData, Int3 blockSize, string name, ItemInfoModel itemInfo)
     {
         var placementParams = new CGameItemPlacementParam
         {
@@ -259,7 +261,7 @@ internal sealed class ItemMakerService
             ItemTypeE = CGameItemModel.EItemType.Ornament,
             NadeoSkinFids = new GBX.NET.Engines.MwFoundations.CMwNod[7],
             Name = name,
-            Description = "No Description",
+            Description = JsonSerializer.Serialize(itemInfo, AppJsonContext.Default.ItemInfoModel),
             DefaultPlacement = placementParams,
             OrbitalPreviewAngle = 0.15f,
             OrbitalRadiusBase = -1,

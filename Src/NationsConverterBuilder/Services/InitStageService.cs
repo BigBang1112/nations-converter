@@ -193,6 +193,8 @@ internal sealed class InitStageService
 
             if (node.GroundMobils is not null)
             {
+                var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+
                 for (byte i = 0; i < node.GroundMobils.Length; i++)
                 {
                     var groundMobilSubVariants = node.GroundMobils[i];
@@ -212,7 +214,8 @@ internal sealed class InitStageService
                             BlockName = block.Name,
                             SubCategory = subCategory,
                             Technology = technology,
-                            MapTechnology = mapTechnology
+                            MapTechnology = mapTechnology,
+                            Units = groundUnits
                         }, map, ref index);
 
                         if (technology == mapTechnology)
@@ -225,6 +228,8 @@ internal sealed class InitStageService
 
             if (node.AirMobils is not null)
             {
+                var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                
                 for (byte i = 0; i < node.AirMobils.Length; i++)
                 {
                     var airMobilSubVariants = node.AirMobils[i];
@@ -244,7 +249,8 @@ internal sealed class InitStageService
                             BlockName = block.Name,
                             SubCategory = subCategory,
                             Technology = technology,
-                            MapTechnology = mapTechnology
+                            MapTechnology = mapTechnology,
+                            Units = airUnits
                         }, map, ref index);
 
                         if (technology == mapTechnology)
@@ -269,6 +275,17 @@ internal sealed class InitStageService
             return;
         }
 
+        var itemInfo = new ItemInfoModel
+        {
+            Block = new()
+            {
+                Modifier = subVariant.ModifierType,
+                Variant = subVariant.VariantIndex,
+                SubVariant = subVariant.SubVariantIndex,
+                Units = subVariant.Units,
+            }
+        };
+
         var spawnLoc = subVariant.ModifierType == "Air"
             ? subVariant.BlockInfo.SpawnLocAir
             : subVariant.BlockInfo.SpawnLocGround;
@@ -280,11 +297,11 @@ internal sealed class InitStageService
         {
             case "MM_Collision":
                 var crystal = itemMaker.CreateCrystalFromSolid(solid, mobil.ObjectLink, spawnLoc, subVariant.SubCategory);
-                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName);
+                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
                 break;
             case "Solid2":
                 var staticObject = itemMaker.CreateStaticObjectFromSolid(solid, subVariant.SubCategory);
-                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName);
+                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
                 break;
             default:
                 //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
@@ -437,8 +454,16 @@ internal sealed class InitStageService
 
         Directory.CreateDirectory(Path.Combine(itemsDirPath, dirPath));
 
+        var itemInfo = new ItemInfoModel
+        {
+            Deco = new()
+            {
+                Size = decoSize
+            }
+        };
+
         var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, null, null, subCategory);
-        var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize, name: $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}");
+        var finalItem = itemMaker.Build(crystal, decoration.WebpIcon, collection.BlockSize, name: $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}", itemInfo);
 
         var itemPath = Path.Combine(dirPath, $"{decoSize.X}x{decoSize.Y}x{decoSize.Z}.Item.Gbx");
 

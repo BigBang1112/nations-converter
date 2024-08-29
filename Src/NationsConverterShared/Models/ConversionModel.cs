@@ -1,5 +1,4 @@
 ﻿using GBX.NET.Engines.Game;
-using System.Text.Json.Serialization;
 
 namespace NationsConverterShared.Models;
 
@@ -9,8 +8,6 @@ public sealed class ConversionModel : ConversionModifierModel
     public ConversionModifierModel? Ground { get; set; }
     public ConversionModifierModel? Air { get; set; }
     public int? ZoneHeight { get; set; }
-
-    [JsonConverter(typeof(JsonStringEnumConverter))]
     public WaypointType? Waypoint { get; set; }
 
     public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T?> propertyFunc, Func<ConversionModel, ConversionModifierModel?>? fallbackModifierFunc = null)
