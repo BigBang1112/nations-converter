@@ -2,7 +2,7 @@ using Microsoft.Extensions.FileProviders;
 using NationsConverterBuilder;
 using NationsConverterBuilder.Services;
 
-GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
+GBX.NET.Gbx.LZO = new GBX.NET.LZO.Lzo();
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
