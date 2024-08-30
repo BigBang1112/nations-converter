@@ -29,6 +29,11 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY_IMAGE }}
+          tags: |
+            type=schedule
+            type=ref,event=tag
+          flavor: |
+            latest=true
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
