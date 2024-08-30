@@ -30,10 +30,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY_IMAGE }}
           tags: |
-            type=schedule
-            type=ref,event=tag
-          flavor: |
-            latest=true
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'v2') }}
       
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
