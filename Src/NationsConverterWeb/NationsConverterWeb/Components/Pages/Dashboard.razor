@@ -28,7 +28,16 @@
 
                     @if (block.AssignedTo is not null)
                     {
-                        <img src="favicon.png" width="24" height="24" class="modeler" />
+                        @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
+                        {
+                            <img class="modeler" src="img/discord-no-pfp.webp" width="24" height="24" />
+                        }
+                        else
+                        {
+                            <img class="modeler" title="Assigned to @(block.AssignedTo.DiscordUser.GlobalName ?? block.AssignedTo.DiscordUser.Username)"
+                                 src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
+                                 width="24" height="24" />
+                        }
                     }
                 </a>
             }

@@ -84,3 +84,8 @@
     .button:hover {
         background-color: #444;
     }
+
+
+.modeler {
+    border-radius: 12px;
+}

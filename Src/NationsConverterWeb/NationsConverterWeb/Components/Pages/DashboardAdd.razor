@@ -1,8 +1,8 @@
 ﻿@page "/dashboard/add/{SubCategory?}/{Environment?}/{BlockName?}"
+@rendermode InteractiveServer
 @attribute [Authorize(Roles = "Admin")]
 @inject AppDbContext Db
 @inject NavigationManager NavManager
-@rendermode InteractiveServer
 
 <PageTitle>Add - Dashboard - Nations Converter 2</PageTitle>
 
@@ -112,9 +112,9 @@ else if (ConversionSet is not null && SubCategory is not null && Environment is 
 
         var block = await Db.Blocks
             .FirstOrDefaultAsync(x =>
-                x.Environment!.Id == Environment
-             && x.Category!.Id == Category
-             && x.SubCategory!.Id == SubCategory
+                x.EnvironmentId == Environment
+             && x.CategoryId == Category
+             && x.SubCategoryId == SubCategory
              && x.Name == BlockName);
 
         if (block is not null)

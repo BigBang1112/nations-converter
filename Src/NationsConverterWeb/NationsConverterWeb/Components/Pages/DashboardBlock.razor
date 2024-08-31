@@ -1,4 +1,5 @@
 ﻿@page "/dashboard/block/{BlockName}"
+@rendermode InteractiveServer
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject AppDbContext Db
 @inject NavigationManager NavManager
@@ -13,16 +14,117 @@
     {
         <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
     }
+
+    <p>@(block.Description ?? "No description.")</p>
+
+    <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
+
+    @if (block.AssignedTo is null)
+    {
+        <button class="button" @onclick="AssignAsync">Assign this block</button>
+    }
+    else if (block.AssignedTo.Id == user?.Id)
+    {
+        <button class="button" @onclick="UnassignAsync">Unassign this block</button>
+    }
+    else
+    {
+        <p>Assigned to @(block.AssignedTo.DiscordUser?.GlobalName ?? block.AssignedTo.DiscordUser?.Username)</p>
+    }
+
+    <h3 style="margin-top: 20px">Items</h3>
+    <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
+
+    <div class="items">
+        @foreach (var item in block.Items.OrderBy(x => x.Variant).ThenBy(x => x.SubVariant))
+        {
+            <div class="item">
+                <div class="item-info">
+                    <a href="#" class="download" title="Download the init item">Download</a>
+
+                    @item.FileName
+
+                    @if (IsAssignedUser())
+                    {
+                        <InputFile style="margin-left: auto;" title="Upload your improved item here"></InputFile>
+                    }
+                </div>
+
+                @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
+                {
+                    <div>
+                        <a href="#">@upload.OriginalFileName</a>
+                        <span>@upload.UploadedAt</span>
+                        <button>Delete</button>
+                    </div>
+                }
+            </div>
+        }
+    </div>
 }
 
 @code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
     private Block? block;
+    private User? user;
 
     [Parameter]
     public string BlockName { get; set; } = "";
 
     protected override async Task OnInitializedAsync()
     {
-        block = await Db.Blocks.FirstOrDefaultAsync(x => x.Name == BlockName);
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        var principal = authState.User;
+
+        if (!ulong.TryParse(principal.Identities
+            .FirstOrDefault()?
+            .FindFirst(ClaimTypes.NameIdentifier)?.Value, out var snowflake))
+        {
+            return;
+        }
+
+        user = await Db.Users
+            .Include(x => x.DiscordUser)
+            .FirstOrDefaultAsync(x => x.DiscordUser!.Id == snowflake);
+
+        block = await Db.Blocks
+            .Include(x => x.Items)
+            .Include(x => x.AssignedTo)
+            .FirstOrDefaultAsync(x => x.Name == BlockName);
+    }
+
+    private bool IsAssignedUser()
+    {
+        return block?.AssignedTo?.Id == user?.Id;
+    }
+
+    private async Task AssignAsync()
+    {
+        if (block is null || user is null)
+        {
+            return;
+        }
+
+        block.AssignedTo = user;
+        block.AssignedAt = DateTimeOffset.UtcNow;
+        await Db.SaveChangesAsync();
+    }
+
+    private async Task UnassignAsync()
+    {
+        if (block is null)
+        {
+            return;
+        }
+
+        block.AssignedTo = null;
+        block.AssignedAt = null;
+        await Db.SaveChangesAsync();
     }
 }

@@ -16,12 +16,15 @@ public sealed class Block
 
     [Required]
     public required GameEnvironment Environment { get; set; }
+    public string EnvironmentId { get; set; } = default!;
 
     [Required]
     public required ConverterCategory Category { get; set; }
+    public string CategoryId { get; set; } = default!;
 
     [Required]
     public required ConverterSubCategory SubCategory { get; set; }
+    public string SubCategoryId { get; set; } = default!;
 
     [StringLength(short.MaxValue)]
     public string? Description { get; set; }
@@ -29,6 +32,8 @@ public sealed class Block
     public string? IconWebp { get; set; }
 
     public User? AssignedTo { get; set; }
+
+    public DateTimeOffset? AssignedAt { get; set; }
 
     [Required]
     public required DateTimeOffset CreatedAt { get; set; }

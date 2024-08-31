@@ -32,6 +32,13 @@ h3 {
     margin: 10px 0;
 }
 
+button {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: inherit;
+}
+
 a, .btn-link {
     color: #006bb7;
 }
