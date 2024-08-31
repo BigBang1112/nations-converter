@@ -1,11 +1,223 @@
-﻿@page "/dashboard/add"
+﻿@page "/dashboard/add/{SubCategory?}/{Environment?}/{BlockName?}"
 @attribute [Authorize(Roles = "Admin")]
 @inject AppDbContext Db
+@inject NavigationManager NavManager
+@rendermode InteractiveServer
 
-<PageTitle>Dashboard - Add - Nations Converter 2</PageTitle>
+<PageTitle>Add - Dashboard - Nations Converter 2</PageTitle>
 
-<h3>Add block or other item...</h3>
+<h2>Add block or other item...</h2>
+
+@if (BlockName is null)
+{
+    <div class="categories">
+        <button>Modless</button>
+        <button disabled>Balanced</button>
+        <button disabled>Mod</button>
+    </div>
+
+    <div class="environments">
+        @foreach (var env in environments)
+        {
+            <a href="/dashboard/add/@SubCategory/@env">@env</a>
+        }
+    </div>
+
+    @if (ConversionSet is null)
+    {
+        <p>Select an environment.</p>
+    }
+    else
+    {
+        <div class="container">
+            @foreach (var (name, conv) in ConversionSet.Blocks.OrderBy(x => x.Key))
+            {
+                <a href="/dashboard/add/@SubCategory/@Environment/@name">
+                    <CollectorIcon WebpData="@GetBlockIconWebpData(name, conv)"></CollectorIcon>
+                    @name
+                </a>
+            }
+        </div>
+    }
+}
+else if (ConversionSet is not null && SubCategory is not null && Environment is not null)
+{
+    var conversion = ConversionSet.Blocks[BlockName];
+
+    <CollectorIcon WebpData="@GetBlockIconWebpData(BlockName, conversion)" Size="64"></CollectorIcon>
+    <h3>@BlockName</h3>
+    <h4>Items</h4>
+
+    @foreach (var filePath in Directory.GetFiles(Path.Combine(dataBasePath, "items", "NC2", Category, SubCategory, "MM_Collision", Environment, conversion.PageName, BlockName)))
+    {
+        <div class="block-item">
+            <CollectorIcon WebpData="@GetBlockIconWebpData(filePath)"></CollectorIcon>
+            @Path.GetFileName(filePath)
+        </div>
+    }
+
+    <button @onclick="() => ReadyAsync()">Ready</button>
+}
 
 @code {
+    private ConversionSetModel? ConversionSet { get; set; }
 
+    private string Category => "Solid";
+
+    [Parameter]
+    public string? SubCategory { get; set; }
+
+    [Parameter]
+    public string? Environment { get; set; }
+
+    [Parameter]
+    public string? BlockName { get; set; }
+
+    private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
+    private string[] environments = [];
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        environments = Directory.GetFiles(Path.Combine(dataBasePath, "sheets"))
+            .Select(x => Path.GetFileNameWithoutExtension(x))
+            .ToArray();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        SubCategory ??= "Modless";
+
+        await base.OnParametersSetAsync();
+
+        if (Environment is null)
+        {
+            return;
+        }
+
+        await using var stream = File.OpenRead(Path.Combine(dataBasePath, "sheets", $"{Environment}.json"));
+
+        ConversionSet = await JsonSerializer.DeserializeAsync<ConversionSetModel>(stream, AppJsonContext.Default.ConversionSetModel);
+    }
+
+    private async Task ReadyAsync()
+    {
+        if (BlockName is null || ConversionSet is null || SubCategory is null || Environment is null)
+        {
+            return;
+        }
+
+        var conversion = ConversionSet.Blocks[BlockName];
+
+        var block = await Db.Blocks
+            .FirstOrDefaultAsync(x =>
+                x.Environment!.Id == Environment
+             && x.Category!.Id == Category
+             && x.SubCategory!.Id == SubCategory
+             && x.Name == BlockName);
+
+        if (block is not null)
+        {
+            return;
+        }
+
+        var category = await Db.ConverterCategories.FindAsync(Category);
+        if (category is null)
+        {
+            category = new ConverterCategory { Id = Category };
+            await Db.ConverterCategories.AddAsync(category);
+        }
+
+        var subCategory = await Db.ConverterSubCategories.FindAsync(SubCategory);
+        if (subCategory is null)
+        {
+            subCategory = new ConverterSubCategory { Id = SubCategory };
+            await Db.ConverterSubCategories.AddAsync(subCategory);
+        }
+
+        var environment = await Db.GameEnvironments.FindAsync(Environment);
+        if (environment is null)
+        {
+            environment = new GameEnvironment { Id = Environment };
+            await Db.GameEnvironments.AddAsync(environment);
+        }
+
+        block = new Block
+        {
+            Name = BlockName,
+            Category = category,
+            SubCategory = subCategory,
+            Environment = environment,
+            PageName = conversion.PageName,
+            CreatedAt = DateTimeOffset.Now,
+            IconWebp = GetBlockIconWebpData(BlockName, conversion),
+        };
+
+        await Db.Blocks.AddAsync(block);
+
+        foreach (var filePath in Directory.GetFiles(Path.Combine(dataBasePath, "items", "NC2", Category, SubCategory, "MM_Collision", Environment, conversion.PageName, BlockName)))
+        {
+            var itemGbx = GBX.NET.Gbx.ParseNode<GBX.NET.Engines.GameData.CGameItemModel>(filePath);
+
+            if (itemGbx.Description is null)
+            {
+                throw new Exception($"Item description is null - {filePath}");
+            }
+
+            var itemInfo = JsonSerializer.Deserialize<ItemInfoModel>(itemGbx.Description, AppJsonContext.Default.ItemInfoModel);
+
+            if (itemInfo?.Block is null)
+            {
+                throw new Exception($"ItemInfo.Block is null - {filePath}");
+            }
+
+            var item = new BlockItem
+            {
+                FileName = Path.GetFileName(filePath),
+                Block = block,
+                Modifier = itemInfo.Block.Modifier ?? throw new Exception($"ItemInfo.Block.Modifier is null - {filePath}"),
+                Variant = itemInfo.Block.Variant,
+                SubVariant = itemInfo.Block.SubVariant,
+            };
+
+            await Db.BlockItems.AddAsync(item);
+        }
+
+        await Db.SaveChangesAsync();
+    }
+
+    private string GetBlockIconWebpData(string name, ConversionModel conversion)
+    {
+        if (SubCategory is null || Environment is null)
+        {
+            return "";
+        }
+
+        var basePath = Path.Combine(dataBasePath, "items", "NC2", Category, SubCategory, "MM_Collision");
+
+        var modifierType = conversion.Air is not null ? "Air" : "Ground";
+
+        var fileName = Path.Combine(basePath, Environment, conversion.PageName, name, $"{modifierType}_0_0.Item.Gbx");
+
+        return GetBlockIconWebpData(fileName);
+    }
+
+    private string GetBlockIconWebpData(string fileName)
+    {
+        if (!File.Exists(fileName))
+        {
+            return "";
+        }
+
+        using var fs = File.OpenRead(fileName);
+        var item = GBX.NET.Gbx.ParseHeaderNode<GBX.NET.Engines.GameData.CGameItemModel>(fs);
+
+        if (item.IconWebP is null)
+        {
+            return "";
+        }
+
+        return Convert.ToBase64String(item.IconWebP);
+    }
 }

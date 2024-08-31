@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NationsConverterWeb;
 
@@ -11,9 +12,11 @@ using NationsConverterWeb;
 namespace NationsConverterWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240831165920_AddBlocksAndDates")]
+    partial class AddBlocksAndDates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,7 +44,6 @@ namespace NationsConverterWeb.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(32767)
                         .HasColumnType("longtext");
 
                     b.Property<string>("EnvironmentId")
@@ -53,12 +55,10 @@ namespace NationsConverterWeb.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("PageName")
                         .IsRequired()
-                        .HasMaxLength(32767)
                         .HasColumnType("longtext");
 
                     b.Property<string>("SubCategoryId")
@@ -89,15 +89,16 @@ namespace NationsConverterWeb.Migrations
                     b.Property<int>("BlockId")
                         .HasColumnType("int");
 
+                    b.Property<byte[]>("Data")
+                        .HasColumnType("longblob");
+
                     b.Property<string>("FileName")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<string>("Modifier")
                         .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
+                        .HasColumnType("longtext");
 
                     b.Property<int>("SubVariant")
                         .HasColumnType("int");
@@ -175,39 +176,6 @@ namespace NationsConverterWeb.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("GameEnvironments");
-                });
-
-            modelBuilder.Entity("NationsConverterWeb.Models.ItemUpload", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("BlockItemId")
-                        .HasColumnType("int");
-
-                    b.Property<byte[]>("Data")
-                        .IsRequired()
-                        .HasColumnType("longblob");
-
-                    b.Property<DateTimeOffset>("LastModifiedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("OriginalFileName")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<DateTimeOffset>("UploadedAt")
-                        .HasColumnType("datetime(6)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlockItemId");
-
-                    b.ToTable("ItemUploads");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.User", b =>
@@ -290,25 +258,9 @@ namespace NationsConverterWeb.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("NationsConverterWeb.Models.ItemUpload", b =>
-                {
-                    b.HasOne("NationsConverterWeb.Models.BlockItem", "BlockItem")
-                        .WithMany("Uploads")
-                        .HasForeignKey("BlockItemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("BlockItem");
-                });
-
             modelBuilder.Entity("NationsConverterWeb.Models.Block", b =>
                 {
                     b.Navigation("Items");
-                });
-
-            modelBuilder.Entity("NationsConverterWeb.Models.BlockItem", b =>
-                {
-                    b.Navigation("Uploads");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.ConverterCategory", b =>

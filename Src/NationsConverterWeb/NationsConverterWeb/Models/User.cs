@@ -1,4 +1,6 @@
-﻿namespace NationsConverterWeb.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace NationsConverterWeb.Models;
 
 public sealed class User
 {
@@ -7,6 +9,9 @@ public sealed class User
     public bool IsAdmin { get; set; }
     public bool IsDeveloper { get; set; }
     public bool IsModeler { get; set; }
+
+    [Required]
+    public required DateTimeOffset JoinedAt { get; set; }
 
     public bool IsStaff => IsAdmin || IsDeveloper || IsModeler;
 }

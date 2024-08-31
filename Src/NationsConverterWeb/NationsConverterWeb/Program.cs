@@ -11,6 +11,8 @@ using NationsConverterWeb;
 using NationsConverterWeb.Authentication;
 using NationsConverterWeb.Components;
 
+GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

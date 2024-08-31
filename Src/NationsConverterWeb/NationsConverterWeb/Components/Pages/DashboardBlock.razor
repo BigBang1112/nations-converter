@@ -1,0 +1,28 @@
+﻿@page "/dashboard/block/{BlockName}"
+@attribute [Authorize(Roles = "Admin,Developer,Modeler")]
+@inject AppDbContext Db
+@inject NavigationManager NavManager
+
+<PageTitle>@BlockName - Dashboard - Nations Converter 2</PageTitle>
+
+<h2>@BlockName</h2>
+
+@if (block is not null)
+{
+    if (block.IconWebp is not null)
+    {
+        <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
+    }
+}
+
+@code {
+    private Block? block;
+
+    [Parameter]
+    public string BlockName { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        block = await Db.Blocks.FirstOrDefaultAsync(x => x.Name == BlockName);
+    }
+}

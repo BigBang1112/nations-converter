@@ -21,7 +21,16 @@
 
             @foreach (var block in blocks)
             {
-                <a href="dashboard/block/SpeeedSOmeLongBlock"><img src="favicon.png" width="32" height="32" /> SpeeedSOmeLongBlock <img src="favicon.png" width="24" height="24" class="modeler" /></a>
+                <a href="dashboard/block/@block.Name">
+                    <CollectorIcon WebpData="@block.IconWebp" Size="32"></CollectorIcon>
+
+                    @block.Name
+
+                    @if (block.AssignedTo is not null)
+                    {
+                        <img src="favicon.png" width="24" height="24" class="modeler" />
+                    }
+                </a>
             }
         </div>
     </div>

@@ -39,13 +39,14 @@ internal static class DiscordAuthenticationTicket
 
         if (discordUser is null)
         {
-            var user = new User();
+            var user = new User { JoinedAt = DateTimeOffset.UtcNow };
 
             discordUser = new DiscordUser
             {
                 Id = snowflakeId,
                 Username = username,
-                User = user
+                User = user,
+                ConnectedAt = DateTimeOffset.UtcNow
             };
 
             user.DiscordUser = discordUser;
