@@ -12,11 +12,13 @@ RUN dotnet workload install wasm-tools
 # copy csproj and restore as distinct layers
 COPY Src/$APPNAME/$APPNAME/*.csproj $APPNAME/$APPNAME/
 COPY Src/$APPNAME/$APPNAME.Client/*.csproj $APPNAME/$APPNAME.Client/
+COPY Src/NationsConverterShared/*.csproj NationsConverterShared/
 RUN dotnet restore $APPNAME/$APPNAME/$APPNAME.csproj -a $TARGETARCH
 
 # copy and publish app and libraries
 COPY Src/$APPNAME/$APPNAME $APPNAME/$APPNAME
 COPY Src/$APPNAME/$APPNAME.Client $APPNAME/$APPNAME.Client
+COPY Src/NationsConverterShared NationsConverterShared
 RUN dotnet publish $APPNAME/$APPNAME -c $BUILD_CONFIGURATION -a $TARGETARCH -o /app --no-restore
 
 
