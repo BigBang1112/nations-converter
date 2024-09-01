@@ -128,8 +128,7 @@
             .OrderByDescending(x => x.User.IsAdmin)
             .ThenByDescending(x => x.User.IsDeveloper)
             .ThenByDescending(x => x.User.IsModeler)
-            .ThenBy(x => x.GlobalName)
-            .ThenBy(x => x.Username)
+            .ThenBy(x => x.GlobalName ?? x.Username)
             .ToArrayAsync();
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
