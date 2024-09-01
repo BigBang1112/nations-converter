@@ -89,6 +89,17 @@
 
     protected override async Task OnInitializedAsync()
     {
+        block = await Db.Blocks
+            .Include(x => x.Items)
+                .ThenInclude(x => x.Uploads)
+            .Include(x => x.AssignedTo)
+            .FirstOrDefaultAsync(x => x.Name == BlockName);
+
+        if (block is not null)
+        {
+            blockDirBasePath = Path.Combine(dataBasePath, "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
+        }
+
         if (AuthenticationStateTask is null)
         {
             return;
@@ -107,17 +118,6 @@
         user = await Db.Users
             .Include(x => x.DiscordUser)
             .FirstOrDefaultAsync(x => x.DiscordUser!.Id == snowflake);
-
-        block = await Db.Blocks
-            .Include(x => x.Items)
-                .ThenInclude(x => x.Uploads)
-            .Include(x => x.AssignedTo)
-            .FirstOrDefaultAsync(x => x.Name == BlockName);
-
-        if (block is not null)
-        {
-            blockDirBasePath = Path.Combine(dataBasePath, "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
-        }
     }
 
     private bool IsAssignedUser()
