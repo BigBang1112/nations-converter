@@ -19,7 +19,7 @@
 }
 
 .members {
-    padding: 0 15px;
+    padding: 0 0 0 15px;
 }
 
     .members div {
@@ -88,4 +88,8 @@
 
 .modeler {
     border-radius: 12px;
+}
+
+.additional-links {
+    flex-direction: column;
 }
