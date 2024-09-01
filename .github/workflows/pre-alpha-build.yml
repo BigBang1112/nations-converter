@@ -1,4 +1,4 @@
-name: Pre-Alpha Publish CLI
+name: Pre-Alpha Build CLI
 
 on:
   workflow_dispatch:
