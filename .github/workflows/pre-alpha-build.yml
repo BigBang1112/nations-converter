@@ -1,0 +1,58 @@
+name: Pre-Alpha Publish CLI
+
+on:
+  workflow_dispatch:
+
+env:
+  PROJECT_NAME: NationsConverterCLI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    
+    env:
+      ZIP_SUFFIX: .zip
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+          
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Publish
+        run: dotnet publish Src/${{ env.PROJECT_NAME }}
+          -c Release
+          -r win-x64
+          -o build/${{ env.PROJECT_NAME }}
+          -p:PublishTrimmed=true
+          -p:PublishSingleFile=true
+          -p:EnableCompressionInSingleFile=true
+          --self-contained
+          
+      - name: Zip to ${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}
+        uses: thedoctor0/zip-release@main
+        with:
+          directory: build
+          path: ${{ env.PROJECT_NAME }}
+          filename: ../${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}
+
+      - name: Calculate SHA256 (Windows)
+        run: |
+          $hash = Get-FileHash -Path '${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}' -Algorithm SHA256
+          $hashValue = $hash.Hash.ToLower()
+          Write-Host $hashValue
+          $hashValue | Out-File -FilePath "${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}.hash.txt"
+        
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: ${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}
+          if-no-files-found: error
