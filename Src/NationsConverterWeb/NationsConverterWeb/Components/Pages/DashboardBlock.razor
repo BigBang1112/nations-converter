@@ -3,6 +3,7 @@
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject AppDbContext Db
 @inject NavigationManager NavManager
+@inject IJSRuntime JS
 
 <PageTitle>@BlockName - Dashboard - Nations Converter 2</PageTitle>
 
@@ -21,11 +22,11 @@
 
     @if (block.AssignedTo is null)
     {
-        <button class="button" @onclick="AssignAsync">Assign this block</button>
+        <button class="button button-big" @onclick="AssignAsync">Assign this block</button>
     }
     else if (block.AssignedTo.Id == user?.Id)
     {
-        <button class="button" @onclick="UnassignAsync">Unassign this block</button>
+        <button class="button button-big" @onclick="UnassignAsync">Unassign this block</button>
     }
     else
     {
@@ -36,26 +37,37 @@
     <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
 
     <div class="items">
+        <button class="button button-download" @onclick="DownloadAllInitAsync">Download all init items</button>
+
         @foreach (var item in block.Items.OrderBy(x => x.Variant).ThenBy(x => x.SubVariant))
         {
             <div class="item">
                 <div class="item-info">
-                    <a href="#" class="download" title="Download the init item">Download</a>
+                    <a class="button button-download" href="/data/items/NC2/@block.CategoryId/@block.SubCategoryId/MM_Collision/@block.EnvironmentId/@block.PageName/@block.Name/@item.FileName" title="Download the init item">Download</a>
 
                     @item.FileName
 
                     @if (IsAssignedUser())
                     {
-                        <InputFile style="margin-left: auto;" title="Upload your improved item here"></InputFile>
+                        <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
+                            title="Upload your improved item here, any file name is accepted."></InputFile>
                     }
                 </div>
 
+                @if (item.Uploads.Any())
+                {
+                    <hr />
+                }
+
                 @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
                 {
-                    <div>
-                        <a href="#">@upload.OriginalFileName</a>
-                        <span>@upload.UploadedAt</span>
-                        <button>Delete</button>
+                    <div class="upload">
+                        <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
+                        <span class="upload-date">@upload.UploadedAt.DateTime</span>
+                        @if (IsAssignedUser())
+                        {
+                            <button class="button button-delete">Delete</button>
+                        }
                     </div>
                 }
             </div>
@@ -71,6 +83,9 @@
 
     [Parameter]
     public string BlockName { get; set; } = "";
+
+    private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
+    private string? blockDirBasePath;
 
     protected override async Task OnInitializedAsync()
     {
@@ -95,8 +110,14 @@
 
         block = await Db.Blocks
             .Include(x => x.Items)
+                .ThenInclude(x => x.Uploads)
             .Include(x => x.AssignedTo)
             .FirstOrDefaultAsync(x => x.Name == BlockName);
+
+        if (block is not null)
+        {
+            blockDirBasePath = Path.Combine(dataBasePath, "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
+        }
     }
 
     private bool IsAssignedUser()
@@ -126,5 +147,94 @@
         block.AssignedTo = null;
         block.AssignedAt = null;
         await Db.SaveChangesAsync();
+    }
+
+    private async Task UploadAsync(InputFileChangeEventArgs e, BlockItem item)
+    {
+        if (block is null || user is null)
+        {
+            return;
+        }
+
+        var file = e.GetMultipleFiles(1).FirstOrDefault();
+        if (file is null)
+        {
+            return;
+        }
+
+        await using var stream = file.OpenReadStream(maxAllowedSize: 4000000);
+        await using var memoryStream = new MemoryStream();
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+
+        var itemGbx = await GBX.NET.Gbx.ParseNodeAsync<GBX.NET.Engines.GameData.CGameItemModel>(memoryStream);
+
+        if (itemGbx.Description is null)
+        {
+            throw new Exception($"Item description is null - {file.Name}");
+        }
+
+        var itemInfo = JsonSerializer.Deserialize<ItemInfoModel>(itemGbx.Description, AppJsonContext.Default.ItemInfoModel);
+
+        if (itemInfo?.Block is null)
+        {
+            throw new Exception($"ItemInfo.Block is null - {file.Name}");
+        }
+
+        if (itemInfo.Block.Modifier != item.Modifier || itemInfo.Block.Variant != item.Variant || itemInfo.Block.SubVariant != item.SubVariant)
+        {
+            throw new Exception($"ItemInfo.Block does not match the item - {file.Name}");
+        }
+
+        var upload = new ItemUpload
+        {
+            OriginalFileName = file.Name,
+            UploadedAt = DateTimeOffset.UtcNow,
+            LastModifiedAt = file.LastModified,
+            Data = memoryStream.ToArray(),
+            BlockItem = item,
+        };
+
+        await Db.ItemUploads.AddAsync(upload);
+        await Db.SaveChangesAsync();
+    }
+
+    private async Task DownloadAllInitAsync()
+    {
+        if (block is null || blockDirBasePath is null)
+        {
+            return;
+        }
+
+        await using var ms = new MemoryStream();
+
+        using (var zip = new System.IO.Compression.ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var item in block.Items)
+            {
+                var entry = zip.CreateEntry(Path.Combine(block.Name, item.FileName));
+                await using var entryStream = entry.Open();
+
+                await using var fs = new FileStream(Path.Combine(blockDirBasePath, item.FileName), FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+                await fs.CopyToAsync(entryStream);
+            }
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", $"{block.Name}.zip", streamRef);
+    }
+
+    private async Task DownloadItemUploadAsync(ItemUpload upload)
+    {
+        if (upload is null)
+        {
+            return;
+        }
+
+        using var ms = new MemoryStream(upload.Data);
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", upload.OriginalFileName, streamRef);
     }
 }

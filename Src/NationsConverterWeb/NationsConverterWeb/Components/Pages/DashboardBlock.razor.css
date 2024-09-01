@@ -1,17 +1,20 @@
 ﻿.button {
     display: flex;
-    border: 2px solid #444;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
     border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-big {
     padding: 5px;
     width: 100%;
     max-width: 300px;
-    align-items: center;
     gap: 8px;
     background-color: #333;
-    text-decoration: none;
-    color: white;
-    justify-content: center;
-    font-weight: bold;
+    border: 2px solid #444;
 }
 
     .button:hover {
@@ -19,10 +22,12 @@
     }
 
 .item {
-    width: 100%;
     background-color: #333;
-    padding: 5px 10px;
+    padding: 5px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }
 
 .item-info {
@@ -39,21 +44,59 @@
     margin-top: 10px;
 }
 
-.download {
-    display: flex;
-    border: 2px solid #A94;
-    border-radius: 5px;
+.button-download {
     padding: 2px 6px;
-    align-items: center;
     gap: 8px;
     background-color: #543;
-    text-decoration: none;
-    color: white;
-    justify-content: center;
-    font-weight: bold;
     font-size: 15px;
+    border: 2px solid #A94;
 }
 
-    .download:hover {
+    .button-download:hover {
         background-color: #654;
     }
+
+.upload {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 10px;
+}
+
+    .upload span {
+        padding: 0 8px;
+    }
+
+.button-delete {
+    padding: 1px 6px;
+    gap: 8px;
+    background-color: #533;
+    font-size: 15px;
+    margin-left: auto;
+    border: 2px solid #A44;
+}
+
+    .button-delete:hover {
+        background-color: #644;
+    }
+
+.upload-date {
+    margin-left: auto;
+}
+
+.button-basic {
+    padding: 2px 6px;
+    gap: 8px;
+    background-color: #333;
+    font-size: 15px;
+    border: 2px solid #444;
+}
+
+    .button-basic:hover {
+        background-color: #444;
+    }
+
+hr {
+    width: 100%;
+    margin: 2px 0;
+}
