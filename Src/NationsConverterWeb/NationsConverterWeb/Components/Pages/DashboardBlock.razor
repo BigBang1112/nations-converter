@@ -93,6 +93,7 @@
             .Include(x => x.Items)
                 .ThenInclude(x => x.Uploads)
             .Include(x => x.AssignedTo)
+            .Include(x => x.AssignedTo!.DiscordUser)
             .FirstOrDefaultAsync(x => x.Name == BlockName);
 
         if (block is not null)
