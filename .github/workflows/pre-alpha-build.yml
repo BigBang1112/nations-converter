@@ -41,12 +41,9 @@ jobs:
           path: ${{ env.PROJECT_NAME }}
           filename: ../${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}
 
-      - name: Calculate SHA256 (Windows)
+      - name: Calculate SHA256 (Linux)
         run: |
-          $hash = Get-FileHash -Path '${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}' -Algorithm SHA256
-          $hashValue = $hash.Hash.ToLower()
-          Write-Host $hashValue
-          $hashValue | Out-File -FilePath "${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}.hash.txt"
+          sha256sum "${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}" | awk '{print $1}' | tee >(cat) > ${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}.hash.txt
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
