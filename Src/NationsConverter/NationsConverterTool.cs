@@ -122,6 +122,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
             "Speed" => "Desert",
             _ => map.GetEnvironment()
         });
+        convertedMap.ScriptMetadata.Declare("NC2_PreAlpha", true);
 
         convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043002>().Version = 13;
         convertedMap.CreateChunk<CGameCtnChallenge.HeaderChunk03043003>().Version = 11;
