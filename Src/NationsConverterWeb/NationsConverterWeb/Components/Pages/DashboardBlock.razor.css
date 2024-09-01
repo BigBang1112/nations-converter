@@ -33,8 +33,12 @@
 .item-info {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
+
+    .item-info span {
+        padding: 0 5px;
+    }
 
 .items {
     display: flex;
