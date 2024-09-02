@@ -44,7 +44,7 @@
             <div class="item">
                 <div class="item-info">
                     <a class="button button-download" href="/data/items/NC2/@block.CategoryId/@block.SubCategoryId/MM_Collision/@block.EnvironmentId/@block.PageName/@block.Name/@item.FileName" download="@item.FileName" title="Download the init item">Download</a>
-                    <button class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
+                    <button @onclick="() => DownloadAsObjAsync(item)" class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
 
                     <span>@item.FileName</span>
 
@@ -88,14 +88,19 @@
     private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
     private string? blockDirBasePath;
 
-    protected override async Task OnInitializedAsync()
+    private async Task<Block?> GetBlockAsync()
     {
-        block = await Db.Blocks
+        return await Db.Blocks
             .Include(x => x.Items)
                 .ThenInclude(x => x.Uploads)
             .Include(x => x.AssignedTo)
             .Include(x => x.AssignedTo!.DiscordUser)
             .FirstOrDefaultAsync(x => x.Name == BlockName);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        block = await GetBlockAsync();
 
         if (block is not null)
         {
@@ -129,7 +134,14 @@
 
     private async Task AssignAsync()
     {
-        if (block is null || user is null)
+        if (user is null)
+        {
+            return;
+        }
+
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo is not null)
         {
             return;
         }
@@ -141,7 +153,9 @@
 
     private async Task UnassignAsync()
     {
-        if (block is null)
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo?.Id != user?.Id)
         {
             return;
         }
@@ -153,7 +167,14 @@
 
     private async Task UploadAsync(InputFileChangeEventArgs e, BlockItem item)
     {
-        if (block is null || user is null)
+        if (user is null)
+        {
+            return;
+        }
+
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo?.Id != user.Id)
         {
             return;
         }
@@ -195,6 +216,7 @@
             LastModifiedAt = file.LastModified,
             Data = memoryStream.ToArray(),
             BlockItem = item,
+            UploadedBy = user,
         };
 
         await Db.ItemUploads.AddAsync(upload);
@@ -238,5 +260,99 @@
         using var ms = new MemoryStream(upload.Data);
         using var streamRef = new DotNetStreamReference(ms);
         await JS.InvokeVoidAsync("downloadFileFromStream", upload.OriginalFileName, streamRef);
+    }
+
+    private async Task DownloadAsObjAsync(BlockItem item)
+    {
+        if (block is null || blockDirBasePath is null)
+        {
+            return;
+        }
+
+        await using var zipStream = new MemoryStream();
+        using (var zip = new ZipArchive(zipStream, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            await using var fs = new FileStream(Path.Combine(blockDirBasePath, item.FileName), FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+
+            var spawnPositionLayer = default(GBX.NET.Engines.Plug.CPlugCrystal.SpawnPositionLayer);
+            var layerIndex = 0;
+            while (true)
+            {
+                fs.Position = 0;
+                var itemGbx = await GBX.NET.Gbx.ParseNodeAsync<GBX.NET.Engines.GameData.CGameItemModel>(fs);
+
+                if (itemGbx.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
+                {
+                    return;
+                }
+
+                var crystal = entityModelEdition.MeshCrystal;
+
+                var layer = crystal.Layers.ElementAtOrDefault(layerIndex++);
+
+                if (layer is GBX.NET.Engines.Plug.CPlugCrystal.SpawnPositionLayer spawn)
+                {
+                    spawnPositionLayer = spawn;
+                    continue;
+                }
+
+                if (layer is null)
+                {
+                    break;
+                }
+
+                crystal.Layers.Clear();
+                crystal.Layers.Add(layer);
+
+                await using var objStream = new MemoryStream();
+                await using var objWriter = new StreamWriter(objStream);
+                await using var mtlStream = new MemoryStream();
+                await using var mtlWriter = new StreamWriter(mtlStream);
+
+                crystal.ExportToObj(objWriter, mtlWriter);
+
+                objWriter.Flush();
+                mtlWriter.Flush();
+
+                objStream.Position = 0;
+                mtlStream.Position = 0;
+
+                var objEntry = zip.CreateEntry($"{item.FileName}.{layer.LayerName}.obj");
+                await using (var objEntryStream = objEntry.Open())
+                {
+                    await objStream.CopyToAsync(objEntryStream);
+                }
+
+                var mtlEntry = zip.CreateEntry($"{item.FileName}.{layer.LayerName}.mtl");
+                await using (var mtlEntryStream = mtlEntry.Open())
+                {
+                    await mtlStream.CopyToAsync(mtlEntryStream);
+                }
+            }
+
+            if (spawnPositionLayer is not null)
+            {
+                var spawnPositionEntry = zip.CreateEntry($"{item.FileName}.{spawnPositionLayer.LayerName}.txt");
+                await using (var entryStream = spawnPositionEntry.Open())
+                {
+                    await using var ms = new MemoryStream();
+                    await using var writer = new StreamWriter(ms);
+
+                    writer.WriteLine($"Position: {spawnPositionLayer.SpawnPosition}");
+                    writer.WriteLine($"Vertical angle: {spawnPositionLayer.VerticalAngle}");
+                    writer.WriteLine($"Roll angle: {spawnPositionLayer.RollAngle}");
+
+                    writer.Flush();
+                    ms.Position = 0;
+
+                    await ms.CopyToAsync(entryStream);
+                }
+            }
+        }
+
+        zipStream.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(zipStream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", $"{item.FileName}.zip", streamRef);
     }
 }
