@@ -23,5 +23,8 @@ public sealed class BlockItem
     public int BlockId { get; set; }
     public Block Block { get; set; } = default!;
 
+    [Range(0, 100)]
+    public int Value { get; set; }
+
     public ICollection<ItemUpload> Uploads { get; set; } = [];
 }

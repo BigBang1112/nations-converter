@@ -19,5 +19,10 @@ public sealed class ItemUpload
     [Required]
     public required DateTimeOffset UploadedAt { get; set; }
 
+    public User? UploadedBy { get; set; }
+
+    [Range(0, 100)]
+    public int Value { get; set; }
+
     public BlockItem BlockItem { get; set; } = default!;
 }
