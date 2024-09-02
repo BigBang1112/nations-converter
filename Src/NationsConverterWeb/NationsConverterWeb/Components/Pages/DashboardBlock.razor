@@ -65,6 +65,19 @@
                     <div class="upload">
                         <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
+
+                        @if (upload.UploadedBy is not null)
+                        {
+                            @if (upload.UploadedBy.DiscordUser?.AvatarHash is null)
+                            {
+                                <img src="img/discord-no-pfp.webp" width="24" height="24" />
+                            }
+                            else
+                            {
+                                <img src="https://cdn.discordapp.com/avatars/@upload.UploadedBy.DiscordUser.Id/@upload.UploadedBy.DiscordUser.AvatarHash" width="24" height="24" />
+                            }
+                        }
+
                         @if (IsAssignedUser())
                         {
                             <button class="button button-delete">Delete</button>

@@ -71,6 +71,10 @@
         padding: 0 8px;
     }
 
+    .upload img {
+        border-radius: 12px;
+    }
+
 .button-delete {
     padding: 1px 6px;
     gap: 8px;
