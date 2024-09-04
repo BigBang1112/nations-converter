@@ -22,6 +22,7 @@ internal sealed class InitStageService
     private readonly string sheetsDirPath;
     private readonly string? initItemsOutputPath;
     private readonly string? initMapsOutputPath;
+    private readonly string? initVersion;
 
     private static readonly string[] subCategories = ["Balanced", "Mod", "Modless"];
 
@@ -58,6 +59,7 @@ internal sealed class InitStageService
 
         initItemsOutputPath = config["InitItemsOutputPath"];
         initMapsOutputPath = config["InitMapsOutputPath"];
+        initVersion = config["InitStageVersion"];
     }
 
     public async Task BuildAsync(CancellationToken cancellationToken = default)
@@ -283,7 +285,8 @@ internal sealed class InitStageService
                 Variant = subVariant.VariantIndex,
                 SubVariant = subVariant.SubVariantIndex,
                 Units = subVariant.Units,
-            }
+            },
+            InitVersion = initVersion
         };
 
         var spawnLoc = subVariant.ModifierType == "Air"
@@ -459,7 +462,8 @@ internal sealed class InitStageService
             Deco = new()
             {
                 Size = decoSize
-            }
+            },
+            InitVersion = initVersion
         };
 
         var crystal = itemMaker.CreateCrystalFromSolid(decoration.Solid, null, null, subCategory);
