@@ -1,6 +1,7 @@
 ﻿using GBX.NET;
 using GBX.NET.Comparers;
 using GBX.NET.Components;
+using GBX.NET.Engines.Graphic;
 using GBX.NET.Engines.Plug;
 using GBX.NET.Engines.Scene;
 
@@ -33,6 +34,8 @@ public static class CPlugTreeExtensions
         var materials = new Dictionary<string, CPlugCrystal.Material>();
         var layers = new List<CPlugCrystal.Layer>();
 
+        var hasAnyLights = false;
+
         var positionsDict = mergeVerticesDigitThreshold.HasValue
             ? new Dictionary<Vec3, int>(new Vec3EqualityComparer(mergeVerticesDigitThreshold.Value))
             : [];
@@ -41,6 +44,11 @@ public static class CPlugTreeExtensions
 
         foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
         {
+            if (!hasAnyLights && t is CPlugTreeLight)
+            {
+                hasAnyLights = true;
+            }
+
             if (t.Visual is null)
             {
                 continue;
@@ -298,6 +306,55 @@ public static class CPlugTreeExtensions
                 CrystalEnabled = false,
                 IsEnabled = true,
                 SpawnPosition = (spawnLoc.Value.TX, spawnLoc.Value.TY, spawnLoc.Value.TZ)
+            });
+        }
+
+        if (hasAnyLights)
+        {
+            var lightLocPairs = new List<(CPlugLightUserModel, Iso4)>();
+
+            foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
+            {
+                if (t is not CPlugTreeLight treeLight)
+                {
+                    continue;
+                }
+
+                if (treeLight.PlugLight is null)
+                {
+                    logger?.LogWarning("Tree light has no light instance");
+                    continue;
+                }
+
+                if (treeLight.PlugLight.GxLightModel is not GxLight light)
+                {
+                    logger?.LogWarning("Light instance has no gx light");
+                    continue;
+                }
+
+                var userLight = new CPlugLightUserModel
+                {
+                    Color = light.Color,
+                    Distance = 25,
+                    Intensity = light.Intensity,
+                    //NightOnly
+                    SpotInnerAngle = 40,
+                    SpotOuterAngle = 60,
+                };
+                userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
+
+                lightLocPairs.Add((userLight, loc));
+            }
+
+            layers.Add(new CPlugCrystal.LightLayer
+            {
+                Ver = 2,
+                LayerId = "Layer4",
+                LayerName = "Light",
+                CrystalEnabled = false,
+                IsEnabled = true,
+                Lights = lightLocPairs.Select(x => x.Item1).ToArray(),
+                LightPositions = lightLocPairs.Select(x => new CPlugCrystal.LightPos { U01 = 0, U02 = x.Item2 }).ToArray()
             });
         }
 
