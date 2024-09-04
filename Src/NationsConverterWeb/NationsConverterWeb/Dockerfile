@@ -1,6 +1,6 @@
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-ARG TARGETARCH=x64
+ARG TARGETARCH
 ARG APPNAME=NationsConverterWeb
 RUN apt-get update && apt-get install -y git python3
 WORKDIR /src
