@@ -52,7 +52,6 @@ jobs:
           outputs: type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true
           build-args: |
             BUILDKIT_CONTEXT_KEEP_GIT_DIR=true
-            TARGETARCH=${{ matrix.platform == 'linux/amd64' && 'x64' || 'arm64' }}
       
       - name: Export digest
         run: |
