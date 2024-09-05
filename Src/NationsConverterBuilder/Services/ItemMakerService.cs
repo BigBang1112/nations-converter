@@ -32,9 +32,9 @@ internal sealed class ItemMakerService
 
         var matDict = new Dictionary<string, CPlugMaterialUserInst>();
 
-        return tree.ToCrystal(matFile =>
+        return tree.ToCrystal((mat, matFile) =>
         {
-            return GetMaterialLink(matFile, matDict, subCategory);
+            return GetMaterialLink(mat, matFile, matDict, subCategory);
         },
         (matFile, uvSetIndex, uvs) =>
         {
@@ -56,9 +56,9 @@ internal sealed class ItemMakerService
     {
         var matDict = new Dictionary<string, CPlugMaterialUserInst>();
 
-        return solid.ToStaticObject(matFile =>
+        return solid.ToStaticObject((mat, matFile) =>
         {
-            return GetMaterialLink(matFile, matDict, subCategory);
+            return GetMaterialLink(mat, matFile, matDict, subCategory);
         },
         (matFile, uvSetIndex, uvs) =>
         {
@@ -68,15 +68,16 @@ internal sealed class ItemMakerService
     }
 
     private CPlugMaterialUserInst? GetMaterialLink(
+        CPlugMaterial? mat,
         GbxRefTableFile matFile,
         Dictionary<string, CPlugMaterialUserInst> matDict,
         string subCategory)
     {
         var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
 
-        if (matDict.TryGetValue(matName, out var mat))
+        if (matDict.TryGetValue(matName, out var matInst))
         {
-            return mat;
+            return matInst;
         }
 
         if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
@@ -89,6 +90,8 @@ internal sealed class ItemMakerService
             return null;
         }
 
+        var surface = mat?.SurfaceId ?? material.Surface ?? CPlugSurface.MaterialId.Concrete;
+
         if (material.SubCategories.TryGetValue(subCategory, out var subCategoryMaterial))
         {
             if (subCategoryMaterial.Remove)
@@ -98,13 +101,13 @@ internal sealed class ItemMakerService
 
             if (!string.IsNullOrEmpty(subCategoryMaterial.Link))
             {
-                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, color: subCategoryMaterial.Color);
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", surface, color: subCategoryMaterial.Color);
             }
         }
 
         if (!string.IsNullOrEmpty(material.Link))
         {
-            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", material.Surface ?? CPlugSurface.MaterialId.Concrete, color: material.Color);
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", surface, color: material.Color);
         }
 
         return matDict[matName] = CPlugMaterialUserInstExtensions.Create();

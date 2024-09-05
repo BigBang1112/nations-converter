@@ -8,7 +8,7 @@ namespace NationsConverterBuilder.Extensions;
 public static class CPlugSolidExtensions
 {
     public static CPlugStaticObjectModel ToStaticObject(this CPlugSolid solid,
-        Func<GbxRefTableFile, CPlugMaterialUserInst?>? materialLinks = null,
+        Func<CPlugMaterial?, GbxRefTableFile, CPlugMaterialUserInst?>? materialLinks = null,
         Action<GbxRefTableFile, int, Vec2[]>? uvModifiers = null,
         int lod = 0,
         ILogger? logger = null)
@@ -66,7 +66,7 @@ public static class CPlugSolidExtensions
                 }
                 else
                 {
-                    var inst = materialLinks(t.ShaderFile);
+                    var inst = materialLinks(t.Shader as CPlugMaterial, t.ShaderFile);
 
                     if (inst is null)
                     {

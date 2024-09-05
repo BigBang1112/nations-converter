@@ -18,7 +18,7 @@ public static class CPlugTreeExtensions
     /// <param name="logger"></param>
     /// <returns></returns>
     public static CPlugCrystal ToCrystal(this CPlugTree tree,
-        Func<GbxRefTableFile, CPlugMaterialUserInst?>? materialLinks = null,
+        Func<CPlugMaterial?, GbxRefTableFile, CPlugMaterialUserInst?>? materialLinks = null,
         Action<GbxRefTableFile, int, Vec2[]>? uvModifiers = null,
         int lod = 0,
         CSceneObjectLink[]? objectLinks = null,
@@ -90,7 +90,7 @@ public static class CPlugTreeExtensions
                 }
                 else
                 {
-                    var inst = materialLinks(t.ShaderFile);
+                    var inst = materialLinks(t.Shader as CPlugMaterial, t.ShaderFile);
 
                     if (inst is null)
                     {
