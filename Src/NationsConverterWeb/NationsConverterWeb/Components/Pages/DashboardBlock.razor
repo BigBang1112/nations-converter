@@ -106,7 +106,7 @@
         return await Db.Blocks
             .Include(x => x.Items)
                 .ThenInclude(x => x.Uploads)
-            .Include(x => x.AssignedTo)
+                    .ThenInclude(x => x.UploadedBy!.DiscordUser)
             .Include(x => x.AssignedTo!.DiscordUser)
             .FirstOrDefaultAsync(x => x.Name == BlockName);
     }
