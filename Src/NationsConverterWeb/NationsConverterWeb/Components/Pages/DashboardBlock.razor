@@ -232,6 +232,8 @@
             UploadedBy = user,
         };
 
+        block.HasUpload = true;
+
         await Db.ItemUploads.AddAsync(upload);
         await Db.SaveChangesAsync();
     }

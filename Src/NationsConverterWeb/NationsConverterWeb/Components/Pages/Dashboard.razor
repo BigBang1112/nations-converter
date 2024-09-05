@@ -26,7 +26,11 @@
 
                     @block.Name
 
-                    @if (block.AssignedTo is not null)
+                    @if (block.IsDone)
+                    {
+                        <img class="modeler" src="img/done.webp" width="24" height="24" />
+                    }
+                    else if (block.AssignedTo is not null)
                     {
                         @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
                         {
@@ -39,7 +43,7 @@
                                  width="24" height="24" />
                         }
                     }
-                    else if (block.Items.Any(x => x.Uploads.Count > 0))
+                    else if (block.HasUpload)
                     {
                         <img class="modeler" src="img/wip.webp" width="24" height="24" />
                     }
@@ -137,9 +141,6 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-        blocks = await Db.Blocks
-            .Include(x => x.Items)
-                .ThenInclude(x => x.Uploads)
-            .ToArrayAsync();
+        blocks = await Db.Blocks.ToArrayAsync();
     }
 }

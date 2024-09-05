@@ -35,6 +35,9 @@ public sealed class Block
 
     public DateTimeOffset? AssignedAt { get; set; }
 
+    public bool HasUpload { get; set; }
+    public bool IsDone { get; set; }
+
     [Required]
     public required DateTimeOffset CreatedAt { get; set; }
 
