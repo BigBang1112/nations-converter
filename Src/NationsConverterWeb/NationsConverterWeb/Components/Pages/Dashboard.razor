@@ -39,6 +39,10 @@
                                  width="24" height="24" />
                         }
                     }
+                    else if (block.Items.Any(x => x.Uploads.Count > 0))
+                    {
+                        <img class="modeler" src="img/wip.webp" width="24" height="24" />
+                    }
                 </a>
             }
         </div>
@@ -133,6 +137,9 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-        blocks = await Db.Blocks.ToArrayAsync();
+        blocks = await Db.Blocks
+            .Include(x => x.Items)
+                .ThenInclude(x => x.Uploads)
+            .ToArrayAsync();
     }
 }
