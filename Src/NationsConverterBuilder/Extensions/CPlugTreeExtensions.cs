@@ -332,14 +332,16 @@ public static class CPlugTreeExtensions
                     continue;
                 }
 
+                var spot = light as GxLightSpot;
+
                 var userLight = new CPlugLightUserModel
                 {
                     Color = light.Color,
-                    Distance = 25,
-                    Intensity = light.Intensity,
+                    Distance = light.Intensity * 25,
+                    Intensity = light.Intensity * 2,
                     //NightOnly
-                    SpotInnerAngle = 40,
-                    SpotOuterAngle = 60,
+                    SpotInnerAngle = spot?.AngleInner ?? 40,
+                    SpotOuterAngle = spot?.AngleOuter ?? 60,
                 };
                 userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
 
