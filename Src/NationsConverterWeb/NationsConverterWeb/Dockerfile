@@ -3,14 +3,18 @@ ARG BUILD_CONFIGURATION=Release
 ARG TARGETARCH
 ARG APPNAME=NationsConverterWeb
 RUN apt-get update && apt-get install -y git python3
-RUN --mount=type=secret,id=github_token
 WORKDIR /src
 
 COPY .git/ ./.git/
 
 RUN dotnet workload install wasm-tools
 
-RUN dotnet nuget add source --username USERNAME --password $(cat /run/secrets/github_token) --store-password-in-clear-text --name github https://nuget.pkg.github.com/bigbang1112/index.json
+RUN --mount=type=secret,id=github_token \
+	dotnet nuget add source https://nuget.pkg.github.com/bigbang1112/index.json \
+	--name github \
+	--username USERNAME \
+	--password $(cat /run/secrets/github_token) \
+	--store-password-in-clear-text  
 
 # copy csproj and restore as distinct layers
 COPY Src/$APPNAME/$APPNAME/*.csproj $APPNAME/$APPNAME/
