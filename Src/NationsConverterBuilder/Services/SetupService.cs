@@ -125,6 +125,14 @@ internal sealed class SetupService
             }
         }
 
+        foreach (var modifier in collection.Node.ReplacementTerrainModifiers ?? [])
+        {
+            foreach (var mat in modifier.Node?.Remapping?.Fids?.Select(x => x.Name) ?? [])
+            {
+                collection.TerrainModifierMaterials.Add(mat);
+            }
+        }
+
         var folderBlockInfoPath = Path.Combine(dataDirPath, collection.Node.FolderBlockInfo);
 
         foreach (var blockInfoFilePath in Directory.EnumerateFiles(folderBlockInfoPath, "*.Gbx", SearchOption.AllDirectories).AsParallel())
