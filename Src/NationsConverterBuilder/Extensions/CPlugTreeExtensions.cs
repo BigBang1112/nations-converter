@@ -26,6 +26,7 @@ public static class CPlugTreeExtensions
         int? mergeVerticesDigitThreshold = null,
         Func<GbxRefTableFile, CPlugMaterialUserInst?>? decalLinks = null,
         Action<GbxRefTableFile, int, Vec2[]>? decalUvModifiers = null,
+        Func<CPlugTree, bool>? skipTreeWhen = null,
         ILogger? logger = null)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -44,6 +45,11 @@ public static class CPlugTreeExtensions
 
         foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
         {
+            if (skipTreeWhen?.Invoke(t) == true)
+            {
+                continue;
+            }
+
             if (!hasAnyLights && t is CPlugTreeLight)
             {
                 hasAnyLights = true;
@@ -316,6 +322,11 @@ public static class CPlugTreeExtensions
             foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
             {
                 if (t is not CPlugTreeLight treeLight)
+                {
+                    continue;
+                }
+
+                if (skipTreeWhen?.Invoke(t) == true)
                 {
                     continue;
                 }
