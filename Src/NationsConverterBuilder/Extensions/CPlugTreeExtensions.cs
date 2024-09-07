@@ -285,7 +285,7 @@ public static class CPlugTreeExtensions
                 continue;
             }
 
-            var linkLayer = CreateCollisionLayer(t, "Layer2", logger, isTrigger: true, out var newMaterials2);
+            var linkLayer = CreateCollisionLayer(t, "Layer2", logger, isTrigger: true, out var newTriggerMaterials);
 
             if (linkLayer is null)
             {
@@ -295,7 +295,7 @@ public static class CPlugTreeExtensions
             layers.Add(linkLayer);
 
             var i = 0;
-            foreach (var newMaterial in newMaterials)
+            foreach (var newMaterial in newTriggerMaterials)
             {
                 materials.Add($"_Trigger" + i, newMaterial);
                 i++;
