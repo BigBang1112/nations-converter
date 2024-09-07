@@ -86,18 +86,23 @@ internal sealed class InitStageService
                     });
                 }
 
-                var map = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
-                map.MapName = displayName;
-                map.ScriptMetadata!.Declare("MadeWithNationsConverter", true);
-                map.ScriptMetadata!.Declare("NC2_IsConverted", true);
-                map.ScriptMetadata!.Declare("NC2_ConvertedAt", DateTime.UtcNow.ToString("s"));
+                var baseMap = default(CGameCtnChallenge);
+
+                if (File.Exists(Path.Combine(dataDirPath, "Base.Map.Gbx")))
+                {
+                    baseMap = Gbx.ParseNode<CGameCtnChallenge>(Path.Combine(dataDirPath, "Base.Map.Gbx"));
+                    baseMap.MapName = displayName;
+                    baseMap.ScriptMetadata!.Declare("MadeWithNationsConverter", true);
+                    baseMap.ScriptMetadata!.Declare("NC2_IsConverted", true);
+                    baseMap.ScriptMetadata!.Declare("NC2_ConvertedAt", DateTime.UtcNow.ToString("s"));
+                }
 
 				var index = 0;
 
                 var convs = new Dictionary<string, ConversionModel>();
 
-                RecurseBlockDirectories(displayName, collection.BlockDirectories, map, subCategory, convs, ref index);
-                ProcessBlocks(displayName, collection.RootBlocks, map, subCategory, convs, ref index);
+                RecurseBlockDirectories(displayName, collection.BlockDirectories, baseMap, subCategory, convs, ref index);
+                ProcessBlocks(displayName, collection.RootBlocks, baseMap, subCategory, convs, ref index);
 
                 var defaultZone = (collection.Node.DefaultZone as CGameCtnZoneFlat)?.BlockInfoFlat?.Ident.Id;
                 
@@ -116,7 +121,7 @@ internal sealed class InitStageService
                 if (!string.IsNullOrEmpty(initMapsOutputPath))
                 {
                     Directory.CreateDirectory(Path.Combine(initMapsOutputPath, subCategory));
-                    map.Save(Path.Combine(initMapsOutputPath, subCategory, $"{displayName}.Map.Gbx"));
+                    baseMap?.Save(Path.Combine(initMapsOutputPath, subCategory, $"{displayName}.Map.Gbx"));
                 }
             }));
         }
@@ -127,22 +132,22 @@ internal sealed class InitStageService
     private void RecurseBlockDirectories(
         string collectionName,
         IDictionary<string, BlockDirectoryModel> dirs,
-        CGameCtnChallenge map,
+        CGameCtnChallenge? baseMap,
         string subCategory,
         IDictionary<string, ConversionModel> convs,
         ref int index)
     {
         foreach (var (dirName, dir) in dirs)
         {
-            RecurseBlockDirectories(collectionName, dir.Directories, map, subCategory, convs, ref index);
-            ProcessBlocks(collectionName, dir.Blocks, map, subCategory, convs, ref index);
+            RecurseBlockDirectories(collectionName, dir.Directories, baseMap, subCategory, convs, ref index);
+            ProcessBlocks(collectionName, dir.Blocks, baseMap, subCategory, convs, ref index);
         }
     }
 
     private void ProcessBlocks(
         string collectionName,
         IDictionary<string, BlockInfoModel> blocks,
-        CGameCtnChallenge map,
+        CGameCtnChallenge? baseMap,
         string subCategory,
         IDictionary<string, ConversionModel> convs,
         ref int index)
@@ -151,7 +156,7 @@ internal sealed class InitStageService
         {
             try
             {
-                var conv = ProcessBlock(collectionName, map, block, subCategory, ref index);
+                var conv = ProcessBlock(collectionName, baseMap, block, subCategory, ref index);
 
                 if (conv is not null)
                 {
@@ -168,7 +173,7 @@ internal sealed class InitStageService
 
     private static readonly string[] technologies = ["MM_Collision", "Solid2"];
 
-    private ConversionModel? ProcessBlock(string collectionName, CGameCtnChallenge map, BlockInfoModel block, string subCategory, ref int index)
+    private ConversionModel? ProcessBlock(string collectionName, CGameCtnChallenge? baseMap, BlockInfoModel block, string subCategory, ref int index)
     {
         var node = (CGameCtnBlockInfo?)Gbx.ParseNode(block.GbxFilePath);
 
@@ -218,7 +223,7 @@ internal sealed class InitStageService
                             Technology = technology,
                             MapTechnology = mapTechnology,
                             Units = groundUnits
-                        }, map, ref index);
+                        }, baseMap, ref index);
 
                         if (technology == mapTechnology)
                         {
@@ -253,7 +258,7 @@ internal sealed class InitStageService
                             Technology = technology,
                             MapTechnology = mapTechnology,
                             Units = airUnits
-                        }, map, ref index);
+                        }, baseMap, ref index);
 
                         if (technology == mapTechnology)
                         {
@@ -267,7 +272,7 @@ internal sealed class InitStageService
         return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height);
     }
 
-    private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge map, ref int index)
+    private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index)
     {
         var mobil = subVariant.Node.Node;
 
@@ -325,7 +330,7 @@ internal sealed class InitStageService
 
         if (subVariant.Technology == subVariant.MapTechnology)
         {
-            map.PlaceAnchoredObject(
+            baseMap?.PlaceAnchoredObject(
                 new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
                     (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
         }

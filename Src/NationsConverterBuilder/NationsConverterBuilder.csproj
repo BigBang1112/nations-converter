@@ -19,6 +19,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\items\" />
+    <Folder Include="wwwroot\data\" />
     <Folder Include="wwwroot\sheets\" />
   </ItemGroup>
 
