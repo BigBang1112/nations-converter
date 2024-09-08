@@ -17,6 +17,9 @@
       "BaseHeight": 3
     }
   },
+  "TerrainModifiers": [
+    "Tundra"
+  ],
   "Blocks": {
     "AlpineIceRoad": {
       "PageName": "Decors/IceDecor",

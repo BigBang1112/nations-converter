@@ -17,6 +17,9 @@
       "BaseHeight": 3
     }
   },
+  "TerrainModifiers": [
+    "Rock"
+  ],
   "Blocks": {
     "SpeedRockToRockToBridge": {
       "PageName": "Bridge/Bridge",

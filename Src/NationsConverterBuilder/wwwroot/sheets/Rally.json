@@ -17,6 +17,9 @@
       "BaseHeight": 3
     }
   },
+  "TerrainModifiers": [
+    "RockyGrass"
+  ],
   "Blocks": {
     "RallySignPillar": {
       "PageName": "Signs",

@@ -125,6 +125,29 @@ internal sealed class SetupService
             }
         }
 
+        var modifiersFolder = Path.Combine(dataDirPath, collection.Id, "ConstructionDecorationTerrainModifier");
+
+        if (Directory.Exists(modifiersFolder))
+        {
+            foreach (var modifierFile in Directory.EnumerateFiles(modifiersFolder, "*.Gbx"))
+            {
+                if (Gbx.ParseNode(modifierFile) is not CGameCtnDecorationTerrainModifier modifier)
+                {
+                    continue;
+                }
+
+                var name = modifier.IdName ?? string.Empty;
+
+                if (name.StartsWith("TerrainModifier", StringComparison.OrdinalIgnoreCase) && name.Length > 15)
+                {
+                    name = name.Substring(15);
+                }
+
+                collection.TerrainModifiers.Add(name);
+            }
+        }
+
+        // currently unused
         foreach (var modifier in collection.Node.ReplacementTerrainModifiers ?? [])
         {
             foreach (var mat in modifier.Node?.Remapping?.Fids?.Select(x => x.Name) ?? [])

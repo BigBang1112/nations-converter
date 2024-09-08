@@ -5,6 +5,10 @@
       "BaseHeight": 0
     }
   },
+  "TerrainModifiers": [
+    "Dirt",
+    "Fabric"
+  ],
   "Blocks": {
     "StadiumSculptBridgeSlopeStartMirror": {
       "PageName": "Decors/Bridge",
