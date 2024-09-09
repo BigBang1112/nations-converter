@@ -197,6 +197,7 @@ internal sealed class InitStageService
             pageName = pageName[..^1];
         }
 
+        var isTerrainModifiable = false;
         var mapTechnology = "MM_Collision";
 
         foreach (var technology in technologies)
@@ -228,12 +229,14 @@ internal sealed class InitStageService
                             Technology = technology,
                             MapTechnology = mapTechnology,
                             Units = groundUnits
-                        }, baseMap, ref index);
+                        }, baseMap, ref index, out var isModifiable);
 
                         if (technology == mapTechnology)
                         {
                             index++;
                         }
+
+                        isTerrainModifiable |= isModifiable;
                     }
                 }
             }
@@ -263,27 +266,30 @@ internal sealed class InitStageService
                             Technology = technology,
                             MapTechnology = mapTechnology,
                             Units = airUnits
-                        }, baseMap, ref index);
+                        }, baseMap, ref index, out var isModifiable);
 
                         if (technology == mapTechnology)
                         {
                             index++;
                         }
+
+                        isTerrainModifiable |= isModifiable;
                     }
                 }
             }
         }
 
-        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height);
+        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable);
     }
 
-    private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index)
+    private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index, out bool isTerrainModifiable)
     {
         var mobil = subVariant.Node.Node;
 
         if (mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
         {
             logger.LogError("Failed to get solid for {BlockName} {ModifierType} {VariantIndex} {SubVariantIndex}", subVariant.BlockName, subVariant.ModifierType, subVariant.VariantIndex, subVariant.SubVariantIndex);
+            isTerrainModifiable = false;
             return;
         }
 
@@ -295,8 +301,9 @@ internal sealed class InitStageService
 
         var modifierMaterials = GetModifierMaterials(solid);
         var modifierTypes = new List<string> { subVariant.ModifierType };
-        if (!initOptions.Value.DisabledTerrainModifierBlocks.Contains(subVariant.BlockName)
-            && modifierMaterials.Count > 0 && subVariant.ModifierType == "Ground")
+        isTerrainModifiable = !initOptions.Value.DisabledTerrainModifierBlocks.Contains(subVariant.BlockName)
+            && modifierMaterials.Count > 0 && subVariant.ModifierType == "Ground";
+        if (isTerrainModifiable)
         {
             modifierTypes.AddRange(modifierMaterials.Values.Distinct());
         }
@@ -378,7 +385,7 @@ internal sealed class InitStageService
         }
     }
 
-    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height)
+    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable)
     {
         var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
         var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
@@ -459,7 +466,8 @@ internal sealed class InitStageService
                 CGameCtnBlockInfo.EWayPointType.Finish => WaypointType.Finish,
                 _ => null
             },
-            SpawnPos = commonSpawnPos
+            SpawnPos = commonSpawnPos,
+            Modifiable = isTerrainModifiable ? true : null
         };
     }
 

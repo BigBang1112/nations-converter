@@ -247,6 +247,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedBridgePillarSand10": {
@@ -338,6 +339,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedBridgePillarWater6": {
@@ -1282,6 +1284,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadLeft2x1": {
@@ -1338,6 +1341,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadLeft4x1": {
@@ -1414,6 +1418,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4InMirror": {
@@ -1505,6 +1510,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadStraight": {
@@ -1551,6 +1557,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4In": {
@@ -1642,6 +1649,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadRight4x1": {
@@ -1718,6 +1726,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4Mirror": {
@@ -1804,6 +1813,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadRight2x1": {
@@ -1860,6 +1870,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpCorner": {
@@ -1986,6 +1997,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUp": {
@@ -2142,6 +2154,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpDiagRight": {
@@ -2283,6 +2296,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpDiagLeft": {
@@ -2424,6 +2438,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpBase1": {
@@ -2555,6 +2570,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisBridgeDiagRight": {
@@ -2711,6 +2727,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisBridgeDiagLeft": {
@@ -2867,12 +2884,14 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedFreeSignWrongWay": {
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2902,6 +2921,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2920,6 +2940,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2941,6 +2962,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2962,6 +2984,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -3003,6 +3026,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -3044,6 +3068,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -3065,6 +3090,7 @@
       "PageName": "Decors/Signs",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -3136,6 +3162,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedClassicContainers": {
@@ -3157,6 +3184,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedClassicBarrels": {
@@ -3178,6 +3206,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedPipelineRoad": {
@@ -3242,6 +3271,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 6
     },
     "SpeedClassicReservoir": {
@@ -3285,6 +3315,7 @@
           0
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedClassicRocks": {
@@ -3299,6 +3330,7 @@
           0
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -3347,6 +3379,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedClassicMountain": {
@@ -3543,6 +3576,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedSaguarosGround": {
@@ -3564,6 +3598,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedSandCheckpoint": {
@@ -3591,6 +3626,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedClassicPeak": {
@@ -3877,6 +3913,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRocksArch": {
@@ -3918,6 +3955,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedCliffRoad2": {
@@ -4183,6 +4221,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4225,6 +4264,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4246,6 +4286,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4278,6 +4319,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4299,6 +4341,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4390,6 +4433,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4432,6 +4476,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4453,6 +4498,7 @@
       "PageName": "RoadTilt",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4603,6 +4649,7 @@
       "PageName": "GarageSlope",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4649,6 +4696,7 @@
       "PageName": "GarageSlope",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4695,6 +4743,7 @@
       "PageName": "Parking/GarageTurbos",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4741,6 +4790,7 @@
       "PageName": "Parking/GarageTurbos",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4787,6 +4837,7 @@
       "PageName": "Parking/GarageTurbos",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4833,6 +4884,7 @@
       "PageName": "Parking/GarageTurbos",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5002,6 +5054,7 @@
       "PageName": "Parking/GarageMisc",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5180,6 +5233,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5236,6 +5290,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5278,6 +5333,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5377,6 +5433,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5433,6 +5490,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5549,6 +5607,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5614,6 +5673,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5656,6 +5716,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5702,6 +5763,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5753,6 +5815,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5809,6 +5872,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5845,6 +5909,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5881,6 +5946,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5967,6 +6033,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6038,6 +6105,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6109,6 +6177,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6165,6 +6234,7 @@
       "PageName": "Parking/GarageSlopeGT",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6767,6 +6837,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRoadEntry2": {
@@ -6823,6 +6894,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRoadEntry1": {
@@ -6879,6 +6951,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRockToRockEntry3": {
@@ -8198,6 +8271,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8239,6 +8313,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8280,6 +8355,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8362,6 +8438,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8403,6 +8480,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8444,6 +8522,7 @@
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8536,6 +8615,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           1,
@@ -8622,6 +8702,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8722,6 +8803,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8764,6 +8846,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8825,6 +8908,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8881,6 +8965,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8913,6 +8998,7 @@
       "PageName": "Road/RoadTwisted",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9011,6 +9097,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9058,6 +9145,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Finish",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9090,6 +9178,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9131,6 +9220,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9172,6 +9262,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9214,6 +9305,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "StartFinish",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9260,6 +9352,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9325,6 +9418,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Start",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9362,6 +9456,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9461,6 +9556,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedFallenContainers": {
@@ -9507,12 +9603,14 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedBarrelJump": {
       "PageName": "Road/RoadHazardSlalom",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9569,6 +9667,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "DesertToDesert2": {
@@ -9625,6 +9724,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverClip": {
@@ -9686,7 +9786,8 @@
           1
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Modifiable": true
     },
     "DesertToDesert": {
       "PageName": "Other",
@@ -9756,7 +9857,8 @@
           1
         ]
       },
-      "ZoneHeight": 6
+      "ZoneHeight": 6,
+      "Modifiable": true
     },
     "SpeedToCanyon": {
       "PageName": "Other",
@@ -9797,6 +9899,7 @@
       "PageName": "Other",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9948,6 +10051,7 @@
           0
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9981,6 +10085,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "SpeedPylon": {
@@ -9990,6 +10095,7 @@
       "PageName": "Other",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,

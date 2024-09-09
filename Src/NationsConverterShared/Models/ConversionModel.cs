@@ -9,6 +9,7 @@ public sealed class ConversionModel : ConversionModifierModel
     public ConversionModifierModel? Air { get; set; }
     public int? ZoneHeight { get; set; }
     public WaypointType? Waypoint { get; set; }
+    public bool? Modifiable { get; set; }
 
     public T GetProperty<T>(Func<ConversionModel, ConversionModifierModel?> modifierFunc, Func<ConversionModifierModel, T?> propertyFunc, Func<ConversionModel, ConversionModifierModel?>? fallbackModifierFunc = null)
         where T : struct

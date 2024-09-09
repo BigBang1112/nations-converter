@@ -124,6 +124,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 6
     },
     "AlpineIceRoadExit": {
@@ -180,6 +181,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineLakeSlope": {
@@ -406,6 +408,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineSnowRoad": {
@@ -470,6 +473,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 6
     },
     "AlpineLakeBridge": {
@@ -522,6 +526,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -572,6 +577,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Variants": 1,
       "SpawnPos": [
         16,
@@ -698,6 +704,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineIceRamp": {
@@ -756,6 +763,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -796,6 +804,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -836,6 +845,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -876,6 +886,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -916,6 +927,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -925,6 +937,7 @@
       "PageName": "Decors/CivilDecor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -1003,6 +1016,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -1054,6 +1068,7 @@
       "PageName": "Decors/CivilDecor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -1100,6 +1115,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRocks1": {
@@ -1121,6 +1137,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineTrees3": {
@@ -1318,7 +1335,8 @@
           1
         ]
       },
-      "ZoneHeight": 3
+      "ZoneHeight": 3,
+      "Modifiable": true
     },
     "AlpineSnowBase": {
       "PageName": "Terraformation",
@@ -1340,7 +1358,8 @@
           1
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Modifiable": true
     },
     "Snow3": {
       "PageName": "Terraformation",
@@ -1362,7 +1381,8 @@
           1
         ]
       },
-      "ZoneHeight": 9
+      "ZoneHeight": 9,
+      "Modifiable": true
     },
     "Snow2": {
       "PageName": "Terraformation",
@@ -1384,7 +1404,8 @@
           1
         ]
       },
-      "ZoneHeight": 6
+      "ZoneHeight": 6,
+      "Modifiable": true
     },
     "AlpineRoadWoodTiltCornerInsideGround": {
       "PageName": "RoadTilt/GroundRoadTiltMisc",
@@ -1448,6 +1469,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltGTCurve1Ground": {
@@ -1542,6 +1564,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltSpinGround": {
@@ -1682,6 +1705,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltCornerOutsideGround": {
@@ -1746,6 +1770,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltUnSpinGround": {
@@ -1886,6 +1911,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltCornerInside": {
@@ -2331,6 +2357,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltStraightGround": {
@@ -2395,6 +2422,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltTwistInGround": {
@@ -2450,6 +2478,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltRightCheckpointGround": {
@@ -2525,6 +2554,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltTwistOutGround": {
@@ -2580,6 +2610,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltTurboLeftGround": {
@@ -2644,6 +2675,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltLeftCheckpointGround": {
@@ -2719,12 +2751,14 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallRoadClipPillar": {
       "PageName": "Decor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2767,6 +2801,7 @@
       "PageName": "Decor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2788,6 +2823,7 @@
       "PageName": "Decor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2878,6 +2914,7 @@
       "PageName": "Decor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2913,6 +2950,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2950,6 +2988,7 @@
       "PageName": "Decor",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2986,6 +3025,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineIceRoadClip": {
@@ -3488,6 +3528,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineCliffRoadLeft": {
@@ -3629,6 +3670,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineToundraHillsTransitionRoadwood": {
@@ -4722,6 +4764,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4785,6 +4828,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4822,6 +4866,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4891,6 +4936,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4937,6 +4983,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -4984,6 +5031,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5035,6 +5083,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5081,6 +5130,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5127,6 +5177,7 @@
       "PageName": "MetalTube",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -5770,6 +5821,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase4Right": {
@@ -5904,6 +5956,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBiSlopeStart": {
@@ -5983,6 +6036,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase6Right": {
@@ -6152,6 +6206,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase4Left": {
@@ -6286,6 +6341,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase6Left": {
@@ -6445,6 +6501,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBiSlopeEnd": {
@@ -6552,6 +6609,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBridge": {
@@ -6636,6 +6694,7 @@
       "PageName": "GreatWall/GTCurve",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6809,6 +6868,7 @@
       "PageName": "GreatWall/Road",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -6916,6 +6976,7 @@
       "PageName": "GreatWall/Road",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7190,6 +7251,7 @@
       "PageName": "GreatWall/Road",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7402,6 +7464,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7423,6 +7486,7 @@
       "PageName": "GreatWall/Road",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7482,6 +7546,7 @@
       "PageName": "GreatWall/GTCurve2",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7538,6 +7603,7 @@
       "PageName": "GreatWall/BiSlope",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -7614,6 +7680,7 @@
       "PageName": "GreatWall/BiSlope",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8629,6 +8696,7 @@
       "PageName": "GreatWall",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8693,6 +8761,7 @@
       "PageName": "Road/RoadTemple",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8757,6 +8826,7 @@
       "PageName": "Road/RoadTemple",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8835,6 +8905,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8877,6 +8948,7 @@
       "PageName": "Road/RoadTemple",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8955,6 +9027,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -8997,6 +9070,7 @@
       "PageName": "Road/RoadTemple",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9061,6 +9135,7 @@
       "PageName": "Road/RoadSlopes",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9211,6 +9286,7 @@
       "PageName": "Road/RoadSlopes",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9257,6 +9333,7 @@
       "PageName": "Road/RoadSlopes",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9318,6 +9395,7 @@
       "PageName": "Road/RoadSlopes",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9417,6 +9495,7 @@
       "PageName": "Road/RoadSlopes",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9468,6 +9547,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9545,6 +9625,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Finish",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9577,6 +9658,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9634,6 +9716,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9680,6 +9763,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9745,6 +9829,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "StartFinish",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9792,6 +9877,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Start",
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9843,6 +9929,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9885,6 +9972,7 @@
       "PageName": "Road/Ramps",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9917,6 +10005,7 @@
       "PageName": "Road/Ramps",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9954,6 +10043,7 @@
       "PageName": "Road/Ramps",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -9995,6 +10085,7 @@
       "PageName": "Road/Ramps",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10027,6 +10118,7 @@
       "PageName": "Road/Ramps",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10059,6 +10151,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10100,6 +10193,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10141,6 +10235,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10187,6 +10282,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10228,6 +10324,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10274,6 +10371,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10315,6 +10413,7 @@
       "PageName": "Road/RoadTurbo",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10430,6 +10529,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadWoodTiltSlopeDownCornerLeftGround": {
@@ -10510,6 +10610,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRoadPlateformGT5": {
@@ -11526,7 +11627,8 @@
           1
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Modifiable": true
     },
     "SnowToSnow1": {
       "PageName": "Other",
@@ -11610,6 +11712,7 @@
           0
         ]
       },
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -11689,6 +11792,7 @@
       "PageName": "Other",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "Units": [
         [
           0,
@@ -11739,7 +11843,8 @@
           1
         ]
       },
-      "ZoneHeight": 1
+      "ZoneHeight": 1,
+      "Modifiable": true
     },
     "Snow1ToSnow2": {
       "PageName": "Other",
