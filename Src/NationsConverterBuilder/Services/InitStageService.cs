@@ -287,18 +287,6 @@ internal sealed class InitStageService
             return;
         }
 
-        var itemInfo = new ItemInfoModel
-        {
-            Block = new()
-            {
-                Modifier = subVariant.ModifierType,
-                Variant = subVariant.VariantIndex,
-                SubVariant = subVariant.SubVariantIndex,
-                Units = subVariant.Units,
-            },
-            InitVersion = initVersion
-        };
-
         var spawnLoc = subVariant.ModifierType == "Air"
             ? subVariant.BlockInfo.SpawnLocAir
             : subVariant.BlockInfo.SpawnLocGround;
@@ -315,6 +303,18 @@ internal sealed class InitStageService
 
         foreach (var modifierType in modifierTypes)
         {
+            var itemInfo = new ItemInfoModel
+            {
+                Block = new()
+                {
+                    Modifier = modifierType,
+                    Variant = subVariant.VariantIndex,
+                    SubVariant = subVariant.SubVariantIndex,
+                    Units = subVariant.Units,
+                },
+                InitVersion = initVersion
+            };
+
             CGameItemModel finalItem;
             switch (subVariant.Technology)
             {
