@@ -23,7 +23,7 @@ internal sealed class ItemMakerService
         this.logger = logger;
     }
 
-    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid, CSceneObjectLink[]? objectLinks, Iso4? spawnLoc, string subCategory)
+    public CPlugCrystal CreateCrystalFromSolid(CPlugSolid solid, CSceneObjectLink[]? objectLinks, Iso4? spawnLoc, string subCategory, string? modifier = null, Func<CPlugTree, bool>? skipTreeWhen = null)
     {
         if (solid.Tree is not CPlugTree tree)
         {
@@ -34,7 +34,7 @@ internal sealed class ItemMakerService
 
         return tree.ToCrystal((mat, matFile) =>
         {
-            return GetMaterialLink(mat, matFile, matDict, subCategory);
+            return GetMaterialLink(mat, matFile, matDict, subCategory, modifier);
         },
         (matFile, uvSetIndex, uvs) =>
         {
@@ -49,7 +49,7 @@ internal sealed class ItemMakerService
         {
             ApplyDecalUvModifiers(matFile, uvSetIndex, uvs, subCategory);
         },
-        skipTreeWhen: null,
+        skipTreeWhen,
         logger);
     }
 
@@ -59,7 +59,7 @@ internal sealed class ItemMakerService
 
         return solid.ToStaticObject((mat, matFile) =>
         {
-            return GetMaterialLink(mat, matFile, matDict, subCategory);
+            return GetMaterialLink(mat, matFile, matDict, subCategory, modifier: null);
         },
         (matFile, uvSetIndex, uvs) =>
         {
@@ -72,11 +72,12 @@ internal sealed class ItemMakerService
         CPlugMaterial? mat,
         GbxRefTableFile matFile,
         Dictionary<string, CPlugMaterialUserInst> matDict,
-        string subCategory)
+        string subCategory,
+        string? modifier)
     {
         var matName = GbxPath.GetFileNameWithoutExtension(matFile.FilePath);
 
-        if (matDict.TryGetValue(matName, out var matInst))
+        if (modifier is null && matDict.TryGetValue(matName, out var matInst))
         {
             return matInst;
         }
@@ -84,6 +85,16 @@ internal sealed class ItemMakerService
         if (!initOptions.Value.Materials.TryGetValue(matName, out var material))
         {
             return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
+        }
+
+        if (modifier is not null && material.Modifiers.TryGetValue(modifier, out var modifierMaterial))
+        {
+            material = initOptions.Value.Materials[modifierMaterial];
+
+            if (matDict.TryGetValue(modifierMaterial, out var matModifierInst))
+            {
+                return matModifierInst;
+            }
         }
 
         if (material.Remove)

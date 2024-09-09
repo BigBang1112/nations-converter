@@ -8,6 +8,7 @@ using NationsConverterShared.Models;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using GBX.NET.Engines.GameData;
+using Microsoft.Extensions.Options;
 
 namespace NationsConverterBuilder.Services;
 
@@ -15,6 +16,7 @@ internal sealed class InitStageService
 {
     private readonly SetupService setupService;
     private readonly ItemMakerService itemMaker;
+    private readonly IOptions<InitOptions> initOptions;
     private readonly ILogger<InitStageService> logger;
 
     private readonly string dataDirPath;
@@ -47,10 +49,12 @@ internal sealed class InitStageService
         ItemMakerService itemMaker,
         IWebHostEnvironment hostEnvironment,
         IConfiguration config,
+        IOptions<InitOptions> initOptions,
         ILogger<InitStageService> logger)
     {
         this.setupService = setupService;
         this.itemMaker = itemMaker;
+        this.initOptions = initOptions;
         this.logger = logger;
 
         dataDirPath = Path.Combine(hostEnvironment.WebRootPath, "data");
@@ -301,39 +305,72 @@ internal sealed class InitStageService
 
         Directory.CreateDirectory(Path.Combine(itemsDirPath, subVariant.DirectoryPath));
 
-        CGameItemModel finalItem;
-        switch (subVariant.Technology)
+        var modifierMaterials = GetModifierMaterials(solid);
+        var modifierTypes = new List<string> { subVariant.ModifierType };
+        if (modifierMaterials.Count > 0 && subVariant.ModifierType == "Ground")
         {
-            case "MM_Collision":
-                var crystal = itemMaker.CreateCrystalFromSolid(solid, mobil.ObjectLink, spawnLoc, subVariant.SubCategory);
-                finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
-                break;
-            case "Solid2":
-                var staticObject = itemMaker.CreateStaticObjectFromSolid(solid, subVariant.SubCategory);
-                finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
-                break;
-            default:
-                //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
-                return;
+            modifierTypes.AddRange(modifierMaterials.Values.Distinct());
         }
 
-        finalItem.WaypointType = (CGameItemModel.EWaypointType)(int)subVariant.BlockInfo.WayPointType;
-
-        var itemPath = Path.Combine(subVariant.DirectoryPath, $"{subVariant.ModifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
-
-        finalItem.Save(Path.Combine(itemsDirPath, itemPath));
-
-        if (!string.IsNullOrEmpty(initItemsOutputPath))
+        foreach (var modifierType in modifierTypes)
         {
-            Directory.CreateDirectory(Path.Combine(initItemsOutputPath, subVariant.DirectoryPath));
-            File.Copy(Path.Combine(itemsDirPath, itemPath), Path.Combine(initItemsOutputPath, itemPath), true);
-        }
+            CGameItemModel finalItem;
+            switch (subVariant.Technology)
+            {
+                case "MM_Collision":
+                    var crystal = itemMaker.CreateCrystalFromSolid(solid, mobil.ObjectLink, spawnLoc, subVariant.SubCategory,
+                            modifierType is "Ground" or "Air" ? null : modifierType,
+                            skipTreeWhen: tree =>
+                            {
+                                if (modifierMaterials.Count == 0 || subVariant.ModifierType != "Ground" || tree.ShaderFile is null)
+                                {
+                                    return false;
+                                }
 
-        if (subVariant.Technology == subVariant.MapTechnology)
-        {
-            baseMap?.PlaceAnchoredObject(
-                new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                    (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+                                var matName = GbxPath.GetFileNameWithoutExtension(tree.ShaderFile.FilePath);
+
+                                // skip materials that are not part of the current modifier type
+                                if (modifierMaterials.TryGetValue(matName, out var materialModifier))
+                                {
+                                    return modifierType == "Ground";
+                                }
+
+                                return modifierType != "Ground";
+                            });
+                    finalItem = itemMaker.Build(crystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
+                    break;
+                case "Solid2":
+                    // Solid2 still in development
+                    if (modifierType is not "Ground" and not "Air")
+                    {
+                        continue;
+                    }
+                    var staticObject = itemMaker.CreateStaticObjectFromSolid(solid, subVariant.SubCategory);
+                    finalItem = itemMaker.Build(staticObject, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
+                    break;
+                default:
+                    //logger.LogError("Unsupported technology {Technology}", subVariant.Technology);
+                    return;
+            }
+
+            finalItem.WaypointType = (CGameItemModel.EWaypointType)(int)subVariant.BlockInfo.WayPointType;
+
+            var itemPath = Path.Combine(subVariant.DirectoryPath, $"{modifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
+
+            finalItem.Save(Path.Combine(itemsDirPath, itemPath));
+
+            if (!string.IsNullOrEmpty(initItemsOutputPath))
+            {
+                Directory.CreateDirectory(Path.Combine(initItemsOutputPath, subVariant.DirectoryPath));
+                File.Copy(Path.Combine(itemsDirPath, itemPath), Path.Combine(initItemsOutputPath, itemPath), true);
+            }
+
+            if (subVariant.Technology == subVariant.MapTechnology && modifierType is "Air" or "Ground" or "GroundDefault")
+            {
+                baseMap?.PlaceAnchoredObject(
+                    new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
+                        (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+            }
         }
     }
 
@@ -484,5 +521,35 @@ internal sealed class InitStageService
             Directory.CreateDirectory(Path.Combine(initItemsOutputPath, dirPath));
             File.Copy(Path.Combine(itemsDirPath, itemPath), Path.Combine(initItemsOutputPath, itemPath), true);
         }
+    }
+
+    private Dictionary<string, string> GetModifierMaterials(CPlugSolid solid)
+    {
+        var modifierMaterials = new Dictionary<string, string>();
+
+        foreach (var treeMaterialName in ((CPlugTree?)solid.Tree)?.GetAllChildren(includeVisualMipLevels: true)
+            .Select(x => GbxPath.GetFileNameWithoutExtension(x.ShaderFile?.FilePath)) ?? [])
+        {
+            if (treeMaterialName is null || !initOptions.Value.Materials.TryGetValue(treeMaterialName, out var material))
+            {
+                continue;
+            }
+
+            if (material.Modifiers.Count == 0)
+            {
+                continue;
+            }
+
+            modifierMaterials[treeMaterialName] = "GroundDefault";
+
+            foreach (var (modifier, modifierMaterialName) in material.Modifiers)
+            {
+                modifierMaterials[modifierMaterialName] = modifier;
+            }
+
+            // here it could do break; ?
+        }
+
+        return modifierMaterials;
     }
 }
