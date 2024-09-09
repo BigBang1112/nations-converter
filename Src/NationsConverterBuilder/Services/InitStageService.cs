@@ -307,7 +307,8 @@ internal sealed class InitStageService
 
         var modifierMaterials = GetModifierMaterials(solid);
         var modifierTypes = new List<string> { subVariant.ModifierType };
-        if (modifierMaterials.Count > 0 && subVariant.ModifierType == "Ground")
+        if (!initOptions.Value.DisabledTerrainModifierBlocks.Contains(subVariant.BlockName)
+            && modifierMaterials.Count > 0 && subVariant.ModifierType == "Ground")
         {
             modifierTypes.AddRange(modifierMaterials.Values.Distinct());
         }
@@ -322,7 +323,10 @@ internal sealed class InitStageService
                             modifierType is "Ground" or "Air" ? null : modifierType,
                             skipTreeWhen: tree =>
                             {
-                                if (modifierMaterials.Count == 0 || subVariant.ModifierType != "Ground" || tree.ShaderFile is null)
+                                if (modifierMaterials.Count == 0
+                                    || subVariant.ModifierType != "Ground"
+                                    || tree.ShaderFile is null
+                                    || initOptions.Value.DisabledTerrainModifierBlocks.Contains(subVariant.BlockName))
                                 {
                                     return false;
                                 }
