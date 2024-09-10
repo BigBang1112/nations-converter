@@ -1284,7 +1284,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadLeft2x1": {
@@ -1341,7 +1340,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadLeft4x1": {
@@ -1418,7 +1416,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4InMirror": {
@@ -1510,7 +1507,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadStraight": {
@@ -1557,7 +1553,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4In": {
@@ -1649,7 +1644,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadRight4x1": {
@@ -1726,7 +1720,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadGTCurve4Mirror": {
@@ -1813,7 +1806,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverRoadToRoadRight2x1": {
@@ -1870,7 +1862,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpCorner": {
@@ -1997,7 +1988,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUp": {
@@ -2154,7 +2144,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpDiagRight": {
@@ -2296,7 +2285,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpDiagLeft": {
@@ -2438,7 +2426,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisStraightUpBase1": {
@@ -2570,7 +2557,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisBridgeDiagRight": {
@@ -2727,7 +2713,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverTetrisBridgeDiagLeft": {
@@ -2884,7 +2869,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedFreeSignWrongWay": {
@@ -6837,7 +6821,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRoadEntry2": {
@@ -6894,7 +6877,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRoadEntry1": {
@@ -6951,7 +6933,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedTunnelRockToRockEntry3": {
