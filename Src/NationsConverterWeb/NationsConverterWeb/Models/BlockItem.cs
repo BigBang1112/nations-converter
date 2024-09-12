@@ -26,5 +26,7 @@ public sealed class BlockItem
     [Range(0, 100)]
     public int Value { get; set; }
 
+    public bool JustResave { get; set; }
+
     public ICollection<ItemUpload> Uploads { get; set; } = [];
 }

@@ -16,9 +16,24 @@
         <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
     }
 
+    <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
+
     <p>@(block.Description ?? "No description.")</p>
 
-    <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
+    @if (block.Items.Any(x => x.JustResave))
+    {
+        <p>This block contains "just resave" items. It means the item only needs a lightmap fix. How to resave:</p>
+        <ol style="margin-top: 0;">
+            <li>Place these items on the map (the more you place at once the faster it is to complete).</li>
+            <li>In "Item edition", use "Edit selected item" on the item.</li>
+            <li><b>Click on the wrench at "Mesh" (do not skip).</b></li>
+            <li><b>Save the item, overwrite (do not skip, as this will generate the lightmap!).</b></li>
+            <li>Leave the mesh modeller.</li>
+            <li>Generate the icon (south-east).</li>
+            <li>Save the item again, overwrite.</li>
+            <li>Submit this item back.</li>
+        </ol>
+    }
 
     @if (block.AssignedTo is null)
     {
@@ -47,6 +62,11 @@
                     <button @onclick="() => DownloadAsObjAsync(item)" class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
 
                     <span>@item.FileName</span>
+
+                    @if (item.JustResave)
+                    {
+                        <span class="yellow">(just resave!)</span>
+                    }
 
                     @if (IsAssignedUser())
                     {
