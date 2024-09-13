@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GBX.NET.Tool" Version="0.1.0" />
+    <PackageReference Include="GBX.NET.Tool" Version="0.2.0-nightly.20240913.f82616f" />
       <PackageReference Include="YamlDotNet" Version="16.1.0" />
   </ItemGroup>
 

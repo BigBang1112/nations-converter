@@ -24,7 +24,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
-      <PackageReference Include="GBX.NET" Version="2.0.8-nightly.20240912.322c516" />
+      <PackageReference Include="GBX.NET" Version="2.0.8-nightly.20240913.f82616f" />
   </ItemGroup>
 
   <ItemGroup>

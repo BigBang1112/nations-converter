@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
 
@@ -17,7 +18,8 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
-        ILogger logger) : base(map, config, logger)
+        IComplexConfig complexConfig,
+        ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;

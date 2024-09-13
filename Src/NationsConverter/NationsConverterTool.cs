@@ -8,7 +8,7 @@ using TmEssentials;
 
 namespace NationsConverter;
 
-public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger) : ITool,
+public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig complexConfig, ILogger logger) : ITool,
     IProductive<Gbx<CGameCtnChallenge>>,
     IConfigurable<NationsConverterConfig>
 {
@@ -31,16 +31,16 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, ILogger logger)
 
         var convertedMap = CreateBaseMap();
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, logger);
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, logger);
         placeBaseZoneConverter.Convert();
 
-        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, logger);
+        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, complexConfig, logger);
         var coveredZoneBlocks = coveredZoneBlockInfoExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBasicBlockConverter(map, convertedMap, Config, coveredZoneBlocks, logger);
+        var placeBasicBlockConverter = new PlaceBasicBlockConverter(map, convertedMap, Config, complexConfig, coveredZoneBlocks, logger);
         placeBasicBlockConverter.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, logger);
+        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, complexConfig, logger);
         placeTransformationConverter.Convert();
 
         var decorationConverter = new DecorationConverter(map, convertedMap, Config, logger);

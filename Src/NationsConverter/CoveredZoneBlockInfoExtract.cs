@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using Microsoft.VisualBasic;
 using NationsConverterShared.Models;
@@ -14,7 +15,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
     private readonly ConversionSetModel conversionSet;
 
-    public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, NationsConverterConfig config, ILogger logger)
+    public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, NationsConverterConfig config, IComplexConfig complexConfig, ILogger logger)
     {
         this.map = map;
         this.config = config;
@@ -27,17 +28,7 @@ internal sealed class CoveredZoneBlockInfoExtract
             _ => map.GetEnvironment()
         };
 
-        conversionSet = environment switch
-        {
-            "Snow" => config.Snow,
-            "Rally" => config.Rally,
-            "Desert" => config.Desert,
-            "Island" => config.Island,
-            "Bay" => config.Bay,
-            "Coast" => config.Coast,
-            "Stadium" => config.Stadium, // should not be always Solid category
-            _ => throw new ArgumentException("Environment not supported")
-        };
+        conversionSet = complexConfig.Get<ConversionSetModel>("Generated/" + environment);
     }
 
     public HashSet<CGameCtnBlock> Extract()

@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
 using System;
@@ -18,7 +19,7 @@ internal abstract class BlockConverter
     protected string Environment { get; }
     protected ConversionSetModel ConversionSet { get; }
 
-    public BlockConverter(CGameCtnChallenge map, NationsConverterConfig config, ILogger logger)
+    public BlockConverter(CGameCtnChallenge map, NationsConverterConfig config, IComplexConfig complexConfig, ILogger logger)
     {
         this.map = map;
         this.config = config;
@@ -32,17 +33,7 @@ internal abstract class BlockConverter
             _ => map.GetEnvironment()
         };
 
-        ConversionSet = Environment switch
-        {
-            "Snow" => config.Snow,
-            "Rally" => config.Rally,
-            "Desert" => config.Desert,
-            "Island" => config.Island,
-            "Bay" => config.Bay,
-            "Coast" => config.Coast,
-            "Stadium" => config.Stadium, // should not be always Solid category
-            _ => throw new ArgumentException("Environment not supported")
-        };
+        ConversionSet = complexConfig.Get<ConversionSetModel>("Generated/" + Environment);
     }
 
     protected abstract void ConvertBlock(CGameCtnBlock block, ConversionModel conversion);
