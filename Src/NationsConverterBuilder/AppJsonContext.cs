@@ -7,6 +7,6 @@ namespace NationsConverterBuilder;
 [JsonSerializable(typeof(ConversionSetModel))]
 [JsonSerializable(typeof(ItemInfoModel))]
 [JsonSourceGenerationOptions(
-    Converters = [typeof(JsonInt3Converter), typeof(JsonVec3Converter)],
+    Converters = [typeof(JsonInt2Converter), typeof(JsonInt3Converter), typeof(JsonVec3Converter)],
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull)]
 internal sealed partial class AppJsonContext : JsonSerializerContext;

@@ -3680,6 +3680,12 @@
         ]
       },
       "Modifiable": true,
+      "NotModifiable": [
+        [
+          0,
+          0
+        ]
+      ],
       "Variants": 9
     },
     "RallyFieldFenceAutoCorner": {

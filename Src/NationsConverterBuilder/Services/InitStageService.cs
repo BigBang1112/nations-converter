@@ -39,6 +39,7 @@ internal sealed class InitStageService
 
     static InitStageService()
     {
+        jsonOptions.Converters.Add(new JsonInt2Converter());
         jsonOptions.Converters.Add(new JsonInt3Converter());
         jsonOptions.Converters.Add(new JsonVec3Converter());
         jsonContext = new(jsonOptions);
@@ -198,6 +199,7 @@ internal sealed class InitStageService
         }
 
         var isTerrainModifiable = false;
+        var notModifiable = new HashSet<Int2>();
         var mapTechnology = "MM_Collision";
 
         foreach (var technology in technologies)
@@ -211,7 +213,7 @@ internal sealed class InitStageService
                 for (byte i = 0; i < node.GroundMobils.Length; i++)
                 {
                     var groundMobilSubVariants = node.GroundMobils[i];
-                    
+
                     for (byte j = 0; j < groundMobilSubVariants.Length; j++)
                     {
                         ProcessSubVariant(new()
@@ -237,6 +239,11 @@ internal sealed class InitStageService
                         }
 
                         isTerrainModifiable |= isModifiable;
+
+                        if (!isModifiable)
+                        {
+                            notModifiable.Add((i, j));
+                        }
                     }
                 }
             }
@@ -279,7 +286,7 @@ internal sealed class InitStageService
             }
         }
 
-        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable);
+        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index, out bool isTerrainModifiable)
@@ -385,7 +392,7 @@ internal sealed class InitStageService
         }
     }
 
-    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable)
+    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable, HashSet<Int2> notModifiable)
     {
         var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
         var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
@@ -467,7 +474,8 @@ internal sealed class InitStageService
                 _ => null
             },
             SpawnPos = commonSpawnPos,
-            Modifiable = isTerrainModifiable ? true : null
+            Modifiable = isTerrainModifiable ? true : null,
+            NotModifiable = isTerrainModifiable && notModifiable.Count > 0 ? notModifiable : null
         };
     }
 

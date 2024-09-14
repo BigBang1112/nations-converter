@@ -14,7 +14,7 @@ internal sealed class MaterialModel
 
     /// <summary>
     /// Make this material split the block variant into multiple item parts - especially terrain modifiers.
-    /// Materials without modifiers will be combined into GroundBase, default material will be called GroundDefault, and the rest will be called according to the terrain modifier list.
+    /// Materials without modifiers will be combined into Ground, default material will be called GroundDefault, and the rest will be called according to the terrain modifier list.
     /// </summary>
     public Dictionary<string, string> Modifiers { get; set; } = [];
 
