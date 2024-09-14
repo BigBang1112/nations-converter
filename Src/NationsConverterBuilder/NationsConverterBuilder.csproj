@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="GBX.NET" Version="2.0.8-nightly.20240913.f82616f" />
+    <PackageReference Include="GBX.NET" Version="2.0.8-nightly.20240914.0f65302" />
     <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.0" />
     <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Components" Version="8.0.8" />

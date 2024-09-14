@@ -9,6 +9,8 @@ COPY .git/ ./.git/
 
 RUN dotnet workload install wasm-tools
 
+RUN dotnet nuget add source https://nuget.gbx.tools/v3/index.json --name nuget.gbx.tools
+
 # copy csproj and restore as distinct layers
 COPY Src/$APPNAME/$APPNAME/*.csproj $APPNAME/$APPNAME/
 COPY Src/$APPNAME/$APPNAME.Client/*.csproj $APPNAME/$APPNAME.Client/
