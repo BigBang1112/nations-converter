@@ -9,17 +9,23 @@ internal sealed partial class DecorationConverter
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
     private readonly NationsConverterConfig config;
-
+    private readonly ItemManager itemManager;
     private readonly string environment;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
     private static partial Regex MoodRegex();
 
-    public DecorationConverter(CGameCtnChallenge map, CGameCtnChallenge convertedMap, NationsConverterConfig config, ILogger logger)
+    public DecorationConverter(
+        CGameCtnChallenge map, 
+        CGameCtnChallenge convertedMap, 
+        NationsConverterConfig config, 
+        ItemManager itemManager,
+        ILogger logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;
         this.config = config;
+        this.itemManager = itemManager;
 
         environment = map.GetEnvironment() switch
         {
@@ -50,9 +56,7 @@ internal sealed partial class DecorationConverter
             var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", environment, "Decorations");
             var itemPath = Path.Combine(dirPath, $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}.Item.Gbx");
 
-            convertedMap.PlaceAnchoredObject(
-                new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                    (0, 0, 0), (0, 0, 0));
+            itemManager.Place(itemPath, (0, 0, 0), (0, 0, 0));
         }
     }
 }

@@ -10,6 +10,7 @@ namespace NationsConverter;
 internal sealed class PlaceBlockConverter : BlockConverter
 {
     private readonly CGameCtnChallenge convertedMap;
+    private readonly ItemManager itemManager;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
     private readonly ILogger logger;
@@ -19,11 +20,13 @@ internal sealed class PlaceBlockConverter : BlockConverter
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         IComplexConfig complexConfig,
+        ItemManager itemManager,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.convertedMap = convertedMap;
+        this.itemManager = itemManager;
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
@@ -91,9 +94,7 @@ internal sealed class PlaceBlockConverter : BlockConverter
 
         logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", block.Name, pos, block.Direction);
 
-        convertedMap.PlaceAnchoredObject(
-            new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                pos * BlockSize, (rotRadians, 0, 0));
+        itemManager.Place(itemPath, pos * BlockSize, (rotRadians, 0, 0));
 
         // Place terrain-modifiable pieces
         if (block.IsGround && conversion.Modifiable.GetValueOrDefault() && (conversion.NotModifiable is null || !conversion.NotModifiable.Contains((variant, subVariant))))
@@ -102,9 +103,7 @@ internal sealed class PlaceBlockConverter : BlockConverter
                 ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
                 : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
 
-            convertedMap.PlaceAnchoredObject(
-                new(terrainItemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
-                    pos * BlockSize, (rotRadians, 0, 0));
+            itemManager.Place(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
         }
     }
 }

@@ -29,9 +29,13 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
             throw new InvalidOperationException("Map is already a TM2020 map");
         }
 
+        var runningDir = AppContext.BaseDirectory;
+
         var convertedMap = CreateBaseMap();
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, logger);
+        var itemManager = new ItemManager(convertedMap, runningDir, logger);
+
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, itemManager, logger);
         placeBaseZoneConverter.Convert();
 
         var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, complexConfig, logger);
@@ -40,14 +44,16 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, Config, complexConfig, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBlockConverter(map, convertedMap, Config, complexConfig, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBasicBlockConverter = new PlaceBlockConverter(map, convertedMap, Config, complexConfig, itemManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBasicBlockConverter.Convert();
 
         var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, complexConfig, logger);
         placeTransformationConverter.Convert();
 
-        var decorationConverter = new DecorationConverter(map, convertedMap, Config, logger);
+        var decorationConverter = new DecorationConverter(map, convertedMap, Config, itemManager, logger);
         decorationConverter.Convert();
+
+        itemManager.EmbedData();
 
         if (Config.CopyItems)
         {
