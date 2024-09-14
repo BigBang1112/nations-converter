@@ -65,6 +65,11 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
             CopyDirectory("UserData", Config.UserDataFolder, true);
         }
 
+        if (!Config.UseNewWood)
+        {
+            convertedMap.Chunks.Get<CGameCtnChallenge.Chunk03043022>()!.U01 = 7;
+        }
+
         var fileNameWithoutExtension = gbxMap.FilePath is null
             ? TextFormatter.Deformat(map.MapName)
             : GbxPath.GetFileNameWithoutExtension(gbxMap.FilePath);
