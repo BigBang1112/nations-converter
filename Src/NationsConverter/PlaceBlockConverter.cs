@@ -3,25 +3,29 @@ using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
+using System.Collections.Immutable;
 
 namespace NationsConverter;
 
-internal sealed class PlaceBasicBlockConverter : BlockConverter
+internal sealed class PlaceBlockConverter : BlockConverter
 {
     private readonly CGameCtnChallenge convertedMap;
-    private readonly HashSet<CGameCtnBlock> coveredZoneBlocks;
+    private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
+    private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
     private readonly ILogger logger;
 
-    public PlaceBasicBlockConverter(
+    public PlaceBlockConverter(
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         IComplexConfig complexConfig,
-        HashSet<CGameCtnBlock> coveredZoneBlocks,
+        ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
+        ImmutableDictionary<Int3, string> terrainModifierZones,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.convertedMap = convertedMap;
         this.coveredZoneBlocks = coveredZoneBlocks;
+        this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
     }
 
@@ -64,7 +68,11 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
         var subCategory = "Modless";
 
         var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, block.Name);
-        var itemPath = Path.Combine(dirPath, $"{modifierType}_{block.Variant.GetValueOrDefault()}_{block.SubVariant.GetValueOrDefault()}.Item.Gbx");
+        
+        var variant = block.Variant.GetValueOrDefault();
+        var subVariant = block.SubVariant.GetValueOrDefault();
+
+        var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 
         var pos = block.Direction switch
         {
@@ -86,5 +94,17 @@ internal sealed class PlaceBasicBlockConverter : BlockConverter
         convertedMap.PlaceAnchoredObject(
             new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
                 pos * BlockSize, (rotRadians, 0, 0));
+
+        // Place terrain-modifiable pieces
+        if (block.IsGround && conversion.Modifiable.GetValueOrDefault() && (conversion.NotModifiable is null || !conversion.NotModifiable.Contains((variant, subVariant))))
+        {
+            var terrainItemPath = terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier)
+                ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
+                : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+
+            convertedMap.PlaceAnchoredObject(
+                new(terrainItemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
+                    pos * BlockSize, (rotRadians, 0, 0));
+        }
     }
 }

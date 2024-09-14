@@ -1,6 +1,5 @@
 ﻿using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
-using NationsConverterShared.Models;
 using System.Text.RegularExpressions;
 
 namespace NationsConverter;

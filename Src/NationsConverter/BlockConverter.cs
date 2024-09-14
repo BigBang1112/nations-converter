@@ -2,8 +2,8 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
+using NationsConverter.Models;
 using NationsConverterShared.Models;
-using System;
 
 namespace NationsConverter;
 
@@ -17,7 +17,7 @@ internal abstract class BlockConverter
     /// </summary>
     protected Int3 BlockSize { get; }
     protected string Environment { get; }
-    protected ConversionSetModel ConversionSet { get; }
+    protected ManualConversionSetModel ConversionSet { get; }
 
     public BlockConverter(CGameCtnChallenge map, NationsConverterConfig config, IComplexConfig complexConfig, ILogger logger)
     {
@@ -33,7 +33,8 @@ internal abstract class BlockConverter
             _ => map.GetEnvironment()
         };
 
-        ConversionSet = complexConfig.Get<ConversionSetModel>("Generated/" + Environment);
+        ConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", Environment))
+            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment)));
     }
 
     protected abstract void ConvertBlock(CGameCtnBlock block, ConversionModel conversion);

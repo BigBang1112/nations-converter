@@ -2,8 +2,9 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using Microsoft.VisualBasic;
+using NationsConverter.Models;
 using NationsConverterShared.Models;
+using System.Collections.Immutable;
 
 namespace NationsConverter;
 
@@ -13,7 +14,7 @@ internal sealed class CoveredZoneBlockInfoExtract
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
-    private readonly ConversionSetModel conversionSet;
+    private readonly ManualConversionSetModel conversionSet;
 
     public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, NationsConverterConfig config, IComplexConfig complexConfig, ILogger logger)
     {
@@ -28,10 +29,11 @@ internal sealed class CoveredZoneBlockInfoExtract
             _ => map.GetEnvironment()
         };
 
-        conversionSet = complexConfig.Get<ConversionSetModel>("Generated/" + environment);
+        conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment))
+            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment)));
     }
 
-    public HashSet<CGameCtnBlock> Extract()
+    public ImmutableHashSet<CGameCtnBlock> Extract()
     {
         var groundPositions = new HashSet<Int3>();
 
@@ -55,7 +57,7 @@ internal sealed class CoveredZoneBlockInfoExtract
             PopulateGroundPositions(groundPositions, block, conversion);
         }
 
-        var coveredZoneBlocks = new HashSet<CGameCtnBlock>();
+        var coveredZoneBlocks = ImmutableHashSet.CreateBuilder<CGameCtnBlock>();
 
         foreach (var block in map.GetBlocks())
         {
@@ -80,7 +82,7 @@ internal sealed class CoveredZoneBlockInfoExtract
             }
         }
 
-        return coveredZoneBlocks;
+        return coveredZoneBlocks.ToImmutable();
     }
 
     private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ConversionModel conversion)
