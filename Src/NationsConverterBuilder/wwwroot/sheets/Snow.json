@@ -408,7 +408,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineSnowRoad": {
@@ -526,7 +525,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -1159,6 +1157,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineRocks3": {
@@ -1216,6 +1215,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "AlpineTrees": {
@@ -1247,6 +1247,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "Variants": 1
     },
     "Ice": {
@@ -1335,8 +1336,7 @@
           1
         ]
       },
-      "ZoneHeight": 3,
-      "Modifiable": true
+      "ZoneHeight": 3
     },
     "AlpineSnowBase": {
       "PageName": "Terraformation",
@@ -1358,8 +1358,7 @@
           1
         ]
       },
-      "ZoneHeight": 0,
-      "Modifiable": true
+      "ZoneHeight": 0
     },
     "Snow3": {
       "PageName": "Terraformation",
@@ -1381,8 +1380,7 @@
           1
         ]
       },
-      "ZoneHeight": 9,
-      "Modifiable": true
+      "ZoneHeight": 9
     },
     "Snow2": {
       "PageName": "Terraformation",
@@ -1404,8 +1402,7 @@
           1
         ]
       },
-      "ZoneHeight": 6,
-      "Modifiable": true
+      "ZoneHeight": 6
     },
     "AlpineRoadWoodTiltCornerInsideGround": {
       "PageName": "RoadTilt/GroundRoadTiltMisc",
@@ -3528,7 +3525,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineCliffRoadLeft": {
@@ -3670,7 +3666,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineToundraHillsTransitionRoadwood": {
@@ -5821,7 +5816,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase4Right": {
@@ -5956,7 +5950,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBiSlopeStart": {
@@ -6036,7 +6029,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase6Right": {
@@ -6206,7 +6198,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase4Left": {
@@ -6341,7 +6332,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraSlopeBase6Left": {
@@ -6501,7 +6491,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBiSlopeEnd": {
@@ -6609,7 +6598,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "AlpineGreatWallTetrisSnowToToundraBridge": {

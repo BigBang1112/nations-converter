@@ -14,10 +14,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="config\default\manual\Desert.yml" />
-    </ItemGroup>
-
-    <ItemGroup>
         <PackageReference Include="GBX.NET.Hashing" Version="1.0.0" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
         <PackageReference Include="GBX.NET.Tool.CLI" Version="0.3.0-nightly.20240913.7bb81bd" />
@@ -29,10 +25,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\NationsConverter\NationsConverter.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Config\Default\Manual\" />
     </ItemGroup>
 
 </Project>
