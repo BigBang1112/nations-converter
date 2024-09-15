@@ -81,8 +81,14 @@
     color: white;
 }
 
-    .button:hover {
+    .button:hover:enabled {
         background-color: #444;
+    }
+
+    .button:disabled {
+        background-color: #444;
+        color: #DDD;
+        cursor: auto;
     }
 
 
