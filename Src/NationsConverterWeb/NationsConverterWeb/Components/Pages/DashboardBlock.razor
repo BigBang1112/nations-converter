@@ -69,6 +69,15 @@
                         <span class="yellow">(just resave!)</span>
                     }
 
+                    @if (item.Value > 0)
+                    {
+                        <span title="Item value. This is used for payouts.">@item.Value</span>
+                    }
+                    else
+                    {
+                        <span title="Item value coming soon. This is used for payouts.">(value soon)</span>
+                    }
+
                     @if (IsAssignedUser())
                     {
                         <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
@@ -85,6 +94,16 @@
                 {
                     <div class="upload">
                         <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
+
+                        @if (upload.Value > 0)
+                        {
+                            <span title="Upload value. If higher, the higher percentage of the item value will be payed out to the uploader.">@upload.Value</span>
+                        }
+                        else
+                        {
+                            <span title="Upload value soon. If higher, the higher percentage of the item value will be payed out to the uploader.">(value soon)</span>
+                        }
+
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
 
                         @if (upload.UploadedBy is not null)
