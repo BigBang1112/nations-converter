@@ -108,6 +108,44 @@
             </div>
         }
     </div>
+
+    @if (items.Count == 0)
+    {
+        <button class="button button-big" style="margin: 10px" @onclick="LoadItemMeshInfo">Load item mesh info</button>
+    }
+    else
+    {
+        foreach (var itemGbx in items)
+        {
+            <h4>@Path.GetFileName(itemGbx.FilePath)</h4>
+
+            @if (itemGbx.Node.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
+            {
+                return;
+            }
+
+            var crystal = entityModelEdition.MeshCrystal;
+
+            <ul>
+                @foreach (var mat in crystal.Materials)
+                {
+                    if (mat.MaterialUserInst is null)
+                    {
+                        continue;
+                    }
+
+                    <li>
+                        @mat.MaterialUserInst.Link
+                    
+                        @if (mat.MaterialUserInst.Color?.Length > 0)
+                        {
+                            <span> (color: @string.Join(',', mat.MaterialUserInst.Color))</span>
+                        }
+                    </li>
+                }
+            </ul>
+        }
+    }
 }
 
 @code {
@@ -121,6 +159,8 @@
 
     private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
     private string? blockDirBasePath;
+
+    private List<GBX.NET.Gbx<GBX.NET.Engines.GameData.CGameItemModel>> items = new();
 
     private async Task<Block?> GetBlockAsync()
     {
@@ -390,5 +430,17 @@
 
         using var streamRef = new DotNetStreamReference(zipStream);
         await JS.InvokeVoidAsync("downloadFileFromStream", $"{item.FileName}.zip", streamRef);
+    }
+
+    private void LoadItemMeshInfo()
+    {
+        if (blockDirBasePath is null)
+        {
+            return;
+        }
+
+        items = Directory.GetFiles(blockDirBasePath)
+            .Select(x => GBX.NET.Gbx.Parse<GBX.NET.Engines.GameData.CGameItemModel>(x))
+            .ToList();
     }
 }
