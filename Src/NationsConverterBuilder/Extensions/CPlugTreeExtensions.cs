@@ -353,7 +353,7 @@ public static class CPlugTreeExtensions
                         Color = light.Color,
                         Distance = light.Intensity * 25,
                         Intensity = light.Intensity * 2,
-                        //NightOnly
+                        NightOnly = true,
                         SpotInnerAngle = spot?.AngleInner ?? 40,
                         SpotOuterAngle = spot?.AngleOuter ?? 60,
                     };
