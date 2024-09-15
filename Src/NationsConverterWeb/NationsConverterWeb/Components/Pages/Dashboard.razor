@@ -152,7 +152,7 @@
         var uploads = await Db.ItemUploads
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
-            .OrderByDescending(x => x.UploadedAt)
+            .OrderBy(x => x.UploadedAt)
             .GroupBy(x => x.BlockItem)
             .Select(x => x.First())
             .ToListAsync();
