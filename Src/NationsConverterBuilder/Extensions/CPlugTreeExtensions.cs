@@ -27,6 +27,7 @@ public static class CPlugTreeExtensions
         Func<GbxRefTableFile, CPlugMaterialUserInst?>? decalLinks = null,
         Action<GbxRefTableFile, int, Vec2[]>? decalUvModifiers = null,
         Func<CPlugTree, bool>? skipTreeWhen = null,
+        bool noAdditions = false,
         ILogger? logger = null)
     {
         var groups = new List<CPlugCrystal.Part>();
@@ -259,116 +260,119 @@ public static class CPlugTreeExtensions
             U02 = crystal.Groups.Select((_, i) => i).ToArray()
         });
 
-        var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, isTrigger: false, out var newMaterials);
-
-        if (collisionLayer is not null)
+        if (!noAdditions)
         {
-            layers.Add(collisionLayer);
+            var collisionLayer = CreateCollisionLayer(tree, "Layer1", logger, isTrigger: false, out var newMaterials);
 
-            var i = 0;
-            foreach (var newMaterial in newMaterials)
+            if (collisionLayer is not null)
             {
-                materials.Add($"_Collision" + i, newMaterial);
-                i++;
-            }
-        }
+                layers.Add(collisionLayer);
 
-        foreach (var link in objectLinks ?? [])
-        {
-            if (link.Mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
-            {
-                continue;
+                var i = 0;
+                foreach (var newMaterial in newMaterials)
+                {
+                    materials.Add($"_Collision" + i, newMaterial);
+                    i++;
+                }
             }
 
-            if (solid.Tree is not CPlugTree t)
+            foreach (var link in objectLinks ?? [])
             {
-                continue;
-            }
-
-            var linkLayer = CreateCollisionLayer(t, "Layer2", logger, isTrigger: true, out var newTriggerMaterials);
-
-            if (linkLayer is null)
-            {
-                continue;
-            }
-
-            layers.Add(linkLayer);
-
-            var i = 0;
-            foreach (var newMaterial in newTriggerMaterials)
-            {
-                materials.Add($"_Trigger" + i, newMaterial);
-                i++;
-            }
-        }
-
-        if (spawnLoc.HasValue)
-        {
-            layers.Add(new CPlugCrystal.SpawnPositionLayer
-            {
-                Ver = 2,
-                LayerId = "Layer3",
-                LayerName = "Spawn",
-                CrystalEnabled = false,
-                IsEnabled = true,
-                SpawnPosition = (spawnLoc.Value.TX, spawnLoc.Value.TY, spawnLoc.Value.TZ)
-            });
-        }
-
-        if (hasAnyLights)
-        {
-            var lightLocPairs = new List<(CPlugLightUserModel, Iso4)>();
-
-            foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
-            {
-                if (t is not CPlugTreeLight treeLight)
+                if (link.Mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
                 {
                     continue;
                 }
 
-                if (skipTreeWhen?.Invoke(t) == true)
+                if (solid.Tree is not CPlugTree t)
                 {
                     continue;
                 }
 
-                if (treeLight.PlugLight is null)
+                var linkLayer = CreateCollisionLayer(t, "Layer2", logger, isTrigger: true, out var newTriggerMaterials);
+
+                if (linkLayer is null)
                 {
-                    logger?.LogWarning("Tree light has no light instance");
                     continue;
                 }
 
-                if (treeLight.PlugLight.GxLightModel is not GxLight light)
+                layers.Add(linkLayer);
+
+                var i = 0;
+                foreach (var newMaterial in newTriggerMaterials)
                 {
-                    logger?.LogWarning("Light instance has no gx light");
-                    continue;
+                    materials.Add($"_Trigger" + i, newMaterial);
+                    i++;
                 }
-
-                var spot = light as GxLightSpot;
-
-                var userLight = new CPlugLightUserModel
-                {
-                    Color = light.Color,
-                    Distance = light.Intensity * 25,
-                    Intensity = light.Intensity * 2,
-                    //NightOnly
-                    SpotInnerAngle = spot?.AngleInner ?? 40,
-                    SpotOuterAngle = spot?.AngleOuter ?? 60,
-                };
-                userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
-
-                lightLocPairs.Add((userLight, loc));
             }
 
-            layers.Add(new CPlugCrystal.LightLayer
+            if (spawnLoc.HasValue)
             {
-                Ver = 2,
-                LayerId = "Layer4",
-                LayerName = "Light",
-                CrystalEnabled = false,
-                IsEnabled = true,
-                Lights = lightLocPairs.Select(x => x.Item1).ToArray(),
-                LightPositions = lightLocPairs.Select(x => new CPlugCrystal.LightPos { U01 = 0, U02 = x.Item2 }).ToArray()
-            });
+                layers.Add(new CPlugCrystal.SpawnPositionLayer
+                {
+                    Ver = 2,
+                    LayerId = "Layer3",
+                    LayerName = "Spawn",
+                    CrystalEnabled = false,
+                    IsEnabled = true,
+                    SpawnPosition = (spawnLoc.Value.TX, spawnLoc.Value.TY, spawnLoc.Value.TZ)
+                });
+            }
+
+            if (hasAnyLights)
+            {
+                var lightLocPairs = new List<(CPlugLightUserModel, Iso4)>();
+
+                foreach (var (t, loc) in GetAllChildren(tree, lod).Append((tree, tree.Location.GetValueOrDefault(Iso4.Identity))))
+                {
+                    if (t is not CPlugTreeLight treeLight)
+                    {
+                        continue;
+                    }
+
+                    if (skipTreeWhen?.Invoke(t) == true)
+                    {
+                        continue;
+                    }
+
+                    if (treeLight.PlugLight is null)
+                    {
+                        logger?.LogWarning("Tree light has no light instance");
+                        continue;
+                    }
+
+                    if (treeLight.PlugLight.GxLightModel is not GxLight light)
+                    {
+                        logger?.LogWarning("Light instance has no gx light");
+                        continue;
+                    }
+
+                    var spot = light as GxLightSpot;
+
+                    var userLight = new CPlugLightUserModel
+                    {
+                        Color = light.Color,
+                        Distance = light.Intensity * 25,
+                        Intensity = light.Intensity * 2,
+                        //NightOnly
+                        SpotInnerAngle = spot?.AngleInner ?? 40,
+                        SpotOuterAngle = spot?.AngleOuter ?? 60,
+                    };
+                    userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
+
+                    lightLocPairs.Add((userLight, loc));
+                }
+
+                layers.Add(new CPlugCrystal.LightLayer
+                {
+                    Ver = 2,
+                    LayerId = "Layer4",
+                    LayerName = "Light",
+                    CrystalEnabled = false,
+                    IsEnabled = true,
+                    Lights = lightLocPairs.Select(x => x.Item1).ToArray(),
+                    LightPositions = lightLocPairs.Select(x => new CPlugCrystal.LightPos { U01 = 0, U02 = x.Item2 }).ToArray()
+                });
+            }
         }
 
         var plugCrystal = new CPlugCrystal

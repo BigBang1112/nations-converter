@@ -50,6 +50,7 @@ internal sealed class ItemMakerService
             ApplyDecalUvModifiers(matFile, uvSetIndex, uvs, subCategory);
         },
         skipTreeWhen,
+        noAdditions: modifier is not null,
         logger);
     }
 
