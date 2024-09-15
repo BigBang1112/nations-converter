@@ -158,9 +158,9 @@
             .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
             .ToListAsync();
 
-        using var ms = new MemoryStream();
+        using var msPack = new MemoryStream();
 
-        using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        using (var zip = new ZipArchive(msPack, ZipArchiveMode.Create, leaveOpen: true))
         {
             foreach (var upload in uploads)
             {
@@ -184,9 +184,20 @@
             }
         }
 
+        msPack.Position = 0;
+
+        using var ms = new MemoryStream();
+
+        using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            var entry = zip.CreateEntry("UserData/InProgress.zip", CompressionLevel.NoCompression);
+            using var entryStream = entry.Open();
+            await msPack.CopyToAsync(entryStream);
+        }
+
         ms.Position = 0;
 
         using var streamRef = new DotNetStreamReference(ms);
-        await JS.InvokeVoidAsync("downloadFileFromStream", "InProgress.zip", streamRef);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "UserData.zip", streamRef);
     }
 }
