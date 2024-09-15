@@ -1,6 +1,8 @@
 ﻿@page "/dashboard"
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject AppDbContext Db
+@inject IJSRuntime JS
+@rendermode InteractiveServer
 
 <PageTitle>Dashboard - Nations Converter 2</PageTitle>
 
@@ -53,8 +55,9 @@
     </div>
     <div class="members">
         <div class="additional-links">
+            <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
             <a href="/data/NationsConverterCLI.zip" download="NationsConverterCLI.zip">Download converter</a>
-            <a href="/data/items.zip" download="NC2Items_Init.zip">Download all init assets</a>
+            <a href="/data/items.zip" download="NC2Items_Init.zip">Download all init items</a>
             <a href="/data/GameData_TMUF_NC2.zip" download="GameData_TMUF_NC2.zip">Download TMUF GameData</a>
         </div>
         <h3>Developers & Modelers</h3>
@@ -142,5 +145,47 @@
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
         blocks = await Db.Blocks.ToArrayAsync();
+    }
+
+    private async Task DownloadCompleteItemsAsync()
+    {
+        var uploads = await Db.ItemUploads
+            .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
+            .OrderByDescending(x => x.UploadedAt)
+            .GroupBy(x => x.BlockItem)
+            .Select(x => x.First())
+            .ToListAsync();
+
+        using var ms = new MemoryStream();
+
+        using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var upload in uploads)
+            {
+                var filePath = Path.Combine(
+                    "Items",
+                    "NC2",
+                    upload.BlockItem.Block.CategoryId,
+                    upload.BlockItem.Block.SubCategoryId,
+                    "MM_Collision",
+                    upload.BlockItem.Block.EnvironmentId,
+                    upload.BlockItem.Block.PageName,
+                    upload.BlockItem.Block.Name,
+                    upload.BlockItem.FileName);
+                var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
+
+                entry.LastWriteTime = upload.LastModifiedAt;
+
+                using var entryStream = entry.Open();
+                await using var uploadStream = new MemoryStream(upload.Data);
+                await uploadStream.CopyToAsync(entryStream);
+            }
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "InProgress.zip", streamRef);
     }
 }
