@@ -34,9 +34,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         var convertedMap = CreateBaseMap();
 
-        var itemManager = new ItemManager(convertedMap, runningDir, Config, logger);
+        var customContentManager = new CustomContentManager(convertedMap, runningDir, Config, logger);
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, itemManager, logger);
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, customContentManager, logger);
         placeBaseZoneConverter.Convert();
 
         var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, complexConfig, logger);
@@ -45,16 +45,16 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, Config, complexConfig, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBlockConverter(map, convertedMap, Config, complexConfig, itemManager, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBasicBlockConverter = new PlaceBlockConverter(map, convertedMap, Config, complexConfig, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBasicBlockConverter.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, complexConfig, logger);
+        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, customContentManager, complexConfig, logger);
         placeTransformationConverter.Convert();
 
-        var decorationConverter = new DecorationConverter(map, convertedMap, Config, itemManager, logger);
+        var decorationConverter = new DecorationConverter(map, convertedMap, Config, customContentManager, logger);
         decorationConverter.Convert();
 
-        var userDataPackFilePath = itemManager.EmbedData();
+        var userDataPackFilePath = customContentManager.EmbedData();
 
         if (Config.CopyItems)
         {
@@ -70,6 +70,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
             else
             {
                 ZipFile.ExtractToDirectory(userDataPackFilePath, Path.Combine(Config.UserDataFolder), overwriteFiles: true);
+                
+                // copy misc blocks additionally, cuz those won't be zipped
+                CopyUserDataDirectory(Path.Combine(runningDir, "UserData", "Blocks", "NC2", "Misc"), Path.Combine(Config.UserDataFolder, "Blocks", "NC2", "Misc"));
             }
         }
 
@@ -101,6 +104,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
             AuthorLogin = authorLogin,
             AuthorNickname = "BigBang1112",
             AuthorZone = authorZone,
+            Blocks = new List<CGameCtnBlock>(),
             BlockStock = new CGameCtnCollectorList(),
             BuildVersion = $"date={BuildDate} git={BuildGit} GameVersion={ExeVersion}",
             ChallengeParameters = new CGameCtnChallengeParameters

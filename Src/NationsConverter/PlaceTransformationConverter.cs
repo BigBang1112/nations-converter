@@ -9,16 +9,19 @@ namespace NationsConverter;
 internal sealed class PlaceTransformationConverter : BlockConverter
 {
     private readonly CGameCtnChallenge convertedMap;
+    private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
 
     public PlaceTransformationConverter(
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
+        CustomContentManager customContentManager,
         IComplexConfig complexConfig,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.convertedMap = convertedMap;
+        this.customContentManager = customContentManager;
         this.logger = logger;
     }
 
@@ -58,8 +61,12 @@ internal sealed class PlaceTransformationConverter : BlockConverter
 
         logger.LogInformation("Placing transformation gate at {Pos} with rotation {Dir}...", pos, block.Direction);
 
-        convertedMap.PlaceAnchoredObject(
+        var gateBlock = customContentManager.PlaceBlock($@"NC2\Misc\{Environment}HiddenGate", pos, (rotRadians, 0, 0));
+        gateBlock.Bit21 = true;
+
+        // Placing official transformation can be optional
+        /*convertedMap.PlaceAnchoredObject(
             new($"GateGameplay{Environment}4m", 26, "Nadeo"),
-                pos, (rotRadians, 0, 0));
+                pos, (rotRadians, 0, 0));*/
     }
 }

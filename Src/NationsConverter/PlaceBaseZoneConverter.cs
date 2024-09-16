@@ -10,7 +10,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
 {
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
-    private readonly ItemManager itemManager;
+    private readonly CustomContentManager customContentManager;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
@@ -19,12 +19,12 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
         CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         IComplexConfig complexConfig,
-        ItemManager itemManager,
+        CustomContentManager customContentManager,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;
-        this.itemManager = itemManager;
+        this.customContentManager = customContentManager;
 
         occupiedZone = new bool[map.Size.X, map.Size.Z];
 
@@ -112,7 +112,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
 
                 var pos = new Int3(x, baseHeight, z);
 
-                itemManager.Place(itemPath, pos * BlockSize, (0, 0, 0));
+                customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
             }
         }
     }

@@ -9,7 +9,7 @@ internal sealed partial class DecorationConverter
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
     private readonly NationsConverterConfig config;
-    private readonly ItemManager itemManager;
+    private readonly CustomContentManager customContentManager;
     private readonly string environment;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
@@ -19,13 +19,13 @@ internal sealed partial class DecorationConverter
         CGameCtnChallenge map, 
         CGameCtnChallenge convertedMap, 
         NationsConverterConfig config, 
-        ItemManager itemManager,
+        CustomContentManager customContentManager,
         ILogger logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;
         this.config = config;
-        this.itemManager = itemManager;
+        this.customContentManager = customContentManager;
 
         environment = map.GetEnvironment() switch
         {
@@ -56,7 +56,7 @@ internal sealed partial class DecorationConverter
             var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", environment, "Decorations");
             var itemPath = Path.Combine(dirPath, $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}.Item.Gbx");
 
-            itemManager.Place(itemPath, (0, 0, 0), (0, 0, 0));
+            customContentManager.PlaceItem(itemPath, (0, 0, 0), (0, 0, 0));
         }
     }
 }

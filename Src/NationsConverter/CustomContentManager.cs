@@ -8,7 +8,7 @@ using System.IO.Compression;
 
 namespace NationsConverter;
 
-internal sealed class ItemManager
+internal sealed class CustomContentManager
 {
     private const int ItemCollection = 26;
 
@@ -20,7 +20,7 @@ internal sealed class ItemManager
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
-    public ItemManager(CGameCtnChallenge map, string runningDir, NationsConverterConfig config, ILogger logger)
+    public CustomContentManager(CGameCtnChallenge map, string runningDir, NationsConverterConfig config, ILogger logger)
     {
         this.map = map;
         this.runningDir = runningDir;
@@ -28,7 +28,7 @@ internal sealed class ItemManager
         this.logger = logger;
     }
 
-    public void Place(string itemModel, Vec3 pos, Vec3 rot)
+    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot)
     {
         // retrieve collection and login from the item model gbx, cache this item model in dictionary
         if (!itemModelAuthors.TryGetValue(itemModel, out var itemModelAuthor))
@@ -40,10 +40,32 @@ internal sealed class ItemManager
                 : "akPfIM0aSzuHuaaDWptBbQ";
 
             // add file to hash set, so that it can be found + properly placed in the zip
-            embeddedFilePaths.Add(itemModel);
+            embeddedFilePaths.Add(Path.Combine("Items", itemModel));
         }
 
         map.PlaceAnchoredObject(new(itemModel.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
+    }
+
+    public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
+    {
+        var block = map.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", coord, dir, isGround, variant, subVariant);
+
+        embeddedFilePaths.Add(Path.Combine("Blocks", $"{blockModel}.Block.Gbx"));
+
+        return block;
+    }
+
+    public CGameCtnBlock PlaceBlock(string blockModel, Vec3 pos, Vec3 rot, bool isGround = false, byte variant = 0, byte subVariant = 0)
+    {
+        var block = map.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
+
+        block.IsFree = true;
+        block.AbsolutePositionInMap = pos;
+        block.PitchYawRoll = rot;
+
+        embeddedFilePaths.Add(Path.Combine("Blocks", $"{blockModel}.Block.Gbx"));
+
+        return block;
     }
 
     /// <summary>
@@ -56,6 +78,19 @@ internal sealed class ItemManager
         logger.LogInformation("Embedding item data...");
 
         var watch = Stopwatch.StartNew();
+
+        // instead
+        // if there's no specified zip pack:
+        // - it first looks in the file system if the file exists.
+        // - if it doesn't, check first zip file in that location
+        // - if none was found, just dont embed the item with a warning (maybe)
+        // if zip pack is specified:
+        // - check if it exists
+        // - if it doesn't, throw an exception
+        // - if it does, look for item to embed there first
+        // - if the file is not in the zip, look in the file system
+        // - if none was found, just dont embed the item with a warning (maybe)
+
 
         var itemsPath = Path.Combine(runningDir, "UserData", "Items");
         var blocksPath = Path.Combine(runningDir, "UserData", "Blocks");
@@ -70,16 +105,16 @@ internal sealed class ItemManager
 
             map.UpdateEmbeddedZipData(zip =>
             {
-                foreach (var itemModel in embeddedFilePaths)
+                foreach (var path in embeddedFilePaths)
                 {
-                    var itemPath = Path.Combine(runningDir, "UserData", "Items", itemModel);
+                    var itemPath = Path.Combine(runningDir, "UserData", path);
 
                     if (!File.Exists(itemPath))
                     {
                         continue;
                     }
 
-                    var entry = zip.CreateEntry(Path.Combine("Items", itemModel), CompressionLevel.SmallestSize);
+                    var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
                     using var entryStream = entry.Open();
                     using var fileStream = File.OpenRead(itemPath);
                     Gbx.Decompress(input: fileStream, output: entryStream);
@@ -96,18 +131,16 @@ internal sealed class ItemManager
 
             map.UpdateEmbeddedZipData(zip =>
             {
-                foreach (var itemModel in embeddedFilePaths)
+                foreach (var path in embeddedFilePaths)
                 {
-                    var itemPath = Path.Combine("Items", itemModel);
-
-                    var toEmbedEntry = toEmbedZip.GetEntry(itemPath.Replace('\\', '/'));
+                    var toEmbedEntry = toEmbedZip.GetEntry(path.Replace('\\', '/'));
 
                     if (toEmbedEntry is null)
                     {
                         continue;
                     }
 
-                    var entry = zip.CreateEntry(Path.Combine("Items", itemModel), CompressionLevel.SmallestSize);
+                    var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
                     using var entryStream = entry.Open();
                     using var toEmbedEntryStream = toEmbedEntry.Open();
                     Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
