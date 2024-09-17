@@ -4,7 +4,7 @@ namespace NationsConverter;
 
 public class NationsConverterConfig : Config
 {
-    public bool CopyItems { get; set; } = false;
+    public bool CopyItems { get; set; } = true;
     public string? UserDataFolder { get; set; }
     public bool IncludeDecoration { get; set; }
     public bool UseNewWood { get; set; }
