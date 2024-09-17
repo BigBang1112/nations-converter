@@ -1,6 +1,6 @@
 ﻿using YamlDotNet.Serialization;
 
-namespace NationsConverterCLI;
+namespace NationsConverter;
 
 [YamlStaticContext]
 public partial class YmlStaticContext : StaticContext;

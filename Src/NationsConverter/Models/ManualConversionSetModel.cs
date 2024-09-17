@@ -1,7 +1,9 @@
 ﻿using NationsConverterShared.Models;
+using YamlDotNet.Serialization;
 
 namespace NationsConverter.Models;
 
+[YamlSerializable]
 public sealed class ManualConversionSetModel : ConversionSetModel
 {
     public Dictionary<string, string> BlockTerrainModifiers { get; set; } = [];
