@@ -33,8 +33,8 @@ internal sealed class TerrainModifierZoneExtract
             _ => map.GetEnvironment()
         };
 
-        conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment))
-            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment)));
+        conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment), cache: true)
+            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment), cache: true));
     }
 
     public ImmutableDictionary<Int3, string> Extract()

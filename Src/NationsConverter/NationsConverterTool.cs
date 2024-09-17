@@ -58,22 +58,8 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         if (Config.CopyItems)
         {
-            if (string.IsNullOrWhiteSpace(Config.UserDataFolder))
-            {
-                throw new InvalidOperationException("UserDataFolder is not set");
-            }
-
-            if (userDataPackFilePath is null)
-            {
-                CopyUserDataDirectory(Path.Combine(runningDir, "UserData"), Config.UserDataFolder);
-            }
-            else
-            {
-                ZipFile.ExtractToDirectory(userDataPackFilePath, Path.Combine(Config.UserDataFolder), overwriteFiles: true);
-                
-                // copy misc blocks additionally, cuz those won't be zipped
-                CopyUserDataDirectory(Path.Combine(runningDir, "UserData", "Blocks", "NC2", "Misc"), Path.Combine(Config.UserDataFolder, "Blocks", "NC2", "Misc"));
-            }
+            var copyUserDataConverter = new CopyUserDataConverter(Config, runningDir, userDataPackFilePath);
+            copyUserDataConverter.Copy();
         }
 
         if (!Config.UseNewWood)
@@ -212,38 +198,5 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         convertedMap.ScriptMetadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
 
         return convertedMap;
-    }
-
-    private static void CopyUserDataDirectory(string sourceDir, string destinationDir)
-    {
-        var dir = new DirectoryInfo(sourceDir);
-
-        if (!dir.Exists)
-        {
-            throw new DirectoryNotFoundException($"Source directory not found: {dir.FullName}");
-        }
-
-        var dirs = dir.GetDirectories();
-
-        Directory.CreateDirectory(destinationDir);
-
-        var isUserDataRoot = sourceDir.EndsWith("UserData", StringComparison.OrdinalIgnoreCase);
-
-        foreach (var file in dir.GetFiles())
-        {
-            if (isUserDataRoot && file.Name.EndsWith(".zip"))
-            {
-                continue;
-            }
-
-            var targetFilePath = Path.Combine(destinationDir, file.Name);
-            file.CopyTo(targetFilePath, overwrite: true);
-        }
-
-        foreach (var subDir in dirs)
-        {
-            var newDestinationDir = Path.Combine(destinationDir, subDir.Name);
-            CopyUserDataDirectory(subDir.FullName, newDestinationDir);
-        }
     }
 }

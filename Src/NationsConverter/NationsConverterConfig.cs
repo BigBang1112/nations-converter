@@ -8,5 +8,5 @@ public class NationsConverterConfig : Config
     public string? UserDataFolder { get; set; }
     public bool IncludeDecoration { get; set; }
     public bool UseNewWood { get; set; }
-    public string? UserDataPack { get; set; }
+    public string? UserDataPack { get; set; } = "InProgress";
 }

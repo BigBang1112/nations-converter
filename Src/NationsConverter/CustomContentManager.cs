@@ -1,4 +1,5 @@
-﻿using GBX.NET;
+﻿using ByteSizeLib;
+using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using Microsoft.Extensions.Logging;
@@ -79,77 +80,114 @@ internal sealed class CustomContentManager
 
         var watch = Stopwatch.StartNew();
 
-        // instead
-        // if there's no specified zip pack:
-        // - it first looks in the file system if the file exists.
-        // - if it doesn't, check first zip file in that location
-        // - if none was found, just dont embed the item with a warning (maybe)
-        // if zip pack is specified:
-        // - check if it exists
-        // - if it doesn't, throw an exception
-        // - if it does, look for item to embed there first
-        // - if the file is not in the zip, look in the file system
-        // - if none was found, just dont embed the item with a warning (maybe)
+        var actualEmbeddedItemsCount = 0;
 
-
-        var itemsPath = Path.Combine(runningDir, "UserData", "Items");
-        var blocksPath = Path.Combine(runningDir, "UserData", "Blocks");
-        var itemsOrBlocksHaveAtLeastOneFile = (Directory.Exists(itemsPath) && Directory.EnumerateFiles(itemsPath, "*.Item.Gbx", SearchOption.AllDirectories).Any())
-            || (Directory.Exists(blocksPath) && Directory.EnumerateFiles(blocksPath, "*.Block.Gbx", SearchOption.AllDirectories).Any());
-
-        string? userDataPackFilePath;
-
-        if (itemsOrBlocksHaveAtLeastOneFile)
+        if (string.IsNullOrWhiteSpace(config.UserDataPack))
         {
-            userDataPackFilePath = null;
-
             map.UpdateEmbeddedZipData(zip =>
             {
                 foreach (var path in embeddedFilePaths)
                 {
-                    var itemPath = Path.Combine(runningDir, "UserData", path);
-
-                    if (!File.Exists(itemPath))
+                    if (CreateEntryFromGbxFile(zip, path) is not null)
                     {
-                        continue;
+                        actualEmbeddedItemsCount++;
                     }
-
-                    var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
-                    using var entryStream = entry.Open();
-                    using var fileStream = File.OpenRead(itemPath);
-                    Gbx.Decompress(input: fileStream, output: entryStream);
                 }
             });
+
+            LogFinishedEmbeddedItems(watch, actualEmbeddedItemsCount);
+
+            return null;
         }
-        else
+
+        var userDataPackFilePath = Path.Combine(runningDir, "UserData",
+            config.UserDataPack.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)
+            ? config.UserDataPack
+            : config.UserDataPack + ".zip");
+
+        if (!File.Exists(userDataPackFilePath))
         {
-            userDataPackFilePath = config.UserDataPack is null
-                ? (Directory.EnumerateFiles(Path.Combine(runningDir, "UserData"), "*.zip").SingleOrDefault() ?? throw new Exception("No available user data pack."))
-                : Path.Combine(runningDir, "UserData", config.UserDataPack);
+            throw new Exception("Specified user data pack does not exist.");
+        }
 
-            using var toEmbedZip = ZipFile.OpenRead(userDataPackFilePath);
+        using var toEmbedZip = ZipFile.OpenRead(userDataPackFilePath);
 
-            map.UpdateEmbeddedZipData(zip =>
+        map.UpdateEmbeddedZipData(zip =>
+        {
+            foreach (var path in embeddedFilePaths)
             {
-                foreach (var path in embeddedFilePaths)
+                var toEmbedEntry = toEmbedZip.GetEntry(path.Replace('\\', '/'));
+
+                if (toEmbedEntry is null)
                 {
-                    var toEmbedEntry = toEmbedZip.GetEntry(path.Replace('\\', '/'));
-
-                    if (toEmbedEntry is null)
+                    if (CreateEntryFromGbxFile(zip, path) is not null)
                     {
-                        continue;
+                        actualEmbeddedItemsCount++;
                     }
-
+                }
+                else
+                {
                     var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
                     using var entryStream = entry.Open();
                     using var toEmbedEntryStream = toEmbedEntry.Open();
                     Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
+
+                    actualEmbeddedItemsCount++;
                 }
-            });
+            }
+        });
+
+        if (actualEmbeddedItemsCount == 0)
+        {
+            map.EmbeddedZipData = null;
         }
 
-        logger.LogInformation("Embedded item data in {ElapsedMilliseconds}ms.", watch.ElapsedMilliseconds);
+        LogFinishedEmbeddedItems(watch, actualEmbeddedItemsCount);
 
         return userDataPackFilePath;
+    }
+
+    private ZipArchiveEntry? CreateEntryFromGbxFile(ZipArchive zip, string path)
+    {
+        var itemPath = Path.Combine(runningDir, "UserData", path);
+
+        if (!File.Exists(itemPath))
+        {
+            return null;
+        }
+
+        var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
+        using var entryStream = entry.Open();
+        using var fileStream = File.OpenRead(itemPath);
+        Gbx.Decompress(input: fileStream, output: entryStream);
+
+        return entry;
+    }
+
+    private void LogFinishedEmbeddedItems(Stopwatch watch, int actualEmbeddedItemsCount)
+    {
+        if (actualEmbeddedItemsCount == embeddedFilePaths.Count)
+        {
+            logger.LogInformation("Embedded {ActualEmbedded}/{ExpectedEmbedded} items in {ElapsedMilliseconds}ms.",
+                actualEmbeddedItemsCount,
+                embeddedFilePaths.Count,
+                watch.ElapsedMilliseconds);
+        }
+        else
+        {
+            logger.LogWarning("Embedded {ActualEmbedded}/{ExpectedEmbedded} items in {ElapsedMilliseconds}ms.",
+                actualEmbeddedItemsCount,
+                embeddedFilePaths.Count,
+                watch.ElapsedMilliseconds);
+        }
+
+        if (map.EmbeddedZipData is { Length: > 0 })
+        {
+            logger.LogInformation("Embedded size: {Size}", ByteSize.FromBytes(map.EmbeddedZipData.Length));
+        }
+        else
+        {
+            logger.LogWarning("No items were embedded.");
+        }
     }
 }

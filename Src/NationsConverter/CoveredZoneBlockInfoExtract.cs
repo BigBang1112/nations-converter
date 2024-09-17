@@ -29,8 +29,8 @@ internal sealed class CoveredZoneBlockInfoExtract
             _ => map.GetEnvironment()
         };
 
-        conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment))
-            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment)));
+        conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment), cache: true)
+            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment), cache: true));
     }
 
     public ImmutableHashSet<CGameCtnBlock> Extract()
