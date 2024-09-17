@@ -6,7 +6,7 @@ using NationsConverter.Models;
 using NationsConverterShared.Models;
 using System.Collections.Immutable;
 
-namespace NationsConverter;
+namespace NationsConverter.Extracts;
 
 internal sealed class TerrainModifierZoneExtract
 {
@@ -17,8 +17,8 @@ internal sealed class TerrainModifierZoneExtract
     private readonly ManualConversionSetModel conversionSet;
 
     public TerrainModifierZoneExtract(
-        CGameCtnChallenge map, 
-        NationsConverterConfig config, 
+        CGameCtnChallenge map,
+        NationsConverterConfig config,
         IComplexConfig complexConfig,
         ILogger logger)
     {

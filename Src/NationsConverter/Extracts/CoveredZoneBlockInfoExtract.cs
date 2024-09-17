@@ -6,7 +6,7 @@ using NationsConverter.Models;
 using NationsConverterShared.Models;
 using System.Collections.Immutable;
 
-namespace NationsConverter;
+namespace NationsConverter.Extracts;
 
 internal sealed class CoveredZoneBlockInfoExtract
 {

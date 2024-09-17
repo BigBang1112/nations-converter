@@ -35,7 +35,7 @@ internal sealed class CustomContentManager
         if (!itemModelAuthors.TryGetValue(itemModel, out var itemModelAuthor))
         {
             var itemPath = Path.Combine(runningDir, "UserData", "Items", itemModel);
-            
+
             itemModelAuthor = File.Exists(itemPath)
                 ? Gbx.ParseHeaderNode<CGameItemModel>(itemPath).Ident.Author
                 : "akPfIM0aSzuHuaaDWptBbQ";

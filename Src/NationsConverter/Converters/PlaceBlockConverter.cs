@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
 using System.Collections.Immutable;
 
-namespace NationsConverter;
+namespace NationsConverter.Converters;
 
 internal sealed class PlaceBlockConverter : BlockConverter
 {
@@ -71,7 +71,7 @@ internal sealed class PlaceBlockConverter : BlockConverter
         var subCategory = "Modless";
 
         var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, block.Name);
-        
+
         var variant = block.Variant.GetValueOrDefault();
         var subVariant = block.SubVariant.GetValueOrDefault();
 

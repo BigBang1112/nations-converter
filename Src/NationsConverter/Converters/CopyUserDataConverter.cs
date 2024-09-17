@@ -1,6 +1,6 @@
 ﻿using System.IO.Compression;
 
-namespace NationsConverter;
+namespace NationsConverter.Converters;
 
 internal sealed class CopyUserDataConverter
 {

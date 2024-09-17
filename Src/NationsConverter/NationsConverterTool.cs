@@ -3,7 +3,8 @@ using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Script;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using System.IO.Compression;
+using NationsConverter.Converters;
+using NationsConverter.Extracts;
 using System.Text;
 using TmEssentials;
 

@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using NationsConverterShared.Models;
 
-namespace NationsConverter;
+namespace NationsConverter.Converters;
 
 internal abstract class BlockConverter
 {

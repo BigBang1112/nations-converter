@@ -4,7 +4,7 @@ using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
 
-namespace NationsConverter;
+namespace NationsConverter.Converters;
 
 internal sealed class PlaceTransformationConverter : BlockConverter
 {
