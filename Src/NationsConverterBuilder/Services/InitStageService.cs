@@ -117,6 +117,7 @@ internal sealed class InitStageService
                     Decorations = decorationConvs,
                     TerrainModifiers = collection.TerrainModifiers.Count == 0 ? null : collection.TerrainModifiers,
                     DefaultZoneBlock = defaultZone,
+                    Environment = collection.DisplayName,
                 };
 
                 await using (var sheetJsonStream = new FileStream(Path.Combine(sheetsDirPath, $"{displayName}.json"), FileMode.Create, FileAccess.Write, FileShare.Write, 4096, useAsync: true))

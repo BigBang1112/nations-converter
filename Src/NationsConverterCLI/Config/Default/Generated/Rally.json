@@ -1,4 +1,5 @@
 {
+  "Environment": "Rally",
   "DefaultZoneBlock": "RallyFlat",
   "Decorations": {
     "10x18x150": {

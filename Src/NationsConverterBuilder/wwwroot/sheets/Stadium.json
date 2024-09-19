@@ -1,4 +1,5 @@
 {
+  "Environment": "Stadium",
   "DefaultZoneBlock": "StadiumGrass",
   "Decorations": {
     "32x32x32": {

@@ -1,4 +1,5 @@
 {
+  "Environment": "Snow",
   "DefaultZoneBlock": "AlpineSnowBase",
   "Decorations": {
     "10x18x150": {
@@ -11615,8 +11616,7 @@
           1
         ]
       },
-      "ZoneHeight": 0,
-      "Modifiable": true
+      "ZoneHeight": 0
     },
     "SnowToSnow1": {
       "PageName": "Other",
