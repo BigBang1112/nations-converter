@@ -30,7 +30,7 @@ internal sealed class CoveredZoneBlockInfoExtract
         };
 
         conversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", environment), cache: true)
-            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment), cache: true));
+            .Fill(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", environment), cache: true));
     }
 
     public ImmutableHashSet<CGameCtnBlock> Extract()
@@ -85,7 +85,7 @@ internal sealed class CoveredZoneBlockInfoExtract
         return coveredZoneBlocks.ToImmutable();
     }
 
-    private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ConversionModel conversion)
+    private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ManualConversionModel conversion)
     {
         // fallbacks should be less permissive in the future
         var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];

@@ -1,6 +1,6 @@
 ﻿namespace NationsConverterShared.Models;
 
-public class ConversionSetModel
+public sealed class ConversionSetModel
 {
     public string? DefaultZoneBlock { get; set; }
     public Dictionary<string, ConversionDecorationModel> Decorations { get; set; } = [];

@@ -34,10 +34,10 @@ internal abstract class BlockConverter
         };
 
         ConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", Environment), cache: true)
-            .Merge(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment), cache: true));
+            .Fill(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment), cache: true));
     }
 
-    protected abstract void ConvertBlock(CGameCtnBlock block, ConversionModel conversion);
+    protected abstract void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion);
 
     public virtual void Convert()
     {

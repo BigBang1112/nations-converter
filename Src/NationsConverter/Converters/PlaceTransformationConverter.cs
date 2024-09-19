@@ -2,25 +2,23 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
+using NationsConverter.Models;
 using NationsConverterShared.Models;
 
 namespace NationsConverter.Converters;
 
 internal sealed class PlaceTransformationConverter : BlockConverter
 {
-    private readonly CGameCtnChallenge convertedMap;
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
 
     public PlaceTransformationConverter(
         CGameCtnChallenge map,
-        CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         CustomContentManager customContentManager,
         IComplexConfig complexConfig,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
-        this.convertedMap = convertedMap;
         this.customContentManager = customContentManager;
         this.logger = logger;
     }
@@ -38,7 +36,7 @@ internal sealed class PlaceTransformationConverter : BlockConverter
         base.Convert();
     }
 
-    protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
+    protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
         if (conversion.Waypoint is not WaypointType.Start and not WaypointType.StartFinish)
         {

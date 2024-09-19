@@ -2,14 +2,13 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using NationsConverterShared.Models;
+using NationsConverter.Models;
 using System.Collections.Immutable;
 
 namespace NationsConverter.Converters;
 
 internal sealed class PlaceBlockConverter : BlockConverter
 {
-    private readonly CGameCtnChallenge convertedMap;
     private readonly CustomContentManager customContentManager;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
@@ -17,7 +16,6 @@ internal sealed class PlaceBlockConverter : BlockConverter
 
     public PlaceBlockConverter(
         CGameCtnChallenge map,
-        CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         IComplexConfig complexConfig,
         CustomContentManager customContentManager,
@@ -25,14 +23,13 @@ internal sealed class PlaceBlockConverter : BlockConverter
         ImmutableDictionary<Int3, string> terrainModifierZones,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
-        this.convertedMap = convertedMap;
         this.customContentManager = customContentManager;
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
     }
 
-    protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
+    protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
         if (coveredZoneBlocks.Contains(block))
         {
@@ -70,7 +67,9 @@ internal sealed class PlaceBlockConverter : BlockConverter
 
         var subCategory = "Modless";
 
-        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, block.Name);
+        var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
+            ? Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, block.Name)
+            : Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, block.Name);
 
         var variant = block.Variant.GetValueOrDefault();
         var subVariant = block.SubVariant.GetValueOrDefault();

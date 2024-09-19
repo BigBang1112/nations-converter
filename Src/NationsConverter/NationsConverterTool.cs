@@ -37,7 +37,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         var customContentManager = new CustomContentManager(convertedMap, runningDir, Config, logger);
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, Config, complexConfig, customContentManager, logger);
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, Config, complexConfig, customContentManager, logger);
         placeBaseZoneConverter.Convert();
 
         var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, complexConfig, logger);
@@ -46,10 +46,10 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, Config, complexConfig, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBlockConverter(map, convertedMap, Config, complexConfig, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBasicBlockConverter = new PlaceBlockConverter(map, Config, complexConfig, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBasicBlockConverter.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(map, convertedMap, Config, customContentManager, complexConfig, logger);
+        var placeTransformationConverter = new PlaceTransformationConverter(map, Config, customContentManager, complexConfig, logger);
         placeTransformationConverter.Convert();
 
         var decorationConverter = new DecorationConverter(map, convertedMap, Config, customContentManager, logger);

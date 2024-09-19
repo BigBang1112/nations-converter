@@ -2,28 +2,25 @@
 using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using NationsConverterShared.Models;
+using NationsConverter.Models;
 
 namespace NationsConverter.Converters;
 
 internal sealed class PlaceBaseZoneConverter : BlockConverter
 {
     private readonly CGameCtnChallenge map;
-    private readonly CGameCtnChallenge convertedMap;
     private readonly CustomContentManager customContentManager;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
     public PlaceBaseZoneConverter(
         CGameCtnChallenge map,
-        CGameCtnChallenge convertedMap,
         NationsConverterConfig config,
         IComplexConfig complexConfig,
         CustomContentManager customContentManager,
         ILogger logger) : base(map, config, complexConfig, logger)
     {
         this.map = map;
-        this.convertedMap = convertedMap;
         this.customContentManager = customContentManager;
 
         occupiedZone = new bool[map.Size.X, map.Size.Z];
@@ -32,7 +29,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
             .GetValueOrDefault($"{map.Size.X}x{map.Size.Y}x{map.Size.Z}")?.BaseHeight ?? 0;
     }
 
-    protected override void ConvertBlock(CGameCtnBlock block, ConversionModel conversion)
+    protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
         // If block is of zone type (ZoneHeight not null) it is automatically considered occupied
         // Block's height does not matter - tested on TMUnlimiter
@@ -98,7 +95,9 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
         var conversion = ConversionSet.Blocks[ConversionSet.DefaultZoneBlock];
 
         var subCategory = "Modless";
-        var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, ConversionSet.DefaultZoneBlock);
+        var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
+            ? Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, ConversionSet.DefaultZoneBlock)
+            : Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, ConversionSet.DefaultZoneBlock);
         var itemPath = Path.Combine(dirPath, "Ground_0_0.Item.Gbx");
 
         for (var x = 0; x < occupiedZone.GetLength(0); x++)
