@@ -37,22 +37,25 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         var customContentManager = new CustomContentManager(convertedMap, runningDir, Config, logger);
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, Config, complexConfig, customContentManager, logger);
+        var conversionSetExtract = new ConversionSetExtract(map, complexConfig);
+        var conversionSet = conversionSetExtract.Extract();
+
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, conversionSet, customContentManager);
         placeBaseZoneConverter.Convert();
 
-        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, Config, complexConfig, logger);
+        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, conversionSet);
         var coveredZoneBlocks = coveredZoneBlockInfoExtract.Extract();
 
-        var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, Config, complexConfig, logger);
+        var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, conversionSet);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBlockConverter(map, Config, complexConfig, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBasicBlockConverter = new PlaceBlockConverter(map, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBasicBlockConverter.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(map, Config, customContentManager, complexConfig, logger);
+        var placeTransformationConverter = new PlaceTransformationConverter(map, conversionSet, customContentManager, logger);
         placeTransformationConverter.Convert();
 
-        var decorationConverter = new DecorationConverter(map, convertedMap, Config, customContentManager, logger);
+        var decorationConverter = new DecorationConverter(map, convertedMap, conversionSet, Config, customContentManager);
         decorationConverter.Convert();
 
         var userDataPackFilePath = customContentManager.EmbedData();

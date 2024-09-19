@@ -1,6 +1,5 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
-using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using NationsConverterShared.Models;
@@ -14,10 +13,9 @@ internal sealed class PlaceTransformationConverter : BlockConverter
 
     public PlaceTransformationConverter(
         CGameCtnChallenge map,
-        NationsConverterConfig config,
+        ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
-        IComplexConfig complexConfig,
-        ILogger logger) : base(map, config, complexConfig, logger)
+        ILogger logger) : base(map, conversionSet)
     {
         this.customContentManager = customContentManager;
         this.logger = logger;

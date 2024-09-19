@@ -1,40 +1,27 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
-using GBX.NET.Tool;
-using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
-using NationsConverterShared.Models;
 
 namespace NationsConverter.Converters;
 
 internal abstract class BlockConverter
 {
     private readonly CGameCtnChallenge map;
-    private readonly NationsConverterConfig config;
 
     /// <summary>
     /// Block size in small units.
     /// </summary>
     protected Int3 BlockSize { get; }
-    protected string Environment { get; }
     protected ManualConversionSetModel ConversionSet { get; }
+    protected string Environment { get; }
 
-    public BlockConverter(CGameCtnChallenge map, NationsConverterConfig config, IComplexConfig complexConfig, ILogger logger)
+    public BlockConverter(CGameCtnChallenge map, ManualConversionSetModel conversionSet)
     {
         this.map = map;
-        this.config = config;
 
         BlockSize = map.Collection.GetValueOrDefault().GetBlockSize();
-
-        Environment = map.GetEnvironment() switch
-        {
-            "Alpine" => "Snow",
-            "Speed" => "Desert",
-            _ => map.GetEnvironment()
-        };
-
-        ConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", Environment), cache: true)
-            .Fill(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment), cache: true));
+        ConversionSet = conversionSet;
+        Environment = conversionSet.Environment;
     }
 
     protected abstract void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion);

@@ -1,6 +1,5 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
-using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
@@ -16,12 +15,11 @@ internal sealed class PlaceBlockConverter : BlockConverter
 
     public PlaceBlockConverter(
         CGameCtnChallenge map,
-        NationsConverterConfig config,
-        IComplexConfig complexConfig,
+        ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
-        ILogger logger) : base(map, config, complexConfig, logger)
+        ILogger logger) : base(map, conversionSet)
     {
         this.customContentManager = customContentManager;
         this.coveredZoneBlocks = coveredZoneBlocks;

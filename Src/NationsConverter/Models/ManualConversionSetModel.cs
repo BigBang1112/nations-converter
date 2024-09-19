@@ -6,6 +6,15 @@ namespace NationsConverter.Models;
 [YamlSerializable]
 public sealed class ManualConversionSetModel
 {
+    private string? environment;
+
+    public string Environment
+    {
+        get => string.IsNullOrWhiteSpace(environment)
+            ? throw new InvalidOperationException("Environment cannot be null, empty, or white space") : environment;
+        set => environment = value;
+    }
+
     public string? DefaultZoneBlock { get; set; }
     public Dictionary<string, string> BlockTerrainModifiers { get; set; } = [];
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
@@ -14,6 +23,7 @@ public sealed class ManualConversionSetModel
 
     public ManualConversionSetModel Fill(ConversionSetModel conversionSet)
     {
+        environment ??= conversionSet.Environment;
         DefaultZoneBlock ??= conversionSet.DefaultZoneBlock;
         
         foreach (var (size, deco) in conversionSet.Decorations)
