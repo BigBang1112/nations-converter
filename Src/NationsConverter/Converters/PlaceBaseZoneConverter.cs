@@ -7,16 +7,19 @@ namespace NationsConverter.Converters;
 internal sealed class PlaceBaseZoneConverter : BlockConverter
 {
     private readonly CGameCtnChallenge map;
+    private readonly CGameCtnChallenge convertedMap;
     private readonly CustomContentManager customContentManager;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
     public PlaceBaseZoneConverter(
         CGameCtnChallenge map,
+        CGameCtnChallenge convertedMap,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager) : base(map, conversionSet)
     {
         this.map = map;
+        this.convertedMap = convertedMap;
         this.customContentManager = customContentManager;
 
         occupiedZone = new bool[map.Size.X, map.Size.Z];
@@ -108,6 +111,8 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
                 var pos = new Int3(x, baseHeight, z);
 
                 customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
+
+                WaterConverter.PlaceWater(convertedMap, pos, BlockSize, ConversionSet.WaterHeight);
             }
         }
     }

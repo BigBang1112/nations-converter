@@ -40,7 +40,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         var conversionSetExtract = new ConversionSetExtract(map, complexConfig);
         var conversionSet = conversionSetExtract.Extract();
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, conversionSet, customContentManager);
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(map, convertedMap, conversionSet, customContentManager);
         placeBaseZoneConverter.Convert();
 
         var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(map, conversionSet);
@@ -49,8 +49,11 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(map, conversionSet);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBasicBlockConverter = new PlaceBlockConverter(map, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
-        placeBasicBlockConverter.Convert();
+        var placeBlockConverter = new PlaceBlockConverter(map, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        placeBlockConverter.Convert();
+
+        var waterConverter = new WaterConverter(map, convertedMap, conversionSet, coveredZoneBlocks);
+        waterConverter.Convert();
 
         var placeTransformationConverter = new PlaceTransformationConverter(map, conversionSet, customContentManager, logger);
         placeTransformationConverter.Convert();

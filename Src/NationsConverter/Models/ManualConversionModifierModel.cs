@@ -4,5 +4,5 @@ namespace NationsConverter.Models;
 
 public class ManualConversionModifierModel : ConversionModifierModel
 {
-
+    
 }

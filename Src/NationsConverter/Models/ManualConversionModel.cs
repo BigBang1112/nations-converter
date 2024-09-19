@@ -15,8 +15,11 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public WaypointType? Waypoint { get; set; }
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }
-
-    public T GetProperty<T>(Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc, Func<ManualConversionModifierModel, T?> propertyFunc, Func<ManualConversionModel, ManualConversionModifierModel?>? fallbackModifierFunc = null)
+    
+    public T GetProperty<T>(
+        Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
+        Func<ManualConversionModifierModel, T?> propertyFunc,
+        Func<ManualConversionModel, ManualConversionModifierModel?>? fallbackModifierFunc = null)
         where T : struct
     {
         var modifier = modifierFunc(this)
@@ -36,7 +39,10 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
         throw new Exception("Property is null in both places.");
     }
 
-    public T GetProperty<T>(Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc, Func<ManualConversionModifierModel, T> propertyFunc, Func<ManualConversionModel, ManualConversionModifierModel?>? fallbackModifierFunc = null)
+    public T? GetPropertyDefault<T>(
+        Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
+        Func<ManualConversionModifierModel, T> propertyFunc,
+        Func<ManualConversionModel, ManualConversionModifierModel?>? fallbackModifierFunc = null)
     {
         var modifier = modifierFunc(this)
             ?? fallbackModifierFunc?.Invoke(this) // This fallback may be better to log as lower level
@@ -52,7 +58,15 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
             return conversionValue;
         }
 
-        throw new Exception("Property is null in both places.");
+        return default;
+    }
+
+    public T GetProperty<T>(
+        Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc, 
+        Func<ManualConversionModifierModel, T> propertyFunc, 
+        Func<ManualConversionModel, ManualConversionModifierModel?>? fallbackModifierFunc = null)
+    {
+        return GetPropertyDefault(modifierFunc, propertyFunc, fallbackModifierFunc) ?? throw new Exception("Property is null in both places.");
     }
 
     public T GetProperty<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T?> propertyFunc, bool fallback = false)
@@ -85,6 +99,22 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
             return block.IsGround
                 ? GetProperty(x => x.Ground, propertyFunc)
                 : GetProperty(x => x.Air, propertyFunc);
+        }
+    }
+
+    public T? GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T> propertyFunc, bool fallback = false)
+    {
+        if (fallback)
+        {
+            return block.IsGround
+                ? GetPropertyDefault(x => x.Ground, propertyFunc, x => x.Air)
+                : GetPropertyDefault(x => x.Air, propertyFunc, x => x.Ground);
+        }
+        else
+        {
+            return block.IsGround
+                ? GetPropertyDefault(x => x.Ground, propertyFunc)
+                : GetPropertyDefault(x => x.Air, propertyFunc);
         }
     }
 }

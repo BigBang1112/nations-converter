@@ -19,6 +19,7 @@ public sealed class ManualConversionSetModel
     public Dictionary<string, string> BlockTerrainModifiers { get; set; } = [];
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
     public HashSet<string>? TerrainModifiers { get; set; }
+    public float WaterHeight { get; set; }
     public Dictionary<string, ManualConversionModel> Blocks { get; set; } = [];
 
     public ManualConversionSetModel Fill(ConversionSetModel conversionSet)
@@ -58,6 +59,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Ground.SubVariants = conversion.Ground.SubVariants;
                 manualConversion.Ground.Clips = conversion.Ground.Clips;
                 manualConversion.Ground.SpawnPos = conversion.Ground.SpawnPos;
+                manualConversion.Ground.WaterUnits = conversion.Ground.WaterUnits;
             }
 
             if (conversion.Air is not null)
@@ -69,6 +71,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Air.SubVariants = conversion.Air.SubVariants;
                 manualConversion.Air.Clips = conversion.Air.Clips;
                 manualConversion.Air.SpawnPos = conversion.Air.SpawnPos;
+                manualConversion.Air.WaterUnits = conversion.Air.WaterUnits;
             }
 
             manualConversion.Units = conversion.Units;
@@ -81,6 +84,7 @@ public sealed class ManualConversionSetModel
             manualConversion.Waypoint = conversion.Waypoint;
             manualConversion.Modifiable = conversion.Modifiable;
             manualConversion.NotModifiable = conversion.NotModifiable;
+            manualConversion.WaterUnits = conversion.WaterUnits;
         }
 
         return this;
