@@ -10,4 +10,5 @@ public class ConversionModifierModel
     public int[]? SubVariants { get; set; }
     public ConversionClipModel[]? Clips { get; set; }
     public Vec3? SpawnPos { get; set; }
+    public Int2[]? WaterUnits { get; set; }
 }

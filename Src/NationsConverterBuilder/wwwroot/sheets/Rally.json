@@ -2242,6 +2242,20 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
       ]
     },
     "RallyCastleDrawBridgeSpeedUp": {
@@ -2319,6 +2333,12 @@
             ],
             "Dir": 3
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            1
+          ]
         ]
       },
       "Variants": 1
@@ -2360,6 +2380,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2429,6 +2455,12 @@
             ],
             "Dir": 3
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            1
+          ]
         ]
       },
       "Variants": 1
@@ -2477,6 +2509,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "RallyRoadLowHillSlope": {
@@ -2751,6 +2793,20 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
       ]
     },
     "RallyBridgeHighPillar": {
@@ -2783,7 +2839,17 @@
         1,
         2
       ],
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
     },
     "RallyCastleHillBridgeAir": {
       "PageName": "Frontier",
@@ -2954,6 +3020,12 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -6596,7 +6668,13 @@
         1,
         2
       ],
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          1
+        ]
+      ]
     },
     "RallyCastleCrossPillar": {
       "PageName": "CastleMisc",
@@ -10864,6 +10942,12 @@
           3,
           1,
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0

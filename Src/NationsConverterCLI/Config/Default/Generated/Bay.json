@@ -90,6 +90,16 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
       ]
     },
     "BayBridgeLoopLeft": {
@@ -172,6 +182,16 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
       ]
     },
     "BayBridgeGTCurve3": {
@@ -248,6 +268,40 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     "BayBridgeGTCurve2": {
@@ -304,6 +358,24 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
       ]
     },
     "BayBridgeBiSlope2End": {
@@ -350,6 +422,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlopeBase": {
@@ -396,6 +474,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlope2Straight": {
@@ -447,6 +531,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlopeBase2": {
@@ -498,6 +588,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeBiSlope2Start": {
@@ -544,6 +640,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeBiSlope2EndSupport": {
@@ -590,6 +692,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeBiSlope2StartSupport": {
@@ -636,6 +744,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlopeBaseSupport": {
@@ -682,6 +796,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlopeBase2Support": {
@@ -733,6 +853,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSlope2StraightSupport": {
@@ -784,6 +910,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgePillar": {
@@ -805,6 +937,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeStartLine": {
@@ -843,6 +981,12 @@
         16,
         2.5,
         20
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeCheckpoint": {
@@ -890,6 +1034,12 @@
         16,
         1.31,
         16
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeRoadSupport": {
@@ -954,6 +1104,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeFinish": {
@@ -987,6 +1143,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeRoad": {
@@ -1051,6 +1213,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeRoadPillar": {
@@ -1077,6 +1245,12 @@
         1,
         1,
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeStartFinishLine": {
@@ -1124,6 +1298,12 @@
         16,
         1.31,
         16
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSuspPillar": {
@@ -1160,6 +1340,24 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
       ]
     },
     "BayBridgeTurbo": {
@@ -1201,6 +1399,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeTurbo2": {
@@ -1242,6 +1446,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeSusp": {
@@ -1491,6 +1701,28 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          2
+        ]
       ]
     },
     "BayBridgeHole": {
@@ -1532,6 +1764,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeTurboRoulette": {
@@ -1573,6 +1811,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBridgeRamp": {
@@ -1605,6 +1849,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayBuilding2Pillar": {
@@ -2321,6 +2571,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2372,6 +2628,24 @@
         ],
         "SubVariants": [
           2
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2433,6 +2707,24 @@
         ],
         "SubVariants": [
           2
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2454,6 +2746,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2475,6 +2773,12 @@
         ],
         "SubVariants": [
           3
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2496,6 +2800,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2517,6 +2827,12 @@
         ],
         "SubVariants": [
           3
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2538,6 +2854,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2559,6 +2881,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2580,6 +2908,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2601,6 +2935,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2622,6 +2962,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2643,6 +2989,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2664,6 +3016,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2685,6 +3043,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2795,6 +3159,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2816,6 +3186,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2842,6 +3218,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2889,6 +3271,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayDocksHarborJettyHawkLoop": {
@@ -2918,6 +3306,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2944,6 +3338,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2991,6 +3391,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayDocksHarborJettyRamp2": {
@@ -3010,6 +3416,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -3036,6 +3448,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -3164,6 +3582,12 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -3350,6 +3774,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayRoadTransitionToPlatform": {
@@ -8250,6 +8680,12 @@
           4,
           3,
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -8336,6 +8772,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "BayTunnelRoadClip": {
@@ -8449,7 +8891,13 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     "BayFlatsRoadClipPillar": {
       "PageName": "Other",

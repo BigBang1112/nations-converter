@@ -8123,6 +8123,12 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -18483,7 +18489,13 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     "StadiumRoadDirtHillTiltClipLeft": {
       "PageName": "Other",
@@ -18680,6 +18692,12 @@
           1,
           1,
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0

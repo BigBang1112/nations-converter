@@ -393,7 +393,7 @@ internal sealed class InitStageService
         }
     }
 
-    private static ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable, HashSet<Int2> notModifiable)
+    private ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable, HashSet<Int2> notModifiable)
     {
         var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
         var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
@@ -419,12 +419,22 @@ internal sealed class InitStageService
             or CGameCtnBlockInfo.EWayPointType.StartFinish
             or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.GetValueOrDefault().TX, node.SpawnLocGround.GetValueOrDefault().TY, node.SpawnLocGround.GetValueOrDefault().TZ) : null;
 
+        var airWaterUnits = node.AirBlockUnitInfos?
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
+            .Distinct().ToArray() ?? [];
+        var groundWaterUnits = node.GroundBlockUnitInfos?
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
+            .Distinct().ToArray() ?? [];
+
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
         var commonSize = airSize == groundSize ? airSize : null;
         var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
         var commonSubVariants = airSubVariants.SequenceEqual(groundSubVariants) ? airSubVariants : null;
         var commonClips = airClips.SequenceEqual(groundClips) ? airClips : null;
         var commonSpawnPos = airSpawnPos == groundSpawnPos ? airSpawnPos : null;
+        var commonWaterUnits = airWaterUnits.SequenceEqual(groundWaterUnits) ? airWaterUnits : null;
 
         var airConvModel = default(ConversionModifierModel);
         var groundConvModel = default(ConversionModifierModel);
@@ -438,7 +448,8 @@ internal sealed class InitStageService
                 Variants = commonVariants is null ? airVariants : null,
                 SubVariants = commonSubVariants is null && airSubVariants.Length > 0 ? airSubVariants : null,
                 Clips = commonClips is null && airClips.Length > 0 ? airClips : null,
-                SpawnPos = commonSpawnPos is null ? airSpawnPos : null
+                SpawnPos = commonSpawnPos is null ? airSpawnPos : null,
+                WaterUnits = commonWaterUnits is null && airWaterUnits.Length > 0 ? airWaterUnits : null
             };
         }
 
@@ -451,7 +462,8 @@ internal sealed class InitStageService
                 Variants = commonVariants is null ? groundVariants : null,
                 SubVariants = commonSubVariants is null && groundSubVariants.Length > 0 ? groundSubVariants : null,
                 Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null,
-                SpawnPos = commonSpawnPos is null ? groundSpawnPos : null
+                SpawnPos = commonSpawnPos is null ? groundSpawnPos : null,
+                WaterUnits = commonWaterUnits is null && groundWaterUnits.Length > 0 ? groundWaterUnits : null
             };
         }
 
@@ -476,7 +488,8 @@ internal sealed class InitStageService
             },
             SpawnPos = commonSpawnPos,
             Modifiable = isTerrainModifiable ? true : null,
-            NotModifiable = isTerrainModifiable && notModifiable.Count > 0 ? notModifiable : null
+            NotModifiable = isTerrainModifiable && notModifiable.Count > 0 ? notModifiable : null,
+            WaterUnits = commonWaterUnits?.Length == 0 ? null : commonWaterUnits
         };
     }
 

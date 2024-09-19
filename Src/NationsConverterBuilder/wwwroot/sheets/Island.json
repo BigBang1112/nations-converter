@@ -598,6 +598,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandCroisettePillar": {
@@ -843,6 +849,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -869,6 +881,12 @@
         ],
         "SubVariants": [
           2
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -895,6 +913,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -921,6 +945,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -947,6 +977,12 @@
         ],
         "SubVariants": [
           2
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -973,6 +1009,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -1214,6 +1256,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaSignsAdvert": {
@@ -1240,6 +1288,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaSigns": {
@@ -1261,6 +1315,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaSignsAdvertSupport": {
@@ -1287,6 +1347,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandBeachRocks": {
@@ -1311,6 +1377,12 @@
         ],
         "SubVariants": [
           4
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -1419,6 +1491,12 @@
         ],
         "SubVariants": [
           5
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -1503,6 +1581,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSpacePlateformLaunch1": {
@@ -1588,6 +1672,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSpaceAntenne2": {
@@ -1954,6 +2044,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandAirportRoadGrass": {
@@ -2317,6 +2413,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2338,6 +2440,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2364,6 +2472,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2390,6 +2504,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -2416,6 +2536,12 @@
         ],
         "SubVariants": [
           2
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -5746,6 +5872,12 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -5774,6 +5906,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     "IslandSeaWayGTCurve2Pillar": {
@@ -5800,6 +5942,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
       ]
     },
     "IslandHills6HighWayBridgeAir": {
@@ -5887,6 +6039,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandHills6HighWayBridgeGround": {
@@ -6273,6 +6431,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            1
+          ]
         ]
       },
       "Variants": 1
@@ -6542,6 +6706,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandCroisetteToHighway": {
@@ -6624,6 +6794,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandHotelPillar": {
@@ -6963,7 +7139,13 @@
           8
         ]
       },
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     "IslandSpacePlateformLaunch2Pillar": {
       "PageName": "Decor/Space",
@@ -7011,7 +7193,13 @@
           8
         ]
       },
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     "IslandSeaWay": {
       "PageName": "SeaWay/SeaWayMain",
@@ -7075,6 +7263,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayTurbo2": {
@@ -7116,6 +7310,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWaySupport": {
@@ -7180,6 +7380,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayTurboRoulette": {
@@ -7221,6 +7427,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayCheckpoint": {
@@ -7268,6 +7480,12 @@
         32,
         2.1,
         32
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayHole": {
@@ -7309,6 +7527,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayHoleRamp": {
@@ -7350,6 +7574,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayTurbo": {
@@ -7391,6 +7621,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayBiSlopeEnd": {
@@ -7447,6 +7683,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "IslandSeaWayGTCurve3": {
@@ -7508,6 +7754,28 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     "IslandSeaWaySlope": {
@@ -7554,6 +7822,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayGTCurve2": {
@@ -7610,6 +7884,24 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
       ]
     },
     "IslandSeaWayBiSlopeStart": {
@@ -7666,6 +7958,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "IslandSeaWayBigSlopeXCrossBase": {
@@ -7878,6 +8180,56 @@
             ],
             "Dir": 2
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ]
         ]
       },
       "Variants": 1
@@ -8189,6 +8541,56 @@
             ],
             "Dir": 2
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
         ]
       },
       "Variants": 1
@@ -8237,6 +8639,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayScrew360": {
@@ -8566,6 +8974,56 @@
             ],
             "Dir": 2
           }
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            3
+          ]
         ]
       },
       "Variants": 1
@@ -8594,6 +9052,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "IslandSeaWayPillar": {
@@ -8620,6 +9088,12 @@
         1,
         1,
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaWayStraightPillar": {
@@ -8641,6 +9115,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandTunnelCheckpoint": {
@@ -11157,6 +11637,64 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
       ]
     },
     "IslandPlatformGTSlope3": {
@@ -11253,6 +11791,40 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     "IslandPlatformGTSlope5b": {
@@ -11409,6 +11981,64 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          4
+        ]
       ]
     },
     "IslandPlatformGTSlope4b": {
@@ -11535,6 +12165,52 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
       ]
     },
     "IslandPlatformGTSlope3b": {
@@ -11631,6 +12307,40 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
       ]
     },
     "IslandPlatformGTSlope2b": {
@@ -11687,6 +12397,24 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
       ]
     },
     "IslandPlatformGTSlope4": {
@@ -11813,6 +12541,52 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          3
+        ]
       ]
     },
     "IslandPlatformGTSlope2": {
@@ -11869,6 +12643,24 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
       ]
     },
     "IslandPlatformLoopGT4Start": {
@@ -11936,6 +12728,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformLoopGT4CornerStart": {
@@ -12102,6 +12900,24 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ]
       ]
     },
     "IslandPlatformLoopWall": {
@@ -12121,6 +12937,12 @@
         ],
         "SubVariants": [
           4
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -12152,6 +12974,20 @@
         ],
         "SubVariants": [
           4
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
         ]
       },
       "Variants": 1
@@ -12208,6 +13044,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -12354,6 +13196,24 @@
         ],
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ]
         ]
       },
       "Variants": 1
@@ -12407,6 +13267,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2TurboDown": {
@@ -12458,6 +13324,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformTurboRoulette": {
@@ -12499,6 +13371,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2TurboRight": {
@@ -12550,6 +13428,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformTurbo": {
@@ -12591,6 +13475,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2TurboLeft": {
@@ -12642,6 +13532,12 @@
           ],
           "Dir": 1
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformRoadSupport": {
@@ -12716,6 +13612,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformRoadPillar": {
@@ -12742,6 +13644,12 @@
         1,
         1,
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformStartLine": {
@@ -12790,6 +13698,12 @@
         32,
         8.01,
         48
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformStartFinishLine": {
@@ -12847,6 +13761,12 @@
         32,
         8.01,
         32
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformCheckpoint": {
@@ -12899,6 +13819,12 @@
         32,
         8.01,
         32
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformFloodLight": {
@@ -12930,6 +13856,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformRoad": {
@@ -12994,6 +13926,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformFinishLine": {
@@ -13037,6 +13975,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2Support": {
@@ -13088,6 +14032,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformCheckpointSlopeLeft": {
@@ -13150,6 +14100,12 @@
         32,
         17,
         32
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformBiSlope2End": {
@@ -13196,6 +14152,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformCheckpointSlopeRight": {
@@ -13258,6 +14220,12 @@
         32,
         17,
         32
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2": {
@@ -13309,6 +14277,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformBasePillar": {
@@ -13330,6 +14304,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformToSlope2Mirror": {
@@ -13367,6 +14347,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformToSlope2": {
@@ -13404,6 +14390,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformBiSlope2Start": {
@@ -13450,6 +14442,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformTurbo2": {
@@ -13491,6 +14489,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2Turbo2Up": {
@@ -13542,6 +14546,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2Turbo2Left": {
@@ -13593,6 +14603,12 @@
           ],
           "Dir": 1
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2Turbo2Down": {
@@ -13644,6 +14660,12 @@
           ],
           "Dir": 2
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope2Turbo2Right": {
@@ -13695,6 +14717,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformBiSlopeStart": {
@@ -13751,6 +14779,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "IslandPlatformBiSlopeEnd": {
@@ -13807,6 +14845,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
       ]
     },
     "IslandPlatformSlopeSupport": {
@@ -13853,6 +14901,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandPlatformSlope": {
@@ -13899,6 +14953,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandRoadWallClipRight": {
@@ -13953,6 +15013,12 @@
           1,
           1,
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0
@@ -14081,6 +15147,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandSeaClip": {
@@ -14107,7 +15179,13 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
     },
     "IslandAirportRoadGrassClip": {
       "PageName": "Other",
@@ -14175,6 +15253,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
       ]
     },
     "IslandHills6": {
