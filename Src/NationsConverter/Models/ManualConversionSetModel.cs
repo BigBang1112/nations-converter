@@ -17,6 +17,7 @@ public sealed class ManualConversionSetModel
 
     public string? DefaultZoneBlock { get; set; }
     public Dictionary<string, string> BlockTerrainModifiers { get; set; } = [];
+    public float DecorationYOffset { get; set; }
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
     public HashSet<string>? TerrainModifiers { get; set; }
     public float WaterHeight { get; set; }

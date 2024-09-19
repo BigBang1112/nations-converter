@@ -47,11 +47,18 @@ internal sealed partial class DecorationConverter
 
         if (config.IncludeDecoration)
         {
+            var sizeStr = $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}";
             var subCategory = "Modless";
             var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", conversionSet.Environment, "Decorations");
-            var itemPath = Path.Combine(dirPath, $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}.Item.Gbx");
+            var itemPath = Path.Combine(dirPath, $"{sizeStr}.Item.Gbx");
 
-            customContentManager.PlaceItem(itemPath, (0, 0, 0), (0, 0, 0));
+            var yOffset = conversionSet.DecorationYOffset;
+            if (conversionSet.Decorations.TryGetValue(sizeStr, out var deco))
+            {
+                yOffset += deco.YOffset;
+            }
+
+            customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0));
         }
     }
 }

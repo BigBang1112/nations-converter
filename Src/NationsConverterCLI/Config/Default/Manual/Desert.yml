@@ -1,3 +1,4 @@
 BlockTerrainModifiers:
  SpeedRock: Rock
+DecorationYOffset: -0.25
 WaterHeight: 5.9
