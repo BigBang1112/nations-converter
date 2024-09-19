@@ -112,7 +112,15 @@ internal sealed class PlaceBaseZoneConverter : BlockConverter
 
                 customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
 
-                WaterConverter.PlaceWater(convertedMap, pos, BlockSize, ConversionSet.WaterHeight);
+                if (conversion.ZoneHeight.HasValue)
+                {
+                    var waterUnits = conversion.GetPropertyDefault(x => x.Ground, x => x.WaterUnits);
+
+                    if (waterUnits is { Length: > 0 })
+                    {
+                        WaterConverter.PlaceWater(convertedMap, pos, BlockSize, ConversionSet.WaterHeight);
+                    }
+                }
             }
         }
     }
