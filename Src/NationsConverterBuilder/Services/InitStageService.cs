@@ -178,7 +178,7 @@ internal sealed class InitStageService
         }
     }
 
-    private static readonly string[] technologies = ["MM_Collision", "Solid2"];
+    private static readonly string[] technologies = ["MM_Collision"];
 
     private ConversionModel? ProcessBlock(string collectionName, CGameCtnChallenge? baseMap, BlockInfoModel block, string subCategory, ref int index)
     {
