@@ -97,11 +97,11 @@
 
                         @if (upload.Value > 0)
                         {
-                            <span title="Upload value. If higher, the higher percentage of the item value will be payed out to the uploader.">@upload.Value</span>
+                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">@upload.Value</span>
                         }
-                        else
+                        else if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
                         {
-                            <span title="Upload value soon. If higher, the higher percentage of the item value will be payed out to the uploader.">(value soon)</span>
+                            <span title="Upload value soon. If higher, the higher percentage of the item value will be paid out to the uploader.">(value soon)</span>
                         }
 
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
