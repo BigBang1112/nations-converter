@@ -63,6 +63,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         var userDataPackFilePath = customContentManager.EmbedData();
 
+        var musicConverter = new MusicConverter(map, convertedMap, Config);
+        musicConverter.Convert();
+
         if (Config.CopyItems)
         {
             var copyUserDataConverter = new CopyUserDataConverter(Config, runningDir, userDataPackFilePath);
