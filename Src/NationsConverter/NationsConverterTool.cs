@@ -33,6 +33,8 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
             throw new InvalidOperationException("Map is already a TM2020 map");
         }
 
+        using var http = new HttpClient();
+
         var convertedMap = CreateBaseMap();
 
         var customContentManager = new CustomContentManager(convertedMap, runningDir, Config, logger);
@@ -63,7 +65,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMap, IComplexConfig 
 
         var userDataPackFilePath = customContentManager.EmbedData();
 
-        var musicConverter = new MusicConverter(map, convertedMap, Config);
+        var musicConverter = new MusicConverter(map, convertedMap, Config, http, logger);
         musicConverter.Convert();
 
         if (Config.CopyItems)

@@ -1,5 +1,8 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
+using System.Web;
+using TmEssentials;
 
 namespace NationsConverter.Converters;
 
@@ -7,14 +10,23 @@ internal sealed class MusicConverter : EnvironmentConverterBase
 {
     private readonly CGameCtnChallenge convertedMap;
     private readonly NationsConverterConfig config;
+    private readonly HttpClient http;
+    private readonly ILogger logger;
 
     private const string Extension = "mux";
 
-    public MusicConverter(CGameCtnChallenge map, CGameCtnChallenge convertedMap, NationsConverterConfig config)
+    public MusicConverter(
+        CGameCtnChallenge map, 
+        CGameCtnChallenge convertedMap,
+        NationsConverterConfig config,
+        HttpClient http,
+        ILogger logger)
         : base(map)
     {
         this.convertedMap = convertedMap;
         this.config = config;
+        this.http = http;
+        this.logger = logger;
     }
 
     public void Convert()
@@ -25,10 +37,25 @@ internal sealed class MusicConverter : EnvironmentConverterBase
         }
 
         var music = config.Music[Environment];
+        var filePath = $@"Media\Musics\NC2\{music}.{Extension}";
+        var locatorUrl = $"https://{config.HttpHost}/music/{HttpUtility.UrlPathEncode($"{music}.{Extension}")}";
 
-        convertedMap.CustomMusicPackDesc = new PackDesc(
-            FilePath: $@"Media\Musics\NC2\{music}.{Extension}",
-            Checksum: null,
-            LocatorUrl: $"https://{config.HttpHost}/music/{music}.{Extension}");
+        logger.LogInformation("Music set to {Music}!", music);
+        logger.LogInformation("Locator URL: {LocatorUrl}", locatorUrl);
+
+        convertedMap.CustomMusicPackDesc = new PackDesc(filePath, Checksum: null, locatorUrl);
+
+        logger.LogInformation("Checking if music is available online...");
+
+        using var response = http.HeadAsync(locatorUrl).GetAwaiter().GetResult();
+        
+        if (response.IsSuccessStatusCode)
+        {
+            logger.LogInformation("Music is available online: status code {StatusCode}", response.StatusCode);
+        }
+        else
+        {
+            logger.LogWarning("Music is not available online: status code {StatusCode}", response.StatusCode);
+        }
     }
 }

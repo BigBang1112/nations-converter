@@ -15,7 +15,7 @@ public class NationsConverterConfig : Config
     {
         ["Snow"] = "Snow (Realnest Bootleg)",
         ["Rally"] = "Rally (Realnest Bootleg)",
-        ["Desert"] = "Desert (Realnest Bootleg)",
+        ["Desert"] = "Desert (Realnest & ThaumicTom Bootleg)",
         ["Island"] = "Island (Realnest Bootleg)",
         ["Bay"] = "Bay (Realnest Bootleg)",
         ["Coast"] = "Coast (Realnest Bootleg)",
