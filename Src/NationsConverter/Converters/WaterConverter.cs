@@ -5,7 +5,7 @@ using System.Collections.Immutable;
 
 namespace NationsConverter.Converters;
 
-internal sealed class WaterConverter : BlockConverter
+internal sealed class WaterConverter : BlockConverterBase
 {
     private readonly CGameCtnChallenge convertedMap;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;

@@ -6,7 +6,7 @@ using NationsConverterShared.Models;
 
 namespace NationsConverter.Converters;
 
-internal sealed class PlaceTransformationConverter : BlockConverter
+internal sealed class PlaceTransformationConverter : BlockConverterBase
 {
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;

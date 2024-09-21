@@ -6,7 +6,7 @@ using System.Collections.Immutable;
 
 namespace NationsConverter.Converters;
 
-internal sealed class PlaceBlockConverter : BlockConverter
+internal sealed class PlaceBlockConverter : BlockConverterBase
 {
     private readonly CustomContentManager customContentManager;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;

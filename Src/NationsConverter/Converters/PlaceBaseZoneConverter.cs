@@ -4,7 +4,7 @@ using NationsConverter.Models;
 
 namespace NationsConverter.Converters;
 
-internal sealed class PlaceBaseZoneConverter : BlockConverter
+internal sealed class PlaceBaseZoneConverter : BlockConverterBase
 {
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
