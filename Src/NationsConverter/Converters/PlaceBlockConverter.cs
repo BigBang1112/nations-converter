@@ -3,6 +3,7 @@ using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
+using System.Diagnostics;
 
 namespace NationsConverter.Converters;
 
@@ -25,6 +26,16 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
+    }
+
+    public override void Convert()
+    {
+        logger.LogInformation("Placing blocks...");
+        var watch = Stopwatch.StartNew();
+
+        base.Convert();
+
+        logger.LogInformation("Placed blocks ({ElapsedMilliseconds}ms).", watch.ElapsedMilliseconds);
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)

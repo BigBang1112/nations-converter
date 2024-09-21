@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
 
@@ -9,13 +10,16 @@ internal sealed class TerrainModifierZoneExtract
 {
     private readonly CGameCtnChallenge map;
     private readonly ManualConversionSetModel conversionSet;
+    private readonly ILogger logger;
 
     public TerrainModifierZoneExtract(
         CGameCtnChallenge map,
-        ManualConversionSetModel conversionSet)
+        ManualConversionSetModel conversionSet,
+        ILogger logger)
     {
         this.map = map;
         this.conversionSet = conversionSet;
+        this.logger = logger;
     }
 
     public ImmutableDictionary<Int3, string> Extract()
@@ -34,6 +38,8 @@ internal sealed class TerrainModifierZoneExtract
                 terrainModifierZones[block.Coord] = terrainModifier;
             }
         }
+
+        logger.LogInformation("Extracted {Count} terrain modifier zones.", terrainModifierZones.Count);
 
         return terrainModifierZones.ToImmutable();
     }

@@ -1,7 +1,9 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
+using System.Diagnostics;
 
 namespace NationsConverter.Extracts;
 
@@ -9,15 +11,20 @@ internal sealed class CoveredZoneBlockInfoExtract
 {
     private readonly CGameCtnChallenge map;
     private readonly ManualConversionSetModel conversionSet;
+    private readonly ILogger logger;
 
-    public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, ManualConversionSetModel conversionSet)
+    public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, ManualConversionSetModel conversionSet, ILogger logger)
     {
         this.map = map;
         this.conversionSet = conversionSet;
+        this.logger = logger;
     }
 
     public ImmutableHashSet<CGameCtnBlock> Extract()
     {
+        logger.LogInformation("Extracting covered zone blocks...");
+        var watch = Stopwatch.StartNew();
+
         var groundPositions = new HashSet<Int3>();
 
         foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(map))
@@ -44,6 +51,8 @@ internal sealed class CoveredZoneBlockInfoExtract
                 coveredZoneBlocks.Add(block);
             }
         }
+
+        logger.LogInformation("Extracted {Count} covered zone blocks ({ElapsedMilliseconds}ms).", coveredZoneBlocks.Count, watch.ElapsedMilliseconds);
 
         return coveredZoneBlocks.ToImmutable();
     }

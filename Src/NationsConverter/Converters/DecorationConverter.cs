@@ -12,6 +12,7 @@ internal sealed partial class DecorationConverter
     private readonly ManualConversionSetModel conversionSet;
     private readonly NationsConverterConfig config;
     private readonly CustomContentManager customContentManager;
+    private readonly ILogger logger;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
     private static partial Regex MoodRegex();
@@ -21,13 +22,15 @@ internal sealed partial class DecorationConverter
         CGameCtnChallenge convertedMap,
         ManualConversionSetModel conversionSet,
         NationsConverterConfig config,
-        CustomContentManager customContentManager)
+        CustomContentManager customContentManager,
+        ILogger logger)
     {
         this.map = map;
         this.convertedMap = convertedMap;
         this.conversionSet = conversionSet;
         this.config = config;
         this.customContentManager = customContentManager;
+        this.logger = logger;
     }
 
     public void Convert()
@@ -45,6 +48,9 @@ internal sealed partial class DecorationConverter
 
         convertedMap.Decoration = new($"{mapBase}{mood}", 26, "Nadeo");
 
+        logger.LogInformation("Decoration: {Name}", convertedMap.Decoration.Id);
+        logger.LogInformation("Size: {Size}", convertedMap.Size);
+
         if (config.IncludeDecoration)
         {
             var sizeStr = $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}";
@@ -59,6 +65,8 @@ internal sealed partial class DecorationConverter
             }
 
             customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0));
+
+            logger.LogInformation("Placed decoration item ({Size}).", sizeStr);
         }
     }
 }

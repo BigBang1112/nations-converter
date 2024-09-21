@@ -1,7 +1,9 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
+using System.Diagnostics;
 
 namespace NationsConverter.Converters;
 
@@ -9,23 +11,30 @@ internal sealed class WaterConverter : BlockConverterBase
 {
     private readonly CGameCtnChallenge convertedMap;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
+    private readonly ILogger logger;
 
     public WaterConverter(
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         ManualConversionSetModel conversionSet,
-        ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks) : base(map, conversionSet)
+        ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
+        ILogger logger) : base(map, conversionSet)
     {
         this.convertedMap = convertedMap;
         this.coveredZoneBlocks = coveredZoneBlocks;
+        this.logger = logger;
     }
 
     public override void Convert()
     {
         if (Environment is "Coast")
         {
+            logger.LogWarning("Water in Coast environment is not supported yet.");
             return;
         }
+
+        logger.LogInformation("Placing water...");
+        var watch = Stopwatch.StartNew();
 
         base.Convert();
 
@@ -43,6 +52,8 @@ internal sealed class WaterConverter : BlockConverterBase
 
             ConvertBlock(block, conversion);
         }
+
+        logger.LogInformation("Placed water ({ElapsedMilliseconds}ms).", watch.ElapsedMilliseconds);
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)

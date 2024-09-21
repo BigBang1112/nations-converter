@@ -1,6 +1,8 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
+using System.Diagnostics;
 
 namespace NationsConverter.Converters;
 
@@ -9,6 +11,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
     private readonly CGameCtnChallenge map;
     private readonly CGameCtnChallenge convertedMap;
     private readonly CustomContentManager customContentManager;
+    private readonly ILogger logger;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
@@ -16,11 +19,13 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
         CGameCtnChallenge map,
         CGameCtnChallenge convertedMap,
         ManualConversionSetModel conversionSet,
-        CustomContentManager customContentManager) : base(map, conversionSet)
+        CustomContentManager customContentManager,
+        ILogger logger) : base(map, conversionSet)
     {
         this.map = map;
         this.convertedMap = convertedMap;
         this.customContentManager = customContentManager;
+        this.logger = logger;
 
         occupiedZone = new bool[map.Size.X, map.Size.Z];
 
@@ -82,6 +87,9 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
             return;
         }
 
+        logger.LogInformation("Placing zone in empty spots...");
+        var watch = Stopwatch.StartNew();
+
         base.Convert();
 
         var conversion = ConversionSet.Blocks[ConversionSet.DefaultZoneBlock];
@@ -116,5 +124,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
                 }
             }
         }
+
+        logger.LogInformation("Placed zone in empty spots ({ElapsedMilliseconds}ms).", watch.ElapsedMilliseconds);
     }
 }
