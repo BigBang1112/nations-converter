@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
     
       - name: Prepare
         run: |
@@ -50,6 +52,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           file: Src/NationsConverterWeb/NationsConverterWeb/Dockerfile
           outputs: type=image,name=${{ env.REGISTRY_IMAGE }},push-by-digest=true,name-canonical=true,push=true
+          context: .
           build-args: |
             BUILDKIT_CONTEXT_KEEP_GIT_DIR=true
           secrets: |
