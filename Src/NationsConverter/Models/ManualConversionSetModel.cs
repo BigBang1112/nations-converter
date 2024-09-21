@@ -1,4 +1,5 @@
-﻿using NationsConverterShared.Models;
+﻿using GBX.NET.Engines.Game;
+using NationsConverterShared.Models;
 using YamlDotNet.Serialization;
 
 namespace NationsConverter.Models;
@@ -89,5 +90,23 @@ public sealed class ManualConversionSetModel
         }
 
         return this;
+    }
+
+    public IEnumerable<KeyValuePair<CGameCtnBlock, ManualConversionModel>> GetBlockConversionPairs(CGameCtnChallenge map)
+    {
+        foreach (var block in map.GetBlocks())
+        {
+            if (block.Variant is null || block.SubVariant is null)
+            {
+                continue;
+            }
+
+            if (!Blocks.TryGetValue(block.Name, out var conversion))
+            {
+                continue;
+            }
+
+            yield return KeyValuePair.Create(block, conversion);
+        }
     }
 }

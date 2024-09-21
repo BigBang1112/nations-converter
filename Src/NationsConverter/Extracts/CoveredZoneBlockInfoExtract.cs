@@ -20,18 +20,8 @@ internal sealed class CoveredZoneBlockInfoExtract
     {
         var groundPositions = new HashSet<Int3>();
 
-        foreach (var block in map.GetBlocks())
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(map))
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
-            if (!conversionSet.Blocks.TryGetValue(block.Name, out var conversion))
-            {
-                continue;
-            }
-
             if (conversion.ZoneHeight is not null)
             {
                 continue;
@@ -42,18 +32,8 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         var coveredZoneBlocks = ImmutableHashSet.CreateBuilder<CGameCtnBlock>();
 
-        foreach (var block in map.GetBlocks())
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(map))
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
-            if (!conversionSet.Blocks.TryGetValue(block.Name, out var conversion))
-            {
-                continue;
-            }
-
             if (!block.IsGround || conversion.ZoneHeight is null)
             {
                 continue;
@@ -68,12 +48,10 @@ internal sealed class CoveredZoneBlockInfoExtract
         return coveredZoneBlocks.ToImmutable();
     }
 
-    private void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ManualConversionModel conversion)
+    private static void PopulateGroundPositions(HashSet<Int3> groundPositions, CGameCtnBlock block, ManualConversionModel conversion)
     {
         // fallbacks should be less permissive in the future
         var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
-
-        Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 
         var min = new Int3(int.MaxValue, 0, int.MaxValue);
 
@@ -98,12 +76,7 @@ internal sealed class CoveredZoneBlockInfoExtract
                 min = min with { Z = alignedUnit.Z };
             }
 
-            alignedUnits[i] = alignedUnit;
-        }
-
-        foreach (var unit in alignedUnits)
-        {
-            groundPositions.Add(block.Coord + unit - min - (0, 1, 0));
+            groundPositions.Add(block.Coord + alignedUnit - min - (0, 1, 0));
         }
     }
 }

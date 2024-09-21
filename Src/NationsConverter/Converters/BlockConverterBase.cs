@@ -27,18 +27,8 @@ internal abstract class BlockConverterBase : EnvironmentConverterBase
 
     public virtual void Convert()
     {
-        foreach (var block in map.GetBlocks())
+        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(map))
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
-            if (!ConversionSet.Blocks.TryGetValue(block.Name, out var conversion))
-            {
-                continue;
-            }
-
             ConvertBlock(block, conversion);
         }
     }
