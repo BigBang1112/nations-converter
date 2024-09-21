@@ -13,9 +13,9 @@ internal abstract class EnvironmentConverterBase
 
     protected string Environment { get; }
 
-    protected EnvironmentConverterBase(CGameCtnChallenge map)
+    protected EnvironmentConverterBase(CGameCtnChallenge mapIn)
     {
-        Environment = map.GetEnvironment();
+        Environment = mapIn.GetEnvironment();
 
         if (mapping.TryGetValue(Environment, out var newEnvironment))
         {

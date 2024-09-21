@@ -16,14 +16,14 @@ internal sealed class CustomContentManager
     private readonly ConcurrentDictionary<string, string> itemModelAuthors = [];
     private readonly HashSet<string> embeddedFilePaths = [];
 
-    private readonly CGameCtnChallenge map;
+    private readonly CGameCtnChallenge mapOut;
     private readonly string runningDir;
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
-    public CustomContentManager(CGameCtnChallenge map, string runningDir, NationsConverterConfig config, ILogger logger)
+    public CustomContentManager(CGameCtnChallenge mapOut, string runningDir, NationsConverterConfig config, ILogger logger)
     {
-        this.map = map;
+        this.mapOut = mapOut;
         this.runningDir = runningDir;
         this.config = config;
         this.logger = logger;
@@ -44,12 +44,12 @@ internal sealed class CustomContentManager
             embeddedFilePaths.Add(Path.Combine("Items", itemModel));
         }
 
-        map.PlaceAnchoredObject(new(itemModel.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
+        mapOut.PlaceAnchoredObject(new(itemModel.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
     }
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var block = map.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", coord, dir, isGround, variant, subVariant);
+        var block = mapOut.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", coord, dir, isGround, variant, subVariant);
 
         embeddedFilePaths.Add(Path.Combine("Blocks", $"{blockModel}.Block.Gbx"));
 
@@ -58,7 +58,7 @@ internal sealed class CustomContentManager
 
     public CGameCtnBlock PlaceBlock(string blockModel, Vec3 pos, Vec3 rot, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var block = map.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
+        var block = mapOut.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
 
         block.IsFree = true;
         block.AbsolutePositionInMap = pos;
@@ -84,7 +84,7 @@ internal sealed class CustomContentManager
 
         if (string.IsNullOrWhiteSpace(config.UserDataPack))
         {
-            map.UpdateEmbeddedZipData(zip =>
+            mapOut.UpdateEmbeddedZipData(zip =>
             {
                 foreach (var path in embeddedFilePaths)
                 {
@@ -112,7 +112,7 @@ internal sealed class CustomContentManager
 
         using var toEmbedZip = ZipFile.OpenRead(userDataPackFilePath);
 
-        map.UpdateEmbeddedZipData(zip =>
+        mapOut.UpdateEmbeddedZipData(zip =>
         {
             foreach (var path in embeddedFilePaths)
             {
@@ -139,7 +139,7 @@ internal sealed class CustomContentManager
 
         if (actualEmbeddedItemsCount == 0)
         {
-            map.EmbeddedZipData = null;
+            mapOut.EmbeddedZipData = null;
         }
 
         LogFinishedEmbeddedItems(watch, actualEmbeddedItemsCount);
@@ -181,9 +181,9 @@ internal sealed class CustomContentManager
                 watch.ElapsedMilliseconds);
         }
 
-        if (map.EmbeddedZipData is { Length: > 0 })
+        if (mapOut.EmbeddedZipData is { Length: > 0 })
         {
-            logger.LogInformation("Embedded size: {Size}", ByteSize.FromBytes(map.EmbeddedZipData.Length));
+            logger.LogInformation("Embedded size: {Size}", ByteSize.FromBytes(mapOut.EmbeddedZipData.Length));
         }
         else
         {

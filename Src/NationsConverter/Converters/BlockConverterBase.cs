@@ -6,7 +6,7 @@ namespace NationsConverter.Converters;
 
 internal abstract class BlockConverterBase : EnvironmentConverterBase
 {
-    private readonly CGameCtnChallenge map;
+    private readonly CGameCtnChallenge mapIn;
 
     /// <summary>
     /// Block size in small units.
@@ -14,12 +14,12 @@ internal abstract class BlockConverterBase : EnvironmentConverterBase
     protected Int3 BlockSize { get; }
     protected ManualConversionSetModel ConversionSet { get; }
 
-    public BlockConverterBase(CGameCtnChallenge map, ManualConversionSetModel conversionSet)
-        : base(map)
+    public BlockConverterBase(CGameCtnChallenge mapIn, ManualConversionSetModel conversionSet)
+        : base(mapIn)
     {
-        this.map = map;
+        this.mapIn = mapIn;
 
-        BlockSize = map.Collection.GetValueOrDefault().GetBlockSize();
+        BlockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
         ConversionSet = conversionSet;
     }
 
@@ -27,7 +27,7 @@ internal abstract class BlockConverterBase : EnvironmentConverterBase
 
     public virtual void Convert()
     {
-        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(map))
+        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn))
         {
             ConvertBlock(block, conversion);
         }

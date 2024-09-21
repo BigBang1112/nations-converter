@@ -8,16 +8,16 @@ namespace NationsConverter.Extracts;
 
 internal sealed class TerrainModifierZoneExtract
 {
-    private readonly CGameCtnChallenge map;
+    private readonly CGameCtnChallenge mapIn;
     private readonly ManualConversionSetModel conversionSet;
     private readonly ILogger logger;
 
     public TerrainModifierZoneExtract(
-        CGameCtnChallenge map,
+        CGameCtnChallenge mapIn,
         ManualConversionSetModel conversionSet,
         ILogger logger)
     {
-        this.map = map;
+        this.mapIn = mapIn;
         this.conversionSet = conversionSet;
         this.logger = logger;
     }
@@ -26,7 +26,7 @@ internal sealed class TerrainModifierZoneExtract
     {
         var terrainModifierZones = ImmutableDictionary.CreateBuilder<Int3, string>();
 
-        foreach (var block in map.GetBlocks())
+        foreach (var block in mapIn.GetBlocks())
         {
             if (block.Variant is null || block.SubVariant is null)
             {

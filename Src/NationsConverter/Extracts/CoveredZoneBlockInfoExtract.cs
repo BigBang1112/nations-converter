@@ -9,13 +9,13 @@ namespace NationsConverter.Extracts;
 
 internal sealed class CoveredZoneBlockInfoExtract
 {
-    private readonly CGameCtnChallenge map;
+    private readonly CGameCtnChallenge mapIn;
     private readonly ManualConversionSetModel conversionSet;
     private readonly ILogger logger;
 
-    public CoveredZoneBlockInfoExtract(CGameCtnChallenge map, ManualConversionSetModel conversionSet, ILogger logger)
+    public CoveredZoneBlockInfoExtract(CGameCtnChallenge mapIn, ManualConversionSetModel conversionSet, ILogger logger)
     {
-        this.map = map;
+        this.mapIn = mapIn;
         this.conversionSet = conversionSet;
         this.logger = logger;
     }
@@ -27,7 +27,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         var groundPositions = new HashSet<Int3>();
 
-        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(map))
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn))
         {
             if (conversion.ZoneHeight is not null)
             {
@@ -39,7 +39,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         var coveredZoneBlocks = ImmutableHashSet.CreateBuilder<CGameCtnBlock>();
 
-        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(map))
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn))
         {
             if (!block.IsGround || conversion.ZoneHeight is null)
             {

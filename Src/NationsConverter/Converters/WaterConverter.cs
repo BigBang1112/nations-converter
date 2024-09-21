@@ -9,18 +9,18 @@ namespace NationsConverter.Converters;
 
 internal sealed class WaterConverter : BlockConverterBase
 {
-    private readonly CGameCtnChallenge convertedMap;
+    private readonly CGameCtnChallenge mapOut;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ILogger logger;
 
     public WaterConverter(
-        CGameCtnChallenge map,
-        CGameCtnChallenge convertedMap,
+        CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
-        ILogger logger) : base(map, conversionSet)
+        ILogger logger) : base(mapIn, conversionSet)
     {
-        this.convertedMap = convertedMap;
+        this.mapOut = mapOut;
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.logger = logger;
     }
@@ -71,7 +71,7 @@ internal sealed class WaterConverter : BlockConverterBase
             return;
         }
 
-        PlaceWater(convertedMap, block.Coord, BlockSize, ConversionSet.WaterHeight);
+        PlaceWater(mapOut, block.Coord, BlockSize, ConversionSet.WaterHeight);
     }
 
     public static void PlaceWater(CGameCtnChallenge convertedMap, Int3 pos, Int3 blockSize, float waterHeight)

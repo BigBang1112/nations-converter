@@ -15,12 +15,12 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     private readonly ILogger logger;
 
     public PlaceBlockConverter(
-        CGameCtnChallenge map,
+        CGameCtnChallenge mapIn,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
-        ILogger logger) : base(map, conversionSet)
+        ILogger logger) : base(mapIn, conversionSet)
     {
         this.customContentManager = customContentManager;
         this.coveredZoneBlocks = coveredZoneBlocks;

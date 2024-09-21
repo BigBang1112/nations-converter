@@ -8,29 +8,29 @@ namespace NationsConverter.Converters;
 
 internal sealed class PlaceBaseZoneConverter : BlockConverterBase
 {
-    private readonly CGameCtnChallenge map;
-    private readonly CGameCtnChallenge convertedMap;
+    private readonly CGameCtnChallenge mapIn;
+    private readonly CGameCtnChallenge mapOut;
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
     public PlaceBaseZoneConverter(
-        CGameCtnChallenge map,
-        CGameCtnChallenge convertedMap,
+        CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
-        ILogger logger) : base(map, conversionSet)
+        ILogger logger) : base(mapIn, conversionSet)
     {
-        this.map = map;
-        this.convertedMap = convertedMap;
+        this.mapIn = mapIn;
+        this.mapOut = mapOut;
         this.customContentManager = customContentManager;
         this.logger = logger;
 
-        occupiedZone = new bool[map.Size.X, map.Size.Z];
+        occupiedZone = new bool[mapIn.Size.X, mapIn.Size.Z];
 
         baseHeight = ConversionSet.Decorations
-            .GetValueOrDefault($"{map.Size.X}x{map.Size.Y}x{map.Size.Z}")?.BaseHeight ?? 0;
+            .GetValueOrDefault($"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}")?.BaseHeight ?? 0;
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
@@ -119,7 +119,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
 
                     if (waterUnits is { Length: > 0 })
                     {
-                        WaterConverter.PlaceWater(convertedMap, pos, BlockSize, ConversionSet.WaterHeight);
+                        WaterConverter.PlaceWater(mapOut, pos, BlockSize, ConversionSet.WaterHeight);
                     }
                 }
             }

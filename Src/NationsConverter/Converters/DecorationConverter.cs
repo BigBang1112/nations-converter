@@ -7,8 +7,8 @@ namespace NationsConverter;
 
 internal sealed partial class DecorationConverter
 {
-    private readonly CGameCtnChallenge map;
-    private readonly CGameCtnChallenge convertedMap;
+    private readonly CGameCtnChallenge mapIn;
+    private readonly CGameCtnChallenge mapOut;
     private readonly ManualConversionSetModel conversionSet;
     private readonly NationsConverterConfig config;
     private readonly CustomContentManager customContentManager;
@@ -18,15 +18,15 @@ internal sealed partial class DecorationConverter
     private static partial Regex MoodRegex();
 
     public DecorationConverter(
-        CGameCtnChallenge map, 
-        CGameCtnChallenge convertedMap,
+        CGameCtnChallenge mapIn, 
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         NationsConverterConfig config,
         CustomContentManager customContentManager,
         ILogger logger)
     {
-        this.map = map;
-        this.convertedMap = convertedMap;
+        this.mapIn = mapIn;
+        this.mapOut = mapOut;
         this.conversionSet = conversionSet;
         this.config = config;
         this.customContentManager = customContentManager;
@@ -35,7 +35,7 @@ internal sealed partial class DecorationConverter
 
     public void Convert()
     {
-        var mood = MoodRegex().Match(map.Decoration.Id).Value;
+        var mood = MoodRegex().Match(mapIn.Decoration.Id).Value;
 
         var mapBase = config.IncludeDecoration
             ? "NoStadium48x48"
@@ -43,17 +43,17 @@ internal sealed partial class DecorationConverter
 
         if (conversionSet.Environment == "Island")
         {
-            convertedMap.Size = new(90, 36, 90);
+            mapOut.Size = new(90, 36, 90);
         }
 
-        convertedMap.Decoration = new($"{mapBase}{mood}", 26, "Nadeo");
+        mapOut.Decoration = new($"{mapBase}{mood}", 26, "Nadeo");
 
-        logger.LogInformation("Decoration: {Name}", convertedMap.Decoration.Id);
-        logger.LogInformation("Size: {Size}", convertedMap.Size);
+        logger.LogInformation("Decoration: {Name}", mapOut.Decoration.Id);
+        logger.LogInformation("Size: {Size}", mapOut.Size);
 
         if (config.IncludeDecoration)
         {
-            var sizeStr = $"{map.Size.X}x{map.Size.Y}x{map.Size.Z}";
+            var sizeStr = $"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}";
             var subCategory = "Modless";
             var dirPath = Path.Combine("NC2", "Solid", subCategory, "MM_Collision", conversionSet.Environment, "Decorations");
             var itemPath = Path.Combine(dirPath, $"{sizeStr}.Item.Gbx");

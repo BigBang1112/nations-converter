@@ -12,10 +12,10 @@ internal sealed class PlaceTransformationConverter : BlockConverterBase
     private readonly ILogger logger;
 
     public PlaceTransformationConverter(
-        CGameCtnChallenge map,
+        CGameCtnChallenge mapIn,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
-        ILogger logger) : base(map, conversionSet)
+        ILogger logger) : base(mapIn, conversionSet)
     {
         this.customContentManager = customContentManager;
         this.logger = logger;

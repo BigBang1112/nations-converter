@@ -9,7 +9,7 @@ namespace NationsConverter.Converters;
 
 internal sealed class MusicConverter : EnvironmentConverterBase
 {
-    private readonly CGameCtnChallenge convertedMap;
+    private readonly CGameCtnChallenge mapOut;
     private readonly NationsConverterConfig config;
     private readonly HttpClient http;
     private readonly ILogger logger;
@@ -17,14 +17,14 @@ internal sealed class MusicConverter : EnvironmentConverterBase
     private const string Extension = "mux";
 
     public MusicConverter(
-        CGameCtnChallenge map, 
-        CGameCtnChallenge convertedMap,
+        CGameCtnChallenge mapIn, 
+        CGameCtnChallenge mapOut,
         NationsConverterConfig config,
         HttpClient http,
         ILogger logger)
-        : base(map)
+        : base(mapIn)
     {
-        this.convertedMap = convertedMap;
+        this.mapOut = mapOut;
         this.config = config;
         this.http = http;
         this.logger = logger;
@@ -46,7 +46,7 @@ internal sealed class MusicConverter : EnvironmentConverterBase
         logger.LogInformation("Music set to {Music}!", music);
         logger.LogInformation("Locator URL: {LocatorUrl}", locatorUrl);
 
-        convertedMap.CustomMusicPackDesc = new PackDesc(filePath, Checksum: null, locatorUrl);
+        mapOut.CustomMusicPackDesc = new PackDesc(filePath, Checksum: null, locatorUrl);
 
         logger.LogInformation("Checking if music is available online...");
 
