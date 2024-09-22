@@ -87,6 +87,7 @@ public sealed class ManualConversionSetModel
             manualConversion.Modifiable = conversion.Modifiable;
             manualConversion.NotModifiable = conversion.NotModifiable;
             manualConversion.WaterUnits = conversion.WaterUnits;
+            manualConversion.Road = conversion.Road;
         }
 
         return this;

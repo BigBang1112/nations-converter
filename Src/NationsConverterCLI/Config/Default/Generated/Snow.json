@@ -126,6 +126,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6
     },
     "AlpineIceRoadExit": {
@@ -474,6 +475,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6
     },
     "AlpineLakeBridge": {
@@ -937,6 +939,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -2822,6 +2825,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -4176,6 +4180,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "AlpineTunnelCheckPoint": {
@@ -4863,6 +4868,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -7136,6 +7142,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "AlpineGreatWallCastlePillar": {
@@ -8686,6 +8693,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -8751,6 +8759,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -8816,6 +8825,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -8938,6 +8948,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -9753,6 +9764,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -11384,6 +11396,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "AlpineRoadPlateformTurboRoulette": {

@@ -489,7 +489,8 @@ internal sealed class InitStageService
             SpawnPos = commonSpawnPos,
             Modifiable = isTerrainModifiable ? true : null,
             NotModifiable = isTerrainModifiable && notModifiable.Count > 0 ? notModifiable : null,
-            WaterUnits = commonWaterUnits?.Length == 0 ? null : commonWaterUnits
+            WaterUnits = commonWaterUnits?.Length == 0 ? null : commonWaterUnits,
+            Road = node is CGameCtnBlockInfoRoad ? new() : null,
         };
     }
 

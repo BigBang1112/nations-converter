@@ -1046,6 +1046,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -1155,6 +1156,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -1225,6 +1227,7 @@
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -2088,6 +2091,7 @@
       "PageName": "Deco/Building",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -2225,6 +2229,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "BayFlatsRoad": {
@@ -2289,6 +2294,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "BayAdvertBuilding1Pillar": {
@@ -5400,6 +5406,7 @@
       "PageName": "Platform/Main",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -5464,6 +5471,7 @@
       "PageName": "Platform/Main",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -6875,6 +6883,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "BayRoadPillarStraight": {
@@ -6966,6 +6975,7 @@
           4
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -7322,6 +7332,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6,
       "SubVariants": [
         1,
@@ -7336,6 +7347,7 @@
       "PageName": "Road/RoadMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,

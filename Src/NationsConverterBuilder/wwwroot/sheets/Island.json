@@ -408,6 +408,7 @@
       "PageName": "Croisette/Main",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -472,6 +473,7 @@
       "PageName": "Croisette/Main",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -610,6 +612,7 @@
       "PageName": "Croisette",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -2114,6 +2117,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "IslandAirportTarmac": {
@@ -2265,6 +2269,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "IslandAirportCheckpoint": {
@@ -3587,6 +3592,7 @@
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -3733,6 +3739,7 @@
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -5807,6 +5814,7 @@
       "PageName": "HighWay",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -7205,6 +7213,7 @@
       "PageName": "SeaWay/SeaWayMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -7322,6 +7331,7 @@
       "PageName": "SeaWay/SeaWayMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -9068,6 +9078,7 @@
       "PageName": "SeaWay",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -11363,6 +11374,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "IslandTunnelCircularTurbo2": {
@@ -13562,6 +13574,7 @@
           1
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -13624,6 +13637,7 @@
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -13868,6 +13882,7 @@
       "PageName": "FreeRide/FreeRideMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,

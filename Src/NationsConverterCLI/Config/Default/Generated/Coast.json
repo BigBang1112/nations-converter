@@ -6577,6 +6577,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "CoastStuntHawkRampPillar": {
@@ -6944,6 +6945,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "CoastCircuitRoadStartLine": {
@@ -10741,6 +10743,7 @@
           2
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -10860,6 +10863,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "CoastRoadStartLine": {
@@ -11032,6 +11036,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "CoastRoadCheckpointSupport": {
@@ -11203,6 +11208,7 @@
           1
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -13414,6 +13420,7 @@
           2
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -13589,6 +13596,7 @@
           ]
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "CoastRoadWaterCheckpointSupport": {
@@ -15213,6 +15221,7 @@
           3
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -15417,6 +15426,7 @@
           3
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,

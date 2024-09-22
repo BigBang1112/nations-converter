@@ -149,6 +149,11 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             return false;
         }
 
+        if (conversion.Road is not null)
+        {
+            return false;
+        }
+
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true) - (1, 1, 1);
 
         foreach (var clip in clips)

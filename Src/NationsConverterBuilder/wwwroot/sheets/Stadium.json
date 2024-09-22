@@ -2526,12 +2526,14 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "StadiumControlRoadPub": {
       "PageName": "Decors/Control",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -2654,6 +2656,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "StadiumControlLightBase": {
@@ -2681,6 +2684,7 @@
       "PageName": "Decors/Control",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -2786,6 +2790,7 @@
       "PageName": "Decors/Control",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -3959,6 +3964,7 @@
       "PageName": "Decors/PillarRoad",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -4023,6 +4029,7 @@
       "PageName": "Decors/PillarRoad",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -4087,6 +4094,7 @@
       "PageName": "Decors/PillarRoad",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -4151,6 +4159,7 @@
       "PageName": "Decors/PillarRoad",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -10615,6 +10624,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Road": {},
       "Variants": 6,
       "SpawnPos": [
         16,
@@ -11540,6 +11550,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "StadiumPlatformBiSlope2Start": {
@@ -13410,6 +13421,7 @@
           1
         ]
       },
+      "Road": {},
       "Units": [
         [
           0,
@@ -17643,6 +17655,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "StadiumRoadDirtHighGTCurve3": {
@@ -18022,6 +18035,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "StadiumRoadDirtDiagonaleLeft": {

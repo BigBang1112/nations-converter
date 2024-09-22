@@ -3829,6 +3829,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6
     },
     "SpeedClassicReservoir": {
@@ -5553,6 +5554,7 @@
       "PageName": "Parking/GarageMisc",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -5718,6 +5720,7 @@
       "PageName": "Parking/GarageMisc",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -6106,6 +6109,7 @@
       "PageName": "Parking/Garage",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -6942,6 +6946,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "SpeedTunnelSlope": {
@@ -9913,6 +9918,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -10017,6 +10023,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,

@@ -11,4 +11,5 @@ public class ConversionModel : ConversionModifierModel
     public WaypointType? Waypoint { get; set; }
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }
+    public ConversionRoadModel? Road { get; set; }
 }

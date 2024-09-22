@@ -4995,6 +4995,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6,
       "SubVariants": [
         1,
@@ -7259,6 +7260,7 @@
           }
         ]
       },
+      "Road": {},
       "Variants": 6
     },
     "RallyTunnelEntry": {
@@ -7392,6 +7394,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -7939,6 +7942,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -8096,6 +8100,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -8178,6 +8183,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6
     },
     "RallyFinish": {
@@ -8329,6 +8335,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Variants": 6
     },
     "RallyRockMirror": {
@@ -9104,6 +9111,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -10908,7 +10916,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "ForestToLake": {
@@ -11455,6 +11462,7 @@
         ]
       },
       "Modifiable": true,
+      "Road": {},
       "Units": [
         [
           0,
@@ -11748,7 +11756,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "RallyRockyGrassCliffs": {
