@@ -1,4 +1,5 @@
-﻿using GBX.NET.Engines.Game;
+﻿using GBX.NET;
+using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Text.RegularExpressions;
@@ -67,6 +68,16 @@ internal sealed partial class DecorationConverter
             customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0));
 
             logger.LogInformation("Placed decoration item ({Size}).", sizeStr);
+
+            for (var x = 0; x < mapOut.Size.X; x++)
+            {
+                for (var z = 0; z < mapOut.Size.Z; z++)
+                {
+                    customContentManager.PlaceBlock(@"NC2\Misc\Void", (x, 9, z), Direction.North, isGround: true);
+                }
+            }
+
+            logger.LogInformation("Placed {SizeX}x{SizeZ} void.", mapOut.Size.X, mapOut.Size.Z);
         }
     }
 }
