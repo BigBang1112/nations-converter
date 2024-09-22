@@ -48,6 +48,8 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
         // fallbacks should be less permissive in the future
         var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
 
+        Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+
         var min = new Int3(int.MaxValue, 0, int.MaxValue);
 
         for (int i = 0; i < units.Length; i++)
@@ -71,7 +73,12 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
                 min = min with { Z = alignedUnit.Z };
             }
 
-            var pos = block.Coord + alignedUnit - min;
+            alignedUnits[i] = alignedUnit;
+        }
+
+        foreach (var unit in alignedUnits)
+        {
+            var pos = block.Coord + unit - min;
 
             if (!occupiedZone[pos.X, pos.Z])
             {
