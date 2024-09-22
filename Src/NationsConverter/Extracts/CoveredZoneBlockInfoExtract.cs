@@ -62,6 +62,8 @@ internal sealed class CoveredZoneBlockInfoExtract
         // fallbacks should be less permissive in the future
         var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
 
+        Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+
         var min = new Int3(int.MaxValue, 0, int.MaxValue);
 
         for (int i = 0; i < units.Length; i++)
@@ -85,7 +87,12 @@ internal sealed class CoveredZoneBlockInfoExtract
                 min = min with { Z = alignedUnit.Z };
             }
 
-            groundPositions.Add(block.Coord + alignedUnit - min - (0, 1, 0));
+            alignedUnits[i] = alignedUnit;
+        }
+
+        foreach (var unit in alignedUnits)
+        {
+            groundPositions.Add(block.Coord + unit - min - (0, 1, 0));
         }
     }
 }
