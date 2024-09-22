@@ -16,6 +16,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     private readonly ILogger logger;
 
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
+    private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
 
     public PlaceBlockConverter(
         CGameCtnChallenge mapIn,
@@ -45,6 +46,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         base.Convert();
 
         logger.LogInformation("Placed blocks ({ElapsedMilliseconds}ms).", watch.ElapsedMilliseconds);
+
+        PlaceGroundClipFillers();
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
@@ -193,9 +196,45 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 continue;
             }
 
-            PlaceItem(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: (Direction)(((int)block.Direction + (int)clip.Dir + 2) % 4));
+            var dir = (Direction)(((int)block.Direction + (int)clip.Dir + 2) % 4);
+
+            if (!clipDirs.TryGetValue(clipBlock, out var dirs))
+            {
+                dirs = [];
+                clipDirs.Add(clipBlock, dirs);
+            }
+            dirs.Add(dir);
+
+            PlaceItem(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir);
         }
 
-        return true;
+        return clipDirs is { Count: > 0 };
+    }
+
+    private void PlaceGroundClipFillers()
+    {
+        logger.LogInformation("Placing ground clip fillers...");
+
+        foreach (var (block, dirs) in clipDirs)
+        {
+            if (!block.IsGround)
+            {
+                continue;
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                var dir = (Direction)i;
+
+                if (dirs.Contains(dir))
+                {
+                    continue;
+                }
+
+                PlaceItem(block, ConversionSet.Blocks[block.Name], overrideDirection: dir);
+            }
+        }
+
+        logger.LogInformation("Placed ground clip fillers.");
     }
 }
