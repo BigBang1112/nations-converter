@@ -1215,6 +1215,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Variants": 1

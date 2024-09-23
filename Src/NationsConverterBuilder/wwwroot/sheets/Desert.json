@@ -3540,7 +3540,11 @@
     "SpeedRoadSignThisWay": {
       "PageName": "Decors/Signs",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -3582,7 +3586,11 @@
     "SpeedRoadSignWrongWay": {
       "PageName": "Decors/Signs",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -3646,7 +3654,11 @@
     "SpeedRoadSignWarning": {
       "PageName": "Decors/Signs",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4784,7 +4796,13 @@
     "SpeedTiltTransitionRight": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          0
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4827,7 +4845,11 @@
     "SpeedTiltCornerAir": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          60
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4849,7 +4871,11 @@
     "SpeedTiltTShaped": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          63
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4882,7 +4908,11 @@
     "SpeedTiltStraightAir": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4996,7 +5026,13 @@
     "SpeedTiltTransitionLeft": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          0
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5039,7 +5075,11 @@
     "SpeedTiltCornerInside": {
       "PageName": "RoadTilt",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          240
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5153,7 +5193,11 @@
     "SpeedGaragePillar": {
       "PageName": "Garage",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          255
+        ]
+      },
       "Units": [
         [
           0,
@@ -5494,7 +5538,11 @@
     "SpeedGarageTurbo": {
       "PageName": "Parking/GarageTurbos",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          255
+        ]
+      },
       "Units": [
         [
           0,
@@ -5613,12 +5661,19 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "SpeedRoadStraightToGarage": {
       "PageName": "Parking/GarageMisc",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5660,7 +5715,11 @@
     "SpeedGarageToRoadAir": {
       "PageName": "Parking/GarageMisc",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          255
+        ]
+      },
       "Units": [
         [
           0,
@@ -5779,6 +5838,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "SpeedGaragePillarSlope": {
@@ -5946,12 +6008,23 @@
           ],
           "Dir": 2
         }
+      ],
+      "PlacePylons": [
+        48,
+        0,
+        2,
+        0,
+        128
       ]
     },
     "SpeedGarageCheckpoint": {
       "PageName": "Parking/Garage",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Units": [
         [
@@ -6103,6 +6176,13 @@
           ],
           "Dir": 2
         }
+      ],
+      "PlacePylons": [
+        48,
+        0,
+        1,
+        0,
+        4
       ]
     },
     "SpeedGarageRoad": {
@@ -6168,6 +6248,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "SpeedGarageBiSlopeEnd": {
@@ -8835,7 +8918,11 @@
     "SpeedToll2": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -8877,7 +8964,11 @@
     "SpeedHoleAir": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -8919,7 +9010,11 @@
     "SpeedHumpRoad2": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -8995,6 +9090,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          51
         ]
       },
       "Variants": 1
@@ -9002,7 +9100,11 @@
     "SpeedJumpInRoad": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9044,7 +9146,11 @@
     "SpeedToll": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9086,7 +9192,11 @@
     "SpeedHumpRoad": {
       "PageName": "Road/RoadHazardStraight",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9172,6 +9282,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          48,
+          0,
+          3
         ]
       },
       "Variants": 1
@@ -9179,7 +9294,20 @@
     "SpeedLoopRight": {
       "PageName": "Road/RoadTwisted",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9266,7 +9394,20 @@
     "SpeedLoopLeft": {
       "PageName": "Road/RoadTwisted",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9357,6 +9498,10 @@
         "SubVariants": [
           1,
           1
+        ],
+        "PlacePylons": [
+          0,
+          3
         ]
       },
       "Air": {
@@ -9366,6 +9511,10 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          51,
+          3
         ]
       },
       "Modifiable": true,
@@ -9529,7 +9678,11 @@
     "SpeedClassicJump": {
       "PageName": "Road/RoadTwisted",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9561,8 +9714,20 @@
     },
     "SpeedBiSlopeStart": {
       "PageName": "Road/RoadTwisted",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          0,
+          3
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9653,6 +9818,10 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          48,
+          3
         ]
       },
       "Variants": 1
@@ -9660,7 +9829,11 @@
     "SpeedClassicCheckpoint": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Modifiable": true,
       "Units": [
@@ -9708,7 +9881,11 @@
     "SpeedClassicFinish": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          48
+        ]
+      },
       "Waypoint": "Finish",
       "Modifiable": true,
       "Units": [
@@ -9742,7 +9919,11 @@
     "SpeedTurboRoulette": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9784,7 +9965,11 @@
     "SpeedClassicTurbo": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9826,7 +10011,11 @@
     "SpeedFreeWheeling": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9868,7 +10057,11 @@
     "SpeedStartFinishLine": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Waypoint": "StartFinish",
       "Modifiable": true,
       "Units": [
@@ -9977,12 +10170,19 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "SpeedClassicStartLine": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          3
+        ]
+      },
       "Waypoint": "Start",
       "Modifiable": true,
       "Units": [
@@ -10082,6 +10282,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "SpeedRocksRoad": {
@@ -10176,7 +10379,11 @@
     "SpeedBarrelJump": {
       "PageName": "Road/RoadHazardSlalom",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10291,7 +10498,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedRiverClip": {
@@ -10628,7 +10834,6 @@
           0
         ]
       },
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -10662,7 +10867,6 @@
           1
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "SpeedPylon": {

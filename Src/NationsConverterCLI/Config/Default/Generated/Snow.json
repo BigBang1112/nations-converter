@@ -762,6 +762,9 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Modifiable": true,
@@ -803,6 +806,9 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Modifiable": true,
@@ -844,6 +850,9 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Modifiable": true,
@@ -885,6 +894,9 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Modifiable": true,
@@ -926,6 +938,9 @@
           1,
           1,
           1
+        ],
+        "PlacePylons": [
+          3
         ]
       },
       "Modifiable": true,
@@ -1563,6 +1578,16 @@
             ],
             "Dir": 1
           }
+        ],
+        "PlacePylons": [
+          0,
+          120,
+          30,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -1704,6 +1729,18 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          121,
+          143,
+          227,
+          255,
+          62,
+          128,
+          68,
+          8,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -1910,6 +1947,18 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          127,
+          247,
+          31,
+          255,
+          241,
+          4,
+          136,
+          64,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -1932,6 +1981,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -1953,6 +2005,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          249
         ]
       },
       "Variants": 1
@@ -2009,6 +2064,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          121,
+          143,
+          227,
+          255,
+          62,
+          128,
+          68,
+          8
         ]
       },
       "Variants": 1
@@ -2045,6 +2110,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          0,
+          120,
+          30,
+          0
         ]
       },
       "Variants": 1
@@ -2101,6 +2172,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          127,
+          247,
+          31,
+          255,
+          241,
+          4,
+          136,
+          64
         ]
       },
       "Variants": 1
@@ -2122,6 +2203,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -2153,6 +2237,10 @@
           16,
           2,
           16
+        ],
+        "PlacePylons": [
+          255,
+          255
         ]
       },
       "Waypoint": "Checkpoint",
@@ -2186,6 +2274,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -2218,6 +2309,9 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -2239,6 +2333,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -2270,6 +2367,10 @@
           16,
           2,
           16
+        ],
+        "PlacePylons": [
+          255,
+          255
         ]
       },
       "Waypoint": "Checkpoint",
@@ -2292,6 +2393,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          255
         ]
       },
       "Variants": 1
@@ -2356,6 +2460,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          255,
+          0
         ]
       },
       "Modifiable": true,
@@ -2421,6 +2529,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          0,
+          255
         ]
       },
       "Modifiable": true,
@@ -2477,6 +2589,10 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          255,
+          0
         ]
       },
       "Modifiable": true,
@@ -2609,6 +2725,10 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          255,
+          0
         ]
       },
       "Modifiable": true,
@@ -2674,6 +2794,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          255,
+          0
         ]
       },
       "Modifiable": true,
@@ -4764,7 +4888,12 @@
     "AlpineMetalTubeClip": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          3,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4821,14 +4950,28 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          183,
+          183
         ]
       },
       "Variants": 1
     },
     "AlpineMetalTubeCornerUp": {
       "PageName": "MetalTube",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          51
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4932,12 +5075,21 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1,
+        1
       ]
     },
     "AlpineMetalTubeToRoadWood": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -4984,7 +5136,12 @@
     "AlpineMetalTubeVWall": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5030,8 +5187,18 @@
     },
     "AlpineMetalTubeCheckpoint": {
       "PageName": "MetalTube",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          51
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Modifiable": true,
       "Units": [
@@ -5084,7 +5251,12 @@
     "AlpineMetalTubeHWall": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5131,7 +5303,12 @@
     "AlpineMetalTubeStraight": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51,
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5178,7 +5355,12 @@
     "AlpineMetalTubeCorner": {
       "PageName": "MetalTube",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          15,
+          15
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -5244,6 +5426,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          255,
+          255
         ]
       },
       "Variants": 1
@@ -7313,6 +7499,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          48
         ]
       },
       "Variants": 1
@@ -8818,6 +9007,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "AlpineRoadTemple2": {
@@ -8884,6 +9076,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "AlpineRoadTemple2Slope": {
@@ -8941,6 +9136,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "PlacePylons": [
+        51,
+        3
       ]
     },
     "AlpineRoadTemple": {
@@ -9007,6 +9206,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "AlpineRoadTempleSlope": {
@@ -9064,12 +9266,21 @@
           ],
           "Dir": 0
         }
+      ],
+      "PlacePylons": [
+        51,
+        3
       ]
     },
     "AlpineTempleCross": {
       "PageName": "Road/RoadTemple",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          255,
+          0
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9133,8 +9344,24 @@
     },
     "AlpineRoadWoodTiltSlopeCornerLeft": {
       "PageName": "Road/RoadSlopes",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          3,
+          255,
+          0,
+          255
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          255,
+          0,
+          255
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9231,6 +9458,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          48,
+          0,
+          51
         ]
       },
       "Variants": 1
@@ -9278,14 +9510,30 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          48,
+          51,
+          48,
+          249
         ]
       },
       "Variants": 1
     },
     "AlpineRoadWoodSlopeBase": {
       "PageName": "Road/RoadSlopes",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          3
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9331,8 +9579,24 @@
     },
     "AlpineRoadWoodBigSlope2x3": {
       "PageName": "Road/RoadSlopes",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          0,
+          3,
+          3,
+          3
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          3,
+          3,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9393,8 +9657,24 @@
     },
     "AlpineRoadWoodTiltSlopeCornerRight": {
       "PageName": "Road/RoadSlopes",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          0,
+          255,
+          0,
+          255
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          0,
+          255,
+          0,
+          255
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9487,14 +9767,32 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          48,
+          51,
+          48,
+          126
         ]
       },
       "Variants": 1
     },
     "AlpineRoadWoodBiSlopeStart": {
       "PageName": "Road/RoadSlopes",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          0,
+          3
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          51,
+          0,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -9623,7 +9921,11 @@
     "AlpineRoadWoodFinish": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          255
+        ]
+      },
       "Waypoint": "Finish",
       "Modifiable": true,
       "Units": [
@@ -9714,7 +10016,11 @@
     "AlpineRoadWoodCheckPoint": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Modifiable": true,
       "Units": [
@@ -9823,12 +10129,19 @@
           ],
           "Dir": 3
         }
+      ],
+      "PlacePylons": [
+        1
       ]
     },
     "AlpineStartFinishLine": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Waypoint": "StartFinish",
       "Modifiable": true,
       "Units": [
@@ -9876,7 +10189,11 @@
     "AlpineRoadWoodStartLine": {
       "PageName": "Road/RoadMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          183
+        ]
+      },
       "Waypoint": "Start",
       "Modifiable": true,
       "Units": [
@@ -9967,12 +10284,20 @@
           ],
           "Dir": 0
         }
+      ],
+      "PlacePylons": [
+        51,
+        3
       ]
     },
     "AlpineRoadWoodRamp1": {
       "PageName": "Road/Ramps",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10004,8 +10329,18 @@
     },
     "AlpineRoadWoodHawkRamp": {
       "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          135
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          51,
+          135
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10043,7 +10378,11 @@
     "AlpineRoadWoodTurboRampCenter": {
       "PageName": "Road/Ramps",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10085,7 +10424,11 @@
     "AlpineRoadWoodRamp3": {
       "PageName": "Road/Ramps",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10118,7 +10461,11 @@
     "AlpineRoadWoodRamp2": {
       "PageName": "Road/Ramps",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10151,7 +10498,11 @@
     "AlpineRoadWoodTurboRoulette": {
       "PageName": "Road/RoadTurbo",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10193,7 +10544,11 @@
     "AlpineRoadWoodTurboSide": {
       "PageName": "Road/RoadTurbo",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10234,8 +10589,18 @@
     },
     "AlpineRoadWoodTurboDown": {
       "PageName": "Road/RoadTurbo",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          48
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          3,
+          48
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10282,7 +10647,11 @@
     "AlpineRoadWoodTurbo": {
       "PageName": "Road/RoadTurbo",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10323,8 +10692,18 @@
     },
     "AlpineRoadWoodTurboUp": {
       "PageName": "Road/RoadTurbo",
-      "Ground": {},
-      "Air": {},
+      "Ground": {
+        "PlacePylons": [
+          0,
+          3
+        ]
+      },
+      "Air": {
+        "PlacePylons": [
+          48,
+          3
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10371,7 +10750,11 @@
     "AlpineRoadWoodTurboCenter": {
       "PageName": "Road/RoadTurbo",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10413,7 +10796,11 @@
     "AlpineFreeWheeling": {
       "PageName": "Road/RoadTurbo",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "PlacePylons": [
+          51
+        ]
+      },
       "Modifiable": true,
       "Units": [
         [
@@ -10528,6 +10915,15 @@
             ],
             "Dir": 3
           }
+        ],
+        "PlacePylons": [
+          48,
+          51,
+          48,
+          249,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -10609,6 +11005,15 @@
             ],
             "Dir": 1
           }
+        ],
+        "PlacePylons": [
+          48,
+          51,
+          48,
+          126,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -10696,6 +11101,22 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -10752,6 +11173,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -10808,6 +11239,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -10844,6 +11285,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -10880,6 +11327,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -10966,6 +11419,22 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -11037,6 +11506,19 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -11108,6 +11590,19 @@
         ],
         "SubVariants": [
           1
+        ],
+        "PlacePylons": [
+          72,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          33
         ]
       },
       "Variants": 1
@@ -11159,6 +11654,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          48,
+          0,
+          51
         ]
       },
       "Variants": 1
@@ -11191,6 +11691,9 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          51
         ]
       },
       "Variants": 1
@@ -11237,6 +11740,10 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          48,
+          3
         ]
       },
       "Variants": 1
@@ -11279,6 +11786,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          3,
+          2,
+          49
         ]
       },
       "Variants": 1
@@ -11330,6 +11842,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "PlacePylons": [
+          51,
+          0,
+          3
         ]
       },
       "Variants": 1
@@ -11394,6 +11911,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "PlacePylons": [
+          1
         ]
       },
       "Road": {},
@@ -11436,6 +11956,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          51
         ]
       },
       "Variants": 1
@@ -11477,6 +12000,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          51
         ]
       },
       "Variants": 1
@@ -11519,6 +12045,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "PlacePylons": [
+          18,
+          1,
+          50
         ]
       },
       "Variants": 1

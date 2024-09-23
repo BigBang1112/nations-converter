@@ -11,4 +11,6 @@ public class ConversionModifierModel
     public ConversionClipModel[]? Clips { get; set; }
     public Vec3? SpawnPos { get; set; }
     public Int2[]? WaterUnits { get; set; }
+    public int[]? PlacePylons { get; set; }
+    public int[]? AcceptPylons { get; set; }
 }

@@ -428,6 +428,17 @@ internal sealed class InitStageService
             .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
             .Distinct().ToArray() ?? [];
 
+        var airPlacePylons = node.AirBlockUnitInfos?.Select(x => x.PlacePylons).ToArray() ?? [];
+        if (airPlacePylons.All(x => x == 0)) airPlacePylons = null;
+        var groundPlacePylons = node.GroundBlockUnitInfos?.Select(x => x.PlacePylons).ToArray() ?? [];
+        if (groundPlacePylons.All(x => x == 0)) groundPlacePylons = null;
+
+        // AcceptPylons are bloaty and not necessary atm
+        //var airAcceptPylons = node.AirBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
+        //if (airAcceptPylons.All(x => x == 255)) airAcceptPylons = null;
+        //var groundAcceptPylons = node.GroundBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
+        //if (groundAcceptPylons.All(x => x == 255)) groundAcceptPylons = null;
+
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
         var commonSize = airSize == groundSize ? airSize : null;
         var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
@@ -435,6 +446,8 @@ internal sealed class InitStageService
         var commonClips = airClips.SequenceEqual(groundClips) ? airClips : null;
         var commonSpawnPos = airSpawnPos == groundSpawnPos ? airSpawnPos : null;
         var commonWaterUnits = airWaterUnits.SequenceEqual(groundWaterUnits) ? airWaterUnits : null;
+        var commonPlacePylons = groundPlacePylons is not null && airPlacePylons?.SequenceEqual(groundPlacePylons) == true ? airPlacePylons : null;
+        //var commonAcceptPylons = groundAcceptPylons is not null && airAcceptPylons?.SequenceEqual(groundAcceptPylons) == true ? airAcceptPylons : null;
 
         var airConvModel = default(ConversionModifierModel);
         var groundConvModel = default(ConversionModifierModel);
@@ -449,7 +462,9 @@ internal sealed class InitStageService
                 SubVariants = commonSubVariants is null && airSubVariants.Length > 0 ? airSubVariants : null,
                 Clips = commonClips is null && airClips.Length > 0 ? airClips : null,
                 SpawnPos = commonSpawnPos is null ? airSpawnPos : null,
-                WaterUnits = commonWaterUnits is null && airWaterUnits.Length > 0 ? airWaterUnits : null
+                WaterUnits = commonWaterUnits is null && airWaterUnits.Length > 0 ? airWaterUnits : null,
+                PlacePylons = commonPlacePylons is null ? airPlacePylons : null,
+                //AcceptPylons = commonAcceptPylons is null ? airAcceptPylons : null
             };
         }
 
@@ -463,7 +478,9 @@ internal sealed class InitStageService
                 SubVariants = commonSubVariants is null && groundSubVariants.Length > 0 ? groundSubVariants : null,
                 Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null,
                 SpawnPos = commonSpawnPos is null ? groundSpawnPos : null,
-                WaterUnits = commonWaterUnits is null && groundWaterUnits.Length > 0 ? groundWaterUnits : null
+                WaterUnits = commonWaterUnits is null && groundWaterUnits.Length > 0 ? groundWaterUnits : null,
+                PlacePylons = commonPlacePylons is null ? groundPlacePylons : null,
+                //AcceptPylons = commonAcceptPylons is null ? groundAcceptPylons : null
             };
         }
 
@@ -491,6 +508,8 @@ internal sealed class InitStageService
             NotModifiable = isTerrainModifiable && notModifiable.Count > 0 ? notModifiable : null,
             WaterUnits = commonWaterUnits?.Length == 0 ? null : commonWaterUnits,
             Road = node is CGameCtnBlockInfoRoad ? new() : null,
+            PlacePylons = commonPlacePylons,
+            //AcceptPylons = commonAcceptPylons
         };
     }
 
