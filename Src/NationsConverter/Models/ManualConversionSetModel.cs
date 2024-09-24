@@ -22,6 +22,7 @@ public sealed class ManualConversionSetModel
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
     public HashSet<string>? TerrainModifiers { get; set; }
     public float WaterHeight { get; set; }
+    public string? Pylon { get; set; }
     public Dictionary<string, ManualConversionModel> Blocks { get; set; } = [];
 
     public ManualConversionSetModel Fill(ConversionSetModel conversionSet)
@@ -41,6 +42,7 @@ public sealed class ManualConversionSetModel
         }
 
         TerrainModifiers ??= conversionSet.TerrainModifiers;
+        Pylon ??= conversionSet.Pylon;
 
         foreach (var (block, conversion) in conversionSet.Blocks)
         {
@@ -62,6 +64,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Ground.Clips = conversion.Ground.Clips;
                 manualConversion.Ground.SpawnPos = conversion.Ground.SpawnPos;
                 manualConversion.Ground.WaterUnits = conversion.Ground.WaterUnits;
+                manualConversion.Ground.PlacePylons = conversion.Ground.PlacePylons;
             }
 
             if (conversion.Air is not null)
@@ -74,6 +77,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Air.Clips = conversion.Air.Clips;
                 manualConversion.Air.SpawnPos = conversion.Air.SpawnPos;
                 manualConversion.Air.WaterUnits = conversion.Air.WaterUnits;
+                manualConversion.Air.PlacePylons = conversion.Air.PlacePylons;
             }
 
             manualConversion.Units = conversion.Units;
@@ -88,6 +92,7 @@ public sealed class ManualConversionSetModel
             manualConversion.NotModifiable = conversion.NotModifiable;
             manualConversion.WaterUnits = conversion.WaterUnits;
             manualConversion.Road = conversion.Road;
+            manualConversion.PlacePylons = conversion.PlacePylons;
         }
 
         return this;

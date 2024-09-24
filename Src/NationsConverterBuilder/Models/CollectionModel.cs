@@ -17,4 +17,5 @@ internal sealed class CollectionModel
     public Dictionary<string, CGameCtnZone> TerrainZones { get; set; } = [];
     public HashSet<string> TerrainModifiers { get; set; } = [];
     public HashSet<string> TerrainModifierMaterials { get; set; } = [];
+    public string? Pylon { get; set; }
 }

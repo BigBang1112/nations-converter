@@ -1,6 +1,7 @@
 {
   "Environment": "Snow",
   "DefaultZoneBlock": "AlpineSnowBase",
+  "Pylon": "AlpinePylonWood",
   "Decorations": {
     "10x18x150": {
       "BaseHeight": 3

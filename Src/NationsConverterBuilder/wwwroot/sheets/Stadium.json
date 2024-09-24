@@ -1,6 +1,7 @@
 {
   "Environment": "Stadium",
   "DefaultZoneBlock": "StadiumGrass",
+  "Pylon": "PylonStadium",
   "Decorations": {
     "32x32x32": {
       "BaseHeight": 0

@@ -1,6 +1,7 @@
 {
   "Environment": "Island",
   "DefaultZoneBlock": "IslandSea",
+  "Pylon": "IslandPylonMetal",
   "Decorations": {
     "36x36x36": {
       "BaseHeight": 4

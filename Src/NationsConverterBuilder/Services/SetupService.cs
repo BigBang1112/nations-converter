@@ -165,6 +165,11 @@ internal sealed class SetupService
                 continue;
             }
 
+            if (blockInfoNode is CGameCtnBlockInfoPylon)
+            {
+                collection.Pylon = blockInfoNode.Ident.Id;
+            }
+
             var webpData = default(byte[]);
 
             if (blockInfoNode.Icon is not null || blockInfoNode.IconWebP is not null)
