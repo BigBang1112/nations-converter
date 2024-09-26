@@ -20,7 +20,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
-        ILogger logger) : base(mapIn, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
@@ -115,7 +115,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
                     continue;
                 }
 
-                var pos = new Int3(x, baseHeight, z);
+                var pos = new Int3(x, baseHeight, z) + CenterOffset;
 
                 customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
 

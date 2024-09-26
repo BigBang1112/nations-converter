@@ -20,11 +20,12 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
     public PlaceBlockConverter(
         CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
-        ILogger logger) : base(mapIn, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
         this.customContentManager = customContentManager;
@@ -110,7 +111,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var direction = overrideDirection ?? block.Direction;
 
-        var pos = block.Coord + direction switch
+        var pos = block.Coord + CenterOffset + direction switch
         {
             Direction.North => (0, 0, 0),
             Direction.East => (blockCoordSize.Z, 0, 0),

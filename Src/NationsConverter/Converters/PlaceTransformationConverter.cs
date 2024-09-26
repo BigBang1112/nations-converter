@@ -13,9 +13,10 @@ internal sealed class PlaceTransformationConverter : BlockConverterBase
 
     public PlaceTransformationConverter(
         CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
-        ILogger logger) : base(mapIn, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.customContentManager = customContentManager;
         this.logger = logger;
@@ -47,10 +48,10 @@ internal sealed class PlaceTransformationConverter : BlockConverterBase
 
         var pos = block.Direction switch
         {
-            Direction.East => (block.Coord + (blockCoordSize.Z, 0, 0)) * BlockSize + new Vec3(-spawnPos.Z, spawnPos.Y, spawnPos.X),
-            Direction.South => (block.Coord + (blockCoordSize.X, 0, blockCoordSize.Z)) * BlockSize + new Vec3(-spawnPos.X, spawnPos.Y, -spawnPos.Z),
-            Direction.West => (block.Coord + (0, 0, blockCoordSize.X)) * BlockSize + new Vec3(spawnPos.Z, spawnPos.Y, -spawnPos.X),
-            _ => block.Coord * BlockSize + spawnPos
+            Direction.East => (block.Coord + CenterOffset + (blockCoordSize.Z, 0, 0)) * BlockSize + new Vec3(-spawnPos.Z, spawnPos.Y, spawnPos.X),
+            Direction.South => (block.Coord + CenterOffset + (blockCoordSize.X, 0, blockCoordSize.Z)) * BlockSize + new Vec3(-spawnPos.X, spawnPos.Y, -spawnPos.Z),
+            Direction.West => (block.Coord + CenterOffset + (0, 0, blockCoordSize.X)) * BlockSize + new Vec3(spawnPos.Z, spawnPos.Y, -spawnPos.X),
+            _ => (block.Coord + CenterOffset) * BlockSize + spawnPos
         };
 
         var rotRadians = -(int)block.Direction * MathF.PI / 2;

@@ -12,14 +12,16 @@ internal abstract class BlockConverterBase : EnvironmentConverterBase
     /// Block size in small units.
     /// </summary>
     protected Int3 BlockSize { get; }
+    protected Int3 CenterOffset { get; }
     protected ManualConversionSetModel ConversionSet { get; }
 
-    public BlockConverterBase(CGameCtnChallenge mapIn, ManualConversionSetModel conversionSet)
+    public BlockConverterBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet)
         : base(mapIn)
     {
         this.mapIn = mapIn;
 
         BlockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
+        CenterOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
         ConversionSet = conversionSet;
     }
 

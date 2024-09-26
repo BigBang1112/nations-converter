@@ -18,7 +18,7 @@ internal sealed class WaterConverter : BlockConverterBase
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
-        ILogger logger) : base(mapIn, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapOut = mapOut;
         this.coveredZoneBlocks = coveredZoneBlocks;
@@ -71,7 +71,7 @@ internal sealed class WaterConverter : BlockConverterBase
             return;
         }
 
-        PlaceWater(mapOut, block.Coord, BlockSize, ConversionSet.WaterHeight);
+        PlaceWater(mapOut, block.Coord + CenterOffset, BlockSize, ConversionSet.WaterHeight);
     }
 
     public static void PlaceWater(CGameCtnChallenge convertedMap, Int3 pos, Int3 blockSize, float waterHeight)

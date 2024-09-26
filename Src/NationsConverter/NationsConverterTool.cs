@@ -51,16 +51,16 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(mapIn, conversionSet, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBlockConverter = new PlaceBlockConverter(mapIn, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBlockConverter = new PlaceBlockConverter(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBlockConverter.Convert();
 
         var waterConverter = new WaterConverter(mapIn, mapOut, conversionSet, coveredZoneBlocks, logger);
         waterConverter.Convert();
 
-        var pylonConverter = new PylonConverter(mapIn, conversionSet, customContentManager);
+        var pylonConverter = new PylonConverter(mapIn, mapOut, conversionSet, customContentManager);
         pylonConverter.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(mapIn, conversionSet, customContentManager, logger);
+        var placeTransformationConverter = new PlaceTransformationConverter(mapIn, mapOut, conversionSet, customContentManager, logger);
         placeTransformationConverter.Convert();
 
         var decorationConverter = new DecorationConverter(mapIn, mapOut, conversionSet, Config, customContentManager, logger);

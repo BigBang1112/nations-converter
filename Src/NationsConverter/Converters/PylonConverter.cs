@@ -13,8 +13,9 @@ internal sealed class PylonConverter : BlockConverterBase
 
     public PylonConverter(
         CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
-        CustomContentManager customContentManager) : base(mapIn, conversionSet)
+        CustomContentManager customContentManager) : base(mapIn, mapOut, conversionSet)
     {
         this.customContentManager = customContentManager;
 
@@ -44,7 +45,7 @@ internal sealed class PylonConverter : BlockConverterBase
         {
             var itemPath = Path.Combine(dirPath, $"Ground_{height - 1}_0.Item.Gbx");
 
-            var pos = (coord.X, baseHeight, coord.Z) * BlockSize + (BlockSize.X / 2, 0, BlockSize.Z / 2);
+            var pos = ((coord.X, baseHeight, coord.Z) + CenterOffset) * BlockSize + (BlockSize.X / 2, 0, BlockSize.Z / 2);
 
             var dir = pylonIndex / 2;
             var itemDir = dir % 2;
