@@ -34,11 +34,9 @@ internal sealed class PylonConverter : BlockConverterBase
         var blockName = ConversionSet.Pylon;
         var conversion = ConversionSet.Blocks[blockName];
 
-        var subCategory = "Modless";
-
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
-            ? Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, blockName)
-            : Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, blockName);
+            ? blockName
+            : Path.Combine(conversion.PageName, blockName);
 
         var pillarOffset = 12;
 

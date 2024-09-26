@@ -102,11 +102,9 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var modifierType = block.IsGround ? "Ground" : "Air";
 
-        var subCategory = "Modless";
-
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
-            ? Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, blockName)
-            : Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, blockName);
+            ? blockName
+            : Path.Combine(conversion.PageName, blockName);
 
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 

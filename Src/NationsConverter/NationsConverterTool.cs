@@ -37,7 +37,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var mapOut = CreateBaseMap();
 
-        var customContentManager = new CustomContentManager(mapOut, runningDir, Config, logger);
+        var customContentManager = new CustomContentManager(mapIn, mapOut, runningDir, Config, logger);
 
         var conversionSetExtract = new ConversionSetExtract(mapIn, complexConfig, logger);
         var conversionSet = conversionSetExtract.Extract();

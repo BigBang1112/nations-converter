@@ -3,13 +3,14 @@ using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using Microsoft.Extensions.Logging;
+using NationsConverter.Converters;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO.Compression;
 
 namespace NationsConverter;
 
-internal sealed class CustomContentManager
+internal sealed class CustomContentManager : EnvironmentConverterBase
 {
     private const int ItemCollection = 26;
 
@@ -21,50 +22,85 @@ internal sealed class CustomContentManager
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
-    public CustomContentManager(CGameCtnChallenge mapOut, string runningDir, NationsConverterConfig config, ILogger logger)
+    private readonly string category;
+    private readonly string subCategory;
+    private readonly string technology;
+    private readonly string baseItemPath;
+
+    private const string NC2 = "NC2";
+
+    public CustomContentManager(
+        CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
+        string runningDir,
+        NationsConverterConfig config,
+        ILogger logger) : base(mapIn)
     {
         this.mapOut = mapOut;
         this.runningDir = runningDir;
         this.config = config;
         this.logger = logger;
+
+        category = string.IsNullOrWhiteSpace(config.Category) ? Environment switch
+        {
+            "Stadium" => "Crystal",
+            _ => "Solid"
+        } : config.Category;
+
+        subCategory = string.IsNullOrWhiteSpace(config.SubCategory) ? Environment switch
+        {
+            "Stadium" => "Modernized",
+            _ => "Modless"
+        } : config.SubCategory;
+
+        technology = "MM_Collision";
+
+        baseItemPath = Path.Combine(NC2, category, subCategory, technology, Environment);
     }
 
     public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot)
     {
-        // retrieve collection and login from the item model gbx, cache this item model in dictionary
-        if (!itemModelAuthors.TryGetValue(itemModel, out var itemModelAuthor))
-        {
-            var itemPath = Path.Combine(runningDir, "UserData", "Items", itemModel);
+        var itemPath = Path.Combine(baseItemPath, itemModel);
 
-            itemModelAuthor = File.Exists(itemPath)
-                ? Gbx.ParseHeaderNode<CGameItemModel>(itemPath).Ident.Author
+        // retrieve author login (and collection in the future) from the item model gbx
+        // cache this item model in dictionary
+        if (!itemModelAuthors.TryGetValue(itemPath, out var itemModelAuthor))
+        {
+            var fullItemPath = Path.Combine(runningDir, "UserData", "Items", itemPath);
+
+            itemModelAuthor = File.Exists(fullItemPath)
+                ? Gbx.ParseHeaderNode<CGameItemModel>(fullItemPath).Ident.Author
                 : "akPfIM0aSzuHuaaDWptBbQ";
 
             // add file to hash set, so that it can be found + properly placed in the zip
-            embeddedFilePaths.Add(Path.Combine("Items", itemModel));
+            embeddedFilePaths.Add(Path.Combine("Items", itemPath));
         }
 
-        mapOut.PlaceAnchoredObject(new(itemModel.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
+        mapOut.PlaceAnchoredObject(new(itemPath.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
     }
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var block = mapOut.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", coord, dir, isGround, variant, subVariant);
+        var blockPath = Path.Combine(NC2, $"{blockModel}.Block.Gbx").Replace('/', '\\');
 
-        embeddedFilePaths.Add(Path.Combine("Blocks", $"{blockModel}.Block.Gbx"));
+        var block = mapOut.PlaceBlock($"{blockPath}_CustomBlock", coord, dir, isGround, variant, subVariant);
+
+        embeddedFilePaths.Add(Path.Combine("Blocks", blockPath));
 
         return block;
     }
 
     public CGameCtnBlock PlaceBlock(string blockModel, Vec3 pos, Vec3 rot, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var block = mapOut.PlaceBlock($"{blockModel.Replace('/', '\\')}.Block.Gbx_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
+        var blockPath = Path.Combine(NC2, $"{blockModel}.Block.Gbx").Replace('/', '\\');
+
+        var block = mapOut.PlaceBlock($"{blockPath}_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
 
         block.IsFree = true;
         block.AbsolutePositionInMap = pos;
         block.PitchYawRoll = rot;
 
-        embeddedFilePaths.Add(Path.Combine("Blocks", $"{blockModel}.Block.Gbx"));
+        embeddedFilePaths.Add(Path.Combine("Blocks", blockPath));
 
         return block;
     }
@@ -124,16 +160,16 @@ internal sealed class CustomContentManager
                     {
                         actualEmbeddedItemsCount++;
                     }
-                }
-                else
-                {
-                    var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
-                    using var entryStream = entry.Open();
-                    using var toEmbedEntryStream = toEmbedEntry.Open();
-                    Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
 
-                    actualEmbeddedItemsCount++;
+                    continue;
                 }
+
+                var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
+                using var entryStream = entry.Open();
+                using var toEmbedEntryStream = toEmbedEntry.Open();
+                Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
+
+                actualEmbeddedItemsCount++;
             }
         });
 

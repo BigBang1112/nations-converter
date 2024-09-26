@@ -57,7 +57,7 @@ internal sealed class PlaceTransformationConverter : BlockConverterBase
 
         logger.LogInformation("Placing transformation gate at {Pos} with rotation {Dir}...", pos, block.Direction);
 
-        var gateBlock = customContentManager.PlaceBlock($@"NC2\Misc\{Environment}HiddenGate", pos, (rotRadians, 0, 0));
+        var gateBlock = customContentManager.PlaceBlock($@"Misc\{Environment}HiddenGate", pos, (rotRadians, 0, 0));
         gateBlock.Bit21 = true;
 
         // Placing official transformation can be optional

@@ -4,6 +4,8 @@ namespace NationsConverter;
 
 public class NationsConverterConfig : Config
 {
+    public string? Category { get; set; }
+    public string? SubCategory { get; set; }
     public bool CopyItems { get; set; } = true;
     public string? UserDataFolder { get; set; }
     public bool IncludeDecoration { get; set; }

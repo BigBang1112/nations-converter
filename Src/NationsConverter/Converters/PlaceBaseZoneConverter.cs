@@ -101,10 +101,9 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
 
         var conversion = ConversionSet.Blocks[ConversionSet.DefaultZoneBlock];
 
-        var subCategory = "Modless";
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
-            ? Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, ConversionSet.DefaultZoneBlock)
-            : Path.Combine("NC2", "Solid", subCategory, "MM_Collision", Environment, conversion.PageName, ConversionSet.DefaultZoneBlock);
+            ? ConversionSet.DefaultZoneBlock
+            : Path.Combine(conversion.PageName, ConversionSet.DefaultZoneBlock);
         var itemPath = Path.Combine(dirPath, "Ground_0_0.Item.Gbx");
 
         for (var x = 0; x < occupiedZone.GetLength(0); x++)
