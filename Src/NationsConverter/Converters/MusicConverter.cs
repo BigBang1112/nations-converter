@@ -39,7 +39,12 @@ internal sealed class MusicConverter : EnvironmentConverterBase
 
         var watch = Stopwatch.StartNew();
 
-        var music = config.Music[Environment];
+        if (!config.Music.TryGetValue(Environment, out var music))
+        {
+            logger.LogWarning("Music not set for environment {Environment}.", Environment);
+            return;
+        }
+
         var filePath = $@"Media\Musics\NC2\{music}.{Extension}";
         var locatorUrl = $"https://{config.HttpHost}/music/{HttpUtility.UrlPathEncode($"{music}.{Extension}").Replace("(", "%28").Replace(")", "%29")}";
 
