@@ -43,9 +43,10 @@ internal sealed partial class DecorationConverter : EnvironmentConverterBase
             ? "NoStadium48x48"
             : "48x48Screen155";
 
-        if (Environment == "Island")
+        if (config.IncludeDecoration)
         {
-            mapOut.Size = new(90, 40, 90);
+            var blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
+            mapOut.Size = new((int)(mapIn.Size.X * (blockSize.X / 32f)), 40, (int)(mapIn.Size.Z * (blockSize.Z / 32f)));
         }
 
         mapOut.Decoration = new($"{mapBase}{mood}", 26, "Nadeo");
