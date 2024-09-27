@@ -53,7 +53,11 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
             _ => "Modless"
         } : config.SubCategory;
 
-        technology = "MM_Collision";
+        technology = Environment switch
+        {
+            "Stadium" => "MM",
+            _ => "MM_Collision"
+        };
 
         baseItemPath = Path.Combine(NC2, category, subCategory, technology, Environment);
     }
