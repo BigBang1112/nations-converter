@@ -102,15 +102,9 @@
                     <div class="upload">
                         <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
 
-                        @if (upload.Value > 0)
+                        @if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
                         {
-                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">@upload.Value</span>
-                        }
-                        else if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
-                        {
-
-
-                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">1 (@GetUploadValue(upload, totalValue))</span>
+                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">@(upload.Value == 0 ? 1 : 0) (@GetUploadValue(upload, totalValue))</span>
                         }
 
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
