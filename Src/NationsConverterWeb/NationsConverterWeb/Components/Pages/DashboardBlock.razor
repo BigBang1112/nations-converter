@@ -474,6 +474,6 @@
 
     private float GetUploadValue(ItemUpload upload, int totalValue)
     {
-        return upload.Value / (float)totalValue * upload.BlockItem.Value;
+        return (upload.Value == 0 ? 1 : upload.Value) / (float)totalValue * upload.BlockItem.Value;
     }
 }
