@@ -90,6 +90,13 @@
                     <hr />
                 }
 
+                @{
+                    var totalValue = item.Uploads
+                        .Where(x => x.UploadedBy is not null && !x.UploadedBy.IsAdmin)
+                        .Select(x => x.Value == 0 ? 1 : x.Value)
+                        .Sum();
+                }
+
                 @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
                 {
                     <div class="upload">
@@ -101,7 +108,9 @@
                         }
                         else if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
                         {
-                            <span title="Upload value soon. If higher, the higher percentage of the item value will be paid out to the uploader.">(value soon)</span>
+
+
+                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">1 (@GetUploadValue(upload, totalValue))</span>
                         }
 
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
@@ -461,5 +470,10 @@
         items = Directory.GetFiles(blockDirBasePath)
             .Select(x => GBX.NET.Gbx.Parse<GBX.NET.Engines.GameData.CGameItemModel>(x))
             .ToList();
+    }
+
+    private float GetUploadValue(ItemUpload upload, int totalValue)
+    {
+        return upload.Value / (float)totalValue * upload.BlockItem.Value;
     }
 }
