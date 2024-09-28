@@ -253,7 +253,6 @@
             .Include(x => x.UploadedBy)
             .Include(x => x.BlockItem)
             .Where(x => x.UploadedBy != null && x.UploadedBy.IsAdmin)
-            //.Select(x => x.Value == 0 ? 1 : x.Value)
             .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
             .GroupBy(x => x.BlockItem)
             .ToListAsync();
@@ -262,12 +261,14 @@
 
         foreach (var uploads in uploadsPerItem)
         {
-            var totalValue = uploads.Key.Value;
+            var itemValue = uploads.Key.Value;
 
-            if (totalValue == 0)
+            if (itemValue == 0)
             {
                 continue;
             }
+
+            var uploadTotalValue = uploads.Sum(x => x.Value == 0 ? 1 : x.Value);
 
             foreach (var upload in uploads)
             {
@@ -282,7 +283,7 @@
                     continue;
                 }
 
-                var uploadValue = (upload.Value == 0 ? 1 : upload.Value) / (float)totalValue * upload.BlockItem.Value;
+                var uploadValue = (upload.Value == 0 ? 1 : upload.Value) / (float)uploadTotalValue * itemValue;
                 
                 if (userTotalValues.TryGetValue(upload.UploadedBy.Id, out var existingValue))
                 {
