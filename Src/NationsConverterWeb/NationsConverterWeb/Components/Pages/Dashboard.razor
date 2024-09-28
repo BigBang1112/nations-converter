@@ -55,13 +55,17 @@
     </div>
     <div class="members">
         <div class="additional-links">
-            <span>Your payout value: (soon)</span>
-            <span>Currently paid: 0</span>
+            @if (currentDiscordUser is not null)
+            {
+                <span>Your payout value: @currentDiscordUser.User.PayoutValue</span>
+                <span>Currently paid: @currentDiscordUser.User.CurrentlyPaidValue</span>
+            }
             <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
 
             @if (currentDiscordUser?.User.IsAdmin == true)
             {
                 <button class="button" @onclick="DownloadValueReviewItemsAsync">Download value review items</button>
+                <button class="button" @onclick="UpdatePayoutValuesAsync">Update payout values</button>
             }
 
             <a href="/data/NationsConverterCLI.zip" download="NationsConverterCLI.zip">Download converter</a>
@@ -241,5 +245,63 @@
 
         using var streamRef = new DotNetStreamReference(ms);
         await JS.InvokeVoidAsync("downloadFileFromStream", "ValueReview.zip", streamRef);
+    }
+
+    private async Task UpdatePayoutValuesAsync()
+    {
+        var uploadsPerItem = await Db.ItemUploads
+            .Where(x => x.UploadedBy != null && x.UploadedBy.IsAdmin)
+            //.Select(x => x.Value == 0 ? 1 : x.Value)
+            .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
+            .GroupBy(x => x.BlockItem)
+            .ToListAsync();
+
+        var userTotalValues = new Dictionary<int, float>();
+
+        foreach (var uploads in uploadsPerItem)
+        {
+            var totalValue = uploads.Key.Value;
+
+            if (totalValue == 0)
+            {
+                continue;
+            }
+
+            foreach (var upload in uploads)
+            {
+                if (upload.UploadedBy is null)
+                {
+                    continue;
+                }
+
+                if (upload.UploadedBy.IsAdmin)
+                {
+                    userTotalValues[upload.UploadedBy.Id] = 0;
+                    continue;
+                }
+
+                var uploadValue = (upload.Value == 0 ? 1 : upload.Value) / (float)totalValue * upload.BlockItem.Value;
+                
+                if (userTotalValues.TryGetValue(upload.UploadedBy.Id, out var existingValue))
+                {
+                    userTotalValues[upload.UploadedBy.Id] = existingValue + uploadValue;
+                }
+                else
+                {
+                    userTotalValues[upload.UploadedBy.Id] = uploadValue;
+                }
+            }
+        }
+
+        var users = await Db.Users
+            .Where(x => userTotalValues.Keys.Contains(x.Id))
+            .ToListAsync();
+
+        foreach (var user in users)
+        {
+            user.PayoutValue = userTotalValues[user.Id];
+        }
+
+        await Db.SaveChangesAsync();
     }
 }

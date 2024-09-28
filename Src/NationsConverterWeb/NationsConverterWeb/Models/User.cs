@@ -13,5 +13,8 @@ public sealed class User
     [Required]
     public required DateTimeOffset JoinedAt { get; set; }
 
+    public float PayoutValue { get; set; }
+    public float CurrentlyPaidValue { get; set; }
+
     public bool IsStaff => IsAdmin || IsDeveloper || IsModeler;
 }
