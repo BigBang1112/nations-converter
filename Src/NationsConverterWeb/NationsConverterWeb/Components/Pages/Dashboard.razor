@@ -250,6 +250,8 @@
     private async Task UpdatePayoutValuesAsync()
     {
         var uploadsPerItem = await Db.ItemUploads
+            .Include(x => x.UploadedBy)
+            .Include(x => x.BlockItem)
             .Where(x => x.UploadedBy != null && x.UploadedBy.IsAdmin)
             //.Select(x => x.Value == 0 ? 1 : x.Value)
             .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
