@@ -2,6 +2,7 @@
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject AppDbContext Db
 @inject IJSRuntime JS
+@inject ILogger<Dashboard> Logger
 @rendermode InteractiveServer
 
 <PageTitle>Dashboard - Nations Converter 2</PageTitle>
@@ -252,6 +253,7 @@
         var uploadsPerItem = await Db.ItemUploads
             .Include(x => x.UploadedBy)
             .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
             .Where(x => x.UploadedBy != null && x.UploadedBy.IsAdmin)
             .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
             .GroupBy(x => x.BlockItem)
@@ -264,6 +266,11 @@
             var itemValue = uploads.Key.Value;
 
             if (itemValue == 0)
+            {
+                continue;
+            }
+
+            if (!uploads.Key.Block.IsDone)
             {
                 continue;
             }
@@ -294,6 +301,11 @@
                     userTotalValues[upload.UploadedBy.Id] = uploadValue;
                 }
             }
+        }
+
+        foreach (var (userId, value) in userTotalValues)
+        {
+            Logger.LogInformation("User {UserId} has a payout value of {Value}", userId, value);
         }
 
         var users = await Db.Users
