@@ -214,6 +214,8 @@
                 .ThenInclude(x => x.Block)
             .ToListAsync();
 
+        var now = DateTimeOffset.UtcNow.ToString("yyyyMMddTHHmmss");
+
         using var ms = new MemoryStream();
 
         using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
@@ -222,7 +224,7 @@
             {
                 var filePath = Path.Combine(
                     "ValueReview",
-                    DateTimeOffset.UtcNow.ToString("yyyyMMddTHHmmss"),
+                    now,
                     upload.BlockItem.Block.Name,
                     $"{GBX.NET.GbxPath.GetFileNameWithoutExtension(upload.BlockItem.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}.Item{Path.GetExtension(upload.BlockItem.FileName)}");
                 var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);

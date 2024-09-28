@@ -49,6 +49,14 @@
         <p>Assigned to @(block.AssignedTo.DiscordUser?.GlobalName ?? block.AssignedTo.DiscordUser?.Username)</p>
     }
 
+    @if (user?.IsAdmin == true)
+    {
+        <label>
+            <input type="checkbox" checked="@block.IsDone" @onchange="e => DoneChanged(block, e)" />
+            Done
+        </label>
+    }
+
     <h3 style="margin-top: 20px">Items</h3>
     <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
 
@@ -549,6 +557,25 @@
         if (bool.TryParse(e.Value?.ToString(), out var justResave))
         {
             item.JustResave = justResave;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task DoneChanged(Block block, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (bool.TryParse(e.Value?.ToString(), out var isDone))
+        {
+            block.IsDone = isDone;
             await Db.SaveChangesAsync();
         }
     }
