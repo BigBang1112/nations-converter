@@ -221,8 +221,10 @@
             foreach (var upload in uploads)
             {
                 var filePath = Path.Combine(
+                    "ValueReview",
+                    DateTimeOffset.UtcNow.ToString("yyyyMMddTHHmmss"),
                     upload.BlockItem.Block.Name,
-                    $"{Path.GetFileNameWithoutExtension(upload.BlockItem.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}{Path.GetExtension(upload.BlockItem.FileName)}");
+                    $"{GBX.NET.GbxPath.GetFileNameWithoutExtension(upload.BlockItem.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}.Item{Path.GetExtension(upload.BlockItem.FileName)}");
                 var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
 
                 entry.LastWriteTime = upload.LastModifiedAt;

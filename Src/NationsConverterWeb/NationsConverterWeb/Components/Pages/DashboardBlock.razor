@@ -64,12 +64,23 @@
 
                     <span>@item.FileName</span>
 
-                    @if (item.JustResave)
+                    @if (user?.IsAdmin == true)
+                    {
+                        <label>
+                            <input type="checkbox" checked="@item.JustResave" @onchange="e => JustResaveChanged(item, e)" />
+                            Just resave
+                        </label>
+                    }
+                    else if (item.JustResave)
                     {
                         <span class="yellow">(just resave!)</span>
                     }
 
-                    @if (item.Value > 0)
+                    @if (user?.IsAdmin == true)
+                    {
+                        <input value="@item.Value" @onchange="e => ItemValueChanged(item, e)" style="width: 30px;" />
+                    }
+                    else if (item.Value > 0)
                     {
                         <span title="Item value. This is used for payouts.">@item.Value</span>
                     }
@@ -104,7 +115,21 @@
 
                         @if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
                         {
-                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">@(upload.Value == 0 ? 1 : 0) (@GetUploadValue(upload, totalValue))</span>
+                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">
+                                @if (user?.IsAdmin == true)
+                                {
+                                    <input value="@(upload.Value == 0 ? 1 : upload.Value)" @onchange="e => UploadValueChanged(upload, e)" style="width: 20px;" />
+                                }
+                                else
+                                {
+                                    <span>@(upload.Value == 0 ? 1 : upload.Value)</span>
+                                }
+
+                                @if (totalValue > 0)
+                                {
+                                    <span>(@GetUploadValue(upload, totalValue))</span>
+                                }
+                            </span>
                         }
 
                         <span class="upload-date">@upload.UploadedAt.DateTime</span>
@@ -469,5 +494,62 @@
     private float GetUploadValue(ItemUpload upload, int totalValue)
     {
         return (upload.Value == 0 ? 1 : upload.Value) / (float)totalValue * upload.BlockItem.Value;
+    }
+
+    private async Task UploadValueChanged(ItemUpload upload, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (int.TryParse(e.Value?.ToString(), out var value))
+        {
+            upload.Value = value;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task ItemValueChanged(BlockItem item, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (int.TryParse(e.Value?.ToString(), out var value))
+        {
+            item.Value = value;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task JustResaveChanged(BlockItem item, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (bool.TryParse(e.Value?.ToString(), out var justResave))
+        {
+            item.JustResave = justResave;
+            await Db.SaveChangesAsync();
+        }
     }
 }
