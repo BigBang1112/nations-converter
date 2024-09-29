@@ -25,7 +25,7 @@ internal sealed class ConversionSetExtract : EnvironmentConverterBase
         logger.LogInformation("Filling conversion set for {Environment} environment...", Environment);
         var watch = Stopwatch.StartNew();
 
-        var finalConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", Environment))
+        var finalConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", "Solid", Environment))
             .Fill(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment)));
 
         logger.LogInformation("Filled conversion set for {Environment} environment ({ElapsedMilliseconds}ms).", Environment, watch.ElapsedMilliseconds);
