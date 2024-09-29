@@ -19,4 +19,6 @@ internal sealed class MaterialModel
     public Dictionary<string, string> Modifiers { get; set; } = [];
 
     public Dictionary<string, MaterialSubCategoryModel> SubCategories { get; set; } = [];
+    
+    public bool Stadium256 { get; set; }
 }

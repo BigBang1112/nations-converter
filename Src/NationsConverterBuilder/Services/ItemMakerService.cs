@@ -114,13 +114,13 @@ internal sealed class ItemMakerService
 
             if (!string.IsNullOrEmpty(subCategoryMaterial.Link))
             {
-                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{subCategoryMaterial.Link}", surface, color: subCategoryMaterial.Color);
+                return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium{(material.Stadium256 ? "256" : "")}\\Media\\{subCategoryMaterial.Link}", surface, color: subCategoryMaterial.Color);
             }
         }
 
         if (!string.IsNullOrEmpty(material.Link))
         {
-            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium\\Media\\{material.Link}", surface, color: material.Color);
+            return matDict[matName] = CPlugMaterialUserInstExtensions.Create($"Stadium{(material.Stadium256 ? "256" : "")}\\Media\\{material.Link}", surface, color: material.Color);
         }
 
         return matDict[matName] = CPlugMaterialUserInstExtensions.Create();
