@@ -12,19 +12,19 @@
   <ItemGroup>
     <ProjectReference Include="..\..\NationsConverterShared\NationsConverterShared.csproj" />
     <ProjectReference Include="..\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj" />
-    <PackageReference Include="AspNet.Security.OAuth.Discord" Version="8.1.0" />
+    <PackageReference Include="AspNet.Security.OAuth.Discord" Version="8.2.0" />
     <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.0" />
     <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.8" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
-      <PackageReference Include="GBX.NET" Version="2.0.8-nightly.20240914.0f65302" />
+      <PackageReference Include="GBX.NET" Version="2.0.9" />
   </ItemGroup>
 
   <ItemGroup>

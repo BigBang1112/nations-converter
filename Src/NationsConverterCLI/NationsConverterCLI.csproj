@@ -20,7 +20,7 @@
     <ItemGroup>
         <PackageReference Include="GBX.NET.Hashing" Version="1.0.0" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
-        <PackageReference Include="GBX.NET.Tool.CLI" Version="0.3.0-nightly.20240914.0f65302" />
+        <PackageReference Include="GBX.NET.Tool.CLI" Version="0.4.0" />
     </ItemGroup>
 
     <ItemGroup>
