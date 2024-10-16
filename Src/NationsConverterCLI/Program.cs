@@ -20,6 +20,6 @@ var jsonOptions = new JsonSerializerOptions
 await ToolConsole<NationsConverterTool>.RunAsync(args, new()
 {
     JsonContext = new AppJsonContext(jsonOptions),
-    YmlDeserializer = new DeserializerBuilder().Build(),
-    YmlSerializer = new SerializerBuilder().Build()
+    YmlDeserializer = new DeserializerBuilder(),
+    YmlSerializer = new SerializerBuilder()
 });
