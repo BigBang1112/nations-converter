@@ -30,13 +30,13 @@ internal sealed class ConversionSetExtract : EnvironmentConverterBase
 
     public ManualConversionSetModel Extract()
     {
-        logger.LogInformation("Filling conversion set for {Environment} environment...", Environment);
+        logger.LogInformation("Filling conversion set ({Category}) for {Environment} environment...", category, Environment);
         var watch = Stopwatch.StartNew();
 
         var finalConversionSet = complexConfig.Get<ManualConversionSetModel>(Path.Combine("Manual", category, Environment))
             .Fill(complexConfig.Get<ConversionSetModel>(Path.Combine("Generated", Environment)));
 
-        logger.LogInformation("Filled conversion set for {Environment} environment ({ElapsedMilliseconds}ms).", Environment, watch.ElapsedMilliseconds);
+        logger.LogInformation("Filled conversion set ({Category}) for {Environment} environment ({ElapsedMilliseconds}ms).", category, Environment, watch.ElapsedMilliseconds);
 
         return finalConversionSet;
     }

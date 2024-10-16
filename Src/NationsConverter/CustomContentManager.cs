@@ -49,7 +49,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
         subCategory = string.IsNullOrWhiteSpace(config.SubCategory) ? Environment switch
         {
-            "Stadium" => "Modernized",
+            "Stadium" => "Classic",
             _ => "Modless"
         } : config.SubCategory;
 
