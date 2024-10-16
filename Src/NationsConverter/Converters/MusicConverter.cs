@@ -1,6 +1,7 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.Web;
 using TmEssentials;
@@ -15,6 +16,8 @@ internal sealed class MusicConverter : EnvironmentConverterBase
     private readonly ILogger logger;
 
     private const string Extension = "mux";
+
+    private static readonly ConcurrentDictionary<string, bool> availableMusicUrls = [];
 
     public MusicConverter(
         CGameCtnChallenge mapIn, 
@@ -53,10 +56,17 @@ internal sealed class MusicConverter : EnvironmentConverterBase
 
         mapOut.CustomMusicPackDesc = new PackDesc(filePath, Checksum: null, locatorUrl);
 
+        if (availableMusicUrls.ContainsKey(locatorUrl))
+        {
+            return;
+        }
+
         logger.LogInformation("Checking if music is available online...");
 
         using var response = http.HeadAsync(locatorUrl).GetAwaiter().GetResult();
-        
+
+        availableMusicUrls[locatorUrl] = response.IsSuccessStatusCode;
+
         if (response.IsSuccessStatusCode)
         {
             logger.LogInformation("Music is available online: status code {StatusCode} ({ElapsedMilliseconds}ms)", response.StatusCode, watch.ElapsedMilliseconds);
