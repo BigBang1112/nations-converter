@@ -164,6 +164,8 @@
         }
     </div>
 
+    <p>Page name: @(block.PageName ?? "Unknown page name")</p>
+
     @if (items.Count == 0)
     {
         <button class="button button-big" style="margin: 10px" @onclick="LoadItemMeshInfo">Load item mesh info</button>
