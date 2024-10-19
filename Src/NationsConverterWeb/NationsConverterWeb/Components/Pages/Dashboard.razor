@@ -1,6 +1,6 @@
 ﻿@page "/dashboard"
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
-@inject AppDbContext Db
+@inject IDbContextFactory<AppDbContext> DbFactory
 @inject IJSRuntime JS
 @inject ILogger<Dashboard> Logger
 @rendermode InteractiveServer
@@ -123,6 +123,8 @@
     private DiscordUser[] discordUsers = [];
     private Block[] blocks = [];
 
+    private bool loading;
+
     protected override async Task OnInitializedAsync()
     {
         if (AuthenticationStateTask is null)
@@ -146,8 +148,20 @@
         }
 
         this.snowflake = snowflake;
+    }
 
-        discordUsers = await Db.DiscordUsers
+    protected override async Task OnParametersSetAsync()
+    {
+        if (loading)
+        {
+            return;
+        }
+
+        loading = true;
+
+        await using var db = DbFactory.CreateDbContext();
+
+        discordUsers = await db.DiscordUsers
             .Include(x => x.User)
             .OrderByDescending(x => x.User.IsAdmin)
             .ThenByDescending(x => x.User.IsDeveloper)
@@ -157,12 +171,16 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-        blocks = await Db.Blocks.ToArrayAsync();
+        blocks = await db.Blocks.ToArrayAsync();
+
+        loading = false;
     }
 
     private async Task DownloadCompleteItemsAsync()
     {
-        var uploads = await Db.ItemUploads
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploads = await db.ItemUploads
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
             .GroupBy(x => x.BlockItem)
@@ -214,7 +232,9 @@
 
     private async Task DownloadValueReviewItemsAsync()
     {
-        var uploads = await Db.ItemUploads
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploads = await db.ItemUploads
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
             .ToListAsync();
@@ -250,7 +270,9 @@
 
     private async Task UpdatePayoutValuesAsync()
     {
-        var uploadsPerItem = await Db.ItemUploads
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploadsPerItem = await db.ItemUploads
             .Include(x => x.UploadedBy)
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
@@ -308,7 +330,7 @@
             Logger.LogInformation("User {UserId} has a payout value of {Value}", userId, value);
         }
 
-        var users = await Db.Users
+        var users = await db.Users
             .Where(x => userTotalValues.Keys.Contains(x.Id))
             .ToListAsync();
 
@@ -317,6 +339,6 @@
             user.PayoutValue = userTotalValues[user.Id];
         }
 
-        await Db.SaveChangesAsync();
+        await db.SaveChangesAsync();
     }
 }

@@ -58,7 +58,7 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
     options.KnownProxies.Clear();
 });
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContextFactory<AppDbContext>(options =>
 {
     var connectionStr = builder.Configuration.GetConnectionString("DefaultConnection");
     options.UseMySql(connectionStr, ServerVersion.AutoDetect(connectionStr));
