@@ -118,4 +118,21 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
                 : GetPropertyDefault(x => x.Air, propertyFunc);
         }
     }
+
+    public T GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T?> propertyFunc, bool fallback = false)
+        where T : struct
+    {
+        if (fallback)
+        {
+            return block.IsGround
+                ? GetPropertyDefault(x => x.Ground, propertyFunc, x => x.Air).GetValueOrDefault()
+                : GetPropertyDefault(x => x.Air, propertyFunc, x => x.Ground).GetValueOrDefault();
+        }
+        else
+        {
+            return block.IsGround
+                ? GetPropertyDefault(x => x.Ground, propertyFunc).GetValueOrDefault()
+                : GetPropertyDefault(x => x.Air, propertyFunc).GetValueOrDefault();
+        }
+    }
 }

@@ -10,6 +10,7 @@ namespace NationsConverter.Converters;
 internal sealed class PlaceBlockConverter : BlockConverterBase
 {
     private readonly CGameCtnChallenge mapIn;
+    private readonly CGameCtnChallenge mapOut;
     private readonly CustomContentManager customContentManager;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
@@ -28,6 +29,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
+        this.mapOut = mapOut;
         this.customContentManager = customContentManager;
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
@@ -127,18 +129,32 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var rotRadians = -(int)direction * MathF.PI / 2;
 
-        logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
+        var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
+        if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
+        {
+            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction);
+        }
 
-        customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0));
+        var noItem = conversion.GetPropertyDefault(block, x => x.NoItem);
+        if (!noItem)
+        {
+            logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
+            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0));
+        }
 
         // Place terrain-modifiable pieces
         if (block.IsGround && conversion.Modifiable.GetValueOrDefault() && (conversion.NotModifiable is null || !conversion.NotModifiable.Contains((variant, subVariant))))
         {
-            var terrainItemPath = terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier)
-                ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
-                : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+            var noTerrainModifier = conversion.GetPropertyDefault(block, x => x.NoTerrainModifier);
 
-            customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
+            if (!noTerrainModifier)
+            {
+                var terrainItemPath = terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier)
+                    ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
+                    : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+
+                customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
+            }
         }
     }
 

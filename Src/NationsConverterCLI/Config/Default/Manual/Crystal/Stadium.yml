@@ -1,3 +1,8 @@
 BlockTerrainModifiers:
   StadiumDirt: Dirt
 WaterHeight: 0
+Blocks:
+  StadiumRoadMainStartLine:
+    NoItem: true
+    Block:
+      Name: RoadTechStart

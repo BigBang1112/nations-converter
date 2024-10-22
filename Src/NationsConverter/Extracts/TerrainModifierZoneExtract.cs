@@ -35,6 +35,7 @@ internal sealed class TerrainModifierZoneExtract
 
             if (conversionSet.BlockTerrainModifiers.TryGetValue(block.Name, out var terrainModifier))
             {
+                // this will work differently for Stadium fabric
                 terrainModifierZones[block.Coord] = terrainModifier;
             }
         }
