@@ -149,9 +149,19 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
             if (!noTerrainModifier)
             {
-                var terrainItemPath = terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier)
-                    ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
-                    : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+                var useBaseTerrainModifier = conversion.GetPropertyDefault(block, x => x.UseBaseTerrainModifier);
+
+                string terrainItemPath;
+                if (terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier))
+                {
+                    // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
+                    terrainItemPath = Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
+                }
+                else
+                {
+                    // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
+                    terrainItemPath = Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+                }
 
                 customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
             }

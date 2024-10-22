@@ -4,5 +4,6 @@ WaterHeight: 0
 Blocks:
   StadiumRoadMainStartLine:
     NoItem: true
+    UseBaseTerrainModifier: true
     Block:
       Name: RoadTechStart
