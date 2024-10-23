@@ -65,6 +65,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Ground.SpawnPos = conversion.Ground.SpawnPos;
                 manualConversion.Ground.WaterUnits = conversion.Ground.WaterUnits;
                 manualConversion.Ground.PlacePylons = conversion.Ground.PlacePylons;
+                manualConversion.Ground.TerrainModifierUnits = conversion.Ground.TerrainModifierUnits;
             }
 
             if (conversion.Air is not null)
@@ -78,6 +79,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Air.SpawnPos = conversion.Air.SpawnPos;
                 manualConversion.Air.WaterUnits = conversion.Air.WaterUnits;
                 manualConversion.Air.PlacePylons = conversion.Air.PlacePylons;
+                manualConversion.Air.TerrainModifierUnits = conversion.Air.TerrainModifierUnits;
             }
 
             manualConversion.Units = conversion.Units;
@@ -93,6 +95,7 @@ public sealed class ManualConversionSetModel
             manualConversion.WaterUnits = conversion.WaterUnits;
             manualConversion.Road = conversion.Road;
             manualConversion.PlacePylons = conversion.PlacePylons;
+            manualConversion.TerrainModifierUnits = conversion.TerrainModifierUnits;
         }
 
         return this;

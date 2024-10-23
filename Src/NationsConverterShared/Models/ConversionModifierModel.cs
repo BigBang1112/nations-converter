@@ -13,4 +13,5 @@ public class ConversionModifierModel
     public Int2[]? WaterUnits { get; set; }
     public int[]? PlacePylons { get; set; }
     public int[]? AcceptPylons { get; set; }
+    public Dictionary<string, Int3[]>? TerrainModifierUnits { get; set; }
 }

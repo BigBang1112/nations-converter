@@ -3130,7 +3130,26 @@
       "Variants": 1,
       "SubVariants": [
         1
-      ]
+      ],
+      "TerrainModifierUnits": {
+        "Fabric": [
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            1,
+            5,
+            1
+          ]
+        ]
+      }
     },
     "StadiumFabricStraight1x1Air": {
       "PageName": "Decors/Fabric",
@@ -3184,7 +3203,16 @@
         ],
         "SubVariants": [
           1
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              5,
+              0
+            ]
+          ]
+        }
       },
       "Variants": 1
     },
@@ -3232,7 +3260,21 @@
             5,
             0
           ]
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              5,
+              0
+            ]
+          ]
+        }
       },
       "Air": {
         "Units": [
@@ -3271,7 +3313,16 @@
             4,
             0
           ]
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              5,
+              0
+            ]
+          ]
+        }
       },
       "Modifiable": true,
       "Size": [
@@ -3383,7 +3434,21 @@
             5,
             0
           ]
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              5,
+              0
+            ]
+          ]
+        }
       },
       "Air": {
         "Units": [
@@ -3467,7 +3532,16 @@
             4,
             0
           ]
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              5,
+              0
+            ]
+          ]
+        }
       },
       "Modifiable": true,
       "Size": [
@@ -3577,7 +3651,56 @@
         ],
         "SubVariants": [
           1
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "fabric": [
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2
+            ],
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              0,
+              2
+            ]
+          ]
+        }
       },
       "Variants": 1
     },
@@ -3803,7 +3926,56 @@
         ],
         "SubVariants": [
           1
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              5,
+              1
+            ],
+            [
+              0,
+              5,
+              2
+            ],
+            [
+              1,
+              5,
+              0
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              1,
+              5,
+              2
+            ],
+            [
+              2,
+              5,
+              0
+            ],
+            [
+              2,
+              5,
+              1
+            ],
+            [
+              2,
+              5,
+              2
+            ]
+          ]
+        }
       },
       "Variants": 1
     },
@@ -3910,7 +4082,16 @@
         ],
         "SubVariants": [
           1
-        ]
+        ],
+        "TerrainModifierUnits": {
+          "Fabric": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        }
       },
       "Variants": 1
     },
