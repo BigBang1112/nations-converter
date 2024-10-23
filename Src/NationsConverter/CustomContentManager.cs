@@ -165,7 +165,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
             {
                 var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
                 var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
-                var toEmbedEntry = toEmbedZip.GetEntry(embeddedPath.Replace('\\', '/'));
+                var toEmbedEntry = toEmbedZip.GetEntry(loadPath.Replace('\\', '/'));
 
                 if (toEmbedEntry is null)
                 {
