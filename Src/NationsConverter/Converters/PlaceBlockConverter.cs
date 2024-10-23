@@ -132,7 +132,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
         {
-            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction);
+            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
         }
 
         var noItem = conversion.GetPropertyDefault(block, x => x.NoItem);
@@ -151,18 +151,56 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             {
                 var useBaseTerrainModifier = conversion.GetPropertyDefault(block, x => x.UseBaseTerrainModifier);
 
+                // This will work fine in 99% of cases, BUT
+                // in TMF, when you place fabric on NON-0x0x0 rotated unit,
+                // the fabric is not applied on the whole block
+                // however with certain action combinations like undoing, this stays.
+                // in TMF, on map reload, non 0x0x0 fabric is consistently not applied
+                // so fabric is not yet quite exact here
+                // So far, this system is needed ONLY for Stadium
+                var modifier = default(string);
+                if (Environment == "Stadium")
+                {
+                    var units = conversion.GetProperty(block, x => x.Units)?.Where(x => x.Y == 0) ?? [];
+                    foreach (var unit in units)
+                    {
+                        var alignedCoord = block.Coord + unit + block.Direction switch
+                        {
+                            Direction.East => (blockCoordSize.Z - 1, 0, 0),
+                            Direction.South => (blockCoordSize.X - 1, 0, blockCoordSize.Z - 1),
+                            Direction.West => (0, 0, blockCoordSize.X - 1),
+                            _ => (0, 0, 0)
+                        };
+
+                        if (terrainModifierZones.TryGetValue(alignedCoord - (0, 1, 0), out modifier))
+                        {
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    modifier = terrainModifierZones.GetValueOrDefault(block.Coord - (0, 1, 0));
+                }
+
                 string terrainItemPath;
-                if (terrainModifierZones.TryGetValue(block.Coord - (0, 1, 0), out var modifier))
+                if (modifier is not null)
                 {
                     // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
-                    terrainItemPath = Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
+                    terrainItemPath = useBaseTerrainModifier
+                        ? ""
+                        : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
                 }
                 else
                 {
                     // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
-                    terrainItemPath = Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+                    terrainItemPath = useBaseTerrainModifier
+                        ? ""
+                        : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
                 }
 
+                // if useBaseTerrainModifier, place 1x1 pieces on all ground units at Y 0
+                // otherwise just place item
                 customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
             }
         }
@@ -230,6 +268,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             }
             dirs.Add(dir);
 
+            // TODO condition Fabric in Stadium here
+
             PlaceItem(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir);
         }
 
@@ -255,6 +295,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 {
                     continue;
                 }
+
+                // TODO condition Fabric in Stadium here
 
                 PlaceItem(block, ConversionSet.Blocks[block.Name], overrideDirection: dir);
             }

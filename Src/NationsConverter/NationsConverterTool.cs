@@ -42,14 +42,14 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var conversionSetExtract = new ConversionSetExtract(mapIn, Config, complexConfig, logger);
         var conversionSet = conversionSetExtract.Extract();
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(mapIn, mapOut, conversionSet, customContentManager, logger);
-        placeBaseZoneConverter.Convert();
-
         var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(mapIn, conversionSet, logger);
         var coveredZoneBlocks = coveredZoneBlockInfoExtract.Extract();
 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(mapIn, conversionSet, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
+
+        var placeBaseZoneConverter = new PlaceBaseZoneConverter(mapIn, mapOut, conversionSet, customContentManager, terrainModifierZones, logger);
+        placeBaseZoneConverter.Convert();
 
         var placeBlockConverter = new PlaceBlockConverter(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
         placeBlockConverter.Convert();

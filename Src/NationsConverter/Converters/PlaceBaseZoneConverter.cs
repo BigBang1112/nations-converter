@@ -2,6 +2,7 @@
 using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
+using System.Collections.Immutable;
 using System.Diagnostics;
 
 namespace NationsConverter.Converters;
@@ -11,6 +12,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
     private readonly CustomContentManager customContentManager;
+    private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
     private readonly ILogger logger;
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
@@ -20,11 +22,13 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
+        ImmutableDictionary<Int3, string> terrainModifierZones,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
         this.customContentManager = customContentManager;
+        this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
 
         occupiedZone = new bool[mapIn.Size.X, mapIn.Size.Z];
@@ -116,6 +120,15 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
                 }
 
                 var pos = new Int3(x, baseHeight, z) + CenterOffset;
+
+                if (Environment == "Stadium" && terrainModifierZones.TryGetValue((x, 0, z), out var terrainModifier))
+                {
+                    if (terrainModifier == "Fabric")
+                    {
+                        //customContentManager.PlaceItem(Path.Combine("Misc", "Fabric"));
+                        continue;
+                    }
+                }
 
                 customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
 
