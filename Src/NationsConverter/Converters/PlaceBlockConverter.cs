@@ -188,14 +188,14 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 {
                     // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
                     terrainItemPath = useBaseTerrainModifier
-                        ? ""
+                        ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
                         : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
                 }
                 else
                 {
                     // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
                     terrainItemPath = useBaseTerrainModifier
-                        ? ""
+                        ? Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx")
                         : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
                 }
 

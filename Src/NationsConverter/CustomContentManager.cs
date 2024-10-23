@@ -15,7 +15,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
     private const int ItemCollection = 26;
 
     private readonly ConcurrentDictionary<string, string> itemModelAuthors = [];
-    private readonly HashSet<string> embeddedFilePaths = [];
+    private readonly HashSet<(string, string)> embeddedFilePaths = [];
 
     private readonly CGameCtnChallenge mapOut;
     private readonly string runningDir;
@@ -25,6 +25,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
     private readonly string category;
     private readonly string subCategory;
     private readonly string technology;
+    private readonly string rootFolderName;
     private readonly string baseItemPath;
 
     private const string NC2 = "NC2";
@@ -34,6 +35,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
         CGameCtnChallenge mapOut,
         string runningDir,
         NationsConverterConfig config,
+        uint seed,
         ILogger logger) : base(mapIn)
     {
         this.mapOut = mapOut;
@@ -59,28 +61,31 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
             _ => "MM_Collision"
         };
 
-        baseItemPath = Path.Combine(NC2, category, subCategory, technology, Environment);
+        baseItemPath = Path.Combine(category, subCategory, technology, Environment);
+        rootFolderName = config.CopyItems ? NC2 : $"{NC2}_{seed}";
     }
 
     public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot)
     {
+        ArgumentException.ThrowIfNullOrWhiteSpace(itemModel);
+
         var itemPath = Path.Combine(baseItemPath, itemModel);
 
         // retrieve author login (and collection in the future) from the item model gbx
         // cache this item model in dictionary
         if (!itemModelAuthors.TryGetValue(itemPath, out var itemModelAuthor))
         {
-            var fullItemPath = Path.Combine(runningDir, "UserData", "Items", itemPath);
+            var fullItemPath = Path.Combine(runningDir, "UserData", "Items", NC2, itemPath);
 
             itemModelAuthor = File.Exists(fullItemPath)
                 ? Gbx.ParseHeaderNode<CGameItemModel>(fullItemPath).Ident.Author
                 : "akPfIM0aSzuHuaaDWptBbQ";
 
             // add file to hash set, so that it can be found + properly placed in the zip
-            embeddedFilePaths.Add(Path.Combine("Items", itemPath));
+            embeddedFilePaths.Add(("Items", itemPath));
         }
 
-        mapOut.PlaceAnchoredObject(new(itemPath.Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
+        mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
     }
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
@@ -89,7 +94,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
         var block = mapOut.PlaceBlock($"{blockPath}_CustomBlock", coord, dir, isGround, variant, subVariant);
 
-        embeddedFilePaths.Add(Path.Combine("Blocks", blockPath));
+        embeddedFilePaths.Add(("Blocks", blockPath));
 
         return block;
     }
@@ -104,7 +109,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
         block.AbsolutePositionInMap = pos;
         block.PitchYawRoll = rot;
 
-        embeddedFilePaths.Add(Path.Combine("Blocks", blockPath));
+        embeddedFilePaths.Add(("Blocks", blockPath));
 
         return block;
     }
@@ -126,9 +131,11 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
         {
             mapOut.UpdateEmbeddedZipData(zip =>
             {
-                foreach (var path in embeddedFilePaths)
+                foreach (var (embeddedType, remainingPath) in embeddedFilePaths)
                 {
-                    if (CreateEntryFromGbxFile(zip, path) is not null)
+                    var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
+                    var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
+                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is not null)
                     {
                         actualEmbeddedItemsCount++;
                     }
@@ -154,13 +161,15 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
         mapOut.UpdateEmbeddedZipData(zip =>
         {
-            foreach (var path in embeddedFilePaths)
+            foreach (var (embeddedType, remainingPath) in embeddedFilePaths)
             {
-                var toEmbedEntry = toEmbedZip.GetEntry(path.Replace('\\', '/'));
+                var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
+                var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
+                var toEmbedEntry = toEmbedZip.GetEntry(embeddedPath.Replace('\\', '/'));
 
                 if (toEmbedEntry is null)
                 {
-                    if (CreateEntryFromGbxFile(zip, path) is not null)
+                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is not null)
                     {
                         actualEmbeddedItemsCount++;
                     }
@@ -168,7 +177,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
                     continue;
                 }
 
-                var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
+                var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
                 using var entryStream = entry.Open();
                 using var toEmbedEntryStream = toEmbedEntry.Open();
                 Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
@@ -187,18 +196,18 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
         return userDataPackFilePath;
     }
 
-    private ZipArchiveEntry? CreateEntryFromGbxFile(ZipArchive zip, string path)
+    private ZipArchiveEntry? CreateEntryFromGbxFile(ZipArchive zip, string loadPath, string embeddedPath)
     {
-        var itemPath = Path.Combine(runningDir, "UserData", path);
+        loadPath = Path.Combine(runningDir, "UserData", loadPath);
 
-        if (!File.Exists(itemPath))
+        if (!File.Exists(loadPath))
         {
             return null;
         }
 
-        var entry = zip.CreateEntry(path, CompressionLevel.SmallestSize);
+        var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
         using var entryStream = entry.Open();
-        using var fileStream = File.OpenRead(itemPath);
+        using var fileStream = File.OpenRead(loadPath);
         Gbx.Decompress(input: fileStream, output: entryStream);
 
         return entry;
