@@ -90,9 +90,9 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var blockPath = Path.Combine(NC2, $"{blockModel}.Block.Gbx").Replace('/', '\\');
+        var blockPath = $"{blockModel.Replace('/', '\\')}.Block.Gbx";
 
-        var block = mapOut.PlaceBlock($"{blockPath}_CustomBlock", coord, dir, isGround, variant, subVariant);
+        var block = mapOut.PlaceBlock($"{Path.Combine(rootFolderName, blockPath).Replace('/', '\\')}_CustomBlock", coord, dir, isGround, variant, subVariant);
 
         embeddedFilePaths.Add(("Blocks", blockPath));
 
@@ -101,9 +101,9 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
     public CGameCtnBlock PlaceBlock(string blockModel, Vec3 pos, Vec3 rot, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var blockPath = Path.Combine(NC2, $"{blockModel}.Block.Gbx").Replace('/', '\\');
+        var blockPath = $"{blockModel.Replace('/', '\\')}.Block.Gbx";
 
-        var block = mapOut.PlaceBlock($"{blockPath}_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
+        var block = mapOut.PlaceBlock($"{Path.Combine(rootFolderName, blockPath).Replace('/', '\\')}_CustomBlock", (-1, 0, -1), Direction.North, isGround, variant, subVariant);
 
         block.IsFree = true;
         block.AbsolutePositionInMap = pos;
@@ -135,7 +135,11 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
                 {
                     var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
                     var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
-                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is not null)
+                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is null)
+                    {
+                        logger.LogWarning("File {Path} cannot be embedded because it does not exist.", remainingPath);
+                    }
+                    else
                     {
                         actualEmbeddedItemsCount++;
                     }
@@ -169,7 +173,11 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
 
                 if (toEmbedEntry is null)
                 {
-                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is not null)
+                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is null)
+                    {
+                        logger.LogWarning("File {Path} cannot be embedded because it does not exist.", remainingPath);
+                    }
+                    else
                     {
                         actualEmbeddedItemsCount++;
                     }
