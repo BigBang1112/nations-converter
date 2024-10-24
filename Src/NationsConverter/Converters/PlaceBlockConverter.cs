@@ -16,6 +16,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
     private readonly ILogger logger;
 
+    private readonly Dictionary<string, string> reverseBlockTerrainModifiers;
+
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
     private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
 
@@ -34,6 +36,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
         this.logger = logger;
+
+        reverseBlockTerrainModifiers = ConversionSet.BlockTerrainModifiers.ToDictionary(x => x.Value, x => x.Key);
     }
 
     public override void Convert()
@@ -72,6 +76,11 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
     private void PlaceItem(CGameCtnBlock block, ManualConversionModel conversion, string? overrideName = null, Direction? overrideDirection = null)
     {
+        if (!string.IsNullOrWhiteSpace(conversion.Inherits))
+        {
+            PlaceItem(block, ConversionSet.Blocks[conversion.Inherits], conversion.Inherits, overrideDirection);
+        }
+
         // fallbacks should be less permissive in the future
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
@@ -183,25 +192,73 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                     modifier = terrainModifierZones.GetValueOrDefault(block.Coord - (0, 1, 0));
                 }
 
-                string terrainItemPath;
-                if (modifier is not null)
+                // if useBaseTerrainModifier, place 1x1 pieces on all ground units at Y 0
+                // otherwise just place item
+                if (useBaseTerrainModifier)
                 {
-                    // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
-                    terrainItemPath = useBaseTerrainModifier
-                        ? Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx")
-                        : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
+                    string zoneBlockName;
+                    ManualConversionModel zoneConversion;
+
+                    if (modifier is null)
+                    {
+                        zoneBlockName = ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set");
+                        zoneConversion = ConversionSet.Blocks[zoneBlockName];
+                    }
+                    else
+                    {
+                        zoneBlockName = reverseBlockTerrainModifiers[modifier];
+                        zoneConversion = ConversionSet.Blocks[zoneBlockName];
+                    }
+
+                    var zoneDirPath = string.IsNullOrWhiteSpace(zoneConversion.PageName)
+                        ? blockName
+                        : Path.Combine(zoneConversion.PageName, zoneBlockName);
+                    var terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
+
+                    var units = conversion.GetProperty(block, x => x.Units)?.Where(x => x.Y == 0).ToArray() ?? [(0, 0, 0)];
+
+                    Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+
+                    var min = new Int3(int.MaxValue, 0, int.MaxValue);
+
+                    for (int i = 0; i < units.Length; i++)
+                    {
+                        var unit = units[i];
+                        var alignedUnit = block.Direction switch
+                        {
+                            Direction.East => (-unit.Z, unit.Y, unit.X),
+                            Direction.South => (-unit.X, unit.Y, -unit.Z),
+                            Direction.West => (unit.Z, unit.Y, -unit.X),
+                            _ => unit
+                        };
+
+                        if (alignedUnit.X < min.X)
+                        {
+                            min = min with { X = alignedUnit.X };
+                        }
+
+                        if (alignedUnit.Z < min.Z)
+                        {
+                            min = min with { Z = alignedUnit.Z };
+                        }
+
+                        alignedUnits[i] = alignedUnit;
+                    }
+
+                    foreach (var unit in alignedUnits)
+                    {
+                        var alignedPos = block.Coord + unit - min + CenterOffset - (0, 1, 0);
+                        customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));
+                    }
                 }
                 else
                 {
-                    // if useBaseTerrainModifier, use different dirPath based on BlockTerrainModifiers
-                    terrainItemPath = useBaseTerrainModifier
+                    var terrainItemPath = modifier is null
                         ? Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx")
-                        : Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx");
+                        : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
+                    customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
                 }
 
-                // if useBaseTerrainModifier, place 1x1 pieces on all ground units at Y 0
-                // otherwise just place item
-                customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
             }
         }
     }

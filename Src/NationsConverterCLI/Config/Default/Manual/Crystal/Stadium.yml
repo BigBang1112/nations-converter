@@ -7,3 +7,17 @@ Blocks:
     UseBaseTerrainModifier: true
     Block:
       Name: RoadTechStart
+  StadiumRoadMainFinishLine:
+    NoItem: true
+    UseBaseTerrainModifier: true
+    Block:
+      Name: RoadTechFinish
+  StadiumInflatableSnowTree:
+    UseBaseTerrainModifier: true
+  StadiumDirtBorder:
+    Modifiable: false
+    Inherits: StadiumGrass
+  StadiumInflatableCastleBig:
+    UseBaseTerrainModifier: true
+  StadiumInflatableCastleDoor:
+    UseBaseTerrainModifier: true
