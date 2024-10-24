@@ -16,8 +16,23 @@ Blocks:
     UseBaseTerrainModifier: true
   StadiumDirtBorder:
     Modifiable: false
-    Inherits: StadiumGrass
+    Item:
+      Name: Terraformation/StadiumGrass/Ground_0_0.Item.Gbx # incorrect with fabric
   StadiumInflatableCastleBig:
     UseBaseTerrainModifier: true
   StadiumInflatableCastleDoor:
     UseBaseTerrainModifier: true
+  StadiumDirtDeadendSpot:
+    Conversion:
+      Name: StadiumDirtBorder
+      Variant: 5
+      OffsetY: -1
+  StadiumDirtDeadendTent1:
+    Conversion:
+      Name: StadiumDirtBorder
+      Variant: 5
+      OffsetY: -1
+  StadiumRoadDirtFenceStraight:
+    Conversion:
+      Name: StadiumRoadDirt
+      Variant: 3

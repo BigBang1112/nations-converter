@@ -74,19 +74,21 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         TryPlaceClips(block, conversion);
     }
 
-    private void PlaceItem(CGameCtnBlock block, ManualConversionModel conversion, string? overrideName = null, Direction? overrideDirection = null)
+    private void PlaceItem(
+        CGameCtnBlock block, 
+        ManualConversionModel conversion, 
+        string? overrideName = null, 
+        Direction? overrideDirection = null, 
+        int? overrideVariant = null, 
+        int? overrideSubVariant = null,
+        Int3 offset = default)
     {
-        if (!string.IsNullOrWhiteSpace(conversion.Inherits))
-        {
-            PlaceItem(block, ConversionSet.Blocks[conversion.Inherits], conversion.Inherits, overrideDirection);
-        }
-
         // fallbacks should be less permissive in the future
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
 
-        var variant = block.Variant.GetValueOrDefault();
-        var subVariant = block.SubVariant.GetValueOrDefault();
+        var variant = overrideVariant ?? block.Variant.GetValueOrDefault();
+        var subVariant = overrideSubVariant ?? block.SubVariant.GetValueOrDefault();
 
         if (variant >= maxVariants)
         {
@@ -122,6 +124,22 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var direction = overrideDirection ?? block.Direction;
 
+        var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
+        if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
+        {
+            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
+        }
+
+        var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
+        if (conversionModel is not null && !string.IsNullOrWhiteSpace(conversionModel.Name))
+        {
+            PlaceItem(block, ConversionSet.Blocks[conversionModel.Name],
+                overrideName: conversionModel.Name,
+                overrideVariant: conversionModel.Variant,
+                overrideSubVariant: conversionModel.SubVariant,
+                offset: (0, conversionModel.OffsetY, 0));
+        }
+
         var pos = block.Coord + CenterOffset + direction switch
         {
             Direction.North => (0, 0, 0),
@@ -129,7 +147,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             Direction.South => (blockCoordSize.X, 0, blockCoordSize.Z),
             Direction.West => (0, 0, blockCoordSize.X),
             _ => throw new ArgumentException("Invalid block direction")
-        };
+        } + offset;
 
         if (conversion.ZoneHeight.HasValue)
         {
@@ -138,10 +156,13 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var rotRadians = -(int)direction * MathF.PI / 2;
 
-        var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
-        if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
+        var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
+        if (itemModel is not null)
         {
-            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
+            if (!string.IsNullOrWhiteSpace(itemModel.Name))
+            {
+                customContentManager.PlaceItem(itemModel.Name, pos * BlockSize, (rotRadians, 0, 0));
+            }
         }
 
         var noItem = conversion.GetPropertyDefault(block, x => x.NoItem);

@@ -16,7 +16,6 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }
     public ConversionRoadModel? Road { get; set; }
-    public string? Inherits { get; set; }
 
     public T GetProperty<T>(
         Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
