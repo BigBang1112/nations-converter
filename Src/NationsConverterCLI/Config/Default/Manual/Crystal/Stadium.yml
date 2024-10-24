@@ -1,43 +1,65 @@
 BlockTerrainModifiers:
   StadiumDirt: Dirt
-WaterHeight: 0
+WaterHeight: 1
 Blocks:
   StadiumRoadMainStartLine:
     NoItem: true
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
     Block:
       Name: RoadTechStart
   StadiumRoadMainFinishLine:
     NoItem: true
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
     Block:
       Name: RoadTechFinish
   StadiumInflatableSnowTree:
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
   StadiumDirtBorder:
-    Modifiable: false
-    Item:
-      Name: Terraformation/StadiumGrass/Ground_0_0.Item.Gbx # incorrect with fabric
+    NotModifiable: []
+    PlaceDefaultZone: true
   StadiumInflatableCastleBig:
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
   StadiumInflatableCastleDoor:
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
   StadiumDirtDeadendSpot:
+    NoTerrainModifier: true
     Conversion:
       Name: StadiumDirtBorder
       Variant: 5
       OffsetY: -1
   StadiumDirtDeadendTent1:
+    NoTerrainModifier: true
     Conversion:
       Name: StadiumDirtBorder
       Variant: 5
       OffsetY: -1
+  StadiumDirtDeadendDoor:
+    PlaceDefaultZone: true
   StadiumRoadDirtFenceStraight:
+    NoTerrainModifier: true
     Conversion:
       Name: StadiumRoadDirt
       Variant: 3
   StadiumSculptBridgeSuspendSlope2:
-    UseBaseTerrainModifier: true
+    PlaceDefaultZone: true
   StadiumSculptBridgeSuspendSlope2Mirror:
-    UseBaseTerrainModifier: true
-      
+    PlaceDefaultZone: true
+  StadiumRoadDirtToRoadGrass:
+    Items:
+    - Name: RoadDirt/RoadLow/StadiumRoadDirt/Ground_3_0.Item.Gbx
+    - Name: RoadDirt/RoadLow/StadiumRoadDirtFenceStraight/Ground_0_0.Item.Gbx
+  StadiumRoadDirtCheckpoint:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.62
+  StadiumRoadDirtToRoad:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      Variant: 3
+      NoItem: true
+    

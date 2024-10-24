@@ -91,7 +91,7 @@ public sealed class ManualConversionSetModel
             manualConversion.ZoneHeight = conversion.ZoneHeight;
             manualConversion.Waypoint = conversion.Waypoint;
             manualConversion.Modifiable = conversion.Modifiable;
-            manualConversion.NotModifiable = conversion.NotModifiable;
+            manualConversion.NotModifiable ??= conversion.NotModifiable;
             manualConversion.WaterUnits = conversion.WaterUnits;
             manualConversion.Road = conversion.Road;
             manualConversion.PlacePylons = conversion.PlacePylons;

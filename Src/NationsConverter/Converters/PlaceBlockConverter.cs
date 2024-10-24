@@ -79,16 +79,14 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         ManualConversionModel conversion, 
         string? overrideName = null, 
         Direction? overrideDirection = null, 
-        int? overrideVariant = null, 
-        int? overrideSubVariant = null,
-        Int3 offset = default)
+        ManualConversionBlockModel? overrideConversion = null)
     {
         // fallbacks should be less permissive in the future
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
 
-        var variant = overrideVariant ?? block.Variant.GetValueOrDefault();
-        var subVariant = overrideSubVariant ?? block.SubVariant.GetValueOrDefault();
+        var variant = overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
+        var subVariant = overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
 
         if (variant >= maxVariants)
         {
@@ -135,10 +133,10 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         {
             PlaceItem(block, ConversionSet.Blocks[conversionModel.Name],
                 overrideName: conversionModel.Name,
-                overrideVariant: conversionModel.Variant,
-                overrideSubVariant: conversionModel.SubVariant,
-                offset: (0, conversionModel.OffsetY, 0));
+                overrideConversion: conversionModel);
         }
+
+        Int3 offset = (0, overrideConversion?.OffsetY ?? 0, 0);
 
         var pos = block.Coord + CenterOffset + direction switch
         {
@@ -161,11 +159,23 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         {
             if (!string.IsNullOrWhiteSpace(itemModel.Name))
             {
-                customContentManager.PlaceItem(itemModel.Name, pos * BlockSize, (rotRadians, 0, 0));
+                customContentManager.PlaceItem(itemModel.Name, pos * BlockSize + new Vec3(0, itemModel.OffsetY, 0), (rotRadians, 0, 0));
             }
         }
 
-        var noItem = conversion.GetPropertyDefault(block, x => x.NoItem);
+        var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
+        if (itemModels is not null)
+        {
+            foreach (var item in itemModels)
+            {
+                if (!string.IsNullOrWhiteSpace(item.Name))
+                {
+                    customContentManager.PlaceItem(item.Name, pos * BlockSize + new Vec3(0, item.OffsetY, 0), (rotRadians, 0, 0));
+                }
+            }
+        }
+
+        var noItem = overrideConversion?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
@@ -179,7 +189,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
             if (!noTerrainModifier)
             {
-                var useBaseTerrainModifier = conversion.GetPropertyDefault(block, x => x.UseBaseTerrainModifier);
+                var placeDefaultZone = conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
 
                 // This will work fine in 99% of cases, BUT
                 // in TMF, when you place fabric on NON-0x0x0 rotated unit,
@@ -215,7 +225,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
                 // if useBaseTerrainModifier, place 1x1 pieces on all ground units at Y 0
                 // otherwise just place item
-                if (useBaseTerrainModifier)
+                if (placeDefaultZone)
                 {
                     string zoneBlockName;
                     ManualConversionModel zoneConversion;
@@ -268,7 +278,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
-                        var alignedPos = block.Coord + unit - min + CenterOffset - (0, 1, 0);
+                        var alignedPos = block.Coord + unit - min + CenterOffset + (0, (conversion.ZoneHeight is null ? -1 : 0) + offset.Y, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));
                     }
                 }
