@@ -236,9 +236,9 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                         : Path.Combine(zoneConversion.PageName, zoneBlockName);
                     var terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
 
-                    var units = conversion.GetProperty(block, x => x.Units)?.Where(x => x.Y == 0).ToArray() ?? [(0, 0, 0)];
+                    var units = conversion.GetProperty(block, x => x.Units)?.ToArray() ?? [(0, 0, 0)];
 
-                    Span<Int3> alignedUnits = stackalloc Int3[units.Length];
+                    var alignedUnits = new Int3[units.Length];
 
                     var min = new Int3(int.MaxValue, 0, int.MaxValue);
 
@@ -266,7 +266,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                         alignedUnits[i] = alignedUnit;
                     }
 
-                    foreach (var unit in alignedUnits)
+                    foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
                         var alignedPos = block.Coord + unit - min + CenterOffset - (0, 1, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));

@@ -36,3 +36,8 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirt
       Variant: 3
+  StadiumSculptBridgeSuspendSlope2:
+    UseBaseTerrainModifier: true
+  StadiumSculptBridgeSuspendSlope2Mirror:
+    UseBaseTerrainModifier: true
+      
