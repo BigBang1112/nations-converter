@@ -121,11 +121,13 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 
         var direction = overrideDirection ?? block.Direction;
+        var offset = new Int3(0, overrideConversion?.OffsetY ?? 0, 0);
 
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
         {
-            mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
+            var additionalBlock = mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8 + blockModel.OffsetY, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
+            additionalBlock.Bit21 = block.Bit21;
         }
 
         var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
@@ -135,8 +137,6 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 overrideName: conversionModel.Name,
                 overrideConversion: conversionModel);
         }
-
-        Int3 offset = (0, overrideConversion?.OffsetY ?? 0, 0);
 
         var pos = block.Coord + CenterOffset + direction switch
         {
@@ -157,10 +157,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
         if (itemModel is not null)
         {
-            if (!string.IsNullOrWhiteSpace(itemModel.Name))
-            {
-                customContentManager.PlaceItem(itemModel.Name, pos * BlockSize + new Vec3(0, itemModel.OffsetY, 0), (rotRadians, 0, 0));
-            }
+            PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize);
         }
 
         var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
@@ -168,10 +165,16 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         {
             foreach (var item in itemModels)
             {
-                if (!string.IsNullOrWhiteSpace(item.Name))
-                {
-                    customContentManager.PlaceItem(item.Name, pos * BlockSize + new Vec3(0, item.OffsetY, 0), (rotRadians, 0, 0));
-                }
+                PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize);
+            }
+        }
+
+        var conversionVariants = conversion.GetPropertyDefault(block, x => x.ConversionVariants);
+        if (conversionVariants?.TryGetValue(variant, out var variantModel) == true && variantModel is not null)
+        {
+            if (variantModel.Item is not null)
+            {
+                PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize);
             }
         }
 
@@ -237,7 +240,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                     }
                     else
                     {
-                        zoneBlockName = reverseBlockTerrainModifiers[modifier];
+                        zoneBlockName = reverseBlockTerrainModifiers.GetValueOrDefault(modifier, ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set"));
                         zoneConversion = ConversionSet.Blocks[zoneBlockName];
                     }
 
@@ -292,6 +295,30 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
             }
         }
+    }
+
+    private void PlaceItemFromItemModel(ManualConversionItemModel itemModel, int variant, Int3 coord, Direction direction, Int3 blockCoordSize)
+    {
+        if (string.IsNullOrWhiteSpace(itemModel.Name))
+        {
+            return;
+        }
+
+        var dir = (((int)direction + itemModel.Dir) % 4);
+
+        var pos = coord + CenterOffset + dir switch
+        {
+            0 => (0, 0, 0),
+            1 => (blockCoordSize.Z, 0, 0),
+            2 => (blockCoordSize.X, 0, blockCoordSize.Z),
+            3 => (0, 0, blockCoordSize.X),
+            _ => throw new ArgumentException("Invalid block direction")
+        };
+
+        var rotRadians = -dir * MathF.PI / 2;
+
+        var name = itemModel.Name.Replace("{Variant}", variant.ToString());
+        customContentManager.PlaceItem(name, pos * BlockSize + new Vec3(0, itemModel.OffsetY, 0), (rotRadians, 0, 0));
     }
 
     private bool TryPlaceClips(CGameCtnBlock block, ManualConversionModel conversion)

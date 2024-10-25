@@ -62,4 +62,44 @@ Blocks:
       Name: StadiumRoadDirt
       Variant: 3
       NoItem: true
-    
+  StadiumTubePillar:
+    PlaceDefaultZone: true
+  StadiumTubeV1:
+    PlaceDefaultZone: true
+  StadiumTubeV4:
+    PlaceDefaultZone: true
+  StadiumSculptA:
+    PlaceDefaultZone: true
+  StadiumSculptB:
+    PlaceDefaultZone: true
+  StadiumSculptC:
+    PlaceDefaultZone: true
+  StadiumPlatformRoad:
+    Item:
+      Name: Platform/Road/StadiumPlatformRoad/Plate.Item.Gbx
+  StadiumPlatformToRoadMain:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformRoad
+    Block:
+      Name: TrackWallToRoadTech
+      OffsetY: 1
+  StadiumPlatformCheckpoint:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformRoad
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 8
+  StadiumCheckpointRingV:
+    NoItem: true # has gap underneath, can be fixed
+    Block:
+      Name: GateCheckpoint
+  StadiumControlRoadGlass:
+    Item:
+      Name: Decors/Control/StadiumControlRoadGlass/Base_{Variant}.Item.Gbx
+    ConversionVariants:
+      3:
+        Item:
+          Name: Decors/Control/StadiumControlRoadGlass/Air_3_0.Item.Gbx
+          Dir: 2

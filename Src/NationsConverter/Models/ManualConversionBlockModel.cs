@@ -8,4 +8,5 @@ public sealed class ManualConversionBlockModel
     public bool IsGround { get; set; }
     public int OffsetY { get; set; }
     public bool NoItem { get; set; }
+    public bool Bit21 { get; set; }
 }
