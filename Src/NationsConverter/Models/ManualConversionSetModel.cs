@@ -46,12 +46,13 @@ public sealed class ManualConversionSetModel
 
         foreach (var (block, conversion) in conversionSet.Blocks)
         {
-            if (!Blocks.TryGetValue(block, out var manualConversion))
+            if (!Blocks.TryGetValue(block, out var manualConversion) || manualConversion is null)
             {
                 manualConversion = new ManualConversionModel();
                 Blocks.Add(block, manualConversion);
             }
 
+            manualConversion ??= new ManualConversionModel();
             manualConversion.PageName ??= conversion.PageName;
 
             if (conversion.Ground is not null)
@@ -110,12 +111,10 @@ public sealed class ManualConversionSetModel
                 continue;
             }
 
-            if (!Blocks.TryGetValue(block.Name, out var conversion))
+            if (Blocks.TryGetValue(block.Name, out var conversion) && conversion is not null)
             {
-                continue;
+                yield return KeyValuePair.Create(block, conversion);
             }
-
-            yield return KeyValuePair.Create(block, conversion);
         }
     }
 }

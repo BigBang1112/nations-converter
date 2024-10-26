@@ -2,16 +2,6 @@ BlockTerrainModifiers:
   StadiumDirt: Dirt
 WaterHeight: 1
 Blocks:
-  StadiumRoadMainStartLine:
-    NoItem: true
-    PlaceDefaultZone: true
-    Block:
-      Name: RoadTechStart
-  StadiumRoadMainFinishLine:
-    NoItem: true
-    PlaceDefaultZone: true
-    Block:
-      Name: RoadTechFinish
   StadiumInflatableSnowTree:
     PlaceDefaultZone: true
   StadiumDirtBorder:
@@ -44,6 +34,10 @@ Blocks:
     PlaceDefaultZone: true
   StadiumSculptBridgeSuspendSlope2Mirror:
     PlaceDefaultZone: true
+  StadiumSculptBridgeSuspendSlopeEnd:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSuspendSlopeEndMirror:
+    PlaceDefaultZone: true
   StadiumRoadDirtToRoadGrass:
     Items:
     - Name: RoadDirt/RoadLow/StadiumRoadDirt/Ground_3_0.Item.Gbx
@@ -62,7 +56,11 @@ Blocks:
       Name: StadiumRoadDirt
       Variant: 3
       NoItem: true
+  StadiumTube:
+    PlaceDefaultZone: true
   StadiumTubePillar:
+    PlaceDefaultZone: true
+  StadiumTubePillarCap:
     PlaceDefaultZone: true
   StadiumTubeV1:
     PlaceDefaultZone: true
@@ -96,6 +94,7 @@ Blocks:
     Block:
       Name: GateCheckpoint
   StadiumControlRoadGlass:
+    PlaceDefaultZone: true
     Item:
       Name: Decors/Control/StadiumControlRoadGlass/Base_{Variant}.Item.Gbx
     ConversionVariants:
@@ -103,3 +102,439 @@ Blocks:
         Item:
           Name: Decors/Control/StadiumControlRoadGlass/Air_3_0.Item.Gbx
           Dir: 2
+  StadiumControlRoadCamera:
+    PlaceDefaultZone: true
+    Item:
+      Name: Decors/Control/StadiumControlRoadCamera/Base_{Variant}.Item.Gbx
+  StadiumRoadMain:
+    PlaceDefaultZone: true
+    ConversionVariants:
+      2:
+        NoItem: true
+        Block:
+          Name: RoadTechCurve1
+      3:
+        NoItem: true
+        Block:
+          Name: RoadTechStraight
+      4:
+        NoItem: true
+        Block:
+          Name: RoadTechBranchTShaped
+      5:
+        NoItem: true
+        Block:
+          Name: RoadTechBranchCross
+  StadiumRoadMainStartLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStart
+  StadiumRoadMainFinishLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechFinish
+  StadiumRoadMainStartFinishLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechMultilap
+  StadiumRoadMainCheckpoint: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpoint
+  StadiumRoadMainGTCurve2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve2
+  StadiumRoadMainGTCurve3:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve3
+  StadiumRoadMainGTCurve4:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve4
+  StadiumRoadMainGTCurve5:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve5
+  StadiumRoadMainTurbo:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurbo
+  StadiumRoadMainTurboRoulette:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurbo
+  StadiumRoadMainBumper: ~
+  StadiumRoadMainBumper2: ~
+  StadiumRoadMainFW:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngine
+  StadiumRoadMainForceAcceleration: ~
+  StadiumRoadMainNoGrip: ~
+  StadiumRoadMainNoSteering:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoSteering
+  StadiumRoadMainGTDiag2x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2Left
+  StadiumRoadMainGTDiag2x2Mirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2Right
+  StadiumRoadMainGTDiag3x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3Left
+  StadiumRoadMainGTDiag3x2Mirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3Right
+  StadiumRoadMainYShapedDiag2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3
+  StadiumRoadMainSlopeBase2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase2
+  StadiumRoadMainSlopeBase:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase
+  StadiumRoadMainSlopeBase1x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase2x1
+  StadiumRoadMainSlopeStraight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumRoadMainBiSlopeStart:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStart2x1
+  StadiumRoadMainBiSlopeEnd:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeEnd2x1
+  StadiumRoadMainSlopeUTop:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUTop
+  StadiumRoadMainSlopeUBottom:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUBottom
+  StadiumRoadMainSlopeUBottomInGround:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUBottomInGround
+  StadiumRoadMainCheckpointUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointSlopeUp
+  StadiumRoadMainCheckpointDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointSlopeDown
+  StadiumRoadMainTurboUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeUp
+  StadiumRoadMainTurboDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeDown
+  StadiumRoadMainTurboRouletteDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeUp
+  StadiumRoadMainTurboRouletteUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeDown
+  StadiumRoadMainFWSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngineSlope
+  StadiumRoadMainGTDiag2x2Slope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2SlopeLeft
+  StadiumRoadMainGTDiag2x2SlopeMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2SlopeRight
+  StadiumRoadMainGTDiag3x2Slope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3SlopeLeft
+  StadiumRoadMainGTDiag3x2SlopeMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3SlopeRight
+  StadiumRoadMainYShapedDiag2SlopeUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3SlopeUp
+  StadiumRoadMainYShapedDiag2SlopeDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3SlopeDown
+  StadiumRoadTiltStraight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltStraight
+      Dir: 2
+  StadiumRoadTiltTransition1Left: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition1DownLeft
+      Dir: 2
+  StadiumRoadTiltTransition1Right: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition1DownRight
+      Dir: 2
+  StadiumRoadTiltTransition2Left:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownLeft
+      Dir: 2
+  StadiumRoadTiltTransition2Right:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownRight
+      Dir: 2
+  StadiumRoadTiltTransition2CurveLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownLeftCurveIn
+      Dir: 2
+  StadiumRoadTiltTransition2CurveRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownRightCurveIn
+      Dir: 2
+  StadiumRoadMainCheckpointLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointTiltRight
+  StadiumRoadMainCheckpointRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointTiltLeft
+  StadiumRoadMainTurboLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltRight
+  StadiumRoadMainTurboRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltLeft
+  StadiumRoadMainTurboRouletteLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltRight
+  StadiumRoadMainTurboRouletteRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltLeft
+  StadiumRoadMainFWTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngineTilt
+      Dir: 2
+  StadiumRoadTiltCorner: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1
+  StadiumRoadTiltGTCurve2: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2
+  StadiumRoadTiltGTCurve3: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve3
+  StadiumRoadTiltGTCurve4:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve4
+  StadiumRoadMainGTDiag2x2Tilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2TiltLeft
+      Dir: 2
+  StadiumRoadMainGTDiag2x2TiltMirror: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2TiltRight
+  StadiumRoadMainGTDiag3x2Tilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3TiltLeft
+      Dir: 2
+  StadiumRoadMainGTDiag3x2TiltMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3TiltRight
+  StadiumRoadTiltCornerDownLeft: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1DownLeft
+  StadiumRoadTiltCornerDownRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1DownRight
+      Dir: 1
+  StadiumRoadTiltCornerUpLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1UpLeft
+      Dir: 3
+  StadiumRoadTiltCornerUpRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1UpRight
+      Dir: 2
+  StadiumRoadTiltGTCurve2DownLeft: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2DownLeft
+  StadiumRoadTiltGTCurve2DownRight: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2DownRight
+      Dir: 1
+  StadiumRoadTiltGTCurve2UpLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2UpLeft
+      Dir: 3
+  StadiumRoadTiltGTCurve2UpRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2UpRight
+      Dir: 2
+  StadiumPlatformLoopStart:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopStart
+      Dir: 2
+  StadiumPlatformLoopEnd:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopEnd
+      Dir: 2
+  StadiumPlatformLoopStartCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopStartCurve1In
+  StadiumPlatformLoopEndCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopEndCurve1In
+  StadiumRamp:
+    PlaceDefaultZone: true
+    Item:
+      Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumRampLow:
+    PlaceDefaultZone: true
+    Item:
+      Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumInflatablePillar:
+    PlaceDefaultZone: true
+  StadiumHole:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechHole
+  StadiumHoleSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeHole
+  StadiumHoleTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltHole
+    

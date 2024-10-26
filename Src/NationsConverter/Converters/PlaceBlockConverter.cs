@@ -126,8 +126,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
         {
-            var additionalBlock = mapOut.PlaceBlock(blockModel.Name, block.Coord + CenterOffset + (0, 8 + blockModel.OffsetY, 0), direction, blockModel.IsGround, (byte)blockModel.Variant);
-            additionalBlock.Bit21 = block.Bit21;
+            PlaceBlockFromItemModel(block, direction, blockModel);
         }
 
         var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
@@ -157,7 +156,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
         if (itemModel is not null)
         {
-            PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize);
+            PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize, block.IsGround);
         }
 
         var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
@@ -165,20 +164,26 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         {
             foreach (var item in itemModels)
             {
-                PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize);
+                PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
             }
         }
 
         var conversionVariants = conversion.GetPropertyDefault(block, x => x.ConversionVariants);
-        if (conversionVariants?.TryGetValue(variant, out var variantModel) == true && variantModel is not null)
+        var variantModel = conversionVariants?.GetValueOrDefault(variant);
+        if (variantModel is not null)
         {
             if (variantModel.Item is not null)
             {
-                PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize);
+                PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+            }
+
+            if (variantModel.Block is not null)
+            {
+                PlaceBlockFromItemModel(block, direction, variantModel.Block);
             }
         }
 
-        var noItem = overrideConversion?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
+        var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
@@ -230,19 +235,11 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 // otherwise just place item
                 if (placeDefaultZone)
                 {
-                    string zoneBlockName;
-                    ManualConversionModel zoneConversion;
-
-                    if (modifier is null)
-                    {
-                        zoneBlockName = ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set");
-                        zoneConversion = ConversionSet.Blocks[zoneBlockName];
-                    }
-                    else
-                    {
-                        zoneBlockName = reverseBlockTerrainModifiers.GetValueOrDefault(modifier, ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set"));
-                        zoneConversion = ConversionSet.Blocks[zoneBlockName];
-                    }
+                    var zoneBlockName = modifier is null
+                        ? ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set")
+                        : reverseBlockTerrainModifiers.GetValueOrDefault(modifier, ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set"));
+                    
+                    var zoneConversion = ConversionSet.Blocks[zoneBlockName] ?? throw new InvalidOperationException("Zone block is null in conversion set");
 
                     var zoneDirPath = string.IsNullOrWhiteSpace(zoneConversion.PageName)
                         ? blockName
@@ -297,7 +294,23 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         }
     }
 
-    private void PlaceItemFromItemModel(ManualConversionItemModel itemModel, int variant, Int3 coord, Direction direction, Int3 blockCoordSize)
+    private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel)
+    {
+        if (string.IsNullOrWhiteSpace(blockModel.Name))
+        {
+            return;
+        }
+
+        var additionalBlock = mapOut.PlaceBlock(
+            blockModel.Name, 
+            block.Coord + CenterOffset + (0, 8 + blockModel.OffsetY, 0), 
+            (Direction)(((int)direction + blockModel.Dir) % 4),
+            blockModel.IsGround, 
+            (byte)blockModel.Variant);
+        additionalBlock.Bit21 = blockModel.Bit21;
+    }
+
+    private void PlaceItemFromItemModel(ManualConversionItemModel itemModel, int variant, Int3 coord, Direction direction, Int3 blockCoordSize, bool isGround)
     {
         if (string.IsNullOrWhiteSpace(itemModel.Name))
         {
@@ -317,7 +330,9 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var rotRadians = -dir * MathF.PI / 2;
 
-        var name = itemModel.Name.Replace("{Variant}", variant.ToString());
+        var name = itemModel.Name
+            .Replace("{Variant}", variant.ToString())
+            .Replace("{Modifier}", isGround ? "Ground" : "Air");
         customContentManager.PlaceItem(name, pos * BlockSize + new Vec3(0, itemModel.OffsetY, 0), (rotRadians, 0, 0));
     }
 
@@ -374,6 +389,12 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                 continue;
             }
 
+            if (clipConversion is null)
+            {
+                logger.LogWarning("Clip {ClipName} is null in conversion set.", clip.Name);
+                continue;
+            }
+
             var dir = (Direction)(((int)block.Direction + (int)clip.Dir + 2) % 4);
 
             if (!clipDirs.TryGetValue(clipBlock, out var dirs))
@@ -413,7 +434,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
                 // TODO condition Fabric in Stadium here
 
-                PlaceItem(block, ConversionSet.Blocks[block.Name], overrideDirection: dir);
+                PlaceItem(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
             }
         }
 
