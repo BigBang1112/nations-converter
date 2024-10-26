@@ -7,203 +7,205 @@
 
 <PageTitle>@BlockName - Dashboard - Nations Converter 2</PageTitle>
 
-<h2>@BlockName</h2>
+<div class="page-container">
+    <h2>@BlockName</h2>
 
-@if (block is not null)
-{
-    if (block.IconWebp is not null)
+    @if (block is not null)
     {
-        <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
-    }
-
-    <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
-
-    <p>@(block.Description ?? "No description.")</p>
-
-    @if (block.Items.Any(x => x.JustResave))
-    {
-        <p>This block contains "just resave" items. It means the item only needs a lightmap fix. How to resave:</p>
-        <ol style="margin-top: 0;">
-            <li><b>Create or load a map with Day mood.</b></li>
-            <li>Place these items on the map (the more you place at once the faster it is to complete).</li>
-            <li>In "Item edition", use "Edit selected item" on the item.</li>
-            <li><b>Click on the wrench at "Mesh" (do not skip).</b></li>
-            <li><b>Save the item, overwrite (do not skip, as this will generate the lightmap!).</b></li>
-            <li>Leave the mesh modeller.</li>
-            <li>Remove and generate the icon (pick the most visible direction).</li>
-            <li>Save the item again, overwrite.</li>
-            <li>Submit this item back.</li>
-        </ol>
-    }
-
-    @if (block.AssignedTo is null)
-    {
-        <button class="button button-big" @onclick="AssignAsync">Assign this block</button>
-    }
-    else if (block.AssignedTo.Id == user?.Id)
-    {
-        <button class="button button-big" @onclick="UnassignAsync">Unassign this block</button>
-    }
-    else
-    {
-        <p>Assigned to @(block.AssignedTo.DiscordUser?.GlobalName ?? block.AssignedTo.DiscordUser?.Username)</p>
-    }
-
-    @if (user?.IsAdmin == true)
-    {
-        <label>
-            <input type="checkbox" checked="@block.IsDone" @onchange="e => DoneChanged(block, e)" />
-            Done
-        </label>
-    }
-
-    <h3 style="margin-top: 20px">Items</h3>
-    <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
-
-    <div class="items">
-        <button class="button button-download" @onclick="DownloadAllInitAsync">Download all init items</button>
-
-        @foreach (var item in block.Items.OrderBy(x => x.Variant).ThenBy(x => x.SubVariant))
+        if (block.IconWebp is not null)
         {
-            <div class="item">
-                <div class="item-info">
-                    <a class="button button-download" href="/data/items/NC2/@block.CategoryId/@block.SubCategoryId/MM_Collision/@block.EnvironmentId/@block.PageName/@block.Name/@item.FileName" download="@item.FileName" title="Download the init item">Download</a>
-                    <button @onclick="() => DownloadAsObjAsync(item)" class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
+            <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
+        }
 
-                    <span>@item.FileName</span>
+        <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
 
-                    @if (user?.IsAdmin == true)
-                    {
-                        <label>
-                            <input type="checkbox" checked="@item.JustResave" @onchange="e => JustResaveChanged(item, e)" />
-                            Just resave
-                        </label>
-                    }
-                    else if (item.JustResave)
-                    {
-                        <span class="yellow">(just resave!)</span>
-                    }
+        <p>@(block.Description ?? "No description.")</p>
 
-                    @if (user?.IsAdmin == true)
-                    {
-                        <input value="@item.Value" @onchange="e => ItemValueChanged(item, e)" style="width: 30px;" />
-                    }
-                    else if (item.Value > 0)
-                    {
-                        <span title="Item value. This is used for payouts.">@item.Value</span>
-                    }
-                    else
-                    {
-                        <span title="Item value coming soon. This is used for payouts.">(value soon)</span>
-                    }
+        @if (block.Items.Any(x => x.JustResave))
+        {
+            <p>This block contains "just resave" items. It means the item only needs a lightmap fix. How to resave:</p>
+            <ol style="margin-top: 0;">
+                <li><b>Create or load a map with Day mood.</b></li>
+                <li>Place these items on the map (the more you place at once the faster it is to complete).</li>
+                <li>In "Item edition", use "Edit selected item" on the item.</li>
+                <li><b>Click on the wrench at "Mesh" (do not skip).</b></li>
+                <li><b>Save the item, overwrite (do not skip, as this will generate the lightmap!).</b></li>
+                <li>Leave the mesh modeller.</li>
+                <li>Remove and generate the icon (pick the most visible direction).</li>
+                <li>Save the item again, overwrite.</li>
+                <li>Submit this item back.</li>
+            </ol>
+        }
 
-                    @if (IsAssignedUser())
-                    {
-                        <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
-                            title="Upload your improved item here, any file name is accepted."></InputFile>
-                    }
-                </div>
+        @if (block.AssignedTo is null)
+        {
+            <button class="button button-big" @onclick="AssignAsync">Assign this block</button>
+        }
+        else if (block.AssignedTo.Id == user?.Id)
+        {
+            <button class="button button-big" @onclick="UnassignAsync">Unassign this block</button>
+        }
+        else
+        {
+            <p>Assigned to @(block.AssignedTo.DiscordUser?.GlobalName ?? block.AssignedTo.DiscordUser?.Username)</p>
+        }
 
-                @if (item.Uploads.Any())
-                {
-                    <hr />
-                }
+        @if (user?.IsAdmin == true)
+        {
+            <label>
+                <input type="checkbox" checked="@block.IsDone" @onchange="e => DoneChanged(block, e)" />
+                Done
+            </label>
+        }
 
-                @{
-                    var totalValue = item.Uploads
-                        .Where(x => x.UploadedBy is not null && !x.UploadedBy.IsAdmin)
-                        .Select(x => x.Value == 0 ? 1 : x.Value)
-                        .Sum();
-                }
+        <h3 style="margin-top: 20px">Items</h3>
+        <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
 
-                @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
-                {
-                    <div class="upload">
-                        <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
+        <div class="items">
+            <button class="button button-download" @onclick="DownloadAllInitAsync">Download all init items</button>
 
-                        @if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
+            @foreach (var item in block.Items.OrderBy(x => x.Variant).ThenBy(x => x.SubVariant))
+            {
+                <div class="item">
+                    <div class="item-info">
+                        <a class="button button-download" href="/data/items/NC2/@block.CategoryId/@block.SubCategoryId/MM_Collision/@block.EnvironmentId/@block.PageName/@block.Name/@item.FileName" download="@item.FileName" title="Download the init item">Download</a>
+                        <button @onclick="() => DownloadAsObjAsync(item)" class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
+
+                        <span>@item.FileName</span>
+
+                        @if (user?.IsAdmin == true)
                         {
-                            <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">
-                                @if (user?.IsAdmin == true)
-                                {
-                                    <input value="@(upload.Value == 0 ? 1 : upload.Value)" @onchange="e => UploadValueChanged(upload, e)" style="width: 20px;" />
-                                }
-                                else
-                                {
-                                    <span>@(upload.Value == 0 ? 1 : upload.Value)</span>
-                                }
-
-                                @if (totalValue > 0)
-                                {
-                                    <span>(@GetUploadValue(upload, totalValue))</span>
-                                }
-                            </span>
+                            <label>
+                                <input type="checkbox" checked="@item.JustResave" @onchange="e => JustResaveChanged(item, e)" />
+                                Just resave
+                            </label>
+                        }
+                        else if (item.JustResave)
+                        {
+                            <span class="yellow">(just resave!)</span>
                         }
 
-                        <span class="upload-date">@upload.UploadedAt.DateTime</span>
-
-                        @if (upload.UploadedBy is not null)
+                        @if (user?.IsAdmin == true)
                         {
-                            @if (upload.UploadedBy.DiscordUser?.AvatarHash is null)
-                            {
-                                <img src="img/discord-no-pfp.webp" width="24" height="24" />
-                            }
-                            else
-                            {
-                                <img src="https://cdn.discordapp.com/avatars/@upload.UploadedBy.DiscordUser.Id/@upload.UploadedBy.DiscordUser.AvatarHash" width="24" height="24" />
-                            }
+                            <input value="@item.Value" @onchange="e => ItemValueChanged(item, e)" style="width: 30px;" />
+                        }
+                        else if (item.Value > 0)
+                        {
+                            <span title="Item value. This is used for payouts.">@item.Value</span>
+                        }
+                        else
+                        {
+                            <span title="Item value coming soon. This is used for payouts.">(value soon)</span>
                         }
 
                         @if (IsAssignedUser())
                         {
-                            <button class="button button-delete">Delete</button>
+                            <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
+                                title="Upload your improved item here, any file name is accepted."></InputFile>
                         }
                     </div>
-                }
-            </div>
-        }
-    </div>
 
-    <p>Page name: @(block.PageName ?? "Unknown page name")</p>
-
-    @if (items.Count == 0)
-    {
-        <button class="button button-big" style="margin: 10px" @onclick="LoadItemMeshInfo">Load item mesh info</button>
-    }
-    else
-    {
-        foreach (var itemGbx in items)
-        {
-            <h4>@Path.GetFileName(itemGbx.FilePath)</h4>
-
-            @if (itemGbx.Node.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
-            {
-                return;
-            }
-
-            var crystal = entityModelEdition.MeshCrystal;
-
-            <ul>
-                @foreach (var mat in crystal.Materials)
-                {
-                    if (mat.MaterialUserInst is null)
+                    @if (item.Uploads.Any())
                     {
-                        continue;
+                        <hr />
                     }
 
-                    <li>
-                        @mat.MaterialUserInst.Link
-                    
-                        @if (mat.MaterialUserInst.Color?.Length > 0)
-                        {
-                            <span> (color: @string.Join(',', mat.MaterialUserInst.Color))</span>
-                        }
-                    </li>
+                    @{
+                        var totalValue = item.Uploads
+                            .Where(x => x.UploadedBy is not null && !x.UploadedBy.IsAdmin)
+                            .Select(x => x.Value == 0 ? 1 : x.Value)
+                            .Sum();
+                    }
+
+                    @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
+                    {
+                        <div class="upload">
+                            <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
+
+                            @if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
+                            {
+                                <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">
+                                    @if (user?.IsAdmin == true)
+                                    {
+                                        <input value="@(upload.Value == 0 ? 1 : upload.Value)" @onchange="e => UploadValueChanged(upload, e)" style="width: 20px;" />
+                                    }
+                                    else
+                                    {
+                                        <span>@(upload.Value == 0 ? 1 : upload.Value)</span>
+                                    }
+
+                                    @if (totalValue > 0)
+                                    {
+                                        <span>(@GetUploadValue(upload, totalValue))</span>
+                                    }
+                                </span>
+                            }
+
+                            <span class="upload-date">@upload.UploadedAt.DateTime</span>
+
+                            @if (upload.UploadedBy is not null)
+                            {
+                                @if (upload.UploadedBy.DiscordUser?.AvatarHash is null)
+                                {
+                                    <img src="img/discord-no-pfp.webp" width="24" height="24" />
+                                }
+                                else
+                                {
+                                    <img src="https://cdn.discordapp.com/avatars/@upload.UploadedBy.DiscordUser.Id/@upload.UploadedBy.DiscordUser.AvatarHash" width="24" height="24" />
+                                }
+                            }
+
+                            @if (IsAssignedUser())
+                            {
+                                <button class="button button-delete">Delete</button>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <p>Page name: @(block.PageName ?? "Unknown page name")</p>
+
+        @if (items.Count == 0)
+        {
+            <button class="button button-big" style="margin: 10px" @onclick="LoadItemMeshInfo">Load item mesh info</button>
+        }
+        else
+        {
+            foreach (var itemGbx in items)
+            {
+                <h4>@Path.GetFileName(itemGbx.FilePath)</h4>
+
+                @if (itemGbx.Node.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
+                {
+                    return;
                 }
-            </ul>
+
+                var crystal = entityModelEdition.MeshCrystal;
+
+                <ul>
+                    @foreach (var mat in crystal.Materials)
+                    {
+                        if (mat.MaterialUserInst is null)
+                        {
+                            continue;
+                        }
+
+                        <li>
+                            @mat.MaterialUserInst.Link
+                    
+                            @if (mat.MaterialUserInst.Color?.Length > 0)
+                            {
+                                <span> (color: @string.Join(',', mat.MaterialUserInst.Color))</span>
+                            }
+                        </li>
+                    }
+                </ul>
+            }
         }
     }
-}
+</div>
 
 @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }

@@ -6,58 +6,60 @@
 
 <PageTitle>Add - Dashboard - Nations Converter 2</PageTitle>
 
-<h2>Add block or other item...</h2>
+<div class="page-container">
+    <h2>Add block or other item...</h2>
 
-@if (BlockName is null)
-{
-    <div class="categories">
-        <button>Modless</button>
-        <button disabled>Balanced</button>
-        <button disabled>Mod</button>
-    </div>
-
-    <div class="environments">
-        @foreach (var env in environments)
-        {
-            <a href="/dashboard/add/@SubCategory/@env">@env</a>
-        }
-    </div>
-
-    @if (ConversionSet is null)
+    @if (BlockName is null)
     {
-        <p>Select an environment.</p>
-    }
-    else
-    {
-        <div class="container">
-            @foreach (var (name, conv) in ConversionSet.Blocks.OrderBy(x => x.Key))
+        <div class="categories">
+            <button>Modless</button>
+            <button disabled>Balanced</button>
+            <button disabled>Mod</button>
+        </div>
+
+        <div class="environments">
+            @foreach (var env in environments)
             {
-                <a href="/dashboard/add/@SubCategory/@Environment/@name">
-                    <CollectorIcon WebpData="@GetBlockIconWebpData(name, conv)"></CollectorIcon>
-                    @name
-                </a>
+                <a href="/dashboard/add/@SubCategory/@env">@env</a>
             }
         </div>
+
+        @if (ConversionSet is null)
+        {
+            <p>Select an environment.</p>
+        }
+        else
+        {
+            <div class="container">
+                @foreach (var (name, conv) in ConversionSet.Blocks.OrderBy(x => x.Key))
+                {
+                    <a href="/dashboard/add/@SubCategory/@Environment/@name">
+                        <CollectorIcon WebpData="@GetBlockIconWebpData(name, conv)"></CollectorIcon>
+                        @name
+                    </a>
+                }
+            </div>
+        }
     }
-}
-else if (ConversionSet is not null && SubCategory is not null && Environment is not null)
-{
-    var conversion = ConversionSet.Blocks[BlockName];
-
-    <CollectorIcon WebpData="@GetBlockIconWebpData(BlockName, conversion)" Size="64"></CollectorIcon>
-    <h3>@BlockName</h3>
-    <h4>Items</h4>
-
-    @foreach (var filePath in Directory.GetFiles(Path.Combine(dataBasePath, "items", "NC2", Category, SubCategory, "MM_Collision", Environment, conversion.PageName, BlockName)))
+    else if (ConversionSet is not null && SubCategory is not null && Environment is not null)
     {
-        <div class="block-item">
-            <CollectorIcon WebpData="@GetBlockIconWebpData(filePath)"></CollectorIcon>
-            @Path.GetFileName(filePath)
-        </div>
-    }
+        var conversion = ConversionSet.Blocks[BlockName];
 
-    <button @onclick="() => ReadyAsync()" disabled="@blockReady">Ready</button>
-}
+        <CollectorIcon WebpData="@GetBlockIconWebpData(BlockName, conversion)" Size="64"></CollectorIcon>
+        <h3>@BlockName</h3>
+        <h4>Items</h4>
+
+        @foreach (var filePath in Directory.GetFiles(Path.Combine(dataBasePath, "items", "NC2", Category, SubCategory, "MM_Collision", Environment, conversion.PageName, BlockName)))
+        {
+            <div class="block-item">
+                <CollectorIcon WebpData="@GetBlockIconWebpData(filePath)"></CollectorIcon>
+                @Path.GetFileName(filePath)
+            </div>
+        }
+
+        <button @onclick="() => ReadyAsync()" disabled="@blockReady">Ready</button>
+    }
+</div>
 
 @code {
     private ConversionSetModel? ConversionSet { get; set; }

@@ -1,0 +1,19 @@
+﻿<nav>
+    <div>
+        <span class="gbx-tools">gbx.tools</span>
+        <a href="/">Home</a>
+        @if (Released)
+        {
+            <a href="/about">About</a>
+        }
+    </div>
+    <div>
+        <a href="https://github.com/BigBang1112/nations-converter">GitHub</a>
+        <a href="/login-discord">Sign in with Discord</a>
+    </div>
+</nav>
+
+@code {
+    [Parameter]
+    public bool Released { get; set; }
+}

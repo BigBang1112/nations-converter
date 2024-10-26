@@ -1,5 +1,147 @@
-﻿#logo {
-    max-width: 90%;
+﻿.button-shiny {
+    background-color: #66CCFF;
+    box-shadow: 0 0 30px #66CCFF55;
+    text-decoration: none;
+    color: #222;
+}
+
+    .button-shiny:hover {
+        background-color: #77DDFF;
+    }
+
+.web-browser-button {
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+}
+
+.readable-width {
+    padding: 20px;
+}
+
+    .readable-width div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+.white-mention {
+    background-color: white;
+    color: #222;
+}
+
+.download-latest {
+    padding: 20px;
+    font-size: 120%;
+}
+
+    .download-latest div {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+.latest-version {
+    text-align: center;
+    font-size: 150%;
+}
+
+.download-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.download-button-set {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.download-button-set a {
+    padding: 5px 10px;
+}
+
+.download-button-set a:first-child {
+    font-weight: bold;
+}
+
+.download-button-set div {
+    font-size: 80%;
+}
+
+.button-download-platform {
+    display: flex;
+    align-items: center;
+    width: 180px;
+    border-radius: 10px;
+}
+
+    .button-download-platform img {
+        padding-right: 5px;
+        border-right: 2px solid #FFF5;
+    }
+
+    .button-download-platform span {
+        flex: 1;
+        text-align: center;
+    }
+
+.edition-row {
+    display: flex;
+    gap: 5px;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.button-download-assets {
+    display: flex;
+    padding: 5px 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+    .button-download-assets span {
+        flex: 1;
+        text-align: center;
+    }
+
+.download-assets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 400px;
+    font-size: 90%;
+    font-weight: bold;
+}
+
+.button-github-large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 25px;
+    border: 3px solid black;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    width: 250px;
+    font-size: 125%;
+    transition: 0.2s;
+}
+
+    .button-github-large:hover {
+        color: #888;
+        background-color: black;
+    }
+
+.open-source div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 #button-discord {

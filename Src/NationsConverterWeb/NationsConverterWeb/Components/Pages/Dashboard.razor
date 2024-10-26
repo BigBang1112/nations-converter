@@ -7,91 +7,75 @@
 
 <PageTitle>Dashboard - Nations Converter 2</PageTitle>
 
-<h2>Welcome back @(globalName)!</h2>
+<div class="page-container">
+    <h2>Welcome back @(globalName)!</h2>
 
-<div class="container">
-    <div class="primary">
-        <div class="categories">
-            <button class="button">Modless</button>
-            <button class="button" disabled>Balanced</button>
-            <button class="button" disabled>Mod</button>
-        </div>
-        <div class="grid">
-            @if (currentDiscordUser?.User.IsAdmin == true)
-            {
-                <a href="dashboard/add" class="new"><img src="img/add.webp" width="32" height="32" /> Add block...</a>
-            }
-
-            @foreach (var block in blocks)
-            {
-                <a href="dashboard/block/@block.Name">
-                    <CollectorIcon WebpData="@block.IconWebp" Size="32"></CollectorIcon>
-
-                    @block.Name
-
-                    @if (block.IsDone)
-                    {
-                        <img class="modeler" src="img/done.webp" width="24" height="24" />
-                    }
-                    else if (block.AssignedTo is not null)
-                    {
-                        @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
-                        {
-                            <img class="modeler" src="img/discord-no-pfp.webp" width="24" height="24" />
-                        }
-                        else
-                        {
-                            <img class="modeler" title="Assigned to @(block.AssignedTo.DiscordUser.GlobalName ?? block.AssignedTo.DiscordUser.Username)"
-                                 src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
-                                 width="24" height="24" />
-                        }
-                    }
-                    else if (block.HasUpload)
-                    {
-                        <img class="modeler" src="img/wip.webp" width="24" height="24" />
-                    }
-                </a>
-            }
-        </div>
-    </div>
-    <div class="members">
-        <div class="additional-links">
-            @if (currentDiscordUser is not null)
-            {
-                <span>Your payout value: @currentDiscordUser.User.PayoutValue</span>
-                <span>Currently paid: @currentDiscordUser.User.CurrentlyPaidValue</span>
-            }
-            <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
-
-            @if (currentDiscordUser?.User.IsAdmin == true)
-            {
-                <button class="button" @onclick="DownloadValueReviewItemsAsync">Download value review items</button>
-                <button class="button" @onclick="UpdatePayoutValuesAsync">Update payout values</button>
-            }
-
-            <a href="/data/NationsConverterCLI.zip" download="NationsConverterCLI.zip">Download converter</a>
-            <a href="/data/items.zip" download="NC2Items_Init.zip">Download all init items</a>
-            <a href="/data/GameData_TMUF_NC2.zip" download="GameData_TMUF_NC2.zip">Download TMUF GameData</a>
-        </div>
-        <h3>Developers & Modelers</h3>
-        @foreach (var discordUser in discordUsers.Where(x => x.User.IsStaff))
-        {
-            <div title="@discordUser.Username">
-                @if (discordUser.AvatarHash is null)
-                {
-                    <img src="img/discord-no-pfp.webp" width="32" height="32" />
-                }
-                else
-                {
-                    <img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" />
-                }
-                <span>@(discordUser.GlobalName ?? discordUser.Username)</span>
+    <div class="container">
+        <div class="primary">
+            <div class="categories">
+                <button class="button">Modless</button>
+                <button class="button" disabled>Balanced</button>
+                <button class="button" disabled>Mod</button>
             </div>
-        }
-        <h3>Supporters</h3>
-        @if (discordUsers.Any(x => !x.User.IsStaff))
-        {
-            @foreach (var discordUser in discordUsers.Where(x => !x.User.IsStaff))
+            <div class="grid">
+                @if (currentDiscordUser?.User.IsAdmin == true)
+                {
+                    <a href="dashboard/add" class="new"><img src="img/add.webp" width="32" height="32" /> Add block...</a>
+                }
+
+                @foreach (var block in blocks)
+                {
+                    <a href="dashboard/block/@block.Name">
+                        <CollectorIcon WebpData="@block.IconWebp" Size="32"></CollectorIcon>
+
+                        @block.Name
+
+                        @if (block.IsDone)
+                        {
+                            <img class="modeler" src="img/done.webp" width="24" height="24" />
+                        }
+                        else if (block.AssignedTo is not null)
+                        {
+                            @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
+                            {
+                                <img class="modeler" src="img/discord-no-pfp.webp" width="24" height="24" />
+                            }
+                            else
+                            {
+                                <img class="modeler" title="Assigned to @(block.AssignedTo.DiscordUser.GlobalName ?? block.AssignedTo.DiscordUser.Username)"
+                                     src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
+                                     width="24" height="24" />
+                            }
+                        }
+                        else if (block.HasUpload)
+                        {
+                            <img class="modeler" src="img/wip.webp" width="24" height="24" />
+                        }
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="members">
+            <div class="additional-links">
+                @if (currentDiscordUser is not null)
+                {
+                    <span>Your payout value: @currentDiscordUser.User.PayoutValue</span>
+                    <span>Currently paid: @currentDiscordUser.User.CurrentlyPaidValue</span>
+                }
+                <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
+
+                @if (currentDiscordUser?.User.IsAdmin == true)
+                {
+                    <button class="button" @onclick="DownloadValueReviewItemsAsync">Download value review items</button>
+                    <button class="button" @onclick="UpdatePayoutValuesAsync">Update payout values</button>
+                }
+
+                <a href="/data/NationsConverterCLI.zip" download="NationsConverterCLI.zip">Download converter</a>
+                <a href="/data/items.zip" download="NC2Items_Init.zip">Download all init items</a>
+                <a href="/data/GameData_TMUF_NC2.zip" download="GameData_TMUF_NC2.zip">Download TMUF GameData</a>
+            </div>
+            <h3>Developers & Modelers</h3>
+            @foreach (var discordUser in discordUsers.Where(x => x.User.IsStaff))
             {
                 <div title="@discordUser.Username">
                     @if (discordUser.AvatarHash is null)
@@ -105,14 +89,32 @@
                     <span>@(discordUser.GlobalName ?? discordUser.Username)</span>
                 </div>
             }
-        }
-        else
-        {
-            <p>Nobody?</p>
-        }
+            <h3>Supporters</h3>
+            @if (discordUsers.Any(x => !x.User.IsStaff))
+            {
+                @foreach (var discordUser in discordUsers.Where(x => !x.User.IsStaff))
+                {
+                    <div title="@discordUser.Username">
+                        @if (discordUser.AvatarHash is null)
+                        {
+                            <img src="img/discord-no-pfp.webp" width="32" height="32" />
+                        }
+                        else
+                        {
+                            <img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" />
+                        }
+                        <span>@(discordUser.GlobalName ?? discordUser.Username)</span>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Nobody?</p>
+            }
+        </div>
     </div>
+    <a class="button" href="/logout" style="position: absolute;top: 22px; right: 0;">Logout</a>
 </div>
-<a class="button" href="/logout" style="position: absolute;top: 22px; right: 0;">Logout</a>
 
 @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
