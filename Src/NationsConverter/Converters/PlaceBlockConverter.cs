@@ -181,6 +181,16 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             {
                 PlaceBlockFromItemModel(block, direction, variantModel.Block);
             }
+
+            if (variantModel.Variant.HasValue)
+            {
+                variant = variantModel.Variant.Value;
+            }
+
+            if (variantModel.SubVariant.HasValue)
+            {
+                subVariant = variantModel.SubVariant.Value;
+            }
         }
 
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);

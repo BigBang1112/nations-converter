@@ -170,7 +170,7 @@ else
     @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
-    private bool released;
+    private bool released = false;
 
     protected override async Task OnInitializedAsync()
     {
