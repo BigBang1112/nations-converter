@@ -75,16 +75,6 @@ internal sealed class TerrainModifierZoneExtract
         Int3[] units, 
         Int3 size)
     {
-        if (units.Length == 1 && units[0].X == 0 && units[0].Z == 0)
-        {
-            var finalUnit = (block.Coord + units[0]) with { Y = 0 };
-            if (!terrainModifierZones.ContainsKey(finalUnit))
-            {
-                terrainModifierZones[finalUnit] = "Fabric";
-            }
-            return;
-        }
-
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 
         for (int i = 0; i < units.Length; i++)

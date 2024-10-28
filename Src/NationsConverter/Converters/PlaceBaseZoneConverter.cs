@@ -125,7 +125,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
                 {
                     if (terrainModifier == "Fabric")
                     {
-                        //customContentManager.PlaceItem(Path.Combine("Misc", "Fabric"));
+                        customContentManager.PlaceItem(Path.Combine("Misc", "Fabric", "Ground.Item.Gbx"), pos * BlockSize, (0, 0, 0));
                         continue;
                     }
                 }
