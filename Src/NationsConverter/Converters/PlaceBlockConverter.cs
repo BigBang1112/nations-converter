@@ -320,7 +320,13 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         additionalBlock.Bit21 = blockModel.Bit21;
     }
 
-    private void PlaceItemFromItemModel(ManualConversionItemModel itemModel, int variant, Int3 coord, Direction direction, Int3 blockCoordSize, bool isGround)
+    private void PlaceItemFromItemModel(
+        ManualConversionItemModel itemModel,
+        int variant,
+        Int3 coord,
+        Direction direction,
+        Int3 blockCoordSize,
+        bool isGround)
     {
         if (string.IsNullOrWhiteSpace(itemModel.Name))
         {
@@ -329,7 +335,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var dir = (((int)direction + itemModel.Dir) % 4);
 
-        var pos = coord + CenterOffset + dir switch
+        var c = coord + CenterOffset + dir switch
         {
             0 => (0, 0, 0),
             1 => (blockCoordSize.Z, 0, 0),
@@ -338,12 +344,24 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             _ => throw new ArgumentException("Invalid block direction")
         };
 
-        var rotRadians = -dir * MathF.PI / 2;
+        var pos = c * BlockSize + new Vec3(0, itemModel.OffsetY, 0);
 
-        var name = itemModel.Name
-            .Replace("{Variant}", variant.ToString())
-            .Replace("{Modifier}", isGround ? "Ground" : "Air");
-        customContentManager.PlaceItem(name, pos * BlockSize + new Vec3(0, itemModel.OffsetY, 0), (rotRadians, 0, 0));
+        var rotRadians = -dir * MathF.PI / 2;
+        var rot = new Vec3(rotRadians, 0, 0);
+
+        var isOfficial = !itemModel.Name.Contains('/') && !itemModel.Name.Contains('\\');
+
+        if (isOfficial)
+        {
+            mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
+        }
+        else
+        {
+            var name = itemModel.Name
+                .Replace("{Variant}", variant.ToString())
+                .Replace("{Modifier}", isGround ? "Ground" : "Air");
+            customContentManager.PlaceItem(name, pos, rot, itemModel.Pivot);
+        }
     }
 
     private bool TryPlaceClips(CGameCtnBlock block, ManualConversionModel conversion)

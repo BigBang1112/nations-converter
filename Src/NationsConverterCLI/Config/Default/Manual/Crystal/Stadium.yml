@@ -537,4 +537,32 @@ Blocks:
     PlaceDefaultZone: true
     Block:
       Name: RoadTechTiltHole
+  StadiumHolePillar:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 2, 16]
+  StadiumHolePillar2Front:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [12, 2, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [20, 2, 16]
+  StadiumPlatformWallBorder:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
+  StadiumPlatformWallPub2:
+    NoItem: true
+    Block:
+      Name: TechnicsScreen2x1Straight
+      Dir: 3
     

@@ -65,7 +65,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
         rootFolderName = config.CopyItems ? NC2 : $"{NC2}_{seed}";
     }
 
-    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot)
+    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(itemModel);
 
@@ -85,7 +85,7 @@ internal sealed class CustomContentManager : EnvironmentConverterBase
             embeddedFilePaths.Add(("Items", itemPath));
         }
 
-        mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot);
+        mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
     }
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)

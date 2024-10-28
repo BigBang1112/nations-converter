@@ -6,6 +6,7 @@ using NationsConverterCLI;
 using NationsConverterShared.Converters.Json;
 using System.Text.Json;
 using YamlDotNet.Serialization;
+using NationsConverter.YmlConverters;
 
 Gbx.CRC32 = new CRC32();
 
@@ -20,6 +21,7 @@ var jsonOptions = new JsonSerializerOptions
 await ToolConsole<NationsConverterTool>.RunAsync(args, new()
 {
     JsonContext = new AppJsonContext(jsonOptions),
-    YmlDeserializer = new DeserializerBuilder(),
+    YmlDeserializer = new DeserializerBuilder()
+        .WithTypeConverter(new YmlVec3Converter()),
     YmlSerializer = new SerializerBuilder()
 });
