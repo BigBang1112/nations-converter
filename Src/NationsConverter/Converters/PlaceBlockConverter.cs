@@ -241,20 +241,28 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
                     modifier = terrainModifierZones.GetValueOrDefault(block.Coord - (0, 1, 0));
                 }
 
-                // if useBaseTerrainModifier, place 1x1 pieces on all ground units at Y 0
+                // if placeDefaultZone, place 1x1 pieces on all ground units at Y 0
                 // otherwise just place item
                 if (placeDefaultZone)
                 {
-                    var zoneBlockName = modifier is null
-                        ? ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set")
-                        : reverseBlockTerrainModifiers.GetValueOrDefault(modifier, ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set"));
-                    
-                    var zoneConversion = ConversionSet.Blocks[zoneBlockName] ?? throw new InvalidOperationException("Zone block is null in conversion set");
+                    string terrainItemPath;
+                    if (modifier == "Fabric")
+                    {
+                        terrainItemPath = Path.Combine("Misc", "Fabric", "Ground.Item.Gbx");
+                    }
+                    else
+                    {
+                        var zoneBlockName = modifier is null
+                            ? ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set")
+                            : reverseBlockTerrainModifiers.GetValueOrDefault(modifier, ConversionSet.DefaultZoneBlock ?? throw new InvalidOperationException("DefaultZoneBlock not set"));
 
-                    var zoneDirPath = string.IsNullOrWhiteSpace(zoneConversion.PageName)
-                        ? blockName
-                        : Path.Combine(zoneConversion.PageName, zoneBlockName);
-                    var terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
+                        var zoneConversion = ConversionSet.Blocks[zoneBlockName] ?? throw new InvalidOperationException("Zone block is null in conversion set");
+
+                        var zoneDirPath = string.IsNullOrWhiteSpace(zoneConversion.PageName)
+                            ? blockName
+                            : Path.Combine(zoneConversion.PageName, zoneBlockName);
+                        terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
+                    }
 
                     var units = conversion.GetProperty(block, x => x.Units)?.ToArray() ?? [(0, 0, 0)];
 
