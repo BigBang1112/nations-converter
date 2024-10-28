@@ -13,5 +13,6 @@ public class ManualConversionModifierModel : ConversionModifierModel
     public ManualConversionItemModel? Item { get; set; }
     public ManualConversionItemModel[]? Items { get; set; }
     public ManualConversionBlockModel? Conversion { get; set; }
+    public ManualConversionBlockModel[]? Conversions { get; set; }
     public Dictionary<int, ManualConversionVariantModel>? ConversionVariants { get; set; }
 }

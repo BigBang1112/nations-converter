@@ -79,14 +79,16 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         ManualConversionModel conversion, 
         string? overrideName = null, 
         Direction? overrideDirection = null, 
-        ManualConversionBlockModel? overrideConversion = null)
+        ManualConversionBlockModel? overrideConversion = null,
+        int? overrideVariant = null,
+        int? overrideSubVariant = null)
     {
         // fallbacks should be less permissive in the future
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
 
-        var variant = overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
-        var subVariant = overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
+        var variant = overrideVariant ?? overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
+        var subVariant = overrideSubVariant ?? overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
 
         if (variant >= maxVariants)
         {
@@ -118,10 +120,8 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             ? blockName
             : Path.Combine(conversion.PageName, blockName);
 
-        var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
-
         var direction = overrideDirection ?? block.Direction;
-        var offset = new Int3(0, overrideConversion?.OffsetY ?? 0, 0);
+        var offset = new Int3(0, overrideConversion?.OffsetY ?? 0, overrideConversion?.OffsetZ ?? 0);
 
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
@@ -129,12 +129,19 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             PlaceBlockFromItemModel(block, direction, blockModel);
         }
 
-        var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
-        if (conversionModel is not null && !string.IsNullOrWhiteSpace(conversionModel.Name))
+        var conversionModels = conversion.GetPropertyDefault(block, x => x.Conversions);
+        if (conversionModels is not null)
         {
-            PlaceItem(block, ConversionSet.Blocks[conversionModel.Name],
-                overrideName: conversionModel.Name,
-                overrideConversion: conversionModel);
+            foreach (var c in conversionModels)
+            {
+                if (c is not null && !string.IsNullOrWhiteSpace(c.Name))
+                {
+                    PlaceItem(block, ConversionSet.Blocks[c.Name],
+                        overrideName: c.Name,
+                        overrideConversion: c,
+                        overrideVariant: overrideConversion?.Variant);
+                }
+            }
         }
 
         var pos = block.Coord + CenterOffset + direction switch
@@ -193,6 +200,18 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             }
         }
 
+        var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
+        if (conversionModel is not null && !string.IsNullOrWhiteSpace(conversionModel.Name))
+        {
+            PlaceItem(block, ConversionSet.Blocks[conversionModel.Name],
+                overrideName: conversionModel.Name,
+                overrideConversion: conversionModel,
+                overrideVariant: variantModel?.Variant ?? overrideConversion?.Variant,
+                overrideSubVariant: variantModel?.SubVariant ?? overrideConversion?.SubVariant);
+        }
+
+        var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
+
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
@@ -207,7 +226,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
             if (!noTerrainModifier)
             {
-                var placeDefaultZone = conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
+                var placeDefaultZone = variantModel?.PlaceDefaultZone ?? conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
 
                 // This will work fine in 99% of cases, BUT
                 // in TMF, when you place fabric on NON-0x0x0 rotated unit,
@@ -324,7 +343,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             block.Coord + CenterOffset + (0, 8 + blockModel.OffsetY, 0), 
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround, 
-            (byte)blockModel.Variant);
+            (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
     }
 

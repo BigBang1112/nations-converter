@@ -4,8 +4,14 @@ WaterHeight: 1
 Blocks:
   StadiumInflatableSnowTree:
     PlaceDefaultZone: true
+  StadiumInflatablePalmTree:
+    PlaceDefaultZone: true
+  StadiumInflatableCactus:
+    PlaceDefaultZone: true
   StadiumDirtBorder:
     NotModifiable: []
+    PlaceDefaultZone: true
+  StadiumInflatableCastle:
     PlaceDefaultZone: true
   StadiumInflatableCastleBig:
     PlaceDefaultZone: true
@@ -25,10 +31,25 @@ Blocks:
       OffsetY: -1
   StadiumDirtDeadendDoor:
     PlaceDefaultZone: true
+  StadiumRoadDirtHigh:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+    ConversionVariants:
+      1:
+        SubVariant: 0
+      3:
+        SubVariant: 0
   StadiumRoadDirtFenceStraight:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumRoadDirt
+      Variant: 3
+  StadiumRoadDirtHighFenceStraight:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtHigh
       Variant: 3
   StadiumSculptBridgeSuspendSlope2:
     PlaceDefaultZone: true
@@ -66,6 +87,8 @@ Blocks:
     PlaceDefaultZone: true
   StadiumTubeV4:
     PlaceDefaultZone: true
+  StadiumTubeV8:
+    PlaceDefaultZone: true
   StadiumSculptA:
     PlaceDefaultZone: true
   StadiumSculptB:
@@ -89,6 +112,9 @@ Blocks:
     Item:
       Name: Misc/Waypoint/Checkpoint.Item.Gbx
       OffsetY: 8
+  StadiumPlatformTurbo:
+    Item:
+      Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
   StadiumCheckpointRingV:
     NoItem: true # has gap underneath, can be fixed
     Block:
@@ -209,6 +235,10 @@ Blocks:
     PlaceDefaultZone: true
     Block:
       Name: RoadTechChicaneX3Right
+  StadiumRoadMainGTDiag4x3:
+    PlaceDefaultZone: true
+  StadiumRoadMainGTDiag4x3Mirror:
+    PlaceDefaultZone: true
   StadiumRoadMainYShapedDiag2:
     NoItem: true
     PlaceDefaultZone: true
@@ -565,4 +595,47 @@ Blocks:
     Block:
       Name: TechnicsScreen2x1Straight
       Dir: 3
-    
+  StadiumCircuitBorderStraight:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderSlopeStartLeft:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderSlopeStartRight:
+    PlaceDefaultZone: true
+  StadiumCircuitSlopeStart:
+    PlaceDefaultZone: true
+  #StadiumRoadMainClip:
+  #  PlaceDefaultZone: true
+  StadiumDirtHill:
+    ConversionVariants:
+      13:
+        Item:
+          Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
+          OffsetY: -16
+  StadiumRoadDirtToRoadDirtHighBridge:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 5
+  StadiumRoadDirtToRoadDirtHigh:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+  StadiumRoadDirtToRoadDirtHigh2:
+    NoTerrainModifier: true
+    Conversions:
+    - Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+    - Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+      OffsetZ: 1
+  StadiumRoadDirtHighToRoad:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
