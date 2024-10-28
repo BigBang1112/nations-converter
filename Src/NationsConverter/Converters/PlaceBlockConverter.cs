@@ -121,12 +121,21 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             : Path.Combine(conversion.PageName, blockName);
 
         var direction = overrideDirection ?? block.Direction;
-        var offset = new Int3(0, overrideConversion?.OffsetY ?? 0, overrideConversion?.OffsetZ ?? 0);
+        var offset = new Int3(overrideConversion?.OffsetX ?? 0, overrideConversion?.OffsetY ?? 0, overrideConversion?.OffsetZ ?? 0);
 
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
         {
-            PlaceBlockFromItemModel(block, direction, blockModel);
+            PlaceBlockFromItemModel(block, direction, blockModel, blockCoordSize);
+        }
+
+        var blockModels = conversion.GetPropertyDefault(block, x => x.Blocks);
+        if (blockModels is not null)
+        {
+            foreach (var b in blockModels)
+            {
+                PlaceBlockFromItemModel(block, direction, b, blockCoordSize);
+            }
         }
 
         var conversionModels = conversion.GetPropertyDefault(block, x => x.Conversions);
@@ -186,7 +195,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
             if (variantModel.Block is not null)
             {
-                PlaceBlockFromItemModel(block, direction, variantModel.Block);
+                PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize);
             }
 
             if (variantModel.Variant.HasValue)
@@ -331,7 +340,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         }
     }
 
-    private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel)
+    private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel, Int3 blockSizeCoord)
     {
         if (string.IsNullOrWhiteSpace(blockModel.Name))
         {
@@ -340,7 +349,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
 
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name, 
-            block.Coord + CenterOffset + (0, 8 + blockModel.OffsetY, 0), 
+            block.Coord + CenterOffset + (blockModel.OffsetX, 8 + blockModel.OffsetY, blockModel.OffsetZ), 
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround, 
             (byte)blockModel.Variant.GetValueOrDefault(0));

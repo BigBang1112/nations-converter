@@ -639,3 +639,73 @@ Blocks:
       Name: StadiumRoadDirt
       NoItem: true
       Variant: 3
+  StadiumSculptBridgePillar:
+    PlaceDefaultZone: true
+  StadiumSculptBridgePillarMirror:
+    PlaceDefaultZone: true
+  StadiumRoadDirtHighCheckpoint:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtHigh
+      Variant: 3
+    Items:
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 8
+    - Name: RoadDirt/RoadHigh/StadiumRoadDirtHighFenceStraight/Ground_0_0.Item.Gbx
+  StadiumSculptArchRingEnd:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingEndMirror:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingStart:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingStartMirror:
+    PlaceDefaultZone: true
+  StadiumHolePillarTilt:
+    NoItem: true
+    Block:
+      Name: RoadTechTiltStraight
+      Dir: 2
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 6, 16]
+  StadiumPlatformToRoad2:
+    NoTerrainModifier: true
+    Blocks:
+    - Name: PlatformTechToRoadTech
+      Dir: 2
+    - Name: PlatformTechBase
+      OffsetX: 1
+  StadiumPlatformToRoad2Mirror:
+    NoTerrainModifier: true
+    Blocks:
+    - Name: PlatformTechToRoadTech
+      Dir: 2
+    - Name: PlatformTechBase
+      OffsetX: 1
+  StadiumPlatformWall2:
+    NoItem: true
+    Blocks:
+    - Name: PlatformTechWallStraight
+      Dir: 3
+    - Name: PlatformTechWallStraight
+      Dir: 3
+      OffsetY: 1
+  StadiumPlatformWall4:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight4
+      Dir: 3
+  StadiumPlatformGTCurve2Wall1:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve2
+  StadiumPlatformGTCurve2Wall2:
+    NoItem: true
+    Blocks:
+    - Name: PlatformTechWallCurve2
+    - Name: PlatformTechWallCurve2
+      OffsetY: 1
+  StadiumPlatformGTCurve2Wall4:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve2x4

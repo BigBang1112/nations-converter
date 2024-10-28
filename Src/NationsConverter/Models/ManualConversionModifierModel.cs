@@ -10,6 +10,7 @@ public class ManualConversionModifierModel : ConversionModifierModel
     public bool? NoTerrainModifier { get; set; }
     public bool? PlaceDefaultZone { get; set; }
     public ManualConversionBlockModel? Block { get; set; }
+    public ManualConversionBlockModel[]? Blocks { get; set; }
     public ManualConversionItemModel? Item { get; set; }
     public ManualConversionItemModel[]? Items { get; set; }
     public ManualConversionBlockModel? Conversion { get; set; }
