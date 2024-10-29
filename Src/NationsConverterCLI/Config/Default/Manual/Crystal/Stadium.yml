@@ -115,6 +115,19 @@ Blocks:
   StadiumPlatformTurbo:
     Item:
       Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
+  StadiumPlatformTurboUp:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+  StadiumPlatformTurboDown:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+  StadiumPlatformTurboLeft:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 1
+  StadiumPlatformTurboRight:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
   StadiumCheckpointRingV:
     NoItem: true # has gap underneath, can be fixed
     Block:
@@ -520,6 +533,10 @@ Blocks:
     Block:
       Name: RoadTechTiltCurve2UpRight
       Dir: 2
+  StadiumRoadTiltTransition2DiagLeft:
+    PlaceDefaultZone: true
+  StadiumRoadTiltTransition2DiagRight:
+    PlaceDefaultZone: true
   StadiumPlatformLoopStart:
     NoItem: true
     PlaceDefaultZone: true
@@ -552,6 +569,9 @@ Blocks:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumInflatablePillar:
     PlaceDefaultZone: true
+  StadiumInflatableTube:
+    Conversion:
+      Name: StadiumInflatablePillar
   StadiumHole:
     NoItem: true
     PlaceDefaultZone: true
@@ -596,6 +616,12 @@ Blocks:
       Name: TechnicsScreen2x1Straight
       Dir: 3
   StadiumCircuitBorderStraight:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerIn:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerOut:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerGTCurve2In:
     PlaceDefaultZone: true
   StadiumCircuitBorderSlopeStartLeft:
     PlaceDefaultZone: true
@@ -668,6 +694,13 @@ Blocks:
     Item:
       Name: ObstaclePillar2m
       Pivot: [16, 6, 16]
+  StadiumHolePillarSlope:
+    NoItem: true
+    Block:
+      Name: RoadTechSlopeStraight
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 6, 16]
   StadiumPlatformToRoad2:
     NoTerrainModifier: true
     Blocks:
@@ -709,3 +742,13 @@ Blocks:
     NoItem: true
     Block:
       Name: PlatformTechWallCurve2x4
+  StadiumGrassCheckpoint:
+    NoItem: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.655
+  StadiumRoadTiltClipLeft:
+    NoItem: true
+  StadiumRoadTiltClipRight:
+    NoItem: true
