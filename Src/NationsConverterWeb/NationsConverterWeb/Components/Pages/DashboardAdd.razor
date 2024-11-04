@@ -31,7 +31,7 @@
         else
         {
             <div class="container">
-                @foreach (var (name, conv) in ConversionSet.Blocks.OrderBy(x => x.Key))
+                @foreach (var (name, conv) in ConversionSet.Blocks.OrderBy(x => x.Key).Where(x => !alreadyAddedBlocks.Contains(x.Key)))
                 {
                     <a href="/dashboard/add/@SubCategory/@Environment/@name">
                         <CollectorIcon WebpData="@GetBlockIconWebpData(name, conv)"></CollectorIcon>
@@ -77,6 +77,7 @@
 
     private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
     private string[] environments = [];
+    private HashSet<string> alreadyAddedBlocks = [];
 
     private bool blockReady;
 
@@ -87,6 +88,11 @@
         environments = Directory.GetFiles(Path.Combine(dataBasePath, "sheets"))
             .Select(x => Path.GetFileNameWithoutExtension(x))
             .ToArray();
+
+        alreadyAddedBlocks = Db.Blocks
+            .Where(x => x.CategoryId == Category)
+            .Select(x => x.Name)
+            .ToHashSet();
     }
 
     protected override async Task OnParametersSetAsync()
