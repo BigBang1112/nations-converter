@@ -103,7 +103,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
         }
     }
 
-    public T? GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T> propertyFunc, bool fallback = false)
+    public T? GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T> propertyFunc, bool fallback = true)
     {
         if (fallback)
         {
@@ -119,7 +119,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
         }
     }
 
-    public T GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T?> propertyFunc, bool fallback = false)
+    public T GetPropertyDefault<T>(CGameCtnBlock block, Func<ManualConversionModifierModel, T?> propertyFunc, bool fallback = true)
         where T : struct
     {
         if (fallback)
