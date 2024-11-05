@@ -104,7 +104,7 @@ internal sealed class InitStageService
 
 				var index = 0;
 
-                var convs = new Dictionary<string, ConversionModel>();
+                var convs = new SortedDictionary<string, ConversionModel>();
 
                 RecurseBlockDirectories(displayName, collection.BlockDirectories, baseMap, subCategory, convs, ref index);
                 ProcessBlocks(displayName, collection.RootBlocks, baseMap, subCategory, convs, ref index);
@@ -411,8 +411,11 @@ internal sealed class InitStageService
         var groundSubVariants = (node.GroundMobils?.Select(x => x.Length)
             ?? node.VariantBaseGround?.Mobils?.Select(x => x.Length))?.ToArray() ?? [];
 
-        var airClips = GetConversionClipModels(node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels).ToArray();
-        var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels).ToArray();
+        var airClips = GetConversionClipModels(node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels, tm2Clips: false).ToArray();
+        var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels, tm2Clips: false).ToArray();
+
+        var airClips2 = GetConversionClipModels(node.VariantBaseAir?.BlockUnitModels, tm2Clips: true).ToArray();
+        var groundClips2 = GetConversionClipModels(node.VariantBaseGround?.BlockUnitModels, tm2Clips: true).ToArray();
 
         Vec3? airSpawnPos = node.WayPointType
             is CGameCtnBlockInfo.EWayPointType.Start
@@ -457,6 +460,7 @@ internal sealed class InitStageService
         var commonVariants = airVariants == groundVariants ? airVariants : default(int?);
         var commonSubVariants = airSubVariants.SequenceEqual(groundSubVariants) ? airSubVariants : null;
         var commonClips = airClips.SequenceEqual(groundClips) ? airClips : null;
+        var commonClips2 = airClips2.SequenceEqual(groundClips2) ? airClips2 : null;
         var commonSpawnPos = airSpawnPos == groundSpawnPos ? airSpawnPos : null;
         var commonWaterUnits = airWaterUnits.SequenceEqual(groundWaterUnits) ? airWaterUnits : null;
         var commonPlacePylons = groundPlacePylons is not null && airPlacePylons?.SequenceEqual(groundPlacePylons) == true ? airPlacePylons : null;
@@ -479,6 +483,7 @@ internal sealed class InitStageService
                 Variants = commonVariants is null ? airVariants : null,
                 SubVariants = commonSubVariants is null && airSubVariants.Length > 0 ? airSubVariants : null,
                 Clips = commonClips is null && airClips.Length > 0 ? airClips : null,
+                Clips2 = commonClips2 is null && airClips2.Length > 0 ? airClips2 : null,
                 SpawnPos = commonSpawnPos is null ? airSpawnPos : null,
                 WaterUnits = commonWaterUnits is null && airWaterUnits.Length > 0 ? airWaterUnits : null,
                 PlacePylons = commonPlacePylons is null ? airPlacePylons : null,
@@ -496,6 +501,7 @@ internal sealed class InitStageService
                 Variants = commonVariants is null ? groundVariants : null,
                 SubVariants = commonSubVariants is null && groundSubVariants.Length > 0 ? groundSubVariants : null,
                 Clips = commonClips is null && groundClips.Length > 0 ? groundClips : null,
+                Clips2 = commonClips2 is null && groundClips2.Length > 0 ? groundClips2 : null,
                 SpawnPos = commonSpawnPos is null ? groundSpawnPos : null,
                 WaterUnits = commonWaterUnits is null && groundWaterUnits.Length > 0 ? groundWaterUnits : null,
                 PlacePylons = commonPlacePylons is null ? groundPlacePylons : null,
@@ -512,6 +518,7 @@ internal sealed class InitStageService
             Variants = commonVariants,
             SubVariants = commonSubVariants?.Length == 0 ? null : commonSubVariants,
             Clips = commonClips?.Length == 0 ? null : commonClips,
+            Clips2 = commonClips2?.Length == 0 ? null : commonClips2,
             Air = airConvModel,
             Ground = groundConvModel,
             ZoneHeight = height,
@@ -534,7 +541,7 @@ internal sealed class InitStageService
         };
     }
 
-    private IEnumerable<ConversionClipModel> GetConversionClipModels(CGameCtnBlockUnitInfo[]? blockUnitInfos)
+    private IEnumerable<ConversionClipModel> GetConversionClipModels(CGameCtnBlockUnitInfo[]? blockUnitInfos, bool tm2Clips)
     {
         if (blockUnitInfos is null)
         {
@@ -555,7 +562,8 @@ internal sealed class InitStageService
                     continue;
                 }
 
-                if (setupService.Stadium2Clips.Contains(clip.Ident.Id))
+                var isTM2Clip = setupService.Stadium2Clips.Contains(clip.Ident.Id);
+                if ((!tm2Clips && isTM2Clip) || (tm2Clips && !isTM2Clip))
                 {
                     continue;
                 }

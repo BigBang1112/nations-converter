@@ -10,13 +10,18 @@
     }
   },
   "Blocks": {
-    "BayBridgeLoopRight": {
-      "PageName": "Bridge/GTCurves",
+    "BayAdvertBuilding1Pillar": {
+      "PageName": "Deco/Building",
       "Ground": {},
       "Air": {},
       "Units": [
         [
           0,
+          0,
+          0
+        ],
+        [
+          0,
           1,
           0
         ],
@@ -28,16 +33,6 @@
         [
           0,
           3,
-          0
-        ],
-        [
-          0,
-          4,
-          0
-        ],
-        [
-          0,
-          5,
           0
         ],
         [
@@ -58,22 +53,46 @@
         [
           1,
           3,
-          0
-        ],
-        [
-          1,
-          4,
-          0
-        ],
-        [
-          1,
-          5,
           0
         ]
       ],
       "Size": [
         2,
-        6,
+        4,
+        1
+      ],
+      "Variants": 9,
+      "SubVariants": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "BayBridgeBiSlope2End": {
+      "PageName": "Bridge/Slope",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
         1
       ],
       "Variants": 1,
@@ -81,14 +100,280 @@
         1
       ],
       "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeBiSlope2EndSupport": {
+      "PageName": "Bridge/SlopeSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeBiSlope2Start": {
+      "PageName": "Bridge/Slope",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeBiSlope2StartSupport": {
+      "PageName": "Bridge/SlopeSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeFinish": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Finish",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeGTCurve2": {
+      "PageName": "Bridge/GTCurves",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
         {
           "Name": "BayBridgeRoadClip",
           "Offset": [
             1,
             0,
-            0
+            1
           ],
-          "Dir": 2
+          "Dir": 3
         }
       ],
       "WaterUnits": [
@@ -97,100 +382,16 @@
           0
         ],
         [
-          1,
-          0
-        ]
-      ]
-    },
-    "BayBridgeLoopLeft": {
-      "PageName": "Bridge/GTCurves",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
           0,
-          0,
-          0
+          1
         ],
         [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ],
-        [
-          0,
-          3,
-          0
-        ],
-        [
-          0,
-          4,
-          0
-        ],
-        [
-          0,
-          5,
-          0
-        ],
-        [
-          1,
           1,
           0
         ],
         [
           1,
-          2,
-          0
-        ],
-        [
-          1,
-          3,
-          0
-        ],
-        [
-          1,
-          4,
-          0
-        ],
-        [
-          1,
-          5,
-          0
-        ]
-      ],
-      "Size": [
-        2,
-        6,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ],
-        [
-          1,
-          0
+          1
         ]
       ]
     },
@@ -304,7 +505,107 @@
         ]
       ]
     },
-    "BayBridgeGTCurve2": {
+    "BayBridgeHole": {
+      "PageName": "Bridge/Stunt",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeCheckpoint": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "SpawnPos": [
+        16,
+        1.31,
+        16
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeLoopLeft": {
       "PageName": "Bridge/GTCurves",
       "Ground": {},
       "Air": {},
@@ -316,24 +617,59 @@
         ],
         [
           0,
-          0,
-          1
+          1,
+          0
         ],
         [
-          1,
           0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
           0
         ],
         [
           1,
-          0,
-          1
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          0
         ]
       ],
       "Size": [
         2,
-        1,
-        2
+        6,
+        1
       ],
       "Variants": 1,
       "SubVariants": [
@@ -348,13 +684,236 @@
             0
           ],
           "Dir": 2
-        },
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "BayBridgeLoopRight": {
+      "PageName": "Bridge/GTCurves",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          5,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        6,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
         {
           "Name": "BayBridgeRoadClip",
           "Offset": [
             1,
             0,
-            1
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "BayBridgePillar": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeRamp": {
+      "PageName": "Bridge/Stunt",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeRoad": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Road": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 6,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
           ],
           "Dir": 3
         }
@@ -363,23 +922,11 @@
         [
           0,
           0
-        ],
-        [
-          0,
-          1
-        ],
-        [
-          1,
-          0
-        ],
-        [
-          1,
-          1
         ]
       ]
     },
-    "BayBridgeBiSlope2End": {
-      "PageName": "Bridge/Slope",
+    "BayBridgeRoadClip": {
+      "PageName": "Other",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -387,41 +934,16 @@
           0,
           0,
           0
-        ],
-        [
-          0,
-          1,
-          0
         ]
       ],
       "Size": [
         1,
-        2,
+        1,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
       ],
       "WaterUnits": [
         [
@@ -430,32 +952,84 @@
         ]
       ]
     },
-    "BayBridgeSlopeBase": {
-      "PageName": "Bridge/Slope",
+    "BayBridgeRoadPillar": {
+      "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
           0,
           0
-        ],
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 6,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "WaterUnits": [
         [
           0,
-          1,
+          0
+        ]
+      ]
+    },
+    "BayBridgeRoadSupport": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Road": {},
+      "Units": [
+        [
+          0,
+          0,
           0
         ]
       ],
       "Size": [
         1,
-        2,
+        1,
         1
       ],
-      "Variants": 1,
+      "Variants": 6,
       "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
         1
       ],
       "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
         {
           "Name": "BayBridgeRoadClip",
           "Offset": [
@@ -469,10 +1043,10 @@
           "Name": "BayBridgeRoadClip",
           "Offset": [
             0,
-            1,
+            0,
             0
           ],
-          "Dir": 0
+          "Dir": 3
         }
       ],
       "WaterUnits": [
@@ -484,328 +1058,6 @@
     },
     "BayBridgeSlope2Straight": {
       "PageName": "Bridge/Slope",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        3,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            2,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeSlopeBase2": {
-      "PageName": "Bridge/Slope",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        3,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            2,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeBiSlope2Start": {
-      "PageName": "Bridge/Slope",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeBiSlope2EndSupport": {
-      "PageName": "Bridge/SlopeSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeBiSlope2StartSupport": {
-      "PageName": "Bridge/SlopeSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeSlopeBaseSupport": {
-      "PageName": "Bridge/SlopeSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeSlopeBase2Support": {
-      "PageName": "Bridge/SlopeSupport",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -918,8 +1170,8 @@
         ]
       ]
     },
-    "BayBridgePillar": {
-      "PageName": "Bridge/RoadMain",
+    "BayBridgeSlopeBase": {
+      "PageName": "Bridge/Slope",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -927,207 +1179,16 @@
           0,
           0,
           0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "WaterUnits": [
+        ],
         [
           0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeStartLine": {
-      "PageName": "Bridge/RoadMain",
-      "Ground": {},
-      "Air": {},
-      "Waypoint": "Start",
-      "Units": [
-        [
-          0,
-          0,
+          1,
           0
         ]
       ],
       "Size": [
         1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "SpawnPos": [
-        16,
-        2.5,
-        20
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeCheckpoint": {
-      "PageName": "Bridge/RoadMain",
-      "Ground": {},
-      "Air": {},
-      "Waypoint": "Checkpoint",
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ],
-      "SpawnPos": [
-        16,
-        1.31,
-        16
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeRoadSupport": {
-      "PageName": "Bridge/RoadMain",
-      "Ground": {},
-      "Air": {},
-      "Road": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 6,
-      "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 3
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeFinish": {
-      "PageName": "Bridge/RoadMain",
-      "Ground": {},
-      "Air": {},
-      "Waypoint": "Finish",
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
+        2,
         1
       ],
       "Variants": 1,
@@ -1143,6 +1204,15 @@
             0
           ],
           "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
         }
       ],
       "WaterUnits": [
@@ -1152,51 +1222,37 @@
         ]
       ]
     },
-    "BayBridgeRoad": {
-      "PageName": "Bridge/RoadMain",
+    "BayBridgeSlopeBase2": {
+      "PageName": "Bridge/Slope",
       "Ground": {},
       "Air": {},
-      "Road": {},
       "Units": [
         [
           0,
           0,
           0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
         ]
       ],
       "Size": [
         1,
-        1,
+        3,
         1
       ],
-      "Variants": 6,
+      "Variants": 1,
       "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
         1
       ],
       "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
         {
           "Name": "BayBridgeRoadClip",
           "Offset": [
@@ -1210,10 +1266,10 @@
           "Name": "BayBridgeRoadClip",
           "Offset": [
             0,
-            0,
+            2,
             0
           ],
-          "Dir": 3
+          "Dir": 0
         }
       ],
       "WaterUnits": [
@@ -1223,31 +1279,107 @@
         ]
       ]
     },
-    "BayBridgeRoadPillar": {
-      "PageName": "Bridge/RoadMain",
+    "BayBridgeSlopeBase2Support": {
+      "PageName": "Bridge/SlopeSupport",
       "Ground": {},
       "Air": {},
-      "Road": {},
       "Units": [
         [
           0,
           0,
           0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
         ]
       ],
       "Size": [
         1,
-        1,
+        3,
         1
       ],
-      "Variants": 6,
+      "Variants": 1,
       "SubVariants": [
-        1,
-        1,
-        1,
-        1,
-        1,
         1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeSlopeBaseSupport": {
+      "PageName": "Bridge/SlopeSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
       ],
       "WaterUnits": [
         [
@@ -1309,64 +1441,11 @@
         ]
       ]
     },
-    "BayBridgeSuspPillar": {
+    "BayBridgeStartLine": {
       "PageName": "Bridge/RoadMain",
       "Ground": {},
       "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          0,
-          3
-        ],
-        [
-          0,
-          0,
-          4
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        5
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          1
-        ],
-        [
-          0,
-          3
-        ],
-        [
-          0,
-          4
-        ]
-      ]
-    },
-    "BayBridgeTurbo": {
-      "PageName": "Bridge/Stunt",
-      "Ground": {},
-      "Air": {},
+      "Waypoint": "Start",
       "Units": [
         [
           0,
@@ -1392,63 +1471,12 @@
             0
           ],
           "Dir": 0
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
         }
       ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBridgeTurbo2": {
-      "PageName": "Bridge/Stunt",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
+      "SpawnPos": [
+        16,
+        2.5,
+        20
       ],
       "WaterUnits": [
         [
@@ -1728,7 +1756,155 @@
         ]
       ]
     },
-    "BayBridgeHole": {
+    "BayBridgeSuspPillar": {
+      "PageName": "Bridge/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        5
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "BayBridgeTransitionToRoad": {
+      "PageName": "Transitions",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeTurbo": {
+      "PageName": "Bridge/Stunt",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayBridgeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayBridgeTurbo2": {
       "PageName": "Bridge/Stunt",
       "Ground": {},
       "Air": {},
@@ -1822,47 +1998,9 @@
         ]
       ]
     },
-    "BayBridgeRamp": {
-      "PageName": "Bridge/Stunt",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayBuilding2Pillar": {
-      "PageName": "Building",
-      "Ground": {
+    "BayBuilding1": {
+      "PageName": "Deco/Building",
+      "Air": {
         "Units": [
           [
             0,
@@ -1881,40 +2019,15 @@
           1
         ],
         "SubVariants": [
-          0,
-          8,
-          8,
-          8,
-          8,
+          4,
+          2,
+          1,
+          2,
           1,
           1,
-          1,
-          1
-        ]
-      },
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
           1,
           1,
           1
-        ],
-        "SubVariants": [
-          0,
-          13,
-          13,
-          13,
-          13,
-          13,
-          13,
-          13,
-          13
         ]
       },
       "Variants": 9
@@ -2012,9 +2125,9 @@
       },
       "Variants": 9
     },
-    "BayBuilding1": {
-      "PageName": "Deco/Building",
-      "Air": {
+    "BayBuilding2Pillar": {
+      "PageName": "Building",
+      "Ground": {
         "Units": [
           [
             0,
@@ -2033,559 +2146,43 @@
           1
         ],
         "SubVariants": [
-          4,
-          2,
-          1,
-          2,
-          1,
+          0,
+          8,
+          8,
+          8,
+          8,
           1,
           1,
           1,
           1
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          0,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13,
+          13
         ]
       },
       "Variants": 9
-    },
-    "BayShopsEsplanadeDeadend": {
-      "PageName": "Deco/Building",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ],
-          [
-            0,
-            4,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          5,
-          1
-        ],
-        "SubVariants": [
-          6
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformBoxRoad": {
-      "PageName": "Deco/Building",
-      "Ground": {},
-      "Air": {},
-      "Road": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ],
-        [
-          0,
-          3,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        4,
-        1
-      ],
-      "Variants": 6,
-      "SubVariants": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "Clips": [
-        {
-          "Name": "BayPlatformBoxClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayPlatformBoxClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
-        {
-          "Name": "BayPlatformBoxClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayPlatformBoxClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 3
-        }
-      ]
-    },
-    "BayFlatsRoad2": {
-      "PageName": "Deco/Building",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          4,
-          4,
-          4,
-          4,
-          4,
-          4
-        ],
-        "Clips": [
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Road": {},
-      "Variants": 6
-    },
-    "BayFlatsRoad": {
-      "PageName": "Deco/Building",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          3,
-          3,
-          3,
-          3,
-          3,
-          3
-        ],
-        "Clips": [
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayFlatsRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Road": {},
-      "Variants": 6
-    },
-    "BayAdvertBuilding1Pillar": {
-      "PageName": "Deco/Building",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          2,
-          0
-        ],
-        [
-          0,
-          3,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          1,
-          2,
-          0
-        ],
-        [
-          1,
-          3,
-          0
-        ]
-      ],
-      "Size": [
-        2,
-        4,
-        1
-      ],
-      "Variants": 9,
-      "SubVariants": [
-        0,
-        1,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0
-      ]
-    },
-    "BayParvisDecorD": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisStraightB": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisStraightC": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisStraightA": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisDecorC": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisDecorB": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisDecorA": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayParvisCheckpoint": {
-      "PageName": "Deco/Parvis",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Waypoint": "Checkpoint",
-      "Variants": 1,
-      "SpawnPos": [
-        16,
-        0.5,
-        16
-      ]
-    },
-    "BayDocksHarborDeadendSlopeL": {
-      "PageName": "Deco/Docks/Harbor",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
     },
     "BayCargo": {
       "PageName": "Deco/Docks/Harbor",
@@ -2735,6 +2332,47 @@
       },
       "Variants": 1
     },
+    "BayDocks": {
+      "PageName": "Other",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "Variants": 14,
+        "SubVariants": [
+          4,
+          3,
+          1,
+          1,
+          4,
+          4,
+          1,
+          1,
+          4,
+          4,
+          3,
+          4,
+          3,
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "ZoneHeight": 0
+    },
     "BayDocksHarborBase1": {
       "PageName": "Deco/Docks/Harbor",
       "Ground": {
@@ -2752,33 +2390,6 @@
         ],
         "SubVariants": [
           1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborDeadendContainer": {
-      "PageName": "Deco/Docks/Harbor",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          3
         ],
         "WaterUnits": [
           [
@@ -2843,6 +2454,60 @@
       },
       "Variants": 1
     },
+    "BayDocksHarborDeadendContainer": {
+      "PageName": "Deco/Docks/Harbor",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          3
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborDeadendSlopeL": {
+      "PageName": "Deco/Docks/Harbor",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
     "BayDocksHarborDeadendSlopeR": {
       "PageName": "Deco/Docks/Harbor",
       "Ground": {
@@ -2870,8 +2535,275 @@
       },
       "Variants": 1
     },
-    "BayDocksHarborJettyStraightA": {
-      "PageName": "Deco/Docks/Jetty2",
+    "BayDocksHarborHawk": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ]
+      },
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayDocksHarborHawkPillar": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ]
+      },
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "WaterUnits": [
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "BayDocksHarborJettyHawk": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettyHawk2": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettyHawkL": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettyHawkLoop": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettyHawkR": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettyRamp": {
+      "PageName": "Deco/Docks/Jetty",
       "Ground": {
         "Units": [
           [
@@ -2897,7 +2829,34 @@
       },
       "Variants": 1
     },
-    "BayDocksHarborJettyStraightB": {
+    "BayDocksHarborJettyRamp2": {
+      "PageName": "Deco/Docks/Jetty",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettySlope2L": {
       "PageName": "Deco/Docks/Jetty2",
       "Ground": {
         "Units": [
@@ -2925,6 +2884,33 @@
       "Variants": 1
     },
     "BayDocksHarborJettySlope2R": {
+      "PageName": "Deco/Docks/Jetty2",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "Variants": 1
+    },
+    "BayDocksHarborJettySlopeL": {
       "PageName": "Deco/Docks/Jetty2",
       "Ground": {
         "Units": [
@@ -3005,7 +2991,7 @@
       },
       "Variants": 1
     },
-    "BayDocksHarborJettySlopeL": {
+    "BayDocksHarborJettyStraightA": {
       "PageName": "Deco/Docks/Jetty2",
       "Ground": {
         "Units": [
@@ -3032,7 +3018,7 @@
       },
       "Variants": 1
     },
-    "BayDocksHarborJettySlope2L": {
+    "BayDocksHarborJettyStraightB": {
       "PageName": "Deco/Docks/Jetty2",
       "Ground": {
         "Units": [
@@ -3080,7 +3066,7 @@
       },
       "Variants": 1
     },
-    "BayDocksRoadContainer3": {
+    "BayDocksRoadContainer2": {
       "PageName": "Deco/Docks/Road",
       "Ground": {
         "Units": [
@@ -3101,7 +3087,7 @@
       },
       "Variants": 1
     },
-    "BayDocksRoadContainer2": {
+    "BayDocksRoadContainer3": {
       "PageName": "Deco/Docks/Road",
       "Ground": {
         "Units": [
@@ -3143,123 +3129,43 @@
       },
       "Variants": 1
     },
-    "BayDocksHarborJettyHawk2": {
-      "PageName": "Deco/Docks/Jetty",
+    "BayEsplanade": {
+      "PageName": "Other",
       "Ground": {
         "Units": [
           [
             0,
             0,
             0
-          ],
-          [
-            0,
-            1,
-            0
           ]
         ],
         "Size": [
           1,
+          1,
+          1
+        ],
+        "Variants": 14,
+        "SubVariants": [
+          7,
+          3,
           2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborJettyRamp": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborJettyHawkL": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
           2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborHawkPillar": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
+          2,
+          5,
+          1,
+          1,
+          1,
+          5,
           1,
           3,
+          1,
           1
         ]
       },
+      "ZoneHeight": 4
+    },
+    "BayFlatsRoad": {
+      "PageName": "Deco/Building",
       "Air": {
         "Units": [
           [
@@ -3272,114 +3178,59 @@
           1,
           1,
           1
-        ]
-      },
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayDocksHarborJettyHawkLoop": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          3,
-          1
         ],
         "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborJettyHawk": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "Variants": 1
-    },
-    "BayDocksHarborHawk": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
-          1,
           3,
-          1
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "Clips": [
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 3
+          }
         ]
       },
+      "Road": {},
+      "Variants": 6
+    },
+    "BayFlatsRoad2": {
+      "PageName": "Deco/Building",
       "Air": {
         "Units": [
           [
@@ -3392,22 +3243,125 @@
           1,
           1,
           1
+        ],
+        "SubVariants": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "Clips": [
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayFlatsRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 3
+          }
         ]
       },
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "WaterUnits": [
+      "Road": {},
+      "Variants": 6
+    },
+    "BayFlatsRoad2Pillar": {
+      "PageName": "Platform/Main",
+      "Ground": {},
+      "Air": {},
+      "Road": {},
+      "Units": [
         [
+          0,
           0,
           0
         ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 6,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
       ]
     },
-    "BayDocksHarborJettyRamp2": {
-      "PageName": "Deco/Docks/Jetty",
-      "Ground": {
+    "BayFlatsRoadClip": {
+      "PageName": "Other",
+      "Air": {
         "Units": [
           [
             0,
@@ -3422,18 +3376,151 @@
         ],
         "SubVariants": [
           1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
         ]
       },
       "Variants": 1
     },
-    "BayDocksHarborJettyHawkR": {
-      "PageName": "Deco/Docks/Jetty",
+    "BayFlatsRoadClipPillar": {
+      "PageName": "Other",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          4
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
+    },
+    "BayFlatsRoadPillar": {
+      "PageName": "Platform/Main",
+      "Ground": {},
+      "Air": {},
+      "Road": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 6,
+      "SubVariants": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayFlatsRoadClipPillar",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "BayHarbor": {
+      "PageName": "Terraformation",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "Variants": 1,
+        "SubVariants": [
+          12
+        ]
+      },
+      "ZoneHeight": 0
+    },
+    "BayHarborClip": {
+      "PageName": "Other",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          0
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
+    },
+    "BayParvisDecorA": {
+      "PageName": "Deco/Parvis",
       "Ground": {
         "Units": [
           [
@@ -3454,12 +3541,132 @@
         ],
         "SubVariants": [
           1
-        ],
-        "WaterUnits": [
+        ]
+      },
+      "Variants": 1
+    },
+    "BayParvisDecorB": {
+      "PageName": "Deco/Parvis",
+      "Ground": {
+        "Units": [
           [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "BayParvisDecorC": {
+      "PageName": "Deco/Parvis",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "BayParvisDecorD": {
+      "PageName": "Deco/Parvis",
+      "Ground": {
+        "Units": [
+          [
+            0,
             0,
             0
           ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "BayParvisCheckpoint": {
+      "PageName": "Deco/Parvis",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        0.5,
+        16
+      ]
+    },
+    "BayParvisRamp": {
+      "PageName": "Deco/Ramp",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
         ]
       },
       "Variants": 1
@@ -3527,8 +3734,8 @@
       },
       "Variants": 1
     },
-    "BayParvisRamp": {
-      "PageName": "Deco/Ramp",
+    "BayParvisStraightA": {
+      "PageName": "Deco/Parvis",
       "Ground": {
         "Units": [
           [
@@ -3548,58 +3755,8 @@
       },
       "Variants": 1
     },
-    "BayHarbor": {
-      "PageName": "Terraformation",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "Variants": 1,
-        "SubVariants": [
-          12
-        ]
-      },
-      "ZoneHeight": 0
-    },
-    "BaySea": {
-      "PageName": "Terraformation",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "Variants": 1,
-        "SubVariants": [
-          1
-        ],
-        "WaterUnits": [
-          [
-            0,
-            0
-          ]
-        ]
-      },
-      "ZoneHeight": 0
-    },
-    "BayRoadTransitionEsplanadeGround": {
-      "PageName": "Transitions",
+    "BayParvisStraightB": {
+      "PageName": "Deco/Parvis",
       "Ground": {
         "Units": [
           [
@@ -3611,128 +3768,32 @@
             0,
             1,
             0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ],
-          [
-            0,
-            4,
-            0
           ]
         ],
         "Size": [
           1,
-          5,
+          2,
           1
         ],
         "SubVariants": [
           1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              4,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              4,
-              0
-            ],
-            "Dir": 2
-          }
         ]
       },
       "Variants": 1
     },
-    "BayRoadTransitionEsplanadeAir": {
-      "PageName": "Transitions",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformTransitionEsplanadeGround": {
-      "PageName": "Transitions",
+    "BayParvisStraightC": {
+      "PageName": "Deco/Parvis",
       "Ground": {
         "Units": [
           [
             0,
             0,
             0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ],
-          [
-            0,
-            4,
-            0
           ]
         ],
         "Size": [
           1,
-          5,
+          1,
           1
         ],
         "SubVariants": [
@@ -3741,8 +3802,8 @@
       },
       "Variants": 1
     },
-    "BayBridgeTransitionToRoad": {
-      "PageName": "Transitions",
+    "BayPlatformBase": {
+      "PageName": "Platform/Base",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -3760,36 +3821,36 @@
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayBridgeRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ],
-      "WaterUnits": [
+      ]
+    },
+    "BayPlatformBasePillar": {
+      "PageName": "Platform/Base",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          8
+        ]
+      },
+      "Units": [
         [
+          0,
           0,
           0
         ]
-      ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
     },
-    "BayRoadTransitionToPlatform": {
-      "PageName": "Transitions",
+    "BayPlatformBasePillarReplace": {
+      "PageName": "Platform/Deco",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -3797,129 +3858,40 @@
           0,
           0,
           0
-        ],
-        [
-          0,
-          1,
-          0
         ]
       ],
       "Size": [
         1,
-        2,
+        1,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 2
-        }
       ]
     },
-    "BayPlatformTransitionEsplanadeAir": {
-      "PageName": "Transitions",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
+    "BayPlatformBaseSupport": {
+      "PageName": "Platform/Base",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
         ]
-      },
-      "Variants": 1
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
     },
     "BayPlatformBiSlope2End": {
-      "PageName": "Platform/Slopes",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2Support": {
-      "PageName": "Platform/Slopes",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2Base": {
-      "PageName": "Platform/Slopes",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlopeBase": {
       "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
@@ -3961,88 +3933,6 @@
         1
       ]
     },
-    "BayPlatformSlope2GTCurve2": {
-      "PageName": "Platform/Slopes",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          1,
-          1,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ]
-      ],
-      "Size": [
-        2,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2Corner": {
-      "PageName": "Platform/Slopes",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
     "BayPlatformBiSlope2Start2": {
       "PageName": "Platform/Slopes",
       "Ground": {},
@@ -4074,10 +3964,32 @@
         1
       ]
     },
-    "BayPlatformSlope2": {
-      "PageName": "Platform/Slopes",
+    "BayPlatformBoxClip": {
+      "PageName": "Other",
       "Ground": {},
       "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformBoxRoad": {
+      "PageName": "Deco/Building",
+      "Ground": {},
+      "Air": {},
+      "Road": {},
       "Units": [
         [
           0,
@@ -4088,156 +4000,73 @@
           0,
           1,
           0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2PillarReplace": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
+        ],
         [
           0,
-          0,
+          2,
           0
         ],
         [
           0,
-          1,
+          3,
           0
         ]
       ],
       "Size": [
         1,
-        2,
+        4,
         1
       ],
-      "Variants": 1,
+      "Variants": 6,
       "SubVariants": [
-        1
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "Clips": [
+        {
+          "Name": "BayPlatformBoxClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayPlatformBoxClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "BayPlatformBoxClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayPlatformBoxClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
       ]
     },
-    "BayPlatformLoopSigns": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformBasePillarReplace": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSupportFree": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSupport": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformLoopAdvert": {
-      "PageName": "Platform/Deco",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformFloodLightPillarReplace": {
-      "PageName": "Platform/Deco",
+    "BayPlatformClip": {
+      "PageName": "Other",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -4278,8 +4107,209 @@
         1
       ]
     },
-    "BayPlatformTurbo2Right": {
-      "PageName": "Platform/Turbo2",
+    "BayPlatformFloodLightPillarReplace": {
+      "PageName": "Platform/Deco",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformCheckpointBase": {
+      "PageName": "Platform/Checkpoint",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        16,
+        8.1,
+        16
+      ]
+    },
+    "BayPlatformCheckpointDown": {
+      "PageName": "Platform/Checkpoint",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
+      ]
+    },
+    "BayPlatformCheckpointLeft": {
+      "PageName": "Platform/Checkpoint",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
+      ]
+    },
+    "BayPlatformCheckpointRight": {
+      "PageName": "Platform/Checkpoint",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
+      ]
+    },
+    "BayPlatformCheckpointUp": {
+      "PageName": "Platform/Checkpoint",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        16,
+        9,
+        16
+      ]
+    },
+    "BayPlatformLoopAdvert": {
+      "PageName": "Platform/Deco",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -4304,104 +4334,26 @@
         1
       ]
     },
-    "BayPlatformTurbo2Left": {
-      "PageName": "Platform/Turbo2",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
+    "BayPlatformLoopEnd": {
+      "PageName": "Platform/Loop",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
         ],
-        [
-          0,
+        "Size": [
           1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurbo2Up": {
-      "PageName": "Platform/Turbo2",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
+          1,
+          1
         ],
-        [
-          0,
-          1,
-          0
+        "SubVariants": [
+          1
         ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurbo2": {
-      "PageName": "Platform/Turbo2",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurbo2Down": {
-      "PageName": "Platform/Turbo2",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
+      },
+      "Variants": 1
     },
     "BayPlatformLoopEnd2": {
       "PageName": "Platform/Loop",
@@ -4433,457 +4385,6 @@
         ]
       },
       "Variants": 1
-    },
-    "BayPlatformLoopEnd": {
-      "PageName": "Platform/Loop",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformLoopStart2": {
-      "PageName": "Platform/Loop",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          1
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformLoopSlope": {
-      "PageName": "Platform/Loop",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformLoopWall": {
-      "PageName": "Platform/Loop",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformLoopStart4": {
-      "PageName": "Platform/Loop",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          0,
-          2,
-          1
-        ],
-        [
-          0,
-          3,
-          1
-        ]
-      ],
-      "Size": [
-        1,
-        4,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformLoopStart": {
-      "PageName": "Platform/Loop",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformLoopEnd4": {
-      "PageName": "Platform/Loop",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            0,
-            2,
-            1
-          ],
-          [
-            0,
-            3,
-            1
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          2
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformBasePillar": {
-      "PageName": "Platform/Base",
-      "Ground": {
-        "SubVariants": [
-          1
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          8
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1
-    },
-    "BayPlatformBase": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformBaseSupport": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurbo": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurboLeft": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurboDown": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurboUp": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformTurboRight": {
-      "PageName": "Platform/Base",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformLoopStart2GTCurve2": {
-      "PageName": "Platform/LoopGTCurve",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ]
-      ],
-      "Size": [
-        2,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
     },
     "BayPlatformLoopEnd2GTCurve2": {
       "PageName": "Platform/LoopGTCurve",
@@ -4931,36 +4432,51 @@
       },
       "Variants": 1
     },
-    "BayPlatformLoopStartGTCurve2": {
-      "PageName": "Platform/LoopGTCurve",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
+    "BayPlatformLoopEnd4": {
+      "PageName": "Platform/Loop",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
         ],
-        [
+        "Size": [
           1,
-          0,
-          0
+          4,
+          2
         ],
-        [
-          0,
-          0,
+        "SubVariants": [
           1
         ]
-      ],
-      "Size": [
-        2,
-        1,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
+      },
+      "Variants": 1
     },
     "BayPlatformLoopEnd4GTCurve2": {
       "PageName": "Platform/LoopGTCurve",
@@ -5069,7 +4585,54 @@
       },
       "Variants": 1
     },
-    "BayPlatformLoopWallGTCurve2": {
+    "BayPlatformLoopSigns": {
+      "PageName": "Platform/Deco",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformLoopSlope": {
+      "PageName": "Platform/Loop",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "BayPlatformLoopSlopeGTCurve2": {
       "PageName": "Platform/LoopGTCurve",
       "Air": {
         "Units": [
@@ -5087,11 +4650,26 @@
             0,
             0,
             1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
           ]
         ],
         "Size": [
           2,
-          1,
+          2,
           2
         ],
         "SubVariants": [
@@ -5099,6 +4677,150 @@
         ]
       },
       "Variants": 1
+    },
+    "BayPlatformLoopStart": {
+      "PageName": "Platform/Loop",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformLoopStart2": {
+      "PageName": "Platform/Loop",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformLoopStart2GTCurve2": {
+      "PageName": "Platform/LoopGTCurve",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformLoopStart4": {
+      "PageName": "Platform/Loop",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
     },
     "BayPlatformLoopStart4GTCurve2": {
       "PageName": "Platform/LoopGTCurve",
@@ -5176,7 +4898,59 @@
         1
       ]
     },
-    "BayPlatformLoopSlopeGTCurve2": {
+    "BayPlatformLoopStartGTCurve2": {
+      "PageName": "Platform/LoopGTCurve",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformLoopWall": {
+      "PageName": "Platform/Loop",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "BayPlatformLoopWallGTCurve2": {
       "PageName": "Platform/LoopGTCurve",
       "Air": {
         "Units": [
@@ -5194,26 +4968,11 @@
             0,
             0,
             1
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            1,
-            1,
-            0
-          ],
-          [
-            0,
-            1,
-            1
           ]
         ],
         "Size": [
           2,
-          2,
+          1,
           2
         ],
         "SubVariants": [
@@ -5222,11 +4981,10 @@
       },
       "Variants": 1
     },
-    "BayPlatformCheckpointBase": {
-      "PageName": "Platform/Checkpoint",
+    "BayPlatformSlope2": {
+      "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -5247,18 +5005,12 @@
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "SpawnPos": [
-        16,
-        8.1,
-        16
       ]
     },
-    "BayPlatformCheckpointRight": {
-      "PageName": "Platform/Checkpoint",
+    "BayPlatformSlope2Base": {
+      "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -5269,33 +5021,22 @@
           0,
           1,
           0
-        ],
-        [
-          0,
-          2,
-          0
         ]
       ],
       "Size": [
         1,
-        3,
+        2,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "SpawnPos": [
-        16,
-        9,
-        16
       ]
     },
-    "BayPlatformCheckpointUp": {
-      "PageName": "Platform/Checkpoint",
+    "BayPlatformSlope2Corner": {
+      "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -5306,33 +5047,78 @@
           0,
           1,
           0
-        ],
-        [
-          0,
-          2,
-          0
         ]
       ],
       "Size": [
         1,
-        3,
+        2,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "SpawnPos": [
-        16,
-        9,
-        16
       ]
     },
-    "BayPlatformCheckpointDown": {
-      "PageName": "Platform/Checkpoint",
+    "BayPlatformSlope2GTCurve2": {
+      "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        2,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformSlope2PillarReplace": {
+      "PageName": "Platform/Deco",
+      "Ground": {},
+      "Air": {},
       "Units": [
         [
           0,
@@ -5343,33 +5129,22 @@
           0,
           1,
           0
-        ],
-        [
-          0,
-          2,
-          0
         ]
       ],
       "Size": [
         1,
-        3,
+        2,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "SpawnPos": [
-        16,
-        9,
-        16
       ]
     },
-    "BayPlatformCheckpointLeft": {
-      "PageName": "Platform/Checkpoint",
+    "BayPlatformSlope2Support": {
+      "PageName": "Platform/Slopes",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -5380,159 +5155,91 @@
           0,
           1,
           0
-        ],
-        [
-          0,
-          2,
-          0
         ]
       ],
       "Size": [
         1,
-        3,
+        2,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "SpawnPos": [
-        16,
-        9,
-        16
       ]
     },
-    "BayFlatsRoad2Pillar": {
-      "PageName": "Platform/Main",
+    "BayPlatformSlope2Transition": {
+      "PageName": "Platform/SlopesTransition",
       "Ground": {},
       "Air": {},
-      "Road": {},
       "Units": [
         [
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
         ]
       ],
       "Size": [
         1,
-        1,
-        1
+        2,
+        2
       ],
-      "Variants": 6,
+      "Variants": 1,
       "SubVariants": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "Clips": [
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 3
-        }
+        1
       ]
     },
-    "BayFlatsRoadPillar": {
-      "PageName": "Platform/Main",
+    "BayPlatformSlope2TransitionBiSlopeStart": {
+      "PageName": "Platform/SlopesTransition",
       "Ground": {},
       "Air": {},
-      "Road": {},
       "Units": [
         [
           0,
           0,
           0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
         ]
       ],
       "Size": [
         1,
-        1,
-        1
+        2,
+        2
       ],
-      "Variants": 6,
+      "Variants": 1,
       "SubVariants": [
-        4,
-        4,
-        4,
-        4,
-        4,
-        4
-      ],
-      "Clips": [
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayFlatsRoadClipPillar",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 3
-        }
+        1
       ]
     },
-    "BayPlatformSlope2TransitionGTCurve2": {
+    "BayPlatformSlope2TransitionBiSlopeStartGTCurve2": {
       "PageName": "Platform/SlopesTransition",
       "Ground": {},
       "Air": {},
@@ -5644,134 +5351,6 @@
         1
       ]
     },
-    "BayPlatformSlope2TransitionBiSlopeStart": {
-      "PageName": "Platform/SlopesTransition",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2TransitionMirror": {
-      "PageName": "Platform/SlopesTransition",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayPlatformSlope2TransitionBiSlopeStartGTCurve2": {
-      "PageName": "Platform/SlopesTransition",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          0,
-          1,
-          0
-        ],
-        [
-          1,
-          1,
-          0
-        ],
-        [
-          0,
-          1,
-          1
-        ],
-        [
-          1,
-          1,
-          1
-        ]
-      ],
-      "Size": [
-        2,
-        2,
-        2
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
     "BayPlatformSlope2TransitionBiSlopeStartMirror": {
       "PageName": "Platform/SlopesTransition",
       "Ground": {},
@@ -5808,7 +5387,7 @@
         1
       ]
     },
-    "BayPlatformSlope2Transition": {
+    "BayPlatformSlope2TransitionGTCurve2": {
       "PageName": "Platform/SlopesTransition",
       "Ground": {},
       "Air": {},
@@ -5819,7 +5398,17 @@
           0
         ],
         [
+          1,
           0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
           0,
           1
         ],
@@ -5829,13 +5418,23 @@
           0
         ],
         [
+          1,
+          1,
+          0
+        ],
+        [
           0,
+          1,
+          1
+        ],
+        [
+          1,
           1,
           1
         ]
       ],
       "Size": [
-        1,
+        2,
         2,
         2
       ],
@@ -5900,64 +5499,128 @@
         1
       ]
     },
-    "BayTunnelExit": {
-      "PageName": "Tunnel/Entry",
-      "Ground": {
+    "BayPlatformSlope2TransitionMirror": {
+      "PageName": "Platform/SlopesTransition",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformSlopeBase": {
+      "PageName": "Platform/Slopes",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformSupport": {
+      "PageName": "Platform/Deco",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformSupportFree": {
+      "PageName": "Platform/Deco",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTransitionEsplanadeAir": {
+      "PageName": "Transitions",
+      "Air": {
         "Units": [
           [
             0,
             0,
             0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
           ]
         ],
         "Size": [
           1,
-          4,
+          1,
           1
         ],
         "SubVariants": [
           1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              2,
-              0
-            ],
-            "Dir": 0
-          }
         ]
       },
       "Variants": 1
     },
-    "BayTunnelEntry": {
-      "PageName": "Tunnel/Entry",
+    "BayPlatformTransitionEsplanadeGround": {
+      "PageName": "Transitions",
       "Ground": {
         "Units": [
           [
@@ -5993,1135 +5656,56 @@
         ],
         "SubVariants": [
           1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
         ]
       },
       "Variants": 1
     },
-    "BayTunnelExitSlopeStraight": {
-      "PageName": "Tunnel/Entry",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              2,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelExitBiSlope2End": {
-      "PageName": "Tunnel/Entry",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            0,
-            2,
-            1
-          ],
-          [
-            0,
-            3,
-            1
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          2
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              2,
-              1
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelSlope2": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              2,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelBiSlope2Start": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          3,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelBiSlope2Start2": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            0,
-            2,
-            1
-          ],
-          [
-            0,
-            3,
-            1
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          2
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              2,
-              1
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelBiSlope2End": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          3,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelSlope2Base": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ],
-          [
-            0,
-            3,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          4,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              2,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelSlopeBase": {
-      "PageName": "Tunnel/Slopes",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            0,
-            2,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          3,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelTurbo2": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelCheckpoint": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
-        ]
-      },
-      "Waypoint": "Checkpoint",
-      "Variants": 1,
-      "SpawnPos": [
-        16,
-        2,
-        16
-      ]
-    },
-    "BayTunnelGTCurve3": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            1,
-            0,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            2
-          ],
-          [
-            2,
-            0,
-            1
-          ],
-          [
-            2,
-            0,
-            2
-          ],
-          [
-            2,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            1,
-            1,
-            0
-          ],
-          [
-            2,
-            1,
-            0
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            1,
-            1,
-            1
-          ],
-          [
-            2,
-            1,
-            1
-          ],
-          [
-            1,
-            1,
-            2
-          ],
-          [
-            2,
-            1,
-            2
-          ]
-        ],
-        "Size": [
-          3,
-          2,
-          3
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              2,
-              0,
-              2
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelGTCurve2": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            1,
-            0,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            1,
-            1,
-            0
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            1,
-            1,
-            1
-          ]
-        ],
-        "Size": [
-          2,
-          2,
-          2
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              1,
-              0,
-              1
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelTurbo": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
-        ]
-      },
-      "Variants": 1
-    },
-    "BayTunnelRoad": {
-      "PageName": "Tunnel/Main",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayTunnelRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Road": {},
-      "Variants": 6
-    },
-    "BayRoadPillarStraight": {
-      "PageName": "Road/RoadSlopes",
-      "Ground": {
-        "SubVariants": [
-          2
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          3
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1
-    },
-    "BayRoadGTCurve2Pillar": {
-      "PageName": "Road/RoadMain",
-      "Ground": {
-        "SubVariants": [
-          1
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          4
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          0,
-          0,
-          1
-        ],
-        [
-          1,
-          0,
-          1
-        ]
-      ],
-      "Size": [
-        2,
-        1,
-        2
-      ],
-      "Variants": 1
-    },
-    "BayRoadPillar": {
-      "PageName": "Road/RoadMain",
-      "Ground": {
-        "SubVariants": [
-          2,
-          1,
-          1,
-          2,
-          2,
-          2
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          4,
-          4,
-          4,
-          4,
-          4,
-          4
-        ]
-      },
-      "Road": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 6
-    },
-    "BayRoadFinish": {
-      "PageName": "Road/RoadMain",
+    "BayPlatformTurbo": {
+      "PageName": "Platform/Base",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Finish",
       "Units": [
         [
           0,
           0,
           0
-        ],
-        [
-          0,
-          1,
-          0
         ]
       ],
       "Size": [
         1,
-        2,
+        1,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
       ]
     },
-    "BayRoadStartLine": {
-      "PageName": "Road/RoadMain",
+    "BayPlatformTurbo2": {
+      "PageName": "Platform/Turbo2",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Start",
       "Units": [
         [
           0,
           0,
           0
-        ],
-        [
-          0,
-          1,
-          0
         ]
       ],
       "Size": [
         1,
-        2,
+        1,
         1
       ],
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        }
-      ],
-      "SpawnPos": [
-        16,
-        1.5,
-        16
       ]
     },
-    "BayRoadGTCurve3Pillar": {
-      "PageName": "Road/RoadMain",
-      "Ground": {
-        "SubVariants": [
-          1
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          4
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          0
-        ],
-        [
-          1,
-          0,
-          1
-        ],
-        [
-          2,
-          0,
-          1
-        ],
-        [
-          2,
-          0,
-          2
-        ]
-      ],
-      "Size": [
-        3,
-        1,
-        3
-      ],
-      "Variants": 1
-    },
-    "BayRoadStartFinishLine": {
-      "PageName": "Road/RoadMain",
+    "BayPlatformTurbo2Down": {
+      "PageName": "Platform/Turbo2",
       "Ground": {},
       "Air": {},
-      "Waypoint": "StartFinish",
       "Units": [
         [
           0,
@@ -7142,38 +5726,12 @@
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ],
-      "SpawnPos": [
-        16,
-        1.5,
-        16
       ]
     },
-    "BayRoadCheckpoint": {
-      "PageName": "Road/RoadMain",
+    "BayPlatformTurbo2Left": {
+      "PageName": "Platform/Turbo2",
       "Ground": {},
       "Air": {},
-      "Waypoint": "Checkpoint",
       "Units": [
         [
           0,
@@ -7194,152 +5752,161 @@
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ],
-      "SpawnPos": [
-        16,
-        1.5,
-        16
       ]
     },
-    "BayRoadSupport": {
-      "PageName": "Road/RoadMain",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
+    "BayPlatformTurbo2Right": {
+      "PageName": "Platform/Turbo2",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
         ],
-        "Size": [
+        [
+          0,
           1,
-          1,
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 3
-          }
+          0
         ]
-      },
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 2
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 3
-          }
-        ]
-      },
-      "Road": {},
-      "Variants": 6,
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
       "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTurbo2Up": {
+      "PageName": "Platform/Turbo2",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
         1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTurboDown": {
+      "PageName": "Platform/Base",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
         1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTurboLeft": {
+      "PageName": "Platform/Base",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
         1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTurboRight": {
+      "PageName": "Platform/Base",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
         1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayPlatformTurboUp": {
+      "PageName": "Platform/Base",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
         1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
         1
       ]
     },
@@ -7408,8 +5975,8 @@
         }
       ]
     },
-    "BayRoadTurbo": {
-      "PageName": "Road/Ramps",
+    "BayRoadBiSlope2End": {
+      "PageName": "Road/RoadSlopesSupport",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -7417,353 +5984,41 @@
           0,
           0,
           0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadToll": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadTurboRoulette": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadTurbo2": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadRail": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadToll2": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        }
-      ]
-    },
-    "BayRoadRamp": {
-      "PageName": "Road/Ramps",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSupportTurbo": {
-      "PageName": "Road/Ramps",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
         ],
-        "Size": [
+        [
+          0,
           1,
-          1,
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 2
-          }
+          0
         ]
-      },
-      "Air": {
-        "Units": [
-          [
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
             0,
             0,
             0
           ],
-          [
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
             0,
             1,
             0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 0
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 2
-          }
-        ]
-      },
-      "Variants": 1,
-      "SubVariants": [
-        1
+          ],
+          "Dir": 0
+        }
       ]
     },
     "BayRoadBiSlope2Start": {
@@ -7812,10 +6067,32 @@
         }
       ]
     },
-    "BayRoadBiSlope2End": {
-      "PageName": "Road/RoadSlopesSupport",
+    "BayRoadClip": {
+      "PageName": "Other",
       "Ground": {},
       "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayRoadFinish": {
+      "PageName": "Road/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Finish",
       "Units": [
         [
           0,
@@ -7846,20 +6123,11 @@
             0
           ],
           "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
         }
       ]
     },
-    "BayRoadSupportSlope2": {
-      "PageName": "Road/RoadSlopesSupport",
+    "BayRoadGTCurve2": {
+      "PageName": "Road/Curves",
       "Ground": {},
       "Air": {},
       "Units": [
@@ -7869,279 +6137,215 @@
           0
         ],
         [
-          0,
           1,
+          0,
           0
         ],
         [
           0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadGTCurve2Pillar": {
+      "PageName": "Road/RoadMain",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          4
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1
+    },
+    "BayRoadGTCurve2Support": {
+      "PageName": "Road/Curves",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "Size": [
           2,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        3,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            2,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSlope2": {
-      "PageName": "Road/RoadSlopesSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
           1,
-          0
+          2
         ],
-        [
-          0,
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              1,
+              0,
+              1
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "Size": [
           2,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        3,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            2,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSupportBiSlope2End": {
-      "PageName": "Road/RoadSlopesSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
+          2,
+          2
         ],
-        [
-          0,
-          1,
-          0
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              1,
+              1,
+              1
+            ],
+            "Dir": 0
+          }
         ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
+      },
       "Variants": 1,
       "SubVariants": [
         1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSupportSlopeBase": {
-      "PageName": "Road/RoadSlopesSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSupportBiSlope2Start": {
-      "PageName": "Road/RoadSlopesSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
-      ]
-    },
-    "BayRoadSlopeBase": {
-      "PageName": "Road/RoadSlopesSupport",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ],
-        [
-          0,
-          1,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        2,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 2
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            1,
-            0
-          ],
-          "Dir": 0
-        }
       ]
     },
     "BayRoadGTCurve3": {
@@ -8220,10 +6424,18 @@
         }
       ]
     },
-    "BayRoadGTCurve2": {
-      "PageName": "Road/Curves",
-      "Ground": {},
-      "Air": {},
+    "BayRoadGTCurve3Pillar": {
+      "PageName": "Road/RoadMain",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          4
+        ]
+      },
       "Units": [
         [
           0,
@@ -8236,45 +6448,27 @@
           0
         ],
         [
-          0,
+          1,
           0,
           1
         ],
         [
-          1,
+          2,
           0,
           1
+        ],
+        [
+          2,
+          0,
+          2
         ]
       ],
       "Size": [
-        2,
+        3,
         1,
-        2
+        3
       ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "Clips": [
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            0,
-            0,
-            0
-          ],
-          "Dir": 1
-        },
-        {
-          "Name": "BayRoadClip",
-          "Offset": [
-            1,
-            0,
-            1
-          ],
-          "Dir": 0
-        }
-      ]
+      "Variants": 1
     },
     "BayRoadGTCurve3Support": {
       "PageName": "Road/Curves",
@@ -8461,6 +6655,1121 @@
         1
       ]
     },
+    "BayRoadCheckpoint": {
+      "PageName": "Road/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
+      ]
+    },
+    "BayRoadPillar": {
+      "PageName": "Road/RoadMain",
+      "Ground": {
+        "SubVariants": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      "Road": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 6
+    },
+    "BayRoadPillarStraight": {
+      "PageName": "Road/RoadSlopes",
+      "Ground": {
+        "SubVariants": [
+          2
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          3
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
+    },
+    "BayRoadRail": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadRamp": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSlope2": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSlopeBase": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadStartFinishLine": {
+      "PageName": "Road/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "StartFinish",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
+      ]
+    },
+    "BayRoadStartLine": {
+      "PageName": "Road/RoadMain",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Start",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        }
+      ],
+      "SpawnPos": [
+        16,
+        1.5,
+        16
+      ]
+    },
+    "BayRoadSupport": {
+      "PageName": "Road/RoadMain",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 3
+          }
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 3
+          }
+        ]
+      },
+      "Road": {},
+      "Variants": 6,
+      "SubVariants": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "BayRoadSupportBiSlope2End": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSupportBiSlope2Start": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSupportSlope2": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSupportSlopeBase": {
+      "PageName": "Road/RoadSlopesSupport",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "BayRoadSupportTurbo": {
+      "PageName": "Road/Ramps",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "BayRoadToll": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadToll2": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadTransitionEsplanadeAir": {
+      "PageName": "Transitions",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayRoadTransitionEsplanadeGround": {
+      "PageName": "Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          5,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              4,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              4,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayRoadTransitionToPlatform": {
+      "PageName": "Transitions",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadTurbo": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadTurbo2": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "BayRoadTurboRoulette": {
+      "PageName": "Road/Ramps",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "BayRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
     "BayRoadYShaped": {
       "PageName": "Road/Curves",
       "Ground": {},
@@ -8536,133 +7845,8 @@
         }
       ]
     },
-    "BayRoadGTCurve2Support": {
-      "PageName": "Road/Curves",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            1,
-            0,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            1
-          ]
-        ],
-        "Size": [
-          2,
-          1,
-          2
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              0,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              1,
-              0,
-              1
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            1,
-            0,
-            0
-          ],
-          [
-            0,
-            0,
-            1
-          ],
-          [
-            1,
-            0,
-            1
-          ],
-          [
-            0,
-            1,
-            0
-          ],
-          [
-            1,
-            1,
-            0
-          ],
-          [
-            0,
-            1,
-            1
-          ],
-          [
-            1,
-            1,
-            1
-          ]
-        ],
-        "Size": [
-          2,
-          2,
-          2
-        ],
-        "Clips": [
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              0,
-              1,
-              0
-            ],
-            "Dir": 1
-          },
-          {
-            "Name": "BayRoadClip",
-            "Offset": [
-              1,
-              1,
-              1
-            ],
-            "Dir": 0
-          }
-        ]
-      },
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayDocks": {
-      "PageName": "Other",
+    "BaySea": {
+      "PageName": "Terraformation",
       "Ground": {
         "Units": [
           [
@@ -8676,21 +7860,8 @@
           1,
           1
         ],
-        "Variants": 14,
+        "Variants": 1,
         "SubVariants": [
-          4,
-          3,
-          1,
-          1,
-          4,
-          4,
-          1,
-          1,
-          4,
-          4,
-          3,
-          4,
-          3,
           1
         ],
         "WaterUnits": [
@@ -8701,183 +7872,6 @@
         ]
       },
       "ZoneHeight": 0
-    },
-    "BayRoadClip": {
-      "PageName": "Other",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayFlatsRoadClip": {
-      "PageName": "Other",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayPlatformClip": {
-      "PageName": "Other",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "BayBridgeRoadClip": {
-      "PageName": "Other",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ],
-      "WaterUnits": [
-        [
-          0,
-          0
-        ]
-      ]
-    },
-    "BayTunnelRoadClip": {
-      "PageName": "Other",
-      "Air": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ],
-          [
-            0,
-            1,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          2,
-          1
-        ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Variants": 1
-    },
-    "BayHarborClip": {
-      "PageName": "Other",
-      "Ground": {
-        "SubVariants": [
-          1
-        ]
-      },
-      "Air": {
-        "SubVariants": [
-          0
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1
-    },
-    "BayEsplanade": {
-      "PageName": "Other",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
-        ],
-        "Size": [
-          1,
-          1,
-          1
-        ],
-        "Variants": 14,
-        "SubVariants": [
-          7,
-          3,
-          2,
-          2,
-          2,
-          5,
-          1,
-          1,
-          1,
-          5,
-          1,
-          3,
-          1,
-          1
-        ]
-      },
-      "ZoneHeight": 4
     },
     "BaySeaClip": {
       "PageName": "Other",
@@ -8911,52 +7905,1058 @@
         ]
       ]
     },
-    "BayFlatsRoadClipPillar": {
-      "PageName": "Other",
+    "BayShopsEsplanadeDeadend": {
+      "PageName": "Deco/Building",
       "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          5,
+          1
+        ],
+        "SubVariants": [
+          6
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelBiSlope2End": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelBiSlope2Start": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelBiSlope2Start2": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          2
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              2,
+              1
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelEntry": {
+      "PageName": "Tunnel/Entry",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          5,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelExit": {
+      "PageName": "Tunnel/Entry",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              2,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelExitBiSlope2End": {
+      "PageName": "Tunnel/Entry",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          2
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              2,
+              1
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelExitSlopeStraight": {
+      "PageName": "Tunnel/Entry",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayRoadClip",
+            "Offset": [
+              0,
+              2,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelGTCurve2": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              1,
+              0,
+              1
+            ],
+            "Dir": 3
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelGTCurve3": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "Size": [
+          3,
+          2,
+          3
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              2,
+              0,
+              2
+            ],
+            "Dir": 3
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelCheckpoint": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        16,
+        2,
+        16
+      ]
+    },
+    "BayTunnelRoad": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 3
+          }
+        ]
+      },
+      "Road": {},
+      "Variants": 6
+    },
+    "BayTunnelRoadClip": {
+      "PageName": "Other",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
         "SubVariants": [
           1
         ]
       },
-      "Air": {
-        "SubVariants": [
-          4
-        ]
-      },
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
       "Variants": 1
     },
-    "BayPlatformBoxClip": {
-      "PageName": "Other",
-      "Ground": {},
-      "Air": {},
-      "Units": [
-        [
-          0,
-          0,
-          0
+    "BayTunnelSlope2": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              2,
+              0
+            ],
+            "Dir": 0
+          }
         ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelSlope2Base": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              2,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelSlopeBase": {
+      "PageName": "Tunnel/Slopes",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelTurbo": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1
+    },
+    "BayTunnelTurbo2": {
+      "PageName": "Tunnel/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "BayTunnelRoadClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Variants": 1
     }
   }
 }
