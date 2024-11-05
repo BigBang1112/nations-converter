@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverter", "Src\Nat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterBot", "Src\NationsConverterBot\NationsConverterBot.csproj", "{5ED2B359-229D-4E6C-8FC9-65053093017D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterBuilder", "Src\NationsConverterBuilder\NationsConverterBuilder.csproj", "{4FE387D7-A8B1-4B57-B221-42A365DEC1C1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterCLI", "Src\NationsConverterCLI\NationsConverterCLI.csproj", "{38D6C3F2-CED0-4058-A26A-10FE5DC5DCBC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterShared", "Src\NationsConverterShared\NationsConverterShared.csproj", "{2A76492E-2D63-4ACC-A0DD-C0ECCFB94C6A}"
@@ -18,6 +16,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterWeb", "Src\NationsConverterWeb\NationsConverterWeb\NationsConverterWeb.csproj", "{253A28AB-886E-4ADF-8A71-D0576085B8DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NationsConverterWeb.Client", "Src\NationsConverterWeb\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj", "{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NationsConverterBuilder2", "Src\NationsConverterBuilder2\NationsConverterBuilder2.csproj", "{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{5ED2B359-229D-4E6C-8FC9-65053093017D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ED2B359-229D-4E6C-8FC9-65053093017D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ED2B359-229D-4E6C-8FC9-65053093017D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FE387D7-A8B1-4B57-B221-42A365DEC1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FE387D7-A8B1-4B57-B221-42A365DEC1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FE387D7-A8B1-4B57-B221-42A365DEC1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FE387D7-A8B1-4B57-B221-42A365DEC1C1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{38D6C3F2-CED0-4058-A26A-10FE5DC5DCBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38D6C3F2-CED0-4058-A26A-10FE5DC5DCBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38D6C3F2-CED0-4058-A26A-10FE5DC5DCBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,11 +60,11 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{2BAE206C-4320-4855-A229-84E918D5AE84} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{5ED2B359-229D-4E6C-8FC9-65053093017D} = {C4686498-B539-4420-BCB7-A5AEB884506B}
-		{4FE387D7-A8B1-4B57-B221-42A365DEC1C1} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{38D6C3F2-CED0-4058-A26A-10FE5DC5DCBC} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{2A76492E-2D63-4ACC-A0DD-C0ECCFB94C6A} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{253A28AB-886E-4ADF-8A71-D0576085B8DB} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46} = {C4686498-B539-4420-BCB7-A5AEB884506B}
+		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F80CCCE-40A6-4BE9-8853-5A8E3D4C276A}

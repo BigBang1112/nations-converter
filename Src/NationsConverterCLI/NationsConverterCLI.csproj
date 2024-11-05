@@ -28,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="..\NationsConverterBuilder\wwwroot\sheets\**\*.json">
+        <Content Include="..\NationsConverterBuilder2\wwwroot\sheets\**\*.json">
             <Link>Config\Default\Generated\%(RecursiveDir)%(Filename)%(Extension)</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
