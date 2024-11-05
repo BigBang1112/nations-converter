@@ -19,8 +19,15 @@
 else
 {
     <div class="web-browser">
-        <p>No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
-        <a href="#" class="web-browser-button button-shiny"><b>Open Nations Converter 2 web</b> (coming early 2025)</a>
+        @if (webAppReleased)
+        {
+            <p>No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
+            <a href="/webapp" class="web-browser-button button-shiny"><b>Open Nations Converter 2 web</b> (coming early 2025)</a>
+        }
+        else
+        {
+            <p>Want to run Nations Converter 2 directly in a web browser? Coming in 2025!</p>
+        }
     </div>
     <div class="downloads">
         <div class="readable-width white-mention">
@@ -130,7 +137,7 @@ else
             <h3>Crystal</h3>
             <p>The style of the old Nations Converter. Good old ways of exporting TM2 Stadium Crystal.Gbx and importing it in TM2020.</p>
             <h4>Modernized</h4>
-            <p>Improvements to dirt, pool, inflatables, and many other blocks. Presenting overall more details.</p>
+            <p>Improvements to dirt, pool, inflatables, and many other blocks. Presenting more details overall.</p>
             <h4>Classic</h4>
             <p>The old Nations Converter looks from 2020-2022 with minor improvements like usage of pipes and pudding items.</p>
             <h3>Solid</h3>
@@ -139,21 +146,21 @@ else
             <h4>Modless</h4>
             <p>Downloading texture mods suck. We decided to figure out how to make things look good using the TM2020 textures.</p>
             <h4>Mod</h4>
-            <p>To be done.</p>
+            <p>The equal experience to the old Trackmania games. No compromise in texture usage. To be done.</p>
             <h4>Balanced</h4>
-            <p>To be done.</p>
+            <p>Mod that looks acceptable when you don't have it downloaded. To be done.</p>
         </div>
     </div>
     <div class="readable-width">
         <div>
             <h2>Authors</h2>
             <div>
-                <h3>Development, technology, mesh modeling</h3>
+                <h3>Development, technology, mesh modeling assistance</h3>
                 <p>BigBang1112</p>
             </div>
             <div>
                 <h3>Mesh modeling team</h3>
-                <p>harry.alexm, Paddy Productions, nod, Zai</p>
+                <p>harry.alexm, Paddy Productions, nod, Zai, eyebo</p>
             </div>
             <div>
                 <h3>Mod work</h3>
@@ -163,6 +170,10 @@ else
                 <h3>Skins</h3>
                 <p>DMW</p>
             </div>
+            <div>
+                <h3>Assistance</h3>
+                <p>eyebo</p>
+            </div>
         </div>
     </div>
     }
@@ -171,6 +182,7 @@ else
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
     private bool released = false;
+    private bool webAppReleased = false;
 
     protected override async Task OnInitializedAsync()
     {
