@@ -174,7 +174,6 @@ internal sealed class InitStageService
             catch (Exception ex)
             {
                 logger.LogError(ex, "Failed to process block {BlockName}", block.Name);
-                throw;
             }
         }
     }
@@ -396,17 +395,21 @@ internal sealed class InitStageService
 
     private ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable, HashSet<Int2> notModifiable)
     {
-        var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
-        var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+        var airUnits = (node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels)?
+            .Select(x => x.RelativeOffset).ToArray() ?? [];
+        var groundUnits = (node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels)?
+            .Select(x => x.RelativeOffset).ToArray() ?? [];
 
         var airSize = airUnits.Length > 0 ? new Int3(airUnits.Max(x => x.X) + 1, airUnits.Max(x => x.Y) + 1, airUnits.Max(x => x.Z) + 1) : default(Int3?);
         var groundSize = groundUnits.Length > 0 ? new Int3(groundUnits.Max(x => x.X) + 1, groundUnits.Max(x => x.Y) + 1, groundUnits.Max(x => x.Z) + 1) : default(Int3?);
 
-        var airVariants = node.AirMobils?.Length ?? 0;
-        var groundVariants = node.GroundMobils?.Length ?? 0;
+        var airVariants = node.AirMobils?.Length ?? node.VariantBaseAir?.Mobils?.Length ?? 0;
+        var groundVariants = node.GroundMobils?.Length ?? node.VariantBaseGround?.Mobils?.Length ?? 0;
 
-        var airSubVariants = node.AirMobils?.Select(x => x.Length).ToArray() ?? [];
-        var groundSubVariants = node.GroundMobils?.Select(x => x.Length).ToArray() ?? [];
+        var airSubVariants = (node.AirMobils?.Select(x => x.Length)
+            ?? node.VariantBaseAir?.Mobils?.Select(x => x.Length))?.ToArray() ?? [];
+        var groundSubVariants = (node.GroundMobils?.Select(x => x.Length)
+            ?? node.VariantBaseGround?.Mobils?.Select(x => x.Length))?.ToArray() ?? [];
 
         var airClips = GetConversionClipModels(node.AirBlockUnitInfos).ToArray();
         var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos).ToArray();

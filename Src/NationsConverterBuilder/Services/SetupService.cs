@@ -5,16 +5,19 @@ using GBX.NET.Engines.Plug;
 using GBX.NET.Engines.Scene;
 using GBX.NET.Imaging.SkiaSharp;
 using NationsConverterBuilder.Models;
+using System.Collections.Immutable;
 
 namespace NationsConverterBuilder.Services;
 
 internal sealed class SetupService
 {
     private readonly string dataDirPath;
+    private readonly string data2DirPath;
 
     public SetupService(IWebHostEnvironment hostEnvironment)
     {
         dataDirPath = Path.Combine(hostEnvironment.WebRootPath, "data");
+        data2DirPath = Path.Combine(hostEnvironment.WebRootPath, "data2");
     }
 
     public Dictionary<string, CollectionModel> Collections { get; } = [];
@@ -106,7 +109,25 @@ internal sealed class SetupService
             return;
         }
 
-        foreach (var zone in collection.Node.CompleteListZoneList ?? [])
+        var completeZoneList = collection.Node.CompleteListZoneList ?? [];
+        var folderBlockInfoPaths = Directory.EnumerateFiles(Path.Combine(dataDirPath, collection.Node.FolderBlockInfo), "*.Gbx", SearchOption.AllDirectories);
+        var stadium2 = default(CGameCtnCollection);
+        var stadium2Blocks = default(ImmutableHashSet<string>);
+
+        if (collection.DisplayName == "Stadium" && Directory.Exists(Path.Combine(data2DirPath, "Collections")))
+        {
+            stadium2 = Gbx.ParseNode<CGameCtnCollection>(Path.Combine(data2DirPath, "Collections", "Stadium.TMCollection.Gbx"));
+            completeZoneList = completeZoneList
+                .Concat(stadium2.CompleteListZoneList ?? [])
+                .DistinctBy(x => x.File?.FilePath)
+                .ToArray();
+            stadium2Blocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.ED*.Gbx", SearchOption.AllDirectories)
+                .Where(x => !x.EndsWith(".EDClip.Gbx"))
+                .ToImmutableHashSet();
+            folderBlockInfoPaths = folderBlockInfoPaths.Concat(stadium2Blocks);
+        }
+
+        foreach (var zone in completeZoneList)
         {
             switch (zone.Node)
             {
@@ -156,9 +177,7 @@ internal sealed class SetupService
             }
         }
 
-        var folderBlockInfoPath = Path.Combine(dataDirPath, collection.Node.FolderBlockInfo);
-
-        foreach (var blockInfoFilePath in Directory.EnumerateFiles(folderBlockInfoPath, "*.Gbx", SearchOption.AllDirectories).AsParallel())
+        foreach (var blockInfoFilePath in folderBlockInfoPaths.AsParallel())
         {
             if (Gbx.ParseHeaderNode(blockInfoFilePath) is not CGameCtnBlockInfo blockInfoNode)
             {
@@ -182,15 +201,19 @@ internal sealed class SetupService
             var dirs = blockInfoNode.PageName?.Split(separator, StringSplitOptions.RemoveEmptyEntries) ?? [];
             var currentDirs = collection.BlockDirectories;
 
+            var blockName = stadium2Blocks?.Contains(blockInfoFilePath) == true
+                ? (Gbx.ParseNode(blockInfoFilePath) as CGameCtnBlockInfo)?.Ident.Id ?? throw new Exception("BlockInfo is null")
+                : blockInfoNode.Ident.Id;
+
             if (dirs.Length == 0)
             {
-                collection.RootBlocks.TryAdd(blockInfoNode.Ident.Id, new BlockInfoModel
+                collection.RootBlocks.TryAdd(blockName, new BlockInfoModel
                 {
-                    Name = blockInfoNode.Ident.Id,
+                    Name = blockName,
                     NodeHeader = blockInfoNode,
                     GbxFilePath = blockInfoFilePath,
                     WebpIcon = webpData,
-                    TerrainZone = collection.TerrainZones.GetValueOrDefault(blockInfoNode.Ident.Id)
+                    TerrainZone = collection.TerrainZones.GetValueOrDefault(blockName)
                 });
                 continue;
             }
@@ -206,13 +229,13 @@ internal sealed class SetupService
 
                 if (i == dirs.Length - 1)
                 {
-                    directory.Blocks.TryAdd(blockInfoNode.Ident.Id, new BlockInfoModel
+                    directory.Blocks.TryAdd(blockName, new BlockInfoModel
                     {
-                        Name = blockInfoNode.Ident.Id,
+                        Name = blockName,
                         NodeHeader = blockInfoNode,
                         GbxFilePath = blockInfoFilePath,
                         WebpIcon = webpData,
-                        TerrainZone = collection.TerrainZones.GetValueOrDefault(blockInfoNode.Ident.Id)
+                        TerrainZone = collection.TerrainZones.GetValueOrDefault(blockName)
                     });
                 }
 

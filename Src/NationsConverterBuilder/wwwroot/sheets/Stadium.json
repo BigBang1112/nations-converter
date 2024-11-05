@@ -8349,6 +8349,45 @@
       },
       "ZoneHeight": 0
     },
+    "StadiumPool2": {
+      "PageName": "Terraformation",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "Variants": 14,
+        "SubVariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      }
+    },
     "StadiumGrass": {
       "PageName": "Terraformation",
       "Ground": {
@@ -8398,6 +8437,32 @@
         ]
       },
       "ZoneHeight": 0
+    },
+    "StadiumWater2": {
+      "PageName": "Terraformation",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "Variants": 1,
+        "SubVariants": [
+          1
+        ]
+      }
     },
     "StadiumRoadTiltGTCurve3": {
       "PageName": "RoadTilt/GTCurves",
@@ -18745,20 +18810,115 @@
       "Modifiable": true,
       "Variants": 1
     },
-    "StadiumRoadDirtHillTiltClipRight": {
-      "PageName": "Other",
+    "StadiumRoadDirtHillTiltToRoadSlopeX4Mirror": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
       "Ground": {
         "Units": [
           [
             0,
             0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
             0
           ]
         ],
         "Size": [
-          1,
-          1,
-          1
+          4,
+          3,
+          2
         ],
         "SubVariants": [
           1
@@ -18766,33 +18926,10 @@
       },
       "Variants": 1
     },
-    "StadiumRoadMainClip": {
-      "PageName": "Other",
+    "StadiumRoadMainBirds": {
+      "PageName": "RoadMain/Main",
       "Ground": {},
       "Air": {},
-      "Modifiable": true,
-      "Units": [
-        [
-          0,
-          0,
-          0
-        ]
-      ],
-      "Size": [
-        1,
-        1,
-        1
-      ],
-      "Variants": 1,
-      "SubVariants": [
-        1
-      ]
-    },
-    "StadiumRoadTiltClipRight": {
-      "PageName": "Other",
-      "Ground": {},
-      "Air": {},
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -18815,7 +18952,366 @@
         1
       ]
     },
-    "StadiumRoadTiltClipLeft": {
+    "StadiumPlatformCornerWall4": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchToPlatformBiSlopeStart": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumFabricRampCornerIn": {
+      "PageName": "Inflatables/Fabric",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGTCurve4Wall4": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            2,
+            3
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            3
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ],
+          [
+            3,
+            3,
+            2
+          ],
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          4,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchCorner": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHighMultiLap": {
+      "PageName": "RoadDirt/RoadHighRace",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumTrenchInPillar": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtToRoadB": {
+      "PageName": "RoadDirt/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadTiltClipRight": {
       "PageName": "Other",
       "Ground": {},
       "Air": {},
@@ -18874,7 +19370,485 @@
         ]
       ]
     },
-    "StadiumRoadDirtHillTiltClipLeft": {
+    "StadiumBump1InGround": {
+      "PageName": "RoadMain/Hazards",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformWallCheckpointH": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumRoadTiltClipLeft": {
+      "PageName": "Other",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformForceAcceleration": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCheckpointRing2x1H": {
+      "PageName": "Platform/CheckpointRings",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          2,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumCircuitBorderSlopeGTCurve4InRightBottom": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            3,
+            5,
+            2
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            7,
+            2
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            2,
+            8,
+            3
+          ],
+          [
+            1,
+            8,
+            3
+          ],
+          [
+            0,
+            8,
+            3
+          ],
+          [
+            0,
+            9,
+            3
+          ],
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            3
+          ],
+          [
+            1,
+            6,
+            3
+          ]
+        ],
+        "Size": [
+          4,
+          10,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve3InLeftBottom": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            7,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            5,
+            1
+          ]
+        ],
+        "Size": [
+          3,
+          8,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainForceAccelerationTilt": {
+      "PageName": "RoadTilt/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCheckpointRing2x1V": {
+      "PageName": "Platform/CheckpointRings",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          2,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumRoadDirtHighClip": {
       "PageName": "Other",
       "Ground": {
         "Units": [
@@ -18887,6 +19861,4497 @@
         "Size": [
           1,
           1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Modifiable": true,
+      "Variants": 1
+    },
+    "StadiumCircuitForceAcceleration": {
+      "PageName": "Circuit/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTubeRoadClip": {
+      "PageName": "Other",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformLoopStartCorner": {
+      "PageName": "Platform/Loop",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        4,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitFreeWheeling": {
+      "PageName": "Circuit/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtForceAcceleration": {
+      "PageName": "RoadDirt/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitNoGrip": {
+      "PageName": "Circuit/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitBorderSlopeGTCurve3OutRightBottom": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ]
+        ],
+        "Size": [
+          3,
+          7,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve3InRightBottom": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            7,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            5,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          3,
+          8,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchToRoadMainBiSlopeStart": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchToRoadDirtX2": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainXBeam": {
+      "PageName": "RoadMain/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadMainClip": {
+      "PageName": "Other",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHighFreeWheeling": {
+      "PageName": "RoadDirt/RoadHighSpecials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          2
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainNoGripSlope": {
+      "PageName": "Slope/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTubeVDiag2": {
+      "PageName": "Bridges/Pillar",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ]
+      },
+      "Size": [
+        2,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTrenchMultiLap": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumCircuitBumpDown": {
+      "PageName": "Circuit/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHillTiltToRoadSlopeX2Mirror": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          3,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchTurbo": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve4InLeftBottom": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            3
+          ],
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            1,
+            8,
+            3
+          ],
+          [
+            2,
+            8,
+            3
+          ],
+          [
+            3,
+            8,
+            3
+          ],
+          [
+            3,
+            9,
+            3
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            3,
+            7,
+            3
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            2,
+            6,
+            3
+          ]
+        ],
+        "Size": [
+          4,
+          10,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve4OutLeftBottom": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            6,
+            3
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            3,
+            7,
+            3
+          ],
+          [
+            3,
+            8,
+            3
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            3,
+            5,
+            2
+          ],
+          [
+            3,
+            6,
+            3
+          ],
+          [
+            3,
+            5,
+            3
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          4,
+          9,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainSlopeBase1x2": {
+      "PageName": "Slope/Main",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadMainNoGripTilt": {
+      "PageName": "RoadTilt/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitForceAccelerationSlope2Air": {
+      "PageName": "Circuit/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPodium": {
+      "PageName": "Inflatables/Flame",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitBorderSlopeGTCurve3OutLeftBottom": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          3,
+          7,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltCheckpointRight": {
+      "PageName": "RoadDirt/HillTilt",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          2,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumTubeVDiag4": {
+      "PageName": "Bridges/Pillar",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ]
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ]
+        ]
+      },
+      "Size": [
+        2,
+        4,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumDecoTowerC": {
+      "PageName": "Inflatables/Tower",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            9,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          10,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchCross": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchFreeWheeling": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchToRoadMainX2": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformWallCheckpointV": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumFabricRamp": {
+      "PageName": "Inflatables/Fabric",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHillTiltToRoadSlopeMirror": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformForceAccelerationSlope2": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainInBeamSlope": {
+      "PageName": "Slope/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformWall1Birds": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchStraight": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltCheckpointLeft": {
+      "PageName": "RoadDirt/HillTilt",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          2,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumPlatformGridForceAcceleration": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtStraightBirds": {
+      "PageName": "RoadDirt/RoadLow",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDirtHill": {
+      "PageName": "Other",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "Variants": 14,
+        "SubVariants": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          4,
+          1,
+          1
+        ]
+      },
+      "ZoneHeight": 2
+    },
+    "StadiumPlatformCornerWall2": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchCrossTunnel": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDecoTowerB": {
+      "PageName": "Inflatables/Tower",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            9,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          10,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtFreeWheeling": {
+      "PageName": "RoadDirt/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          2
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltToRoadSlope": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainForceAccelerationSlope": {
+      "PageName": "Slope/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformNoGrip": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDecoTowerA": {
+      "PageName": "Inflatables/Tower",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            9,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          10,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumFabricPillarScreenSmall": {
+      "PageName": "Inflatables/Fabric",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtGTCurve4": {
+      "PageName": "RoadDirt/RoadLow",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          4,
+          2,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformGridBumper2": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGTCurve4Wall1": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          1,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformWall1Screen": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "PylonStadium": {
+      "PageName": "Other"
+    },
+    "StadiumDecoTowerD": {
+      "PageName": "Inflatables/Tower",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            9,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          10,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformCornerWall1": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainInBeam": {
+      "PageName": "RoadMain/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTubePillarBranch2": {
+      "PageName": "Bridges/Pillar",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchXRoadMain": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchGTCurve3": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "Size": [
+          3,
+          2,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDirtClip": {
+      "PageName": "Other",
+      "Ground": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          0
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
+    },
+    "StadiumPlatformNoGripSlope2": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainFWSlope": {
+      "PageName": "Slope/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        2
+      ]
+    },
+    "StadiumRoadDirtHillTiltGTCurve4In": {
+      "PageName": "RoadDirt/HillTilt",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            3
+          ],
+          [
+            3,
+            3,
+            2
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "Size": [
+          4,
+          4,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformFW": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainNoSteeringSlope": {
+      "PageName": "Slope/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtNoSteering": {
+      "PageName": "RoadDirt/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformGridNoGrip": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGTCurve4Wall2": {
+      "PageName": "Platform/GTCurve",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            3
+          ]
+        ],
+        "Size": [
+          4,
+          2,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchGTCurve3Tunnel": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          3,
+          2,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve4InRightTop": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            1
+          ],
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            3,
+            5,
+            2
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            3,
+            7,
+            3
+          ],
+          [
+            3,
+            7,
+            2
+          ],
+          [
+            3,
+            8,
+            3
+          ],
+          [
+            3,
+            9,
+            3
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            3,
+            6,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          10,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve3InRightTop": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            7,
+            2
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          3,
+          8,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDecoTowerBeam": {
+      "PageName": "Inflatables/Tower",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadMainNoSteeringTilt": {
+      "PageName": "RoadTilt/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadMainFWTilt": {
+      "PageName": "RoadTilt/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        2
+      ]
+    },
+    "StadiumTrenchGTCurve2": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTubePillarBranch4": {
+      "PageName": "Bridges/Pillar",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainSlopeUBottomInGround": {
+      "PageName": "Slope/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumGrassBirds": {
+      "PageName": "RoadMain/Race",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ]
+      },
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCarterRoadClip": {
+      "PageName": "Other",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTrenchGTCurve2Tunnel": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHighNoSteering": {
+      "PageName": "RoadDirt/RoadHighSpecials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDecoTowerCore": {
+      "PageName": "Inflatables/Tower",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformMultilap": {
+      "PageName": "Platform/Checkpoints",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumTrenchToRoadMain": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve4OutRightTop": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            3,
+            5,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            5,
+            1
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            3,
+            6,
+            3
+          ],
+          [
+            3,
+            7,
+            3
+          ],
+          [
+            3,
+            8,
+            3
+          ],
+          [
+            2,
+            6,
+            3
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            2,
+            7,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ]
+        ],
+        "Size": [
+          4,
+          9,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve3InLeftTop": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            7,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ]
+        ],
+        "Size": [
+          3,
+          8,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchCheckpoint": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Checkpoint",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumCircuitBorderSlopeGTCurve4OutRightBottom": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            3
+          ],
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            6,
+            3
+          ],
+          [
+            0,
+            8,
+            3
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            5,
+            3
+          ],
+          [
+            0,
+            5,
+            3
+          ]
+        ],
+        "Size": [
+          4,
+          9,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformNoSteeringSlope2": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainXBeamTilt": {
+      "PageName": "RoadTilt/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformBiSlope2StartSmall": {
+      "PageName": "Platform/Road",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadTiltStraightBirds": {
+      "PageName": "RoadTilt/Main",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHighGTCurve2": {
+      "PageName": "RoadDirt/RoadHigh",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHighFenceStraightBirds": {
+      "PageName": "RoadDirt/RoadHigh",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
           1
         ],
         "SubVariants": [
@@ -19009,7 +24474,845 @@
         ]
       ]
     },
-    "StadiumRoadDirtParkClip": {
+    "StadiumAirshipDiag": {
+      "PageName": "Inflatables/Inflat",
+      "Air": {
+        "Units": [
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            2,
+            6,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            1,
+            6,
+            1
+          ],
+          [
+            1,
+            5,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            5,
+            0
+          ],
+          [
+            1,
+            4,
+            0
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            2,
+            4,
+            3
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            6,
+            3
+          ],
+          [
+            3,
+            6,
+            2
+          ],
+          [
+            3,
+            5,
+            2
+          ],
+          [
+            3,
+            4,
+            2
+          ],
+          [
+            3,
+            3,
+            2
+          ],
+          [
+            3,
+            2,
+            2
+          ],
+          [
+            3,
+            2,
+            3
+          ],
+          [
+            3,
+            3,
+            3
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            3,
+            5,
+            3
+          ],
+          [
+            3,
+            6,
+            3
+          ],
+          [
+            4,
+            6,
+            4
+          ],
+          [
+            4,
+            5,
+            4
+          ],
+          [
+            4,
+            4,
+            4
+          ],
+          [
+            4,
+            3,
+            4
+          ],
+          [
+            4,
+            2,
+            4
+          ],
+          [
+            4,
+            3,
+            3
+          ],
+          [
+            4,
+            4,
+            3
+          ],
+          [
+            4,
+            5,
+            3
+          ],
+          [
+            3,
+            5,
+            4
+          ],
+          [
+            3,
+            4,
+            4
+          ],
+          [
+            3,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ],
+        "Size": [
+          5,
+          7,
+          5
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltToRoadSlopeX2": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          2,
+          3,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformLoopEndCorner": {
+      "PageName": "Platform/Loop",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitNoGripSlope2Air": {
+      "PageName": "Circuit/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformNoSteering": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumDecoTowerCore6": {
+      "PageName": "Inflatables/Tower",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ]
+      },
+      "Size": [
+        1,
+        6,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTubeVDiag1": {
+      "PageName": "Bridges/Pillar",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitBorderSlopeGTCurve4InLeftTop": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            6,
+            3
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            8,
+            3
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            0,
+            7,
+            2
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            9,
+            3
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            1,
+            5,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          10,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltClipRight": {
+      "PageName": "Other",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtMultiLap": {
+      "PageName": "RoadDirt/Race",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "StartFinish",
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumTrenchStraightTunnel": {
+      "PageName": "Trench/Main",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumFabricRampCornerOut": {
+      "PageName": "Inflatables/Fabric",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadMainStraight": {
+      "PageName": "RoadMain/Main",
+      "Ground": {
+        "SubVariants": [
+          4
+        ]
+      },
+      "Air": {
+        "SubVariants": [
+          1
+        ]
+      },
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1
+    },
+    "StadiumRoadDirtClip": {
       "PageName": "Other",
       "Ground": {
         "Units": [
@@ -19031,7 +25334,984 @@
       "Modifiable": true,
       "Variants": 1
     },
-    "StadiumDirtClip": {
+    "StadiumPlatformGridStraightBirds": {
+      "PageName": "Platform/Grid",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGridFW": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHighGTCurve4": {
+      "PageName": "RoadDirt/RoadHigh",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            3
+          ],
+          [
+            3,
+            1,
+            2
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            3
+          ]
+        ],
+        "Size": [
+          4,
+          2,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitNoSteeringSlope2Air": {
+      "PageName": "Circuit/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformGridStraight": {
+      "PageName": "Platform/Grid",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHighNoGrip": {
+      "PageName": "RoadDirt/RoadHighSpecials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformGridCheckpoint": {
+      "PageName": "Platform/Grid",
+      "Ground": {},
+      "Air": {},
+      "Waypoint": "Checkpoint",
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
+    "StadiumRoadMainXBeamSlope": {
+      "PageName": "Slope/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTrenchToLoopStart": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainInBeamTilt": {
+      "PageName": "RoadTilt/Hazards",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHillTiltGTCurve3In": {
+      "PageName": "RoadDirt/HillTilt",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2
+          ],
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            1
+          ]
+        ],
+        "Size": [
+          3,
+          3,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTubeVDiag16": {
+      "PageName": "Bridges/Pillar",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            1,
+            8,
+            0
+          ],
+          [
+            1,
+            9,
+            0
+          ],
+          [
+            1,
+            10,
+            0
+          ],
+          [
+            1,
+            11,
+            0
+          ],
+          [
+            1,
+            12,
+            0
+          ],
+          [
+            1,
+            13,
+            0
+          ],
+          [
+            1,
+            14,
+            0
+          ],
+          [
+            1,
+            15,
+            0
+          ],
+          [
+            1,
+            7,
+            0
+          ]
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            8,
+            0
+          ],
+          [
+            1,
+            8,
+            0
+          ],
+          [
+            1,
+            9,
+            0
+          ],
+          [
+            1,
+            10,
+            0
+          ],
+          [
+            1,
+            11,
+            0
+          ],
+          [
+            1,
+            12,
+            0
+          ],
+          [
+            1,
+            13,
+            0
+          ],
+          [
+            1,
+            14,
+            0
+          ],
+          [
+            1,
+            15,
+            0
+          ],
+          [
+            1,
+            7,
+            0
+          ]
+        ]
+      },
+      "Size": [
+        2,
+        16,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumTrenchToRoadDirt": {
+      "PageName": "Trench/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitNoSteering": {
+      "PageName": "Circuit/Specials",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHighForceAcceleration": {
+      "PageName": "RoadDirt/RoadHighSpecials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitBorderSlopeGTCurve3OutLeftTop": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
+        "Units": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            1,
+            5,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            0,
+            4,
+            1
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            0,
+            5,
+            1
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ]
+        ],
+        "Size": [
+          3,
+          7,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadDirtHillTiltToRoadSlopeX4": {
+      "PageName": "RoadDirt/HillTiltToRoadSlope",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            0,
+            1
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            1,
+            1
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          3,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumGrassClip": {
       "PageName": "Other",
       "Ground": {
         "SubVariants": [
@@ -19057,9 +26337,9 @@
       ],
       "Variants": 1
     },
-    "StadiumDirtHill": {
-      "PageName": "Other",
-      "Ground": {
+    "StadiumCircuitBorderSlopeGTCurve3OutRightTop": {
+      "PageName": "Circuit/BorderCurve3",
+      "Air": {
         "Units": [
           [
             0,
@@ -19070,38 +26350,402 @@
             0,
             1,
             0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            1
+          ],
+          [
+            1,
+            4,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            1,
+            5,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          3,
+          7,
+          3
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumCircuitToRoadMain": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtHillTiltClipLeft": {
+      "PageName": "Other",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
           ]
         ],
         "Size": [
           1,
-          2,
+          1,
           1
         ],
-        "Variants": 14,
         "SubVariants": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          4,
-          1,
           1
         ]
       },
-      "ZoneHeight": 2
+      "Variants": 1
     },
-    "StadiumCarterRoadClip": {
-      "PageName": "Other",
+    "StadiumCircuitBorderSlopeGTCurve4OutLeftTop": {
+      "PageName": "Circuit/BorderCurve4",
+      "Air": {
+        "Units": [
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ],
+          [
+            3,
+            3,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            1
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            4,
+            1
+          ],
+          [
+            2,
+            5,
+            1
+          ],
+          [
+            2,
+            4,
+            2
+          ],
+          [
+            2,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            2
+          ],
+          [
+            1,
+            4,
+            2
+          ],
+          [
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            0,
+            6,
+            2
+          ],
+          [
+            1,
+            5,
+            2
+          ],
+          [
+            1,
+            6,
+            2
+          ],
+          [
+            1,
+            7,
+            2
+          ],
+          [
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            8,
+            3
+          ],
+          [
+            1,
+            6,
+            3
+          ],
+          [
+            1,
+            7,
+            3
+          ],
+          [
+            0,
+            6,
+            3
+          ],
+          [
+            3,
+            4,
+            1
+          ]
+        ],
+        "Size": [
+          4,
+          9,
+          4
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTubeVDiag8": {
+      "PageName": "Bridges/Pillar",
       "Ground": {},
       "Air": {},
-      "Modifiable": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          4,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          1,
+          6,
+          0
+        ],
+        [
+          1,
+          7,
+          0
+        ],
+        [
+          1,
+          3,
+          0
+        ]
+      ],
+      "Size": [
+        2,
+        8,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGridBumper": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
       "Units": [
         [
           0,
@@ -19118,6 +26762,37 @@
       "SubVariants": [
         1
       ]
+    },
+    "StadiumPlatformFWSlope2": {
+      "PageName": "Platform/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
     },
     "StadiumPool": {
       "PageName": "Other",
@@ -19160,11 +26835,10 @@
       },
       "ZoneHeight": 0
     },
-    "StadiumTubeRoadClip": {
-      "PageName": "Other",
+    "StadiumPlatformGridTurbo": {
+      "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -19182,65 +26856,120 @@
         1
       ]
     },
-    "StadiumRoadDirtClip": {
-      "PageName": "Other",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
+    "StadiumCircuitLoopStartCorner": {
+      "PageName": "Circuit/Ramp",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
         ],
-        "Size": [
+        [
+          0,
           1,
-          1,
-          1
+          0
         ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Modifiable": true,
-      "Variants": 1
-    },
-    "StadiumRoadDirtHighClip": {
-      "PageName": "Other",
-      "Ground": {
-        "Units": [
-          [
-            0,
-            0,
-            0
-          ]
+        [
+          0,
+          2,
+          0
         ],
-        "Size": [
-          1,
-          1,
-          1
+        [
+          0,
+          3,
+          0
         ],
-        "SubVariants": [
-          1
-        ]
-      },
-      "Modifiable": true,
-      "Variants": 1
-    },
-    "PylonStadium": {
-      "PageName": "Other"
-    },
-    "StadiumGrassClip": {
-      "PageName": "Other",
-      "Ground": {
-        "SubVariants": [
-          1
-        ]
-      },
-      "Air": {
-        "SubVariants": [
+        [
+          0,
+          4,
           0
         ]
+      ],
+      "Size": [
+        1,
+        5,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumRoadDirtParkClip": {
+      "PageName": "Other",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
       },
+      "Modifiable": true,
+      "Variants": 1
+    },
+    "StadiumRoadDirtNoGrip": {
+      "PageName": "RoadDirt/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumTrenchStraightScreen": {
+      "PageName": "Trench/Specials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumPlatformGridNoSteering": {
+      "PageName": "Platform/GridSpecials",
+      "Ground": {},
+      "Air": {},
       "Units": [
         [
           0,
@@ -19253,7 +26982,83 @@
         1,
         1
       ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumCircuitFreeWheelingSlope2Air": {
+      "PageName": "Circuit/Specials",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
       "Variants": 1
+    },
+    "StadiumRoadDirtHighTurbo": {
+      "PageName": "RoadDirt/RoadHighSpecials",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Variants": 1
+    },
+    "StadiumRoadMainCorner": {
+      "PageName": "RoadMain/Main",
+      "Ground": {},
+      "Air": {},
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
     }
   }
 }

@@ -363,5 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 
 Src/NationsConverterBuilder/wwwroot/data
+Src/NationsConverterBuilder/wwwroot/data2
 Src/NationsConverterBuilder/wwwroot/items
 Src/NationsConverterWeb/NationsConverterWeb/wwwroot/music

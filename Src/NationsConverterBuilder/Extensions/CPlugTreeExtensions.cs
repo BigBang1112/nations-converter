@@ -377,7 +377,7 @@ public static class CPlugTreeExtensions
 
         var plugCrystal = new CPlugCrystal
         {
-            Materials = materials.Values.ToArray(),
+            Materials = materials.Values.ToList(),
             Layers = layers
         };
 
