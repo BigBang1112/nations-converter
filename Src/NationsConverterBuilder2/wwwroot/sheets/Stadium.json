@@ -490,6 +490,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumBump1": {
@@ -578,6 +579,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumBump1Slope": {
@@ -2564,6 +2566,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3InLeftTop": {
@@ -2750,6 +2753,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3InRightBottom": {
@@ -2926,6 +2930,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3InRightTop": {
@@ -3112,6 +3117,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3OutLeftBottom": {
@@ -3280,6 +3286,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3OutLeftTop": {
@@ -3458,6 +3465,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3OutRightBottom": {
@@ -3640,6 +3648,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve3OutRightTop": {
@@ -3818,6 +3827,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4InLeftBottom": {
@@ -4046,6 +4056,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4InLeftTop": {
@@ -4280,6 +4291,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4InRightBottom": {
@@ -4494,6 +4506,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4InRightTop": {
@@ -4728,6 +4741,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4OutLeftBottom": {
@@ -4944,6 +4958,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4OutLeftTop": {
@@ -5170,6 +5185,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4OutRightBottom": {
@@ -5405,6 +5421,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeGTCurve4OutRightTop": {
@@ -5626,6 +5643,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitBorderSlopeStartLeft": {
@@ -5857,6 +5875,7 @@
       "PageName": "Circuit/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -5978,6 +5997,7 @@
       "PageName": "Circuit/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -6100,12 +6120,14 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitFreeWheeling": {
       "PageName": "Circuit/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -6228,6 +6250,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitHole": {
@@ -6298,6 +6321,7 @@
       "PageName": "Circuit/Ramp",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -6359,6 +6383,7 @@
       "PageName": "Circuit/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -6481,12 +6506,14 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitNoSteering": {
       "PageName": "Circuit/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -6609,6 +6636,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumCircuitPillar1": {
@@ -6965,6 +6993,7 @@
       "PageName": "Circuit/FlatBase",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -7575,6 +7604,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumDecoTowerB": {
@@ -7641,12 +7671,14 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumDecoTowerBeam": {
       "PageName": "Inflatables/Tower",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -7728,12 +7760,14 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumDecoTowerCore": {
       "PageName": "Inflatables/Tower",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -7821,6 +7855,7 @@
           ]
         ]
       },
+      "TM2": true,
       "Size": [
         1,
         6,
@@ -7895,6 +7930,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumDirt": {
@@ -9163,6 +9199,7 @@
       "PageName": "Inflatables/Fabric",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -9227,6 +9264,7 @@
           }
         ]
       },
+      "TM2": true,
       "Units": [
         [
           0,
@@ -9281,6 +9319,7 @@
           }
         ]
       },
+      "TM2": true,
       "Units": [
         [
           0,
@@ -9345,6 +9384,7 @@
           }
         ]
       },
+      "TM2": true,
       "Units": [
         [
           0,
@@ -9603,6 +9643,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1,
       "SubVariants": [
         1
@@ -10088,6 +10129,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -10150,6 +10192,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -11092,6 +11135,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformCornerWall1": {
@@ -11113,6 +11157,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformCornerWall2": {
@@ -11139,6 +11184,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformCornerWall4": {
@@ -11175,6 +11221,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformForceAcceleration": {
@@ -11196,6 +11243,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformForceAccelerationSlope2": {
@@ -11227,6 +11275,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformFW": {
@@ -11248,6 +11297,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformFWSlope2": {
@@ -11279,12 +11329,14 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformGridBumper": {
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11306,6 +11358,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11327,6 +11380,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11348,6 +11402,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11370,6 +11425,7 @@
       "Ground": {},
       "Air": {},
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11401,6 +11457,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11422,6 +11479,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11443,6 +11501,7 @@
       "PageName": "Platform/Grid",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11464,6 +11523,7 @@
       "PageName": "Platform/Grid",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11485,6 +11545,7 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -11927,6 +11988,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformGTCurve4Wall2": {
@@ -12013,6 +12075,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformGTCurve4Wall4": {
@@ -12169,6 +12232,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformCheckpoint": {
@@ -12446,6 +12510,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformLoopStart": {
@@ -12489,6 +12554,7 @@
       "PageName": "Platform/Loop",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -12551,6 +12617,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -12577,6 +12644,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformNoGripSlope2": {
@@ -12608,6 +12676,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformNoSteering": {
@@ -12629,6 +12698,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformNoSteeringSlope2": {
@@ -12660,6 +12730,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformRoad": {
@@ -13082,6 +13153,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformWall1Screen": {
@@ -13114,6 +13186,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformWall2": {
@@ -13234,6 +13307,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -13261,6 +13335,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -13298,6 +13373,7 @@
       "PageName": "Inflatables/Flame",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -13398,7 +13474,8 @@
           1,
           1
         ]
-      }
+      },
+      "TM2": true
     },
     "StadiumRamp": {
       "PageName": "RoadMain/Hazards",
@@ -13831,6 +13908,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtFreeWheeling": {
@@ -13852,6 +13930,7 @@
           2
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtGTCurve2": {
@@ -14112,6 +14191,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHigh": {
@@ -14325,6 +14405,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighForceAcceleration": {
@@ -14346,6 +14427,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighFreeWheeling": {
@@ -14367,6 +14449,7 @@
           2
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighGTCurve2": {
@@ -14423,6 +14506,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighGTCurve3": {
@@ -14646,6 +14730,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighCheckpoint": {
@@ -14736,6 +14821,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -14762,6 +14848,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighNoSteering": {
@@ -14783,6 +14870,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighToRoad": {
@@ -14851,6 +14939,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillSlope": {
@@ -15587,6 +15676,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltGTCurve4In": {
@@ -15793,6 +15883,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltCheckpointLeft": {
@@ -15860,6 +15951,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -15932,6 +16024,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -16202,6 +16295,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltToRoadSlopeMirror": {
@@ -16259,6 +16353,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltToRoadSlopeX2": {
@@ -16336,6 +16431,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltToRoadSlopeX2Mirror": {
@@ -16413,6 +16509,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltToRoadSlopeX4": {
@@ -16540,6 +16637,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillTiltToRoadSlopeX4Mirror": {
@@ -16667,6 +16765,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtHillWave": {
@@ -16813,6 +16912,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -16839,6 +16939,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtNoSteering": {
@@ -16860,6 +16961,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtParkClip": {
@@ -16908,6 +17010,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtToRoad": {
@@ -16982,6 +17085,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadDirtToRoadDirtHigh": {
@@ -17446,6 +17550,7 @@
       "PageName": "RoadMain/Main",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -17627,6 +17732,7 @@
       "PageName": "RoadMain/Main",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -17707,6 +17813,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -17753,6 +17860,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -17841,6 +17949,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -17887,6 +17996,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -19856,6 +19966,7 @@
       "PageName": "RoadMain/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -19897,6 +20008,7 @@
       "PageName": "Slope/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -19943,6 +20055,7 @@
       "PageName": "RoadTilt/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -19989,6 +20102,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -20035,6 +20149,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -20081,6 +20196,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -20127,6 +20243,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -20220,6 +20337,7 @@
       "PageName": "Slope/Main",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -20457,6 +20575,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumRoadMainSlopeUTop": {
@@ -20609,6 +20728,7 @@
           1
         ]
       },
+      "TM2": true,
       "Units": [
         [
           0,
@@ -21103,6 +21223,7 @@
       "PageName": "RoadMain/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -21144,6 +21265,7 @@
       "PageName": "Slope/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -21190,6 +21312,7 @@
       "PageName": "RoadTilt/Hazards",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -22607,6 +22730,7 @@
       "PageName": "RoadTilt/Main",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -27284,6 +27408,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchCross": {
@@ -27310,6 +27435,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchCrossTunnel": {
@@ -27336,6 +27462,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchFreeWheeling": {
@@ -27362,6 +27489,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchGTCurve2": {
@@ -27418,6 +27546,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchGTCurve2Tunnel": {
@@ -27464,6 +27593,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchGTCurve3": {
@@ -27545,6 +27675,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchGTCurve3Tunnel": {
@@ -27611,6 +27742,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchCheckpoint": {
@@ -27638,6 +27770,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -27669,6 +27802,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchMultiLap": {
@@ -27696,6 +27830,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "TM2": true,
       "Variants": 1,
       "SpawnPos": [
         0,
@@ -27727,6 +27862,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchStraightScreen": {
@@ -27753,6 +27889,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchStraightTunnel": {
@@ -27779,6 +27916,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToLoopStart": {
@@ -27815,6 +27953,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToPlatformBiSlopeStart": {
@@ -27861,6 +28000,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToRoadDirt": {
@@ -27887,6 +28027,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToRoadDirtX2": {
@@ -27923,6 +28064,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToRoadMain": {
@@ -27960,6 +28102,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToRoadMainBiSlopeStart": {
@@ -28007,6 +28150,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchToRoadMainX2": {
@@ -28054,6 +28198,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchTurbo": {
@@ -28080,6 +28225,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTrenchXRoadMain": {
@@ -28126,6 +28272,7 @@
           }
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTube": {
@@ -28212,6 +28359,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTubePillarBranch4": {
@@ -28233,6 +28381,7 @@
           1
         ]
       },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumTubePillarCap": {
@@ -28793,6 +28942,7 @@
       "PageName": "Bridges/Pillar",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -29005,6 +29155,7 @@
           ]
         ]
       },
+      "TM2": true,
       "Size": [
         2,
         16,
@@ -29065,6 +29216,7 @@
           ]
         ]
       },
+      "TM2": true,
       "Size": [
         2,
         2,
@@ -29145,6 +29297,7 @@
           ]
         ]
       },
+      "TM2": true,
       "Size": [
         2,
         4,
@@ -29159,6 +29312,7 @@
       "PageName": "Bridges/Pillar",
       "Ground": {},
       "Air": {},
+      "TM2": true,
       "Units": [
         [
           0,
@@ -29273,7 +29427,8 @@
         "SubVariants": [
           1
         ]
-      }
+      },
+      "TM2": true
     },
     "StadiumWaterClip": {
       "PageName": "Other",

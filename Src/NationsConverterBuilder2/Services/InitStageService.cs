@@ -537,7 +537,8 @@ internal sealed class InitStageService
             Road = node is CGameCtnBlockInfoRoad ? new() : null,
             PlacePylons = commonPlacePylons,
             //AcceptPylons = commonAcceptPylons
-            TerrainModifierUnits = commonTerrainModifierUnits?.Count == 0 ? null : commonTerrainModifierUnits
+            TerrainModifierUnits = commonTerrainModifierUnits?.Count == 0 ? null : commonTerrainModifierUnits,
+            TM2 = node.Chunks.Get<CGameCtnBlockInfo.Chunk0304E023>() is not null ? true : null
         };
     }
 
