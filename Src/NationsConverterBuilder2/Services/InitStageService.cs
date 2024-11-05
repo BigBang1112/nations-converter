@@ -411,8 +411,8 @@ internal sealed class InitStageService
         var groundSubVariants = (node.GroundMobils?.Select(x => x.Length)
             ?? node.VariantBaseGround?.Mobils?.Select(x => x.Length))?.ToArray() ?? [];
 
-        var airClips = GetConversionClipModels(node.AirBlockUnitInfos).ToArray();
-        var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos).ToArray();
+        var airClips = GetConversionClipModels(node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels).ToArray();
+        var groundClips = GetConversionClipModels(node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels).ToArray();
 
         Vec3? airSpawnPos = node.WayPointType
             is CGameCtnBlockInfo.EWayPointType.Start
@@ -534,7 +534,7 @@ internal sealed class InitStageService
         };
     }
 
-    private static IEnumerable<ConversionClipModel> GetConversionClipModels(CGameCtnBlockUnitInfo[]? blockUnitInfos)
+    private IEnumerable<ConversionClipModel> GetConversionClipModels(CGameCtnBlockUnitInfo[]? blockUnitInfos)
     {
         if (blockUnitInfos is null)
         {
@@ -550,16 +550,22 @@ internal sealed class InitStageService
 
             for (var i = 0; i < unit.Clips.Length; i++)
             {
-                var clip = unit.Clips[i];
-                if (clip.Node is not null)
+                if (unit.Clips[i].Node is not CGameCtnBlockInfoClip clip)
                 {
-                    yield return new ConversionClipModel
-                    {
-                        Name = clip.Node.Ident.Id,
-                        Offset = unit.RelativeOffset,
-                        Dir = (Direction)i
-                    };
+                    continue;
                 }
+
+                if (setupService.Stadium2Clips.Contains(clip.Ident.Id))
+                {
+                    continue;
+                }
+
+                yield return new ConversionClipModel
+                {
+                    Name = clip.Ident.Id,
+                    Offset = unit.RelativeOffset,
+                    Dir = (Direction)i
+                };
             }
         }
     }

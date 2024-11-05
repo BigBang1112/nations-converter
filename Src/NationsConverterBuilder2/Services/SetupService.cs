@@ -21,6 +21,7 @@ internal sealed class SetupService
     }
 
     public Dictionary<string, CollectionModel> Collections { get; } = [];
+    public HashSet<string> Stadium2Clips { get; set; } = [];
 
     internal static readonly char[] separator = ['/', '\\'];
 
@@ -124,6 +125,9 @@ internal sealed class SetupService
             stadium2Blocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.ED*.Gbx", SearchOption.AllDirectories)
                 .Where(x => !x.EndsWith(".EDClip.Gbx"))
                 .ToImmutableHashSet();
+            Stadium2Clips = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.EDClip.Gbx", SearchOption.AllDirectories)
+                .Select(x => GbxPath.GetFileNameWithoutExtension(x))
+                .ToHashSet();
             folderBlockInfoPaths = folderBlockInfoPaths.Concat(stadium2Blocks);
         }
 
