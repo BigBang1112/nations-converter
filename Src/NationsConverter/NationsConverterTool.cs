@@ -63,11 +63,11 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager);
         pylonStage.Convert();
 
-        var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
-        placeTransformationStage.Convert();
-
         var decorationStage = new DecorationStage(mapIn, mapOut, conversionSet, Config, customContentManager, logger);
         decorationStage.Convert();
+
+        var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
+        placeTransformationStage.Convert();
 
         var userDataPackFilePath = customContentManager.EmbedData();
 

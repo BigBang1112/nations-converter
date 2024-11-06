@@ -2,22 +2,58 @@
 
 This is where the new TMUF is being made.
 
+## Overview
+
+```mermaid
+graph LR
+    X(Create Base Map)
+    ExA(Conversion Set)
+    ExA --> ExB(Covered Zone Block Info)
+    ExA --> ExC(Terrain Modifier Zone)
+    X --> A(Place Base Zone)
+    A --> B(Place Block)
+    B --> C(Water)
+    C --> D(Pylon)
+    D --> E(Decoration)
+    E --> F(Place Transformation)
+    F --> G(MediaTracker)
+    G --> H(Music)
+    H --> I(Metadata)
+    I --> Y(Outputted map)
+
+    ExA --> A
+    ExA --> B
+    ExA --> C
+    ExA --> D
+    ExA --> E
+    ExA --> F
+
+    ExB --> B
+    ExB --> C
+    ExC --> A
+    ExC --> B
+    
+    subgraph Extracts from input map
+        ExA
+        ExB
+        ExC
+    end
+
+    subgraph Stages
+        A
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+        I
+    end
+```
+
 ## Build
 
 Build the solution with Visual Studio 2022 or by using `dotnet build`.
 
-This project started using the GBX.NET nightly builds for more comfortable development, but this requires a bit more setup now.
-
-To retrieve the nightly build of GBX.NET appropriately, you need to add the https://nuget.gbx.tools/ package source.
-
-Go to `%appdata%/NuGet` and modify the `NuGet.Config` file to include the package source:
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <add key="nuget.gbx.tools" value="https://nuget.gbx.tools/v3/index.json" /> <!-- add this -->
-  </packageSources>
-</configuration>
-```
-
-This should be enough for a successful build.
+This project started using the GBX.NET nightly builds for more comfortable development.
