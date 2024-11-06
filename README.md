@@ -35,6 +35,7 @@ graph LR
     ExC --> B
     
     subgraph Extracts from input map
+        X
         ExA
         ExB
         ExC
