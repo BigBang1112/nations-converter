@@ -579,6 +579,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -11135,6 +11136,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -13908,6 +13910,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -13930,6 +13933,7 @@
           2
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14191,6 +14195,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14405,6 +14410,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14427,6 +14433,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14449,6 +14456,7 @@
           2
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14506,6 +14514,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14730,6 +14739,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14821,6 +14831,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1,
       "SpawnPos": [
@@ -14848,6 +14859,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14870,6 +14882,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -14939,6 +14952,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -16912,6 +16926,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1,
       "SpawnPos": [
@@ -16939,6 +16954,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -16961,6 +16977,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -17010,6 +17027,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -17085,6 +17103,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -17732,6 +17751,7 @@
       "PageName": "RoadMain/Main",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -17813,6 +17833,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -17860,6 +17881,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -20102,6 +20124,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -20149,6 +20172,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -20196,6 +20220,7 @@
       "PageName": "Slope/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -20243,6 +20268,7 @@
       "PageName": "RoadTilt/Specials",
       "Ground": {},
       "Air": {},
+      "Modifiable": true,
       "TM2": true,
       "Units": [
         [
@@ -20575,6 +20601,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },

@@ -219,7 +219,8 @@ internal sealed class InitStageService
                     {
                         ProcessSubVariant(new()
                         {
-                            Node = groundMobilSubVariants[j],
+                            Mobil = groundMobilSubVariants[j],
+                            Mobil2 = null,
                             BlockInfo = node,
                             CollectionName = collectionName,
                             DirectoryPath = dirPath,
@@ -261,7 +262,8 @@ internal sealed class InitStageService
                     {
                         ProcessSubVariant(new()
                         {
-                            Node = airMobilSubVariants[j],
+                            Mobil = airMobilSubVariants[j],
+                            Mobil2 = null,
                             BlockInfo = node,
                             CollectionName = collectionName,
                             DirectoryPath = dirPath,
@@ -285,6 +287,78 @@ internal sealed class InitStageService
                     }
                 }
             }
+
+            if (node.VariantBaseGround is not null)
+            {
+                var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                for (byte i = 0; i < node.VariantBaseGround.Mobils?.Length; i++)
+                {
+                    var groundMobilSubVariants = node.VariantBaseGround.Mobils[i];
+                    for (byte j = 0; j < groundMobilSubVariants.Length; j++)
+                    {
+                        ProcessSubVariant(new()
+                        {
+                            Mobil = null,
+                            Mobil2 = groundMobilSubVariants[j],
+                            BlockInfo = node,
+                            CollectionName = collectionName,
+                            DirectoryPath = dirPath,
+                            ModifierType = "Ground",
+                            VariantIndex = i,
+                            SubVariantIndex = j,
+                            WebpData = node.IconWebP,
+                            BlockName = block.Name,
+                            SubCategory = subCategory,
+                            Technology = technology,
+                            MapTechnology = mapTechnology,
+                            Units = groundUnits
+                        }, baseMap, ref index, out var isModifiable);
+                        if (technology == mapTechnology)
+                        {
+                            index++;
+                        }
+                        isTerrainModifiable |= isModifiable;
+                        if (!isModifiable)
+                        {
+                            notModifiable.Add((i, j));
+                        }
+                    }
+                }
+            }
+
+            if (node.VariantBaseAir is not null)
+            {
+                var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                for (byte i = 0; i < node.VariantBaseAir.Mobils?.Length; i++)
+                {
+                    var airMobilSubVariants = node.VariantBaseAir.Mobils[i];
+                    for (byte j = 0; j < airMobilSubVariants.Length; j++)
+                    {
+                        ProcessSubVariant(new()
+                        {
+                            Mobil = null,
+                            Mobil2 = airMobilSubVariants[j],
+                            BlockInfo = node,
+                            CollectionName = collectionName,
+                            DirectoryPath = dirPath,
+                            ModifierType = "Air",
+                            VariantIndex = i,
+                            SubVariantIndex = j,
+                            WebpData = node.IconWebP,
+                            BlockName = block.Name,
+                            SubCategory = subCategory,
+                            Technology = technology,
+                            MapTechnology = mapTechnology,
+                            Units = airUnits
+                        }, baseMap, ref index, out var isModifiable);
+                        if (technology == mapTechnology)
+                        {
+                            index++;
+                        }
+                        isTerrainModifiable |= isModifiable;
+                    }
+                }
+            }
         }
 
         return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);
@@ -292,9 +366,9 @@ internal sealed class InitStageService
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index, out bool isTerrainModifiable)
     {
-        var mobil = subVariant.Node.Node;
+        var solid = subVariant.Mobil?.Node?.Item?.Solid?.Tree is CPlugSolid s ? s : subVariant.Mobil2?.SolidFid;
 
-        if (mobil?.Item?.Solid?.Tree is not CPlugSolid solid)
+        if (solid is null)
         {
             logger.LogError("Failed to get solid for {BlockName} {ModifierType} {VariantIndex} {SubVariantIndex}", subVariant.BlockName, subVariant.ModifierType, subVariant.VariantIndex, subVariant.SubVariantIndex);
             isTerrainModifiable = false;
@@ -334,7 +408,7 @@ internal sealed class InitStageService
             switch (subVariant.Technology)
             {
                 case "MM_Collision":
-                    var crystal = itemMaker.CreateCrystalFromSolid(solid, mobil.ObjectLink, spawnLoc, subVariant.SubCategory,
+                    var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.Mobil?.Node?.ObjectLink, spawnLoc, subVariant.SubCategory,
                             modifierType is "Ground" or "Air" ? null : modifierType,
                             skipTreeWhen: tree =>
                             {

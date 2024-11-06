@@ -6,7 +6,8 @@ namespace NationsConverterBuilder2.Models;
 
 internal sealed class SubVariantModel
 {
-    public required External<CSceneMobil> Node { get; init; }
+    public required External<CSceneMobil>? Mobil { get; init; }
+    public required CGameCtnBlockInfoMobil? Mobil2 { get; init; }
     public required string CollectionName { get; init; }
     public required string DirectoryPath { get; init; }
     public required string ModifierType { get; init; }

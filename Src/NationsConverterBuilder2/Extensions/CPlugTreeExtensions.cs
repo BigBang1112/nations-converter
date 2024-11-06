@@ -161,8 +161,12 @@ public static class CPlugTreeExtensions
                 var group = new CPlugCrystal.Part { Name = "part", U02 = 1, U03 = -1, U04 = -1 };
                 groups.Add(group);
 
+                var vertexPositions = visual.VertexStreams.Count == 0
+                    ? visual.Vertices.Select(x => x.Position).ToArray()
+                    : visual.VertexStreams[0].Positions ?? [];
+
                 // add all unique positions to the dictionary
-                foreach (var pos in ApplyLocation(visual.Vertices.Select(x => x.Position), loc))
+                foreach (var pos in ApplyLocation(vertexPositions, loc))
                 {
                     if (!positionsDict.ContainsKey(pos + posOffset))
                     {
@@ -175,7 +179,7 @@ public static class CPlugTreeExtensions
                     var verts = new CPlugCrystal.Vertex[indices.Length];
                     for (int i = 0; i < indices.Length; i++)
                     {
-                        var pos = ApplyLocation(visual.Vertices[indices[i]].Position, loc) + posOffset;
+                        var pos = ApplyLocation(vertexPositions[indices[i]], loc) + posOffset;
                         var index = positionsDict[pos];
                         var uv = uvSets.Length == 0 ? (0, 0) : uvSets[0][indices[i]];
                         verts[i] = new CPlugCrystal.Vertex(index, uv);
@@ -195,7 +199,7 @@ public static class CPlugTreeExtensions
                     ));
                 }
 
-                indicesOffset += visual.Vertices.Length;
+                indicesOffset += vertexPositions.Length;
 
                 if (meshMode == MeshMode.Default && decalMaterial is not null)
                 {
@@ -521,9 +525,11 @@ public static class CPlugTreeExtensions
                 continue;
             }
 
-            if (surface.Geom?.Surf is not CPlugSurface.Mesh collisionMesh)
+            var surf = surface.Geom?.Surf ?? surface.Surf;
+
+            if (surf is not CPlugSurface.Mesh collisionMesh)
             {
-                logger?.LogWarning("Unsupported collision surface type: {Type}", surface.Geom?.Surf?.GetType().Name);
+                logger?.LogWarning("Unsupported collision surface type: {Type}", surf?.GetType().Name);
                 continue;
             }
 
