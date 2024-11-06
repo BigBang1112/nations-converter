@@ -7,6 +7,7 @@ This is where the new TMUF is being made.
 ```mermaid
 graph LR
     X(Create Base Map)
+    Z(Environment) --> ExA
     ExA(Conversion Set)
     ExA --> ExB(Covered Zone Block Info)
     ExA --> ExC(Terrain Modifier Zone)
