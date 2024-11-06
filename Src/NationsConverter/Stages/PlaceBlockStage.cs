@@ -5,9 +5,9 @@ using NationsConverter.Models;
 using System.Collections.Immutable;
 using System.Diagnostics;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class PlaceBlockConverter : BlockConverterBase
+internal sealed class PlaceBlockStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
@@ -21,7 +21,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
     private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
 
-    public PlaceBlockConverter(
+    public PlaceBlockStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
@@ -75,10 +75,10 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     }
 
     private void PlaceItem(
-        CGameCtnBlock block, 
-        ManualConversionModel conversion, 
-        string? overrideName = null, 
-        Direction? overrideDirection = null, 
+        CGameCtnBlock block,
+        ManualConversionModel conversion,
+        string? overrideName = null,
+        Direction? overrideDirection = null,
         ManualConversionBlockModel? overrideConversion = null,
         int? overrideVariant = null,
         int? overrideSubVariant = null)
@@ -348,10 +348,10 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
         }
 
         var additionalBlock = mapOut.PlaceBlock(
-            blockModel.Name, 
-            block.Coord + CenterOffset + (blockModel.OffsetX, 8 + blockModel.OffsetY, blockModel.OffsetZ), 
+            blockModel.Name,
+            block.Coord + CenterOffset + (blockModel.OffsetX, 8 + blockModel.OffsetY, blockModel.OffsetZ),
             (Direction)(((int)direction + blockModel.Dir) % 4),
-            blockModel.IsGround, 
+            blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
     }
@@ -369,7 +369,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
             return;
         }
 
-        var dir = (((int)direction + itemModel.Dir) % 4);
+        var dir = ((int)direction + itemModel.Dir) % 4;
 
         var c = coord + CenterOffset + dir switch
         {
@@ -403,7 +403,7 @@ internal sealed class PlaceBlockConverter : BlockConverterBase
     private bool TryPlaceClips(CGameCtnBlock block, ManualConversionModel conversion)
     {
         var clips = conversion.GetPropertyDefault(block, x => x.Clips);
-        
+
         if (clips is null || clips.Length == 0)
         {
             return false;

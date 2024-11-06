@@ -5,15 +5,15 @@ using NationsConverter.Models;
 using System.Collections.Immutable;
 using System.Diagnostics;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class WaterConverter : BlockConverterBase
+internal sealed class WaterStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapOut;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ILogger logger;
 
-    public WaterConverter(
+    public WaterStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,

@@ -1,9 +1,9 @@
 ﻿using GBX.NET.Engines.Game;
 using System.Collections.Frozen;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal abstract class EnvironmentConverterBase
+internal abstract class EnvironmentStageBase
 {
     private static readonly FrozenDictionary<string, string> mapping = new Dictionary<string, string>()
     {
@@ -13,7 +13,7 @@ internal abstract class EnvironmentConverterBase
 
     protected string Environment { get; }
 
-    protected EnvironmentConverterBase(CGameCtnChallenge mapIn)
+    protected EnvironmentStageBase(CGameCtnChallenge mapIn)
     {
         Environment = mapIn.GetEnvironment();
 

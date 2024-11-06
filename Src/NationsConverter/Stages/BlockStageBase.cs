@@ -2,9 +2,9 @@
 using GBX.NET.Engines.Game;
 using NationsConverter.Models;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal abstract class BlockConverterBase : EnvironmentConverterBase
+internal abstract class BlockStageBase : EnvironmentStageBase
 {
     private readonly CGameCtnChallenge mapIn;
 
@@ -15,7 +15,7 @@ internal abstract class BlockConverterBase : EnvironmentConverterBase
     protected Int3 CenterOffset { get; }
     protected ManualConversionSetModel ConversionSet { get; }
 
-    public BlockConverterBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet)
+    public BlockStageBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet)
         : base(mapIn)
     {
         this.mapIn = mapIn;

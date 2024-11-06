@@ -2,16 +2,16 @@
 using GBX.NET.Engines.Game;
 using NationsConverter.Models;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class PylonConverter : BlockConverterBase
+internal sealed class PylonStage : BlockStageBase
 {
     private readonly CustomContentManager customContentManager;
 
     private readonly int baseHeight;
     private readonly Dictionary<(Int3, int), int> pylons = [];
 
-    public PylonConverter(
+    public PylonStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
@@ -121,7 +121,7 @@ internal sealed class PylonConverter : BlockConverterBase
     {
         for (int pylonIndex = 0; pylonIndex < 8; pylonIndex++)
         {
-            if (((pylon >> pylonIndex) & 1) == 0)
+            if ((pylon >> pylonIndex & 1) == 0)
             {
                 continue;
             }

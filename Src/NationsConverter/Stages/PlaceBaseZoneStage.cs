@@ -5,9 +5,9 @@ using NationsConverter.Models;
 using System.Collections.Immutable;
 using System.Diagnostics;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class PlaceBaseZoneConverter : BlockConverterBase
+internal sealed class PlaceBaseZoneStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
@@ -17,7 +17,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
     private readonly int baseHeight;
     private readonly bool[,] occupiedZone;
 
-    public PlaceBaseZoneConverter(
+    public PlaceBaseZoneStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
@@ -138,7 +138,7 @@ internal sealed class PlaceBaseZoneConverter : BlockConverterBase
 
                     if (waterUnits is { Length: > 0 })
                     {
-                        WaterConverter.PlaceWater(mapOut, pos, BlockSize, ConversionSet.WaterHeight);
+                        WaterStage.PlaceWater(mapOut, pos, BlockSize, ConversionSet.WaterHeight);
                     }
                 }
             }

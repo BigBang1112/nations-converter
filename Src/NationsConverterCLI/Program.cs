@@ -6,7 +6,7 @@ using NationsConverterCLI;
 using NationsConverterShared.Converters.Json;
 using System.Text.Json;
 using YamlDotNet.Serialization;
-using NationsConverter.YmlConverters;
+using NationsConverter.Converters;
 
 Gbx.CRC32 = new CRC32();
 

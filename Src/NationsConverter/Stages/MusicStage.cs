@@ -6,9 +6,9 @@ using System.Diagnostics;
 using System.Web;
 using TmEssentials;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class MusicConverter : EnvironmentConverterBase
+internal sealed class MusicStage : EnvironmentStageBase
 {
     private readonly CGameCtnChallenge mapOut;
     private readonly NationsConverterConfig config;
@@ -19,8 +19,8 @@ internal sealed class MusicConverter : EnvironmentConverterBase
 
     private static readonly ConcurrentDictionary<string, bool> availableMusicUrls = [];
 
-    public MusicConverter(
-        CGameCtnChallenge mapIn, 
+    public MusicStage(
+        CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         NationsConverterConfig config,
         HttpClient http,

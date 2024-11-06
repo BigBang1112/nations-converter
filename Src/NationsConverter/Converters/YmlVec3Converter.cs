@@ -4,7 +4,7 @@ using YamlDotNet.Core.Events;
 using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 
-namespace NationsConverter.YmlConverters;
+namespace NationsConverter.Converters;
 
 public sealed class YmlVec3Converter : IYamlTypeConverter
 {

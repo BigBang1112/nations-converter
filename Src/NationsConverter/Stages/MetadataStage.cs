@@ -1,15 +1,15 @@
 ﻿using GBX.NET.Engines.Game;
 using GBX.NET.Engines.Script;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class MetadataConverter
+internal sealed class MetadataStage
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
     private readonly uint seed;
 
-    public MetadataConverter(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, uint seed)
+    public MetadataStage(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, uint seed)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
@@ -19,6 +19,8 @@ internal sealed class MetadataConverter
     public void Convert()
     {
         var metadata = new CScriptTraitsMetadata();
+        metadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
+
         metadata.Declare("MadeWithNationsConverter", true);
         metadata.Declare("NC_OriginalAuthorLogin", mapIn.AuthorLogin);
         metadata.Declare("NC_OriginalAuthorNickname", mapIn.AuthorNickname ?? string.Empty);
@@ -37,8 +39,6 @@ internal sealed class MetadataConverter
         });
         metadata.Declare("NC2_PreAlpha", true);
         metadata.Declare("NC2_Seed", seed.ToString());
-
-        metadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
 
         mapOut.ScriptMetadata = metadata;
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043044>();

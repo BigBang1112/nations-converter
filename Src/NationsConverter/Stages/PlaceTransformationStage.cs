@@ -4,14 +4,14 @@ using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using NationsConverterShared.Models;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class PlaceTransformationConverter : BlockConverterBase
+internal sealed class PlaceTransformationStage : BlockStageBase
 {
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
 
-    public PlaceTransformationConverter(
+    public PlaceTransformationStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,

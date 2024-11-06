@@ -1,14 +1,14 @@
 ﻿using System.IO.Compression;
 
-namespace NationsConverter.Converters;
+namespace NationsConverter.Stages;
 
-internal sealed class CopyUserDataConverter
+internal sealed class CopyUserDataStage
 {
     private readonly NationsConverterConfig config;
     private readonly string runningDir;
     private readonly string? userDataPackFilePath;
 
-    public CopyUserDataConverter(NationsConverterConfig config, string runningDir, string? userDataPackFilePath)
+    public CopyUserDataStage(NationsConverterConfig config, string runningDir, string? userDataPackFilePath)
     {
         this.config = config;
         this.runningDir = runningDir;

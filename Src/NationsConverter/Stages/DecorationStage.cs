@@ -1,13 +1,12 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
 using Microsoft.Extensions.Logging;
-using NationsConverter.Converters;
 using NationsConverter.Models;
 using System.Text.RegularExpressions;
 
-namespace NationsConverter;
+namespace NationsConverter.Stages;
 
-internal sealed partial class DecorationConverter : EnvironmentConverterBase
+internal sealed partial class DecorationStage : EnvironmentStageBase
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
@@ -19,8 +18,8 @@ internal sealed partial class DecorationConverter : EnvironmentConverterBase
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
     private static partial Regex MoodRegex();
 
-    public DecorationConverter(
-        CGameCtnChallenge mapIn, 
+    public DecorationStage(
+        CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         NationsConverterConfig config,

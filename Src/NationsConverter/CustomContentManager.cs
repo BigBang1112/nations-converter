@@ -3,14 +3,14 @@ using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using Microsoft.Extensions.Logging;
-using NationsConverter.Converters;
+using NationsConverter.Stages;
 using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO.Compression;
 
 namespace NationsConverter;
 
-internal sealed class CustomContentManager : EnvironmentConverterBase
+internal sealed class CustomContentManager : EnvironmentStageBase
 {
     private const int ItemCollection = 26;
 

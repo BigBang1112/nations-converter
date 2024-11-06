@@ -1,9 +1,8 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
-using GBX.NET.Engines.Script;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using NationsConverter.Converters;
+using NationsConverter.Stages;
 using NationsConverter.Extracts;
 using System.Text;
 using TmEssentials;
@@ -52,36 +51,36 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(mapIn, conversionSet, logger);
         var terrainModifierZones = terrainModifierZoneExtract.Extract();
 
-        var placeBaseZoneConverter = new PlaceBaseZoneConverter(mapIn, mapOut, conversionSet, customContentManager, terrainModifierZones, logger);
-        placeBaseZoneConverter.Convert();
+        var placeBaseZoneStage = new PlaceBaseZoneStage(mapIn, mapOut, conversionSet, customContentManager, terrainModifierZones, logger);
+        placeBaseZoneStage.Convert();
 
-        var placeBlockConverter = new PlaceBlockConverter(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
-        placeBlockConverter.Convert();
+        var placeBlockStage = new PlaceBlockStage(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        placeBlockStage.Convert();
 
-        var waterConverter = new WaterConverter(mapIn, mapOut, conversionSet, coveredZoneBlocks, logger);
-        waterConverter.Convert();
+        var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, logger);
+        waterStage.Convert();
 
-        var pylonConverter = new PylonConverter(mapIn, mapOut, conversionSet, customContentManager);
-        pylonConverter.Convert();
+        var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager);
+        pylonStage.Convert();
 
-        var placeTransformationConverter = new PlaceTransformationConverter(mapIn, mapOut, conversionSet, customContentManager, logger);
-        placeTransformationConverter.Convert();
+        var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
+        placeTransformationStage.Convert();
 
-        var decorationConverter = new DecorationConverter(mapIn, mapOut, conversionSet, Config, customContentManager, logger);
-        decorationConverter.Convert();
+        var decorationStage = new DecorationStage(mapIn, mapOut, conversionSet, Config, customContentManager, logger);
+        decorationStage.Convert();
 
         var userDataPackFilePath = customContentManager.EmbedData();
 
-        var musicConverter = new MusicConverter(mapIn, mapOut, Config, http, logger);
-        musicConverter.Convert();
+        var musicStage = new MusicStage(mapIn, mapOut, Config, http, logger);
+        musicStage.Convert();
 
-        var metadataConverter = new MetadataConverter(mapIn, mapOut, seed);
-        metadataConverter.Convert();
+        var metadataStage = new MetadataStage(mapIn, mapOut, seed);
+        metadataStage.Convert();
 
         if (Config.CopyItems)
         {
-            var copyUserDataConverter = new CopyUserDataConverter(Config, runningDir, userDataPackFilePath);
-            copyUserDataConverter.Copy();
+            var copyUserDataStage = new CopyUserDataStage(Config, runningDir, userDataPackFilePath);
+            copyUserDataStage.Copy();
         }
 
         if (!Config.UseNewWood)

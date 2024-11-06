@@ -1,14 +1,14 @@
 ﻿using GBX.NET.Engines.Game;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
-using NationsConverter.Converters;
 using NationsConverter.Models;
+using NationsConverter.Stages;
 using NationsConverterShared.Models;
 using System.Diagnostics;
 
 namespace NationsConverter.Extracts;
 
-internal sealed class ConversionSetExtract : EnvironmentConverterBase
+internal sealed class ConversionSetExtract : EnvironmentStageBase
 {
     private readonly IComplexConfig complexConfig;
     private readonly ILogger logger;
