@@ -11,6 +11,9 @@ using Microsoft.Extensions.FileProviders;
 using NationsConverterWeb;
 using NationsConverterWeb.Authentication;
 using NationsConverterWeb.Components;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Trace;
 
 GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
 
@@ -70,6 +73,30 @@ builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddOpenTelemetry()
+    .WithMetrics(options =>
+    {
+        options
+            .AddHttpClientInstrumentation()
+            .AddRuntimeInstrumentation()
+            .AddProcessInstrumentation()
+            .AddOtlpExporter();
+
+        options.AddMeter("System.Net.Http");
+    })
+    .WithTracing(options =>
+    {
+        if (builder.Environment.IsDevelopment())
+        {
+            options.SetSampler<AlwaysOnSampler>();
+        }
+
+        options
+            .AddHttpClientInstrumentation()
+            .AddOtlpExporter();
+    });
+builder.Services.AddMetrics();
 
 var app = builder.Build();
 

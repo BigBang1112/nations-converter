@@ -5,6 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using NationsConverterBot;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Trace;
 
 var builder = Host.CreateDefaultBuilder(args);
 
@@ -38,6 +41,30 @@ builder.ConfigureServices((context, services) =>
 
     // Add services
     services.AddSingleton<IDiscordBot, DiscordBot>();
+
+    services.AddOpenTelemetry()
+        .WithMetrics(options =>
+        {
+            options
+                .AddHttpClientInstrumentation()
+                .AddRuntimeInstrumentation()
+                .AddProcessInstrumentation()
+                .AddOtlpExporter();
+
+            options.AddMeter("System.Net.Http");
+        })
+        .WithTracing(options =>
+        {
+            if (context.HostingEnvironment.IsDevelopment())
+            {
+                options.SetSampler<AlwaysOnSampler>();
+            }
+
+            options
+                .AddHttpClientInstrumentation()
+                .AddOtlpExporter();
+        });
+    services.AddMetrics();
 });
 
 // Use Serilog
