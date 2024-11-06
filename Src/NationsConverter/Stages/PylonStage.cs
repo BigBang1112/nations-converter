@@ -72,7 +72,7 @@ internal sealed class PylonStage : BlockStageBase
     {
         var placePylons = conversion.GetPropertyDefault(block, x => x.PlacePylons);
 
-        if (placePylons is null || placePylons.Length == 0)
+        if (placePylons is null or { Length: 0 })
         {
             return;
         }

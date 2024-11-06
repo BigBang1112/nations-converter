@@ -71,6 +71,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var userDataPackFilePath = customContentManager.EmbedData();
 
+        var mediaTrackerStage = new MediaTrackerStage(mapIn, mapOut, Config);
+        mediaTrackerStage.Convert();
+
         var musicStage = new MusicStage(mapIn, mapOut, Config, http, logger);
         musicStage.Convert();
 
