@@ -6,11 +6,12 @@ public class NationsConverterConfig : Config
 {
     public string? Category { get; set; }
     public string? SubCategory { get; set; }
+    public string? Seed { get; set; }
     public bool CopyItems { get; set; } = true;
-    public string? UserDataFolder { get; set; }
     public bool IncludeDecoration { get; set; }
     public bool UseNewWood { get; set; }
     public string? UserDataPack { get; set; } = "InProgress";
+    public string? UserDataFolder { get; set; }
     public string? HttpHost { get; set; } = "nc.gbx.tools";
     public bool IncludeMusic { get; set; } = true;
     public Dictionary<string, string> Music { get; set; } = new()

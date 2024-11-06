@@ -37,9 +37,8 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var mapOut = CreateBaseMap();
 
-        var seed = (uint)Guid.NewGuid().GetHashCode();
-        mapOut.ScriptMetadata!.Declare("NC2_Seed", seed.ToString());
-
+        var seed = uint.TryParse(Config.Seed, out var parsedSeed) ? parsedSeed
+            : (uint)(Config.Seed?.GetHashCode() ?? Guid.NewGuid().GetHashCode());
         var random = new Random((int)seed);
 
         var customContentManager = new CustomContentManager(mapIn, mapOut, runningDir, Config, seed, logger);
@@ -75,6 +74,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var musicConverter = new MusicConverter(mapIn, mapOut, Config, http, logger);
         musicConverter.Convert();
+
+        var metadataConverter = new MetadataConverter(mapIn, mapOut, seed);
+        metadataConverter.Convert();
 
         if (Config.CopyItems)
         {
@@ -125,7 +127,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             MapName = mapIn.MapName,
             MapType = mapType,
             OffzoneTriggerSize = (3, 1, 3),
-            ScriptMetadata = new CScriptTraitsMetadata(),
             Size = (48, 40, 48),
             TitleId = "TMStadium",
             Xml = $@"<header type=""map"" exever=""{ExeVersion}"" exebuild=""{BuildDate}"" title=""TMStadium"" lightmap=""0""><ident uid=""{newMapUid}"" name=""Base"" author=""{authorLogin}"" authorzone=""{authorZone}""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""{mapType}"" mapstyle="""" validated=""0"" nblaps=""0"" displaycost=""203"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""-1"" silver=""-1"" gold=""-1"" authortime=""-1"" authorscore=""0""/><deps></deps></header>",
@@ -138,23 +139,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             ThumbnailFov = 90,
             Thumbnail = mapIn.Thumbnail
         };
-        mapOut.ScriptMetadata.Declare("MadeWithNationsConverter", true);
-        mapOut.ScriptMetadata.Declare("NC_OriginalAuthorLogin", mapIn.AuthorLogin);
-        mapOut.ScriptMetadata.Declare("NC_OriginalAuthorNickname", mapIn.AuthorNickname ?? string.Empty);
-        mapOut.ScriptMetadata.Declare("NC_OriginalMapUid", mapIn.MapUid);
-        mapOut.ScriptMetadata.Declare("NC2_IsConverted", true);
-        mapOut.ScriptMetadata.Declare("NC2_ConvertedAt", DateTime.UtcNow.ToString("s"));
-        mapOut.ScriptMetadata.Declare("NC2_Version", "");
-        mapOut.ScriptMetadata.Declare("NC2_CLI_Version", "");
-        mapOut.ScriptMetadata.Declare("NC2_Web_Version", "");
-        mapOut.ScriptMetadata.Declare("NC2_GBXNET_Version", "");
-        mapOut.ScriptMetadata.Declare("NC2_Environment", mapIn.GetEnvironment() switch
-        {
-            "Alpine" => "Snow",
-            "Speed" => "Desert",
-            _ => mapIn.GetEnvironment()
-        });
-        mapOut.ScriptMetadata.Declare("NC2_PreAlpha", true);
 
         mapOut.CreateChunk<CGameCtnChallenge.HeaderChunk03043002>().Version = 13;
         mapOut.CreateChunk<CGameCtnChallenge.HeaderChunk03043003>().Version = 11;
@@ -179,7 +163,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043040>().Version = 4;
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043042>().Version = 1;
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043043>();
-        mapOut.CreateChunk<CGameCtnChallenge.Chunk03043044>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043048>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043049>().Version = 2;
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304304B>();
@@ -215,7 +198,6 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         mapOut.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00A>();
         mapOut.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00D>();
         mapOut.ChallengeParameters.CreateChunk<CGameCtnChallengeParameters.Chunk0305B00E>();
-        mapOut.ScriptMetadata.CreateChunk<CScriptTraitsMetadata.Chunk11002000>().Version = 6;
 
         return mapOut;
     }
