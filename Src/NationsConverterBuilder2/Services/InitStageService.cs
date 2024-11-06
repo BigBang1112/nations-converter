@@ -446,7 +446,10 @@ internal sealed class InitStageService
                     return;
             }
 
-            finalItem.WaypointType = (CGameItemModel.EWaypointType)(int)subVariant.BlockInfo.WayPointType;
+            if (modifierType is "Ground" or "Air")
+            {
+                finalItem.WaypointType = (CGameItemModel.EWaypointType)(int)subVariant.BlockInfo.WayPointType;
+            }
 
             var itemPath = Path.Combine(subVariant.DirectoryPath, $"{modifierType}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
 
