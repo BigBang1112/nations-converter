@@ -127,7 +127,9 @@ public static class CPlugTreeExtensions
             // Add mesh pieces until break
             while (meshMode != MeshMode.None)
             {
-                var uvSets = new Vec2[visual.TexCoords.Length][];
+                var uvSets = visual.VertexStreams.Count == 0
+                    ? new Vec2[visual.TexCoords.Length][]
+                    : visual.VertexStreams[0].UVs.Select(x => x.Value).ToArray();
 
                 for (var i = 0; i < visual.TexCoords.Length; i++)
                 {
@@ -138,7 +140,10 @@ public static class CPlugTreeExtensions
                     {
                         uvSets[i][j] = texCoordSet[j].UV;
                     }
+                }
 
+                for (var i = 0; i < uvSets.Length; i++)
+                {
                     if (meshMode == MeshMode.Decal)
                     {
                         if (decalUvModifiers is null)
@@ -563,6 +568,8 @@ public static class CPlugTreeExtensions
             groups.Add(group);
 
             positions.AddRange(ApplyLocation(collisionMesh.Vertices, location));
+
+            // TODO: this is now how TM2 solid collision faces work
             faces.AddRange(collisionMesh.CookedTriangles?
                 .Select(tri =>
                 {
