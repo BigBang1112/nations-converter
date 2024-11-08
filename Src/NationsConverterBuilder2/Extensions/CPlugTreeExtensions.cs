@@ -593,7 +593,7 @@ public static class CPlugTreeExtensions
                 faces.AddRange(collisionMesh.Triangles
                     .Select(tri =>
                     {
-                        var material = surface.Materials[(tri.U02 >> 16) & 0xFF];
+                        var material = surface.Materials[tri.U04];
                         return new CPlugCrystal.Face([
                             new(tri.U01.X + indicesOffset, default),
                             new(tri.U01.Y + indicesOffset, default),

@@ -13477,6 +13477,7 @@
           1
         ]
       },
+      "ZoneHeight": 0,
       "TM2": true
     },
     "StadiumRamp": {
@@ -29455,6 +29456,7 @@
           1
         ]
       },
+      "ZoneHeight": 0,
       "TM2": true
     },
     "StadiumWaterClip": {
