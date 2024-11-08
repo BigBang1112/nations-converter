@@ -203,6 +203,19 @@ internal sealed class InitStageService
         var notModifiable = new HashSet<Int2>();
         var mapTechnology = "MM_Collision";
 
+        CGameCtnBlockInfo nodeForMesh;
+        try
+        {
+            nodeForMesh = setupService.MeshOverrideBlockInfoPaths.TryGetValue(block.Name, out var path)
+                ? (CGameCtnBlockInfo?)Gbx.ParseNode(path) ?? node
+                : node;
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Failed to parse mesh override block info for {BlockName}", block.Name);
+            nodeForMesh = node;
+        }
+
         foreach (var technology in technologies)
         {
             var dirPath = Path.Combine("NC2", "Solid", subCategory, technology, collectionName, pageName, block.Name);
@@ -288,12 +301,12 @@ internal sealed class InitStageService
                 }
             }
 
-            if (node.VariantBaseGround is not null)
+            if (nodeForMesh.VariantBaseGround is not null)
             {
-                var groundUnits = node.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
-                for (byte i = 0; i < node.VariantBaseGround.Mobils?.Length; i++)
+                var groundUnits = nodeForMesh.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                for (byte i = 0; i < nodeForMesh.VariantBaseGround.Mobils?.Length; i++)
                 {
-                    var groundMobilSubVariants = node.VariantBaseGround.Mobils[i];
+                    var groundMobilSubVariants = nodeForMesh.VariantBaseGround.Mobils[i];
                     for (byte j = 0; j < groundMobilSubVariants.Length; j++)
                     {
                         ProcessSubVariant(new()
@@ -326,12 +339,12 @@ internal sealed class InitStageService
                 }
             }
 
-            if (node.VariantBaseAir is not null)
+            if (nodeForMesh.VariantBaseAir is not null)
             {
-                var airUnits = node.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
-                for (byte i = 0; i < node.VariantBaseAir.Mobils?.Length; i++)
+                var airUnits = nodeForMesh.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                for (byte i = 0; i < nodeForMesh.VariantBaseAir.Mobils?.Length; i++)
                 {
-                    var airMobilSubVariants = node.VariantBaseAir.Mobils[i];
+                    var airMobilSubVariants = nodeForMesh.VariantBaseAir.Mobils[i];
                     for (byte j = 0; j < airMobilSubVariants.Length; j++)
                     {
                         ProcessSubVariant(new()
@@ -359,6 +372,11 @@ internal sealed class InitStageService
                     }
                 }
             }
+        }
+
+        if (block.Name == "StadiumRoadDirtClip")
+        {
+
         }
 
         return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);

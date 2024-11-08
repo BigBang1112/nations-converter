@@ -22,6 +22,7 @@ internal sealed class SetupService
 
     public Dictionary<string, CollectionModel> Collections { get; } = [];
     public HashSet<string> Stadium2Clips { get; set; } = [];
+    public Dictionary<string, string> MeshOverrideBlockInfoPaths { get; set; } = [];
 
     internal static readonly char[] separator = ['/', '\\'];
 
@@ -128,7 +129,15 @@ internal sealed class SetupService
             Stadium2Clips = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.EDClip.Gbx", SearchOption.AllDirectories)
                 .Select(x => GbxPath.GetFileNameWithoutExtension(x))
                 .ToHashSet();
-            folderBlockInfoPaths = folderBlockInfoPaths.Concat(stadium2Blocks);
+
+            var stadium2RoadDirtBlocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "StadiumRoadDirt*.TMED*.Gbx", SearchOption.AllDirectories);
+
+            MeshOverrideBlockInfoPaths = stadium2RoadDirtBlocks.ToDictionary(x => GbxPath.GetFileNameWithoutExtension(x), x => x);
+
+            folderBlockInfoPaths = stadium2Blocks
+                .Concat(folderBlockInfoPaths)
+                .DistinctBy(x => GbxPath.GetFileNameWithoutExtension(x))
+                .ToList();
         }
 
         foreach (var zone in completeZoneList)
@@ -205,9 +214,18 @@ internal sealed class SetupService
             var dirs = blockInfoNode.PageName?.Split(separator, StringSplitOptions.RemoveEmptyEntries) ?? [];
             var currentDirs = collection.BlockDirectories;
 
-            var blockName = stadium2Blocks?.Contains(blockInfoFilePath) == true
-                ? (Gbx.ParseNode(blockInfoFilePath) as CGameCtnBlockInfo)?.Ident.Id ?? throw new Exception("BlockInfo is null")
-                : blockInfoNode.Ident.Id;
+            string blockName;
+            try
+            {
+                blockName = stadium2Blocks?.Contains(blockInfoFilePath) == true
+                    ? (Gbx.ParseNode(blockInfoFilePath) as CGameCtnBlockInfo)?.Ident.Id ?? throw new Exception("BlockInfo is null")
+                    : blockInfoNode.Ident.Id;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error parsing block info: {blockInfoFilePath} {ex}");
+                continue;
+            }
 
             if (dirs.Length == 0)
             {

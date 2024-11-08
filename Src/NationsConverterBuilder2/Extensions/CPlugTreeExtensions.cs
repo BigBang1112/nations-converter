@@ -569,22 +569,46 @@ public static class CPlugTreeExtensions
 
             positions.AddRange(ApplyLocation(collisionMesh.Vertices, location));
 
-            // TODO: this is now how TM2 solid collision faces work
-            faces.AddRange(collisionMesh.CookedTriangles?
-                .Select(tri =>
-                {
-                    var material = surface.Materials[tri.U03];
+            // TODO: this is not how TM2 solid collision faces work
+            if (collisionMesh.CookedTriangles?.Length > 0)
+            {
+                faces.AddRange(collisionMesh.CookedTriangles
+                    .Select(tri =>
+                    {
+                        var material = surface.Materials[tri.U03];
 
-                    return new CPlugCrystal.Face([
-                        new(tri.U02.X + indicesOffset, default),
-                        new(tri.U02.Y + indicesOffset, default),
-                        new(tri.U02.Z + indicesOffset, default)
-                        ],
-                        group,
-                        materials[GetSurfaceIdSet(material)],
-                        null
-                    );
-                }) ?? []);
+                        return new CPlugCrystal.Face([
+                            new(tri.U02.X + indicesOffset, default),
+                            new(tri.U02.Y + indicesOffset, default),
+                            new(tri.U02.Z + indicesOffset, default)
+                            ],
+                            group,
+                            materials[GetSurfaceIdSet(material)],
+                            null
+                        );
+                    }) ?? []);
+            }
+            else if (collisionMesh.Triangles?.Length > 0)
+            {
+                faces.AddRange(collisionMesh.Triangles
+                    .Select(tri =>
+                    {
+                        var material = surface.Materials[(tri.U02 >> 16) & 0xFF];
+                        return new CPlugCrystal.Face([
+                            new(tri.U01.X + indicesOffset, default),
+                            new(tri.U01.Y + indicesOffset, default),
+                            new(tri.U01.Z + indicesOffset, default)
+                            ],
+                            group,
+                            materials[GetSurfaceIdSet(material)],
+                            null
+                        );
+                    }) ?? []);
+            }
+            else
+            {
+                logger?.LogWarning("Collision mesh has no triangles, this is weird");
+            }
 
             indicesOffset += collisionMesh.Vertices.Length;
         }
