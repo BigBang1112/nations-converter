@@ -374,11 +374,6 @@ internal sealed class InitStageService
             }
         }
 
-        if (block.Name == "StadiumRoadDirtClip")
-        {
-
-        }
-
         return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);
     }
 
