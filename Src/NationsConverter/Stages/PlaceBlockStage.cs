@@ -389,11 +389,17 @@ internal sealed class PlaceBlockStage : BlockStageBase
             _ => throw new ArgumentException("Invalid block direction")
         };
 
-        var pos = c * BlockSize + new Vec3(0, itemModel.OffsetY, 0);
+        var pos = c * BlockSize + dir switch
+        {
+            0 => new Vec3(itemModel.OffsetX, itemModel.OffsetY, itemModel.OffsetZ),
+            1 => new Vec3(-itemModel.OffsetZ, itemModel.OffsetY, itemModel.OffsetX),
+            2 => new Vec3(-itemModel.OffsetX, itemModel.OffsetY, -itemModel.OffsetZ),
+            3 => new Vec3(itemModel.OffsetZ, itemModel.OffsetY, -itemModel.OffsetX),
+            _ => throw new ArgumentException("Invalid block direction")
+        };
 
-        var rotRadians = -dir * MathF.PI / 2;
-        var rot = new Vec3(rotRadians, 0, 0);
-
+        var rotXRadians = -dir * MathF.PI / 2;
+        var rot = new Vec3(rotXRadians, 0, AdditionalMath.ToRadians(itemModel.RotZ));
         var isOfficial = !itemModel.Name.Contains('/') && !itemModel.Name.Contains('\\');
 
         if (isOfficial)
