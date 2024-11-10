@@ -710,7 +710,7 @@ Blocks:
       Dir: 2
       IsRelativeOffset: true
     - Name: PlatformTechBase
-      OffsetX: 1
+      OffsetZ: 1
       IsRelativeOffset: true
   StadiumPlatformToRoad2Mirror:
     NoTerrainModifier: true
@@ -719,7 +719,7 @@ Blocks:
       Dir: 2
       IsRelativeOffset: true
     - Name: PlatformTechBase
-      OffsetX: 1
+      OffsetZ: 1
       IsRelativeOffset: true
   StadiumPlatformWall2:
     NoItem: true
