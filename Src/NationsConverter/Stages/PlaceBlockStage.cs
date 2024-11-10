@@ -347,9 +347,18 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return;
         }
 
+        var adjustedOffset = blockModel.IsRelativeOffset ? direction switch
+        {
+            Direction.North => (blockModel.OffsetX, 0, blockModel.OffsetZ),
+            Direction.East => (blockSizeCoord.Z - blockModel.OffsetZ - 1, 0, blockModel.OffsetX),
+            Direction.South => (blockSizeCoord.X - blockModel.OffsetX - 1, 0, blockSizeCoord.Z - blockModel.OffsetZ - 1),
+            Direction.West => (blockModel.OffsetZ, 0, blockSizeCoord.X - blockModel.OffsetX - 1),
+            _ => throw new ArgumentException("Invalid block direction")
+        } : new Int3(0, 0, 0);
+
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
-            block.Coord + CenterOffset + (blockModel.OffsetX, 8 + blockModel.OffsetY, blockModel.OffsetZ),
+            block.Coord + CenterOffset + adjustedOffset + (0, 8 + blockModel.OffsetY, 0),
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
