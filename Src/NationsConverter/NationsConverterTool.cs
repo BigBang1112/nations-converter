@@ -71,6 +71,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var userDataPackFilePath = customContentManager.EmbedData();
 
+        mapOut.IsLapRace = mapIn.IsLapRace;
+        mapOut.NbLaps = mapIn.NbLaps;
+
         var mediaTrackerStage = new MediaTrackerStage(mapIn, mapOut, Config);
         mediaTrackerStage.Convert();
 
