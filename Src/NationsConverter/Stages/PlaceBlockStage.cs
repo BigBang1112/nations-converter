@@ -111,7 +111,14 @@ internal sealed class PlaceBlockStage : BlockStageBase
         }
         else if (subVariant >= maxSubVariants)
         {
-            throw new ArgumentException($"Block sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
+            if (conversion.UseSubVariant0)
+            {
+                subVariant = 0;
+            }
+            else
+            {
+                throw new ArgumentException($"Block sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
+            }
         }
 
         var modifierType = block.IsGround ? "Ground" : "Air";

@@ -89,12 +89,15 @@ Blocks:
       NoItem: true
   StadiumTube:
     PlaceDefaultZone: true
+    UseSubVariant0: true
   StadiumTubePillar:
     PlaceDefaultZone: true
+    UseSubVariant0: true
   StadiumTubePillarCap:
     PlaceDefaultZone: true
   StadiumTubeV1:
     PlaceDefaultZone: true
+    UseSubVariant0: true
   StadiumTubeV4:
     PlaceDefaultZone: true
   StadiumTubeV8:
