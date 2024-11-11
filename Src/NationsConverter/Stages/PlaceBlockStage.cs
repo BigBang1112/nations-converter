@@ -160,7 +160,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             }
         }
 
-        var pos = block.Coord + CenterOffset + direction switch
+        var pos = block.Coord + TotalOffset + direction switch
         {
             Direction.North => (0, 0, 0),
             Direction.East => (blockCoordSize.Z, 0, 0),
@@ -331,7 +331,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
-                        var alignedPos = block.Coord + unit - min + CenterOffset + (0, (conversion.ZoneHeight is null ? -1 : 0) + offset.Y, 0);
+                        var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null ? -1 : 0) + offset.Y, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));
                     }
                 }
@@ -365,7 +365,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
-            block.Coord + CenterOffset + adjustedOffset + (0, 8 + blockModel.OffsetY, 0),
+            block.Coord + TotalOffset + adjustedOffset + (0, 8 + blockModel.OffsetY, 0),
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
@@ -387,7 +387,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         var dir = ((int)direction + itemModel.Dir) % 4;
 
-        var c = coord + CenterOffset + dir switch
+        var c = coord + TotalOffset + dir switch
         {
             0 => (0, 0, 0),
             1 => (blockCoordSize.Z, 0, 0),

@@ -86,7 +86,7 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
 
             if (!occupiedZone[pos.X, pos.Z])
             {
-                occupiedZone[pos.X, pos.Z] = pos.Y == baseHeight + 1;
+                occupiedZone[pos.X, pos.Z] = pos.Y == baseHeight + 1 + mapIn.DecoBaseHeightOffset;
             }
         }
     }

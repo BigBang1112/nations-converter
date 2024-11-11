@@ -71,7 +71,7 @@ internal sealed class WaterStage : BlockStageBase
             return;
         }
 
-        PlaceWater(mapOut, block.Coord + CenterOffset, BlockSize, ConversionSet.WaterHeight);
+        PlaceWater(mapOut, block.Coord + TotalOffset, BlockSize, ConversionSet.WaterHeight);
     }
 
     public static void PlaceWater(CGameCtnChallenge convertedMap, Int3 pos, Int3 blockSize, float waterHeight)

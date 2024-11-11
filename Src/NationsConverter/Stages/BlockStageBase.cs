@@ -13,6 +13,7 @@ internal abstract class BlockStageBase : EnvironmentStageBase
     /// </summary>
     protected Int3 BlockSize { get; }
     protected Int3 CenterOffset { get; }
+    protected Int3 TotalOffset { get; }
     protected ManualConversionSetModel ConversionSet { get; }
 
     public BlockStageBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet)
@@ -22,6 +23,7 @@ internal abstract class BlockStageBase : EnvironmentStageBase
 
         BlockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
         CenterOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
+        TotalOffset = CenterOffset + (0, -mapIn.DecoBaseHeightOffset, 0);
         ConversionSet = conversionSet;
     }
 
