@@ -374,7 +374,13 @@ internal sealed class InitStageService
             }
         }
 
-        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);
+        var height = block.TerrainZone?.Height;
+        if (block.TerrainZone is CGameCtnZoneFrontier frontier)
+        {
+            height -= frontier.BlockYOffsetFromParent;
+        }
+
+        return GetBlockConversionModel(node, pageName, height, isTerrainModifiable, notModifiable);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index, out bool isTerrainModifiable)
