@@ -10,5 +10,6 @@ public sealed class ManualConversionItemModel
     public float OffsetZ { get; set; }
     public int Dir { get; set; }
     public Vec3 Pivot { get; set; }
+    public float RotY { get; set; }
     public float RotZ { get; set; }
 }
