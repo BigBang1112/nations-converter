@@ -11,12 +11,14 @@ internal sealed class CoveredZoneBlockInfoExtract
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly ManualConversionSetModel conversionSet;
+    private readonly bool isManiaPlanet;
     private readonly ILogger logger;
 
-    public CoveredZoneBlockInfoExtract(CGameCtnChallenge mapIn, ManualConversionSetModel conversionSet, ILogger logger)
+    public CoveredZoneBlockInfoExtract(CGameCtnChallenge mapIn, ManualConversionSetModel conversionSet, bool isManiaPlanet, ILogger logger)
     {
         this.mapIn = mapIn;
         this.conversionSet = conversionSet;
+        this.isManiaPlanet = isManiaPlanet;
         this.logger = logger;
     }
 
@@ -46,7 +48,7 @@ internal sealed class CoveredZoneBlockInfoExtract
                 continue;
             }
 
-            if (groundPositions.Contains(block.Coord))
+            if (groundPositions.Contains(block.Coord + (0, isManiaPlanet ? 0 : 1, 0)))
             {
                 coveredZoneBlocks.Add(block);
             }
@@ -92,7 +94,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         foreach (var unit in alignedUnits)
         {
-            groundPositions.Add(block.Coord + unit - min - (0, 1, 0));
+            groundPositions.Add(block.Coord + unit - min);
         }
     }
 }

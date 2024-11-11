@@ -14,6 +14,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
     private readonly CustomContentManager customContentManager;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
     private readonly ImmutableDictionary<Int3, string> terrainModifierZones;
+    private readonly bool isManiaPlanet;
     private readonly ILogger logger;
 
     private readonly Dictionary<string, string> reverseBlockTerrainModifiers;
@@ -28,6 +29,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         CustomContentManager customContentManager,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
+        bool isManiaPlanet,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
@@ -35,6 +37,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         this.customContentManager = customContentManager;
         this.coveredZoneBlocks = coveredZoneBlocks;
         this.terrainModifierZones = terrainModifierZones;
+        this.isManiaPlanet = isManiaPlanet;
         this.logger = logger;
 
         reverseBlockTerrainModifiers = ConversionSet.BlockTerrainModifiers.ToDictionary(x => x.Value, x => x.Key);
@@ -171,7 +174,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (conversion.ZoneHeight.HasValue)
         {
-            pos -= (0, conversion.ZoneHeight.Value, 0);
+            pos -= (0, isManiaPlanet ? 1 : conversion.ZoneHeight.Value, 0);
         }
 
         var rotRadians = -(int)direction * MathF.PI / 2;
@@ -265,7 +268,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                             _ => (0, 0, 0)
                         };
 
-                        if (terrainModifierZones.TryGetValue(alignedCoord - (0, 1, 0), out modifier))
+                        if (terrainModifierZones.TryGetValue(alignedCoord - (0, isManiaPlanet ? 0 : 1, 0), out modifier))
                         {
                             break;
                         }
@@ -331,7 +334,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
-                        var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null ? -1 : 0) + offset.Y, 0);
+                        var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null || isManiaPlanet ? -1 : 0) + offset.Y, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));
                     }
                 }

@@ -40,12 +40,14 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             : (uint)(Config.Seed?.GetHashCode() ?? Guid.NewGuid().GetHashCode());
         var random = new Random((int)seed);
 
+        var isManiaPlanet = mapIn.Chunks.Any(c => c is CGameCtnChallenge.Chunk03043040);
+
         var customContentManager = new CustomContentManager(mapIn, mapOut, runningDir, Config, seed, logger);
 
         var conversionSetExtract = new ConversionSetExtract(mapIn, Config, complexConfig, logger);
         var conversionSet = conversionSetExtract.Extract();
 
-        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(mapIn, conversionSet, logger);
+        var coveredZoneBlockInfoExtract = new CoveredZoneBlockInfoExtract(mapIn, conversionSet, isManiaPlanet, logger);
         var coveredZoneBlocks = coveredZoneBlockInfoExtract.Extract();
 
         var terrainModifierZoneExtract = new TerrainModifierZoneExtract(mapIn, conversionSet, logger);
@@ -54,10 +56,10 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var placeBaseZoneStage = new PlaceBaseZoneStage(mapIn, mapOut, conversionSet, customContentManager, terrainModifierZones, logger);
         placeBaseZoneStage.Convert();
 
-        var placeBlockStage = new PlaceBlockStage(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, logger);
+        var placeBlockStage = new PlaceBlockStage(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, isManiaPlanet, logger);
         placeBlockStage.Convert();
 
-        var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, logger);
+        var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, isManiaPlanet, logger);
         waterStage.Convert();
 
         var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager);

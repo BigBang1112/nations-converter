@@ -11,6 +11,7 @@ internal sealed class WaterStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapOut;
     private readonly ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks;
+    private readonly bool isManiaPlanet;
     private readonly ILogger logger;
 
     public WaterStage(
@@ -18,10 +19,12 @@ internal sealed class WaterStage : BlockStageBase
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
+        bool isManiaPlanet,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapOut = mapOut;
         this.coveredZoneBlocks = coveredZoneBlocks;
+        this.isManiaPlanet = isManiaPlanet;
         this.logger = logger;
     }
 
@@ -66,12 +69,10 @@ internal sealed class WaterStage : BlockStageBase
 
         var waterUnits = conversion.GetPropertyDefault(block, m => m.WaterUnits);
 
-        if (waterUnits is null || waterUnits.Length == 0)
+        if (waterUnits?.Length > 0)
         {
-            return;
+            PlaceWater(mapOut, block.Coord + TotalOffset + (0, conversion.WaterOffsetY + (isManiaPlanet ? -1 : 0), 0), BlockSize, ConversionSet.WaterHeight);
         }
-
-        PlaceWater(mapOut, block.Coord + TotalOffset, BlockSize, ConversionSet.WaterHeight);
     }
 
     public static void PlaceWater(CGameCtnChallenge convertedMap, Int3 pos, Int3 blockSize, float waterHeight)

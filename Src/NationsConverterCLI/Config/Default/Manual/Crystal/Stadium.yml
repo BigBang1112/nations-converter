@@ -31,6 +31,8 @@ Blocks:
       OffsetY: -1
   StadiumDirtDeadendDoor:
     PlaceDefaultZone: true
+  StadiumRoadDirt:
+    UseSubVariant0: true
   StadiumRoadDirtHigh:
     NoTerrainModifier: true
     Conversion:
@@ -48,6 +50,7 @@ Blocks:
       Variant: 3
   StadiumRoadDirtFenceCorner:
     NoTerrainModifier: true
+    UseSubVariant0: true
     Conversion:
       Name: StadiumRoadDirt
       Variant: 2
@@ -61,6 +64,8 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 2
+  StadiumRoadDirtHillTiltCornerIn:
+    UseSubVariant0: true
   StadiumSculptBridgeSuspendSlope2:
     PlaceDefaultZone: true
   StadiumSculptBridgeSuspendSlope2Mirror:
@@ -80,6 +85,14 @@ Blocks:
       Name: StadiumRoadDirtFenceStraight
     Item:
       Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.62
+  StadiumRoadDirtMultiLap:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+    Item:
+      Name: Misc/Waypoint/MultilapDirt.Item.Gbx
       OffsetY: 1.62
   StadiumRoadDirtToRoad:
     NoTerrainModifier: true
@@ -874,4 +887,20 @@ Blocks:
   StadiumLoopRight:
     PlaceDefaultZone: true
   StadiumRoadDirtHighClip:
+    PlaceDefaultZone: true
+  StadiumPool2:
+    NoItem: true
+    NoTerrainModifier: true
+    WaterOffsetY: 1
+    Conversion:
+      Name: StadiumPool
+      OffsetY: 1
+  StadiumWater2:
+    NoItem: true
+    NoTerrainModifier: true
+    WaterOffsetY: 1
+    Conversion:
+      Name: StadiumWater
+      OffsetY: 1
+  StadiumPodium:
     PlaceDefaultZone: true

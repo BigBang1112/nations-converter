@@ -13475,9 +13475,15 @@
           1,
           1,
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
-      "ZoneHeight": 1,
+      "ZoneHeight": 0,
       "TM2": true
     },
     "StadiumRamp": {
@@ -29454,6 +29460,12 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "WaterUnits": [
+          [
+            0,
+            0
+          ]
         ]
       },
       "ZoneHeight": 0,

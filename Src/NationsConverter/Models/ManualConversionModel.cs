@@ -17,6 +17,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public HashSet<Int2>? NotModifiable { get; set; }
     public ConversionRoadModel? Road { get; set; }
     public bool UseSubVariant0 { get; set; }
+    public int WaterOffsetY { get; set; }
 
     public T GetProperty<T>(
         Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
