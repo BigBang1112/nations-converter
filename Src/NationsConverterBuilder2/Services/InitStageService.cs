@@ -628,7 +628,8 @@ internal sealed class InitStageService
             PlacePylons = commonPlacePylons,
             //AcceptPylons = commonAcceptPylons
             TerrainModifierUnits = commonTerrainModifierUnits?.Count == 0 ? null : commonTerrainModifierUnits,
-            TM2 = node.Chunks.Get<CGameCtnBlockInfo.Chunk0304E023>() is not null ? true : null
+            TM2 = node.Chunks.Get<CGameCtnBlockInfo.Chunk0304E023>() is not null ? true : null,
+            Skin = node.Chunks.Get<CPlugGameSkin.HeaderChunk090F4000>() is null ? null : new()
         };
     }
 

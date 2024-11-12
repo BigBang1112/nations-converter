@@ -138,6 +138,7 @@
           1
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "IslandAirportRoad": {
@@ -1484,6 +1485,7 @@
           1
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "IslandDecorRock1": {
@@ -1705,6 +1707,7 @@
       "PageName": "Decors/DecorLandSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -2393,6 +2396,7 @@
       "PageName": "HighWay/HighWayGT",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -9694,6 +9698,7 @@
       "PageName": "Decors/DecorSeaSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -9721,6 +9726,7 @@
       "PageName": "Decors/DecorSeaSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -9753,6 +9759,7 @@
       "PageName": "Decors/DecorSeaSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -9785,6 +9792,7 @@
       "PageName": "Decors/DecorSeaSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -12009,6 +12017,7 @@
       "PageName": "Decors/DecorLandSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -12038,6 +12047,7 @@
           1
         ]
       },
+      "Skin": {},
       "Units": [
         [
           0,
@@ -12069,6 +12079,7 @@
           1
         ]
       },
+      "Skin": {},
       "Units": [
         [
           0,
@@ -12092,6 +12103,7 @@
       "PageName": "Decors/DecorLandSigns",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -12157,6 +12169,7 @@
           3
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "IslandSpaceAntenne1": {
@@ -13588,6 +13601,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Skin": {},
       "Variants": 1,
       "SpawnPos": [
         32,
@@ -14068,6 +14082,7 @@
           }
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "IslandTunnelCircularTransitionToPlatform": {

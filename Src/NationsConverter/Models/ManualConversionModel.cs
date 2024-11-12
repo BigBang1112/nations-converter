@@ -19,6 +19,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public bool UseSubVariant0 { get; set; }
     public int WaterOffsetY { get; set; }
     public bool ForceAirItem { get; set; }
+    public ConversionSkinModel? Skin { get; set; }
 
     public T GetProperty<T>(
         Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,

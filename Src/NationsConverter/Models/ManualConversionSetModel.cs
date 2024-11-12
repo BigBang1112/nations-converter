@@ -95,6 +95,7 @@ public sealed class ManualConversionSetModel
             manualConversion.NotModifiable ??= conversion.NotModifiable;
             manualConversion.WaterUnits = conversion.WaterUnits;
             manualConversion.Road = conversion.Road;
+            manualConversion.Skin = conversion.Skin;
             manualConversion.PlacePylons = conversion.PlacePylons;
             manualConversion.TerrainModifierUnits = conversion.TerrainModifierUnits;
         }

@@ -14,6 +14,7 @@
       "PageName": "Deco/Building",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -2030,6 +2031,7 @@
           1
         ]
       },
+      "Skin": {},
       "Variants": 9
     },
     "BayBuilding1Pillar": {
@@ -2089,6 +2091,7 @@
           14
         ]
       },
+      "Skin": {},
       "Variants": 9
     },
     "BayBuilding2": {
@@ -2123,6 +2126,7 @@
           7
         ]
       },
+      "Skin": {},
       "Variants": 9
     },
     "BayBuilding2Pillar": {
@@ -2182,6 +2186,7 @@
           13
         ]
       },
+      "Skin": {},
       "Variants": 9
     },
     "BayCargo": {
@@ -2251,6 +2256,7 @@
           ]
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "BayCargoContainer": {
@@ -2330,6 +2336,7 @@
           ]
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "BayDocks": {
@@ -3227,6 +3234,7 @@
         ]
       },
       "Road": {},
+      "Skin": {},
       "Variants": 6
     },
     "BayFlatsRoad2": {
@@ -3292,6 +3300,7 @@
         ]
       },
       "Road": {},
+      "Skin": {},
       "Variants": 6
     },
     "BayFlatsRoad2Pillar": {
@@ -3299,6 +3308,7 @@
       "Ground": {},
       "Air": {},
       "Road": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -3411,6 +3421,7 @@
       "Ground": {},
       "Air": {},
       "Road": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -3990,6 +4001,7 @@
       "Ground": {},
       "Air": {},
       "Road": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -4312,6 +4324,7 @@
       "PageName": "Platform/Deco",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -4589,6 +4602,7 @@
       "PageName": "Platform/Deco",
       "Ground": {},
       "Air": {},
+      "Skin": {},
       "Units": [
         [
           0,
@@ -7944,6 +7958,7 @@
           6
         ]
       },
+      "Skin": {},
       "Variants": 1
     },
     "BayTunnelBiSlope2End": {

@@ -236,6 +236,7 @@
       "Ground": {},
       "Air": {},
       "Modifiable": true,
+      "Skin": {},
       "Units": [
         [
           0,
@@ -3162,6 +3163,7 @@
         ]
       },
       "Modifiable": true,
+      "Skin": {},
       "Variants": 1
     },
     "RallyFieldFenceCornerOut": {

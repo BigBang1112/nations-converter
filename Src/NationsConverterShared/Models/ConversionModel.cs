@@ -12,5 +12,6 @@ public class ConversionModel : ConversionModifierModel
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }
     public ConversionRoadModel? Road { get; set; }
+    public ConversionSkinModel? Skin { get; set; }
     public bool? TM2 { get; set; }
 }
