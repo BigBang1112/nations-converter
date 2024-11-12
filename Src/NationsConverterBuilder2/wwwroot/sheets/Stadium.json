@@ -13437,7 +13437,8 @@
           ]
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Modifiable": true
     },
     "StadiumPool2": {
       "PageName": "Terraformation",
@@ -13484,6 +13485,7 @@
         ]
       },
       "ZoneHeight": 0,
+      "Modifiable": true,
       "TM2": true
     },
     "StadiumRamp": {
@@ -27442,6 +27444,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27469,6 +27472,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27496,6 +27500,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27523,6 +27528,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27580,6 +27586,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27627,6 +27634,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27709,6 +27717,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27776,6 +27785,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27804,6 +27814,7 @@
         ]
       },
       "Waypoint": "Checkpoint",
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1,
       "SpawnPos": [
@@ -27836,6 +27847,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27864,6 +27876,7 @@
         ]
       },
       "Waypoint": "StartFinish",
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1,
       "SpawnPos": [
@@ -27896,6 +27909,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27923,6 +27937,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27950,6 +27965,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -27987,6 +28003,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28034,6 +28051,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28061,6 +28079,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28098,6 +28117,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28136,6 +28156,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28184,6 +28205,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28232,6 +28254,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28259,6 +28282,7 @@
           1
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
@@ -28306,6 +28330,7 @@
           }
         ]
       },
+      "Modifiable": true,
       "TM2": true,
       "Variants": 1
     },
