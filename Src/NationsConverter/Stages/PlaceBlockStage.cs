@@ -124,14 +124,19 @@ internal sealed class PlaceBlockStage : BlockStageBase
             }
         }
 
-        var modifierType = block.IsGround ? "Ground" : "Air";
-
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
             ? blockName
             : Path.Combine(conversion.PageName, blockName);
 
         var direction = overrideDirection ?? block.Direction;
-        var offset = new Int3(overrideConversion?.OffsetX ?? 0, overrideConversion?.OffsetY ?? 0, overrideConversion?.OffsetZ ?? 0);
+        var offset = new Int3();
+        if (overrideConversion is not null)
+        {
+            offset = new Int3(
+                overrideConversion.OffsetX, 
+                overrideConversion.OffsetY + (isManiaPlanet ? overrideConversion.Offset2Y : overrideConversion.Offset1Y), 
+                overrideConversion.OffsetZ);
+        }
 
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
@@ -228,6 +233,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 overrideVariant: variantModel?.Variant ?? overrideConversion?.Variant,
                 overrideSubVariant: variantModel?.SubVariant ?? overrideConversion?.SubVariant);
         }
+
+        var modifierType = block.IsGround && !conversion.ForceAirItem ? "Ground" : "Air";
 
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 
@@ -366,9 +373,11 @@ internal sealed class PlaceBlockStage : BlockStageBase
             _ => throw new ArgumentException("Invalid block direction")
         } : new Int3(0, 0, 0);
 
+        var offsetY = blockModel.OffsetY + (isManiaPlanet ? blockModel.Offset2Y : blockModel.Offset1Y);
+
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
-            block.Coord + TotalOffset + adjustedOffset + (0, 8 + blockModel.OffsetY, 0),
+            block.Coord + TotalOffset + adjustedOffset + (0, 8 + offsetY, 0),
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
@@ -399,12 +408,14 @@ internal sealed class PlaceBlockStage : BlockStageBase
             _ => throw new ArgumentException("Invalid block direction")
         };
 
+        var offsetY = itemModel.OffsetY + (isManiaPlanet ? itemModel.Offset2Y : itemModel.Offset1Y);
+
         var pos = c * BlockSize + dir switch
         {
-            0 => new Vec3(itemModel.OffsetX, itemModel.OffsetY, itemModel.OffsetZ),
-            1 => new Vec3(-itemModel.OffsetZ, itemModel.OffsetY, itemModel.OffsetX),
-            2 => new Vec3(-itemModel.OffsetX, itemModel.OffsetY, -itemModel.OffsetZ),
-            3 => new Vec3(itemModel.OffsetZ, itemModel.OffsetY, -itemModel.OffsetX),
+            0 => new Vec3(itemModel.OffsetX, offsetY, itemModel.OffsetZ),
+            1 => new Vec3(-itemModel.OffsetZ, offsetY, itemModel.OffsetX),
+            2 => new Vec3(-itemModel.OffsetX, offsetY, -itemModel.OffsetZ),
+            3 => new Vec3(itemModel.OffsetZ, offsetY, -itemModel.OffsetX),
             _ => throw new ArgumentException("Invalid block direction")
         };
 

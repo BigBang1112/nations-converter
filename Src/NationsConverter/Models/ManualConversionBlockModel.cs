@@ -9,6 +9,8 @@ public sealed class ManualConversionBlockModel
     public int OffsetX { get; set; }
     public int OffsetY { get; set; }
     public int OffsetZ { get; set; }
+    public int Offset1Y { get; set; }
+    public int Offset2Y { get; set; }
     public bool NoItem { get; set; }
     public bool Bit21 { get; set; }
     public int Dir { get; set; }

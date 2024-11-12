@@ -22,13 +22,13 @@ Blocks:
     Conversion:
       Name: StadiumDirtBorder
       Variant: 5
-      OffsetY: -1
+      Offset1Y: -1
   StadiumDirtDeadendTent1:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumDirtBorder
       Variant: 5
-      OffsetY: -1
+      Offset1Y: -1
   StadiumDirtDeadendDoor:
     PlaceDefaultZone: true
   StadiumRoadDirt:
@@ -74,6 +74,10 @@ Blocks:
     PlaceDefaultZone: true
   StadiumSculptBridgeSuspendSlopeEndMirror:
     PlaceDefaultZone: true
+  StadiumSculptBridgeSlopeStart:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSlopeStartMirror:
+    PlaceDefaultZone: true
   StadiumRoadDirtToRoadGrass:
     Items:
     - Name: RoadDirt/RoadLow/StadiumRoadDirt/Ground_3_0.Item.Gbx
@@ -114,6 +118,8 @@ Blocks:
   StadiumTubeV4:
     PlaceDefaultZone: true
   StadiumTubeV8:
+    PlaceDefaultZone: true
+  StadiumTubeRoadCross:
     PlaceDefaultZone: true
   StadiumSculptA:
     PlaceDefaultZone: true
@@ -742,6 +748,7 @@ Blocks:
         Item:
           Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
           OffsetY: -16
+          Offset2Y: 8
   StadiumRoadDirtToRoadDirtHighBridge:
     NoTerrainModifier: true
     Conversion:
@@ -763,7 +770,7 @@ Blocks:
     - Name: StadiumRoadDirt
       NoItem: true
       Variant: 3
-      OffsetZ: 1
+      OffsetX: 1
   StadiumRoadDirtHighToRoad:
     NoTerrainModifier: true
     Conversion:
@@ -903,4 +910,43 @@ Blocks:
       Name: StadiumWater
       OffsetY: 1
   StadiumPodium:
+    Modifiable: true
     PlaceDefaultZone: true
+    ForceAirItem: true
+  StadiumCircuitPillar1:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 9, 16]
+  StadiumCircuitBumpUp2:
+    NoItem: true
+    Items:
+    - Name: Circuit/FlatBase/StadiumCircuitBase/Air_0_0.Item.Gbx
+    - Name: Circuit/FlatBase/StadiumCircuitBase/Air_0_0.Item.Gbx
+      OffsetZ: 32
+    - Name: Circuit/Hazards/StadiumCircuitBumpUp/Air_0_0.Item.Gbx
+      OffsetZ: 16
+  StadiumCircuitRampSmall1x05:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitRampSmall1x1:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitRampBig:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumTrenchStraight:
+    Item:
+      Name: Trench/Main/StadiumTrenchStraight/Base.Item.Gbx
+  StadiumTrenchStraightScreen:
+    NoItem: true
+    Conversion:
+      Name: StadiumTrenchStraight
+  StadiumRoadDirtTurbo:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
