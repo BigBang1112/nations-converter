@@ -5,12 +5,12 @@
 
 <PageTitle>Nations Converter 2</PageTitle>
 
-<NavMenu Released="released" />
+<NavMenu Released="Released" />
 <div class="eyecatcher">
     <h1><img id="logo" src="img/logo.webp" width="700" /></h1>
-    <p>Convert your TMS / TMNESWC / TMNF / TMUF / TM2 maps to the latest Trackmania.</p>
+    <p>Convert your TMNF / TMUF / TMT / TM2 maps to the latest Trackmania.</p>
 </div>
-@if (!released)
+@if (!Released)
 {
     <div class="web-browser">
         <a href="/login-discord" class="web-browser-button button-shiny"><b>Sign in with Discord to show support</b></a>
@@ -19,75 +19,153 @@
 else
 {
     <div class="web-browser">
-        @if (webAppReleased)
+        @if (WebAppReleased)
         {
-            <p>No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
+            <p class="centered">No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
             <a href="/webapp" class="web-browser-button button-shiny"><b>Open Nations Converter 2 web</b> (coming early 2025)</a>
         }
         else
         {
-            <p>Want to run Nations Converter 2 directly in a web browser? Coming in 2025!</p>
+            <a href="/downloads" class="web-browser-button button-shiny"><b>Download the CLI program</b></a>
+            <p class="centered">You'll be also able to run Nations Converter directly in a web browser in early 2025.</p>
         }
     </div>
-    <div class="downloads">
-        <div class="readable-width white-mention">
-            <div>
-                <h2>Download the CLI tool</h2>
-                <p>CLI is shipped with <b>common Stadium assets by default</b> (Crystal <b>Classic</b> and <b>Modernized</b>). For other environments, download additional assets.</p>
-            </div>
-        </div>
-        <div class="download-latest">
-            <div>
-                <h3 class="latest-version">2.0.0-alpha01</h3>
-                <div class="download-grid">
-                    <div><b>Tool</b></div>
-                    <div><b>Assets</b></div>
-                    <div style="display: flex; gap: 20px;">
-                        <div class="download-button-set">
-                            <a href="#" class="button-download-platform button-shiny"><img src="img/windows.svg" width="32" /> <span>Windows</span></a>
-                            <div>
-                                <a href="#">x64</a>, <a href="#">arm64</a>
-                            </div>
-                        </div>
-                        <div class="download-button-set">
-                            <a href="#" class="button-download-platform button-shiny"><img src="img/linux.svg" width="32" /> <span>Linux</span></a>
-                            <div>
-                                <a href="#">x64</a>, <a href="#">arm64</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="download-assets">
-                        <div class="edition-row">
-                            <a href="#" class="button-shiny button-download-assets" style="border-radius: 10px 0 0 0"><img src="img/download.svg" width="16" /> <span>Snow</span></a>
-                            <a href="#" class="button-shiny button-download-assets"><img src="img/download.svg" width="16" /> <span>Rally</span></a>
-                            <a href="#" class="button-shiny button-download-assets" style="border-radius: 0 10px 0 0"><img src="img/download.svg" width="16" /> <span>Desert</span></a>
-                        </div>
-                        <div class="edition-row">
-                            <a href="#" class="button-shiny button-download-assets"><img src="img/download.svg" width="16" /> <span>Island</span></a>
-                            <a href="#" class="button-shiny button-download-assets"><img src="img/download.svg" width="16" /> <span>Bay</span></a>
-                            <a href="#" class="button-shiny button-download-assets"><img src="img/download.svg" width="16" /> <span>Coast</span></a>
-                        </div>
-                        <div class="edition-row">
-                            <a href="#" class="button-shiny button-download-assets" style="border-radius: 0 0 10px 10px"><img src="img/download.svg" width="16" /> <span>Stadium (Solid)</span></a>
-                        </div>
-                    </div>
-                    <div style="color: #555;font-size: 70%;">
-                        Licensed with AGPL-3.0
-                    </div>
-                    <div style="color: #555;font-size: 70%;">
-                        Free to use for any purpose (CC0)
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="readable-width support">
+        <a href="https://liberapay.com/NationsConverter" class="button-support"><b>Support our work on Liberapay</b></a>
     </div>
-    <div class="open-source readable-width white-mention">
+    <div class="readable-width white-mention">
         <div>
-            <h2 style="text-align: center">Believe it or not, the tool is open source</h2>
-            <a href="#" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
+            <h2 class="centered">Currently supported environments</h2>
+            <p class="centered">Solid Modless, Crystal Modernized, and Stock Raw are prioritized at the moment. Evolution is expected to continue throughout 2025 and 2026.</p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th rowspan="3">Environment</th>
+                            <th colspan="8">Category</th>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Solid</th>
+                            <th colspan="2">Crystal</th>
+                            <th colspan="3">Stock</th>
+                        </tr>
+                        <tr>
+                            <th>Modless</th>
+                            <th>Mod</th>
+                            <th>Balanced</th>
+                            <th>Modernized</th>
+                            <th>Classic</th>
+                            <th>Enhanced</th>
+                            <th>Raw</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Stadium</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>Yes (+ TM2)</td>
+                            <td>Yes (+ TM2)</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <td>Desert</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Rally</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Snow</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Island</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Bay</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Coast</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Canyon</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td>Valley</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Lagoon</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <div>
+    <div class="readable-width">
         <div>
             <h2>How does it look like?</h2>
             <div>
@@ -125,10 +203,10 @@ else
                     <p>We brought the same Nations Converter back to with minor improvements, if you're used to it.</p>
                 </div>
             </div>
-            <div>
-                More comparisons coming soon!
-            </div>
         </div>
+    </div>
+    <div class="eyecatcher">
+        <p>More comparisons coming soon!</p>
     </div>
     <div class="readable-width">
         <div>
@@ -151,15 +229,21 @@ else
             <p>Mod that looks acceptable when you don't have it downloaded. To be done.</p>
         </div>
     </div>
+    <div class="open-source readable-width white-mention">
+        <div>
+            <h2 class="centered">Believe it or not, the tool is open source</h2>
+            <a href="#" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
+        </div>
+    </div>
     <div class="readable-width">
         <div>
             <h2>Authors</h2>
             <div>
-                <h3>Development, technology, mesh modeling assistance</h3>
+                <h3>Development, technology, mesh modeling assistance, website</h3>
                 <p>BigBang1112</p>
             </div>
             <div>
-                <h3>Mesh modeling team</h3>
+                <h3>Mesh modeling team <small>(looking for more volunteers!)</small></h3>
                 <p>harry.alexm, Paddy Productions, nod, Zai, eyebo</p>
             </div>
             <div>
@@ -176,13 +260,14 @@ else
             </div>
         </div>
     </div>
-    }
+}
 
-    @code {
+@code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
-    private bool released = false;
-    private bool webAppReleased = false;
+    public bool Released { get; set; }
+
+    public bool WebAppReleased { get; set; }
 
     protected override async Task OnInitializedAsync()
     {

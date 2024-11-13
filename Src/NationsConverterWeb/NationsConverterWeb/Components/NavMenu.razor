@@ -1,15 +1,16 @@
 ﻿<nav>
-    <div>
+    <div class="inner">
         <span class="gbx-tools">gbx.tools</span>
-        <a href="/">Home</a>
+        <div class="nav-item"><NavLink href="" Match="NavLinkMatch.All">Home</NavLink></div>
         @if (Released)
         {
-            <a href="/about">About</a>
+            <div class="nav-item"><NavLink href="/downloads">Downloads</NavLink></div>
+            <div class="nav-item"><NavLink href="/about">About</NavLink></div>
         }
     </div>
-    <div>
-        <a href="https://github.com/BigBang1112/nations-converter">GitHub</a>
-        <a href="/login-discord">Sign in with Discord</a>
+    <div class="inner">
+        <div class="nav-item"><a href="https://github.com/BigBang1112/nations-converter">GitHub</a></div>
+        <div class="nav-item"><a href="/login-discord">Sign in with Discord</a></div>
     </div>
 </nav>
 

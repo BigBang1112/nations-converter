@@ -16,6 +16,9 @@ html, body {
     padding: 0;
     font-size: 18px;
     color: white;
+    background-image: url('img/logo-square-bg.webp');
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -24,6 +27,18 @@ h1 {
 
 h1, h2, h3, h4, p, ul {
     margin: 0;
+}
+
+a {
+    color: #5AF;
+}
+
+    a:hover {
+        color: #8CF;
+    }
+
+.centered {
+    text-align: center;
 }
 
 .gbx-tools {
@@ -38,54 +53,22 @@ h1, h2, h3, h4, p, ul {
     padding: 10px;
 }
 
-nav {
-    display: flex;
-    padding: 20px;
-    gap: 10px;
-}
-    nav div {
-        display: flex;
-        gap: 10px;
-    }
-
-        nav div a {
-            display: flex;
-            padding: 10px 20px;
-            min-width: 150px;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            border-bottom: 2px solid white;
-        }
-
-            nav div a:hover {
-                background-color: white;
-                color: #222;
-            }
-
-@media only screen and (max-width: 1000px) {
-    nav {
-        flex-direction: column;
-    }
+.table-wrapper {
+    overflow-x: auto;
 }
 
-@media only screen and (max-width: 520px) {
-    nav div {
-        flex-direction: column;
-    }
+table {
+    display: table;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 10px 0;
+    width: 100%;
 }
 
-@media only screen and (min-width: 520px) {
-    nav {
-        padding: 20px 50px;
+    table td, table th {
+        border: 2px solid black;
+        padding: 5px 10px;
     }
-
-    nav div:last-child {
-        margin-left: auto;
-    }
-}
 
 #logo {
     max-width: 90%;
@@ -108,6 +91,36 @@ nav {
     gap: 20px;
 }
 
+.readable-width {
+    padding: 20px;
+}
+
+    .readable-width div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+.white-mention {
+    background-color: white;
+    color: #222;
+}
+
+.button-shiny {
+    background-color: #66CCFF;
+    box-shadow: 0 0 30px #66CCFF55;
+    text-decoration: none;
+    color: #222;
+}
+
+    .button-shiny:hover {
+        background-color: #77DDFF;
+        color: #222;
+    }
+
+
 .page-container {
     display: flex;
     flex-direction: column;
@@ -122,14 +135,6 @@ button {
     font-size: 20px;
     font-family: inherit;
 }
-
-a {
-    color: #5AF;
-}
-
-    a:hover {
-        color: #8CF;
-    }
 
 .content {
     padding-top: 1.1rem;
@@ -166,8 +171,8 @@ h1:focus {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 10px;
     color: gray;
     text-align: center;
-    padding: 10px;
+    padding: 20px 10px;
 }
