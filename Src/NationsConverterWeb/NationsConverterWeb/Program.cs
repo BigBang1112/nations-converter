@@ -25,7 +25,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LoginPath = "/";
         options.AccessDeniedPath = "/thank-you";
     })
-    /*.AddDiscord(options =>
+    .AddDiscord(options =>
     {
         options.ClientId = builder.Configuration["Discord:ClientId"] ?? throw new InvalidOperationException("Discord ClientId is missing");
         options.ClientSecret = builder.Configuration["Discord:ClientSecret"] ?? throw new InvalidOperationException("Discord ClientSecret is missing");
@@ -33,7 +33,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ClaimActions.MapJsonKey(DiscordAdditionalClaims.GlobalName, "global_name");
 
         options.Events.OnCreatingTicket = DiscordAuthenticationTicket.OnCreatingTicketAsync;
-    })*/;
+    });
 
 builder.Services.AddAuthorizationBuilder()
     .SetFallbackPolicy(new AuthorizationPolicyBuilder()
