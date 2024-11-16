@@ -2,21 +2,29 @@ BlockTerrainModifiers:
   StadiumDirt: Dirt
 WaterHeight: 1
 Blocks:
+  StadiumAirship:
+    Modernized: true
   StadiumInflatableSnowTree:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumInflatablePalmTree:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumInflatableCactus:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumDirtBorder:
     NotModifiable: []
     PlaceDefaultZone: true
   StadiumInflatableCastle:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumInflatableCastleBig:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumInflatableCastleDoor:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumDirtDeadendSpot:
     NoTerrainModifier: true
     Conversion:
@@ -131,10 +139,13 @@ Blocks:
     PlaceDefaultZone: true
   StadiumSculptA:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumSculptB:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumSculptC:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumPlatformSlope2Straight:
     ForceAirItem: true
   StadiumPlatformRoad:
@@ -250,6 +261,10 @@ Blocks:
         NoItem: true
   StadiumControlRoadPub:
     PlaceDefaultZone: true
+  StadiumControlLight:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
   StadiumControlLightBase:
     PlaceDefaultZone: true
   StadiumRoadMain:
@@ -676,12 +691,49 @@ Blocks:
     PlaceDefaultZone: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumInflatableSupport:
+    Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
+      6:
+        Variant: 5
+      7:
+        Variant: 5
+      8:
+        Variant: 5
   StadiumInflatablePillar:
     PlaceDefaultZone: true
     Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
+      6:
+        Variant: 5
+      7:
+        Variant: 5
+      8:
+        Variant: 5
   StadiumInflatableTube:
+    Modernized: true
     Conversion:
       Name: StadiumInflatablePillar
+      Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
   StadiumHole:
     NoItem: true
     PlaceDefaultZone: true
@@ -780,7 +832,10 @@ Blocks:
   #StadiumRoadMainClip:
   #  PlaceDefaultZone: true
   StadiumDirtHill:
+    Modernized: true
     ConversionVariants:
+      11:
+        SubVariant: 0
       13:
         Item:
           Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
