@@ -8,4 +8,5 @@ internal sealed class MaterialSubCategoryModel
     public bool Remove { get; set; }
     public string? Decal { get; set; }
     public UvModifiersModel? DecalUvModifiers { get; set; }
+    public bool Stadium256 { get; set; }
 }
