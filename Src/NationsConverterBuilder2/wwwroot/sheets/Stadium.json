@@ -14583,6 +14583,113 @@
       "TM2": true,
       "Variants": 1
     },
+    "StadiumRoadDirtHighGTCurve3": {
+      "PageName": "RoadDirt/RoadHigh",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2
+          ]
+        ],
+        "Size": [
+          3,
+          2,
+          3
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "StadiumRoadDirtHighClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 1
+          },
+          {
+            "Name": "StadiumRoadDirtHighClip",
+            "Offset": [
+              2,
+              0,
+              2
+            ],
+            "Dir": 0
+          }
+        ]
+      },
+      "Modifiable": true,
+      "Variants": 1
+    },
     "StadiumRoadDirtHighGTCurve4": {
       "PageName": "RoadDirt/RoadHigh",
       "Ground": {
@@ -14842,6 +14949,53 @@
       },
       "Modifiable": true,
       "TM2": true,
+      "Variants": 1
+    },
+    "StadiumRoadDirtHighToRoad": {
+      "PageName": "RoadDirt/Transitions",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ],
+        "Clips": [
+          {
+            "Name": "StadiumRoadDirtHighClip",
+            "Offset": [
+              0,
+              0,
+              0
+            ],
+            "Dir": 0
+          },
+          {
+            "Name": "StadiumRoadMainClip",
+            "Offset": [
+              0,
+              1,
+              0
+            ],
+            "Dir": 2
+          }
+        ]
+      },
+      "Modifiable": true,
       "Variants": 1
     },
     "StadiumRoadDirtHighTurbo": {
