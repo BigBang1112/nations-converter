@@ -26,7 +26,6 @@ internal sealed class CustomContentManager : EnvironmentStageBase
     private readonly string subCategory;
     private readonly string technology;
     private readonly string rootFolderName;
-    private readonly string baseItemPath;
 
     private const string NC2 = "NC2";
 
@@ -51,7 +50,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         subCategory = string.IsNullOrWhiteSpace(config.SubCategory) ? Environment switch
         {
-            "Stadium" => "Classic",
+            "Stadium" => "Modernized",
             _ => "Modless"
         } : config.SubCategory;
 
@@ -61,15 +60,16 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             _ => "MM_Collision"
         };
 
-        baseItemPath = Path.Combine(category, subCategory, technology, Environment);
         rootFolderName = config.CopyItems ? NC2 : $"{NC2}_{seed}";
     }
 
-    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default)
+    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(itemModel);
 
-        var itemPath = Path.Combine(baseItemPath, itemModel);
+        var appliedSubCategory = modernized || category != "Crystal" || subCategory != "Modernized" ? subCategory : "Classic";
+
+        var itemPath = Path.Combine(category, appliedSubCategory, technology, Environment, itemModel);
 
         // retrieve author login (and collection in the future) from the item model gbx
         // cache this item model in dictionary

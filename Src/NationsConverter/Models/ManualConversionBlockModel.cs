@@ -15,4 +15,9 @@ public sealed class ManualConversionBlockModel
     public bool Bit21 { get; set; }
     public int Dir { get; set; }
     public bool IsRelativeOffset { get; set; }
+
+    /// <summary>
+    /// If conversion from the Modernized sub-category should be used when Modernized is applied. False will always pick Classic. Only has effect in the Crystal category.
+    /// </summary>
+    public bool Modernized { get; set; }
 }

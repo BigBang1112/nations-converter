@@ -125,12 +125,12 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
                 {
                     if (terrainModifier == "Fabric")
                     {
-                        customContentManager.PlaceItem(Path.Combine("Misc", "Fabric", "Ground.Item.Gbx"), pos * BlockSize, (0, 0, 0));
+                        customContentManager.PlaceItem(Path.Combine("Misc", "Fabric", "Ground.Item.Gbx"), pos * BlockSize, (0, 0, 0), modernized: conversion.Modernized);
                         continue;
                     }
                 }
 
-                customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0));
+                customContentManager.PlaceItem(itemPath, pos * BlockSize, (0, 0, 0), modernized: conversion.Modernized);
 
                 if (conversion.ZoneHeight.HasValue)
                 {

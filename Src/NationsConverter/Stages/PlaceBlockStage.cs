@@ -238,11 +238,13 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 
+        var modernized = overrideConversion?.Modernized ?? conversion.Modernized;
+
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
-            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0));
+            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized);
         }
 
         // Place terrain-modifiable pieces
@@ -342,7 +344,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
                         var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null || isManiaPlanet ? -1 : 0) + offset.Y, 0);
-                        customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0));
+                        customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0), modernized: modernized);
                     }
                 }
                 else
@@ -350,9 +352,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                     var terrainItemPath = modifier is null
                         ? Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx")
                         : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
-                    customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0));
+                    customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized);
                 }
-
             }
         }
     }
@@ -432,7 +433,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             var name = itemModel.Name
                 .Replace("{Variant}", variant.ToString())
                 .Replace("{Modifier}", isGround ? "Ground" : "Air");
-            customContentManager.PlaceItem(name, pos, rot, itemModel.Pivot);
+            customContentManager.PlaceItem(name, pos, rot, itemModel.Pivot, modernized: itemModel.Modernized);
         }
     }
 

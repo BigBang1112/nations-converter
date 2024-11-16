@@ -21,6 +21,11 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public bool ForceAirItem { get; set; }
     public ConversionSkinModel? Skin { get; set; }
 
+    /// <summary>
+    /// If items from the Modernized sub-category should be used when Modernized is applied. False will always pick Classic. Only has effect in the Crystal category.
+    /// </summary>
+    public bool Modernized { get; set; }
+
     public T GetProperty<T>(
         Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
         Func<ManualConversionModifierModel, T?> propertyFunc,

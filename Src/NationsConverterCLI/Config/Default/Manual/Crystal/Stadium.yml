@@ -678,6 +678,7 @@ Blocks:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumInflatablePillar:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumInflatableTube:
     Conversion:
       Name: StadiumInflatablePillar
@@ -933,6 +934,7 @@ Blocks:
     PlaceDefaultZone: true
   StadiumPool:
     NoTerrainModifier: true
+    Modernized: true
   StadiumPool2:
     NoItem: true
     NoTerrainModifier: true
@@ -940,6 +942,8 @@ Blocks:
     Conversion:
       Name: StadiumPool
       OffsetY: 1
+  StadiumWater:
+    Modernized: true
   StadiumWater2:
     NoItem: true
     NoTerrainModifier: true
