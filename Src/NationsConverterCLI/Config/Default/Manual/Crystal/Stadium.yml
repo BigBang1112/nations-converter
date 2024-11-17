@@ -16,6 +16,13 @@ Blocks:
   StadiumDirtBorder:
     NotModifiable: []
     PlaceDefaultZone: true
+    ConversionVariants:
+      5:
+        SubVariant: 0
+      9:
+        SubVariant: 0
+      11:
+        SubVariant: 0
   StadiumInflatableCastle:
     PlaceDefaultZone: true
     Modernized: true
