@@ -16,6 +16,7 @@ Blocks:
   StadiumDirtBorder:
     NotModifiable: []
     PlaceDefaultZone: true
+    Modernized: true
     ConversionVariants:
       5:
         SubVariant: 0
@@ -48,6 +49,7 @@ Blocks:
     PlaceDefaultZone: true
   StadiumRoadDirt:
     UseSubVariant0: true
+    Modernized: true
   StadiumRoadDirtHigh:
     NoTerrainModifier: true
     Conversion:
@@ -60,15 +62,19 @@ Blocks:
         SubVariant: 0
   StadiumRoadDirtFenceStraight:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       Variant: 3
+      Modernized: true
   StadiumRoadDirtFenceCorner:
     NoTerrainModifier: true
     UseSubVariant0: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       Variant: 2
+      Modernized: true
   StadiumRoadDirtHighFenceStraight:
     NoTerrainModifier: true
     Conversion:
@@ -81,6 +87,8 @@ Blocks:
       Variant: 2
   StadiumRoadDirtHillTiltCornerIn:
     UseSubVariant0: true
+  StadiumRoadDirtGTCurve2:
+    Modernized: true
   StadiumSculptBridgeSuspendSlope2:
     PlaceDefaultZone: true
   StadiumSculptBridgeSuspendSlope2Mirror:
@@ -102,6 +110,7 @@ Blocks:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumRoadDirtFenceStraight
+      Modernized: true
     Item:
       Name: Misc/Waypoint/Checkpoint.Item.Gbx
       OffsetY: 1.62
