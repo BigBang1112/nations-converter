@@ -15,7 +15,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
 
-    [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)")]
+    [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)", RegexOptions.IgnoreCase)]
     private static partial Regex MoodRegex();
 
     public DecorationStage(
@@ -37,6 +37,13 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
     public void Convert()
     {
         var mood = MoodRegex().Match(mapIn.Decoration.Id).Value;
+
+        if (string.IsNullOrEmpty(mood))
+        {
+            mood = "Day";
+        }
+
+        mood = string.Concat(mood[0].ToString().ToUpper(), mood.AsSpan(1));
 
         var mapBase = config.IncludeDecoration
             ? "NoStadium48x48"
