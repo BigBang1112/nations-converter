@@ -35,7 +35,7 @@ internal sealed class MusicStage : EnvironmentStageBase
 
     public void Convert()
     {
-        if (!config.IncludeMusic)
+        if (!config.IncludeMusic || Environment == "Stadium")
         {
             return;
         }

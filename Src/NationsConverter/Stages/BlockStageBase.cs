@@ -22,7 +22,10 @@ internal abstract class BlockStageBase : EnvironmentStageBase
         this.mapIn = mapIn;
 
         BlockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
-        CenterOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
+        if (Environment == "Stadium")
+        {
+            CenterOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
+        }
         TotalOffset = CenterOffset + (0, -mapIn.DecoBaseHeightOffset, 0);
         ConversionSet = conversionSet;
     }
