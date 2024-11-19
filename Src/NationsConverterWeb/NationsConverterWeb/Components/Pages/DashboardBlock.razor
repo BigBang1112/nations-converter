@@ -101,7 +101,7 @@
                         @if (IsAssignedUser())
                         {
                             <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
-                                title="Upload your improved item here, any file name is accepted."></InputFile>
+                            title="Upload your improved item here, any file name is accepted."></InputFile>
                         }
                     </div>
 
@@ -194,7 +194,7 @@
 
                         <li>
                             @mat.MaterialUserInst.Link
-                    
+
                             @if (mat.MaterialUserInst.Color?.Length > 0)
                             {
                                 <span> (color: @string.Join(',', mat.MaterialUserInst.Color))</span>
@@ -323,39 +323,56 @@
         await stream.CopyToAsync(memoryStream);
         memoryStream.Position = 0;
 
-        var itemGbx = await GBX.NET.Gbx.ParseNodeAsync<GBX.NET.Engines.GameData.CGameItemModel>(memoryStream);
+        var gbx = await GBX.NET.Gbx.ParseNodeAsync(memoryStream);
 
-        if (itemGbx.Description is null)
+        if (gbx is GBX.NET.Engines.GameData.CGameItemModel itemGbx)
         {
-            throw new Exception($"Item description is null - {file.Name}");
+            if (itemGbx.Description is null)
+            {
+                throw new Exception($"Item description is null - {file.Name}");
+            }
+
+            var itemInfo = JsonSerializer.Deserialize<ItemInfoModel>(itemGbx.Description, AppJsonContext.Default.ItemInfoModel);
+
+            if (itemInfo?.Block is null)
+            {
+                throw new Exception($"ItemInfo.Block is null - {file.Name}");
+            }
+
+            if (itemInfo.Block.Modifier != item.Modifier || itemInfo.Block.Variant != item.Variant || itemInfo.Block.SubVariant != item.SubVariant)
+            {
+                throw new Exception($"ItemInfo.Block does not match the item - {file.Name}");
+            }
+
+            var upload = new ItemUpload
+            {
+                OriginalFileName = file.Name,
+                UploadedAt = DateTimeOffset.UtcNow,
+                LastModifiedAt = file.LastModified,
+                Data = memoryStream.ToArray(),
+                BlockItem = item,
+                UploadedBy = user,
+            };
+
+            block.HasUpload = true;
+
+            await Db.ItemUploads.AddAsync(upload);
+            await Db.SaveChangesAsync();
         }
-
-        var itemInfo = JsonSerializer.Deserialize<ItemInfoModel>(itemGbx.Description, AppJsonContext.Default.ItemInfoModel);
-
-        if (itemInfo?.Block is null)
+        else if (gbx is GBX.NET.Engines.Game.CGameCtnMacroBlockInfo macroblock)
         {
-            throw new Exception($"ItemInfo.Block is null - {file.Name}");
+            var upload = new MacroblockUpload
+            {
+                OriginalFileName = file.Name,
+                UploadedAt = DateTimeOffset.UtcNow,
+                LastModifiedAt = file.LastModified,
+                Data = memoryStream.ToArray(),
+                BlockItem = item,
+                UploadedBy = user,
+            };
+            await Db.MacroblockUploads.AddAsync(upload);
+            await Db.SaveChangesAsync();
         }
-
-        if (itemInfo.Block.Modifier != item.Modifier || itemInfo.Block.Variant != item.Variant || itemInfo.Block.SubVariant != item.SubVariant)
-        {
-            throw new Exception($"ItemInfo.Block does not match the item - {file.Name}");
-        }
-
-        var upload = new ItemUpload
-        {
-            OriginalFileName = file.Name,
-            UploadedAt = DateTimeOffset.UtcNow,
-            LastModifiedAt = file.LastModified,
-            Data = memoryStream.ToArray(),
-            BlockItem = item,
-            UploadedBy = user,
-        };
-
-        block.HasUpload = true;
-
-        await Db.ItemUploads.AddAsync(upload);
-        await Db.SaveChangesAsync();
     }
 
     private async Task DownloadAllInitAsync()

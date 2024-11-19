@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NationsConverterWeb;
 
@@ -11,9 +12,11 @@ using NationsConverterWeb;
 namespace NationsConverterWeb.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241119002154_AddMacroblockUploads")]
+    partial class AddMacroblockUploads
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,7 +87,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasIndex("SubCategoryId");
 
-                    b.ToTable("Blocks", (string)null);
+                    b.ToTable("Blocks");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.BlockItem", b =>
@@ -124,7 +127,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasIndex("BlockId");
 
-                    b.ToTable("BlockItems", (string)null);
+                    b.ToTable("BlockItems");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.ConverterCategory", b =>
@@ -134,7 +137,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ConverterCategories", (string)null);
+                    b.ToTable("ConverterCategories");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.ConverterSubCategory", b =>
@@ -144,7 +147,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ConverterSubCategories", (string)null);
+                    b.ToTable("ConverterSubCategories");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.DiscordUser", b =>
@@ -179,7 +182,7 @@ namespace NationsConverterWeb.Migrations
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("DiscordUsers", (string)null);
+                    b.ToTable("DiscordUsers");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.GameEnvironment", b =>
@@ -189,7 +192,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GameEnvironments", (string)null);
+                    b.ToTable("GameEnvironments");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.ItemUpload", b =>
@@ -230,7 +233,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasIndex("UploadedById");
 
-                    b.ToTable("ItemUploads", (string)null);
+                    b.ToTable("ItemUploads");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.MacroblockUpload", b =>
@@ -268,7 +271,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasIndex("UploadedById");
 
-                    b.ToTable("MacroblockUploads", (string)null);
+                    b.ToTable("MacroblockUploads");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.User", b =>
@@ -299,7 +302,7 @@ namespace NationsConverterWeb.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", (string)null);
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("NationsConverterWeb.Models.Block", b =>

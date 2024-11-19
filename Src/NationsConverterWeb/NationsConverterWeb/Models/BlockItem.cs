@@ -29,4 +29,5 @@ public sealed class BlockItem
     public bool JustResave { get; set; }
 
     public ICollection<ItemUpload> Uploads { get; set; } = [];
+    public ICollection<MacroblockUpload> MacroblockUploads { get; set; } = [];
 }

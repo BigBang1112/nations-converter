@@ -13,6 +13,7 @@ public class AppDbContext : DbContext
     public DbSet<ConverterCategory> ConverterCategories { get; set; }
     public DbSet<ConverterSubCategory> ConverterSubCategories { get; set; }
     public DbSet<ItemUpload> ItemUploads { get; set; }
+    public DbSet<MacroblockUpload> MacroblockUploads { get; set; }
 
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
     {
