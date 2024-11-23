@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 ARG TARGETARCH
 ARG APPNAME=NationsConverterWeb
@@ -25,7 +25,7 @@ RUN dotnet publish $APPNAME/$APPNAME -c $BUILD_CONFIGURATION -a $TARGETARCH -o /
 
 
 # final stage/image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-noble-chiseled
+FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled
 EXPOSE 8080
 EXPOSE 8081
 WORKDIR /app

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>277b8743-3a2f-4f8b-ba13-7054709c4267</UserSecretsId>
@@ -12,10 +12,10 @@
     <ItemGroup>
         <ProjectReference Include="..\..\NationsConverterShared\NationsConverterShared.csproj" />
         <ProjectReference Include="..\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj" />
-        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="8.2.0" />
+        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="9.0.0" />
         <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.0" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.10" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.10" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
@@ -26,9 +26,9 @@
         <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.0.0-beta.12" />
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
         <PackageReference Include="GBX.NET" Version="2.0.9" />
-        <PackageReference Include="OpenTelemetry.Api.ProviderBuilderExtensions" Version="1.9.0" />
-        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
-        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
+        <PackageReference Include="OpenTelemetry.Api.ProviderBuilderExtensions" Version="1.10.0" />
+        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.10.0" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.10.0" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.9.0" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Process" Version="0.5.0-beta.7" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.9.0" />
