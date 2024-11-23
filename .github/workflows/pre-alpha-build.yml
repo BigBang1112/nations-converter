@@ -22,7 +22,9 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: |
+            9.0.x
+            8.0.x
 
       - name: Add nuget.gbx.tools source
         run: dotnet nuget add source https://nuget.gbx.tools/v3/index.json --name nuget.gbx.tools
