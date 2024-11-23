@@ -195,54 +195,61 @@ app.MapGet("/blockicon/{name}", async (
         return;
     }
 
-    var block = await cache.GetOrCreateAsync($"blockicon_{name}", async token =>
+    try
     {
-        return await db.Blocks
-            .Select(x => new { x.Name, x.IconWebp, x.CreatedAt })
-            .AsNoTracking()
-            .FirstOrDefaultAsync(x => x.Name == name, token);
-    }, new() { Expiration = TimeSpan.FromMinutes(5) }, cancellationToken: context.RequestAborted);
+        var block = await cache.GetOrCreateAsync($"blockicon_{name}", async token =>
+        {
+            return await db.Blocks
+                .Select(x => new { x.Name, x.IconWebp, x.CreatedAt })
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Name == name, token);
+        }, new() { Expiration = TimeSpan.FromMinutes(5) }, cancellationToken: context.RequestAborted);
 
-    if (block is null)
-    {
-        context.Response.StatusCode = StatusCodes.Status404NotFound;
-        return;
-    }
+        if (block is null)
+        {
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return;
+        }
 
-    var lastModified = string.IsNullOrWhiteSpace(block.IconWebp)
-        ? env.WebRootFileProvider.GetFileInfo(Path.Combine("img, bloc.webp")).LastModified
-        : block.CreatedAt;
+        var lastModified = string.IsNullOrWhiteSpace(block.IconWebp)
+            ? env.WebRootFileProvider.GetFileInfo(Path.Combine("img, bloc.webp")).LastModified
+            : block.CreatedAt;
 
-    var eTag = $"\"{lastModified.Ticks}\"";
+        var eTag = $"\"{lastModified.Ticks}\"";
 
-    if (context.Request.Headers.TryGetValue("If-None-Match", out var requestEtag) && requestEtag == eTag)
-    {
-        context.Response.StatusCode = StatusCodes.Status304NotModified;
-        return;
-    }
-
-    if (context.Request.Headers.TryGetValue("If-Modified-Since", out var ifModifiedSince))
-    {
-        if (DateTime.TryParse(ifModifiedSince, out var modifiedSince) && modifiedSince >= lastModified)
+        if (context.Request.Headers.TryGetValue("If-None-Match", out var requestEtag) && requestEtag == eTag)
         {
             context.Response.StatusCode = StatusCodes.Status304NotModified;
             return;
         }
+
+        if (context.Request.Headers.TryGetValue("If-Modified-Since", out var ifModifiedSince))
+        {
+            if (DateTime.TryParse(ifModifiedSince, out var modifiedSince) && modifiedSince >= lastModified)
+            {
+                context.Response.StatusCode = StatusCodes.Status304NotModified;
+                return;
+            }
+        }
+
+        context.Response.ContentType = "image/webp";
+        context.Response.Headers.ETag = eTag;
+        context.Response.Headers.LastModified = lastModified.ToString("R");
+
+        if (string.IsNullOrWhiteSpace(block.IconWebp))
+        {
+            await context.Response.SendFileAsync(Path.Combine(env.WebRootPath, "img", "bloc.webp"), context.RequestAborted);
+            return;
+        }
+
+        var iconBytes = Convert.FromBase64String(block.IconWebp);
+
+        await context.Response.Body.WriteAsync(iconBytes, context.RequestAborted);
     }
-
-    context.Response.ContentType = "image/webp";
-    context.Response.Headers.ETag = eTag;
-    context.Response.Headers.LastModified = lastModified.ToString("R");
-
-    if (string.IsNullOrWhiteSpace(block.IconWebp))
+    catch (OperationCanceledException)
     {
-        await context.Response.SendFileAsync(Path.Combine(env.WebRootPath, "img", "bloc.webp"), context.RequestAborted);
-        return;
+        context.Response.StatusCode = StatusCodes.Status500InternalServerError;
     }
-
-    var iconBytes = Convert.FromBase64String(block.IconWebp);
-
-    await context.Response.Body.WriteAsync(iconBytes, context.RequestAborted);
 });
 
 app.UseAntiforgery();

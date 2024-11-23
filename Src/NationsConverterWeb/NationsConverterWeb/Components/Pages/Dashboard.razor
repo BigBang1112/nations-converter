@@ -10,6 +10,7 @@
 @{
     using var db = DbFactory.CreateDbContext();
     blocks = db.Blocks
+        .Where(x => x.Name.Contains(searchValue) && x.EnvironmentId.Contains(Environment ?? ""))
         .Include(x => x.AssignedTo)
         .ThenInclude(x => x!.DiscordUser)
         .AsNoTracking()
@@ -36,6 +37,19 @@
         <div class="primary">
             <div class="categories">
                 <button class="button">Modless</button>
+            </div>
+            <div class="categories">
+                <a class="button" href="dashboard">All</a>
+                <a class="button" href="dashboard?env=Desert">Desert</a>
+                <a class="button" href="dashboard?env=Rally">Rally</a>
+                <a class="button" href="dashboard?env=Snow">Snow</a>
+                <a class="button" href="dashboard?env=Island">Island</a>
+                <a class="button" href="dashboard?env=Bay">Bay</a>
+                <a class="button" href="dashboard?env=Coast">Coast</a>
+                <a class="button" href="dashboard?env=Canyon">Canyon</a>
+            </div>
+            <div class="categories">
+                <input type="text" style="flex: 1" @oninput="SearchChanged" />
             </div>
             <div class="grid">
                 @if (currentDiscordUser?.User.IsAdmin == true)
@@ -78,11 +92,9 @@
         </div>
         <div class="members">
             <div class="additional-links">
-                @if (currentDiscordUser is not null)
-                {
-                    <span>Your payout value: @currentDiscordUser.User.PayoutValue</span>
-                    <span>Currently paid: @currentDiscordUser.User.CurrentlyPaidValue</span>
-                }
+                <span>Your payout value: @currentDiscordUser?.User.PayoutValue</span>
+                <span>Currently paid: @currentDiscordUser?.User.CurrentlyPaidValue</span>
+
                 <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
 
                 @if (currentDiscordUser?.User.IsAdmin == true)
@@ -147,6 +159,10 @@
     private BlockDto[] blocks = [];
 
     private bool loading;
+    private string searchValue = "";
+
+    [SupplyParameterFromQuery(Name = "env")]
+    public string? Environment { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
@@ -193,6 +209,27 @@
             .ToArrayAsync();
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
+
+        /*blocks = db.Blocks
+            .Where(x => x.Name.Contains(searchValue))
+            .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
+            .Include(x => x.AssignedTo)
+            .ThenInclude(x => x!.DiscordUser)
+            .AsNoTracking()
+            .Select(x => new BlockDto
+            {
+                Id = x.Id,
+                Name = x.Name,
+                AssignedTo = x.AssignedTo,
+                AssignedToId = x.AssignedToId,
+                AssignedAt = x.AssignedAt,
+                IsDone = x.IsDone,
+                HasUpload = x.HasUpload,
+                CategoryId = x.CategoryId,
+                SubCategoryId = x.SubCategoryId,
+                EnvironmentId = x.EnvironmentId,
+            })
+            .ToArray();*/
 
         loading = false;
     }
@@ -398,5 +435,10 @@
 
             return;
         }
+    }
+
+    private void SearchChanged(ChangeEventArgs args)
+    {
+        searchValue = args.Value?.ToString() ?? "";
     }
 }
