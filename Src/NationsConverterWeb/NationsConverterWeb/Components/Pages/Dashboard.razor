@@ -9,7 +9,11 @@
 
 @{
     using var db = DbFactory.CreateDbContext();
-    blocks = db.Blocks.ToArray();
+    blocks = db.Blocks
+        .Include(x => x.AssignedTo)
+        .ThenInclude(x => x!.DiscordUser)
+        .AsNoTracking()
+        .ToArray();
 }
 
 <div class="page-container">
@@ -34,12 +38,9 @@
                         <CollectorIcon WebpData="@block.IconWebp" Size="32"></CollectorIcon>
 
                         @block.Name
-
-                        @if (block.IsDone)
-                        {
-                            <img class="modeler" src="img/done.webp" width="24" height="24" />
-                        }
-                        else if (block.AssignedTo is not null)
+                    </a>
+                    <button class="button" @onclick="() => AssignOrUnassignAsync(block)">
+                        @if (block.AssignedTo is not null)
                         {
                             @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
                             {
@@ -52,11 +53,15 @@
                                 width="24" height="24" />
                             }
                         }
+                        else if (block.IsDone)
+                        {
+                            <img class="modeler" src="img/done.webp" width="24" height="24" />
+                        }
                         else if (block.HasUpload)
                         {
                             <img class="modeler" src="img/wip.webp" width="24" height="24" />
                         }
-                    </a>
+                    </button>
                 }
             </div>
         </div>
@@ -345,5 +350,42 @@
         }
 
         await db.SaveChangesAsync();
+    }
+
+    private async Task AssignOrUnassignAsync(Block block)
+    {
+        if (currentDiscordUser?.User is null)
+        {
+            return;
+        }
+
+        if (block is null)
+        {
+            return;
+        }
+
+        if (block.AssignedTo is null)
+        {
+            await using var db = DbFactory.CreateDbContext();
+
+            await db.Blocks.Where(x => x.Id == block.Id)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.AssignedToId, currentDiscordUser.User.Id)
+                    .SetProperty(x => x.AssignedAt, DateTimeOffset.UtcNow));
+        }
+        else
+        {
+            if (block is null || block.AssignedTo?.Id != currentDiscordUser.User?.Id)
+            {
+                return;
+            }
+
+            await using var db = DbFactory.CreateDbContext();
+
+            await db.Blocks.Where(x => x.Id == block.Id)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.AssignedToId, default(int?))
+                    .SetProperty(x => x.AssignedAt, default(DateTimeOffset?)));
+
+            return;
+        }
     }
 }

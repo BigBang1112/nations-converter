@@ -51,8 +51,8 @@ p {
         }
 
 .grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto 44px;
     gap: 2px;
     margin: 5px 5px 0 0;
 }

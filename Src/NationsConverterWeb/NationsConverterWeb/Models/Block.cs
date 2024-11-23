@@ -32,6 +32,7 @@ public sealed class Block
     public string? IconWebp { get; set; }
 
     public User? AssignedTo { get; set; }
+    public int? AssignedToId { get; set; }
 
     public DateTimeOffset? AssignedAt { get; set; }
 
