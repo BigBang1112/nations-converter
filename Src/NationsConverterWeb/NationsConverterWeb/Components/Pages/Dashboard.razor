@@ -13,6 +13,19 @@
         .Include(x => x.AssignedTo)
         .ThenInclude(x => x!.DiscordUser)
         .AsNoTracking()
+        .Select(x => new BlockDto
+        {
+            Id = x.Id,
+            Name = x.Name,
+            AssignedTo = x.AssignedTo,
+            AssignedToId = x.AssignedToId,
+            AssignedAt = x.AssignedAt,
+            IsDone = x.IsDone,
+            HasUpload = x.HasUpload,
+            CategoryId = x.CategoryId,
+            SubCategoryId = x.SubCategoryId,
+            EnvironmentId = x.EnvironmentId,
+        })
         .ToArray();
 }
 
@@ -23,8 +36,6 @@
         <div class="primary">
             <div class="categories">
                 <button class="button">Modless</button>
-                <button class="button" disabled>Balanced</button>
-                <button class="button" disabled>Mod</button>
             </div>
             <div class="grid">
                 @if (currentDiscordUser?.User.IsAdmin == true)
@@ -35,7 +46,7 @@
                 @foreach (var block in blocks)
                 {
                     <a href="dashboard/block/@block.Name">
-                        <CollectorIcon WebpData="@block.IconWebp" Size="32"></CollectorIcon>
+                        <img src="blockicon/@block.Name" class="blockicon" loading="lazy" width="32" height="32" />
 
                         @block.Name
                     </a>
@@ -133,7 +144,7 @@
     private ulong? snowflake;
     private DiscordUser? currentDiscordUser;
     private DiscordUser[] discordUsers = [];
-    private Block[] blocks = [];
+    private BlockDto[] blocks = [];
 
     private bool loading;
 
@@ -352,7 +363,7 @@
         await db.SaveChangesAsync();
     }
 
-    private async Task AssignOrUnassignAsync(Block block)
+    private async Task AssignOrUnassignAsync(BlockDto block)
     {
         if (currentDiscordUser?.User is null)
         {

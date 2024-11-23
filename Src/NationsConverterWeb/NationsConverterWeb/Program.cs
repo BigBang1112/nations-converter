@@ -177,6 +177,36 @@ app.MapGet("/logout", async (HttpContext context) =>
     context.Response.Redirect("/");
 });
 
+app.MapGet("/blockicon/{name}", async (HttpContext context, AppDbContext db, IWebHostEnvironment env, string ? name) =>
+{
+    if (name is null)
+    {
+        context.Response.StatusCode = StatusCodes.Status404NotFound;
+        return;
+    }
+
+    var block = await db.Blocks.FirstOrDefaultAsync(x => x.Name == name, context.RequestAborted);
+
+    if (block is null)
+    {
+        context.Response.StatusCode = StatusCodes.Status404NotFound;
+        return;
+    }
+
+    if (string.IsNullOrWhiteSpace(block.IconWebp))
+    {
+        context.Response.ContentType = "image/webp";
+        await context.Response.SendFileAsync(Path.Combine(env.WebRootPath, "img", "bloc.webp"), context.RequestAborted);
+        return;
+    }
+
+    var iconBytes = Convert.FromBase64String(block.IconWebp);
+
+    context.Response.ContentType = "image/webp";
+
+    await context.Response.Body.WriteAsync(iconBytes, context.RequestAborted);
+});
+
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()

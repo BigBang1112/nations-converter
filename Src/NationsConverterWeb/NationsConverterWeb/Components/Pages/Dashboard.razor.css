@@ -116,3 +116,7 @@ p {
 .additional-links {
     flex-direction: column;
 }
+
+.blockicon {
+    transform: scaleY(-1);
+}
