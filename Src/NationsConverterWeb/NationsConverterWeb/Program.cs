@@ -14,6 +14,7 @@ using NationsConverterWeb.Components;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Trace;
+using Microsoft.Extensions.Caching.Hybrid;
 
 GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
 
@@ -98,6 +99,10 @@ builder.Services.AddOpenTelemetry()
     });
 builder.Services.AddMetrics();
 
+#pragma warning disable EXTEXP0018
+builder.Services.AddHybridCache();
+#pragma warning restore EXTEXP0018
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -177,7 +182,12 @@ app.MapGet("/logout", async (HttpContext context) =>
     context.Response.Redirect("/");
 });
 
-app.MapGet("/blockicon/{name}", async (HttpContext context, AppDbContext db, IWebHostEnvironment env, string ? name) =>
+app.MapGet("/blockicon/{name}", async (
+    HttpContext context,
+    AppDbContext db,
+    IWebHostEnvironment env,
+    HybridCache cache,
+    string? name) =>
 {
     if (name is null)
     {
@@ -185,7 +195,13 @@ app.MapGet("/blockicon/{name}", async (HttpContext context, AppDbContext db, IWe
         return;
     }
 
-    var block = await db.Blocks.FirstOrDefaultAsync(x => x.Name == name, context.RequestAborted);
+    var block = await cache.GetOrCreateAsync($"blockicon_{name}", async token =>
+    {
+        return await db.Blocks
+            .Select(x => new { x.Name, x.IconWebp })
+            .AsNoTracking()
+            .FirstOrDefaultAsync(x => x.Name == name, token);
+    }, new() { Expiration = TimeSpan.FromMinutes(5) }, cancellationToken: context.RequestAborted);
 
     if (block is null)
     {
