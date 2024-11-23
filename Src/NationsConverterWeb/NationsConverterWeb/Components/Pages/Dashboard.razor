@@ -7,6 +7,11 @@
 
 <PageTitle>Dashboard - Nations Converter 2</PageTitle>
 
+@{
+    using var db = DbFactory.CreateDbContext();
+    blocks = db.Blocks.ToArray();
+}
+
 <div class="page-container">
     <h2>Welcome back @(globalName)!</h2>
 
@@ -43,8 +48,8 @@
                             else
                             {
                                 <img class="modeler" title="Assigned to @(block.AssignedTo.DiscordUser.GlobalName ?? block.AssignedTo.DiscordUser.Username)"
-                                     src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
-                                     width="24" height="24" />
+                                src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
+                                width="24" height="24" />
                             }
                         }
                         else if (block.HasUpload)
@@ -172,8 +177,6 @@
             .ToArrayAsync();
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
-
-        blocks = await db.Blocks.ToArrayAsync();
 
         loading = false;
     }
@@ -315,7 +318,7 @@
                 }
 
                 var uploadValue = (upload.Value == 0 ? 1 : upload.Value) / (float)uploadTotalValue * itemValue;
-                
+
                 if (userTotalValues.TryGetValue(upload.UploadedBy.Id, out var existingValue))
                 {
                     userTotalValues[upload.UploadedBy.Id] = existingValue + uploadValue;
