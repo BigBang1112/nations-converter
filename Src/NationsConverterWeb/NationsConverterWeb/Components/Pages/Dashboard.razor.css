@@ -76,6 +76,7 @@ p {
         .grid a.new {
             border: 2px solid #764;
             background-color: #542;
+            grid-column: span 2;
         }
 
             .grid a.new:hover {
