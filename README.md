@@ -5,6 +5,6 @@
 
 Powered by [GBX.NET](https://github.com/BigBang1112/gbx-net).
 
-We are coming back soon.
+We are coming back in December.
 
 **Current Nations Converter maps crash the game. Do not use v1.**
