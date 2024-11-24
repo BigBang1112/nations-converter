@@ -6,5 +6,6 @@ internal sealed class InitOptions
 {
     public HashSet<string> DisabledTerrainModifierBlocks { get; set; } = [];
     public HashSet<string> WaterZone { get; set; } = [];
+    public HashSet<string> ObjectLinkAsItem { get; set; } = [];
     public Dictionary<string, MaterialModel> Materials { get; set; } = [];
 }

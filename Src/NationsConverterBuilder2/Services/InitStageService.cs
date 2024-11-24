@@ -26,7 +26,7 @@ internal sealed class InitStageService
     private readonly string? initMapsOutputPath;
     private readonly string? initVersion;
 
-    private static readonly string[] subCategories = ["Balanced", "Mod", "Modless"];
+    private static readonly string[] subCategories = ["Modless"];
 
     private static readonly object PadLock = new();
 
@@ -418,10 +418,50 @@ internal sealed class InitStageService
             };
 
             CGameItemModel finalItem;
+            List<CGameItemModel>? linkItems = null;
             switch (subVariant.Technology)
             {
                 case "MM_Collision":
-                    var crystal = itemMaker.CreateCrystalFromSolid(solid, subVariant.Mobil?.Node?.ObjectLink, spawnLoc, subVariant.SubCategory,
+                    var usesObjectLinkAsItem = initOptions.Value.ObjectLinkAsItem.Contains(subVariant.BlockName);
+                    if (usesObjectLinkAsItem && modifierType is "Ground" or "Air")
+                    {
+                        foreach (var link in subVariant.Mobil?.Node?.ObjectLink ?? [])
+                        {
+                            if (link.Mobil?.Item?.Solid?.Tree is not CPlugSolid linkSolid)
+                            {
+                                continue;
+                            }
+
+                            var linkCrystal = itemMaker.CreateCrystalFromSolid(linkSolid, null, null, subVariant.SubCategory,
+                                null,
+                                skipTreeWhen: tree =>
+                                {
+                                    if (modifierMaterials.Count == 0
+                                        || subVariant.ModifierType != "Ground"
+                                        || tree.ShaderFile is null
+                                        || initOptions.Value.DisabledTerrainModifierBlocks.Contains(subVariant.BlockName))
+                                    {
+                                        return false;
+                                    }
+
+                                    var matName = GbxPath.GetFileNameWithoutExtension(tree.ShaderFile.FilePath);
+
+                                    // skip materials that are not part of the current modifier type
+                                    if (modifierMaterials.TryGetValue(matName, out var materialModifier))
+                                    {
+                                        return modifierType == "Ground";
+                                    }
+
+                                    return modifierType != "Ground";
+                                });
+
+                            var linkItem = itemMaker.Build(linkCrystal, subVariant.WebpData, subVariant.BlockInfo.Ident.Collection.GetBlockSize(), subVariant.BlockName, itemInfo);
+                            linkItems ??= [];
+                            linkItems.Add(linkItem);
+                        }
+                    }
+
+                    var crystal = itemMaker.CreateCrystalFromSolid(solid, usesObjectLinkAsItem ? null : subVariant.Mobil?.Node?.ObjectLink, spawnLoc, subVariant.SubCategory,
                             modifierType is "Ground" or "Air" ? null : modifierType,
                             skipTreeWhen: tree =>
                             {
@@ -479,6 +519,21 @@ internal sealed class InitStageService
                 baseMap?.PlaceAnchoredObject(
                     new(itemPath.Replace('/', '\\'), 26, "akPfIM0aSzuHuaaDWptBbQ"),
                         (index / 32 * 128, 64, index % 32 * 128), (0, 0, 0));
+            }
+
+            for (int i = 0; i < linkItems?.Count; i++)
+            {
+                var linkItem = linkItems[i];
+
+                var linkItemPath = Path.Combine(subVariant.DirectoryPath, $"{modifierType}Link{i}_{subVariant.VariantIndex}_{subVariant.SubVariantIndex}.Item.Gbx");
+                
+                linkItem.Save(Path.Combine(itemsDirPath, linkItemPath));
+
+                if (!string.IsNullOrEmpty(initItemsOutputPath))
+                {
+                    Directory.CreateDirectory(Path.Combine(initItemsOutputPath, subVariant.DirectoryPath));
+                    File.Copy(Path.Combine(itemsDirPath, linkItemPath), Path.Combine(initItemsOutputPath, linkItemPath), true);
+                }
             }
         }
     }
