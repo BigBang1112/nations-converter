@@ -71,7 +71,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
                 yOffset += deco.YOffset;
             }
 
-            customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0));
+            customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0), lightmapQuality: LightmapQuality.Lowest);
 
             logger.LogInformation("Placed decoration item ({Size}).", sizeStr);
         }
@@ -83,7 +83,8 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         {
             for (var z = 0; z < size.Z; z++)
             {
-                customContentManager.PlaceBlock(@"Misc\Void", (x, 9, z) + offset, Direction.North, isGround: true);
+                var block = customContentManager.PlaceBlock(@"Misc\Void", (x, 9, z) + offset, Direction.North, isGround: true);
+                block.LightmapQuality = LightmapQuality.Lowest;
             }
         }
 

@@ -244,7 +244,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         if (!noItem)
         {
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
-            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized);
+            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
         }
 
         // Place terrain-modifiable pieces
