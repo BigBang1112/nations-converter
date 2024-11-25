@@ -393,7 +393,7 @@ public static class CPlugTreeExtensions
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
 
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>();
+        //plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().Version = 2;
 
         // lightmap data, matches *faced* indices count
         /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 
