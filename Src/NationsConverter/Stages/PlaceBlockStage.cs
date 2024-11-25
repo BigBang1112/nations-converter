@@ -433,7 +433,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             var name = itemModel.Name
                 .Replace("{Variant}", variant.ToString())
                 .Replace("{Modifier}", isGround ? "Ground" : "Air");
-            customContentManager.PlaceItem(name, pos, rot, itemModel.Pivot, modernized: itemModel.Modernized);
+            customContentManager.PlaceItem(name, pos, rot, itemModel.Pivot, modernized: itemModel.Modernized, technology: itemModel.AlwaysStaticObject ? "SO" : null);
         }
     }
 

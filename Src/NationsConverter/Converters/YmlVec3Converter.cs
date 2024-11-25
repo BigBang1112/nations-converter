@@ -14,9 +14,9 @@ public sealed class YmlVec3Converter : IYamlTypeConverter
     {
         _ = parser.Consume<SequenceStart>();
 
-        var x = float.Parse(parser.Consume<Scalar>().Value);
-        var y = float.Parse(parser.Consume<Scalar>().Value);
-        var z = float.Parse(parser.Consume<Scalar>().Value);
+        var x = float.Parse(parser.Consume<Scalar>().Value, CultureInfo.InvariantCulture);
+        var y = float.Parse(parser.Consume<Scalar>().Value, CultureInfo.InvariantCulture);
+        var z = float.Parse(parser.Consume<Scalar>().Value, CultureInfo.InvariantCulture);
 
         _ = parser.Consume<SequenceEnd>();
 

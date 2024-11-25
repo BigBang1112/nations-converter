@@ -187,7 +187,7 @@ public static class CPlugTreeExtensions
                         var pos = ApplyLocation(vertexPositions[indices[i]], loc) + posOffset;
                         var index = positionsDict[pos];
                         var uv = uvSets.Length == 0 ? (0, 0) : uvSets[0][indices[i]];
-                        verts[i] = new CPlugCrystal.Vertex(index, uv);
+                        verts[i] = new CPlugCrystal.Vertex(index, uv, uv);
                     }
 
                     // skip degenerate triangles
@@ -393,9 +393,7 @@ public static class CPlugTreeExtensions
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003003>().Version = 2;
         plugCrystal.CreateChunk<CPlugCrystal.Chunk09003005>();
 
-        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = faces.SelectMany(x => x.Vertices)
-            .Select(x => x.TexCoord)
-            .ToArray();
+        plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>();
 
         // lightmap data, matches *faced* indices count
         /*plugCrystal.CreateChunk<CPlugCrystal.Chunk09003006>().U01 = 
@@ -569,7 +567,6 @@ public static class CPlugTreeExtensions
 
             positions.AddRange(ApplyLocation(collisionMesh.Vertices, location));
 
-            // TODO: this is not how TM2 solid collision faces work
             if (collisionMesh.CookedTriangles?.Length > 0)
             {
                 faces.AddRange(collisionMesh.CookedTriangles
@@ -578,9 +575,9 @@ public static class CPlugTreeExtensions
                         var material = surface.Materials[tri.U03];
 
                         return new CPlugCrystal.Face([
-                            new(tri.U02.X + indicesOffset, default),
-                            new(tri.U02.Y + indicesOffset, default),
-                            new(tri.U02.Z + indicesOffset, default)
+                            new(tri.U02.X + indicesOffset, default, default),
+                            new(tri.U02.Y + indicesOffset, default, default),
+                            new(tri.U02.Z + indicesOffset, default, default)
                             ],
                             group,
                             materials[GetSurfaceIdSet(material)],
@@ -595,9 +592,9 @@ public static class CPlugTreeExtensions
                     {
                         var material = surface.Materials[tri.U04];
                         return new CPlugCrystal.Face([
-                            new(tri.U01.X + indicesOffset, default),
-                            new(tri.U01.Y + indicesOffset, default),
-                            new(tri.U01.Z + indicesOffset, default)
+                            new(tri.U01.X + indicesOffset, default, default),
+                            new(tri.U01.Y + indicesOffset, default, default),
+                            new(tri.U01.Z + indicesOffset, default, default)
                             ],
                             group,
                             materials[GetSurfaceIdSet(material)],

@@ -63,13 +63,13 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         rootFolderName = config.CopyItems ? NC2 : $"{NC2}_{seed}";
     }
 
-    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false)
+    public void PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false, string? technology = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(itemModel);
 
         var appliedSubCategory = modernized || category != "Crystal" || subCategory != "Modernized" ? subCategory : "Classic";
 
-        var itemPath = Path.Combine(category, appliedSubCategory, technology, Environment, itemModel);
+        var itemPath = Path.Combine(category, appliedSubCategory, technology ?? this.technology, Environment, itemModel);
 
         // retrieve author login (and collection in the future) from the item model gbx
         // cache this item model in dictionary
@@ -241,6 +241,20 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         if (mapOut.EmbeddedZipData is { Length: > 0 })
         {
             logger.LogInformation("Embedded size: {Size}", ByteSize.FromBytes(mapOut.EmbeddedZipData.Length));
+
+            if (logger.IsEnabled(LogLevel.Debug))
+            {
+                using var zip = mapOut.OpenReadEmbeddedZipData();
+
+                logger.LogDebug("Embedded files:");
+
+                foreach (var entry in zip.Entries.OrderByDescending(x => x.CompressedLength))
+                {
+                    var dirName = Path.GetFileName(Path.GetDirectoryName(entry.FullName));
+                    var fileName = dirName is null ? entry.Name : Path.Combine(dirName, entry.Name);
+                    logger.LogDebug("* {Path} ({Size})", fileName, ByteSize.FromBytes(entry.CompressedLength));
+                }
+            }
         }
         else
         {

@@ -1,3 +1,12 @@
 BlockTerrainModifiers:
  RallyRockyGrass: RockyGrass
 WaterHeight: -4
+Blocks:
+  RallyWindmill:
+    Item:
+      Name: Decor/HouseDecor/GroundLink0_0_0.Item.Gbx
+      OffsetX: 32.1
+      OffsetY: 24.6
+      OffsetZ: 4.7
+      RotY: -90
+      AlwaysStaticObject: true
