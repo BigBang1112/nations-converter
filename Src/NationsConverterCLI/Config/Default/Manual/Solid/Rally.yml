@@ -10,3 +10,24 @@ Blocks:
       OffsetZ: 4.7
       RotY: -90
       AlwaysStaticObject: true
+  RallyRoadCastleSlopePillar:
+    UseVariant0: true
+    ForceAirItem: true
+  RallyRoadWoodSlopePillar:
+    UseVariant0: true
+    ForceAirItem: true
+  RallyGT1Pillar:
+    UseVariant0: true
+    ForceAirItem: true
+  RallyGT2Pillar:
+    UseVariant0: true
+  RallyGT3Pillar:
+    UseVariant0: true
+  RallyGT4Pillar:
+    UseVariant0: true
+  RallyGT5Pillar:
+    UseVariant0: true
+  RallyGT6Pillar:
+    UseVariant0: true
+  RallyGT8Pillar:
+    UseVariant0: true

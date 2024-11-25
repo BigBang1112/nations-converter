@@ -93,12 +93,17 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var variant = overrideVariant ?? overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
         var subVariant = overrideSubVariant ?? overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
 
+        if (conversion.UseVariant0)
+        {
+            variant = 0;
+        }
+
         if (variant >= maxVariants)
         {
             throw new ArgumentException("Block variant exceeds max variants");
         }
 
-        if (block.IsClip)
+        if (conversion.UseSubVariant0 || block.IsClip)
         {
             subVariant = 0;
         }
@@ -114,14 +119,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         }
         else if (subVariant >= maxSubVariants)
         {
-            if (conversion.UseSubVariant0)
-            {
-                subVariant = 0;
-            }
-            else
-            {
-                throw new ArgumentException($"Block sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
-            }
+            throw new ArgumentException($"Block sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
         }
 
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
