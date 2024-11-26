@@ -347,7 +347,6 @@
           6
         ]
       },
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -570,7 +569,6 @@
       "PageName": "Frontier",
       "Ground": {},
       "Air": {},
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2882,7 +2880,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "RallyFieldCornerOut": {
@@ -3002,7 +2999,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "RallyFieldFenceAutoCenter": {
@@ -4025,7 +4021,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Variants": 1
     },
     "RallyFieldTetrisDiagRoadLowToRoadHigh": {

@@ -50,7 +50,7 @@ internal sealed class ItemMakerService
             ApplyDecalUvModifiers(matFile, uvSetIndex, uvs, subCategory);
         },
         skipTreeWhen,
-        noAdditions: modifier is not null,
+        noAdditions: modifier is not null, // noAdditions includes collisions, which are different for each modifier, change to only exclude spawnpoint and triggers
         logger);
     }
 

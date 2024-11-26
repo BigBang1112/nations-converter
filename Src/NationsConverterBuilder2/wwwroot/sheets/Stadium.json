@@ -12,6 +12,109 @@
     "Fabric"
   ],
   "Blocks": {
+    "CE_Helico": {
+      "PageName": "CE",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        2
+      ]
+    },
+    "CE_HelicoScreen": {
+      "PageName": "CE",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            4,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          5,
+          1
+        ],
+        "SubVariants": [
+          2
+        ]
+      },
+      "Skin": {},
+      "TM2": true,
+      "Variants": 1
+    },
+    "CE_HelicoStart": {
+      "PageName": "CE",
+      "Air": {
+        "Units": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          2
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Waypoint": "Start",
+      "TM2": true,
+      "Variants": 1,
+      "SpawnPos": [
+        0,
+        0,
+        0
+      ]
+    },
     "PylonStadium": {
       "PageName": "Other"
     },

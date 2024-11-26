@@ -31,3 +31,6 @@ Blocks:
     UseVariant0: true
   RallyGT8Pillar:
     UseVariant0: true
+  RallyRoadWoodToCastlePillar:
+    UseVariant0: true
+    ForceAirItem: true
