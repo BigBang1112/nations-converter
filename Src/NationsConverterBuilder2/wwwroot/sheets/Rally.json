@@ -1321,7 +1321,6 @@
           }
         ]
       },
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -1690,7 +1689,6 @@
       "PageName": "RoadMedium",
       "Ground": {},
       "Air": {},
-      "Modifiable": true,
       "Units": [
         [
           0,
@@ -2536,7 +2534,6 @@
           0
         ]
       },
-      "Modifiable": true,
       "Units": [
         [
           0,
