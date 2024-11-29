@@ -253,6 +253,9 @@
             .Include(x => x.Items)
                 .ThenInclude(x => x.Uploads)
                     .ThenInclude(x => x.UploadedBy!.DiscordUser)
+            .Include(x => x.Items)
+                .ThenInclude(x => x.MacroblockUploads)
+                    .ThenInclude(x => x.UploadedBy!.DiscordUser)
             .Include(x => x.AssignedTo!.DiscordUser)
             .FirstOrDefaultAsync(x => x.Name == BlockName);
     }
