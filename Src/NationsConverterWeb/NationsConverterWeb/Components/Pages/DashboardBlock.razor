@@ -230,6 +230,59 @@
                 </ul>
             }
         }
+
+        @if (macroblocks.Count == 0)
+        {
+            <button class="button button-big" style="margin: 10px" @onclick="LoadMacroblockInfo">Load macroblock info</button>
+        }
+        else
+        {
+            foreach (var (blockItem, macroblockGbx) in macroblocks)
+            {
+                <h4>@blockItem.FileName</h4>
+
+                <pre><code>
+                    <span>Items:</span><br />
+                    @foreach (var obj in macroblockGbx.ObjectSpawns ?? [])
+                    {
+                        var pos = new GBX.NET.Vec3(
+                            MathF.Round(obj.AbsolutePositionInMap.X, 4),
+                            MathF.Round(obj.AbsolutePositionInMap.Y, 4),
+                            MathF.Round(obj.AbsolutePositionInMap.Z, 4));
+                        var rot = new GBX.NET.Vec3(
+                            MathF.Round(obj.PitchYawRoll.X / MathF.PI * 180, 4),
+                            MathF.Round(obj.PitchYawRoll.Y / MathF.PI * 180, 4),
+                            MathF.Round(obj.PitchYawRoll.Z / MathF.PI * 180, 4));
+
+                        <span>- Name: @obj.ItemModel?.Id</span><br />
+                        @if (pos.X != 0)
+                        {
+                            <span>  OffsetX: @pos.X.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (pos.Y != 0)
+                        {
+                            <span>  OffsetY: @pos.Y.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (pos.Z != 0)
+                        {
+                            <span>  OffsetZ: @pos.Z.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (rot.X != 0)
+                        {
+                            <span>  RotX: @(rot.X.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                        @if (rot.Y != 0)
+                        {
+                            <span>  RotY: @(rot.Y.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                        @if (rot.Z != 0)
+                        {
+                            <span>  RotZ: @(rot.Z.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                    }
+                </code></pre>
+            }
+        }
     }
 </div>
 
@@ -246,6 +299,7 @@
     private string? blockDirBasePath;
 
     private List<GBX.NET.Gbx<GBX.NET.Engines.GameData.CGameItemModel>> items = new();
+    private Dictionary<BlockItem, GBX.NET.Engines.Game.CGameCtnMacroBlockInfo> macroblocks = new();
 
     private async Task<Block?> GetBlockAsync()
     {
@@ -547,6 +601,21 @@
         items = Directory.GetFiles(blockDirBasePath)
             .Select(x => GBX.NET.Gbx.Parse<GBX.NET.Engines.GameData.CGameItemModel>(x))
             .ToList();
+    }
+
+    private async Task LoadMacroblockInfo()
+    {
+        var mblocks = await Db.MacroblockUploads
+            .Include(x => x.BlockItem)
+            .Where(x => x.BlockItem.BlockId == block!.Id)
+            .GroupBy(x => x.BlockItem)
+            .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
+            .ToListAsync();
+
+        macroblocks = mblocks
+            .ToDictionary(
+                x => x.BlockItem,
+                x => GBX.NET.Gbx.ParseNode<GBX.NET.Engines.Game.CGameCtnMacroBlockInfo>(new MemoryStream(x.Data)));
     }
 
     private float GetUploadValue(ItemUpload upload, int totalValue)
