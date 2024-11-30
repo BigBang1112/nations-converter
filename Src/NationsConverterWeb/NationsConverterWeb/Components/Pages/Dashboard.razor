@@ -295,6 +295,8 @@
         var uploads = await db.ItemUploads
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
+            .Where(x => !x.BlockItem.Block.IsDone)
+            .Select(x => new { x.BlockItem.Block.Name, x.BlockItem.FileName, x.Data, x.UploadedAt, x.LastModifiedAt })
             .ToListAsync();
 
         var now = DateTimeOffset.UtcNow.ToString("yyyyMMddTHHmmss");
@@ -308,8 +310,8 @@
                 var filePath = Path.Combine(
                     "ValueReview",
                     now,
-                    upload.BlockItem.Block.Name,
-                    $"{GBX.NET.GbxPath.GetFileNameWithoutExtension(upload.BlockItem.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}.Item{Path.GetExtension(upload.BlockItem.FileName)}");
+                    upload.Name,
+                    $"{GBX.NET.GbxPath.GetFileNameWithoutExtension(upload.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}.Item{Path.GetExtension(upload.FileName)}");
                 var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
 
                 entry.LastWriteTime = upload.LastModifiedAt;
