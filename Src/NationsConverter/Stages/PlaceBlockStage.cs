@@ -419,7 +419,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         };
 
         var rotXRadians = -dir * MathF.PI / 2;
-        var rot = new Vec3(rotXRadians, AdditionalMath.ToRadians(itemModel.RotY), AdditionalMath.ToRadians(itemModel.RotZ));
+        var rot = new Vec3(rotXRadians + AdditionalMath.ToRadians(itemModel.RotX), AdditionalMath.ToRadians(itemModel.RotY), AdditionalMath.ToRadians(itemModel.RotZ));
         var isOfficial = !itemModel.Name.Contains('/') && !itemModel.Name.Contains('\\');
 
         if (isOfficial)

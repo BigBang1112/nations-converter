@@ -12,6 +12,7 @@ public sealed class ManualConversionItemModel
     public float Offset2Y { get; set; }
     public int Dir { get; set; }
     public Vec3 Pivot { get; set; }
+    public float RotX { get; set; }
     public float RotY { get; set; }
     public float RotZ { get; set; }
     public bool AlwaysStaticObject { get; set; }
