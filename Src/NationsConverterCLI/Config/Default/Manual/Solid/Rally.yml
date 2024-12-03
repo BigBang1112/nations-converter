@@ -136,6 +136,87 @@ Blocks:
       OffsetY: 14.1964
       OffsetZ: 10.3795
       RotX: 90
+  RallyFieldTetrisDiagRoadLowToRoadHighMirror:
+    Items:
+    - Name: SpringTreeVerySmall
+      OffsetX: 88.0808
+      OffsetY: 4.1749
+      OffsetZ: 97.779
+    - Name: SpringTreeVerySmall
+      OffsetX: 89.8353
+      OffsetY: 2.0226
+      OffsetZ: 106.8668
+    - Name: SpringTreeVerySmall
+      OffsetX: 69.4401
+      OffsetY: 9.3485
+      OffsetZ: 76.1212
+    - Name: SpringTreeVerySmall
+      OffsetX: 78.8699
+      OffsetY: 9.9404
+      OffsetZ: 77.6856
+      RotX: -90
+    - Name: SpringTreeTall
+      OffsetX: 83.6033
+      OffsetY: 7.1815
+      OffsetZ: 87.9495
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 11.2566
+      OffsetY: 8.0117
+      OffsetZ: 82.7928
+    - Name: SpringTreeVerySmall
+      OffsetX: 6.9296
+      OffsetY: 11.5151
+      OffsetZ: 73.0037
+    - Name: SpringTreeVerySmall
+      OffsetX: 8.2464
+      OffsetY: 10.0077
+      OffsetZ: 76.2869
+    - Name: SpringTreeTall
+      OffsetX: 5.217
+      OffsetY: 14.8577
+      OffsetZ: 55.1042
+    - Name: SpringTreeTall
+      OffsetX: 6.9921
+      OffsetY: 14.3953
+      OffsetZ: 56.0012
+    - Name: SpringTreeBig
+      OffsetX: 18.1819
+      OffsetY: 10.7721
+      OffsetZ: 76.2863
+    - Name: SpringTreeVerySmall
+      OffsetX: 5.8076
+      OffsetY: 15.9506
+      OffsetZ: 40.3328
+    - Name: SpringTreeVerySmall
+      OffsetX: 4.0836
+      OffsetY: 15.364
+      OffsetZ: 49.3951
+    - Name: SpringTreeVerySmall
+      OffsetX: 25.3162
+      OffsetY: 14.0388
+      OffsetZ: 12.2762
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 87.0188
+      OffsetY: 15.558
+      OffsetZ: 46.8129
+      RotX: -90
+    - Name: SpringTreeBig
+      OffsetX: 30.7023
+      OffsetY: 14.6535
+      OffsetZ: 7.5464
+      RotX: -180
+    - Name: SpringTreeMedium
+      OffsetX: 41.8645
+      OffsetY: 14.624
+      OffsetZ: 32.3102
+      RotX: -180
+    - Name: SpringTreeBig
+      OffsetX: 76.0158
+      OffsetY: 15.3139
+      OffsetZ: 29.0964
+      RotX: -180
   RallyTreeGround1:
     ConversionVariants:
       0:
@@ -526,3 +607,806 @@ Blocks:
           OffsetY: -0.671
           OffsetZ: 1.1357
           RotX: 90
+  RallyTreeGroundBig:
+    Items:
+    - Name: SpringTreeTall
+      OffsetX: 18.4273
+      OffsetY: 0.0313
+      OffsetZ: 12.2094
+  RallyFieldTetrisURoadLow:
+    Items:
+    - Name: SpringTreeVerySmall
+      OffsetX: 71.7618
+      OffsetY: 7.3877
+      OffsetZ: 155.113
+    - Name: SpringTreeTall
+      OffsetX: 58.1772
+      OffsetY: 7.6358
+      OffsetZ: 150.0986
+    - Name: SpringTreeVerySmall
+      OffsetX: 62.1703
+      OffsetY: 7.553
+      OffsetZ: 151.2973
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 35.9078
+      OffsetY: 7.9557
+      OffsetZ: 150.4083
+      RotX: -180
+    - Name: SpringTreeBig
+      OffsetX: 40.2686
+      OffsetY: 7.9206
+      OffsetZ: 153.1268
+      RotX: 90
+    - Name: SpringTreeVerySmall
+      OffsetX: 43.3045
+      OffsetY: 7.9304
+      OffsetZ: 140.2737
+      RotX: 90
+    - Name: SpringTreeVerySmall
+      OffsetX: 35.1985
+      OffsetY: 7.9637
+      OffsetZ: 132.7945
+    - Name: SpringTreeBig
+      OffsetX: 24.7656
+      OffsetY: 9.2323
+      OffsetZ: 119.1069
+    - Name: SpringTreeVerySmall
+      OffsetX: 13.7594
+      OffsetY: 23.6279
+      OffsetZ: 20.994
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 8.0621
+      OffsetY: 23.8507
+      OffsetZ: 18.2991
+      RotX: -180
+    - Name: SpringTreeVerySmall
+      OffsetX: 53.8381
+      OffsetY: 21.7418
+      OffsetZ: 12.5293
+      RotX: 90
+    - Name: SpringTreeVerySmall
+      OffsetX: 44.4806
+      OffsetY: 21.3552
+      OffsetZ: 15.2255
+    - Name: SpringTreeSmall
+      OffsetX: 84.9795
+      OffsetY: 23.0312
+      OffsetZ: 4.6606
+    - Name: SpringTreeBig
+      OffsetX: 17.7133
+      OffsetY: 21.7667
+      OffsetZ: 41.7932
+    - Name: SpringTreeTall
+      OffsetX: 18.6899
+      OffsetY: 20.8193
+      OffsetZ: 44.169
+    - Name: SpringTreeBig
+      OffsetX: 39.2633
+      OffsetY: 20.0227
+      OffsetZ: 22.9727
+  RallyFieldTetrisURoadLowMirror:
+    Items:
+    - Name: SpringTreeTall
+      OffsetX: 19.9558
+      OffsetY: 6.4167
+      OffsetZ: 152.5048
+    - Name: SpringTreeBig
+      OffsetX: 10.5428
+      OffsetY: 6.8122
+      OffsetZ: 130.0974
+    - Name: SpringTreeMedium
+      OffsetX: 38.7505
+      OffsetY: 6.5339
+      OffsetZ: 146.4141
+    - Name: SpringTreeVerySmall
+      OffsetX: 51.2263
+      OffsetY: 7.627
+      OffsetZ: 140.6087
+    - Name: SpringTreeVerySmall
+      OffsetX: 73.0982
+      OffsetY: 9.8014
+      OffsetZ: 114.4928
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 71.7748
+      OffsetY: 8.7907
+      OffsetZ: 123.1112
+      RotX: -180
+    - Name: SpringTreeVerySmall
+      OffsetX: 80.0239
+      OffsetY: 17.0854
+      OffsetZ: 60.5051
+      RotX: -180
+    - Name: SpringTreeVerySmall
+      OffsetX: 76.3703
+      OffsetY: 19.8619
+      OffsetZ: 45.4831
+      RotX: 90
+    - Name: SpringTreeVerySmall
+      OffsetX: 81.1885
+      OffsetY: 23.6367
+      OffsetZ: 26.0809
+      RotX: 90
+    - Name: SpringTreeVerySmall
+      OffsetX: 75.3342
+      OffsetY: 23.1519
+      OffsetZ: 14.8316
+      RotX: -90
+    - Name: SpringTreeTall
+      OffsetX: 62.2272
+      OffsetY: 20.6706
+      OffsetZ: 27.6046
+      RotX: -90
+    - Name: SpringTreeBig
+      OffsetX: 64.7293
+      OffsetY: 20.817
+      OffsetZ: 29.3811
+      RotX: -180
+    - Name: SpringTreeBig
+      OffsetX: 50.6182
+      OffsetY: 20.8748
+      OffsetZ: 17.9247
+      RotX: 90
+  RallyFieldFenceTreeStraight:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.557
+              OffsetY: 0.1311
+              OffsetZ: 5.3994
+            - Name: SpringTreeVerySmall
+              OffsetX: 11.0499
+              OffsetY: -0.1113
+              OffsetZ: 8.8829
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 25.8607
+              OffsetY: -0.0505
+              OffsetZ: 15.1013
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.2007
+              OffsetY: -0.129
+              OffsetZ: 24.1055
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.1584
+              OffsetY: -0.1786
+              OffsetZ: 28.5597
+              RotX: 90
+            - Name: SpringTreeBig
+              OffsetX: 9.3832
+              OffsetY: -0.1475
+              OffsetZ: 14.8444
+              RotX: 90
+            - Name: SpringTreeTall
+              OffsetX: 26.5242
+              OffsetY: -0.1511
+              OffsetZ: 19.5489
+              RotX: 90
+          1:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 20.3079
+              OffsetY: -0.0412
+              OffsetZ: 8.9879
+              RotX: 90
+            - Name: SpringTreeTall
+              OffsetX: 22.2535
+              OffsetY: 0.0063
+              OffsetZ: 7.7411
+              RotX: 90
+            - Name: SpringTreeBig
+              OffsetX: 6.1553
+              OffsetY: -0.1483
+              OffsetZ: 20.1909
+              RotX: 90
+            - Name: SpringTreeMedium
+              OffsetX: 28.2717
+              OffsetY: 0.0166
+              OffsetZ: 26.6786
+              RotX: 90
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.5192
+              OffsetY: 0.1815
+              OffsetZ: 3.1962
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.2962
+              OffsetY: 0.2703
+              OffsetZ: 7.7914
+            - Name: SpringTreeBig
+              OffsetX: 27.271
+              OffsetY: 0.3617
+              OffsetZ: 13.4246
+            - Name: SpringTreeTall
+              OffsetX: 25.6075
+              OffsetY: 0.3093
+              OffsetZ: 23.2819
+          3:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 20.1316
+              OffsetY: 0.5656
+              OffsetZ: 5.9762
+            - Name: SpringTreeBig
+              OffsetX: 14.866
+              OffsetY: 0.5841
+              OffsetZ: 26.282
+            - Name: SpringTreeTall
+              OffsetX: 5.2931
+              OffsetY: 0.2213
+              OffsetZ: 19.1063
+            - Name: SpringTreeVerySmall
+              OffsetX: 10.8775
+              OffsetY: 0.4547
+              OffsetZ: 20.2823
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.7543
+              OffsetY: 0.212
+              OffsetZ: 5.1941
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 25.0822
+              OffsetY: 0.3966
+              OffsetZ: 8.6752
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.558
+              OffsetY: 0.1944
+              OffsetZ: 23.6158
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 25.7588
+              OffsetY: 0.1777
+              OffsetZ: 27.6211
+          4:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 13.212
+              OffsetY: 8.0294
+              OffsetZ: 3.1425
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 22.5766
+              OffsetY: 8.0692
+              OffsetZ: 3.8496
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.8424
+              OffsetY: 8.1005
+              OffsetZ: 19.6359
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.0828
+              OffsetY: 7.8074
+              OffsetZ: 28.4604
+            - Name: SpringTreeTall
+              OffsetX: 28.4268
+              OffsetY: 8.2407
+              OffsetZ: 3.6655
+            - Name: SpringTreeBig
+              OffsetX: 6.7302
+              OffsetY: 7.8581
+              OffsetZ: 20.6591
+            - Name: SpringTreeMedium
+              OffsetX: 7.9244
+              OffsetY: 7.8355
+              OffsetZ: 23.3976
+  RallyFieldFenceTreeCornerOut:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.2419
+              OffsetY: 0.1775
+              OffsetZ: 4.3696
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.2242
+              OffsetY: 0.2669
+              OffsetZ: 14.7508
+            - Name: SpringTreeTall
+              OffsetX: 28.5036
+              OffsetY: 0.221
+              OffsetZ: 19.9859
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.2776
+              OffsetY: 0.1533
+              OffsetZ: 26.3065
+            - Name: SpringTreeVerySmall
+              OffsetX: 4.8647
+              OffsetY: -0.1466
+              OffsetZ: 27.5052
+            - Name: SpringTreeBig
+              OffsetX: 9.5933
+              OffsetY: -0.2734
+              OffsetZ: 27.183
+          1:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 22.6542
+              OffsetY: 0.3389
+              OffsetZ: 25.915
+            - Name: SpringTreeTall
+              OffsetX: 21.4716
+              OffsetY: 0.2173
+              OffsetZ: 27.5082
+              RotX: -90
+            - Name: SpringTreeBig
+              OffsetX: 28.3894
+              OffsetY: 0.2526
+              OffsetZ: 7.9143
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.3017
+              OffsetY: 0.2944
+              OffsetZ: 4.188
+              RotX: -90
+            - Name: SpringTreeTall
+              OffsetX: 7.2084
+              OffsetY: 0.3068
+              OffsetZ: 21.0023
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 11.092
+              OffsetY: 0.0963
+              OffsetZ: 28.5858
+              RotX: -180
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.2577
+              OffsetY: 0.1595
+              OffsetZ: 3.5374
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.5068
+              OffsetY: 0.2336
+              OffsetZ: 9.4686
+            - Name: SpringTreeVerySmall
+              OffsetX: 26.8552
+              OffsetY: 0.3145
+              OffsetZ: 18.8458
+            - Name: SpringTreeTall
+              OffsetX: 23.5092
+              OffsetY: 0.3158
+              OffsetZ: 24.1032
+            - Name: SpringTreeBig
+              OffsetX: 7.1013
+              OffsetY: 0.3028
+              OffsetZ: 22.707
+          3:
+            Items:
+            - Name: SpringTreeSmall
+              OffsetX: 13.7837
+              OffsetY: 7.6351
+              OffsetZ: 27.5674
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 26.6598
+              OffsetY: 7.974
+              OffsetZ: 27.7238
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 21.7048
+              OffsetY: 7.7609
+              OffsetZ: 27.4591
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 2.4849
+              OffsetY: 7.9022
+              OffsetZ: 27.8574
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.7895
+              OffsetY: 8.1869
+              OffsetZ: 4.2681
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.9856
+              OffsetY: 8.2911
+              OffsetZ: 14.7672
+              RotX: -90
+            - Name: SpringTreeTall
+              OffsetX: 18.0914
+              OffsetY: 8.577
+              OffsetZ: 10.4703
+              RotX: 90
+  RallyFieldFenceRamp:
+    Items:
+    - Name: SpringTreeTall
+      OffsetX: 21.0628
+      OffsetY: 0.1656
+      OffsetZ: 5.4473
+    - Name: SpringTreeTall
+      OffsetX: 24.5254
+      OffsetY: 0.005
+      OffsetZ: 27.7957
+      RotX: -90
+  RallyFieldFenceDiag:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 7.1947
+              OffsetY: -0.0335
+              OffsetZ: 6.538
+            - Name: SpringTreeVerySmall
+              OffsetX: 9.3646
+              OffsetY: -0.3675
+              OffsetZ: 12.2511
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 12.1793
+              OffsetY: -0.4262
+              OffsetZ: 15.312
+              RotX: -180
+          1:
+            Items:
+            - Name: SpringTreeMedium
+              OffsetX: 18.0026
+              OffsetY: -0.2039
+              OffsetZ: 16.4119
+            - Name: SpringTreeTall
+              OffsetX: 25.5217
+              OffsetY: -0.0887
+              OffsetZ: 24.8203
+            - Name: SpringTreeVerySmall
+              OffsetX: 15.038
+              OffsetY: -0.2867
+              OffsetZ: 12.2865
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 6.9724
+              OffsetY: -0.1541
+              OffsetZ: 4.6171
+              RotX: 90
+          2:
+            Items:
+            - Name: SpringTreeBig
+              OffsetX: 13.7614
+              OffsetY: -0.2698
+              OffsetZ: 11.9651
+            - Name: SpringTreeVerySmall
+              OffsetX: 20.3318
+              OffsetY: -0.0817
+              OffsetZ: 22.7895
+              RotX: 90
+  RallyFieldFenceBushStraight:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.9006
+              OffsetY: 0.1839
+              OffsetZ: 7.5307
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.9769
+              OffsetY: 0.1784
+              OffsetZ: 12.7563
+              RotX: -180
+          1:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.115
+              OffsetY: 0.1589
+              OffsetZ: 5.5188
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.3021
+              OffsetY: 0.1745
+              OffsetZ: 10.4198
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.0858
+              OffsetY: 0.1705
+              OffsetZ: 15.8928
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.1645
+              OffsetY: 0.126
+              OffsetZ: 19.8398
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 28.1256
+              OffsetY: 0.011
+              OffsetZ: 25.7475
+              RotX: -180
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.7642
+              OffsetY: 0.1866
+              OffsetZ: 3.9957
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.4214
+              OffsetY: 0.3417
+              OffsetZ: 14.0847
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.4014
+              OffsetY: 0.3099
+              OffsetZ: 18.9469
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.8817
+              OffsetY: 0.0359
+              OffsetZ: 30.011
+              RotX: -180
+  RallyFieldFenceBushCornerOut:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.8748
+              OffsetY: 0.2731
+              OffsetZ: 20.7494
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.5082
+              OffsetY: 0.0814
+              OffsetZ: 25.8898
+          1:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.551
+              OffsetY: 0.1552
+              OffsetZ: 2.627
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.2297
+              OffsetY: 0.3584
+              OffsetZ: 12.3621
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 26.073
+              OffsetY: 0.1254
+              OffsetZ: 28.0856
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 15.4073
+              OffsetY: 0.1823
+              OffsetZ: 27.7717
+            - Name: SpringTreeVerySmall
+              OffsetX: 10.7519
+              OffsetY: 0.2123
+              OffsetZ: 27.6008
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 5.1024
+              OffsetY: 0.1823
+              OffsetZ: 27.8296
+              RotX: -180
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.7747
+              OffsetY: 0.1674
+              OffsetZ: 3.4603
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.6197
+              OffsetY: 0.3219
+              OffsetZ: 10.6378
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.4688
+              OffsetY: 0.2346
+              OffsetZ: 21.2523
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.5595
+              OffsetY: 0.3246
+              OffsetZ: 16.1144
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 25.2362
+              OffsetY: 0.1691
+              OffsetZ: 27.5668
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 17.317
+              OffsetY: 0.1439
+              OffsetZ: 28.0127
+            - Name: SpringTreeVerySmall
+              OffsetX: 13.0601
+              OffsetY: 0.1752
+              OffsetZ: 27.8314
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 2.4534
+              OffsetY: 0.1044
+              OffsetZ: 28.2751
+              RotX: -180
+          3:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.5327
+              OffsetY: 0.3376
+              OffsetZ: 13.738
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.2972
+              OffsetY: 0.4495
+              OffsetZ: 24.5568
+            - Name: SpringTreeVerySmall
+              OffsetX: 27.881
+              OffsetY: 0.0347
+              OffsetZ: 27.8961
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 21.5923
+              OffsetY: -0.1596
+              OffsetZ: 28.6011
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 14.4767
+              OffsetY: -0.3199
+              OffsetZ: 28.1467
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 4.098
+              OffsetY: -0.1613
+              OffsetZ: 28.2908
+              RotX: -90
+  RallyFieldClipLeft:
+    Items:
+    - Name: SpringTreeBig
+      OffsetX: -10.7536
+      OffsetY: 1.6083
+      OffsetZ: 24.9924
+    - Name: SpringTreeSmall
+      OffsetX: 11.1456
+      OffsetY: 3.3022
+      OffsetZ: 19.7399
+    - Name: SpringTreeVerySmall
+      OffsetX: 15.2534
+      OffsetY: 4.4567
+      OffsetZ: 19.6528
+    - Name: SpringTreeMedium
+      OffsetX: 52.4549
+      OffsetY: 15.3152
+      OffsetZ: 33.1957
+    - Name: SpringTreeVerySmall
+      OffsetX: -1.0483
+      OffsetY: 3.9572
+      OffsetZ: 27.6713
+    - Name: SpringTreeVerySmall
+      OffsetX: 8.2228
+      OffsetY: 6.2996
+      OffsetZ: 27.5709
+    - Name: SpringTreeTall
+      OffsetX: 17.5472
+      OffsetY: 8.1728
+      OffsetZ: 26.0364
+    - Name: SpringTreeTall
+      OffsetX: 12.3337
+      OffsetY: 6.9534
+      OffsetZ: 26.4727
+  RallyFieldClipRight:
+    Items:
+    - Name: SpringTreeVerySmall
+      OffsetX: 54.583
+      OffsetY: 0.2948
+      OffsetZ: 28.5024
+    - Name: SpringTreeMedium
+      OffsetX: 42.1498
+      OffsetY: 1.6975
+      OffsetZ: 25.3748
+    - Name: SpringTreeVerySmall
+      OffsetX: 28.3387
+      OffsetY: 5.0556
+      OffsetZ: 27.5186
+      RotX: -90
+    - Name: SpringTreeVerySmall
+      OffsetX: 21.9276
+      OffsetY: 6.6908
+      OffsetZ: 27.3146
+      RotX: -180
+    - Name: SpringTreeVerySmall
+      OffsetX: 23.5629
+      OffsetY: 3.1423
+      OffsetZ: 20.8336
+      RotX: -180
+    - Name: SpringTreeTall
+      OffsetX: 15.8926
+      OffsetY: 4.939
+      OffsetZ: 20.0173
+      RotX: -180
+    - Name: SpringTreeTall
+      OffsetX: -12.7285
+      OffsetY: 15.6217
+      OffsetZ: 33.6686
+      RotX: -180
+    - Name: SpringTreeBig
+      OffsetX: -10.8123
+      OffsetY: 15.5533
+      OffsetZ: 34.1967
+      RotX: -180
+  RallyFieldFenceAutoTShaped:
+    ConversionVariants:
+      1:
+        SubVariants:
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 14.0009
+              OffsetZ: 2.5732
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 17.6222
+              OffsetZ: 2.2883
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 25.489
+              OffsetZ: 1.3694
+            - Name: SpringTreeVerySmall
+              OffsetX: 3.674
+              OffsetZ: 2.4538
+              RotX: -180
+          3:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 24.2057
+              OffsetZ: 2.0931
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 12.5613
+              OffsetZ: 2.3547
+            - Name: SpringTreeVerySmall
+              OffsetX: 20.23
+              OffsetZ: 2.6767
+              RotX: -90
+  RallyFieldFenceAutoCorner:
+    ConversionVariants:
+      5:
+        SubVariants:
+          1:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 4.639
+              OffsetZ: 1.291
+              RotX: -90
+            - Name: SpringTreeVerySmall
+              OffsetX: 13.1266
+              OffsetZ: 1.5745
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 16.5555
+              OffsetZ: 1.5328
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 30.3173
+              OffsetZ: 7.2286
+            - Name: SpringTreeVerySmall
+              OffsetX: 30.3586
+              OffsetZ: 12.6116
+              RotX: -90
+          2:
+            Items:
+            - Name: SpringTreeVerySmall
+              OffsetX: 30.0856
+              OffsetZ: 22.8761
+              RotX: -180
+            - Name: SpringTreeVerySmall
+              OffsetX: 29.5765
+              OffsetZ: 19.1936
+              RotX: 90
+            - Name: SpringTreeVerySmall
+              OffsetX: 29.4112
+              OffsetZ: 10.4902
+      
