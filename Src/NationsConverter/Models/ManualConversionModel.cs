@@ -16,8 +16,8 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }
     public ConversionRoadModel? Road { get; set; }
-    public bool UseVariant0 { get; set; }
-    public bool UseSubVariant0 { get; set; }
+    public int? Variant { get; set; }
+    public int? SubVariant { get; set; }
     public int WaterOffsetY { get; set; }
     public bool ForceAirItem { get; set; }
     public ConversionSkinModel? Skin { get; set; }

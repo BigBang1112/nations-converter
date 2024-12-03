@@ -93,9 +93,9 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var variant = overrideVariant ?? overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
         var subVariant = overrideSubVariant ?? overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
 
-        if (conversion.UseVariant0)
+        if (conversion.Variant.HasValue)
         {
-            variant = 0;
+            variant = conversion.Variant.Value;
         }
 
         if (variant >= maxVariants)
@@ -103,9 +103,14 @@ internal sealed class PlaceBlockStage : BlockStageBase
             throw new ArgumentException("Block variant exceeds max variants");
         }
 
-        if (conversion.UseSubVariant0 || block.IsClip)
+        if (block.IsClip)
         {
             subVariant = 0;
+        }
+
+        if (conversion.SubVariant.HasValue)
+        {
+            subVariant = conversion.SubVariant.Value;
         }
 
         var blockName = overrideName ?? block.Name;

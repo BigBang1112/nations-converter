@@ -11,28 +11,28 @@ Blocks:
       RotY: -90
       AlwaysStaticObject: true
   RallyRoadCastleSlopePillar:
-    UseVariant0: true
+    Variant: 0
     ForceAirItem: true
   RallyRoadWoodSlopePillar:
-    UseVariant0: true
+    Variant: 0
     ForceAirItem: true
   RallyGT1Pillar:
-    UseVariant0: true
+    Variant: 0
     ForceAirItem: true
   RallyGT2Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyGT3Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyGT4Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyGT5Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyGT6Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyGT8Pillar:
-    UseVariant0: true
+    Variant: 0
   RallyRoadWoodToCastlePillar:
-    UseVariant0: true
+    Variant: 0
     ForceAirItem: true
   RallyFieldTetrisDiagRoadLowToRoadHigh:
     Items:
@@ -1338,6 +1338,7 @@ Blocks:
       OffsetZ: 34.1967
       RotX: -180
   RallyFieldFenceAutoTShaped:
+    Variant: 1
     ConversionVariants:
       1:
         SubVariants:
@@ -1372,6 +1373,7 @@ Blocks:
               OffsetZ: 2.6767
               RotX: -90
   RallyFieldFenceAutoCorner:
+    Variant: 5
     ConversionVariants:
       5:
         SubVariants:
@@ -1409,4 +1411,19 @@ Blocks:
             - Name: SpringTreeVerySmall
               OffsetX: 29.4112
               OffsetZ: 10.4902
-      
+  RallyRoadHigh:
+    SubVariant: 0
+  RallyRoadWoodSupport:
+    SubVariant: 0
+  RallyRoadWoodPillar:
+    SubVariant: 0
+    ForceAirItem: true
+  RallyRoadWoodStraightPillar:
+    SubVariant: 0
+    ForceAirItem: true
+  RallyCastleStraightPillar:
+    SubVariant: 0
+  RallyRoadCastlePillar:
+    SubVariant: 0
+  RallyRampart:
+    SubVariant: 0

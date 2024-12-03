@@ -48,7 +48,7 @@ Blocks:
   StadiumDirtDeadendDoor:
     PlaceDefaultZone: true
   StadiumRoadDirt:
-    UseSubVariant0: true
+    SubVariant: 0
     Modernized: true
   StadiumRoadDirtHigh:
     NoTerrainModifier: true
@@ -69,7 +69,7 @@ Blocks:
       Modernized: true
   StadiumRoadDirtFenceCorner:
     NoTerrainModifier: true
-    UseSubVariant0: true
+    SubVariant: 0
     Modernized: true
     Conversion:
       Name: StadiumRoadDirt
@@ -86,7 +86,7 @@ Blocks:
       Name: StadiumRoadDirtHigh
       Variant: 2
   StadiumRoadDirtHillTiltCornerIn:
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumRoadDirtGTCurve2:
     Modernized: true
   StadiumSculptBridgeSuspendSlope2:
@@ -130,21 +130,21 @@ Blocks:
       NoItem: true
   StadiumTube:
     PlaceDefaultZone: true
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumTubePillar:
     PlaceDefaultZone: true
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumTubePillarCap:
     PlaceDefaultZone: true
   StadiumTubeV1:
     PlaceDefaultZone: true
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumTubeV4:
     PlaceDefaultZone: true
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumTubeV8:
     PlaceDefaultZone: true
-    UseSubVariant0: true
+    SubVariant: 0
   StadiumTubeRoad:
     PlaceDefaultZone: true
   StadiumTubeRoadUp:
