@@ -20,6 +20,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public int? SubVariant { get; set; }
     public int WaterOffsetY { get; set; }
     public bool ForceAirItem { get; set; }
+    public bool ForceGroundItem { get; set; }
     public ConversionSkinModel? Skin { get; set; }
 
     /// <summary>

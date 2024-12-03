@@ -12,27 +12,32 @@ Blocks:
       AlwaysStaticObject: true
   RallyRoadCastleSlopePillar:
     Variant: 0
+    SubVariant: 0
     ForceAirItem: true
+  RallyRoadWoodSlope:
+    Variant: 0
+    SubVariant: 0
   RallyRoadWoodSlopePillar:
     Variant: 0
+    SubVariant: 0
     ForceAirItem: true
   RallyGT1Pillar:
-    Variant: 0
+    SubVariant: 0
     ForceAirItem: true
   RallyGT2Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyGT3Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyGT4Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyGT5Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyGT6Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyGT8Pillar:
-    Variant: 0
+    SubVariant: 0
   RallyRoadWoodToCastlePillar:
-    Variant: 0
+    SubVariant: 0
     ForceAirItem: true
   RallyFieldTetrisDiagRoadLowToRoadHigh:
     Items:
@@ -1425,5 +1430,26 @@ Blocks:
     SubVariant: 0
   RallyRoadCastlePillar:
     SubVariant: 0
+    ForceAirItem: true
   RallyRampart:
+    SubVariant: 0
+  RallyCastleBiSlopePillar:
+    SubVariant: 0
+  RallyCastleStartPillar:
+    SubVariant: 0
+  RallyCastleFinishPillar:
+    SubVariant: 0
+  RallyCastleCheckpointPillar:
+    SubVariant: 0
+  RallyRoadCastle:
+    SubVariant: 0
+  RallyCastleHillBridgeGround:
+    ForceGroundItem: true # wtf
+  RallyRoadCastlePillarClip:
+    SubVariant: 0
+    ForceAirItem: true
+  RallyRoadWoodSupportSlope:
+    Variant: 0
+    SubVariant: 0
+  RallyCastleDrawBridgePillar:
     SubVariant: 0

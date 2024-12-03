@@ -250,7 +250,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 overrideSubVariant: variantModel?.SubVariant ?? overrideConversion?.SubVariant);
         }
 
-        var modifierType = block.IsGround && !conversion.ForceAirItem ? "Ground" : "Air";
+        var modifierType = (block.IsGround && !conversion.ForceAirItem) || conversion.ForceGroundItem ? "Ground" : "Air";
 
         var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
 
