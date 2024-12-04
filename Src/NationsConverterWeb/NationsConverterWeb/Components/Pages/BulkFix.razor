@@ -18,7 +18,7 @@
     <ul>
         @foreach (var item in affectedItems)
         {
-            <li>@item</li>
+            <li>@item.Item1.BlockItem.Block.Name @item.Item1.OriginalFileName (@item.Item1.LastModifiedAt)</li>
         }
     </ul>
     <button class="button" @onclick="ConfirmBulkFixAsync">Confirm</button>
@@ -48,5 +48,7 @@
         var bulkFixer = (BulkFixer<(ItemUpload, Gbx<CGameItemModel>)>)scope.ServiceProvider.GetRequiredService(selectedBulkFix);
 
         await bulkFixer.BulkFixAsync(await bulkFixer.GetFilteredAsync());
+
+        affectedItems = [];
     }
 }
