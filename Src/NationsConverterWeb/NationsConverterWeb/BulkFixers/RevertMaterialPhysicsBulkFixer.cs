@@ -22,6 +22,11 @@ public sealed class RevertMaterialPhysicsBulkFixer : BulkFixer<(ItemUpload, Gbx<
         this.db = db;
     }
 
+    protected override IQueryable<ItemUpload> FilterQuery(IQueryable<ItemUpload> queryable)
+    {
+        return queryable.Where(x => x.BlockItem.Block.EnvironmentId == "Rally");
+    }
+
     protected override IEnumerable<(ItemUpload, Gbx<CGameItemModel>)> FilterAfterQuery(List<ItemUpload> uploads)
     {
         foreach (var upload in uploads)

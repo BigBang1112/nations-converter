@@ -1,0 +1,52 @@
+﻿@page "/bulkfix"
+@using GBX.NET
+@using GBX.NET.Engines.GameData
+@using NationsConverterWeb.BulkFixers
+@rendermode InteractiveServer
+@attribute [Authorize(Roles = "Admin")]
+@inject IServiceProvider ServiceProvider
+@inject NavigationManager NavManager
+@inject IJSRuntime JS
+
+<h2>Bulk fix</h2>
+
+<button class="button" @onclick="() => PreviewBulkFixAsync<RevertMaterialPhysicsBulkFixer>()">Revert material physics (for Rally)</button>
+
+@if (affectedItems.Count > 0)
+{
+    <h3>Affected blocks</h3>
+    <ul>
+        @foreach (var item in affectedItems)
+        {
+            <li>@item</li>
+        }
+    </ul>
+    <button class="button" @onclick="ConfirmBulkFixAsync">Confirm</button>
+}
+
+@code {
+    private Type? selectedBulkFix;
+    private List<(ItemUpload, Gbx<CGameItemModel>)> affectedItems = new();
+
+    private async Task PreviewBulkFixAsync<T>() where T : BulkFixer<(ItemUpload, Gbx<CGameItemModel>)>
+    {
+        await using var scope = ServiceProvider.CreateAsyncScope();
+        var bulkFixer = scope.ServiceProvider.GetRequiredService<T>();
+
+        selectedBulkFix = bulkFixer.GetType();
+        affectedItems = (await bulkFixer.GetFilteredAsync()).ToList();
+    }
+
+    private async Task ConfirmBulkFixAsync()
+    {
+        if (selectedBulkFix is null)
+        {
+            return;
+        }
+
+        await using var scope = ServiceProvider.CreateAsyncScope();
+        var bulkFixer = (BulkFixer<(ItemUpload, Gbx<CGameItemModel>)>)scope.ServiceProvider.GetRequiredService(selectedBulkFix);
+
+        await bulkFixer.BulkFixAsync(await bulkFixer.GetFilteredAsync());
+    }
+}
