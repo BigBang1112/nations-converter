@@ -15,6 +15,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Trace;
 using Microsoft.Extensions.Caching.Hybrid;
+using NationsConverterWeb.BulkFixers;
 
 GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
 
@@ -69,6 +70,8 @@ builder.Services.AddDbContextFactory<AppDbContext>(options =>
 });
 
 builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
+
+builder.Services.AddScoped<RevertMaterialPhysicsBulkFixer>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

@@ -18,13 +18,12 @@ public abstract class BulkFixer<T>
 
     public async Task<IEnumerable<T>> GetFilteredAsync(CancellationToken cancellationToken = default)
     {
-        var latestBlockItemUploads = db.ItemUploads
+        var retrieved = await FilterQuery(db.ItemUploads)
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
             .GroupBy(x => x.BlockItem)
-            .Select(x => x.OrderByDescending(x => x.UploadedAt).First());
-
-        var retrieved = await FilterQuery(latestBlockItemUploads).ToListAsync(cancellationToken);
+            .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
+            .ToListAsync(cancellationToken);
         return FilterAfterQuery(retrieved);
     }
 
