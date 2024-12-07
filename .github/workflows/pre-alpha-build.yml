@@ -26,9 +26,6 @@ jobs:
             9.0.x
             8.0.x
 
-      - name: Add nuget.gbx.tools source
-        run: dotnet nuget add source https://nuget.gbx.tools/v3/index.json --name nuget.gbx.tools
-
       - name: Publish
         run: dotnet publish Src/${{ env.PROJECT_NAME }}
           -c Release
