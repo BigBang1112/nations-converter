@@ -10,8 +10,9 @@ public class NationsConverterConfig : Config
     public bool IncludeMediaTracker { get; set; } = true;
     public bool IncludeDecoration { get; set; }
     public bool UseNewWood { get; set; }
-    public string? UserDataPack { get; set; } = "InProgress";
+    public string[]? UserDataPackPriority { get; set; }
     public bool CopyItems { get; set; } = true;
+    public bool UniqueEmbeddedFolder { get; set; } = true;
     public string? UserDataFolder { get; set; }
     public string? HttpHost { get; set; } = "nc.gbx.tools";
     public bool IncludeMusic { get; set; } = true;

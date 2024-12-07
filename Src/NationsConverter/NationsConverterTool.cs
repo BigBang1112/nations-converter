@@ -71,7 +71,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
         placeTransformationStage.Convert();
 
-        var userDataPackFilePath = customContentManager.EmbedData();
+        customContentManager.EmbedData();
 
         mapOut.IsLapRace = mapIn.IsLapRace;
         mapOut.NbLaps = mapIn.NbLaps;
@@ -87,7 +87,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         if (Config.CopyItems)
         {
-            var copyUserDataStage = new CopyUserDataStage(Config, runningDir, userDataPackFilePath);
+            var copyUserDataStage = new CopyUserDataStage(Config, runningDir, mapOut, logger);
             copyUserDataStage.Copy();
         }
 

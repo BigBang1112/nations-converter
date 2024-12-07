@@ -1,4 +1,6 @@
-﻿using System.IO.Compression;
+﻿using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
+using System.IO.Compression;
 
 namespace NationsConverter.Stages;
 
@@ -6,13 +8,15 @@ internal sealed class CopyUserDataStage
 {
     private readonly NationsConverterConfig config;
     private readonly string runningDir;
-    private readonly string? userDataPackFilePath;
+    private readonly CGameCtnChallenge mapOut;
+    private readonly ILogger logger;
 
-    public CopyUserDataStage(NationsConverterConfig config, string runningDir, string? userDataPackFilePath)
+    public CopyUserDataStage(NationsConverterConfig config, string runningDir, CGameCtnChallenge mapOut, ILogger logger)
     {
         this.config = config;
         this.runningDir = runningDir;
-        this.userDataPackFilePath = userDataPackFilePath;
+        this.mapOut = mapOut;
+        this.logger = logger;
     }
 
     public void Copy()
@@ -22,12 +26,16 @@ internal sealed class CopyUserDataStage
             throw new InvalidOperationException("UserDataFolder is not set");
         }
 
-        CopyUserDataDirectory(Path.Combine(runningDir, "UserData"), config.UserDataFolder);
-
-        if (userDataPackFilePath is not null)
+        if (mapOut.EmbeddedZipData is null)
         {
-            ZipFile.ExtractToDirectory(userDataPackFilePath, Path.Combine(config.UserDataFolder), overwriteFiles: true);
+            logger.LogInformation("No embedded data in the map to copy to UserDataFolder.");
+            return;
         }
+
+        using var zipStream = new MemoryStream(mapOut.EmbeddedZipData);
+        ZipFile.ExtractToDirectory(zipStream, config.UserDataFolder, overwriteFiles: true);
+
+        // maybe in the future, allow copying the whole UserData directory
     }
 
     private static void CopyUserDataDirectory(string sourceDir, string destinationDir)

@@ -60,7 +60,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             _ => "MM_Collision"
         };
 
-        rootFolderName = config.CopyItems ? NC2 : $"{NC2}_{seed}";
+        rootFolderName = config.UniqueEmbeddedFolder ? $"{NC2}_{seed}" : NC2;
     }
 
     public CGameCtnAnchoredObject PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false, string? technology = null, LightmapQuality lightmapQuality = LightmapQuality.Normal)
@@ -116,54 +116,19 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         return block;
     }
 
-    /// <summary>
-    /// Embeds item data into the map either from the user data folder or a user data pack zip inside the user data folder.
-    /// </summary>
-    /// <returns>The picked user data pack, or null if raw files were used.</returns>
-    /// <exception cref="Exception"></exception>
-    public string? EmbedData()
+    public void EmbedData()
     {
         logger.LogInformation("Embedding item data...");
 
         var watch = Stopwatch.StartNew();
 
+        var userDataPath = Path.Combine(runningDir, "UserData");
+
+        var zipStreams = Directory.GetFiles(userDataPath, "*.zip")
+            .Select(x => (Path.GetFileNameWithoutExtension(x), ZipFile.OpenRead(x)))
+            .ToDictionary(x => x.Item1, x => x.Item2);
+
         var actualEmbeddedItemsCount = 0;
-
-        if (string.IsNullOrWhiteSpace(config.UserDataPack))
-        {
-            mapOut.UpdateEmbeddedZipData(zip =>
-            {
-                foreach (var (embeddedType, remainingPath) in embeddedFilePaths)
-                {
-                    var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
-                    var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
-                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is null)
-                    {
-                        logger.LogWarning("File {Path} cannot be embedded because it does not exist.", remainingPath);
-                    }
-                    else
-                    {
-                        actualEmbeddedItemsCount++;
-                    }
-                }
-            });
-
-            LogFinishedEmbeddedItems(watch, actualEmbeddedItemsCount);
-
-            return null;
-        }
-
-        var userDataPackFilePath = Path.Combine(runningDir, "UserData",
-            config.UserDataPack.EndsWith(".zip", StringComparison.OrdinalIgnoreCase)
-            ? config.UserDataPack
-            : config.UserDataPack + ".zip");
-
-        if (!File.Exists(userDataPackFilePath))
-        {
-            throw new Exception("Specified user data pack does not exist.");
-        }
-
-        using var toEmbedZip = ZipFile.OpenRead(userDataPackFilePath);
 
         mapOut.UpdateEmbeddedZipData(zip =>
         {
@@ -171,28 +136,25 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             {
                 var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
                 var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
-                var toEmbedEntry = toEmbedZip.GetEntry(loadPath.Replace('\\', '/'));
 
-                if (toEmbedEntry is null)
+                var loadPathForEntry = loadPath.Replace('\\', '/');
+                var toEmbedEntry = zipStreams.Values
+                    .Select(x => x.GetEntry(loadPathForEntry))
+                    .FirstOrDefault(x => x is not null);
+
+                if (toEmbedEntry is not null)
                 {
-                    if (CreateEntryFromGbxFile(zip, loadPath, embeddedPath) is null)
-                    {
-                        logger.LogWarning("File {Path} cannot be embedded because it does not exist.", remainingPath);
-                    }
-                    else
-                    {
-                        actualEmbeddedItemsCount++;
-                    }
-
-                    continue;
+                    CreateEntryFromZippedGbxFile(zip, toEmbedEntry, embeddedPath);
+                    actualEmbeddedItemsCount++;
                 }
-
-                var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
-                using var entryStream = entry.Open();
-                using var toEmbedEntryStream = toEmbedEntry.Open();
-                Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
-
-                actualEmbeddedItemsCount++;
+                else if (CreateEntryFromLocalGbxFile(zip, loadPath, embeddedPath) is not null)
+                {
+                    actualEmbeddedItemsCount++;
+                }
+                else
+                {
+                    logger.LogWarning("File {Path} cannot be embedded because it does not exist.", remainingPath);
+                }
             }
         });
 
@@ -203,10 +165,13 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         LogFinishedEmbeddedItems(watch, actualEmbeddedItemsCount);
 
-        return userDataPackFilePath;
+        foreach (var zip in zipStreams.Values)
+        {
+            zip.Dispose();
+        }
     }
 
-    private ZipArchiveEntry? CreateEntryFromGbxFile(ZipArchive zip, string loadPath, string embeddedPath)
+    private ZipArchiveEntry? CreateEntryFromLocalGbxFile(ZipArchive zip, string loadPath, string embeddedPath)
     {
         loadPath = Path.Combine(runningDir, "UserData", loadPath);
 
@@ -219,6 +184,16 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         using var entryStream = entry.Open();
         using var fileStream = File.OpenRead(loadPath);
         Gbx.Decompress(input: fileStream, output: entryStream);
+
+        return entry;
+    }
+
+    private static ZipArchiveEntry CreateEntryFromZippedGbxFile(ZipArchive zip, ZipArchiveEntry entryFrom, string embeddedPath)
+    {
+        var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
+        using var entryStream = entry.Open();
+        using var toEmbedEntryStream = entryFrom.Open();
+        Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
 
         return entry;
     }
