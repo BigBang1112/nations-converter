@@ -30,7 +30,6 @@ internal sealed class MediaTrackerStage
         }
 
         // TODO
-        // !!! Recreate media tracker from scratch, as this way its mutating
         // Update to modern data chunks in cases where it crashes
         mapOut.ClipIntro = TransferMediaTracker(mapIn.ClipIntro);
         mapOut.ClipGroupInGame = TransferMediaTracker(mapIn.ClipGroupInGame);
@@ -53,10 +52,7 @@ internal sealed class MediaTrackerStage
             StopWhenRespawn = clip.StopWhenRespawn,
             Name = clip.Name,
         };
-        foreach (var chunk in clip.Chunks)
-        {
-            newClip.Chunks.Add(chunk);
-        }
+        foreach (var chunk in clip.Chunks) newClip.Chunks.Add(chunk);
 
         foreach (var track in clip.Tracks)
         {
@@ -68,88 +64,88 @@ internal sealed class MediaTrackerStage
                 IsKeepPlaying = track.IsKeepPlaying,
                 IsReadOnly = track.IsReadOnly,
             };
-
-            foreach (var chunk in track.Chunks)
-            {
-                newTrack.Chunks.Add(chunk);
-            }
+            foreach (var chunk in track.Chunks) newTrack.Chunks.Add(chunk);
 
             newClip.Tracks.Add(newTrack);
 
             foreach (var block in track.Blocks)
             {
-                if (block is CGameCtnMediaBlockCameraCustom { Keys: not null } cameraCustom)
+                switch (block)
                 {
-                    var newCameraCustom = new CGameCtnMediaBlockCameraCustom { Keys = new List<CGameCtnMediaBlockCameraCustom.Key>() };
-                    foreach (var chunk in cameraCustom.Chunks)
-                    {
-                        newCameraCustom.Chunks.Add(chunk);
-                    }
-
-                    newTrack.Blocks.Add(newCameraCustom);
-
-                    foreach (var key in cameraCustom.Keys)
-                    {
-                        newCameraCustom.Keys.Add(new CGameCtnMediaBlockCameraCustom.Key
+                    case CGameCtnMediaBlockCameraCustom { Keys: not null } cameraCustom:
+                        var newCameraCustom = new CGameCtnMediaBlockCameraCustom
                         {
-                            Time = key.Time,
-                            Position = key.Position + centerOffset * blockSize,
-                            Anchor = key.Anchor,
-                            AnchorRot = key.AnchorRot,
-                            AnchorVis = key.AnchorVis,
-                            Fov = key.Fov,
-                            Interpolation = key.Interpolation,
-                            LeftTangent = key.LeftTangent,
-                            NearZ = key.NearZ,
-                            PitchYawRoll = key.PitchYawRoll,
-                            RightTangent = key.RightTangent,
-                            Target = key.Target,
-                            TargetPosition = key.TargetPosition,
-                            U01 = key.U01,
-                            U02 = key.U02,
-                            U03 = key.U03,
-                            U04 = key.U04,
-                            U05 = key.U05,
-                            U06 = key.U06,
-                            U07 = key.U07,
-                            U08 = key.U08,
-                            U09 = key.U09,
-                        });
-                    }
-                    continue;
-                }
+                            Keys = new List<CGameCtnMediaBlockCameraCustom.Key>()
+                        };
+                        foreach (var chunk in cameraCustom.Chunks) newCameraCustom.Chunks.Add(chunk);
 
-                if (block is CGameCtnMediaBlockCameraPath { Keys: not null } cameraPath)
-                {
-                    var newCameraPath = new CGameCtnMediaBlockCameraPath { Keys = new List<CGameCtnMediaBlockCameraPath.Key>() };
-                    foreach (var chunk in cameraPath.Chunks)
-                    {
-                        newCameraPath.Chunks.Add(chunk);
-                    }
+                        newTrack.Blocks.Add(newCameraCustom);
 
-                    newTrack.Blocks.Add(newCameraPath);
-
-                    foreach (var key in cameraPath.Keys)
-                    {
-                        newCameraPath.Keys.Add(new CGameCtnMediaBlockCameraPath.Key
+                        foreach (var key in cameraCustom.Keys)
                         {
-                            Time = key.Time,
-                            Position = key.Position + centerOffset * blockSize,
-                            Anchor = key.Anchor,
-                            AnchorRot = key.AnchorRot,
-                            AnchorVis = key.AnchorVis,
-                            Fov = key.Fov,
-                            NearZ = key.NearZ,
-                            PitchYawRoll = key.PitchYawRoll,
-                            Target = key.Target,
-                            TargetPosition = key.TargetPosition,
-                            U01 = key.U01,
-                            U02 = key.U02,
-                            U03 = key.U03,
-                            Weight = key.Weight,
-                        });
-                    }
-                    continue;
+                            newCameraCustom.Keys.Add(new CGameCtnMediaBlockCameraCustom.Key
+                            {
+                                Time = key.Time,
+                                Position = key.Position + centerOffset * blockSize,
+                                Anchor = key.Anchor,
+                                AnchorRot = key.AnchorRot,
+                                AnchorVis = key.AnchorVis,
+                                Fov = key.Fov,
+                                Interpolation = key.Interpolation,
+                                LeftTangent = key.LeftTangent,
+                                NearZ = key.NearZ,
+                                PitchYawRoll = key.PitchYawRoll,
+                                RightTangent = key.RightTangent,
+                                Target = key.Target,
+                                TargetPosition = key.TargetPosition,
+                                U01 = key.U01,
+                                U02 = key.U02,
+                                U03 = key.U03,
+                                U04 = key.U04,
+                                U05 = key.U05,
+                                U06 = key.U06,
+                                U07 = key.U07,
+                                U08 = key.U08,
+                                U09 = key.U09,
+                            });
+                        }
+                        break;
+                    case CGameCtnMediaBlockCameraPath { Keys: not null } cameraPath:
+                        var newCameraPath = new CGameCtnMediaBlockCameraPath
+                        {
+                            Keys = new List<CGameCtnMediaBlockCameraPath.Key>()
+                        };
+                        foreach (var chunk in cameraPath.Chunks) newCameraPath.Chunks.Add(chunk);
+
+                        newTrack.Blocks.Add(newCameraPath);
+
+                        foreach (var key in cameraPath.Keys)
+                        {
+                            newCameraPath.Keys.Add(new CGameCtnMediaBlockCameraPath.Key
+                            {
+                                Time = key.Time,
+                                Position = key.Position + centerOffset * blockSize,
+                                Anchor = key.Anchor,
+                                AnchorRot = key.AnchorRot,
+                                AnchorVis = key.AnchorVis,
+                                Fov = key.Fov,
+                                NearZ = key.NearZ,
+                                PitchYawRoll = key.PitchYawRoll,
+                                Target = key.Target,
+                                TargetPosition = key.TargetPosition,
+                                U01 = key.U01,
+                                U02 = key.U02,
+                                U03 = key.U03,
+                                Weight = key.Weight,
+                            });
+                        }
+                        break;
+                    case CGameCtnMediaBlockFxBloom:
+                        // TODO: convert to CGameCtnMediaBlockBloomHdr effectively
+                        break;
+                    default:
+                        newTrack.Blocks.Add(block);
+                        break;
                 }
             }
         }
@@ -165,10 +161,7 @@ internal sealed class MediaTrackerStage
         }
 
         var newClipGroup = new CGameCtnMediaClipGroup { Clips = new List<CGameCtnMediaClipGroup.ClipTrigger>() };
-        foreach (var chunk in clipGroup.Chunks)
-        {
-            newClipGroup.Chunks.Add(chunk);
-        }
+        foreach (var chunk in clipGroup.Chunks) newClipGroup.Chunks.Add(chunk);
 
         foreach (var (clip, trigger) in clipGroup.Clips)
         {

@@ -19,7 +19,6 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
     private readonly CGameCtnChallenge mapOut;
     private readonly string runningDir;
-    private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
     private readonly string category;
@@ -39,7 +38,6 @@ internal sealed class CustomContentManager : EnvironmentStageBase
     {
         this.mapOut = mapOut;
         this.runningDir = runningDir;
-        this.config = config;
         this.logger = logger;
 
         category = string.IsNullOrWhiteSpace(config.Category) ? Environment switch
