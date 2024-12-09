@@ -107,11 +107,6 @@ public sealed class ManualConversionSetModel
     {
         foreach (var block in map.GetBlocks())
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
             if (Blocks.TryGetValue(block.Name, out var conversion) && conversion is not null)
             {
                 yield return KeyValuePair.Create(block, conversion);

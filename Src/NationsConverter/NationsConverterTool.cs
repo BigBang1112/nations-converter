@@ -87,7 +87,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         if (Config.CopyItems)
         {
-            var copyUserDataStage = new CopyUserDataStage(Config, runningDir, mapOut, logger);
+            var copyUserDataStage = new CopyUserDataStage(Config, mapOut, logger);
             copyUserDataStage.Copy();
         }
 
@@ -115,11 +115,11 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
 
         var mapOut = new CGameCtnChallenge
         {
-            AnchoredObjects = new List<CGameCtnAnchoredObject>(),
+            AnchoredObjects = [],
             AuthorLogin = authorLogin,
             AuthorNickname = "BigBang1112",
             AuthorZone = authorZone,
-            Blocks = new List<CGameCtnBlock>(),
+            Blocks = [],
             BlockStock = new CGameCtnCollectorList(),
             BuildVersion = $"date={BuildDate} git={BuildGit} GameVersion={ExeVersion}",
             ChallengeParameters = new CGameCtnChallengeParameters

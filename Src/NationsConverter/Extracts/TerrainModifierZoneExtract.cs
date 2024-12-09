@@ -28,11 +28,6 @@ internal sealed class TerrainModifierZoneExtract
 
         foreach (var block in mapIn.GetBlocks())
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
             if (conversionSet.BlockTerrainModifiers.TryGetValue(block.Name, out var terrainModifier))
             {
                 terrainModifierZones[block.Coord] = terrainModifier;

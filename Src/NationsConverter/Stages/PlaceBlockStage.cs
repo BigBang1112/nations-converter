@@ -90,8 +90,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
 
-        var variant = overrideVariant ?? overrideConversion?.Variant ?? block.Variant.GetValueOrDefault();
-        var subVariant = overrideSubVariant ?? overrideConversion?.SubVariant ?? block.SubVariant.GetValueOrDefault();
+        var variant = overrideVariant ?? overrideConversion?.Variant ?? block.Variant;
+        var subVariant = overrideSubVariant ?? overrideConversion?.SubVariant ?? block.SubVariant;
 
         if (conversion.Variant.HasValue)
         {

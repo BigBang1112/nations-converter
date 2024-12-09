@@ -35,6 +35,8 @@ internal sealed class MediaTrackerStage
         mapOut.ClipGroupInGame = TransferMediaTracker(mapIn.ClipGroupInGame);
         mapOut.ClipGroupEndRace = TransferMediaTracker(mapIn.ClipGroupEndRace);
         mapOut.ClipAmbiance = TransferMediaTracker(mapIn.ClipAmbiance);
+
+        mapOut.ClipTriggerSize = (1, 1, 1);
     }
 
     private CGameCtnMediaClip? TransferMediaTracker(CGameCtnMediaClip? clip)
@@ -46,25 +48,26 @@ internal sealed class MediaTrackerStage
 
         var newClip = new CGameCtnMediaClip
         {
-            Tracks = new List<CGameCtnMediaTrack>(),
+            Tracks = [],
             LocalPlayerClipEntIndex = clip.LocalPlayerClipEntIndex,
             StopWhenLeave = clip.StopWhenLeave,
             StopWhenRespawn = clip.StopWhenRespawn,
             Name = clip.Name,
         };
-        foreach (var chunk in clip.Chunks) newClip.Chunks.Add(chunk);
+        newClip.CreateChunk<CGameCtnMediaClip.Chunk0307900D>();
 
         foreach (var track in clip.Tracks)
         {
             var newTrack = new CGameCtnMediaTrack
             {
-                Blocks = new List<CGameCtnMediaBlock>(),
+                Blocks = [],
                 Name = track.Name,
                 IsCycling = track.IsCycling,
                 IsKeepPlaying = track.IsKeepPlaying,
                 IsReadOnly = track.IsReadOnly,
             };
-            foreach (var chunk in track.Chunks) newTrack.Chunks.Add(chunk);
+            newTrack.CreateChunk<CGameCtnMediaTrack.Chunk03078001>();
+            newTrack.CreateChunk<CGameCtnMediaTrack.Chunk03078005>();
 
             newClip.Tracks.Add(newTrack);
 
@@ -75,7 +78,7 @@ internal sealed class MediaTrackerStage
                     case CGameCtnMediaBlockCameraCustom { Keys: not null } cameraCustom:
                         var newCameraCustom = new CGameCtnMediaBlockCameraCustom
                         {
-                            Keys = new List<CGameCtnMediaBlockCameraCustom.Key>()
+                            Keys = []
                         };
                         foreach (var chunk in cameraCustom.Chunks) newCameraCustom.Chunks.Add(chunk);
 
@@ -113,7 +116,7 @@ internal sealed class MediaTrackerStage
                     case CGameCtnMediaBlockCameraPath { Keys: not null } cameraPath:
                         var newCameraPath = new CGameCtnMediaBlockCameraPath
                         {
-                            Keys = new List<CGameCtnMediaBlockCameraPath.Key>()
+                            Keys = []
                         };
                         foreach (var chunk in cameraPath.Chunks) newCameraPath.Chunks.Add(chunk);
 
@@ -143,6 +146,11 @@ internal sealed class MediaTrackerStage
                     case CGameCtnMediaBlockFxBloom:
                         // TODO: convert to CGameCtnMediaBlockBloomHdr effectively
                         break;
+                    case CGameCtnMediaBlockGhost:
+                        // TODO: do wild ghost conversion
+                        break;
+                    case CGameCtnMediaBlockCameraGame:
+                        break;
                     default:
                         newTrack.Blocks.Add(block);
                         break;
@@ -160,8 +168,8 @@ internal sealed class MediaTrackerStage
             return null;
         }
 
-        var newClipGroup = new CGameCtnMediaClipGroup { Clips = new List<CGameCtnMediaClipGroup.ClipTrigger>() };
-        foreach (var chunk in clipGroup.Chunks) newClipGroup.Chunks.Add(chunk);
+        var newClipGroup = new CGameCtnMediaClipGroup { Clips = [] };
+        newClipGroup.CreateChunk<CGameCtnMediaClipGroup.Chunk0307A003>(); // dunno why that became requirement?
 
         foreach (var (clip, trigger) in clipGroup.Clips)
         {

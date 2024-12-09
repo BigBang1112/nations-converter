@@ -7,14 +7,12 @@ namespace NationsConverter.Stages;
 internal sealed class CopyUserDataStage
 {
     private readonly NationsConverterConfig config;
-    private readonly string runningDir;
     private readonly CGameCtnChallenge mapOut;
     private readonly ILogger logger;
 
-    public CopyUserDataStage(NationsConverterConfig config, string runningDir, CGameCtnChallenge mapOut, ILogger logger)
+    public CopyUserDataStage(NationsConverterConfig config, CGameCtnChallenge mapOut, ILogger logger)
     {
         this.config = config;
-        this.runningDir = runningDir;
         this.mapOut = mapOut;
         this.logger = logger;
     }

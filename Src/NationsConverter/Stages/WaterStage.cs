@@ -43,11 +43,6 @@ internal sealed class WaterStage : BlockStageBase
 
         foreach (var block in coveredZoneBlocks)
         {
-            if (block.Variant is null || block.SubVariant is null)
-            {
-                continue;
-            }
-
             if (!ConversionSet.Blocks.TryGetValue(block.Name, out var conversion))
             {
                 continue;
