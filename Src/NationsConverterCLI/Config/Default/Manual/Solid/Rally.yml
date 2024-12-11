@@ -13,17 +13,14 @@ Blocks:
   RallyRoadCastleSlopePillar:
     Variant: 0
     SubVariant: 0
-    ForceAirItem: true
   RallyRoadWoodSlope:
     Variant: 0
     SubVariant: 0
   RallyRoadWoodSlopePillar:
     Variant: 0
     SubVariant: 0
-    ForceAirItem: true
   RallyGT1Pillar:
     SubVariant: 0
-    ForceAirItem: true
   RallyGT2Pillar:
     SubVariant: 0
   RallyGT3Pillar:
@@ -38,7 +35,6 @@ Blocks:
     SubVariant: 0
   RallyRoadWoodToCastlePillar:
     SubVariant: 0
-    ForceAirItem: true
   RallyFieldTetrisDiagRoadLowToRoadHigh:
     Items:
     - Name: SpringTreeVerySmall
@@ -1422,15 +1418,12 @@ Blocks:
     SubVariant: 0
   RallyRoadWoodPillar:
     SubVariant: 0
-    ForceAirItem: true
   RallyRoadWoodStraightPillar:
     SubVariant: 0
-    ForceAirItem: true
   RallyCastleStraightPillar:
     SubVariant: 0
   RallyRoadCastlePillar:
     SubVariant: 0
-    ForceAirItem: true
   RallyRampart:
     SubVariant: 0
   RallyCastleBiSlopePillar:
@@ -1447,7 +1440,6 @@ Blocks:
     ForceGroundItem: true # wtf
   RallyRoadCastlePillarClip:
     SubVariant: 0
-    ForceAirItem: true
   RallyRoadWoodSupportSlope:
     Variant: 0
     SubVariant: 0
