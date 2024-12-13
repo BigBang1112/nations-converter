@@ -10,6 +10,7 @@ internal sealed class PylonStage : BlockStageBase
 
     private readonly int baseHeight;
     private readonly Dictionary<(Int3, int), int> pylons = [];
+    private readonly HashSet<Int3> placedPylons = [];
 
     public PylonStage(
         CGameCtnChallenge mapIn,
@@ -61,6 +62,12 @@ internal sealed class PylonStage : BlockStageBase
                 Direction.West => (BlockSize.X / 2, 0, -pylonOffset),
                 _ => throw new ArgumentException("Invalid block direction")
             };
+
+            // if the pos matches a pylon that was already placed, skip it
+            if (!placedPylons.Add(pos))
+            {
+                continue;
+            }
 
             var rotRadians = -itemDir * MathF.PI / 2;
 
@@ -129,6 +136,7 @@ internal sealed class PylonStage : BlockStageBase
             var adjustedPylonIndex = (pylonIndex + (int)direction * 2) % 8;
             var key = (coord, adjustedPylonIndex);
 
+            // baseHeight should be adjusted to actual height on the ground
             var newHeight = coord.Y - baseHeight;
 
             if (newHeight <= 0)
