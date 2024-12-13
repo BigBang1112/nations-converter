@@ -213,26 +213,26 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-            /*blocks = db.Blocks
-            .Where(x => x.Name.Contains(searchValue))
-            .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
-            .Include(x => x.AssignedTo)
-            .ThenInclude(x => x!.DiscordUser)
-            .AsNoTracking()
-                .Select(x => new BlockDto
-                {
-                Id = x.Id,
-                Name = x.Name,
-                AssignedTo = x.AssignedTo,
-                AssignedToId = x.AssignedToId,
-                AssignedAt = x.AssignedAt,
-                IsDone = x.IsDone,
-                HasUpload = x.HasUpload,
-                CategoryId = x.CategoryId,
-                SubCategoryId = x.SubCategoryId,
-                EnvironmentId = x.EnvironmentId,
-            })
-            .ToArray();*/
+        /*blocks = db.Blocks
+        .Where(x => x.Name.Contains(searchValue))
+        .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
+        .Include(x => x.AssignedTo)
+        .ThenInclude(x => x!.DiscordUser)
+        .AsNoTracking()
+            .Select(x => new BlockDto
+            {
+            Id = x.Id,
+            Name = x.Name,
+            AssignedTo = x.AssignedTo,
+            AssignedToId = x.AssignedToId,
+            AssignedAt = x.AssignedAt,
+            IsDone = x.IsDone,
+            HasUpload = x.HasUpload,
+            CategoryId = x.CategoryId,
+            SubCategoryId = x.SubCategoryId,
+            EnvironmentId = x.EnvironmentId,
+        })
+        .ToArray();*/
 
         loading = false;
     }
@@ -313,11 +313,18 @@
             {
                 foreach (var item in block.Items)
                 {
+                    var blockDirBasePath = Path.Combine(AppContext.BaseDirectory, "Data", "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
+                    var blockPath = Path.Combine(blockDirBasePath, item.FileName);
+
+                    if (!File.Exists(blockPath))
+                    {
+                        continue;
+                    }
+
                     var entry = zip.CreateEntry(Path.Combine("ClaimedInits", block.Name, item.FileName));
                     await using var entryStream = entry.Open();
 
-                    var blockDirBasePath = Path.Combine(AppContext.BaseDirectory, "Data", "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
-                    await using var fs = new FileStream(Path.Combine(blockDirBasePath, item.FileName), FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+                    await using var fs = new FileStream(blockPath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
                     await fs.CopyToAsync(entryStream);
                 }
             }
