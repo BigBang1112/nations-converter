@@ -68,7 +68,8 @@
           1
         ]
       },
-      "ZoneHeight": 3
+      "ZoneHeight": 3,
+      "Pylon": "SpeedPylon"
     },
     "Desert2ToDesert3": {
       "PageName": "Other",
@@ -128,7 +129,8 @@
           1
         ]
       },
-      "ZoneHeight": 6
+      "ZoneHeight": 6,
+      "Pylon": "SpeedPylon"
     },
     "DesertToDesert": {
       "PageName": "Other",
@@ -454,7 +456,8 @@
           0
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Pylon": "SpeedPylon"
     },
     "SpeedBiSlopeEnd": {
       "PageName": "Road/RoadTwisted",
@@ -8591,7 +8594,8 @@
           0
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Pylon": "SpeedPylon"
     },
     "SpeedRockClip": {
       "PageName": "Other",

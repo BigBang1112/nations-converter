@@ -374,7 +374,7 @@ internal sealed class InitStageService
             }
         }
 
-        return GetBlockConversionModel(node, pageName, block.TerrainZone?.Height, isTerrainModifiable, notModifiable);
+        return GetBlockConversionModel(node, pageName, block.TerrainZone, isTerrainModifiable, notModifiable);
     }
 
     private void ProcessSubVariant(SubVariantModel subVariant, CGameCtnChallenge? baseMap, ref int index, out bool isTerrainModifiable)
@@ -538,7 +538,7 @@ internal sealed class InitStageService
         }
     }
 
-    private ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, int? height, bool isTerrainModifiable, HashSet<Int2> notModifiable)
+    private ConversionModel GetBlockConversionModel(CGameCtnBlockInfo node, string pageName, CGameCtnZone? zone, bool isTerrainModifiable, HashSet<Int2> notModifiable)
     {
         var airUnits = (node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels)?
             .Select(x => x.RelativeOffset).ToArray() ?? [];
@@ -665,7 +665,8 @@ internal sealed class InitStageService
             Clips2 = commonClips2?.Length == 0 ? null : commonClips2,
             Air = airConvModel,
             Ground = groundConvModel,
-            ZoneHeight = height,
+            ZoneHeight = zone?.Height,
+            Pylon = (zone as CGameCtnZoneFlat)?.BlockInfoPylon?.Ident.Id,
             Waypoint = node.WayPointType is CGameCtnBlockInfo.EWayPointType.None ? null : node.WayPointType switch
             {
                 CGameCtnBlockInfo.EWayPointType.Start => WaypointType.Start,

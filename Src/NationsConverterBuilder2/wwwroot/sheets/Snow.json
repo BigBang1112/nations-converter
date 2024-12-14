@@ -11114,7 +11114,8 @@
           0
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Pylon": "AlpinePylonWood"
     },
     "AlpineSnowClip": {
       "PageName": "Other",
@@ -11700,7 +11701,8 @@
           0
         ]
       },
-      "ZoneHeight": 0
+      "ZoneHeight": 0,
+      "Pylon": "AlpinePylonWood"
     },
     "AlpineTundraClip": {
       "PageName": "Other",
@@ -12753,7 +12755,8 @@
           1
         ]
       },
-      "ZoneHeight": 3
+      "ZoneHeight": 3,
+      "Pylon": "AlpinePylonWood"
     },
     "Snow1ToSnow2": {
       "PageName": "Other",
@@ -12813,7 +12816,8 @@
           1
         ]
       },
-      "ZoneHeight": 6
+      "ZoneHeight": 6,
+      "Pylon": "AlpinePylonWood"
     },
     "Snow2ToSnow3": {
       "PageName": "Other",
@@ -12873,7 +12877,8 @@
           1
         ]
       },
-      "ZoneHeight": 9
+      "ZoneHeight": 9,
+      "Pylon": "AlpinePylonWood"
     },
     "SnowToIce": {
       "PageName": "Other",

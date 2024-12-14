@@ -1648,6 +1648,7 @@
         "Variants": 0
       },
       "ZoneHeight": 0,
+      "Pylon": "IslandPylonMetal",
       "Units": [
         [
           0,
