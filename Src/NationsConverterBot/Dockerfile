@@ -3,11 +3,14 @@ ARG TARGETARCH
 WORKDIR /src
 
 # Copy project file and restore as distinct layers
+COPY --link nuget.config nuget.config
+COPY --link Src/NationsConverterShared/*.csproj NationsConverterShared/
 COPY --link Src/NationsConverter/*.csproj NationsConverter/
 COPY --link Src/NationsConverterBot/*.csproj NationsConverterBot/
 RUN dotnet restore -a $TARGETARCH NationsConverterBot/NationsConverterBot.csproj
 
 # Copy source code and publish app
+COPY --link Src/NationsConverterShared/ NationsConverterShared/
 COPY --link Src/NationsConverter/ NationsConverter/
 COPY --link Src/NationsConverterBot/ NationsConverterBot/
 
