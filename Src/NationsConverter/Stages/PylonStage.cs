@@ -40,12 +40,13 @@ internal sealed class PylonStage : BlockStageBase
             ? blockName
             : Path.Combine(conversion.PageName, blockName);
 
-        var pillarOffset = 12;
+        var pillarOffset = ConversionSet.PillarOffset;
 
         foreach (var ((coord, pylonIndex), height) in pylons)
         {
             var itemPath = Path.Combine(dirPath, $"Ground_{height - 1}_0.Item.Gbx");
 
+            // baseHeight should be adjusted to actual height on the ground
             var pos = ((coord.X, baseHeight, coord.Z) + CenterOffset) * BlockSize + (BlockSize.X / 2, 0, BlockSize.Z / 2);
 
             var dir = pylonIndex / 2;
@@ -134,7 +135,7 @@ internal sealed class PylonStage : BlockStageBase
             }
 
             var adjustedPylonIndex = (pylonIndex + (int)direction * 2) % 8;
-            var key = (coord, adjustedPylonIndex);
+            var key = (coord with { Y = 0 }, adjustedPylonIndex);
 
             // baseHeight should be adjusted to actual height on the ground
             var newHeight = coord.Y - baseHeight;

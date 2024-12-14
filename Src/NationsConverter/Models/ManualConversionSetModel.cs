@@ -24,6 +24,7 @@ public sealed class ManualConversionSetModel
     public float WaterHeight { get; set; }
     public string? Pylon { get; set; }
     public Dictionary<string, ManualConversionModel> Blocks { get; set; } = [];
+    public int PillarOffset { get; set; }
 
     public ManualConversionSetModel Fill(ConversionSetModel conversionSet)
     {
