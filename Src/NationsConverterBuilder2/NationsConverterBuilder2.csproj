@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>f9c5deea-e2a6-47dd-8c2c-e60824813e87</UserSecretsId>
@@ -13,9 +13,9 @@
         <PackageReference Include="GBX.NET" Version="2.1.0-nightly.20241124.82b53c8" />
         <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.0" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.8" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
     </ItemGroup>
 
 
