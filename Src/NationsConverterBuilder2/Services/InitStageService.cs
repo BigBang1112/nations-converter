@@ -585,11 +585,10 @@ internal sealed class InitStageService
         var groundPlacePylons = node.GroundBlockUnitInfos?.Select(x => x.PlacePylons).ToArray() ?? [];
         if (groundPlacePylons.All(x => x == 0)) groundPlacePylons = null;
 
-        // AcceptPylons are bloaty and not necessary atm
-        //var airAcceptPylons = node.AirBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
-        //if (airAcceptPylons.All(x => x == 255)) airAcceptPylons = null;
-        //var groundAcceptPylons = node.GroundBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
-        //if (groundAcceptPylons.All(x => x == 255)) groundAcceptPylons = null;
+        var airAcceptPylons = node.AirBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
+        if (airAcceptPylons.All(x => x == 255)) airAcceptPylons = null;
+        var groundAcceptPylons = node.GroundBlockUnitInfos?.Select(x => x.AcceptPylons).ToArray() ?? [];
+        if (groundAcceptPylons.All(x => x == 255)) groundAcceptPylons = null;
 
         var airTerrainModifierUnits = node.AirBlockUnitInfos?
             .Where(x => !string.IsNullOrWhiteSpace(x.TerrainModifierId))
@@ -609,7 +608,7 @@ internal sealed class InitStageService
         var commonSpawnPos = airSpawnPos == groundSpawnPos ? airSpawnPos : null;
         var commonWaterUnits = airWaterUnits.SequenceEqual(groundWaterUnits) ? airWaterUnits : null;
         var commonPlacePylons = groundPlacePylons is not null && airPlacePylons?.SequenceEqual(groundPlacePylons) == true ? airPlacePylons : null;
-        //var commonAcceptPylons = groundAcceptPylons is not null && airAcceptPylons?.SequenceEqual(groundAcceptPylons) == true ? airAcceptPylons : null;
+        var commonAcceptPylons = groundAcceptPylons is not null && airAcceptPylons?.SequenceEqual(groundAcceptPylons) == true ? airAcceptPylons : null;
         var commonTerrainModifierUnits =
             airTerrainModifierUnits.Keys.Count == groundTerrainModifierUnits.Keys.Count &&
             airTerrainModifierUnits.Keys.All(k => groundTerrainModifierUnits.ContainsKey(k) && airTerrainModifierUnits[k].SequenceEqual(groundTerrainModifierUnits[k]))
@@ -632,7 +631,7 @@ internal sealed class InitStageService
                 SpawnPos = commonSpawnPos is null ? airSpawnPos : null,
                 WaterUnits = commonWaterUnits is null && airWaterUnits.Length > 0 ? airWaterUnits : null,
                 PlacePylons = commonPlacePylons is null ? airPlacePylons : null,
-                //AcceptPylons = commonAcceptPylons is null ? airAcceptPylons : null
+                AcceptPylons = commonAcceptPylons is null ? airAcceptPylons : null,
                 TerrainModifierUnits = commonTerrainModifierUnits is null && airTerrainModifierUnits.Count > 0 ? airTerrainModifierUnits : null
             };
         }
@@ -650,7 +649,7 @@ internal sealed class InitStageService
                 SpawnPos = commonSpawnPos is null ? groundSpawnPos : null,
                 WaterUnits = commonWaterUnits is null && groundWaterUnits.Length > 0 ? groundWaterUnits : null,
                 PlacePylons = commonPlacePylons is null ? groundPlacePylons : null,
-                //AcceptPylons = commonAcceptPylons is null ? groundAcceptPylons : null
+                AcceptPylons = commonAcceptPylons is null ? groundAcceptPylons : null,
                 TerrainModifierUnits = commonTerrainModifierUnits is null && groundTerrainModifierUnits.Count > 0 ? groundTerrainModifierUnits : null
             };
         }
@@ -681,7 +680,7 @@ internal sealed class InitStageService
             WaterUnits = commonWaterUnits?.Length == 0 ? null : commonWaterUnits,
             Road = node is CGameCtnBlockInfoRoad ? new() : null,
             PlacePylons = commonPlacePylons,
-            //AcceptPylons = commonAcceptPylons
+            AcceptPylons = commonAcceptPylons,
             TerrainModifierUnits = commonTerrainModifierUnits?.Count == 0 ? null : commonTerrainModifierUnits,
             TM2 = node.Chunks.Get<CGameCtnBlockInfo.Chunk0304E023>() is not null ? true : null,
             Skin = node.Chunks.Get<CPlugGameSkin.HeaderChunk090F4000>() is null ? null : new()

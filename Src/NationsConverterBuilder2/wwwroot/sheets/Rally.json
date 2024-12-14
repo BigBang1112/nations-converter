@@ -53,6 +53,9 @@
           3,
           3,
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 2
@@ -94,6 +97,9 @@
             0,
             0
           ]
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -129,6 +135,9 @@
           3,
           3,
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 4
@@ -164,6 +173,9 @@
           3,
           3,
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 6
@@ -199,6 +211,9 @@
           3,
           3,
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 2
@@ -227,6 +242,9 @@
             0,
             0
           ]
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -277,6 +295,10 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyBridgeHigh": {
@@ -333,6 +355,10 @@
           0,
           1
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyBridgeHighPillar": {
@@ -374,6 +400,10 @@
           0,
           1
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyBridgeLow": {
@@ -419,6 +449,9 @@
             0,
             0
           ]
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -467,6 +500,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -544,6 +582,14 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1,
@@ -628,6 +674,11 @@
           0,
           2
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "RallyCastleBiSlopeEnd": {
@@ -689,6 +740,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "RallyCastleBiSlopePillar": {
@@ -741,6 +797,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyCastleBiSlopeStart": {
@@ -802,6 +862,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "RallyCastleBridge": {
@@ -884,6 +949,14 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -933,6 +1006,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyCastleCross": {
@@ -1010,6 +1087,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -1108,6 +1189,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -1174,6 +1260,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleDrawBridge": {
@@ -1247,6 +1336,11 @@
             0,
             1
           ]
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -1344,6 +1438,10 @@
           0,
           1
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyCastleDrawBridgeSpeedUp": {
@@ -1427,6 +1525,13 @@
             0,
             1
           ]
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -1467,6 +1572,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleGrid": {
@@ -1529,6 +1637,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -1573,6 +1685,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleHillBridgeAir": {
@@ -1612,6 +1727,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -1681,6 +1799,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -1724,6 +1847,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleCheckpointPillar": {
@@ -1771,6 +1897,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleRamp": {
@@ -1798,6 +1927,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -1842,6 +1974,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -1881,6 +2018,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleRampSpeedUp": {
@@ -1918,6 +2058,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -1967,6 +2112,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -2027,6 +2178,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -2051,6 +2208,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleReplacementCross": {
@@ -2105,6 +2265,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -2180,6 +2343,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -2246,6 +2413,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleStartPillar": {
@@ -2284,6 +2454,9 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleStraightPillar": {
@@ -2331,6 +2504,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleTower": {
@@ -2358,6 +2534,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyCastleTowerPillar": {
@@ -2385,7 +2565,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyCastleTowerSpeedUp": {
       "PageName": "Decor/HouseDecor",
@@ -2406,6 +2589,10 @@
           1,
           2,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -2430,6 +2617,11 @@
           1,
           3,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -2478,6 +2670,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyCastleTurboRoulette": {
@@ -2520,6 +2715,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyClip": {
@@ -2546,7 +2744,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyFieldAuto": {
       "PageName": "Decor/FieldAuto",
@@ -2573,6 +2774,9 @@
           2,
           2,
           2
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -2598,6 +2802,9 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1,
@@ -2622,6 +2829,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -2643,6 +2853,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -2691,6 +2904,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        1
       ]
     },
     "RallyFieldClips2": {
@@ -2730,6 +2946,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1
         ]
       },
       "Modifiable": true,
@@ -2875,6 +3094,26 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -2994,6 +3233,21 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -3022,6 +3276,9 @@
           0,
           0,
           0,
+          0
+        ],
+        "AcceptPylons": [
           0
         ]
       },
@@ -3052,6 +3309,9 @@
           3,
           3,
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3082,6 +3342,9 @@
           0,
           0,
           0
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3104,6 +3367,9 @@
         ],
         "SubVariants": [
           4
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3126,6 +3392,9 @@
         ],
         "SubVariants": [
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3153,6 +3422,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3176,6 +3449,9 @@
         ],
         "SubVariants": [
           2
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3208,6 +3484,11 @@
         ],
         "SubVariants": [
           3
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3240,6 +3521,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3262,6 +3548,9 @@
         ],
         "SubVariants": [
           2
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -3299,6 +3588,12 @@
         ],
         "SubVariants": [
           4
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3336,6 +3631,12 @@
         ],
         "SubVariants": [
           5
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3491,6 +3792,28 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3606,6 +3929,20 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3726,6 +4063,21 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -3931,6 +4283,38 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Modifiable": true,
@@ -4016,6 +4400,14 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -4293,6 +4685,49 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -4565,6 +5000,48 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -4697,6 +5174,20 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -4829,6 +5320,20 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -4931,6 +5436,14 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -5173,6 +5686,42 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -5430,6 +5979,45 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -5642,6 +6230,36 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -5834,6 +6452,32 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -5866,6 +6510,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Waypoint": "Finish",
@@ -5890,6 +6537,9 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -5934,6 +6584,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyGrassCheckPoint": {
@@ -5958,6 +6611,9 @@
           16,
           0.5,
           16
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -6019,6 +6675,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT1Pillar": {
@@ -6081,6 +6743,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT2Pillar": {
@@ -6153,6 +6821,14 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT3": {
@@ -6220,6 +6896,14 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT3Pillar": {
@@ -6292,6 +6976,14 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT4": {
@@ -6368,6 +7060,14 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT4Pillar": {
@@ -6449,6 +7149,14 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT5": {
@@ -6521,6 +7229,15 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT5Pillar": {
@@ -6598,6 +7315,15 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT6": {
@@ -6670,6 +7396,15 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT6Pillar": {
@@ -6747,6 +7482,15 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT8": {
@@ -6824,6 +7568,16 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGT8Pillar": {
@@ -6906,6 +7660,16 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyGTCurve2": {
@@ -6973,6 +7737,14 @@
           ],
           "Dir": 1
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyHighFinish": {
@@ -7007,6 +7779,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighFinishSupport": {
@@ -7041,6 +7816,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighCheckpoint": {
@@ -7089,6 +7867,9 @@
         16,
         4,
         14
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighOverLowCrossGround": {
@@ -7146,6 +7927,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -7188,6 +7972,9 @@
         16,
         4,
         14
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighSupportCheckpoint": {
@@ -7236,6 +8023,9 @@
         16,
         4,
         14
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighSupportStartLine": {
@@ -7275,6 +8065,9 @@
         16,
         4,
         14
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyHighToLow": {
@@ -7314,6 +8107,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -7371,6 +8167,12 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          255,
+          255,
+          255
         ]
       },
       "Modifiable": true,
@@ -7525,6 +8327,24 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -7702,6 +8522,40 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -7799,6 +8653,24 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -7976,6 +8848,40 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8073,6 +8979,24 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8250,6 +9174,40 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8273,6 +9231,9 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 2
@@ -8295,6 +9256,9 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 4
@@ -8317,6 +9281,9 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 6
@@ -8348,6 +9315,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8375,6 +9347,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8397,6 +9373,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -8424,6 +9403,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8481,6 +9464,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8523,6 +9512,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -8571,6 +9563,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -8634,6 +9629,10 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyMediumCheckpointSpeedUp": {
@@ -8660,6 +9659,10 @@
           16,
           -1.4,
           11.2
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -8689,6 +9692,11 @@
           16,
           3.7,
           11.2
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -8770,6 +9778,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -8827,6 +9838,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -8915,6 +9930,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyMediumStartLine": {
@@ -8966,6 +9984,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyMediumToHigh": {
@@ -9008,6 +10030,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyMultiLapPillar": {
@@ -9055,6 +10080,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRampart": {
@@ -9094,6 +10122,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -9163,6 +10194,10 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -9243,6 +10278,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadCastleClip": {
@@ -9270,7 +10308,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRoadCastlePillar": {
       "PageName": "Other",
@@ -9346,6 +10387,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadCastlePillarClip": {
@@ -9373,7 +10417,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRoadCastleSlope": {
       "PageName": "RoadCastle/RoadMedium",
@@ -9439,6 +10486,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyRoadCastleSlopePillar": {
@@ -9491,6 +10542,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadClip": {
@@ -9518,7 +10572,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRoadHigh": {
       "PageName": "RoadHigh/RoadHighMain",
@@ -9594,6 +10651,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadHighClip": {
@@ -9616,6 +10676,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadHighCornerRockOutside": {
@@ -9655,6 +10718,9 @@
             ],
             "Dir": 1
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -9715,6 +10781,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyRoadHighGT2": {
@@ -9772,6 +10844,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "RallyRoadHighHillSlope": {
@@ -9821,6 +10899,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -9862,6 +10945,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -9881,6 +10967,9 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -9900,6 +10989,10 @@
           1,
           2,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -9999,6 +11092,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -10040,6 +11138,10 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyRoadMediumHillSlope": {
@@ -10089,6 +11191,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -10163,6 +11270,11 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -10205,7 +11317,10 @@
         1,
         1
       ],
-      "Variants": 6
+      "Variants": 6,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRoadWoodSlope": {
       "PageName": "RoadHigh/RoadHighMain",
@@ -10262,6 +11377,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyRoadWoodSlopePillar": {
@@ -10294,6 +11413,9 @@
         1,
         1,
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadWoodStraightPillar": {
@@ -10321,7 +11443,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRoadWoodSupport": {
       "PageName": "RoadHigh/RoadHighSupport",
@@ -10397,6 +11522,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRoadWoodSupportSlope": {
@@ -10454,6 +11582,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "RallyRoadWoodToCastlePillar": {
@@ -10492,6 +11624,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyRock": {
@@ -10531,6 +11666,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -10553,6 +11691,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -10580,6 +11721,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -10622,6 +11767,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -10645,6 +11793,9 @@
         "Variants": 1,
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -10680,6 +11831,9 @@
           4,
           8,
           4
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 3
@@ -10750,6 +11904,13 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -10806,6 +11967,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1,
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -10834,7 +12001,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyRockyGrassHills": {
       "PageName": "Other",
@@ -10867,6 +12037,9 @@
           2,
           2,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 1
@@ -10913,6 +12086,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -10968,6 +12145,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -10992,6 +12173,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallySignPillar": {
@@ -11014,6 +12198,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallySignRightWay": {
@@ -11036,6 +12223,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallySignWarning": {
@@ -11058,6 +12248,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallySignWrongWay": {
@@ -11080,6 +12273,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallySquareTower": {
@@ -11101,6 +12297,10 @@
           1,
           2,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -11115,6 +12315,9 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -11148,7 +12351,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyStartFinishLine": {
       "PageName": "RoadCastle/RoadMedium",
@@ -11203,6 +12409,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "RallyStartLine": {
@@ -11233,6 +12442,9 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Waypoint": "Start",
@@ -11266,6 +12478,10 @@
         ],
         "SubVariants": [
           4
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -11298,6 +12514,11 @@
         ],
         "SubVariants": [
           4
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -11340,6 +12561,13 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -11390,7 +12618,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "RallyTruncMirror": {
       "PageName": "RoadLow",
@@ -11429,6 +12660,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Modifiable": true,
@@ -11481,6 +12715,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -11537,6 +12776,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,
@@ -11614,6 +12859,16 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -11700,6 +12955,18 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -11746,6 +13013,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -11821,6 +13092,10 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Road": {},
@@ -11848,6 +13123,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -11903,6 +13182,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       }
     },
@@ -11948,6 +13232,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -12004,6 +13292,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Modifiable": true,

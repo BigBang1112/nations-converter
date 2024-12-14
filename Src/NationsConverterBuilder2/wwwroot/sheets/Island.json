@@ -396,6 +396,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          1,
+          1
         ]
       },
       "Variants": 1
@@ -818,7 +822,11 @@
     "IslandCroisette": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -951,7 +959,11 @@
     "IslandCroisettePillar": {
       "PageName": "Croisette",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -978,7 +990,11 @@
     "IslandCroisetteSlalomJump": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Units": [
         [
           0,
@@ -1019,7 +1035,11 @@
     "IslandCroisetteSlalomJumpMirror": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Units": [
         [
           0,
@@ -1106,6 +1126,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        255,
+        0,
+        0
       ]
     },
     "IslandCroisetteSlopeBase": {
@@ -1152,6 +1177,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        255,
+        0
       ]
     },
     "IslandCroisetteSlopeEnd": {
@@ -1198,6 +1227,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        255,
+        0
       ]
     },
     "IslandCroisetteSlopeStart": {
@@ -1244,6 +1277,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        255,
+        0
       ]
     },
     "IslandCroisetteStraightPilar": {
@@ -1276,7 +1313,11 @@
     "IslandCroisetteSupport": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -1382,7 +1423,11 @@
     "IslandCroisetteTurbo": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Units": [
         [
           0,
@@ -1423,7 +1468,11 @@
     "IslandCroisetteTurbo2": {
       "PageName": "Croisette/Main",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Units": [
         [
           0,
@@ -1641,7 +1690,11 @@
     "IslandHighWay": {
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -1706,7 +1759,12 @@
     "IslandHighWayAdvertisement": {
       "PageName": "Decors/DecorLandSigns",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0,
+          0
+        ]
+      },
       "Skin": {},
       "Units": [
         [
@@ -2476,7 +2534,15 @@
     "IslandHighWayHawkRamp": {
       "PageName": "HighWay/HighWaySlopes",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          255,
+          0
+        ]
+      },
       "Units": [
         [
           0,
@@ -2760,6 +2826,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Variants": 1,
@@ -2885,7 +2955,11 @@
     "IslandHighWayPillar": {
       "PageName": "HighWay",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -3162,7 +3236,11 @@
     "IslandHighWaySupport": {
       "PageName": "HighWay/HighWayMain",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Road": {},
       "Units": [
         [
@@ -4154,6 +4232,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -4230,6 +4311,16 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4456,6 +4547,46 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255,
+          0,
+          255,
+          0,
+          0,
+          0,
+          255,
+          0,
+          255,
+          255,
+          0,
+          0,
+          0,
+          255,
+          255,
+          0,
+          0,
+          0,
+          255,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255
         ]
       },
       "Variants": 1
@@ -4682,6 +4813,46 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255,
+          0,
+          255,
+          0,
+          0,
+          0,
+          255,
+          0,
+          255,
+          255,
+          0,
+          0,
+          0,
+          255,
+          255,
+          0,
+          0,
+          0,
+          255,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255
         ]
       },
       "Variants": 1
@@ -5436,6 +5607,16 @@
           1,
           1
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope2b": {
@@ -5510,6 +5691,16 @@
           1,
           1
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope3": {
@@ -5640,6 +5831,24 @@
           2,
           2
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope3b": {
@@ -5770,6 +5979,24 @@
           2,
           2
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope4": {
@@ -5942,6 +6169,30 @@
           3,
           3
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope4b": {
@@ -6114,6 +6365,30 @@
           3,
           3
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope5": {
@@ -6328,6 +6603,36 @@
           4,
           4
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformGTSlope5b": {
@@ -6542,6 +6847,36 @@
           4,
           4
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0,
+        255,
+        0,
+        0,
+        0
       ]
     },
     "IslandPlatformCheckpoint": {
@@ -6605,7 +6940,14 @@
     "IslandPlatformCheckpointSlopeLeft": {
       "PageName": "FreeRide/FreeRideSlopes",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Units": [
         [
@@ -6673,7 +7015,14 @@
     "IslandPlatformCheckpointSlopeRight": {
       "PageName": "FreeRide/FreeRideSlopes",
       "Ground": {},
-      "Air": {},
+      "Air": {
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
       "Waypoint": "Checkpoint",
       "Units": [
         [
@@ -6898,6 +7247,34 @@
             1,
             0
           ]
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          0,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          0,
+          0,
+          255,
+          255
         ]
       },
       "Variants": 1
@@ -7084,6 +7461,34 @@
           1,
           0
         ]
+      ],
+      "AcceptPylons": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        0,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        0,
+        0,
+        255,
+        255
       ]
     },
     "IslandPlatformLoopGT4End": {
@@ -9197,6 +9602,16 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -9658,6 +10073,9 @@
             0,
             0
           ]
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -9692,6 +10110,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "IslandSeaSigns": {
@@ -9818,7 +10239,11 @@
     },
     "IslandSeaSignsLightRampPillar": {
       "PageName": "Decors/DecorBuilt",
-      "Ground": {},
+      "Ground": {
+        "AcceptPylons": [
+          0
+        ]
+      },
       "Air": {},
       "Units": [
         [
@@ -12126,6 +12551,9 @@
       "Ground": {
         "SubVariants": [
           4
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -12214,6 +12642,14 @@
         ],
         "SubVariants": [
           2
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          255,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -12255,6 +12691,13 @@
         ],
         "SubVariants": [
           3
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          255,
+          0
         ]
       },
       "Variants": 1
@@ -12301,6 +12744,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          255,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -12417,6 +12868,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -12434,6 +12890,9 @@
         ],
         "SubVariants": [
           8
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -12496,6 +12955,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -12513,6 +12977,9 @@
         ],
         "SubVariants": [
           8
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -12639,6 +13106,16 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -12656,6 +13133,9 @@
         ],
         "SubVariants": [
           3
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -12778,6 +13258,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -12795,6 +13280,9 @@
         ],
         "SubVariants": [
           8
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1,
@@ -12869,6 +13357,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -12886,6 +13379,9 @@
         ],
         "SubVariants": [
           8
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1,
@@ -13065,6 +13561,15 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          255,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -13144,6 +13649,12 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Road": {},
@@ -13181,6 +13692,12 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14080,6 +14597,12 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0,
+          0,
+          0
         ]
       },
       "Skin": {},
@@ -14443,6 +14966,10 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Variants": 1
@@ -14494,6 +15021,11 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14565,6 +15097,15 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14636,6 +15177,15 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14707,6 +15257,15 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14763,6 +15322,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -14824,6 +15389,13 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -15042,6 +15614,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -15280,6 +15856,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Variants": 1
@@ -15326,6 +15906,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Variants": 1
@@ -15372,6 +15956,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          255,
+          0
         ]
       },
       "Variants": 1

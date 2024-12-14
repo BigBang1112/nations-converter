@@ -73,6 +73,16 @@
         0,
         0,
         0
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayBridgeBiSlope2End": {
@@ -320,6 +330,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeGTCurve2": {
@@ -551,6 +564,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeCheckpoint": {
@@ -604,6 +620,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeLoopLeft": {
@@ -815,6 +834,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeRamp": {
@@ -853,6 +875,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeRoad": {
@@ -924,6 +949,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeRoadClip": {
@@ -951,6 +979,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeRoadPillar": {
@@ -984,6 +1015,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeRoadSupport": {
@@ -1055,6 +1089,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeSlope2Straight": {
@@ -1440,6 +1477,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeStartLine": {
@@ -1484,6 +1524,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeSusp": {
@@ -1809,6 +1852,12 @@
           0,
           4
         ]
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayBridgeTransitionToRoad": {
@@ -1903,6 +1952,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeTurbo2": {
@@ -1950,6 +2002,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBridgeTurboRoulette": {
@@ -1997,6 +2052,9 @@
           0,
           0
         ]
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayBuilding1": {
@@ -2029,6 +2087,10 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Skin": {},
@@ -2064,6 +2126,10 @@
           5,
           5,
           4
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -2089,6 +2155,9 @@
           14,
           14,
           14
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Skin": {},
@@ -2124,6 +2193,10 @@
           7,
           10,
           7
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Skin": {},
@@ -2159,6 +2232,10 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Air": {
@@ -2184,6 +2261,9 @@
           13,
           13,
           13
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Skin": {},
@@ -2376,6 +2456,9 @@
             0,
             0
           ]
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 0
@@ -2566,6 +2649,11 @@
           1,
           3,
           1
+        ],
+        "AcceptPylons": [
+          255,
+          255,
+          0
         ]
       },
       "Air": {
@@ -2580,6 +2668,9 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1,
@@ -2617,6 +2708,11 @@
           1,
           3,
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -2631,6 +2727,9 @@
           1,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1,
@@ -3167,6 +3266,9 @@
           3,
           1,
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "ZoneHeight": 4
@@ -3231,6 +3333,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Road": {},
@@ -3297,6 +3402,9 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Road": {},
@@ -3367,6 +3475,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayFlatsRoadClip": {
@@ -3386,6 +3497,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3414,7 +3528,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "BayFlatsRoadPillar": {
       "PageName": "Platform/Main",
@@ -3480,6 +3597,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayHarbor": {
@@ -3552,6 +3672,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -3578,6 +3702,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -3604,6 +3732,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -3625,6 +3757,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3651,6 +3786,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -3678,6 +3817,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3699,6 +3841,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3720,6 +3865,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3741,6 +3889,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3762,6 +3913,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3788,6 +3942,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -3809,6 +3967,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -3832,6 +3993,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBasePillar": {
@@ -3858,7 +4022,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "BayPlatformBasePillarReplace": {
       "PageName": "Platform/Deco",
@@ -3879,6 +4046,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBaseSupport": {
@@ -3900,6 +4070,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBiSlope2End": {
@@ -3921,6 +4094,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBiSlope2Start": {
@@ -3942,6 +4118,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBiSlope2Start2": {
@@ -3973,6 +4152,11 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformBoxClip": {
@@ -3994,6 +4178,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformBoxRoad": {
@@ -4075,6 +4262,12 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformClip": {
@@ -4096,6 +4289,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformFloodLight": {
@@ -4117,6 +4313,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformFloodLightPillarReplace": {
@@ -4138,6 +4337,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformCheckpointBase": {
@@ -4170,6 +4372,10 @@
         16,
         8.1,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformCheckpointDown": {
@@ -4207,6 +4413,11 @@
         16,
         9,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformCheckpointLeft": {
@@ -4244,6 +4455,11 @@
         16,
         9,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformCheckpointRight": {
@@ -4281,6 +4497,11 @@
         16,
         9,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformCheckpointUp": {
@@ -4318,6 +4539,11 @@
         16,
         9,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopAdvert": {
@@ -4345,6 +4571,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformLoopEnd": {
@@ -4364,6 +4594,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -4395,6 +4628,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4441,6 +4679,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4487,6 +4733,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4563,6 +4817,20 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4594,6 +4862,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4618,6 +4891,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformLoopSlope": {
@@ -4642,6 +4918,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4688,6 +4968,14 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -4711,6 +4999,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformLoopStart2": {
@@ -4742,6 +5033,11 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopStart2GTCurve2": {
@@ -4788,6 +5084,14 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopStart4": {
@@ -4834,6 +5138,14 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopStart4GTCurve2": {
@@ -4910,6 +5222,20 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopStartGTCurve2": {
@@ -4941,6 +5267,11 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformLoopWall": {
@@ -4960,6 +5291,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -4991,6 +5325,11 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -5019,6 +5358,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformSlope2Base": {
@@ -5045,6 +5388,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformSlope2Corner": {
@@ -5071,6 +5418,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformSlope2GTCurve2": {
@@ -5127,6 +5478,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2PillarReplace": {
@@ -5153,6 +5514,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformSlope2Support": {
@@ -5179,6 +5544,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformSlope2Transition": {
@@ -5215,6 +5584,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionBiSlopeStart": {
@@ -5251,6 +5626,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionBiSlopeStartGTCurve2": {
@@ -5307,6 +5688,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionBiSlopeStartGTCurve2Mirror": {
@@ -5363,6 +5754,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionBiSlopeStartMirror": {
@@ -5399,6 +5800,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionGTCurve2": {
@@ -5455,6 +5862,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionGTCurve2Mirror": {
@@ -5511,6 +5928,16 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlope2TransitionMirror": {
@@ -5547,6 +5974,12 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayPlatformSlopeBase": {
@@ -5568,6 +6001,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformSupport": {
@@ -5589,6 +6025,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformSupportFree": {
@@ -5610,6 +6049,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformTransitionEsplanadeAir": {
@@ -5629,6 +6071,9 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -5670,6 +6115,13 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -5693,6 +6145,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformTurbo2": {
@@ -5714,6 +6169,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayPlatformTurbo2Down": {
@@ -5740,6 +6198,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurbo2Left": {
@@ -5766,6 +6228,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurbo2Right": {
@@ -5792,6 +6258,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurbo2Up": {
@@ -5818,6 +6288,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurboDown": {
@@ -5844,6 +6318,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurboLeft": {
@@ -5870,6 +6348,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurboRight": {
@@ -5896,6 +6378,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayPlatformTurboUp": {
@@ -5922,6 +6408,10 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoad": {
@@ -5987,6 +6477,9 @@
           ],
           "Dir": 3
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadBiSlope2End": {
@@ -6033,6 +6526,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadBiSlope2Start": {
@@ -6079,6 +6576,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadClip": {
@@ -6100,6 +6601,9 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadFinish": {
@@ -6138,6 +6642,10 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadGTCurve2": {
@@ -6194,6 +6702,12 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BayRoadGTCurve2Pillar": {
@@ -6235,7 +6749,13 @@
         1,
         2
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     "BayRoadGTCurve2Support": {
       "PageName": "Road/Curves",
@@ -6286,6 +6806,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Air": {
@@ -6355,6 +6881,16 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1,
@@ -6436,6 +6972,16 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        255
       ]
     },
     "BayRoadGTCurve3Pillar": {
@@ -6553,6 +7099,16 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255
         ]
       },
       "Air": {
@@ -6662,6 +7218,24 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
         ]
       },
       "Variants": 1,
@@ -6719,6 +7293,10 @@
         16,
         1.5,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadPillar": {
@@ -6756,7 +7334,10 @@
         1,
         1
       ],
-      "Variants": 6
+      "Variants": 6,
+      "AcceptPylons": [
+        0
+      ]
     },
     "BayRoadPillarStraight": {
       "PageName": "Road/RoadSlopes",
@@ -6782,7 +7363,10 @@
         1,
         1
       ],
-      "Variants": 1
+      "Variants": 1,
+      "AcceptPylons": [
+        0
+      ]
     },
     "BayRoadRail": {
       "PageName": "Road/Ramps",
@@ -6823,6 +7407,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadRamp": {
@@ -6855,6 +7442,9 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadSlope2": {
@@ -6906,6 +7496,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayRoadSlopeBase": {
@@ -6952,6 +7547,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadStartFinishLine": {
@@ -7004,6 +7603,10 @@
         16,
         1.5,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadStartLine": {
@@ -7047,6 +7650,10 @@
         16,
         1.5,
         16
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadSupport": {
@@ -7215,6 +7822,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadSupportBiSlope2Start": {
@@ -7261,6 +7872,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadSupportSlope2": {
@@ -7312,6 +7927,11 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0
       ]
     },
     "BayRoadSupportSlopeBase": {
@@ -7358,6 +7978,10 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadSupportTurbo": {
@@ -7394,6 +8018,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Air": {
@@ -7433,6 +8060,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1,
@@ -7479,6 +8110,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadToll2": {
@@ -7520,6 +8154,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadTransitionEsplanadeAir": {
@@ -7559,6 +8196,9 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0
         ]
       },
       "Variants": 1
@@ -7620,6 +8260,13 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -7659,6 +8306,10 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0
       ]
     },
     "BayRoadTurbo": {
@@ -7700,6 +8351,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadTurbo2": {
@@ -7741,6 +8395,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadTurboRoulette": {
@@ -7782,6 +8439,9 @@
           ],
           "Dir": 2
         }
+      ],
+      "AcceptPylons": [
+        0
       ]
     },
     "BayRoadYShaped": {
@@ -7857,6 +8517,14 @@
           ],
           "Dir": 0
         }
+      ],
+      "AcceptPylons": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
     "BaySea": {
@@ -7956,6 +8624,13 @@
         ],
         "SubVariants": [
           6
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Skin": {},
@@ -8008,6 +8683,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8059,6 +8739,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8125,6 +8810,14 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8186,6 +8879,13 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8242,6 +8942,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8318,6 +9024,16 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8374,6 +9090,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8450,6 +9172,16 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8566,6 +9298,24 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
         ]
       },
       "Variants": 1
@@ -8612,6 +9362,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Waypoint": "Checkpoint",
@@ -8687,6 +9441,10 @@
             ],
             "Dir": 3
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Road": {},
@@ -8714,6 +9472,10 @@
         ],
         "SubVariants": [
           1
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8770,6 +9532,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8826,6 +9594,12 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8877,6 +9651,11 @@
             ],
             "Dir": 0
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8923,6 +9702,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
@@ -8969,6 +9752,10 @@
             ],
             "Dir": 2
           }
+        ],
+        "AcceptPylons": [
+          0,
+          0
         ]
       },
       "Variants": 1
