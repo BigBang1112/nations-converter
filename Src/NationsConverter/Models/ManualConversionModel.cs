@@ -12,6 +12,7 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public ManualConversionModifierModel? Ground { get; set; }
     public ManualConversionModifierModel? Air { get; set; }
     public int? ZoneHeight { get; set; }
+    public string? Pylon { get; set; }
     public WaypointType? Waypoint { get; set; }
     public bool? Modifiable { get; set; }
     public HashSet<Int2>? NotModifiable { get; set; }

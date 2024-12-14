@@ -6,10 +6,32 @@ namespace NationsConverter.Stages;
 
 internal sealed class PylonStage : BlockStageBase
 {
+    private record PylonDefinition(string PylonName, ManualConversionModel Pylon, int Y);
+    private readonly record struct PylonLimit(int Height, int PylonMask);
+    private readonly record struct PylonPlacement(int Height, int Y);
+
+    private readonly CGameCtnChallenge mapIn;
     private readonly CustomContentManager customContentManager;
 
     private readonly int baseHeight;
-    private readonly Dictionary<(Int3, int), int> pylons = [];
+
+    /// <summary>
+    /// Int3 is with Y = 0
+    /// </summary>
+    private readonly Dictionary<Int3, PylonDefinition> groundPositionsWithPylons = [];
+    /// <summary>
+    /// Int3 is with Y = 0
+    /// </summary>
+    private readonly HashSet<Int3> groundPositionsWithoutPylons = [];
+    /// <summary>
+    /// Int3 is with Y = 0
+    /// </summary>
+    private readonly Dictionary<Int3, PylonLimit> disallowedPylonPlacements = [];
+    /// <summary>
+    /// Int3 is with Y = 0
+    /// </summary>
+    private readonly Dictionary<(Int3 Coord, int PylonIndex), PylonPlacement> pylonPlacementHeights = [];
+
     private readonly HashSet<Int3> placedPylons = [];
 
     public PylonStage(
@@ -18,6 +40,7 @@ internal sealed class PylonStage : BlockStageBase
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager) : base(mapIn, mapOut, conversionSet)
     {
+        this.mapIn = mapIn;
         this.customContentManager = customContentManager;
 
         baseHeight = (conversionSet.Decorations
@@ -26,28 +49,30 @@ internal sealed class PylonStage : BlockStageBase
 
     public override void Convert()
     {
-        base.Convert();
-
-        if (string.IsNullOrWhiteSpace(ConversionSet.Pylon))
+        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn))
         {
-            return;
+            PopulateGroundPositionsWithAndWithoutPylons(block, conversion);
+            PopulateDisallowedPylonPlacements(block, conversion);
         }
 
-        var blockName = ConversionSet.Pylon;
-        var conversion = ConversionSet.Blocks[blockName];
+        base.Convert();
 
-        var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
+        /*var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
             ? blockName
-            : Path.Combine(conversion.PageName, blockName);
+            : Path.Combine(conversion.PageName, blockName);*/
 
         var pillarOffset = ConversionSet.PillarOffset;
 
-        foreach (var ((coord, pylonIndex), height) in pylons)
+        foreach (var ((coordY0, pylonIndex), placement) in pylonPlacementHeights)
         {
-            var itemPath = Path.Combine(dirPath, $"Ground_{height - 1}_0.Item.Gbx");
+            var pylonDefinition = GetPylonDefinitionOrDefault(coordY0);
+            var pylonConversion = pylonDefinition.Pylon;
+            var dirPath = string.IsNullOrWhiteSpace(pylonConversion.PageName)
+                ? pylonDefinition.PylonName
+                : Path.Combine(pylonConversion.PageName, pylonDefinition.PylonName);
+            var itemPath = Path.Combine(dirPath, $"Ground_{placement.Height - 1}_0.Item.Gbx");
 
-            // baseHeight should be adjusted to actual height on the ground
-            var pos = ((coord.X, baseHeight, coord.Z) + CenterOffset) * BlockSize + (BlockSize.X / 2, 0, BlockSize.Z / 2);
+            var pos = ((coordY0.X, pylonDefinition.Y, coordY0.Z) + CenterOffset) * BlockSize + (BlockSize.X / 2, 0, BlockSize.Z / 2);
 
             var dir = pylonIndex / 2;
             var itemDir = dir % 2;
@@ -76,6 +101,55 @@ internal sealed class PylonStage : BlockStageBase
         }
     }
 
+    private void PopulateGroundPositionsWithAndWithoutPylons(CGameCtnBlock block, ManualConversionModel conversion)
+    {
+        if (conversion.Pylon is not null)
+        {
+            var pylonConversion = ConversionSet.Blocks[conversion.Pylon];
+            groundPositionsWithPylons[block.Coord with { Y = 0 }] = new PylonDefinition(conversion.Pylon, pylonConversion, block.Coord.Y + 1);
+            return;
+        }
+
+        if (conversion.ZoneHeight.HasValue)
+        {
+            groundPositionsWithoutPylons.Add(block.Coord with { Y = 0 });
+        }
+    }
+
+    private void PopulateDisallowedPylonPlacements(CGameCtnBlock block, ManualConversionModel conversion)
+    {
+        if (conversion.ZoneHeight.HasValue)
+        {
+            return;
+        }
+
+        var acceptPylons = conversion.GetPropertyDefault(block, x => x.AcceptPylons);
+
+        if (acceptPylons is null or { Length: 0 })
+        {
+            return;
+        }
+
+        var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true) - (1, 1, 1);
+        var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
+
+        for (var unitIndex = 0; unitIndex < units.Length; unitIndex++)
+        {
+            var offset = units[unitIndex];
+            var alignedOffset = block.Direction switch
+            {
+                Direction.East => (-offset.Z + blockCoordSize.Z, offset.Y, offset.X),
+                Direction.South => (-offset.X + blockCoordSize.X, offset.Y, -offset.Z + blockCoordSize.Z),
+                Direction.West => (offset.Z, offset.Y, -offset.X + blockCoordSize.X),
+                _ => offset
+            };
+
+            var coord = block.Coord + alignedOffset;
+
+            disallowedPylonPlacements[block.Coord with { Y = 0 }] = new PylonLimit(block.Coord.Y, acceptPylons[unitIndex]);
+        }
+    }
+
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
         var placePylons = conversion.GetPropertyDefault(block, x => x.PlacePylons);
@@ -98,7 +172,7 @@ internal sealed class PylonStage : BlockStageBase
                 _ => throw new Exception("Invalid pylon variant")
             };
 
-            AddPylons(block.Coord, block.Direction, pylon);
+            TryAddPylons(block.Coord, block.Direction, pylon);
 
             return;
         }
@@ -106,7 +180,7 @@ internal sealed class PylonStage : BlockStageBase
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true) - (1, 1, 1);
         var units = conversion.GetProperty(block, x => x.Units, fallback: true) ?? [(0, 0, 0)];
 
-        for (int unitIndex = 0; unitIndex < units.Length; unitIndex++)
+        for (var unitIndex = 0; unitIndex < units.Length; unitIndex++)
         {
             var offset = units[unitIndex];
             var alignedOffset = block.Direction switch
@@ -121,40 +195,74 @@ internal sealed class PylonStage : BlockStageBase
 
             var pylon = placePylons[unitIndex];
 
-            AddPylons(coord, block.Direction, pylon);
+            TryAddPylons(coord, block.Direction, pylon);
         }
     }
 
-    private void AddPylons(Int3 coord, Direction direction, int pylon)
+    private void TryAddPylons(Int3 coord, Direction direction, int pylonMask)
     {
+        var coordY0 = coord with { Y = 0 };
+
+        if (groundPositionsWithoutPylons.Contains(coordY0))
+        {
+            return;
+        }
+
+        if (disallowedPylonPlacements.TryGetValue(coordY0, out var pylonLimit))
+        {
+            // consider height of the block
+            if ((pylonLimit.PylonMask & pylonMask) != pylonMask)
+            {
+                return;
+            }
+        }
+
+        var pylonDefinition = GetPylonDefinitionOrDefault(coordY0);
+
         for (int pylonIndex = 0; pylonIndex < 8; pylonIndex++)
         {
-            if ((pylon >> pylonIndex & 1) == 0)
+            if ((pylonMask >> pylonIndex & 1) == 0)
             {
                 continue;
             }
 
             var adjustedPylonIndex = (pylonIndex + (int)direction * 2) % 8;
-            var key = (coord with { Y = 0 }, adjustedPylonIndex);
+            var key = (coordY0, adjustedPylonIndex);
 
-            // baseHeight should be adjusted to actual height on the ground
-            var newHeight = coord.Y - baseHeight;
+            var newHeight = coord.Y - pylonDefinition.Y;
 
             if (newHeight <= 0)
             {
                 continue;
             }
 
-            if (!pylons.TryGetValue(key, out var height))
+            if (!pylonPlacementHeights.TryGetValue(key, out var placement))
             {
-                pylons[key] = newHeight;
+                pylonPlacementHeights[key] = new PylonPlacement(newHeight, 0);
                 continue;
             }
 
-            if (newHeight > height)
+            if (newHeight > placement.Height)
             {
-                pylons[key] = newHeight;
+                pylonPlacementHeights[key] = new PylonPlacement(newHeight, 0);
             }
         }
+    }
+
+    private PylonDefinition GetPylonDefinitionOrDefault(Int3 coordY0)
+    {
+        if (groundPositionsWithPylons.TryGetValue(coordY0, out var pylonDefinition))
+        {
+            return pylonDefinition;
+        }
+
+        if (ConversionSet.DefaultZoneBlock is null)
+        {
+            throw new Exception("Default zone block not set");
+        }
+
+        var pylonName = ConversionSet.Blocks[ConversionSet.DefaultZoneBlock].Pylon ?? throw new Exception("Default zone block does not have pylon");
+        var pylonConversion = ConversionSet.Blocks[pylonName];
+        return new PylonDefinition(pylonName, pylonConversion, baseHeight);
     }
 }

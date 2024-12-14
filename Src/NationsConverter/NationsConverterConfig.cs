@@ -8,10 +8,10 @@ public class NationsConverterConfig : Config
     public string? SubCategory { get; set; }
     public string? Seed { get; set; }
     public bool IncludeMediaTracker { get; set; } = true;
-    public bool IncludeDecoration { get; set; }
+    public bool IncludeDecoration { get; set; } = true;
     public bool UseNewWood { get; set; }
     public string[]? UserDataPackPriority { get; set; }
-    public bool CopyItems { get; set; } = true;
+    public bool CopyItems { get; set; }
     public bool UniqueEmbeddedFolder { get; set; } = true;
     public string? UserDataFolder { get; set; }
     public string? HttpHost { get; set; } = "nc.gbx.tools";

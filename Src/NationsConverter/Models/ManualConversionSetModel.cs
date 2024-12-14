@@ -22,6 +22,7 @@ public sealed class ManualConversionSetModel
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
     public HashSet<string>? TerrainModifiers { get; set; }
     public float WaterHeight { get; set; }
+    [Obsolete("Pylon is now taken from zone blocks")]
     public string? Pylon { get; set; }
     public Dictionary<string, ManualConversionModel> Blocks { get; set; } = [];
     public int PillarOffset { get; set; }
@@ -67,6 +68,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Ground.SpawnPos = conversion.Ground.SpawnPos;
                 manualConversion.Ground.WaterUnits = conversion.Ground.WaterUnits;
                 manualConversion.Ground.PlacePylons = conversion.Ground.PlacePylons;
+                manualConversion.Ground.AcceptPylons = conversion.Ground.AcceptPylons;
                 manualConversion.Ground.TerrainModifierUnits = conversion.Ground.TerrainModifierUnits;
             }
 
@@ -81,6 +83,7 @@ public sealed class ManualConversionSetModel
                 manualConversion.Air.SpawnPos = conversion.Air.SpawnPos;
                 manualConversion.Air.WaterUnits = conversion.Air.WaterUnits;
                 manualConversion.Air.PlacePylons = conversion.Air.PlacePylons;
+                manualConversion.Air.AcceptPylons = conversion.Air.AcceptPylons;
                 manualConversion.Air.TerrainModifierUnits = conversion.Air.TerrainModifierUnits;
             }
 
@@ -91,6 +94,7 @@ public sealed class ManualConversionSetModel
             manualConversion.Clips = conversion.Clips;
             manualConversion.SpawnPos = conversion.SpawnPos;
             manualConversion.ZoneHeight = conversion.ZoneHeight;
+            manualConversion.Pylon = conversion.Pylon;
             manualConversion.Waypoint = conversion.Waypoint;
             manualConversion.Modifiable ??= conversion.Modifiable;
             manualConversion.NotModifiable ??= conversion.NotModifiable;
@@ -98,6 +102,7 @@ public sealed class ManualConversionSetModel
             manualConversion.Road = conversion.Road;
             manualConversion.Skin = conversion.Skin;
             manualConversion.PlacePylons = conversion.PlacePylons;
+            manualConversion.AcceptPylons = conversion.AcceptPylons;
             manualConversion.TerrainModifierUnits = conversion.TerrainModifierUnits;
         }
 
