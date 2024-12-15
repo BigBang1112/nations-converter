@@ -1,3 +1,1855 @@
 BlockTerrainModifiers:
  AlpineTundra: Tundra
 PillarOffset: 14
+Blocks:
+  Hills:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 21.1038
+              OffsetY: 11.8262
+              OffsetZ: 19.5475
+            - Name: FirSnowMedium
+              OffsetX: 11.2095
+              OffsetY: 16.824
+              OffsetZ: 11.7455
+            - Name: FirSnowMedium
+              OffsetX: 26.2942
+              OffsetY: 15.7218
+              OffsetZ: 7.6433
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.525
+              OffsetY: 1.0296
+              OffsetZ: 27.4502
+            - Name: FirSnowTall
+              OffsetX: 25.3891
+              OffsetY: 11.6007
+              OffsetZ: 15.9671
+            - Name: FirSnowMedium
+              OffsetX: 4.5445
+              OffsetY: 16.4447
+              OffsetZ: 16.4019
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 12.5642
+              OffsetY: 14.6053
+              OffsetZ: 13.4903
+              RotX: -180
+      1:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 21.1585
+              OffsetY: 8.9861
+              OffsetZ: 20.739
+            - Name: FirSnowTall
+              OffsetX: 3.615
+              OffsetY: 0.2065
+              OffsetZ: 27.7504
+            - Name: FirSnowTall
+              OffsetX: 18.41
+              OffsetY: 14.4252
+              OffsetZ: 12.0218
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 5.5131
+              OffsetY: 1.0625
+              OffsetZ: 27.4451
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 15.4907
+              OffsetY: 11.9427
+              OffsetZ: 16.7514
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 6.6086
+              OffsetY: 11.662
+              OffsetZ: 15.8223
+              RotX: -180
+            - Name: FirSnowMedium
+              OffsetX: 16.2535
+              OffsetY: 16.2841
+              OffsetZ: 5.8053
+              RotX: 90
+            - Name: FirSnowMedium
+              OffsetX: 27.0786
+              OffsetY: 8.2629
+              OffsetZ: 18.155
+              RotX: 90
+      2:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowMedium
+              OffsetX: 24.9665
+              OffsetY: 1.5729
+              OffsetZ: 28.3372
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 24.5765
+              OffsetY: 6.9319
+              OffsetZ: 20.8348
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 11.3024
+              OffsetY: 14.7959
+              OffsetZ: 23.082
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 12.2792
+              OffsetY: 9.3258
+              OffsetZ: 9.3845
+            - Name: FirSnowTall
+              OffsetX: 22.0579
+              OffsetY: 15.2645
+              OffsetZ: 8.1897
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 25.5254
+              OffsetY: 2.1709
+              OffsetZ: 25.1818
+            - Name: FirSnowTall
+              OffsetX: 5.2142
+              OffsetY: 1.2236
+              OffsetZ: 5.5402
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 16.1266
+              OffsetY: 11.6281
+              OffsetZ: 6.5977
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 17.0439
+              OffsetY: 12.4174
+              OffsetZ: 16.4619
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 11.0215
+              OffsetY: 14.922
+              OffsetZ: 22.9441
+      3:
+        Items:
+        - Name: FirSnowMedium
+          OffsetX: 3.6023
+          OffsetY: 0.1971
+          OffsetZ: 27.7578
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 27.5088
+          OffsetY: 12.2822
+          OffsetZ: 14.0035
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 11.3915
+          OffsetY: 9.2883
+          OffsetZ: 20.5475
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 20.9003
+          OffsetY: 8.2383
+          OffsetZ: 21.7555
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 12.2234
+          OffsetY: 9.686
+          OffsetZ: 10.2335
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 5.6333
+          OffsetY: 2.2198
+          OffsetZ: 7.0798
+          RotX: 90
+      4:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 21.4468
+          OffsetY: 7.7517
+          OffsetZ: 21.7031
+        - Name: FirSnowTall
+          OffsetX: 4.9261
+          OffsetY: 0.5848
+          OffsetZ: 28.1756
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 26.8542
+          OffsetY: 9.2165
+          OffsetZ: 14.6954
+          RotX: 90
+        - Name: FirSnowTall
+          OffsetX: 14.3921
+          OffsetY: 12.1105
+          OffsetZ: 16.1855
+        - Name: FirSnowTall
+          OffsetX: 5.0941
+          OffsetY: 2.332
+          OffsetZ: 7.7944
+          RotX: -90
+        - Name: FirSnowMedium
+          OffsetX: 25.4019
+          OffsetY: 1.9086
+          OffsetZ: 5.149
+          RotX: -180
+        - Name: FirSnowMedium
+          OffsetX: 12.6456
+          OffsetY: 6.6738
+          OffsetZ: 27.2764
+          RotX: 90
+      5:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 11.1906
+              OffsetY: 14.958
+              OffsetZ: 9.0007
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 20.3114
+              OffsetY: 10.4632
+              OffsetZ: 14.3973
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 28.5999
+              OffsetY: 1.295
+              OffsetZ: 24.6481
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 16.4226
+              OffsetY: 0.4705
+              OffsetZ: 27.5125
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 5.0314
+              OffsetY: 3.9696
+              OffsetZ: 21.175
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 18.1639
+              OffsetY: 1.6788
+              OffsetZ: 24.4426
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 11.2032
+              OffsetY: 10.309
+              OffsetZ: 15.3698
+              RotX: 90
+          2:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 10.4416
+              OffsetY: 0.7334
+              OffsetZ: 26.9094
+            - Name: FirSnowTall
+              OffsetX: 4.6953
+              OffsetY: 11.4618
+              OffsetZ: 15.1072
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 19.9331
+              OffsetY: 15.8777
+              OffsetZ: 7.7252
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 27.9353
+              OffsetY: 13.9127
+              OffsetZ: 10.5892
+              RotX: 90
+          3:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.3157
+              OffsetY: 2.0091
+              OffsetZ: 22.822
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 11.5753
+              OffsetY: 9.3637
+              OffsetZ: 15.6629
+            - Name: FirSnowTall
+              OffsetX: 22.2568
+              OffsetY: 13.7291
+              OffsetZ: 8.1219
+              RotX: -90
+      6:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 9.3588
+          OffsetY: 1.0718
+          OffsetZ: 3.8692
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 9.2649
+          OffsetY: 0.0722
+          OffsetZ: 20.3474
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 20.3966
+          OffsetY: 1.0779
+          OffsetZ: 18.3859
+          RotX: 90
+      7:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 6.9866
+          OffsetY: 0.2134
+          OffsetZ: 24.1101
+        - Name: FirSnowTall
+          OffsetX: 13.4773
+          OffsetY: 0.6487
+          OffsetZ: 17.1839
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 27.035
+          OffsetY: 4.4577
+          OffsetZ: 14.6939
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 11.0125
+          OffsetY: 10.295
+          OffsetZ: 4.8341
+          RotX: 90
+      8:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 17.1929
+          OffsetY: 2.9146
+          OffsetZ: 9.1961
+        - Name: FirSnowTall
+          OffsetX: 21.4167
+          OffsetY: 0.0361
+          OffsetZ: 21.6597
+          RotX: -90
+      9:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 14.1825
+              OffsetY: 0.9479
+              OffsetZ: 19.1221
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 10.1045
+              OffsetY: 2.1263
+              OffsetZ: 5.8575
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 23.6427
+              OffsetY: 2.7346
+              OffsetZ: 19.4135
+            - Name: FirSnowTall
+              OffsetX: 24.4801
+              OffsetY: 14.6124
+              OffsetZ: 6.6295
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 25.2004
+              OffsetY: 1.6671
+              OffsetZ: 20.8975
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 12.4456
+              OffsetY: 1.8575
+              OffsetZ: 9.4595
+              RotX: 90
+          2:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 27.7921
+              OffsetZ: 14.9007
+              RotX: -90
+            - Name: SpringTreeTall
+              OffsetX: 26.4597
+              OffsetZ: 13.2672
+              RotX: -90
+            - Name: SpringTreeBig
+              OffsetX: 10.0169
+              OffsetY: 0.0617
+              OffsetZ: 9.9317
+              RotX: -90
+            - Name: SpringTreeBig
+              OffsetX: 7.118
+              OffsetY: 0.1438
+              OffsetZ: 26.0624
+              RotX: -180
+          3:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 14.6254
+              OffsetZ: 27.9876
+            - Name: SpringTreeMedium
+              OffsetX: 20.828
+              OffsetZ: 11.5875
+      10:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.8436
+              OffsetY: 1.2961
+              OffsetZ: 23.2327
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 12.6279
+              OffsetY: 1.1146
+              OffsetZ: 12.1395
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 7.4476
+              OffsetY: 0.8095
+              OffsetZ: 4.0762
+            - Name: FirSnowTall
+              OffsetX: 27.2324
+              OffsetY: 4.0296
+              OffsetZ: 5.8431
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 28.4315
+              OffsetY: 0.1517
+              OffsetZ: 28.0111
+            - Name: FirSnowTall
+              OffsetX: 16.111
+              OffsetY: 2.8369
+              OffsetZ: 9.1521
+              RotX: -90
+      11:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 6.5831
+              OffsetY: 0.9244
+              OffsetZ: 25.728
+            - Name: FirSnowTall
+              OffsetX: 24.8987
+              OffsetY: 2.6502
+              OffsetZ: 22.2871
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 24.03
+              OffsetY: 0.2851
+              OffsetZ: 4.7977
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 17.5254
+              OffsetY: 6.2769
+              OffsetZ: 16.3875
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 9.7933
+              OffsetY: 0.8506
+              OffsetZ: 5.2143
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 11.3955
+              OffsetY: 0.7247
+              OffsetZ: 25.712
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 23.4283
+              OffsetY: 0.1245
+              OffsetZ: 4.3389
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 23.2383
+              OffsetY: 5.8397
+              OffsetZ: 16.2179
+              RotX: 90
+          3:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 28.3951
+              OffsetY: 6.8727
+              OffsetZ: 14.008
+            - Name: FirSnowTall
+              OffsetX: 13.6285
+              OffsetY: 0.5834
+              OffsetZ: 26.8945
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 5.5364
+              OffsetY: 4.5105
+              OffsetZ: 20.6378
+              RotX: -180
+      12:
+        SubVariants:
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 17.9375
+              OffsetY: 0.1299
+              OffsetZ: 19.9464
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 24.5967
+              OffsetY: 1.5087
+              OffsetZ: 11.1744
+              RotX: 90
+      13:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 23.6916
+          OffsetY: 1.4024
+          OffsetZ: 10.2033
+        - Name: FirSnowTall
+          OffsetX: 5.5327
+          OffsetY: 0.8632
+          OffsetZ: 14.5276
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 11.2678
+          OffsetY: 1.1754
+          OffsetZ: 24.6344
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 18.2008
+          OffsetY: 6.2462
+          OffsetZ: 19.6771
+          RotX: -180
+  TundraHills:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 21.1038
+              OffsetY: 11.8262
+              OffsetZ: 19.5475
+            - Name: FirSnowMedium
+              OffsetX: 11.2095
+              OffsetY: 16.824
+              OffsetZ: 11.7455
+            - Name: FirSnowMedium
+              OffsetX: 26.2942
+              OffsetY: 15.7218
+              OffsetZ: 7.6433
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.525
+              OffsetY: 1.0296
+              OffsetZ: 27.4502
+            - Name: FirSnowTall
+              OffsetX: 25.3891
+              OffsetY: 11.6007
+              OffsetZ: 15.9671
+            - Name: FirSnowMedium
+              OffsetX: 4.5445
+              OffsetY: 16.4447
+              OffsetZ: 16.4019
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 12.5642
+              OffsetY: 14.6053
+              OffsetZ: 13.4903
+              RotX: -180
+      1:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 21.1585
+              OffsetY: 8.9861
+              OffsetZ: 20.739
+            - Name: FirSnowTall
+              OffsetX: 3.615
+              OffsetY: 0.2065
+              OffsetZ: 27.7504
+            - Name: FirSnowTall
+              OffsetX: 18.41
+              OffsetY: 14.4252
+              OffsetZ: 12.0218
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 5.5131
+              OffsetY: 1.0625
+              OffsetZ: 27.4451
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 15.4907
+              OffsetY: 11.9427
+              OffsetZ: 16.7514
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 6.6086
+              OffsetY: 11.662
+              OffsetZ: 15.8223
+              RotX: -180
+            - Name: FirSnowMedium
+              OffsetX: 16.2535
+              OffsetY: 16.2841
+              OffsetZ: 5.8053
+              RotX: 90
+            - Name: FirSnowMedium
+              OffsetX: 27.0786
+              OffsetY: 8.2629
+              OffsetZ: 18.155
+              RotX: 90
+      2:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowMedium
+              OffsetX: 24.9665
+              OffsetY: 1.5729
+              OffsetZ: 28.3372
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 24.5765
+              OffsetY: 6.9319
+              OffsetZ: 20.8348
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 11.3024
+              OffsetY: 14.7959
+              OffsetZ: 23.082
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 12.2792
+              OffsetY: 9.3258
+              OffsetZ: 9.3845
+            - Name: FirSnowTall
+              OffsetX: 22.0579
+              OffsetY: 15.2645
+              OffsetZ: 8.1897
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 25.5254
+              OffsetY: 2.1709
+              OffsetZ: 25.1818
+            - Name: FirSnowTall
+              OffsetX: 5.2142
+              OffsetY: 1.2236
+              OffsetZ: 5.5402
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 16.1266
+              OffsetY: 11.6281
+              OffsetZ: 6.5977
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 17.0439
+              OffsetY: 12.4174
+              OffsetZ: 16.4619
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 11.0215
+              OffsetY: 14.922
+              OffsetZ: 22.9441
+      3:
+        Items:
+        - Name: FirSnowMedium
+          OffsetX: 3.6023
+          OffsetY: 0.1971
+          OffsetZ: 27.7578
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 27.5088
+          OffsetY: 12.2822
+          OffsetZ: 14.0035
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 11.3915
+          OffsetY: 9.2883
+          OffsetZ: 20.5475
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 20.9003
+          OffsetY: 8.2383
+          OffsetZ: 21.7555
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 12.2234
+          OffsetY: 9.686
+          OffsetZ: 10.2335
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 5.6333
+          OffsetY: 2.2198
+          OffsetZ: 7.0798
+          RotX: 90
+      4:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 21.4468
+          OffsetY: 7.7517
+          OffsetZ: 21.7031
+        - Name: FirSnowTall
+          OffsetX: 4.9261
+          OffsetY: 0.5848
+          OffsetZ: 28.1756
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 26.8542
+          OffsetY: 9.2165
+          OffsetZ: 14.6954
+          RotX: 90
+        - Name: FirSnowTall
+          OffsetX: 14.3921
+          OffsetY: 12.1105
+          OffsetZ: 16.1855
+        - Name: FirSnowTall
+          OffsetX: 5.0941
+          OffsetY: 2.332
+          OffsetZ: 7.7944
+          RotX: -90
+        - Name: FirSnowMedium
+          OffsetX: 25.4019
+          OffsetY: 1.9086
+          OffsetZ: 5.149
+          RotX: -180
+        - Name: FirSnowMedium
+          OffsetX: 12.6456
+          OffsetY: 6.6738
+          OffsetZ: 27.2764
+          RotX: 90
+      5:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 11.1906
+              OffsetY: 14.958
+              OffsetZ: 9.0007
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 20.3114
+              OffsetY: 10.4632
+              OffsetZ: 14.3973
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 28.5999
+              OffsetY: 1.295
+              OffsetZ: 24.6481
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 16.4226
+              OffsetY: 0.4705
+              OffsetZ: 27.5125
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 5.0314
+              OffsetY: 3.9696
+              OffsetZ: 21.175
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 18.1639
+              OffsetY: 1.6788
+              OffsetZ: 24.4426
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 11.2032
+              OffsetY: 10.309
+              OffsetZ: 15.3698
+              RotX: 90
+          2:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 10.4416
+              OffsetY: 0.7334
+              OffsetZ: 26.9094
+            - Name: FirSnowTall
+              OffsetX: 4.6953
+              OffsetY: 11.4618
+              OffsetZ: 15.1072
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 19.9331
+              OffsetY: 15.8777
+              OffsetZ: 7.7252
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 27.9353
+              OffsetY: 13.9127
+              OffsetZ: 10.5892
+              RotX: 90
+          3:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.3157
+              OffsetY: 2.0091
+              OffsetZ: 22.822
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 11.5753
+              OffsetY: 9.3637
+              OffsetZ: 15.6629
+            - Name: FirSnowTall
+              OffsetX: 22.2568
+              OffsetY: 13.7291
+              OffsetZ: 8.1219
+              RotX: -90
+      6:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 9.3588
+          OffsetY: 1.0718
+          OffsetZ: 3.8692
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 9.2649
+          OffsetY: 0.0722
+          OffsetZ: 20.3474
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 20.3966
+          OffsetY: 1.0779
+          OffsetZ: 18.3859
+          RotX: 90
+      7:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 6.9866
+          OffsetY: 0.2134
+          OffsetZ: 24.1101
+        - Name: FirSnowTall
+          OffsetX: 13.4773
+          OffsetY: 0.6487
+          OffsetZ: 17.1839
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 27.035
+          OffsetY: 4.4577
+          OffsetZ: 14.6939
+          RotX: -180
+        - Name: FirSnowTall
+          OffsetX: 11.0125
+          OffsetY: 10.295
+          OffsetZ: 4.8341
+          RotX: 90
+      8:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 17.1929
+          OffsetY: 2.9146
+          OffsetZ: 9.1961
+        - Name: FirSnowTall
+          OffsetX: 21.4167
+          OffsetY: 0.0361
+          OffsetZ: 21.6597
+          RotX: -90
+      9:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 14.1825
+              OffsetY: 0.9479
+              OffsetZ: 19.1221
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 10.1045
+              OffsetY: 2.1263
+              OffsetZ: 5.8575
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 23.6427
+              OffsetY: 2.7346
+              OffsetZ: 19.4135
+            - Name: FirSnowTall
+              OffsetX: 24.4801
+              OffsetY: 14.6124
+              OffsetZ: 6.6295
+              RotX: -90
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 25.2004
+              OffsetY: 1.6671
+              OffsetZ: 20.8975
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 12.4456
+              OffsetY: 1.8575
+              OffsetZ: 9.4595
+              RotX: 90
+          2:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 27.7921
+              OffsetZ: 14.9007
+              RotX: -90
+            - Name: SpringTreeTall
+              OffsetX: 26.4597
+              OffsetZ: 13.2672
+              RotX: -90
+            - Name: SpringTreeBig
+              OffsetX: 10.0169
+              OffsetY: 0.0617
+              OffsetZ: 9.9317
+              RotX: -90
+            - Name: SpringTreeBig
+              OffsetX: 7.118
+              OffsetY: 0.1438
+              OffsetZ: 26.0624
+              RotX: -180
+          3:
+            Items:
+            - Name: SpringTreeTall
+              OffsetX: 14.6254
+              OffsetZ: 27.9876
+            - Name: SpringTreeMedium
+              OffsetX: 20.828
+              OffsetZ: 11.5875
+      10:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 26.8436
+              OffsetY: 1.2961
+              OffsetZ: 23.2327
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 12.6279
+              OffsetY: 1.1146
+              OffsetZ: 12.1395
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 7.4476
+              OffsetY: 0.8095
+              OffsetZ: 4.0762
+            - Name: FirSnowTall
+              OffsetX: 27.2324
+              OffsetY: 4.0296
+              OffsetZ: 5.8431
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 28.4315
+              OffsetY: 0.1517
+              OffsetZ: 28.0111
+            - Name: FirSnowTall
+              OffsetX: 16.111
+              OffsetY: 2.8369
+              OffsetZ: 9.1521
+              RotX: -90
+      11:
+        SubVariants:
+          0:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 6.5831
+              OffsetY: 0.9244
+              OffsetZ: 25.728
+            - Name: FirSnowTall
+              OffsetX: 24.8987
+              OffsetY: 2.6502
+              OffsetZ: 22.2871
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 24.03
+              OffsetY: 0.2851
+              OffsetZ: 4.7977
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 17.5254
+              OffsetY: 6.2769
+              OffsetZ: 16.3875
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 9.7933
+              OffsetY: 0.8506
+              OffsetZ: 5.2143
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 11.3955
+              OffsetY: 0.7247
+              OffsetZ: 25.712
+              RotX: -90
+            - Name: FirSnowTall
+              OffsetX: 23.4283
+              OffsetY: 0.1245
+              OffsetZ: 4.3389
+              RotX: -180
+            - Name: FirSnowTall
+              OffsetX: 23.2383
+              OffsetY: 5.8397
+              OffsetZ: 16.2179
+              RotX: 90
+          3:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 28.3951
+              OffsetY: 6.8727
+              OffsetZ: 14.008
+            - Name: FirSnowTall
+              OffsetX: 13.6285
+              OffsetY: 0.5834
+              OffsetZ: 26.8945
+              RotX: -90
+            - Name: FirSnowMedium
+              OffsetX: 5.5364
+              OffsetY: 4.5105
+              OffsetZ: 20.6378
+              RotX: -180
+      12:
+        SubVariants:
+          1:
+            Items:
+            - Name: FirSnowTall
+              OffsetX: 17.9375
+              OffsetY: 0.1299
+              OffsetZ: 19.9464
+              RotX: 90
+            - Name: FirSnowTall
+              OffsetX: 24.5967
+              OffsetY: 1.5087
+              OffsetZ: 11.1744
+              RotX: 90
+      13:
+        Items:
+        - Name: FirSnowTall
+          OffsetX: 23.6916
+          OffsetY: 1.4024
+          OffsetZ: 10.2033
+        - Name: FirSnowTall
+          OffsetX: 5.5327
+          OffsetY: 0.8632
+          OffsetZ: 14.5276
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 11.2678
+          OffsetY: 1.1754
+          OffsetZ: 24.6344
+          RotX: -90
+        - Name: FirSnowTall
+          OffsetX: 18.2008
+          OffsetY: 6.2462
+          OffsetZ: 19.6771
+          RotX: -180
+  AlpineTrees:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 21.4863
+      OffsetY: -0.0046
+      OffsetZ: 25.0547
+    - Name: FirSnowTall
+      OffsetX: 21.2233
+      OffsetY: -0.0015
+      OffsetZ: 7.2145
+    - Name: FirSnowTall
+      OffsetX: 8.8937
+      OffsetY: -0.0019
+      OffsetZ: 8.5222
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 8.5557
+      OffsetY: 0.2943
+      OffsetZ: 20.8622
+      RotX: -180
+  AlpineTrees2:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 8.0771
+      OffsetZ: 5.3043
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 22.2554
+      OffsetZ: 8.5309
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 22.1531
+      OffsetZ: 25.7423
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 8.9873
+      OffsetY: 0.2955
+      OffsetZ: 19.1256
+  AlpineTrees3:
+    Items:
+    - Name: FirSnowMedium
+      OffsetX: 26.4227
+      OffsetZ: 5.8427
+      RotX: -90
+    - Name: FirSnowMedium
+      OffsetX: 7.4288
+      OffsetZ: 8.7892
+      RotX: -180
+    - Name: FirSnowMedium
+      OffsetX: 18.9332
+      OffsetZ: 13.7606
+      RotX: 90
+    - Name: FirSnowMedium
+      OffsetX: 22.1921
+      OffsetZ: 25.735
+    - Name: FirSnowMedium
+      OffsetX: 7.7418
+      OffsetY: 0.1434
+      OffsetZ: 21.9503
+      RotX: -90
+  AlpineTundraHillsTransitionSlopeDiag2x3Mirror:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 59.9154
+      OffsetY: 13.7313
+      OffsetZ: 61.0037
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 49.5283
+      OffsetY: 9.8312
+      OffsetZ: 37.1033
+    - Name: FirSnowTall
+      OffsetX: 41.1039
+      OffsetY: 1.8077
+      OffsetZ: 32.2888
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 34.6873
+      OffsetY: 0.0961
+      OffsetZ: 9.5042
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 51.9857
+      OffsetY: 11.8208
+      OffsetZ: 5.5776
+    - Name: FirSnowMedium
+      OffsetX: 60.1724
+      OffsetY: 16.1665
+      OffsetZ: 10.5378
+      RotX: -180
+    - Name: FirSnowMedium
+      OffsetX: 55.6226
+      OffsetY: 15.1491
+      OffsetZ: 22.3209
+      RotX: 90
+    - Name: FirSnowMedium
+      OffsetX: 26.8503
+      OffsetY: 13.7148
+      OffsetZ: 75.1859
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 23.9967
+      OffsetY: 11.4462
+      OffsetZ: 66.2717
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 5.6398
+      OffsetY: 0.1346
+      OffsetZ: 50.4595
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 5.3365
+      OffsetY: 0.8329
+      OffsetZ: 79.7159
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 18.1435
+      OffsetY: 10.9764
+      OffsetZ: 91.3832
+  AlpineTundraHillsTransitionSlopeDiag2x3:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 5.7538
+      OffsetY: 0.144
+      OffsetZ: 45.5651
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 5.2968
+      OffsetY: 0.8708
+      OffsetZ: 16.1714
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 35.478
+      OffsetY: 0.0102
+      OffsetZ: 87.1299
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 17.5701
+      OffsetY: 10.3824
+      OffsetZ: 4.4043
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 60.3577
+      OffsetY: 14.4219
+      OffsetZ: 34.4115
+    - Name: FirSnowMedium
+      OffsetX: 26.866
+      OffsetY: 13.6419
+      OffsetZ: 20.8331
+      RotX: -90
+    - Name: FirSnowMedium
+      OffsetX: 24.0544
+      OffsetY: 11.7702
+      OffsetZ: 28.6787
+      RotX: -180
+    - Name: FirSnowMedium
+      OffsetX: 54.6916
+      OffsetY: 14.8656
+      OffsetZ: 73.1234
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 51.8994
+      OffsetY: 11.6995
+      OffsetZ: 89.4053
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 41.0841
+      OffsetY: 1.9074
+      OffsetZ: 63.5972
+    - Name: FirSnowTall
+      OffsetX: 49.8213
+      OffsetY: 10.1584
+      OffsetZ: 58.9176
+    - Name: FirSnowMedium
+      OffsetX: 60.3383
+      OffsetY: 16.282
+      OffsetZ: 84.9176
+      RotX: -90
+  AlpineToundraHillsTransitionTunnelEntry:
+    Items:
+    - Name: FirSnowMedium
+      OffsetX: 27.4998
+      OffsetY: 16.4798
+      OffsetZ: 4.2388
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 11.5892
+      OffsetY: 15.0199
+      OffsetZ: 10.9331
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 1.3394
+      OffsetY: 12.9257
+      OffsetZ: 11.1789
+      RotX: -180
+  AlpineToundraHillsTransitionSlope2x1:
+    Item:
+      Name: FirSnowTall
+      OffsetX: 2.2438
+      OffsetY: 7.8522
+      OffsetZ: 48.2043
+  AlpineToundraHillsTransitionRoadwood:
+    Item:
+      Name: FirSnowTall
+      OffsetX: 28.637
+      OffsetY: 7.9257
+      OffsetZ: 29.1882
+      RotX: 90
+  AlpineHillsTransitionTunnelEntry:
+    Items:
+    - Name: FirSnowMedium
+      OffsetX: 27.4998
+      OffsetY: 16.4798
+      OffsetZ: 4.2388
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 11.5892
+      OffsetY: 15.0199
+      OffsetZ: 10.9331
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 1.3394
+      OffsetY: 12.9257
+      OffsetZ: 11.1789
+      RotX: -180
+  AlpineHillsTransitionSlopeDiag2x3Mirror:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 59.9154
+      OffsetY: 13.7313
+      OffsetZ: 61.0037
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 49.5283
+      OffsetY: 9.8312
+      OffsetZ: 37.1033
+    - Name: FirSnowTall
+      OffsetX: 41.1039
+      OffsetY: 1.8077
+      OffsetZ: 32.2888
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 34.6873
+      OffsetY: 0.0961
+      OffsetZ: 9.5042
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 51.9857
+      OffsetY: 11.8208
+      OffsetZ: 5.5776
+    - Name: FirSnowMedium
+      OffsetX: 60.1724
+      OffsetY: 16.1665
+      OffsetZ: 10.5378
+      RotX: -180
+    - Name: FirSnowMedium
+      OffsetX: 55.6226
+      OffsetY: 15.1491
+      OffsetZ: 22.3209
+      RotX: 90
+    - Name: FirSnowMedium
+      OffsetX: 26.8503
+      OffsetY: 13.7148
+      OffsetZ: 75.1859
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 23.9967
+      OffsetY: 11.4462
+      OffsetZ: 66.2717
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 5.6398
+      OffsetY: 0.1346
+      OffsetZ: 50.4595
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 5.3365
+      OffsetY: 0.8329
+      OffsetZ: 79.7159
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 18.1435
+      OffsetY: 10.9764
+      OffsetZ: 91.3832
+  AlpineHillsTransitionSlopeDiag2x3:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 5.7538
+      OffsetY: 0.144
+      OffsetZ: 45.5651
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 5.2968
+      OffsetY: 0.8708
+      OffsetZ: 16.1714
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 35.478
+      OffsetY: 0.0102
+      OffsetZ: 87.1299
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 17.5701
+      OffsetY: 10.3824
+      OffsetZ: 4.4043
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 60.3577
+      OffsetY: 14.4219
+      OffsetZ: 34.4115
+    - Name: FirSnowMedium
+      OffsetX: 26.866
+      OffsetY: 13.6419
+      OffsetZ: 20.8331
+      RotX: -90
+    - Name: FirSnowMedium
+      OffsetX: 24.0544
+      OffsetY: 11.7702
+      OffsetZ: 28.6787
+      RotX: -180
+    - Name: FirSnowMedium
+      OffsetX: 54.6916
+      OffsetY: 14.8656
+      OffsetZ: 73.1234
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 51.8994
+      OffsetY: 11.6995
+      OffsetZ: 89.4053
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 41.0841
+      OffsetY: 1.9074
+      OffsetZ: 63.5972
+    - Name: FirSnowTall
+      OffsetX: 49.8213
+      OffsetY: 10.1584
+      OffsetZ: 58.9176
+    - Name: FirSnowMedium
+      OffsetX: 60.3383
+      OffsetY: 16.282
+      OffsetZ: 84.9176
+      RotX: -90
+  AlpineHillsTransitionSlope2x1:
+    Item:
+      Name: FirSnowTall
+      OffsetX: 2.2438
+      OffsetY: 7.8522
+      OffsetZ: 48.2043
+  AlpineHillsTransitionRoadwood:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 29.0437
+      OffsetY: 12.6557
+      OffsetZ: 11.5875
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 2.3136
+      OffsetY: 1.185
+      OffsetZ: 24.8021
+      RotX: -180
+  AlpineGreatWallTetrisToundraToToundraSlopeBase6Right:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 1.9055
+      OffsetY: 0.8813
+      OffsetZ: 153.8809
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 3.3824
+      OffsetY: 11.7805
+      OffsetZ: 140.0247
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 55.3865
+      OffsetY: 15.978
+      OffsetZ: 121.5538
+    - Name: FirSnowTall
+      OffsetX: 45.3331
+      OffsetY: 15.8172
+      OffsetZ: 110.0183
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 47.7217
+      OffsetY: 15.9876
+      OffsetZ: 95.607
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 58.5862
+      OffsetY: 31.0817
+      OffsetZ: 70.6408
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 60.3057
+      OffsetY: 32.1225
+      OffsetZ: 45.9793
+    - Name: FirSnowTall
+      OffsetX: 6.8137
+      OffsetY: 15.9623
+      OffsetZ: 118.5861
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 6.1439
+      OffsetY: 18.5803
+      OffsetZ: 85.5388
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 19.5559
+      OffsetY: 25.6629
+      OffsetZ: 78.3221
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 20.8167
+      OffsetY: 31.9951
+      OffsetZ: 63.6924
+    - Name: FirSnowTall
+      OffsetX: 14.9808
+      OffsetY: 31.9847
+      OffsetZ: 45.2039
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 28.3765
+      OffsetY: 32.0502
+      OffsetZ: 52.1655
+      RotX: -180
+  AlpineGreatWallTetrisToundraToToundraSlopeBase6Left:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 62.0629
+      OffsetY: 0.6636
+      OffsetZ: 154.5391
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 59.8285
+      OffsetY: 10.9971
+      OffsetZ: 140.8601
+    - Name: FirSnowTall
+      OffsetX: 57.2172
+      OffsetY: 15.9317
+      OffsetZ: 118.6379
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 57.6966
+      OffsetY: 18.3805
+      OffsetZ: 85.8074
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 44.4516
+      OffsetY: 25.8386
+      OffsetZ: 78.1306
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 43.1812
+      OffsetY: 31.8343
+      OffsetZ: 63.6313
+    - Name: FirSnowTall
+      OffsetX: 35.5944
+      OffsetY: 32.1201
+      OffsetZ: 52.162
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 49.2139
+      OffsetY: 31.9858
+      OffsetZ: 45.2206
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 3.5384
+      OffsetY: 31.9873
+      OffsetZ: 45.9492
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 5.8417
+      OffsetY: 31.2643
+      OffsetZ: 70.06
+    - Name: FirSnowTall
+      OffsetX: 16.3002
+      OffsetY: 16.1331
+      OffsetZ: 95.6461
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 18.7038
+      OffsetY: 15.75
+      OffsetZ: 110.2821
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 9.1041
+      OffsetY: 15.9048
+      OffsetZ: 121.8956
+      RotX: 90
+  AlpineGreatWallTetrisToundraToToundraSlopeBase4Right:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 53.7746
+      OffsetY: 8.1485
+      OffsetZ: 79.9742
+    - Name: FirSnowTall
+      OffsetX: 42.2986
+      OffsetY: 13.5649
+      OffsetZ: 74.0655
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 49.5971
+      OffsetY: 15.9089
+      OffsetZ: 61.5197
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 60.1544
+      OffsetY: 15.9262
+      OffsetZ: 39.5197
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 61.9618
+      OffsetY: 16.2722
+      OffsetZ: 30.7771
+    - Name: FirSnowTall
+      OffsetX: 28.7657
+      OffsetY: 15.8913
+      OffsetZ: 39.1054
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 15.7603
+      OffsetY: 15.9708
+      OffsetZ: 41.2904
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 7.7944
+      OffsetY: 15.9197
+      OffsetZ: 49.7279
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 12.8043
+      OffsetY: 16.0409
+      OffsetZ: 67.5411
+    - Name: FirSnowTall
+      OffsetX: 2.9694
+      OffsetY: 5.0552
+      OffsetZ: 83.0646
+  AlpineGreatWallTetrisToundraToToundraSlopeBase4Left:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 61.6883
+      OffsetY: 5.0553
+      OffsetZ: 83.0649
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 8.8873
+      OffsetY: 8.5575
+      OffsetZ: 79.6103
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 21.5744
+      OffsetY: 13.492
+      OffsetZ: 74.1451
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 14.3815
+      OffsetY: 16.0657
+      OffsetZ: 61.6177
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 3.9547
+      OffsetY: 16.1537
+      OffsetZ: 39.4501
+    - Name: FirSnowTall
+      OffsetX: 2.1353
+      OffsetY: 16.3365
+      OffsetZ: 30.6403
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 35.4728
+      OffsetY: 16.1651
+      OffsetZ: 39.1306
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 48.3938
+      OffsetY: 16.0739
+      OffsetZ: 41.3054
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 56.1204
+      OffsetY: 16.1806
+      OffsetZ: 49.6363
+    - Name: FirSnowTall
+      OffsetX: 51.3039
+      OffsetY: 16.2015
+      OffsetZ: 67.4278
+      RotX: -90
+  AlpineGreatWallTetrisSnowToToundraSlopeBase6Right:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 1.9055
+      OffsetY: 0.8813
+      OffsetZ: 153.8809
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 3.3824
+      OffsetY: 11.7805
+      OffsetZ: 140.0247
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 55.3865
+      OffsetY: 15.978
+      OffsetZ: 121.5538
+    - Name: FirSnowTall
+      OffsetX: 45.3331
+      OffsetY: 15.8172
+      OffsetZ: 110.0183
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 47.7217
+      OffsetY: 15.9876
+      OffsetZ: 95.607
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 58.5862
+      OffsetY: 31.0817
+      OffsetZ: 70.6408
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 60.3057
+      OffsetY: 32.1225
+      OffsetZ: 45.9793
+    - Name: FirSnowTall
+      OffsetX: 6.8137
+      OffsetY: 15.9623
+      OffsetZ: 118.5861
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 6.1439
+      OffsetY: 18.5803
+      OffsetZ: 85.5388
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 19.5559
+      OffsetY: 25.6629
+      OffsetZ: 78.3221
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 20.8167
+      OffsetY: 31.9951
+      OffsetZ: 63.6924
+    - Name: FirSnowTall
+      OffsetX: 14.9808
+      OffsetY: 31.9847
+      OffsetZ: 45.2039
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 28.3765
+      OffsetY: 32.0502
+      OffsetZ: 52.1655
+      RotX: -180
+  AlpineGreatWallTetrisSnowToToundraSlopeBase6Left:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 62.0629
+      OffsetY: 0.6636
+      OffsetZ: 154.5391
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 59.8285
+      OffsetY: 10.9971
+      OffsetZ: 140.8601
+    - Name: FirSnowTall
+      OffsetX: 57.2172
+      OffsetY: 15.9317
+      OffsetZ: 118.6379
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 57.6966
+      OffsetY: 18.3805
+      OffsetZ: 85.8074
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 44.4516
+      OffsetY: 25.8386
+      OffsetZ: 78.1306
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 43.1812
+      OffsetY: 31.8343
+      OffsetZ: 63.6313
+    - Name: FirSnowTall
+      OffsetX: 35.5944
+      OffsetY: 32.1201
+      OffsetZ: 52.162
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 49.2139
+      OffsetY: 31.9858
+      OffsetZ: 45.2206
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 3.5384
+      OffsetY: 31.9873
+      OffsetZ: 45.9492
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 5.8417
+      OffsetY: 31.2643
+      OffsetZ: 70.06
+    - Name: FirSnowTall
+      OffsetX: 16.3002
+      OffsetY: 16.1331
+      OffsetZ: 95.6461
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 18.7038
+      OffsetY: 15.75
+      OffsetZ: 110.2821
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 9.1041
+      OffsetY: 15.9048
+      OffsetZ: 121.8956
+      RotX: 90
+  AlpineGreatWallTetrisSnowToToundraSlopeBase4Right:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 53.7746
+      OffsetY: 8.1485
+      OffsetZ: 79.9742
+    - Name: FirSnowTall
+      OffsetX: 42.2986
+      OffsetY: 13.5649
+      OffsetZ: 74.0655
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 49.5971
+      OffsetY: 15.9089
+      OffsetZ: 61.5197
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 60.1544
+      OffsetY: 15.9262
+      OffsetZ: 39.5197
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 61.9618
+      OffsetY: 16.2722
+      OffsetZ: 30.7771
+    - Name: FirSnowTall
+      OffsetX: 28.7657
+      OffsetY: 15.8913
+      OffsetZ: 39.1054
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 15.7603
+      OffsetY: 15.9708
+      OffsetZ: 41.2904
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 7.7944
+      OffsetY: 15.9197
+      OffsetZ: 49.7279
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 12.8043
+      OffsetY: 16.0409
+      OffsetZ: 67.5411
+    - Name: FirSnowTall
+      OffsetX: 2.9694
+      OffsetY: 5.0552
+      OffsetZ: 83.0646
+  AlpineGreatWallTetrisSnowToToundraSlopeBase4Left:
+    Items:
+    - Name: FirSnowTall
+      OffsetX: 61.6883
+      OffsetY: 5.0553
+      OffsetZ: 83.0649
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 8.8873
+      OffsetY: 8.5575
+      OffsetZ: 79.6103
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 21.5744
+      OffsetY: 13.492
+      OffsetZ: 74.1451
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 14.3815
+      OffsetY: 16.0657
+      OffsetZ: 61.6177
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 3.9547
+      OffsetY: 16.1537
+      OffsetZ: 39.4501
+    - Name: FirSnowTall
+      OffsetX: 2.1353
+      OffsetY: 16.3365
+      OffsetZ: 30.6403
+      RotX: -90
+    - Name: FirSnowTall
+      OffsetX: 35.4728
+      OffsetY: 16.1651
+      OffsetZ: 39.1306
+      RotX: -180
+    - Name: FirSnowTall
+      OffsetX: 48.3938
+      OffsetY: 16.0739
+      OffsetZ: 41.3054
+      RotX: 90
+    - Name: FirSnowTall
+      OffsetX: 56.1204
+      OffsetY: 16.1806
+      OffsetZ: 49.6363
+    - Name: FirSnowTall
+      OffsetX: 51.3039
+      OffsetY: 16.2015
+      OffsetZ: 67.4278
+      RotX: -90
