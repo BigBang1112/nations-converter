@@ -95,7 +95,7 @@ table {
     padding: 20px;
 }
 
-    .readable-width div:first-child {
+    .readable-width-container {
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -106,6 +106,22 @@ table {
 .white-mention {
     background-color: white;
     color: #222;
+}
+
+.bright-green-cyan-mention {
+    color: #111;
+    background: rgb(205,255,178);
+    background: linear-gradient(90deg, rgba(205,255,178,1) 0%, rgba(178,230,255,1) 100%);
+}
+
+.green-cyan-mention {
+    background: rgb(78,127,52);
+    background: linear-gradient(90deg, rgba(78,127,52,1) 0%, rgba(51,103,127,1) 100%);
+}
+
+.dark-green-cyan-mention {
+    background: rgb(39,63,26);
+    background: linear-gradient(90deg, rgba(39,63,26,1) 0%, rgba(25,51,63,1) 100%);
 }
 
 .button-shiny {

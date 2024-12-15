@@ -20,12 +20,6 @@ div.showcase {
     gap: 10px;
 }
 
-div.showcase img {
-    width: 60%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-
     div.showcase div.text {
         flex: 1;
     }
