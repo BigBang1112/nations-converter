@@ -80,7 +80,7 @@ internal sealed class MediaTrackerStage
                         {
                             Keys = []
                         };
-                        foreach (var chunk in cameraCustom.Chunks) newCameraCustom.Chunks.Add(chunk);
+                        newCameraCustom.CreateChunk<CGameCtnMediaBlockCameraCustom.Chunk030A2006>();
 
                         newTrack.Blocks.Add(newCameraCustom);
 
@@ -149,7 +149,27 @@ internal sealed class MediaTrackerStage
                     case CGameCtnMediaBlockGhost:
                         // TODO: do wild ghost conversion
                         break;
-                    case CGameCtnMediaBlockCameraGame:
+                    case CGameCtnMediaBlockCameraGame cameraGame:
+                        var newCameraGame = new CGameCtnMediaBlockCameraGame
+                        {
+                            CamFarClipPlane = cameraGame.CamFarClipPlane,
+                            CamNearClipPlane = cameraGame.CamNearClipPlane,
+                            CamFov = cameraGame.CamFov,
+                            CamPitchYawRoll = cameraGame.CamPitchYawRoll,
+                            CamPosition = cameraGame.CamPosition,
+                            ClipEntId = cameraGame.ClipEntId,
+                            GameCam = cameraGame.GameCamOld != 0 ? cameraGame.GameCamOld switch
+                            {
+                                CGameCtnMediaBlockCameraGame.EGameCamOld.Internal => CGameCtnMediaBlockCameraGame.EGameCam.Internal,
+                                CGameCtnMediaBlockCameraGame.EGameCamOld.Close => CGameCtnMediaBlockCameraGame.EGameCam.External_2,
+                                _ => CGameCtnMediaBlockCameraGame.EGameCam.Default,
+                            } : cameraGame.GameCam,
+                            Start = cameraGame.Start,
+                            End = cameraGame.End,
+                        };
+                        newCameraGame.CreateChunk<CGameCtnMediaBlockCameraGame.Chunk03084007>().Version = 2;
+
+                        newTrack.Blocks.Add(newCameraGame);
                         break;
                     default:
                         newTrack.Blocks.Add(block);
@@ -176,7 +196,34 @@ internal sealed class MediaTrackerStage
             var newClip = TransferMediaTracker(clip);
             if (newClip is not null)
             {
-                newClipGroup.Clips.Add(new(newClip, trigger));
+                var coordEnumerable = trigger.Coords?.Select(coord => coord with
+                {
+                    X = coord.X * blockSize.X / 32,
+                    Y = coord.Y * blockSize.Y / 8 + 9,
+                    Z = coord.Z * blockSize.Z / 32,
+                });
+                var coords = new List<Int3>();
+
+                foreach (var coord in coordEnumerable ?? [])
+                {
+                    for (var i = 0; i < blockSize.Y / 8; i++)
+                    {
+                        coords.Add(coord with { Y = coord.Y + i });
+                    }
+                }
+
+                var newTrigger = new CGameCtnMediaClipGroup.Trigger
+                {
+                    Coords = coords,
+                    Condition = trigger.Condition,
+                    ConditionValue = trigger.ConditionValue,
+                    U01 = trigger.U01,
+                    U02 = trigger.U02,
+                    U03 = trigger.U03,
+                    U04 = trigger.U04,
+                };
+
+                newClipGroup.Clips.Add(new(newClip, newTrigger));
             }
         }
 
