@@ -13,7 +13,7 @@
 @if (!Released)
 {
     <div class="web-browser">
-        <Countdown></Countdown>
+        <Countdown OnExpired="CountdownExpired"></Countdown>
     </div>
 }
 else
@@ -283,6 +283,12 @@ else
     public bool Released { get; set; } = false;
 
     public bool WebAppReleased { get; set; }
+
+    private void CountdownExpired()
+    {
+        Released = true;
+        StateHasChanged();
+    }
 
     protected override async Task OnInitializedAsync()
     {

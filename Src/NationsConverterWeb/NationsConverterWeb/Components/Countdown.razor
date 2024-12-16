@@ -1,11 +1,43 @@
 ﻿@implements IDisposable
 
-<div id="demo" style="font-size: 300%;font-weight: bold">@CountdownText</div>
+<div id="demo" style="font-size: 300%;font-weight: bold">
+    @if (Expired)
+    {
+        <span>OUT NOW</span>
+    }
+    else
+    {
+        @if (Days > 0)
+        {
+            <span>@(Days)d </span>
+        }
+
+        @if (Hours > 0 || Days > 0)
+        {
+            <span>@(Hours)h </span>
+        }
+
+        @if (Minutes > 0 || Hours > 0 || Days > 0)
+        {
+            <span>@(Minutes)m </span>
+        }
+
+        <span>@(Seconds)s</span>
+    }
+
+</div>
 
 @code {
     private System.Timers.Timer? _timer;
-    private DateTime _countDownDate = new DateTime(2024, 12, 20, 17, 0, 0);
-    private string CountdownText = string.Empty;
+    private DateTime _countDownDate = new DateTime(2024, 12, 20, 16, 0, 0, DateTimeKind.Utc);
+    private int Days;
+    private int Hours;
+    private int Minutes;
+    private int Seconds;
+    private bool Expired => _countDownDate < DateTime.UtcNow;
+
+    [Parameter]
+    public EventCallback OnExpired { get; set; }
 
     protected override void OnInitialized()
     {
@@ -19,28 +51,26 @@
         UpdateCountdown(null, null);
     }
 
-    private void UpdateCountdown(object? sender, System.Timers.ElapsedEventArgs? e)
+    private async void UpdateCountdown(object? sender, System.Timers.ElapsedEventArgs? e)
     {
-        var now = DateTime.Now;
+        var now = DateTime.UtcNow;
         var distance = _countDownDate - now;
 
         if (distance.TotalMilliseconds > 0)
         {
             // Calculate days, hours, minutes, and seconds
-            var days = distance.Days;
-            var hours = distance.Hours;
-            var minutes = distance.Minutes;
-            var seconds = distance.Seconds;
-
-            CountdownText = $"{days}d {hours}h {minutes}m {seconds}s";
+            Days = distance.Days;
+            Hours = distance.Hours;
+            Minutes = distance.Minutes;
+            Seconds = distance.Seconds;
         }
         else
         {
-            CountdownText = "OUT NOW";
+            await InvokeAsync(OnExpired.InvokeAsync);
             _timer?.Stop(); // Stop the timer once expired
         }
 
-        InvokeAsync(StateHasChanged); // Refresh the UI
+        await InvokeAsync(StateHasChanged); // Refresh the UI
     }
 
     public void Dispose()
