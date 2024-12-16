@@ -11,9 +11,10 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
     private readonly ManualConversionSetModel conversionSet;
-    private readonly NationsConverterConfig config;
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
+
+    private readonly bool includeDecoration;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)", RegexOptions.IgnoreCase)]
     private static partial Regex MoodRegex();
@@ -29,9 +30,10 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         this.mapIn = mapIn;
         this.mapOut = mapOut;
         this.conversionSet = conversionSet;
-        this.config = config;
         this.customContentManager = customContentManager;
         this.logger = logger;
+
+        includeDecoration = config.IncludeDecoration && Environment != "Stadium";
     }
 
     public void Convert()
@@ -45,11 +47,11 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
         mood = string.Concat(mood[0].ToString().ToUpper(), mood.AsSpan(1));
 
-        var mapBase = config.IncludeDecoration
+        var mapBase = includeDecoration
             ? "NoStadium48x48"
             : "48x48Screen155";
 
-        if (config.IncludeDecoration)
+        if (includeDecoration)
         {
             var blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
             mapOut.Size = new((int)(mapIn.Size.X * (blockSize.X / 32f)), 40, (int)(mapIn.Size.Z * (blockSize.Z / 32f)));
@@ -60,7 +62,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         logger.LogInformation("Decoration: {Name}", mapOut.Decoration.Id);
         logger.LogInformation("Size: {Size}", mapOut.Size);
 
-        if (config.IncludeDecoration)
+        if (includeDecoration)
         {
             var sizeStr = $"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}";
             var itemPath = Path.Combine("Decorations", $"{sizeStr}.Item.Gbx");
@@ -76,7 +78,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
             logger.LogInformation("Placed decoration item ({Size}).", sizeStr);
         }
 
-        var size = config.IncludeDecoration ? mapOut.Size : mapIn.Size;
+        var size = includeDecoration ? mapOut.Size : mapIn.Size;
         var offset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
 
         for (var x = 0; x < size.X; x++)
