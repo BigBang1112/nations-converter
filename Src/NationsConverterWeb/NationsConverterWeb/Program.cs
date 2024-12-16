@@ -25,7 +25,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     .AddCookie(options =>
     {
         options.LoginPath = "/";
-        options.AccessDeniedPath = "/thank-you";
+        options.AccessDeniedPath = "/";
     })
     .AddDiscord(options =>
     {
@@ -36,12 +36,6 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
         options.Events.OnCreatingTicket = DiscordAuthenticationTicket.OnCreatingTicketAsync;
     });
-
-builder.Services.AddAuthorizationBuilder()
-    .SetFallbackPolicy(new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .RequireRole("Admin", "Developer", "Modeler") // This is weird and should be removed after first alpha is out
-        .Build());
 
 builder.Services.AddCascadingAuthenticationState();
 
@@ -153,12 +147,12 @@ app.UseAuthorization();
 var dataDir = Path.Combine(AppContext.BaseDirectory, "Data");
 Directory.CreateDirectory(dataDir);
 
-app.UseStaticFiles(new StaticFileOptions
+/*app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(dataDir),
     RequestPath = "/data",
     ServeUnknownFileTypes = true
-});
+});*/
 
 app.UseDirectoryBrowser(new DirectoryBrowserOptions
 {
