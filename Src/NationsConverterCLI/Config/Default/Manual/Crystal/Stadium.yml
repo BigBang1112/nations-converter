@@ -1253,20 +1253,20 @@ Blocks:
   StadiumRoadDirtHillWave:
     Modernized: true
   StadiumRoadDirtHillTiltCornerOut:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlope:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlopeMirror:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlopeX2:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlopeX2Mirror:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlopeX4:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtHillTiltToRoadSlopeX4Mirror:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtWave_x1:
-    NoTerrainModifier: true
+    Modernized: true
   StadiumRoadDirtWave_x2:
-    NoTerrainModifier: true
+    Modernized: true
