@@ -42,16 +42,17 @@ internal sealed class MusicStage : EnvironmentStageBase
 
         var watch = Stopwatch.StartNew();
 
-        if (!config.Music.TryGetValue(Environment, out var music))
+        if (!config.Music.TryGetValue(Environment, out var locatorUrl))
         {
             logger.LogWarning("Music not set for environment {Environment}.", Environment);
             return;
         }
 
-        var filePath = $@"Media\Musics\NC2\{music}.{Extension}";
-        var locatorUrl = $"https://{config.HttpHost}/music/{HttpUtility.UrlPathEncode($"{music}.{Extension}").Replace("(", "%28").Replace(")", "%29")}";
+        // TODO: may be better to retrieve file name from response headers
+        var fileName = Path.GetFileName(locatorUrl);
+        var filePath = $@"Media\Musics\NC2\{fileName}";
 
-        logger.LogInformation("Music set to {Music}!", music);
+        logger.LogInformation("Music set to {Music}!", fileName);
         logger.LogInformation("Locator URL: {LocatorUrl}", locatorUrl);
 
         mapOut.CustomMusicPackDesc = new PackDesc(filePath, Checksum: null, locatorUrl);

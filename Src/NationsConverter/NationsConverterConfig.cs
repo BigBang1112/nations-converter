@@ -18,11 +18,11 @@ public class NationsConverterConfig : Config
     public bool IncludeMusic { get; set; } = true;
     public Dictionary<string, string> Music { get; set; } = new()
     {
-        ["Snow"] = "Snow (Realnest Bootleg)",
-        ["Rally"] = "Rally (Realnest Bootleg)",
-        ["Desert"] = "Desert (Realnest & ThaumicTom Bootleg)",
-        ["Island"] = "Island (Realnest Bootleg)",
-        ["Bay"] = "Bay (Realnest Bootleg)",
-        ["Coast"] = "Coast (Realnest Bootleg)",
+        ["Snow"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Snow_(RealnestBootleg).mux",
+        ["Rally"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Rally_(RealnestBootleg).mux",
+        ["Desert"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Desert_(Realnest&ThaumicTomBootleg).mux",
+        ["Island"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Island_(RealnestBootleg).mux",
+        ["Bay"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Bay_(RealnestBootleg).mux",
+        ["Coast"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Coast_(RealnestBootleg).mux",
     };
 }
