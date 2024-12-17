@@ -39,19 +39,24 @@ Blocks:
       Name: StadiumDirtBorder
       Variant: 5
       Offset1Y: -1
+      Modernized: true
   StadiumDirtDeadendTent1:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumDirtBorder
       Variant: 5
       Offset1Y: -1
+      Modernized: true
   StadiumDirtDeadendDoor:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumRoadDirt:
     SubVariant: 0
     Modernized: true
   StadiumRoadDirtHigh:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
@@ -77,17 +82,28 @@ Blocks:
       Modernized: true
   StadiumRoadDirtHighFenceStraight:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 3
   StadiumRoadDirtHighFenceCorner:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 2
   StadiumRoadDirtHillTiltCornerIn:
     SubVariant: 0
+    Modernized: true
   StadiumRoadDirtGTCurve2:
+    Modernized: true
+  StadiumRoadDirtGTCurve3:
+    Modernized: true
+  StadiumRoadDirtGTCurve4:
+    Modernized: true
+  StadiumRoadDirtDiagonaleLeft:
+    Modernized: true
+  StadiumRoadDirtDiagonaleRight:
     Modernized: true
   StadiumSculptBridgeSuspendSlope2:
     PlaceDefaultZone: true
@@ -119,11 +135,13 @@ Blocks:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumRoadDirtFenceStraight
+      Modernized: true
     Item:
       Name: Misc/Waypoint/MultilapDirt.Item.Gbx
       OffsetY: 1.62
   StadiumRoadDirtToRoad:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       Variant: 3
@@ -859,18 +877,21 @@ Blocks:
           Offset2Y: 8
   StadiumRoadDirtToRoadDirtHighBridge:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
       Variant: 5
   StadiumRoadDirtToRoadDirtHigh:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
       Variant: 3
   StadiumRoadDirtToRoadDirtHigh2:
     NoTerrainModifier: true
+    Modernized: true
     Conversions:
     - Name: StadiumRoadDirt
       NoItem: true
@@ -881,6 +902,7 @@ Blocks:
       OffsetX: 1
   StadiumRoadDirtHighToRoad:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
@@ -891,6 +913,7 @@ Blocks:
     PlaceDefaultZone: true
   StadiumRoadDirtHighCheckpoint:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 3
@@ -898,6 +921,12 @@ Blocks:
     - Name: Misc/Waypoint/Checkpoint.Item.Gbx
       OffsetY: 8
     - Name: RoadDirt/RoadHigh/StadiumRoadDirtHighFenceStraight/Ground_0_0.Item.Gbx
+  StadiumRoadDirtHighGTCurve2:
+    Modernized: true
+  StadiumRoadDirtHighGTCurve3:
+    Modernized: true
+  StadiumRoadDirtHighGTCurve4:
+    Modernized: true
   StadiumSculptArchRingEnd:
     PlaceDefaultZone: true
   StadiumSculptArchRingEndMirror:
@@ -1001,8 +1030,11 @@ Blocks:
     PlaceDefaultZone: true
   StadiumLoopRight:
     PlaceDefaultZone: true
+  StadiumRoadDirtClip:
+    Modernized: true
   StadiumRoadDirtHighClip:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumPool:
     NoTerrainModifier: true
     Modernized: true
@@ -1143,6 +1175,7 @@ Blocks:
       OffsetY: 1
   StadiumRoadDirtTurbo:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
@@ -1166,6 +1199,7 @@ Blocks:
       Name: Trench/Main/StadiumTrenchCross/Base.Item.Gbx
   StadiumRoadDirtToRoadDirtHighCross:
     NoTerrainModifier: true
+    Modernized: true
     Conversion:
       Name: StadiumRoadDirt
       NoItem: true
@@ -1197,3 +1231,41 @@ Blocks:
     Block:
       Name: TrackWallToRoadTech
       OffsetY: 1
+  StadiumRoadDirtHillTiltToRoadLeft:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadRight:
+    Modernized: true
+  StadiumRoadDirtHillTiltStraight:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerLeft:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerRight:
+    Modernized: true
+  StadiumRoadDirtHillSlope:
+    Modernized: true
+  StadiumRoadDirtHillSlope2:
+    Modernized: true
+  StadiumRoadDirtHillSlopeGT2:
+    Modernized: true
+  StadiumRoadDirtHillSlopeGT2Bis:
+    Modernized: true
+  StadiumRoadDirtHillWave:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerOut:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlope:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlopeMirror:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlopeX2:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlopeX2Mirror:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlopeX4:
+    NoTerrainModifier: true
+  StadiumRoadDirtHillTiltToRoadSlopeX4Mirror:
+    NoTerrainModifier: true
+  StadiumRoadDirtWave_x1:
+    NoTerrainModifier: true
+  StadiumRoadDirtWave_x2:
+    NoTerrainModifier: true
