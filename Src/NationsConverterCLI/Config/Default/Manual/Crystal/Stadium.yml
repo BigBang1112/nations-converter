@@ -49,7 +49,7 @@ Blocks:
       Offset1Y: -1
       Modernized: true
   StadiumDirtDeadendDoor:
-    PlaceDefaultZone: true
+    NoTerrainModifier: true
     Modernized: true
   StadiumRoadDirt:
     SubVariant: 0
@@ -86,6 +86,7 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 3
+      Modernized: true
   StadiumRoadDirtHighFenceCorner:
     NoTerrainModifier: true
     Modernized: true
