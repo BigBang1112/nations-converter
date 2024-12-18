@@ -82,7 +82,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var musicStage = new MusicStage(mapIn, mapOut, Config, http, logger);
         musicStage.Convert();
 
-        var metadataStage = new MetadataStage(mapIn, mapOut, seed);
+        var metadataStage = new MetadataStage(mapIn, mapOut, Config, seed);
         metadataStage.Convert();
 
         if (Config.CopyItems)

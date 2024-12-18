@@ -25,4 +25,22 @@ public class NationsConverterConfig : Config
         ["Bay"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Bay_(RealnestBootleg).mux",
         ["Coast"] = "https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Coast_(RealnestBootleg).mux",
     };
+
+    internal string GetUsedCategory(string environment)
+    {
+        return string.IsNullOrWhiteSpace(Category) ? environment switch
+        {
+            "Stadium" => "Crystal",
+            _ => "Solid"
+        } : Category;
+    }
+
+    internal string GetUsedSubCategory(string environment)
+    {
+        return string.IsNullOrWhiteSpace(SubCategory) ? environment switch
+        {
+            "Stadium" => "Modernized",
+            _ => "Modless"
+        } : SubCategory;
+    }
 }

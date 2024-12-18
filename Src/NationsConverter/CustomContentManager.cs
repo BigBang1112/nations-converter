@@ -40,17 +40,8 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         this.runningDir = runningDir;
         this.logger = logger;
 
-        category = string.IsNullOrWhiteSpace(config.Category) ? Environment switch
-        {
-            "Stadium" => "Crystal",
-            _ => "Solid"
-        } : config.Category;
-
-        subCategory = string.IsNullOrWhiteSpace(config.SubCategory) ? Environment switch
-        {
-            "Stadium" => "Modernized",
-            _ => "Modless"
-        } : config.SubCategory;
+        category = config.GetUsedCategory(Environment);
+        subCategory = config.GetUsedSubCategory(Environment);
 
         technology = Environment switch
         {

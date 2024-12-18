@@ -21,11 +21,7 @@ internal sealed class ConversionSetExtract : EnvironmentStageBase
         this.complexConfig = complexConfig;
         this.logger = logger;
 
-        category = string.IsNullOrWhiteSpace(config.Category) ? Environment switch
-        {
-            "Stadium" => "Crystal",
-            _ => "Solid"
-        } : config.Category;
+        category = config.GetUsedCategory(Environment);
     }
 
     public ManualConversionSetModel Extract()
