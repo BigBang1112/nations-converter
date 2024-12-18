@@ -143,7 +143,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             KindInHeader = CGameCtnChallenge.MapKind.InProgress,
             ThumbnailFarClipPlane = -1,
             ThumbnailNearClipPlane = -1,
-            ThumbnailFov = 90,
+            ThumbnailPosition = mapIn.ThumbnailPosition,
+            ThumbnailPitchYawRoll = mapIn.ThumbnailPitchYawRoll,
+            ThumbnailFov = mapIn.ThumbnailFov,
             Thumbnail = mapIn.Thumbnail
         };
 
@@ -165,7 +167,18 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         //convertedMap.CreateChunk<CGameCtnChallenge.Chunk03043029>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304302A>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043034>();
-        mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+
+        var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
+        if (oldThumbnailChunk is null)
+        {
+            mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+        }
+        else
+        {
+            mapOut.Chunks.Add(oldThumbnailChunk);
+            mapOut.HasCustomCamThumbnail = true;
+        }
+
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304303E>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043040>().Version = 4;
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043042>().Version = 1;
