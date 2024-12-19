@@ -3,6 +3,7 @@ using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
 using Microsoft.Extensions.Logging;
+using NationsConverter.Models;
 using NationsConverter.Stages;
 using System.Collections.Concurrent;
 using System.Diagnostics;
@@ -16,6 +17,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
     private readonly ConcurrentDictionary<string, string> itemModelAuthors = [];
     private readonly HashSet<(string, string)> embeddedFilePaths = [];
+    private readonly Dictionary<string, LightPropertiesModel[]> itemLights = [];
 
     private readonly CGameCtnChallenge mapOut;
     private readonly string runningDir;
@@ -52,7 +54,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         rootFolderName = config.UniqueEmbeddedFolder ? $"{NC2}_{seed}" : NC2;
     }
 
-    public CGameCtnAnchoredObject PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false, string? technology = null, LightmapQuality lightmapQuality = LightmapQuality.Normal)
+    public CGameCtnAnchoredObject PlaceItem(string itemModel, Vec3 pos, Vec3 rot, Vec3 pivot = default, bool modernized = false, string? technology = null, LightmapQuality lightmapQuality = LightmapQuality.Normal, LightPropertiesModel[]? lightProperties = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(itemModel);
 
@@ -60,6 +62,11 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         var itemPath = Path.Combine(category, appliedSubCategory, technology ?? this.technology, Environment, itemModel);
 
+        return PlaceItemRaw(itemPath, pos, rot, pivot, lightmapQuality, lightProperties);
+    }
+
+    public CGameCtnAnchoredObject PlaceItemRaw(string itemPath, Vec3 pos, Vec3 rot, Vec3 pivot = default, LightmapQuality lightmapQuality = LightmapQuality.Normal, LightPropertiesModel[]? lightProperties = null)
+    {
         // retrieve author login (and collection in the future) from the item model gbx
         // cache this item model in dictionary
         if (!itemModelAuthors.TryGetValue(itemPath, out var itemModelAuthor))
@@ -72,6 +79,12 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
             // add file to hash set, so that it can be found + properly placed in the zip
             embeddedFilePaths.Add(("Items", itemPath));
+        }
+
+        if (lightProperties?.Length > 0)
+        {
+            // so that you can match it in CreateEntryFromLocalGbxFile/CreateEntryFromZippedGbxFile
+            itemLights.Add(Path.Combine("Items", rootFolderName, itemPath), lightProperties);
         }
 
         var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
@@ -172,19 +185,41 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
         using var entryStream = entry.Open();
         using var fileStream = File.OpenRead(loadPath);
-        Gbx.Decompress(input: fileStream, output: entryStream);
+
+        if (!TryInjectLights(fileStream, entryStream, embeddedPath))
+        {
+            Gbx.Decompress(input: fileStream, output: entryStream);
+        }
 
         return entry;
     }
 
-    private static ZipArchiveEntry CreateEntryFromZippedGbxFile(ZipArchive zip, ZipArchiveEntry entryFrom, string embeddedPath)
+    private ZipArchiveEntry CreateEntryFromZippedGbxFile(ZipArchive zip, ZipArchiveEntry entryFrom, string embeddedPath)
     {
         var entry = zip.CreateEntry(embeddedPath, CompressionLevel.SmallestSize);
         using var entryStream = entry.Open();
         using var toEmbedEntryStream = entryFrom.Open();
-        Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
+
+        if (!TryInjectLights(toEmbedEntryStream, entryStream, embeddedPath))
+        {
+            Gbx.Decompress(input: toEmbedEntryStream, output: entryStream);
+        }
 
         return entry;
+    }
+
+    private bool TryInjectLights(Stream sourceItemGbxStream, Stream outputItemGbxStream, string embeddedPath)
+    {
+        if (!itemLights.TryGetValue(embeddedPath, out var lightProperties))
+        {
+            return false;
+        }
+
+        // 1. open item gbx fully
+        // 2. add light layer according to lightProperties
+        // 3. write uncompressed to outputItemGbxStream
+
+        return true;
     }
 
     private void LogFinishedEmbeddedItems(Stopwatch watch, int actualEmbeddedItemsCount)

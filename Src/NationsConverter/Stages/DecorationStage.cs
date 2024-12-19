@@ -15,6 +15,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
     private readonly ILogger logger;
 
     private readonly bool includeDecorationItem;
+    private readonly bool includeMapWatermark;
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)", RegexOptions.IgnoreCase)]
     private static partial Regex MoodRegex();
@@ -34,6 +35,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         this.logger = logger;
 
         includeDecorationItem = config.IncludeDecoration && Environment != "Stadium";
+        includeMapWatermark = config.IncludeMapWatermark;
     }
 
     public void Convert()
@@ -51,9 +53,9 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
             ? "NoStadium48x48"
             : "48x48Screen155";
 
+        var blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
         if (includeDecorationItem)
         {
-            var blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
             mapOut.Size = new((int)(mapIn.Size.X * (blockSize.X / 32f)), 40, (int)(mapIn.Size.Z * (blockSize.Z / 32f)));
         }
 
@@ -62,17 +64,16 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         logger.LogInformation("Decoration: {Name}", mapOut.Decoration.Id);
         logger.LogInformation("Size: {Size}", mapOut.Size);
 
+        var sizeStr = $"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}";
+        var yOffset = conversionSet.DecorationYOffset;
+        if (conversionSet.Decorations.TryGetValue(sizeStr, out var deco))
+        {
+            yOffset += deco.YOffset;
+        }
+
         if (includeDecorationItem)
         {
-            var sizeStr = $"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}";
             var itemPath = Path.Combine("Decorations", $"{sizeStr}.Item.Gbx");
-
-            var yOffset = conversionSet.DecorationYOffset;
-            if (conversionSet.Decorations.TryGetValue(sizeStr, out var deco))
-            {
-                yOffset += deco.YOffset;
-            }
-
             customContentManager.PlaceItem(itemPath, (0, yOffset, 0), (0, 0, 0), lightmapQuality: LightmapQuality.Lowest);
 
             logger.LogInformation("Placed decoration item ({Size}).", sizeStr);
@@ -98,6 +99,11 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
         {
             PlaceTransitionGrass();
             PlaceTransitionVoid();
+        }
+
+        if (includeMapWatermark)
+        {
+            PlaceMapWatermark(((deco?.BaseHeight ?? 0) + 1) * blockSize.Y + yOffset, blockSize);
         }
     }
 
@@ -218,5 +224,50 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
                 PlaceVoidBlock(x, z + mapSize.Z + voidLength);
             }
         }
+    }
+
+    private void PlaceMapWatermark(float y, Int3 blockSize)
+    {
+        var pos = new Vec3((mapOut.Size.X + 2) * blockSize.X, y, (mapOut.Size.Z + 2) * blockSize.Z);
+        var rot = new Vec3(0, AdditionalMath.ToRadians(90), 0);
+
+        switch (Environment)
+        {
+            case "Rally":
+                pos += (0, 1, 0);
+                break;
+            case "Desert":
+                pos += (-80, 1, 0);
+
+                if (mapIn.Size.X == 30)
+                {
+                    pos += (0, 2, 0);
+                    rot += (0, -0.1f, 0);
+                }
+                break;
+            case "Stadium":
+                pos += (-9, 0, -39);
+                rot += (0.7f, 0, 0);
+                break;
+        }
+
+        customContentManager.PlaceItemRaw(@"Misc\NC2_Alpha_Big.Item.Gbx", pos - (0, 0, 0.5f * blockSize.Z), rot);
+
+        if (Environment == "Rally")
+        {
+            pos += (0, 1, 0);
+        }
+
+        if (Environment == "Desert" && mapIn.Size.X == 30)
+        {
+            pos += (0, 2, 0);
+        }
+
+        if (Environment == "Stadium")
+        {
+            pos += (9, 0, -1);
+        }
+
+        customContentManager.PlaceItemRaw(@"Misc\NC2_Logo_Long_Big.Item.Gbx", pos, rot);
     }
 }
