@@ -10,6 +10,7 @@ public class NationsConverterConfig : Config
     public bool IncludeMediaTracker { get; set; } = true;
     public bool IncludeDecoration { get; set; } = true;
     public bool IncludeMapWatermark { get; set; } = true;
+    public bool KeepMedalTimes { get; set; }
     public bool UseNewWood { get; set; }
     public string[]? UserDataPackPriority { get; set; }
     public bool CopyItems { get; set; }

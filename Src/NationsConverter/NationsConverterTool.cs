@@ -120,6 +120,21 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             _ => "TrackMania\\TM_Race",
         };
 
+        var authorTime = default(TimeInt32?);
+        var goldTime = default(TimeInt32?);
+        var silverTime = default(TimeInt32?);
+        var bronzeTime = default(TimeInt32?);
+        var authorScore = 0;
+
+        if (Config.KeepMedalTimes)
+        {
+            authorTime = mapIn.Mode == CGameCtnChallenge.PlayMode.Platform ? new TimeInt32(mapIn.AuthorScore) : mapIn.AuthorTime;
+            goldTime = mapIn.GoldTime;
+            silverTime = mapIn.SilverTime;
+            bronzeTime = mapIn.BronzeTime;
+            authorScore = mapIn.AuthorScore;
+        }
+
         var mapOut = new CGameCtnChallenge
         {
             AnchoredObjects = [],
@@ -132,7 +147,8 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             ChallengeParameters = new CGameCtnChallengeParameters
             {
                 MapType = mapType,
-                TimeLimit = new TimeInt32(0, 1, 0)
+                TimeLimit = new TimeInt32(0, 1, 0),
+                IsValidatedForScriptModes = mapIn.AuthorTime.HasValue
             },
             ClipTriggerSize = (3, 1, 3),
             DayDuration = new TimeInt32(0, 5, 0),
@@ -143,7 +159,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             OffzoneTriggerSize = (3, 1, 3),
             Size = (48, 40, 48),
             TitleId = "TMStadium",
-            Xml = $@"<header type=""map"" exever=""{ExeVersion}"" exebuild=""{BuildDate}"" title=""TMStadium"" lightmap=""0""><ident uid=""{newMapUid}"" name=""Base"" author=""{authorLogin}"" authorzone=""{authorZone}""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""{mapType}"" mapstyle="""" validated=""0"" nblaps=""0"" displaycost=""203"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""-1"" silver=""-1"" gold=""-1"" authortime=""-1"" authorscore=""0""/><deps></deps></header>",
+            Xml = $@"<header type=""map"" exever=""{ExeVersion}"" exebuild=""{BuildDate}"" title=""TMStadium"" lightmap=""0""><ident uid=""{newMapUid}"" name=""Base"" author=""{authorLogin}"" authorzone=""{authorZone}""/><desc envir=""Stadium"" mood=""Day"" type=""Race"" maptype=""{mapType}"" mapstyle=""{mapIn.MapStyle}"" validated=""{(authorTime.HasValue ? 1 : 0)}"" nblaps=""0"" displaycost=""0"" mod="""" hasghostblocks=""0"" /><playermodel id=""""/><times bronze=""{(bronzeTime.HasValue ? bronzeTime.Value.TotalMilliseconds : "-1")}"" silver=""{(silverTime.HasValue ? silverTime.Value.TotalMilliseconds : "-1")}"" gold=""{(goldTime.HasValue ? goldTime.Value.TotalMilliseconds : "-1")}"" authortime=""{(authorTime.HasValue ? authorTime.Value.TotalMilliseconds : "-1")}"" authorscore=""{authorScore}""/><deps></deps></header>",
             CustomMusicPackDesc = PackDesc.Empty,
             ModPackDesc = PackDesc.Empty,
             Kind = CGameCtnChallenge.MapKind.InProgress,
@@ -153,7 +169,12 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             ThumbnailPosition = mapIn.ThumbnailPosition,
             ThumbnailPitchYawRoll = mapIn.ThumbnailPitchYawRoll,
             ThumbnailFov = mapIn.ThumbnailFov,
-            Thumbnail = mapIn.Thumbnail
+            Thumbnail = mapIn.Thumbnail,
+            AuthorTime = authorTime,
+            GoldTime = goldTime,
+            SilverTime = silverTime,
+            BronzeTime = bronzeTime,
+            AuthorScore = authorScore,
         };
 
         mapOut.CreateChunk<CGameCtnChallenge.HeaderChunk03043002>().Version = 13;
