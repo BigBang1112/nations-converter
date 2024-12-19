@@ -204,7 +204,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         else
         {
             mapOut.Chunks.Add(oldThumbnailChunk);
-            mapOut.HasCustomCamThumbnail = true;
+            mapOut.HasCustomCamThumbnail = mapIn.HasCustomCamThumbnail;
         }
 
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304303E>();
