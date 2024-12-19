@@ -1314,3 +1314,10 @@ Blocks:
   StadiumPlatformFW:
     Item:
       Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
+  StadiumCheckpointRingHRoad:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: GateCheckpoint
+      RotY: 90
+      OffsetY: 2.5

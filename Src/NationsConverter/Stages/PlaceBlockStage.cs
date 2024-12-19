@@ -141,7 +141,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             offset = new Int3(
                 overrideConversion.OffsetX,
-                overrideConversion.OffsetY + (isManiaPlanet ? overrideConversion.Offset2Y : overrideConversion.Offset1Y),
+                (int)overrideConversion.OffsetY + (isManiaPlanet ? overrideConversion.Offset2Y : overrideConversion.Offset1Y),
                 overrideConversion.OffsetZ);
         }
 
@@ -411,57 +411,77 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
-            block.Coord + TotalOffset + adjustedOffset + (0, 8 + offsetY, 0),
+            block.Coord + TotalOffset + adjustedOffset + (0, 8 + (int)offsetY, 0),
             (Direction)(((int)direction + blockModel.Dir) % 4),
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
 
-        if (skinConversion is not null && block.Skin is not null && !string.IsNullOrEmpty(block.Skin.PackDesc?.FilePath))
+        if (blockModel.RotX != 0 || blockModel.RotY != 0 || blockModel.RotZ != 0)
         {
-            CGameCtnBlockSkin skin;
-
-            var filePathToMatch = block.Skin.PackDesc.FilePath.Substring(@"Skins\".Length);
-
-            if (skinMapping.TryGetValue(filePathToMatch, out var skinInfo))
-            {
-                skin = new CGameCtnBlockSkin
-                {
-                    PackDesc = new PackDesc
-                    {
-                        FilePath = string.IsNullOrEmpty(skinInfo.Primary) ? "" : $@"Skins\{skinInfo.Primary}",
-                        LocatorUrl = skinInfo.PrimaryLocatorUrl
-                    },
-                    ForegroundPackDesc = new PackDesc
-                    {
-                        FilePath = string.IsNullOrEmpty(skinInfo.Foreground) ? "" : $@"Skins\{skinInfo.Foreground}",
-                        LocatorUrl = skinInfo.ForegroundLocatorUrl
-                    },
-                };
-            }
-            else if (!string.IsNullOrWhiteSpace(block.Skin.PackDesc.LocatorUrl))
-            {
-                skin = new CGameCtnBlockSkin
-                {
-                    PackDesc = new PackDesc
-                    {
-                        FilePath = block.Skin.PackDesc.FilePath,
-                        Checksum = block.Skin.PackDesc.Checksum,
-                        LocatorUrl = block.Skin.PackDesc.LocatorUrl
-                    }
-                };
-            }
-            else
-            {
-                return;
-            }
-
-            skin.Text = "!4";
-            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
-            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
-
-            additionalBlock.Skin = skin;
+            additionalBlock.IsFree = true;
+            additionalBlock.PitchYawRoll = (
+                AdditionalMath.ToRadians(blockModel.RotX), 
+                AdditionalMath.ToRadians(blockModel.RotY),
+                AdditionalMath.ToRadians(blockModel.RotZ));
+            additionalBlock.AbsolutePositionInMap = (block.Coord + TotalOffset + new Vec3(0, offsetY, 0)) * BlockSize;
         }
+
+        if (skinConversion is not null)
+        {
+            additionalBlock.Skin = ConvertSkin(block);
+        }
+    }
+
+    private CGameCtnBlockSkin? ConvertSkin(CGameCtnBlock block)
+    {
+        if (string.IsNullOrEmpty(block.Skin?.PackDesc?.FilePath))
+        {
+            return null;
+        }
+
+        var filePathToMatch = block.Skin.PackDesc.FilePath.Substring(@"Skins\".Length);
+
+        CGameCtnBlockSkin skin;
+
+        if (skinMapping.TryGetValue(filePathToMatch, out var skinInfo))
+        {
+            skin = new CGameCtnBlockSkin
+            {
+                PackDesc = new PackDesc
+                {
+                    FilePath = string.IsNullOrEmpty(skinInfo.Primary) ? "" : $@"Skins\{skinInfo.Primary}",
+                    LocatorUrl = skinInfo.PrimaryLocatorUrl
+                },
+                ForegroundPackDesc = new PackDesc
+                {
+                    FilePath = string.IsNullOrEmpty(skinInfo.Foreground) ? "" : $@"Skins\{skinInfo.Foreground}",
+                    LocatorUrl = skinInfo.ForegroundLocatorUrl
+                },
+            };
+        }
+        else if (!string.IsNullOrWhiteSpace(block.Skin.PackDesc.LocatorUrl))
+        {
+            skin = new CGameCtnBlockSkin
+            {
+                PackDesc = new PackDesc
+                {
+                    FilePath = block.Skin.PackDesc.FilePath,
+                    Checksum = block.Skin.PackDesc.Checksum,
+                    LocatorUrl = block.Skin.PackDesc.LocatorUrl
+                }
+            };
+        }
+        else
+        {
+            return null;
+        }
+
+        skin.Text = "!4";
+        skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+        skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
+
+        return skin;
     }
 
     private void PlaceItemFromItemModel(
