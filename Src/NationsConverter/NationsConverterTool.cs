@@ -56,7 +56,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var placeBaseZoneStage = new PlaceBaseZoneStage(mapIn, mapOut, conversionSet, customContentManager, terrainModifierZones, logger);
         placeBaseZoneStage.Convert();
 
-        var placeBlockStage = new PlaceBlockStage(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, isManiaPlanet, logger);
+        var placeBlockStage = new PlaceBlockStage(mapIn, mapOut, conversionSet, customContentManager, coveredZoneBlocks, terrainModifierZones, isManiaPlanet, complexConfig, logger);
         placeBlockStage.Convert();
 
         var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, isManiaPlanet, logger);

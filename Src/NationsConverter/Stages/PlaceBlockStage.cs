@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using System.Collections.Immutable;
@@ -18,6 +19,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
     private readonly ILogger logger;
 
     private readonly Dictionary<string, string> reverseBlockTerrainModifiers;
+    private readonly Dictionary<string, SkinInfoModel> skinMapping;
 
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
     private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
@@ -30,6 +32,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         ImmutableDictionary<Int3, string> terrainModifierZones,
         bool isManiaPlanet,
+        IComplexConfig complexConfig,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
@@ -41,6 +44,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         this.logger = logger;
 
         reverseBlockTerrainModifiers = ConversionSet.BlockTerrainModifiers.ToDictionary(x => x.Value, x => x.Key);
+        skinMapping = complexConfig.Get<Dictionary<string, SkinInfoModel>>("Skins");
     }
 
     public override void Convert()
@@ -136,15 +140,15 @@ internal sealed class PlaceBlockStage : BlockStageBase
         if (overrideConversion is not null)
         {
             offset = new Int3(
-                overrideConversion.OffsetX, 
-                overrideConversion.OffsetY + (isManiaPlanet ? overrideConversion.Offset2Y : overrideConversion.Offset1Y), 
+                overrideConversion.OffsetX,
+                overrideConversion.OffsetY + (isManiaPlanet ? overrideConversion.Offset2Y : overrideConversion.Offset1Y),
                 overrideConversion.OffsetZ);
         }
 
         var blockModel = conversion.GetPropertyDefault(block, x => x.Block);
         if (blockModel is not null && !string.IsNullOrWhiteSpace(blockModel.Name))
         {
-            PlaceBlockFromItemModel(block, direction, blockModel, blockCoordSize);
+            PlaceBlockFromItemModel(block, direction, blockModel, blockCoordSize, conversion.Skin);
         }
 
         var blockModels = conversion.GetPropertyDefault(block, x => x.Blocks);
@@ -152,7 +156,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             foreach (var b in blockModels)
             {
-                PlaceBlockFromItemModel(block, direction, b, blockCoordSize);
+                PlaceBlockFromItemModel(block, direction, b, blockCoordSize, conversion.Skin);
             }
         }
 
@@ -226,7 +230,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
             if (variantModel.Block is not null)
             {
-                PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize);
+                PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize, conversion.Skin);
             }
 
             if (variantModel.Variant.HasValue)
@@ -387,7 +391,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         }
     }
 
-    private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel, Int3 blockSizeCoord)
+    private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel, Int3 blockSizeCoord, ManualConversionSkinModel? skinConversion)
     {
         if (string.IsNullOrWhiteSpace(blockModel.Name))
         {
@@ -412,6 +416,52 @@ internal sealed class PlaceBlockStage : BlockStageBase
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
+
+        if (skinConversion is not null && block.Skin is not null && !string.IsNullOrEmpty(block.Skin.PackDesc?.FilePath))
+        {
+            CGameCtnBlockSkin skin;
+
+            var filePathToMatch = block.Skin.PackDesc.FilePath.Substring(@"Skins\".Length);
+
+            if (skinMapping.TryGetValue(filePathToMatch, out var skinInfo))
+            {
+                skin = new CGameCtnBlockSkin
+                {
+                    PackDesc = new PackDesc
+                    {
+                        FilePath = string.IsNullOrEmpty(skinInfo.Primary) ? "" : $@"Skins\{skinInfo.Primary}",
+                        LocatorUrl = skinInfo.PrimaryLocatorUrl
+                    },
+                    ForegroundPackDesc = new PackDesc
+                    {
+                        FilePath = string.IsNullOrEmpty(skinInfo.Foreground) ? "" : $@"Skins\{skinInfo.Foreground}",
+                        LocatorUrl = skinInfo.ForegroundLocatorUrl
+                    },
+                };
+            }
+            else if (!string.IsNullOrWhiteSpace(block.Skin.PackDesc.LocatorUrl))
+            {
+                skin = new CGameCtnBlockSkin
+                {
+                    PackDesc = new PackDesc
+                    {
+                        FilePath = block.Skin.PackDesc.FilePath,
+                        Checksum = block.Skin.PackDesc.Checksum,
+                        LocatorUrl = block.Skin.PackDesc.LocatorUrl
+                    }
+                };
+            }
+            else
+            {
+                return;
+            }
+
+            skin.Text = "!4";
+            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059002>();
+            skin.CreateChunk<CGameCtnBlockSkin.Chunk03059003>();
+
+            additionalBlock.Skin = skin;
+        }
     }
 
     private void PlaceItemFromItemModel(
