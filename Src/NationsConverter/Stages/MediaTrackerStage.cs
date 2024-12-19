@@ -150,6 +150,26 @@ internal sealed class MediaTrackerStage
                         // TODO: do wild ghost conversion
                         break;
                     case CGameCtnMediaBlockCameraGame cameraGame:
+                        var gameCam = cameraGame.GameCam;
+
+                        if (!string.IsNullOrEmpty(cameraGame.GameCamId))
+                        {
+                            gameCam = cameraGame.GameCamId switch
+                            {
+                                "Internal" => CGameCtnMediaBlockCameraGame.EGameCam.Internal,
+                                "Behind" => CGameCtnMediaBlockCameraGame.EGameCam.External,
+                                _ => CGameCtnMediaBlockCameraGame.EGameCam.Default,
+                            };
+                        }
+                        else if (cameraGame.GameCamOld != 0)
+                        {
+                            gameCam = cameraGame.GameCamOld switch
+                            {
+                                CGameCtnMediaBlockCameraGame.EGameCamOld.Internal => CGameCtnMediaBlockCameraGame.EGameCam.Internal,
+                                _ => CGameCtnMediaBlockCameraGame.EGameCam.Default,
+                            };
+                        }
+
                         var newCameraGame = new CGameCtnMediaBlockCameraGame
                         {
                             CamFarClipPlane = cameraGame.CamFarClipPlane,
@@ -158,12 +178,7 @@ internal sealed class MediaTrackerStage
                             CamPitchYawRoll = cameraGame.CamPitchYawRoll,
                             CamPosition = cameraGame.CamPosition,
                             ClipEntId = cameraGame.ClipEntId,
-                            GameCam = cameraGame.GameCamOld != 0 ? cameraGame.GameCamOld switch
-                            {
-                                CGameCtnMediaBlockCameraGame.EGameCamOld.Internal => CGameCtnMediaBlockCameraGame.EGameCam.Internal,
-                                CGameCtnMediaBlockCameraGame.EGameCamOld.Close => CGameCtnMediaBlockCameraGame.EGameCam.External_2,
-                                _ => CGameCtnMediaBlockCameraGame.EGameCam.Default,
-                            } : cameraGame.GameCam,
+                            GameCam = gameCam,
                             Start = cameraGame.Start,
                             End = cameraGame.End,
                         };
