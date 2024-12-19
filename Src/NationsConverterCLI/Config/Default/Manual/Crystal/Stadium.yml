@@ -1072,6 +1072,7 @@ Blocks:
     NoItem: true
     NoTerrainModifier: true
     WaterOffsetY: 1
+    Modernized: true
     Conversion:
       Name: StadiumPool
       OffsetY: 1

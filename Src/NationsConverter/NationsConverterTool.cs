@@ -112,15 +112,19 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
     private CGameCtnChallenge CreateBaseMap()
     {
         var newMapUid = $"{Convert.ToBase64String(Encoding.ASCII.GetBytes(Guid.NewGuid().ToString()))[..10]}{mapIn.MapUid.Substring(9, 14)}NC2";
-        var authorLogin = "akPfIM0aSzuHuaaDWptBbQ";
-        var authorZone = "World|Europe|Czechia|Jihoceský kraj";
-        var mapType = "TrackMania\\TM_Race"; // either Race, Arkady's Platform, or Zai's Stunt
+        var authorLogin = mapIn.AuthorLogin;
+        var authorZone = mapIn.AuthorZone;
+        var mapType = mapIn.Mode switch
+        {
+            CGameCtnChallenge.PlayMode.Platform => "TrackMania\\TM_Platform",
+            _ => "TrackMania\\TM_Race",
+        };
 
         var mapOut = new CGameCtnChallenge
         {
             AnchoredObjects = [],
             AuthorLogin = authorLogin,
-            AuthorNickname = "BigBang1112",
+            AuthorNickname = mapIn.AuthorNickname,
             AuthorZone = authorZone,
             Blocks = [],
             BlockStock = new CGameCtnCollectorList(),
