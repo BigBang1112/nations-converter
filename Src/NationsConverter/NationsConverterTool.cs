@@ -71,6 +71,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
         placeTransformationStage.Convert();
 
+        var advertisementStage = new AdvertisementStage(mapOut);
+        advertisementStage.Convert();
+
         customContentManager.EmbedData();
 
         mapOut.IsLapRace = mapIn.IsLapRace;
