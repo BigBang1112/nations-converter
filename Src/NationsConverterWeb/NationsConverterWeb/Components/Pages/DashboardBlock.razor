@@ -1,0 +1,707 @@
+﻿@page "/dashboard/block/{BlockName}"
+@rendermode InteractiveServer
+@attribute [Authorize(Roles = "Admin,Developer,Modeler")]
+@inject AppDbContext Db
+@inject NavigationManager NavManager
+@inject IJSRuntime JS
+
+<PageTitle>@BlockName - Dashboard - Nations Converter 2</PageTitle>
+
+<div class="page-container">
+    <h2>@BlockName</h2>
+
+    @if (block is not null)
+    {
+        if (block.IconWebp is not null)
+        {
+            <CollectorIcon WebpData="@block.IconWebp" Size="64"></CollectorIcon>
+        }
+
+        <p>@block.CategoryId / @block.SubCategoryId / @block.EnvironmentId</p>
+
+        <p>@(block.Description ?? "No description.")</p>
+
+        @if (block.Items.Any(x => x.JustResave))
+        {
+            <p>This block contains "just resave" items. It means the item only needs a lightmap fix. How to resave:</p>
+            <ol style="margin-top: 0;">
+                <li><b>Create or load a map with Day mood.</b></li>
+                <li>Place these items on the map (the more you place at once the faster it is to complete).</li>
+                <li>In "Item edition", use "Edit selected item" on the item.</li>
+                <li><b>Click on the wrench at "Mesh" (do not skip).</b></li>
+                <li><b>Save the item, overwrite (do not skip, as this will generate the lightmap!).</b></li>
+                <li>Leave the mesh modeller.</li>
+                <li>Remove and generate the icon (pick the most visible direction).</li>
+                <li>Save the item again, overwrite.</li>
+                <li>Submit this item back.</li>
+            </ol>
+        }
+
+        @if (block.AssignedTo is null)
+        {
+            <button class="button button-big" @onclick="AssignAsync">Assign this block</button>
+        }
+        else if (block.AssignedTo.Id == user?.Id)
+        {
+            <button class="button button-big" @onclick="UnassignAsync">Unassign this block</button>
+        }
+        else
+        {
+            <p>Assigned to @(block.AssignedTo.DiscordUser?.GlobalName ?? block.AssignedTo.DiscordUser?.Username)</p>
+        }
+
+        @if (user?.IsAdmin == true)
+        {
+            <label>
+                <input type="checkbox" checked="@block.IsDone" @onchange="e => DoneChanged(block, e)" />
+                Done
+            </label>
+        }
+
+        <h3 style="margin-top: 20px">Items</h3>
+        <small>(format: <code>Modifier_Variant_SubVariant.Item.Gbx</code>)</small>
+
+        <div class="items">
+            <button class="button button-download" @onclick="DownloadAllInitAsync">Download all init items</button>
+
+            @foreach (var item in block.Items.OrderBy(x => x.Variant).ThenBy(x => x.SubVariant))
+            {
+                if (!File.Exists(Path.Combine(dataBasePath, "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name, item.FileName)))
+                {
+                    // it should be displayed in UI but other buttons should not be clickable
+                    continue;
+                }
+
+                <div class="item">
+                    <div class="item-info">
+                        <a class="button button-download" href="/data/items/NC2/@block.CategoryId/@block.SubCategoryId/MM_Collision/@block.EnvironmentId/@block.PageName/@block.Name/@item.FileName" download="@item.FileName" title="Download the init item">Download</a>
+                        <button @onclick="() => DownloadAsObjAsync(item)" class="button button-download" title="Download an export to .obj+.mtl">.obj</button>
+
+                        <span>@item.FileName</span>
+
+                        @if (user?.IsAdmin == true)
+                        {
+                            <label>
+                                <input type="checkbox" checked="@item.JustResave" @onchange="e => JustResaveChanged(item, e)" />
+                                Just resave
+                            </label>
+                        }
+                        else if (item.JustResave)
+                        {
+                            <span class="yellow">(just resave!)</span>
+                        }
+
+                        @if (user?.IsAdmin == true)
+                        {
+                            <input value="@item.Value" @onchange="e => ItemValueChanged(item, e)" style="width: 30px;" />
+                        }
+                        else if (item.Value > 0)
+                        {
+                            <span title="Item value. This is used for payouts.">@item.Value</span>
+                        }
+                        else
+                        {
+                            <span title="Item value coming soon. This is used for payouts.">(value soon)</span>
+                        }
+
+                        @if (IsAssignedUser())
+                        {
+                            <InputFile style="margin-left: auto;" OnChange="async (e) => await UploadAsync(e, item)"
+                            title="Upload your improved item here, any file name is accepted."></InputFile>
+                        }
+                    </div>
+
+                    @if (item.Uploads.Any())
+                    {
+                        <hr />
+                    }
+
+                    @{
+                        var totalValue = item.Uploads
+                            .Where(x => x.UploadedBy is not null && !x.UploadedBy.IsAdmin)
+                            .Select(x => x.Value == 0 ? 1 : x.Value)
+                            .Sum();
+                    }
+
+                    @foreach (var upload in item.Uploads.OrderByDescending(x => x.UploadedAt))
+                    {
+                        <div class="upload">
+                            <button class="button button-basic" @onclick="() => DownloadItemUploadAsync(upload)">@upload.OriginalFileName</button>
+
+                            @if (upload.UploadedBy is null || !upload.UploadedBy.IsAdmin)
+                            {
+                                <span title="Upload value. If higher, the higher percentage of the item value will be paid out to the uploader.">
+                                    @if (user?.IsAdmin == true)
+                                    {
+                                        <input value="@(upload.Value == 0 ? 1 : upload.Value)" @onchange="e => UploadValueChanged(upload, e)" style="width: 20px;" />
+                                    }
+                                    else
+                                    {
+                                        <span>@(upload.Value == 0 ? 1 : upload.Value)</span>
+                                    }
+
+                                    @if (totalValue > 0)
+                                    {
+                                        <span>(@GetUploadValue(upload, totalValue))</span>
+                                    }
+                                </span>
+                            }
+
+                            <span class="upload-date">@upload.UploadedAt.DateTime</span>
+
+                            @if (upload.UploadedBy is not null)
+                            {
+                                @if (upload.UploadedBy.DiscordUser?.AvatarHash is null)
+                                {
+                                    <img src="img/discord-no-pfp.webp" width="24" height="24" />
+                                }
+                                else
+                                {
+                                    <img src="https://cdn.discordapp.com/avatars/@upload.UploadedBy.DiscordUser.Id/@upload.UploadedBy.DiscordUser.AvatarHash" width="24" height="24" />
+                                }
+                            }
+
+                            @if (IsAssignedUser())
+                            {
+                                <button class="button button-delete">Delete</button>
+                            }
+                        </div>
+                    }
+
+                    @foreach (var upload in item.MacroblockUploads.OrderByDescending(x => x.UploadedAt))
+                    {
+                        <div class="upload">
+                            <button class="button button-basic">@upload.OriginalFileName</button>
+
+                            <span class="upload-date">@upload.UploadedAt.DateTime</span>
+
+                            @if (upload.UploadedBy is not null)
+                            {
+                                @if (upload.UploadedBy.DiscordUser?.AvatarHash is null)
+                                {
+                                    <img src="img/discord-no-pfp.webp" width="24" height="24" />
+                                }
+                                else
+                                {
+                                    <img src="https://cdn.discordapp.com/avatars/@upload.UploadedBy.DiscordUser.Id/@upload.UploadedBy.DiscordUser.AvatarHash" width="24" height="24" />
+                                }
+                            }
+
+                            @if (IsAssignedUser())
+                            {
+                                <button class="button button-delete">Delete</button>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <p>Page name: @(block.PageName ?? "Unknown page name")</p>
+
+        @if (items.Count == 0)
+        {
+            <button class="button button-big" style="margin: 10px" @onclick="LoadItemMeshInfo">Load item mesh info</button>
+        }
+        else
+        {
+            foreach (var itemGbx in items)
+            {
+                <h4>@Path.GetFileName(itemGbx.FilePath)</h4>
+
+                @if (itemGbx.Node.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
+                {
+                    return;
+                }
+
+                var crystal = entityModelEdition.MeshCrystal;
+
+                <ul>
+                    @foreach (var mat in crystal.Materials)
+                    {
+                        if (mat.MaterialUserInst is null)
+                        {
+                            continue;
+                        }
+
+                        <li>
+                            @mat.MaterialUserInst.Link
+
+                            @if (mat.MaterialUserInst.Color?.Length > 0)
+                            {
+                                <span> (color: @string.Join(',', mat.MaterialUserInst.Color))</span>
+                            }
+                        </li>
+                    }
+                </ul>
+            }
+        }
+
+        @if (macroblocks.Count == 0)
+        {
+            <button class="button button-big" style="margin: 10px" @onclick="LoadMacroblockInfo">Load macroblock info</button>
+        }
+        else
+        {
+            foreach (var (blockItem, macroblockGbx) in macroblocks)
+            {
+                <h4>@blockItem.FileName</h4>
+
+                <pre><code>
+                    <span>Items:</span><br />
+                    @foreach (var obj in macroblockGbx.ObjectSpawns ?? [])
+                    {
+                        var pos = new GBX.NET.Vec3(
+                            MathF.Round(obj.AbsolutePositionInMap.X, 4),
+                            MathF.Round(obj.AbsolutePositionInMap.Y, 4),
+                            MathF.Round(obj.AbsolutePositionInMap.Z, 4));
+                        var rot = new GBX.NET.Vec3(
+                            MathF.Round(obj.PitchYawRoll.X / MathF.PI * 180, 4),
+                            MathF.Round(obj.PitchYawRoll.Y / MathF.PI * 180, 4),
+                            MathF.Round(obj.PitchYawRoll.Z / MathF.PI * 180, 4));
+
+                        <span>- Name: @obj.ItemModel?.Id</span><br />
+                        @if (pos.X != 0)
+                        {
+                            <span>  OffsetX: @pos.X.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (pos.Y != 0)
+                        {
+                            <span>  OffsetY: @pos.Y.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (pos.Z != 0)
+                        {
+                            <span>  OffsetZ: @pos.Z.ToString(System.Globalization.CultureInfo.InvariantCulture)</span><br />
+                        }
+                        @if (rot.X != 0)
+                        {
+                            <span>  RotX: @(rot.X.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                        @if (rot.Y != 0)
+                        {
+                            <span>  RotY: @(rot.Y.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                        @if (rot.Z != 0)
+                        {
+                            <span>  RotZ: @(rot.Z.ToString(System.Globalization.CultureInfo.InvariantCulture))</span><br />
+                        }
+                    }
+                </code></pre>
+            }
+        }
+    }
+</div>
+
+@code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private Block? block;
+    private User? user;
+
+    [Parameter]
+    public string BlockName { get; set; } = "";
+
+    private string dataBasePath = Path.Combine(AppContext.BaseDirectory, "Data");
+    private string? blockDirBasePath;
+
+    private List<GBX.NET.Gbx<GBX.NET.Engines.GameData.CGameItemModel>> items = new();
+    private Dictionary<BlockItem, GBX.NET.Engines.Game.CGameCtnMacroBlockInfo> macroblocks = new();
+
+    private async Task<Block?> GetBlockAsync()
+    {
+        return await Db.Blocks
+            .Include(x => x.Items)
+                .ThenInclude(x => x.Uploads)
+                    .ThenInclude(x => x.UploadedBy!.DiscordUser)
+            .Include(x => x.Items)
+                .ThenInclude(x => x.MacroblockUploads)
+                    .ThenInclude(x => x.UploadedBy!.DiscordUser)
+            .Include(x => x.AssignedTo!.DiscordUser)
+            .FirstOrDefaultAsync(x => x.Name == BlockName);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        block = await GetBlockAsync();
+
+        if (block is not null)
+        {
+            blockDirBasePath = Path.Combine(dataBasePath, "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
+        }
+
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        var principal = authState.User;
+
+        if (!ulong.TryParse(principal.Identities
+            .FirstOrDefault()?
+            .FindFirst(ClaimTypes.NameIdentifier)?.Value, out var snowflake))
+        {
+            return;
+        }
+
+        user = await Db.Users
+            .Include(x => x.DiscordUser)
+            .FirstOrDefaultAsync(x => x.DiscordUser!.Id == snowflake);
+    }
+
+    private bool IsAssignedUser()
+    {
+        return block?.AssignedTo?.Id == user?.Id;
+    }
+
+    private async Task AssignAsync()
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo is not null)
+        {
+            return;
+        }
+
+        block.AssignedTo = user;
+        block.AssignedAt = DateTimeOffset.UtcNow;
+        await Db.SaveChangesAsync();
+    }
+
+    private async Task UnassignAsync()
+    {
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo?.Id != user?.Id)
+        {
+            return;
+        }
+
+        block.AssignedTo = null;
+        block.AssignedAt = null;
+        await Db.SaveChangesAsync();
+    }
+
+    private async Task UploadAsync(InputFileChangeEventArgs e, BlockItem item)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        block = await GetBlockAsync();
+
+        if (block is null || block.AssignedTo?.Id != user.Id)
+        {
+            return;
+        }
+
+        var file = e.GetMultipleFiles(1).FirstOrDefault();
+        if (file is null)
+        {
+            return;
+        }
+
+        await using var stream = file.OpenReadStream(maxAllowedSize: 4000000);
+        await using var memoryStream = new MemoryStream();
+        await stream.CopyToAsync(memoryStream);
+        memoryStream.Position = 0;
+
+        var gbx = await GBX.NET.Gbx.ParseNodeAsync(memoryStream);
+
+        if (gbx is GBX.NET.Engines.GameData.CGameItemModel itemGbx)
+        {
+            if (itemGbx.Description is null)
+            {
+                throw new Exception($"Item description is null - {file.Name}");
+            }
+
+            var itemInfo = JsonSerializer.Deserialize<ItemInfoModel>(itemGbx.Description, AppJsonContext.Default.ItemInfoModel);
+
+            if (itemInfo?.Block is null)
+            {
+                throw new Exception($"ItemInfo.Block is null - {file.Name}");
+            }
+
+            if (itemInfo.Block.Modifier != item.Modifier || itemInfo.Block.Variant != item.Variant || itemInfo.Block.SubVariant != item.SubVariant)
+            {
+                throw new Exception($"ItemInfo.Block does not match the item - {file.Name}");
+            }
+
+            var upload = new ItemUpload
+            {
+                OriginalFileName = file.Name,
+                UploadedAt = DateTimeOffset.UtcNow,
+                LastModifiedAt = file.LastModified,
+                Data = memoryStream.ToArray(),
+                BlockItem = item,
+                UploadedBy = user,
+            };
+
+            block.HasUpload = true;
+
+            await Db.ItemUploads.AddAsync(upload);
+            await Db.SaveChangesAsync();
+        }
+        else if (gbx is GBX.NET.Engines.Game.CGameCtnMacroBlockInfo macroblock)
+        {
+            var upload = new MacroblockUpload
+            {
+                OriginalFileName = file.Name,
+                UploadedAt = DateTimeOffset.UtcNow,
+                LastModifiedAt = file.LastModified,
+                Data = memoryStream.ToArray(),
+                BlockItem = item,
+                UploadedBy = user,
+            };
+            await Db.MacroblockUploads.AddAsync(upload);
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task DownloadAllInitAsync()
+    {
+        if (block is null || blockDirBasePath is null)
+        {
+            return;
+        }
+
+        await using var ms = new MemoryStream();
+
+        using (var zip = new System.IO.Compression.ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var item in block.Items)
+            {
+                var entry = zip.CreateEntry(Path.Combine(block.Name, item.FileName));
+                await using var entryStream = entry.Open();
+
+                await using var fs = new FileStream(Path.Combine(blockDirBasePath, item.FileName), FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+                await fs.CopyToAsync(entryStream);
+            }
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", $"{block.Name}.zip", streamRef);
+    }
+
+    private async Task DownloadItemUploadAsync(ItemUpload upload)
+    {
+        if (upload is null)
+        {
+            return;
+        }
+
+        using var ms = new MemoryStream(upload.Data);
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", upload.OriginalFileName, streamRef);
+    }
+
+    private async Task DownloadAsObjAsync(BlockItem item)
+    {
+        if (block is null || blockDirBasePath is null)
+        {
+            return;
+        }
+
+        await using var zipStream = new MemoryStream();
+        using (var zip = new ZipArchive(zipStream, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            await using var fs = new FileStream(Path.Combine(blockDirBasePath, item.FileName), FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+
+            var spawnPositionLayer = default(GBX.NET.Engines.Plug.CPlugCrystal.SpawnPositionLayer);
+            var layerIndex = 0;
+            while (true)
+            {
+                fs.Position = 0;
+                var itemGbx = await GBX.NET.Gbx.ParseNodeAsync<GBX.NET.Engines.GameData.CGameItemModel>(fs);
+
+                if (itemGbx.EntityModelEdition is not GBX.NET.Engines.GameData.CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityModelEdition)
+                {
+                    return;
+                }
+
+                var crystal = entityModelEdition.MeshCrystal;
+
+                var layer = crystal.Layers.ElementAtOrDefault(layerIndex++);
+
+                if (layer is GBX.NET.Engines.Plug.CPlugCrystal.SpawnPositionLayer spawn)
+                {
+                    spawnPositionLayer = spawn;
+                    continue;
+                }
+
+                if (layer is null)
+                {
+                    break;
+                }
+
+                crystal.Layers.Clear();
+                crystal.Layers.Add(layer);
+
+                await using var objStream = new MemoryStream();
+                await using var objWriter = new StreamWriter(objStream);
+                await using var mtlStream = new MemoryStream();
+                await using var mtlWriter = new StreamWriter(mtlStream);
+
+                crystal.ExportToObj(objWriter, mtlWriter);
+
+                objWriter.Flush();
+                mtlWriter.Flush();
+
+                objStream.Position = 0;
+                mtlStream.Position = 0;
+
+                var objEntry = zip.CreateEntry($"{item.FileName}.{layer.LayerName}.obj");
+                await using (var objEntryStream = objEntry.Open())
+                {
+                    await objStream.CopyToAsync(objEntryStream);
+                }
+
+                var mtlEntry = zip.CreateEntry($"{item.FileName}.{layer.LayerName}.mtl");
+                await using (var mtlEntryStream = mtlEntry.Open())
+                {
+                    await mtlStream.CopyToAsync(mtlEntryStream);
+                }
+            }
+
+            if (spawnPositionLayer is not null)
+            {
+                var spawnPositionEntry = zip.CreateEntry($"{item.FileName}.{spawnPositionLayer.LayerName}.txt");
+                await using (var entryStream = spawnPositionEntry.Open())
+                {
+                    await using var ms = new MemoryStream();
+                    await using var writer = new StreamWriter(ms);
+
+                    writer.WriteLine($"Position: {spawnPositionLayer.SpawnPosition}");
+                    writer.WriteLine($"Vertical angle: {spawnPositionLayer.VerticalAngle}");
+                    writer.WriteLine($"Roll angle: {spawnPositionLayer.RollAngle}");
+
+                    writer.Flush();
+                    ms.Position = 0;
+
+                    await ms.CopyToAsync(entryStream);
+                }
+            }
+        }
+
+        zipStream.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(zipStream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", $"{item.FileName}.zip", streamRef);
+    }
+
+    private void LoadItemMeshInfo()
+    {
+        if (blockDirBasePath is null)
+        {
+            return;
+        }
+
+        items = Directory.GetFiles(blockDirBasePath)
+            .Select(x => GBX.NET.Gbx.Parse<GBX.NET.Engines.GameData.CGameItemModel>(x))
+            .ToList();
+    }
+
+    private async Task LoadMacroblockInfo()
+    {
+        var mblocks = await Db.MacroblockUploads
+            .Include(x => x.BlockItem)
+            .Where(x => x.BlockItem.BlockId == block!.Id)
+            .GroupBy(x => x.BlockItem)
+            .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
+            .ToListAsync();
+
+        macroblocks = mblocks
+            .ToDictionary(
+                x => x.BlockItem,
+                x => GBX.NET.Gbx.ParseNode<GBX.NET.Engines.Game.CGameCtnMacroBlockInfo>(new MemoryStream(x.Data)));
+    }
+
+    private float GetUploadValue(ItemUpload upload, int totalValue)
+    {
+        return (upload.Value == 0 ? 1 : upload.Value) / (float)totalValue * upload.BlockItem.Value;
+    }
+
+    private async Task UploadValueChanged(ItemUpload upload, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (int.TryParse(e.Value?.ToString(), out var value))
+        {
+            upload.Value = value;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task ItemValueChanged(BlockItem item, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (int.TryParse(e.Value?.ToString(), out var value))
+        {
+            item.Value = value;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task JustResaveChanged(BlockItem item, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (bool.TryParse(e.Value?.ToString(), out var justResave))
+        {
+            item.JustResave = justResave;
+            await Db.SaveChangesAsync();
+        }
+    }
+
+    private async Task DoneChanged(Block block, ChangeEventArgs e)
+    {
+        if (user is null)
+        {
+            return;
+        }
+
+        if (!user.IsAdmin)
+        {
+            return;
+        }
+
+        if (bool.TryParse(e.Value?.ToString(), out var isDone))
+        {
+            block.IsDone = isDone;
+            await Db.SaveChangesAsync();
+        }
+    }
+}

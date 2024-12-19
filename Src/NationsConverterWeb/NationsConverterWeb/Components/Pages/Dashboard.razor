@@ -1,0 +1,494 @@
+﻿@page "/dashboard"
+@attribute [Authorize(Roles = "Admin,Developer,Modeler")]
+@inject IDbContextFactory<AppDbContext> DbFactory
+@inject IJSRuntime JS
+@inject ILogger<Dashboard> Logger
+@rendermode InteractiveServer
+
+<PageTitle>Dashboard - Nations Converter 2</PageTitle>
+
+@{
+    using var db = DbFactory.CreateDbContext();
+    blocks = db.Blocks
+        .Where(x => x.Name.Contains(searchValue) && x.EnvironmentId.Contains(Environment ?? ""))
+        .Include(x => x.AssignedTo)
+        .ThenInclude(x => x!.DiscordUser)
+        .AsNoTracking()
+        .Select(x => new BlockDto
+        {
+            Id = x.Id,
+            Name = x.Name,
+            AssignedTo = x.AssignedTo,
+            AssignedToId = x.AssignedToId,
+            AssignedAt = x.AssignedAt,
+            IsDone = x.IsDone,
+            HasUpload = x.HasUpload,
+            CategoryId = x.CategoryId,
+            SubCategoryId = x.SubCategoryId,
+            EnvironmentId = x.EnvironmentId,
+        })
+        .ToArray();
+}
+
+<div class="page-container">
+    <h2>Welcome back @(globalName)!</h2>
+
+    <div class="container">
+        <div class="primary">
+            <div class="categories">
+                <button class="button">Modless</button>
+            </div>
+            <div class="categories">
+                <a class="button" href="dashboard">All</a>
+                <a class="button" href="dashboard?env=Desert">Desert</a>
+                <a class="button" href="dashboard?env=Rally">Rally</a>
+                <a class="button" href="dashboard?env=Snow">Snow</a>
+                <a class="button" href="dashboard?env=Island">Island</a>
+                <a class="button" href="dashboard?env=Bay">Bay</a>
+                <a class="button" href="dashboard?env=Coast">Coast</a>
+                <a class="button" href="dashboard?env=Canyon">Canyon</a>
+            </div>
+            <div class="categories">
+                <input type="text" style="flex: 1" @oninput="SearchChanged" />
+            </div>
+            <div class="grid">
+                @if (currentDiscordUser?.User.IsAdmin == true)
+                {
+                    <a href="dashboard/add" class="new"><img src="img/add.webp" width="32" height="32" /> Add block...</a>
+                }
+
+                @foreach (var block in blocks)
+                {
+                    <a href="dashboard/block/@block.Name">
+                        <img src="blockicon/@block.Name" class="blockicon" loading="lazy" width="32" height="32" />
+
+                        @block.Name
+                    </a>
+                    <button class="button" @onclick="() => AssignOrUnassignAsync(block)">
+                        @if (block.AssignedTo is not null)
+                        {
+                            @if (block.AssignedTo.DiscordUser?.AvatarHash is null)
+                            {
+                                <img class="modeler" src="img/discord-no-pfp.webp" width="24" height="24" />
+                            }
+                            else
+                            {
+                                <img class="modeler" title="Assigned to @(block.AssignedTo.DiscordUser.GlobalName ?? block.AssignedTo.DiscordUser.Username)"
+                                src="https://cdn.discordapp.com/avatars/@block.AssignedTo.DiscordUser.Id/@block.AssignedTo.DiscordUser.AvatarHash"
+                                width="24" height="24" />
+                            }
+                        }
+                        else if (block.IsDone)
+                        {
+                            <img class="modeler" src="img/done.webp" width="24" height="24" />
+                        }
+                        else if (block.HasUpload)
+                        {
+                            <img class="modeler" src="img/wip.webp" width="24" height="24" />
+                        }
+                    </button>
+                }
+            </div>
+        </div>
+        <div class="members">
+            <div class="additional-links">
+                <span>Your payout value: @currentDiscordUser?.User.PayoutValue</span>
+                <span>Currently paid: @currentDiscordUser?.User.CurrentlyPaidValue</span>
+
+                <button class="button" @onclick="DownloadCompleteItemsAsync">Download all complete items</button>
+
+                @if (currentDiscordUser?.User.IsAdmin == true)
+                {
+                    <button class="button" @onclick="DownloadValueReviewItemsAsync">Download value review items</button>
+                    <button class="button" @onclick="UpdatePayoutValuesAsync">Update payout values</button>
+                    <a href="/bulkfix">Bulk fix</a>
+                }
+
+                <button class="button" @onclick="DownloadClaimedInitItemsAsync">Download all claimed init items</button>
+
+                <a href="/data/NationsConverterCLI.zip" download="NationsConverterCLI.zip">Download converter</a>
+                <a href="/data/items.zip" download="NC2Items_Init.zip">Download all init items</a>
+                <a href="/data/GameData_TMUF_NC2.zip" download="GameData_TMUF_NC2.zip">Download TMUF GameData</a>
+            </div>
+            <h3>Developers & Modelers</h3>
+            @foreach (var discordUser in discordUsers.Where(x => x.User.IsStaff))
+            {
+                <div title="@discordUser.Username">
+                    @if (discordUser.AvatarHash is null)
+                    {
+                        <img src="img/discord-no-pfp.webp" width="32" height="32" />
+                    }
+                    else
+                    {
+                        <img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" />
+                    }
+                    <span>@(discordUser.GlobalName ?? discordUser.Username)</span>
+                </div>
+            }
+            <h3>Supporters</h3>
+            @if (discordUsers.Any(x => !x.User.IsStaff))
+            {
+                @foreach (var discordUser in discordUsers.Where(x => !x.User.IsStaff))
+                {
+                    <div title="@discordUser.Username">
+                        @if (discordUser.AvatarHash is null)
+                        {
+                            <img src="img/discord-no-pfp.webp" width="32" height="32" />
+                        }
+                        else
+                        {
+                            <img src="https://cdn.discordapp.com/avatars/@discordUser.Id/@discordUser.AvatarHash" width="32" height="32" />
+                        }
+                        <span>@(discordUser.GlobalName ?? discordUser.Username)</span>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Nobody?</p>
+            }
+        </div>
+    </div>
+    <a class="button" href="/logout" style="position: absolute;top: 22px; right: 0;">Logout</a>
+</div>
+
+@code {
+    [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
+
+    private string? globalName;
+    private ulong? snowflake;
+    private DiscordUser? currentDiscordUser;
+    private DiscordUser[] discordUsers = [];
+    private BlockDto[] blocks = [];
+
+    private bool loading;
+    private string searchValue = "";
+
+    [SupplyParameterFromQuery(Name = "env")]
+    public string? Environment { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthenticationStateTask is null)
+        {
+            return;
+        }
+
+        var authState = await AuthenticationStateTask;
+        var user = authState.User;
+
+        globalName = user.Identities
+            .FirstOrDefault()?
+            .FindFirst(DiscordAdditionalClaims.GlobalName)?.Value
+            ?? user.Identity?.Name;
+
+        if (!ulong.TryParse(user.Identities
+            .FirstOrDefault()?
+            .FindFirst(ClaimTypes.NameIdentifier)?.Value, out var snowflake))
+        {
+            return;
+        }
+
+        this.snowflake = snowflake;
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (loading)
+        {
+            return;
+        }
+
+        loading = true;
+
+        await using var db = DbFactory.CreateDbContext();
+
+        discordUsers = await db.DiscordUsers
+            .Include(x => x.User)
+            .OrderByDescending(x => x.User.IsAdmin)
+            .ThenByDescending(x => x.User.IsDeveloper)
+            .ThenByDescending(x => x.User.IsModeler)
+            .ThenBy(x => x.GlobalName ?? x.Username)
+            .ToArrayAsync();
+
+        currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
+
+        /*blocks = db.Blocks
+        .Where(x => x.Name.Contains(searchValue))
+        .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
+        .Include(x => x.AssignedTo)
+        .ThenInclude(x => x!.DiscordUser)
+        .AsNoTracking()
+            .Select(x => new BlockDto
+            {
+            Id = x.Id,
+            Name = x.Name,
+            AssignedTo = x.AssignedTo,
+            AssignedToId = x.AssignedToId,
+            AssignedAt = x.AssignedAt,
+            IsDone = x.IsDone,
+            HasUpload = x.HasUpload,
+            CategoryId = x.CategoryId,
+            SubCategoryId = x.SubCategoryId,
+            EnvironmentId = x.EnvironmentId,
+        })
+        .ToArray();*/
+
+        loading = false;
+    }
+
+    private async Task DownloadCompleteItemsAsync()
+    {
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploads = await db.ItemUploads
+            .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
+            .GroupBy(x => x.BlockItem)
+            .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
+            .ToListAsync();
+
+        using var msPack = new MemoryStream();
+
+        using (var zip = new ZipArchive(msPack, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var upload in uploads)
+            {
+                var filePath = Path.Combine(
+                    "Items",
+                    "NC2",
+                    upload.BlockItem.Block.CategoryId,
+                    upload.BlockItem.Block.SubCategoryId,
+                    "MM_Collision",
+                    upload.BlockItem.Block.EnvironmentId,
+                    upload.BlockItem.Block.PageName,
+                    upload.BlockItem.Block.Name,
+                    upload.BlockItem.FileName);
+                var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
+
+                entry.LastWriteTime = upload.LastModifiedAt;
+
+                using var entryStream = entry.Open();
+                await using var uploadStream = new MemoryStream(upload.Data);
+                await uploadStream.CopyToAsync(entryStream);
+            }
+        }
+
+        msPack.Position = 0;
+
+        using var ms = new MemoryStream();
+
+        using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            var entry = zip.CreateEntry("UserData/InProgress.zip", CompressionLevel.NoCompression);
+            using var entryStream = entry.Open();
+            await msPack.CopyToAsync(entryStream);
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "UserData.zip", streamRef);
+    }
+
+    private async Task DownloadClaimedInitItemsAsync()
+    {
+        if (currentDiscordUser is null)
+        {
+            return;
+        }
+
+        await using var db = DbFactory.CreateDbContext();
+
+        var claimedBlocks = await db.Blocks
+            .Where(x => x.AssignedToId == currentDiscordUser.UserId && !x.IsDone)
+            .Include(x => x.Items)
+            .ToListAsync();
+
+        await using var ms = new MemoryStream();
+
+        using (var zip = new System.IO.Compression.ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var block in claimedBlocks)
+            {
+                foreach (var item in block.Items)
+                {
+                    var blockDirBasePath = Path.Combine(AppContext.BaseDirectory, "Data", "items", "NC2", block.CategoryId, block.SubCategoryId, "MM_Collision", block.EnvironmentId, block.PageName, block.Name);
+                    var blockPath = Path.Combine(blockDirBasePath, item.FileName);
+
+                    if (!File.Exists(blockPath))
+                    {
+                        continue;
+                    }
+
+                    var entry = zip.CreateEntry(Path.Combine("ClaimedInits", block.Name, item.FileName));
+                    await using var entryStream = entry.Open();
+
+                    await using var fs = new FileStream(blockPath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true);
+                    await fs.CopyToAsync(entryStream);
+                }
+            }
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "ClaimedInits.zip", streamRef);
+    }
+
+    private async Task DownloadValueReviewItemsAsync()
+    {
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploads = await db.ItemUploads
+            .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
+            .Where(x => !x.BlockItem.Block.IsDone)
+            .Select(x => new { x.BlockItem.Block.Name, x.BlockItem.FileName, x.Data, x.UploadedAt, x.LastModifiedAt })
+            .ToListAsync();
+
+        var now = DateTimeOffset.UtcNow.ToString("yyyyMMddTHHmmss");
+
+        using var ms = new MemoryStream();
+
+        using (var zip = new ZipArchive(ms, ZipArchiveMode.Create, leaveOpen: true))
+        {
+            foreach (var upload in uploads)
+            {
+                var filePath = Path.Combine(
+                    "ValueReview",
+                    now,
+                    upload.Name,
+                    $"{GBX.NET.GbxPath.GetFileNameWithoutExtension(upload.FileName)}_{upload.UploadedAt:yyyyMMddTHHmmss}.Item{Path.GetExtension(upload.FileName)}");
+                var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
+
+                entry.LastWriteTime = upload.LastModifiedAt;
+
+                using var entryStream = entry.Open();
+                await using var uploadStream = new MemoryStream(upload.Data);
+                await uploadStream.CopyToAsync(entryStream);
+            }
+        }
+
+        ms.Position = 0;
+
+        using var streamRef = new DotNetStreamReference(ms);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "ValueReview.zip", streamRef);
+    }
+
+    private async Task UpdatePayoutValuesAsync()
+    {
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploadsPerItem = await db.ItemUploads
+            .Include(x => x.UploadedBy)
+            .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
+            .Where(x => x.UploadedBy != null && !x.UploadedBy.IsAdmin)
+            .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
+            .GroupBy(x => x.BlockItem)
+            .ToListAsync();
+
+        var userTotalValues = new Dictionary<int, float>();
+
+        foreach (var uploads in uploadsPerItem)
+        {
+            var itemValue = uploads.Key.Value;
+
+            if (itemValue == 0)
+            {
+                continue;
+            }
+
+            if (!uploads.Key.Block.IsDone)
+            {
+                continue;
+            }
+
+            var uploadTotalValue = uploads.Sum(x => x.Value == 0 ? 1 : x.Value);
+
+            foreach (var upload in uploads)
+            {
+                if (upload.UploadedBy is null)
+                {
+                    continue;
+                }
+
+                if (upload.UploadedBy.IsAdmin)
+                {
+                    userTotalValues[upload.UploadedBy.Id] = 0;
+                    continue;
+                }
+
+                var uploadValue = (upload.Value == 0 ? 1 : upload.Value) / (float)uploadTotalValue * itemValue;
+
+                if (userTotalValues.TryGetValue(upload.UploadedBy.Id, out var existingValue))
+                {
+                    userTotalValues[upload.UploadedBy.Id] = existingValue + uploadValue;
+                }
+                else
+                {
+                    userTotalValues[upload.UploadedBy.Id] = uploadValue;
+                }
+            }
+        }
+
+        foreach (var (userId, value) in userTotalValues)
+        {
+            Logger.LogInformation("User {UserId} has a payout value of {Value}", userId, value);
+        }
+
+        var users = await db.Users
+            .Where(x => userTotalValues.Keys.Contains(x.Id))
+            .ToListAsync();
+
+        foreach (var user in users)
+        {
+            user.PayoutValue = userTotalValues[user.Id];
+        }
+
+        await db.SaveChangesAsync();
+    }
+
+    private async Task AssignOrUnassignAsync(BlockDto block)
+    {
+        if (currentDiscordUser?.User is null)
+        {
+            return;
+        }
+
+        if (block is null)
+        {
+            return;
+        }
+
+        if (block.AssignedTo is null)
+        {
+            await using var db = DbFactory.CreateDbContext();
+
+            await db.Blocks.Where(x => x.Id == block.Id)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.AssignedToId, currentDiscordUser.User.Id)
+                    .SetProperty(x => x.AssignedAt, DateTimeOffset.UtcNow));
+        }
+        else
+        {
+            if (block is null || block.AssignedTo?.Id != currentDiscordUser.User?.Id)
+            {
+                return;
+            }
+
+            await using var db = DbFactory.CreateDbContext();
+
+            await db.Blocks.Where(x => x.Id == block.Id)
+                .ExecuteUpdateAsync(x => x.SetProperty(x => x.AssignedToId, default(int?))
+                    .SetProperty(x => x.AssignedAt, default(DateTimeOffset?)));
+
+            return;
+        }
+    }
+
+    private void SearchChanged(ChangeEventArgs args)
+    {
+        searchValue = args.Value?.ToString() ?? "";
+    }
+}

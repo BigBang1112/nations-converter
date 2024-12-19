@@ -1,0 +1,19 @@
+﻿<div>
+    @if (WebpData is null)
+    {
+        <img src="img/bloc.webp" width="64" height="64" style="opacity: 0.5" />
+    }
+    else
+    {
+        <img src="data:image/webp;base64,@Convert.ToBase64String(WebpData)" width="64" height="64" />
+    }
+    <span>@Name</span>
+</div>
+
+@code {
+    [Parameter]
+    public string Name { get; set; } = "";
+
+    [Parameter]
+    public byte[]? WebpData { get; set; }
+}

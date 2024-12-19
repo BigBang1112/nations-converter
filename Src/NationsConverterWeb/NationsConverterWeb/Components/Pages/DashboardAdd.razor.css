@@ -1,0 +1,50 @@
+﻿h1 {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0;
+}
+
+h3, h4 {
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.container a {
+    display: flex;
+    border: 2px solid #444;
+    border-radius: 5px;
+    padding: 3px 5px;
+    align-items: center;
+    gap: 8px;
+    background-color: #333;
+    text-decoration: none;
+    color: white;
+}
+
+    .container a:hover {
+        background-color: #444;
+    }
+
+.environments {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.block-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

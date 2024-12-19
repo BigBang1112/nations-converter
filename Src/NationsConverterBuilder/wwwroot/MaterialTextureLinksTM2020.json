@@ -1,0 +1,1552 @@
+{
+    "Ad1x1Screen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Ad1x1Screen.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Ad2x1Screen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Ad2x1Screen.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Ad2x3Screen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium256\\Media\\Texture\\WarpRace2x3A.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Ad2x3ScreenVeryBig": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium256\\Media\\Texture\\WarpRace2x3A.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Ad4x1Screen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Ad4x1Screen.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Canopy": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\Canopy_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Canopy_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\Canopy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Canopy_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzDiff_Spec_Norm.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Canopy.ColorTable.gbx.json",
+        "Stadium\\Media\\ColorTargetTables\\TrackWall.ColorTable.gbx.json"
+    ],
+    "CanopyGlass": [
+        "Stadium\\Media\\Texture\\CanopyGlass_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyGlass_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyGlass_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyGlass_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDiffABlend_SpecNorm_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Canopy.ColorTable.gbx.json"
+    ],
+    "CanopyStructure": [
+        "Stadium\\Media\\Texture\\CanopyStructure_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_L.Texture.gbx",
+        "Stadium\\Media\\Texture\\CanopyStructure_L_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\CanopyStructure.ColorTable.gbx.json",
+        "Stadium\\Media\\ColorTargetTables\\TrackWall.ColorTable.gbx.json"
+    ],
+    "Chrono-00-00-001": [
+        "Stadium\\Func\\FuncShader\\Chrono-00-00-001.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-00-00-01": [
+        "Stadium\\Func\\FuncShader\\Chrono-00-00-01.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-00-00-10": [
+        "Stadium\\Func\\FuncShader\\Chrono-00-00-10.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-00-01-00": [
+        "Stadium\\Func\\FuncShader\\Chrono-00-01-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-00-10-00": [
+        "Stadium\\Func\\FuncShader\\Chrono-00-10-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-01-00-00": [
+        "Stadium\\Func\\FuncShader\\Chrono-01-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono-10-00-00": [
+        "Stadium\\Func\\FuncShader\\Chrono-10-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Chrono": [
+        "Stadium\\Media\\Texture\\Chrono_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\Chrono_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-00-00-001": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-001.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-00-00-01": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-01.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-00-00-10": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-10.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-00-01-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-01-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-00-10-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-10-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-01-00-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-01-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint-10-00-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-10-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoCheckpoint": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-00-00-001": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-001.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-00-00-01": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-01.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-00-00-10": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-00-10.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-00-01-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-01-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-00-10-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-00-10-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-01-00-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-01-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish-10-00-00": [
+        "Stadium\\Func\\FuncShader\\ChronoFinish-10-00-00.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ChronoFinish": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ChronoFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "CollisionGateGameplay": null,
+    "CollisionTrackBorder": null,
+    "DecalCurbs": [
+        "Stadium\\Media\\Texture\\DecalCurbs_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalCurbs_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalCurbs_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalCurbs_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalGateGameplay": [
+        "Stadium\\Media\\Texture\\DecalGateGameplay_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalGateGameplay_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalGateGameplay_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalMarks": [
+        "Stadium\\Media\\Texture\\DecalMarks_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarks_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarks_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalMarksItems": [
+        "Stadium\\Media\\Texture\\DecalMarksItems_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksItems_D_HueShiftMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksItems_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksItems_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalMarksRamp": [
+        "Stadium\\Media\\Texture\\DecalMarksRamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksRamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksRamp_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalMarksStart": [
+        "Stadium\\Media\\Texture\\DecalMarksStart_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksStart_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksStart_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalMarksStart_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "DecalObstaclePusher": [
+        "Stadium\\Media\\Texture\\DecalObstaclePusher_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstaclePusher_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstaclePusher_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalObstacleTube": [
+        "Stadium\\Media\\Texture\\DecalObstacleTube_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTube_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTube_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalObstacleTurnstileLeft": [
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstileLeft_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstile_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstile_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalObstacleTurnstileRight": [
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstileRight_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstile_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalObstacleTurnstile_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalPaint2Logo4x1": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalLogo4x1_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaint2Logo8x1": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalLogo8x1_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaint2Sponsor4x1A": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1A_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals2.ColorTable.gbx.json"
+    ],
+    "DecalPaint2Sponsor4x1B": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1B_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals2.ColorTable.gbx.json"
+    ],
+    "DecalPaint2Sponsor4x1C": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1C_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals2.ColorTable.gbx.json"
+    ],
+    "DecalPaint2Sponsor4x1D": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1D_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals2.ColorTable.gbx.json"
+    ],
+    "DecalPaint2Sponsor4x1NoColorizeA": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1A_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaint2Sponsor4x1NoColorizeB": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1B_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaint2Sponsor4x1NoColorizeC": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1C_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaint2Sponsor4x1NoColorizeD": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1D_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintLogo4x1": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalLogo4x1_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintLogo8x1": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalLogo8x1_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintLogo8x1Colorize": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalLogo8x1_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalPaintSponsor4x1A": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1A_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalPaintSponsor4x1B": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1B_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalPaintSponsor4x1C": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1C_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalPaintSponsor4x1D": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1D_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportDecals.ColorTable.gbx.json"
+    ],
+    "DecalPaintSponsor4x1NoColorizeA": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1A_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintSponsor4x1NoColorizeB": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1B_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintSponsor4x1NoColorizeC": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1C_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPaintSponsor4x1NoColorizeD": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor4x1D_M.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_DecalGeom_TOp_PyPxzDSN_X2.Material.gbx"
+    ],
+    "DecalPlatform": [
+        "Stadium\\Media\\Texture\\DecalPlatform_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPlatform_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPlatform_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPlatform_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "DecalSpecialTurbo": [
+        "Stadium\\Media\\Texture\\DecalSpecialTurbo_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSpecial_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSpecial_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecalSponsor1x1BigA": [
+        "Stadium\\Media\\Texture\\DecalSponsor1x1BigA_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor1x1BigA_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalSponsor1x1BigA_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block DecalGeom.Material.gbx"
+    ],
+    "DecoCliff": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecoCliffPxz_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoCliffPxz_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoCliffPxz_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzDiff_Spec_Norm.Material.gbx"
+    ],
+    "DecoCliffBase": [
+        "Stadium\\Media\\Texture\\DecoCliffBase_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoCliffBase_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoCliffBase_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoCliffBase_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\TrackWall.ColorTable.gbx.json"
+    ],
+    "DecoHill": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTDiffSpecNorm_PyX2Hx2.Material.gbx"
+    ],
+    "DecoHill2": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHillPy_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoHill_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTDiffSpecNorm_PyX2Hx2.Material.gbx"
+    ],
+    "DecoTechnics": [
+        "Stadium\\Media\\Texture\\DecoTechnics_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoTechnics_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecoTechnics_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "GateGameplayScreen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\GateGameplayScreen.Texture.Gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "GlassWaterWall": [
+        "Stadium\\Media\\Texture\\GlassWaterWall_T.Texture.Gbx",
+        "Stadium\\Media\\Texture\\GlassWaterWall_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\GlassWaterWall_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\InvFresnelPC3.Texture.gbx",
+        "Stadium\\Media\\Texture\\GlassWaterWall_O.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block WaterWall.Material.gbx"
+    ],
+    "GlossyFloor": [
+        "Stadium\\Media\\Texture\\GlossyFloor_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\GlossyFloor_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\GlossyFloor_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "Grass": [
+        "Stadium\\Media\\Texture\\Grass_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Grass_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Grass_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Grass_X2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PDiff_Spec_Norm GrassX2.Material.gbx"
+    ],
+    "GrassFence": [
+        "Stadium\\Media\\Texture\\Grass_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Grass_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\GrassFence_D.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 GrassFence_VDepLight.Material.gbx"
+    ],
+    "ItemBase": [
+        "Stadium\\Media\\Texture\\ItemBase_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemBase_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemBase_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemBorder": [
+        "Stadium\\Media\\Texture\\ItemBorder_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemBorder_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemBorder_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemCactus": [
+        "Stadium\\Media\\Texture\\ItemCactus_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemCactus_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemCactus_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemCurveSign": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemAd1x1ScreenSmall_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemCurveSignB": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemAd1x1ScreenSmallB_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemCurveSignC": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemAd1x1ScreenSmallC_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemFlag": [
+        "Stadium\\Media\\Texture\\ItemFlag_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemFlag_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemFlag_R.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Warp_TDiffSpec_VertexTween.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemFlagNoAnim": [
+        "Stadium\\Media\\Texture\\ItemFlag_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemFlag_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DecalPaint_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemFlag_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemInflatableFloor": [
+        "Stadium\\Media\\Texture\\ItemInflatableFloor_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableFloor_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableFloor_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableFloor_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Fun.ColorTable.gbx.json"
+    ],
+    "ItemInflatableMat": [
+        "Stadium\\Media\\Texture\\ItemInflatableMat_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableMat_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableMat_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableMat_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Fun.ColorTable.gbx.json"
+    ],
+    "ItemInflatableTube": [
+        "Stadium\\Media\\Texture\\ItemInflatableTube_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableTube_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableTube_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemInflatableTube_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Fun.ColorTable.gbx.json"
+    ],
+    "ItemLamp": [
+        "Stadium\\Media\\Texture\\ItemLamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemLampLight": [
+        "Stadium\\Media\\Texture\\ItemLamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemLampLightB": [
+        "Stadium\\Media\\Texture\\ItemLamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLampB_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemLampLightC": [
+        "Stadium\\Media\\Texture\\ItemLamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLampC_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemLamp_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemObstacle": [
+        "Stadium\\Media\\Texture\\ItemObstacle_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacle_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacle_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemObstacleLight": [
+        "Stadium\\Media\\Texture\\ItemObstacleLight_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacleLight_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacleLight_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacleLight_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacleLight_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstacleLight_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ItemObstaclePusher": [
+        "Stadium\\Media\\Texture\\ItemObstaclePusher_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstaclePusher_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemObstaclePusher_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemPillar": [
+        "Stadium\\Media\\Texture\\ItemPillar_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemPillar2": [
+        "Stadium\\Media\\Texture\\ItemPillar2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemPillar_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemRamp": [
+        "Stadium\\Media\\Texture\\ItemRamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemRamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemRamp_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemRamp_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemRoadSign": [
+        "Stadium\\Media\\Texture\\ItemRoadSign_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemRoadSign_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemRoadSign_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemSpectator": [
+        "Stadium\\Media\\Texture\\ItemSpectator_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSpectator_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSpectator_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemSpectatorLow": [
+        "Stadium\\Media\\Texture\\ItemSpectatorLow_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSpectatorLow_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSpectatorLow_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_DynaFacing_ForceNMap_CubeOut_TestOp.Material.gbx"
+    ],
+    "ItemSupportConnector": [
+        "Stadium\\Media\\Texture\\ItemSupportConnector_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSupportConnector_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSupportConnector_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ItemSupportTube": [
+        "Stadium\\Media\\Texture\\ItemSupportTube_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSupportTube_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSupportTube_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemSupportTube_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemTorchFlame": [
+        "Stadium\\Func\\FuncShader\\TorchFlame.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\ItemTorchFlame.Texture.Gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAdd.Material.gbx"
+    ],
+    "ItemTrackBarrier": [
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemTrackBarrier2": [
+        "Stadium\\Media\\Texture\\ItemTrackBarrier2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemTrackBarrierB": [
+        "Stadium\\Media\\Texture\\ItemTrackBarrierB_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_D_HueMask2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemTrackBarrierC": [
+        "Stadium\\Media\\Texture\\ItemTrackBarrierC_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemTrackBarrier_D_HueMask2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ItemWrongWaySign": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ItemAd1x1ScreenSmallWrongWay_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "LightShape": [
+        "Stadium\\Media\\Texture\\LightShape_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightShape_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightShape_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightShape_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightShape_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightShape_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "LightSpot": [
+        "Stadium\\Media\\Texture\\LightSpot_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "LightSpot2": [
+        "Stadium\\Media\\Texture\\LightSpot2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightSpot2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "LightTubeBig": [
+        "Stadium\\Media\\Texture\\LightTube_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_I.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTubeRefract_I.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTubeBig_G.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSNI_CubeOut.Material.gbx"
+    ],
+    "LightTubeSmall": [
+        "Stadium\\Media\\Texture\\LightTube_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTube_I.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTubeRefract_I.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightTubeSmall_G.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSNI_CubeOut.Material.gbx"
+    ],
+    "OpenTechBorders": [
+        "Stadium\\Media\\Texture\\OpenTechBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\OpenTechBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\OpenTechBorders_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\OpenTechBorders_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "PlatformTech": [
+        "Stadium\\Media\\Texture\\PlatformTech_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\PlatformTech_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\PlatformTech_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "PodiumBorder": [
+        "Stadium\\Media\\Texture\\PodiumBorder_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumBorder_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumBorder_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumBorder_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumBorder_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumBorder_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "PodiumMedalMetal": [
+        "Stadium\\Media\\Texture\\PodiumMedalMetal_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumMedalMetal_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumMedalMetal_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "PodiumScreen155": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumScreen155_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn_Parallax.Material.gbx"
+    ],
+    "PodiumSelfIllum": [
+        "Stadium\\Media\\Texture\\PodiumSelfIllum_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumSelfIllum_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumSelfIllum_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumSelfIllum_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSNI_CubeOut.Material.gbx"
+    ],
+    "PodiumStepScreen": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\PodiumStepScreen.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn_Parallax.Material.gbx"
+    ],
+    "PoolBorders": [
+        "Stadium\\Media\\Texture\\TrackBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Pylon": [
+        "Stadium\\Media\\Texture\\Pylon_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Pylon_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Pylon_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "RaceAd6x1": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceAd6x1.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceArchCheckpoint": [
+        "Stadium\\Media\\Texture\\RaceArch_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArchCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceArchCheckpointSmall": [
+        "Stadium\\Media\\Texture\\RaceArch_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArchCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceArchFinish": [
+        "Stadium\\Media\\Texture\\RaceArch_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArchFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceArchFinishSmall": [
+        "Stadium\\Media\\Texture\\RaceArch_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArchFinish_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceArch_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceScreenStart": [
+        "Stadium\\Func\\FuncShader\\StartSign5.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceScreenStart_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceScreenStartMed": [
+        "Stadium\\Func\\FuncShader\\StartSign5Med.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceScreenStart_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceScreenStartSmall": [
+        "Stadium\\Func\\FuncShader\\StartSign5Small.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceScreenStart_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceScreenStartSmall8m": [
+        "Stadium\\Func\\FuncShader\\StartSigne5Small8m.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RaceScreenStart_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "RaceTriggerFXCheckpoint": [
+        "Stadium\\Func\\FuncShader\\SpecialFXGate.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\RaceTriggerFXCheckpoint_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAddModCV.Material.gbx"
+    ],
+    "RaceTriggerFXFinish": [
+        "Stadium\\Func\\FuncShader\\SpecialFXGate.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\RaceTriggerFXFinish_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAddModCV.Material.gbx"
+    ],
+    "RaceTriggerFXMultilap": [
+        "Stadium\\Func\\FuncShader\\SpecialFXGate.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\RaceTriggerFXMultilap_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAddModCV.Material.gbx"
+    ],
+    "RoadBump": [
+        "Stadium\\Media\\Texture\\RoadBump_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadBump_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadBump_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadBump_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "RoadDirt": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DirtPy_D.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTDiffSpecNorm_PyX2Hx2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "RoadDirtFullColorize": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\DirtPy_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\DirtPy_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadDirt_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTDiffSpecNorm_PyX2Hx2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "RoadIce": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefault.Texture.Gbx",
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPy.Texture.Gbx",
+        "Stadium\\Media\\Texture\\IcePy_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\IcePy_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\IceMarks_M.Texture.gbx",
+        "Stadium\\Media\\Texture\\IceMarks_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\IceMarks_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadIce_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadIce_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadIce_H.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTLayered.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "RoadTech": [
+        "Stadium\\Media\\Texture\\RoadTech_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadTech_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadTech_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\RoadTech_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "ScreenBack": [
+        "Stadium\\Media\\Texture\\ScreenBack_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenBack_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenBack_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ScreenPusher": [
+        "Stadium\\Func\\FuncShader\\StartSign5.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ScreenPusher_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Show4x1": [
+        "Stadium\\Media\\Texture\\LightCells3_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Show4x1.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells3_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "SpeakerFront": [
+        "Stadium\\Media\\Texture\\SpeakerFront_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpeakerFront_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpeakerFront_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "SpeakerSide": [
+        "Stadium\\Media\\Texture\\SpeakerSide_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpeakerSide_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpeakerSide_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "SpecialFXGateGameplay": [
+        "Stadium\\Func\\FuncShader\\SpecialFX.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\SpecialFXGateGameplay_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAdd.Material.gbx"
+    ],
+    "SpecialFXTurbo": [
+        "Stadium\\Func\\FuncShader\\SpecialFX.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\SpecialFXTurbo_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAdd.Material.gbx"
+    ],
+    "SpecialSignOff": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpecialSignOff_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "SpecialSignTurbo": [
+        "Stadium\\Media\\Texture\\LightCells2_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\SpecialSignTurbo_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\LightCells2_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "Speedometer": [
+        "Stadium\\Media\\Texture\\Speedometer_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "SpeedometerLight": [
+        "Stadium\\Media\\Texture\\Speedometer_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSNI_CubeOut.Material.gbx"
+    ],
+    "SpeedometerLight_Dyna": [
+        "Stadium\\Media\\Texture\\Speedometer_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Speedometer_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSNI_CubeOut.Material.gbx"
+    ],
+    "Structure": [
+        "Stadium\\Media\\Texture\\Structure_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Structure_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Structure_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Structure_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "Technics": [
+        "Stadium\\Media\\Texture\\Technics_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Technics_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Technics_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\Technics_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "TechnicsSpecials": [
+        "Stadium\\Media\\Texture\\TechnicsSpecials_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsSpecials_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsSpecials_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "TechnicsStep": [
+        "Stadium\\Media\\Texture\\TechnicsStep_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsStep_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsStep_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsStep_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "TechnicsTrims": [
+        "Stadium\\Media\\Texture\\TechnicsTrims_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsTrims_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsTrims_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "TechnicsTrimsColorize": [
+        "Stadium\\Media\\Texture\\TechnicsTrims_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsTrims_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsTrims_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TechnicsTrims_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportObstacles.ColorTable.gbx.json"
+    ],
+    "ThemeRallyBarrier": [
+        "Stadium\\Media\\Texture\\ThemeRallyBarrier_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyBarrier_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyBarrier_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ThemeRallyCastleBorders": [
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ThemeRallyCastleBordersTransparent": [
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleBorders_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TDiffA_Spec_Norm.Material.gbx"
+    ],
+    "ThemeRallyCastleRoof": [
+        "Stadium\\Media\\Texture\\ThemeRallyCastleRoof_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleRoof_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleRoof_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleRoof_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "ThemeRallyCastleWall": [
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_ACosSmoothPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzDiff_Spec_Norm.Material.gbx"
+    ],
+    "ThemeRallyCastleWallUV": [
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeRallyCastleWall_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ThemeSnowRoad": [
+        "Stadium\\Media\\Texture\\ThemeSnowRoad_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoad_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoad_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "ThemeSnowRoadBorder": [
+        "Stadium\\Media\\Texture\\ThemeSnowRoadBorder_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoadBorder_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoadBorder_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoadBorder_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "ThemeSnowTempleDetails": [
+        "Stadium\\Media\\Texture\\ThemeSnowTempleDetails_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleDetails_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleDetails_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleDetails_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "ThemeSnowTempleFloor": [
+        "Stadium\\Media\\Texture\\ThemeSnowTempleFloor_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoad_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowRoad_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleFloor_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\TrackWall.ColorTable.gbx.json"
+    ],
+    "ThemeSnowTempleLamp": [
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleLamp_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx"
+    ],
+    "ThemeSnowTempleTransparent": [
+        "Stadium\\Media\\Texture\\ThemeSnowTempleTransparent_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleTransparent_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\ThemeSnowTempleTransparent_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TDiffA_Spec_Norm.Material.gbx"
+    ],
+    "TrackBorders": [
+        "Stadium\\Media\\Texture\\TrackBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_L.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_L_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\SportIllum.ColorTable.gbx.json"
+    ],
+    "TrackBordersOff": [
+        "Stadium\\Media\\Texture\\TrackBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_I.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_H.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackBorders_L.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut_DispIn.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "TrackWall": [
+        "Techno3\\Media\\Texture\\ACosSmoothDefaultPyPxz.Texture.Gbx",
+        "Stadium\\Media\\Texture\\TrackWallPxz_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallPxz_D_HueMask.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallPxz_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallPxz_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallPy_X2.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWall_D.Texture.gbx",
+        "Techno3\\Media\\Texture\\Rgba0000.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWall_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWall_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzTDiffSpecNorm_PyX2Hx2.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\TrackWall.ColorTable.gbx.json"
+    ],
+    "TrackWallClips": [
+        "Stadium\\Media\\Texture\\TrackWallClips_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallClips_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallClips_N.Texture.gbx",
+        "Stadium\\Media\\Texture\\TrackWallClips_D_HueMask.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx",
+        "Stadium\\Media\\ColorTargetTables\\Sport.ColorTable.gbx.json"
+    ],
+    "TriggerFXGateGameplay": [
+        "Stadium\\Func\\FuncShader\\SpecialFXGate.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\TriggerFXGateGameplay_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAddModCV.Material.gbx"
+    ],
+    "TriggerFXTurbo": [
+        "Stadium\\Func\\FuncShader\\SpecialFXGate.FuncShader.Gbx",
+        "Stadium\\Media\\Texture\\TriggerFXTurbo_I.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block TAddModCV.Material.gbx"
+    ],
+    "Underwater": [
+        "Stadium\\Media\\Texture\\Underwater_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Underwater_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Underwater_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "WaterBorders": [
+        "Stadium\\Media\\Texture\\WaterBorders_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\WaterBorders_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\WaterBorders_N.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3_Block_TDSN_CubeOut.Material.gbx"
+    ],
+    "Waterground": [
+        "Techno3\\Media\\Texture\\ACosSmoothtPyPxzShort.Texture.Gbx",
+        "Stadium\\Media\\Texture\\Waterground_D.Texture.gbx",
+        "Stadium\\Media\\Texture\\Waterground_R.Texture.gbx",
+        "Stadium\\Media\\Texture\\Waterground_N.Texture.gbx",
+        "Techno3\\Media\\Texture\\DisabledModX2.Texture.gbx",
+        "Techno3\\Media\\Material\\Tech3 Block PyPxzDiff_Spec_Norm.Material.gbx"
+    ]
+}

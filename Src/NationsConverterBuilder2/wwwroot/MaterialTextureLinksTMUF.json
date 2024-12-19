@@ -1,0 +1,3581 @@
+{
+  "AlpineAdvertising": [
+    "Alpine\\Func\\FuncShader\\AlpineEnvmapClouds.FuncShader.Gbx",
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "AlpineAsphalt": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineAsphaltFreeWheeling": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltFreeWheeling.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineAsphaltTurbo": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineAsphaltTurboRoulette": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Alpine\\Media\\Texture\\AlpineAsphaltTurboRouletteDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "AlpineBark": [
+    "Alpine\\Media\\Texture\\AlpineBark.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "AlpineCollisionIce": null,
+  "AlpineCollisionMetal": null,
+  "AlpineCollisionRock": null,
+  "AlpineCollisionSnow": null,
+  "AlpineCollisionWetGrass": null,
+  "AlpineCollisionWood": null,
+  "AlpineGreatWall": [
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineGreatWall.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineGreatWallCastle": [
+    "Alpine\\Media\\Texture\\AlpineGreatWallCastle.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "AlpineGreatWallRoad": [
+    "Alpine\\Media\\Texture\\AlpineGreatWallRoad.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineGreatWallToundra": [
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineGreatWall.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineHill": [
+    "Alpine\\Media\\Texture\\AlpineSnow1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineHill.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnow2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineHillToundra": [
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineHill.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineHillTree": [
+    "Alpine\\Media\\Texture\\AlpineHillTree.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "AlpineIce": [
+    "Alpine\\Media\\Texture\\AlpineIceDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineIceFresnelPC1.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff Fresnel PX2.Material.Gbx"
+  ],
+  "AlpineIceBorders": [
+    "Alpine\\Media\\Texture\\AlpineIceFresnelPC1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineIceDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBorders.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff Fresnel TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineIceCanyon": [
+    "Alpine\\Media\\Texture\\AlpineIceFresnelPC1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineIceDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineIceCanyonDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff Fresnel TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineLamp": [
+    "Alpine\\Media\\Texture\\AlpineLamp.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Alpine\\Media\\Texture\\AlpineLampSelfI.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "AlpineMetalGrid": [
+    "Alpine\\Media\\Texture\\AlpineMetalGrid.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "AlpineMountainWarp": [
+    "Alpine\\Media\\Texture\\AlpineSnow1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineMountainWarp.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnow2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineMountainWarp2": [
+    "Alpine\\Media\\Texture\\AlpineSnow1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineMountainWarp2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnow2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpinePylonsWood": [
+    "Alpine\\Media\\Texture\\AlpinePylonsWood.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "AlpineRaceFlags": [
+    "Alpine\\Media\\Texture\\AlpineRaceFlags.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "AlpineRaceSigns": [
+    "Alpine\\Media\\Texture\\AlpineRaceSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "AlpineRoadChalet": [
+    "Alpine\\Media\\Texture\\AlpineRoadChaletDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Alpine\\Media\\Texture\\AlpineRoadChaletSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "AlpineRoadWood": [
+    "Alpine\\Media\\Texture\\AlpineRoadWoodDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineRoadWoodFreeWheeling": [
+    "Alpine\\Media\\Texture\\AlpineRoadWoodFreeWheeling.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineRoadWoodNotCollidable": [
+    "Alpine\\Media\\Texture\\AlpineRoadWoodDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineRoadWoodTurbo": [
+    "Alpine\\Media\\Texture\\AlpineRoadWoodTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "AlpineRoadWoodTurboRoulette": [
+    "Alpine\\Media\\Texture\\AlpineRoadWoodTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Alpine\\Media\\Texture\\AlpineRoadWoodTurboRouletteDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "AlpineRocks": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineRocksDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineSignsSelfIllum": [
+    "Shader\\AlpineSignsSelfIllumPC0.Shader.Gbx"
+  ],
+  "AlpineSnow": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "AlpineSnowBorders": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBorders.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineSnowTreesShadows": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "AlpineSnowWarp": [
+    "Alpine\\Media\\Texture\\AlpineSnow1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnow2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "AlpineTemple": [
+    "Alpine\\Media\\Texture\\AlpineTempleDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "AlpineTempleAlpha": [
+    "Alpine\\Media\\Texture\\AlpineTempleDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "AlpineTempleRocks": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineTempleDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineToundra": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "AlpineToundraBorders": [
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBorders.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "AlpineTrees": [
+    "Alpine\\Media\\Texture\\AlpineTrees.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "AlpineTunnelAsphalt": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "AlpineTunnelGlowVolume": [
+    "Shader\\AlpineTunnelGlowVolumePC0.Shader.Gbx",
+    "Shader\\AlpineTunnelGlowVolumePC2.Shader.Gbx"
+  ],
+  "AlpineTunnelOutside": [
+    "Alpine\\Media\\Texture\\AlpineTunnelDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "AlpineTunnelRock": [
+    "Alpine\\Media\\Texture\\AlpineTunnelDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "AlpineTunnelTurbo": [
+    "Alpine\\Media\\Texture\\AlpineAsphaltTurboDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "AlpineTunnelWood": [
+    "Alpine\\Media\\Texture\\AlpineTunnelDiffuse.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "AlpineWarpShadowCaster": null,
+  "ApineGreatWallHillSnow": [
+    "Alpine\\Media\\Texture\\AlpineSnow1.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineGreatWallHill.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnow2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "ApineGreatWallHillToundra": [
+    "Alpine\\Media\\Texture\\AlpineToundra.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineGreatWallHill.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineToundra2.Texture.gbx",
+    "Alpine\\Media\\Texture\\AlpineSnowBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "EditorHelpers": [
+    "Interface\\Media\\Shader\\EditorHelpers.Shader.Gbx"
+  ],
+  "BayAdvertisement": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Material\\TSelfI PX2.Material.Gbx"
+  ],
+  "BayBridgeAlpha": [
+    "Bay\\Media\\Texture\\BayBridgeAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayBridgePillar": [
+    "Bay\\Media\\Texture\\BayBridgePillar.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "BayBridgeRedMetal": [
+    "Bay\\Media\\Texture\\BayBridgeRedMetal.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "BayBridgeRoad": [
+    "Bay\\Media\\Texture\\BayBridgeRoad.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayBridgeTurbo": [
+    "Bay\\Media\\Texture\\BayBridgeTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayBridgeTurbo2": [
+    "Bay\\Media\\Texture\\BayBridgeTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayBridgeTurboRoulette": [
+    "Bay\\Media\\Texture\\BayBridgeTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayBridgeTurboRoulette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "BayBuilding": [
+    "Bay\\Media\\Texture\\BayBuilding.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayBuildingSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BayBuildingBase": [
+    "Bay\\Media\\Texture\\BayBuildingBase.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayBuildingConcrete": [
+    "Bay\\Media\\Texture\\BayBuildingConcrete.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayBuildingNotCollidable": [
+    "Bay\\Media\\Texture\\BayBuilding.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayBuildingSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BayBuildingRoof": [
+    "Bay\\Media\\Texture\\BayBuildingRoof.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayCargoSkin": [
+    "Bay\\Media\\Texture\\BayCargoSkin.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayCargoUnderSea": [
+    "Bay\\Media\\Texture\\BayCargoSkin.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "BayCollisionAsphalt": null,
+  "BayCollisionMetal": null,
+  "BayCollisionWood": null,
+  "BayConcrete": [
+    "Bay\\Media\\Texture\\BayConcrete.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayConcrete2": [
+    "Bay\\Media\\Texture\\BayConcrete2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayConcrete2Shiny": [
+    "Bay\\Media\\Texture\\BayConcrete2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "BayConcrete2UnderSea": [
+    "Bay\\Media\\Texture\\BayConcrete2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "BayContainer": [
+    "Bay\\Media\\Texture\\BayContainer.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDecor": [
+    "Bay\\Media\\Texture\\BayDecor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayDecorSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BayDecorAlpha": [
+    "Bay\\Media\\Texture\\BayDecorAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayDecorBase": [
+    "Bay\\Media\\Texture\\BayDecorBase.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDocks": [
+    "Bay\\Media\\Texture\\BayDocks.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDocksAlpha": [
+    "Bay\\Media\\Texture\\BayDocksAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayDocksDecor": [
+    "Bay\\Media\\Texture\\BayDocksDecor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDocksHarbor": [
+    "Bay\\Media\\Texture\\BayDocksHarbor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDocksHarborUnderSea": [
+    "Bay\\Media\\Texture\\BayDocksHarbor.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "BayDocksRoad": [
+    "Bay\\Media\\Texture\\BayDocksRoad.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayDocksUnderSea": [
+    "Bay\\Media\\Texture\\BayDocks.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "BayEditorHelpers": [
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\EditorHelpers.Material.Gbx"
+  ],
+  "BayFlat": [
+    "Bay\\Media\\Texture\\BayFlat.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\SpecularCube.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayFlatTrans.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Bay\\Media\\Texture\\BayFlatEnvmapCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubicPC1.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpec FCOut TTrans FCInSph.Material.Gbx"
+  ],
+  "BayFlatDetails": [
+    "Bay\\Media\\Texture\\BayFlatDetails.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayFluo": [
+    "Techno\\Media\\Material\\VSelfI.Material.Gbx"
+  ],
+  "BayHarborGround": [
+    "Bay\\Media\\Texture\\BayHarborGround.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayItemsAlpha": [
+    "Bay\\Media\\Texture\\BayItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayItemsAlphaCollidable": [
+    "Bay\\Media\\Texture\\BayItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayLightVolume": [
+    "Bay\\Media\\Texture\\BayLightVolume.Texture.gbx",
+    "Techno\\Media\\Material\\TAdd Night.Material.Gbx"
+  ],
+  "BayPlatformFloor": [
+    "Bay\\Media\\Texture\\BayPlatformFloor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "BayPlatformFloorNC": [
+    "Bay\\Media\\Texture\\BayPlatformFloor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "BayPlatformTurbo": [
+    "Bay\\Media\\Texture\\BayPlatformTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "BayPlatformTurbo2": [
+    "Bay\\Media\\Texture\\BayPlatformTurbo2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "BayRaceSigns": [
+    "Bay\\Media\\Texture\\BayRaceSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayRaceSignsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BayRoad": [
+    "Bay\\Media\\Texture\\BayRoad.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayRoadSigns": [
+    "Bay\\Media\\Texture\\BayRoadSigns.Texture.gbx",
+    "Techno\\Media\\Material\\TSelfI PX2.Material.Gbx"
+  ],
+  "BaySea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "BaySeaGround": [
+    "Bay\\Media\\Texture\\BayUnderSea1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayUnderSea2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "BayShops": [
+    "Bay\\Media\\Texture\\BayShops.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff TSelfI PX2.Material.Gbx"
+  ],
+  "BayShopsSignsFast": [
+    "Bay\\Func\\FuncShader\\BayShopsSignsFast.FuncShader.Gbx",
+    "Bay\\Media\\Texture\\BayShopsSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLightAnim.Material.Gbx"
+  ],
+  "BayShopsSignsFastB": [
+    "Bay\\Func\\FuncShader\\BayShopsSignsFastB.FuncShader.Gbx",
+    "Bay\\Media\\Texture\\BayShopsSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLightAnim.Material.Gbx"
+  ],
+  "BayShopsSignsMedium": [
+    "Bay\\Func\\FuncShader\\BayShopsSignsMedium.FuncShader.Gbx",
+    "Bay\\Media\\Texture\\BayShopsSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLightAnim.Material.Gbx"
+  ],
+  "BayShopsSignsSlow": [
+    "Bay\\Func\\FuncShader\\BayShopsSignsSlow.FuncShader.Gbx",
+    "Bay\\Media\\Texture\\BayShopsSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLightAnim.Material.Gbx"
+  ],
+  "BayShopsSignsSlowB": [
+    "Bay\\Func\\FuncShader\\BayShopsSignsSlowB.FuncShader.Gbx",
+    "Bay\\Media\\Texture\\BayShopsSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLightAnim.Material.Gbx"
+  ],
+  "BaySigns": [
+    "Bay\\Media\\Texture\\BaySigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BaySignsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BaySigns2": [
+    "Bay\\Media\\Texture\\BaySigns2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BaySigns2SelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "BayToll": [
+    "Bay\\Media\\Texture\\BayToll.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayTrees": [
+    "Bay\\Media\\Texture\\BayTrees.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "BayTunnel": [
+    "Bay\\Media\\Texture\\BayTunnel.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "BayTunnelRaceSigns": [
+    "Bay\\Media\\Texture\\BayRaceSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "BayTunnelRoad": [
+    "Bay\\Media\\Texture\\BayRoad.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "BayTunnelTurbo": [
+    "Bay\\Media\\Texture\\BayTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "BayTunnelTurbo2": [
+    "Bay\\Media\\Texture\\BayTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "BayTurbo": [
+    "Bay\\Media\\Texture\\BayTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayTurbo2": [
+    "Bay\\Media\\Texture\\BayTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "BayTurboRoulette": [
+    "Bay\\Media\\Texture\\BayTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayTurboRoulette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "BayVegetation": [
+    "Bay\\Media\\Texture\\BayVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "BayWarpAlphaHouses": [
+    "Bay\\Media\\Texture\\BayWarpAlphaHouses.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "BayWarpBeach": [
+    "Bay\\Media\\Texture\\BayWarpGrass0.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayWarpBeach.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "BayWarpBuildings": [
+    "Bay\\Media\\Texture\\BayWarpBuildings.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpBuildingsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG_SelfI PX2 CSpec FCOut.Material.Gbx"
+  ],
+  "BayWarpCityGround": [
+    "Bay\\Media\\Texture\\BayWarpCityGround.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayWarpCliff": [
+    "Bay\\Media\\Texture\\BayWarpGrass0.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayWarpCliff.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "BayWarpDocks": [
+    "Bay\\Media\\Texture\\BayDocks.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayWarpFlats": [
+    "Bay\\Media\\Texture\\BayWarpFlats.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "BayWarpGrass": [
+    "Bay\\Media\\Texture\\BayWarpGrass0.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "BayWarpRoad": [
+    "Bay\\Media\\Texture\\BayWarpGrass0.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayWarpRoad.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "BayWarpRocks": [
+    "Bay\\Media\\Texture\\BayWarpGrass0.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayWarpRocks.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrass2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "BayWarpSea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "BayWarpSeaGround": [
+    "Bay\\Media\\Texture\\BayUnderSea1.Texture.gbx",
+    "Bay\\Media\\Texture\\BayUnderSea2.Texture.gbx",
+    "Bay\\Media\\Texture\\BayFXBlendingClouds.Texture.gbx",
+    "Island\\Media\\Material\\IslandSeaGround.Material.Gbx"
+  ],
+  "BayWindows1": [
+    "Bay\\Media\\Texture\\BayBuilding1.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\SpecularCube.Texture.Gbx",
+    "Bay\\Media\\Texture\\BayBuilding1Trans.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Effects\\Media\\Texture\\LobbyCube.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubicPC1.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpec FCOut TTrans FCInSph.Material.Gbx"
+  ],
+  "BayWindows2": [
+    "Bay\\Media\\Texture\\BayBuilding2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\SpecularCube.Texture.Gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Bay\\Media\\Texture\\BayBuilding2Trans.Texture.gbx",
+    "Effects\\Media\\Texture\\LobbyCube.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubicPC1.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpec FCOut TTrans FCInSph.Material.Gbx"
+  ],
+  "BayWindowsTrans": [
+    "Bay\\Media\\Texture\\BayWindowsTrans.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\SpecularCube.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpec FCOut Trans .Material.Gbx"
+  ],
+  "CoastAsphalt": [
+    "Coast\\Media\\Texture\\CoastAsphalt.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultRGB.Texture.Gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastBoats": [
+    "Coast\\Media\\Texture\\CoastBoats.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastBoatsUnderSea": [
+    "Coast\\Media\\Texture\\CoastBoats.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "CoastCircuit": [
+    "Coast\\Media\\Texture\\CoastCircuit.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuit1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuit2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastCircuitAdvert": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastCircuitRumbleStrip": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuitTransitionGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCircuitSigns": [
+    "Coast\\Media\\Texture\\CoastCircuitSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Coast\\Media\\Texture\\CoastCircuitSignsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "CoastCircuitTransition": [
+    "Coast\\Media\\Texture\\CoastCircuit.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuitTransition.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuit1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuit2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCircuitTransitionGrass": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCircuitTransitionGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCircuitTurbo": [
+    "Texture\\CoastCircuit.Texture.gbx",
+    "Texture\\CoastCircuitTurbo.Texture.gbx",
+    "Texture\\CoastCircuit1.Texture.gbx",
+    "Texture\\CoastCircuit2.Texture.gbx",
+    "Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Material\\CoastCircuitTransition.Material.Gbx"
+  ],
+  "CoastCircuitTurbo2": [
+    "Texture\\CoastCircuit.Texture.gbx",
+    "Texture\\CoastCircuitTurbo2.Texture.gbx",
+    "Texture\\CoastCircuit1.Texture.gbx",
+    "Texture\\CoastCircuit2.Texture.gbx",
+    "Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Material\\CoastCircuitTransition.Material.Gbx"
+  ],
+  "CoastCliff": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCliff.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCollisionAsphalt": null,
+  "CoastCollisionConcrete": null,
+  "CoastCollisionDirt": null,
+  "CoastCollisionMetal": null,
+  "CoastCollisionWood": null,
+  "CoastConcrete": [
+    "Coast\\Media\\Texture\\CoastConcrete.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastCorniche": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCorniche.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCornicheRoad": [
+    "Coast\\Media\\Texture\\CoastCornicheRoad.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastCornicheTransition": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastCornicheTransition.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastCornicheTransitionRoad": [
+    "Coast\\Media\\Texture\\CoastCornicheTransition.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastDecorBase": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDecorBase.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastDirt": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastEditorHelpers": [
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\EditorHelpers.Material.Gbx"
+  ],
+  "CoastFoam": [
+    "Island\\Media\\Texture\\IslandFXFoamStatic.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXFoam2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Island\\Media\\Material\\IslandBeachFoam.Material.Gbx"
+  ],
+  "CoastGrid": [
+    "Coast\\Media\\Texture\\CoastGrid.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "CoastItemsAlpha": [
+    "Coast\\Media\\Texture\\CoastItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "CoastPlantes": [
+    "Coast\\Media\\Texture\\CoastPlantes.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "CoastRedCobble": [
+    "Coast\\Media\\Texture\\CoastRedCobble.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastRoad": [
+    "Coast\\Media\\Texture\\CoastRoad.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "CoastRoadBorder": [
+    "Coast\\Media\\Texture\\CoastRoad.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastRoadMarks": [
+    "Coast\\Media\\Texture\\CoastRoadMarks.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastRoadSigns": [
+    "Coast\\Media\\Texture\\CoastRoadSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastRoadSigns2": [
+    "Coast\\Media\\Texture\\CoastRoadSigns2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastRoadTransition": [
+    "Coast\\Media\\Texture\\CoastDirt.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastRoad.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastDirt2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastRoadTurbo": [
+    "Coast\\Media\\Texture\\CoastRoadTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "CoastRoadTurbo2": [
+    "Coast\\Media\\Texture\\CoastRoadTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "CoastRoadTurboRoulette": [
+    "Coast\\Media\\Texture\\CoastRoadTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Coast\\Media\\Texture\\CoastRoadTurboRoulette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "CoastSea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "CoastShadowSkirt": [
+    "Techno\\Media\\Texture\\ShadowSkirt.Texture.gbx",
+    "Techno\\Media\\Material\\ShadowSkirt.Material.Gbx"
+  ],
+  "CoastSigns": [
+    "Coast\\Media\\Texture\\CoastSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastStone": [
+    "Coast\\Media\\Texture\\CoastStone.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastSubSea": [
+    "Coast\\Media\\Texture\\CoastSubSea.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastSubSeaTransition": [
+    "Coast\\Media\\Texture\\CoastSubSea.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSeaTransition.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastTunnel": [
+    "Coast\\Media\\Texture\\CoastTunnel.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "CoastTunnelItemsAlpha": [
+    "Coast\\Media\\Texture\\CoastItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "CoastTunnelSigns": [
+    "Coast\\Media\\Texture\\CoastTunnelSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "CoastTunnelTurbo": [
+    "Coast\\Media\\Texture\\CoastTunnelTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "CoastTunnelTurbo2": [
+    "Coast\\Media\\Texture\\CoastTunnelTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "CoastVegetation": [
+    "Coast\\Media\\Texture\\CoastVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "CoastVegetation2": [
+    "Coast\\Media\\Texture\\CoastVegetation2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "CoastVillage": [
+    "Coast\\Media\\Texture\\CoastVillage.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastWarpFoam": [
+    "Island\\Media\\Texture\\IslandFXFoamStatic.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXFoam2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Island\\Media\\Material\\IslandBeachFoam.Material.Gbx"
+  ],
+  "CoastWarpForest": [
+    "Coast\\Media\\Texture\\CoastWarpGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpForest.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrass2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastWarpGrass": [
+    "Coast\\Media\\Texture\\CoastWarpGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrass2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastWarpGroundDetails": [
+    "Coast\\Media\\Texture\\CoastWarpGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGroundDetails.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrass2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastWarpMountains": [
+    "Coast\\Media\\Texture\\CoastWarpGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpMountains.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrass2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastWarpRocks": [
+    "Coast\\Media\\Texture\\CoastWarpGrass.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpRocks.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrass2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "CoastWarpSea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "CoastWarpSubSea": [
+    "Coast\\Media\\Texture\\CoastSubSea.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea1.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastSubSea2.Texture.gbx",
+    "Coast\\Media\\Texture\\CoastFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "CoastYacht": [
+    "Coast\\Media\\Texture\\CoastYacht.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "CoastYachtAlpha": [
+    "Coast\\Media\\Texture\\CoastYachtAlpha.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Techno\\Media\\Texture\\SpecularCube.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpec FCOut Trans .Material.Gbx"
+  ],
+  "CoastYachtFloor": [
+    "Coast\\Media\\Texture\\CoastYachtFloor.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "CoastYachtUnderSea": [
+    "Coast\\Media\\Texture\\CoastYacht.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandAdvertisement": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Material\\TSelfI PX2.Material.Gbx"
+  ],
+  "IslandAirportTarmac": [
+    "Island\\Media\\Texture\\IslandTarmac.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandAirportTarmacBorder": [
+    "Island\\Media\\Texture\\IslandTarmac.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandAirportTarmacTransition": [
+    "Island\\Media\\Texture\\IslandTarmacGrass1.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandTarmacGrass2.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Island\\Media\\Texture\\IslandTarmac.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandBeach": [
+    "Island\\Media\\Texture\\IslandBeach.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PX2.Material.Gbx"
+  ],
+  "IslandBeachFoam": [
+    "Shader\\IslandBeachFoamPC0.Shader.Gbx",
+    "Shader\\IslandBeachFoamPC1.Shader.Gbx",
+    "Shader\\IslandBeachFoamPC2.Shader.Gbx",
+    "Shader\\IslandBeachFoamPC3.Shader.Gbx"
+  ],
+  "IslandBeachUnderSea": [
+    "Island\\Media\\Texture\\IslandUnderSea1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandTransition.Texture.gbx",
+    "Island\\Media\\Texture\\IslandUnderSea2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandBoats": [
+    "Island\\Media\\Texture\\IslandBoats.Texture.gbx",
+    "Island\\Media\\Texture\\IslandBoatsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "IslandBoatsUnderSea": [
+    "Island\\Media\\Texture\\IslandBoats.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandBuilding": [
+    "Island\\Media\\Texture\\IslandBuilding.Texture.gbx",
+    "Island\\Media\\Texture\\IslandBuildingSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "IslandClub": [
+    "Island\\Media\\Texture\\IslandClub.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandClubSkin": [
+    "Island\\Media\\Texture\\IslandClubSkin.Texture.gbx",
+    "Island\\Media\\Texture\\IslandClubSkinSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "IslandClubUnderSea": [
+    "Island\\Media\\Texture\\IslandClub.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandCollisionAsphalt": null,
+  "IslandCollisionConcrete": null,
+  "IslandCollisionMetal": null,
+  "IslandCollisionSpecial": null,
+  "IslandCollisionTurbo": null,
+  "IslandCollisionTurbo2": null,
+  "IslandCollisionWood": null,
+  "IslandConcrete": [
+    "Island\\Media\\Texture\\IslandConcrete.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandConcreteTunnel": [
+    "Island\\Media\\Texture\\IslandConcrete.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandConcreteUnderSea": [
+    "Island\\Media\\Texture\\IslandConcrete.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandCrashBarrier": [
+    "Island\\Media\\Texture\\IslandCrashBarrier.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandCroisetteAsphalte": [
+    "Island\\Media\\Texture\\IslandCroisette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandCroisetteConcrete": [
+    "Island\\Media\\Texture\\IslandCroisette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandCroisetteTransition": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandCroisette.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandDecorBase": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandDecorBase.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandDecorCliff": [
+    "Island\\Media\\Texture\\IslandDecorCliff.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandDecorPlantes": [
+    "Island\\Media\\Texture\\IslandDecorPlantes.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandDecorPlantesMip": [
+    "Island\\Media\\Texture\\IslandDecorPlantes.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandEditorHelpers": [
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\EditorHelpers.Material.Gbx"
+  ],
+  "IslandFloor": [
+    "Island\\Media\\Texture\\IslandFloor.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandGrass": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "IslandHighway": [
+    "Island\\Media\\Texture\\IslandHighWayDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandHighWayBorders": [
+    "Island\\Media\\Texture\\IslandHighWayDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandHighWayTransitions": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Island\\Media\\Texture\\IslandHighWayDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandHighwayTunnel": [
+    "Island\\Media\\Texture\\IslandHighwayTunnel.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandHighwayTunnelRoad": [
+    "Island\\Media\\Texture\\IslandHighWayDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandHighwayTunnelSigns": [
+    "Island\\Media\\Texture\\IslandSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandHighwayTunnelTurbo": [
+    "Island\\Media\\Texture\\IslandHighWayTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandHighwayTunnelTurbo2": [
+    "Island\\Media\\Texture\\IslandHighWayTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandHighWayTurbo": [
+    "Island\\Media\\Texture\\IslandHighWayTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandHighwayTurbo2": [
+    "Island\\Media\\Texture\\IslandHighWayTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandHighWayTurboRoulette": [
+    "Island\\Media\\Texture\\IslandHighWayTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandHighWayTurboRoulette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "IslandHighWayUnderSea": [
+    "Island\\Media\\Texture\\IslandHighWayDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "IslandHotelBase": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandHotelBase.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandItemAlpha1Sided": [
+    "Island\\Media\\Texture\\IslandItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandItemsAlpha": [
+    "Island\\Media\\Texture\\IslandItemsAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandLightSigns": [
+    "Shader\\IslandLightSignsPC0.Shader.Gbx"
+  ],
+  "IslandLightVolume": [
+    "Island\\Media\\Texture\\IslandLightVolume.Texture.gbx",
+    "Techno\\Media\\Material\\TAdd Night.Material.Gbx"
+  ],
+  "IslandMetal": [
+    "Island\\Media\\Texture\\IslandMetal.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandPlaneDetail": [
+    "Island\\Media\\Texture\\IslandPlaneDetail.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "IslandPlaneDetailAlpha": [
+    "Island\\Media\\Texture\\IslandPlaneDetailAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandPlaneSkin": [
+    "Island\\Media\\Texture\\IslandPlaneSkin.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultEnvCubic.Texture.gbx",
+    "Effects\\Media\\Texture\\EnvFresnelPC3.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL FCOutLowBias.Material.Gbx"
+  ],
+  "IslandPlateform": [
+    "Island\\Media\\Texture\\IslandPlateform.Texture.gbx",
+    "Island\\Media\\Texture\\IslandPlateformSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "IslandPlateformAlpha": [
+    "Island\\Media\\Texture\\IslandPlateformAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandPlateformFloor": [
+    "Island\\Media\\Texture\\IslandPlateformFloor.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandPlateformSpecial": [
+    "Island\\Media\\Texture\\IslandPlateformSpecial.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandPlatformTurbo": [
+    "Island\\Media\\Texture\\IslandPlateformTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandPlatformTurbo2": [
+    "Island\\Media\\Texture\\IslandPlateformTurbo2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandPlatformTurboRoulette": [
+    "Island\\Media\\Texture\\IslandPlateformTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandPlateformTurboRoulette.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "IslandRoadMarks": [
+    "Island\\Media\\Texture\\IslandRoadmarks.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "IslandRoadSigns": [
+    "Island\\Media\\Texture\\IslandRoadSigns.Texture.gbx",
+    "Island\\Media\\Texture\\IslandRoadSignsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "IslandRoadSigns2": [
+    "Island\\Media\\Texture\\IslandRoadSigns2.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandSea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "IslandSeaGround": [
+    "Island\\Media\\Texture\\IslandUnderSea1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandUnderSea2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "IslandShadowCaster": null,
+  "IslandShadowSkirt": [
+    "Island\\Media\\Texture\\IslandShadowSkirt.Texture.gbx",
+    "Techno\\Media\\Material\\ShadowSkirt.Material.Gbx"
+  ],
+  "IslandSigns": [
+    "Island\\Media\\Texture\\IslandSigns.Texture.gbx",
+    "Techno\\Media\\Material\\TSelfI PX2.Material.Gbx"
+  ],
+  "IslandSky": [
+    "Shader\\IslandSkyPC0.Shader.Gbx",
+    "Shader\\IslandSkyPC1.Shader.Gbx"
+  ],
+  "IslandSpace": [
+    "Island\\Media\\Texture\\IslandSpace.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandSpaceAlpha": [
+    "Island\\Media\\Texture\\IslandSpaceAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandSpaceLaunch": [
+    "Island\\Media\\Texture\\IslandSpacelaunch.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "IslandTarmacGrass": [
+    "Island\\Media\\Texture\\IslandTarmacGrass1.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandTarmacGrass2.Texture.Gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "IslandTrafficLight": [
+    "Shader\\IslandTrafficLightPC0.Shader.Gbx",
+    "Shader\\IslandTrafficLightPC1.Shader.Gbx"
+  ],
+  "IslandTransitionBeach": [
+    "Island\\Media\\Texture\\IslandBeach.Texture.gbx",
+    "Island\\Media\\Texture\\IslandTransition.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "IslandTransitionGrass": [
+    "Island\\Media\\Texture\\IslandGrass1Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrassDiffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandTransition.Texture.gbx",
+    "Island\\Media\\Texture\\IslandGrass2Diffuse.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandTrees": [
+    "Island\\Media\\Texture\\IslandTrees.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandTreesMip": [
+    "Island\\Media\\Texture\\IslandTrees.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandTunnelRoadSigns": [
+    "Island\\Media\\Texture\\IslandRoadSigns.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandTunnelRoadSigns2": [
+    "Island\\Media\\Texture\\IslandRoadSigns2.Texture.gbx",
+    "Techno\\Media\\Material\\PreLight.Material.Gbx"
+  ],
+  "IslandVegetation": [
+    "Island\\Media\\Texture\\IslandVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandVegetationMip": [
+    "Island\\Media\\Texture\\IslandVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "IslandWarpAlpha": [
+    "Island\\Media\\Texture\\IslandWarpAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "IslandWarpGrass": [
+    "Island\\Media\\Texture\\IslandWarpGrass1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrass2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "IslandWarpIsle": [
+    "Island\\Media\\Texture\\IslandWarpGrass1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpIsle.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrass2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandWarpIsleUnderSea": [
+    "Island\\Media\\Texture\\IslandUnderSea1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpIsle.Texture.gbx",
+    "Island\\Media\\Texture\\IslandUnderSea2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandWarpMountains": [
+    "Island\\Media\\Texture\\IslandWarpGrass1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpMountains.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrass2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandWarpSea": [
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ],
+  "IslandWarpSeaGround": [
+    "Island\\Media\\Texture\\IslandUnderSea1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandUnderSea2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandFXBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "IslandWarpShore": [
+    "Island\\Media\\Texture\\IslandWarpGrass1.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpShore.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrass2.Texture.gbx",
+    "Island\\Media\\Texture\\IslandWarpGrassBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "IslandWindowsMip": [
+    "Shader\\IslandWindowsMipPC0.Shader.Gbx",
+    "Shader\\IslandWindowsMipPC2.Shader.Gbx",
+    "Shader\\IslandWindowsMipPC3.Shader.Gbx",
+    "Shader\\IslandWindowsMipNightPC3.Shader.Gbx"
+  ],
+  "DirtyRoad": [
+    "Rally\\Media\\Texture\\DirtyRoadDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyAdvertising": [
+    "Rally\\Func\\FuncShader\\RallyEnvmapClouds.FuncShader.Gbx",
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "RallyCastle": [
+    "Rally\\Media\\Texture\\RallyCastle.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyCastleArrow": [
+    "Rally\\Media\\Texture\\RallyCastleHarrows.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "RallyCastleBridge": [
+    "Rally\\Media\\Texture\\RallyCastleBridge.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyCastleUnderWater": [
+    "Rally\\Media\\Texture\\RallyCastle.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyCliff": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyCliffDiffuse.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "RallyCollisionWood": null,
+  "RallyField": [
+    "Rally\\Media\\Texture\\RallyField.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "RallyFieldBorders": [
+    "Rally\\Media\\Texture\\GrassHH1Diff.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyFieldBorders.Texture.gbx",
+    "Rally\\Media\\Texture\\GrassHH1Height.Texture.gbx",
+    "Techno\\Media\\Material\\PDisp PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "RallyFieldRouleau": [
+    "Rally\\Media\\Texture\\RallyFieldRouleau.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "RallyFieldVegetation": [
+    "Rally\\Media\\Texture\\RallyFieldVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans NormY PC3only.Material.Gbx"
+  ],
+  "RallyFlags": [
+    "Rally\\Media\\Texture\\RallyFlagDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "RallyGrass2": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "RallyGrass2Borders": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyGrassBorders.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "RallyGrassCliff": [
+    "Rally\\Media\\Texture\\GrassHH1Diff.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassCliff.Texture.gbx",
+    "Rally\\Media\\Texture\\GrassHH1Height.Texture.gbx",
+    "Techno\\Media\\Material\\PDisp PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "RallyHouse": [
+    "Rally\\Media\\Texture\\RallyHouse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyHouseSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "RallyLakeGround": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "RallyLakeWaterBorders": [
+    "Rally\\Media\\Texture\\RallyLakeBorderDiff.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "RallyRoadLowtoMedium": [
+    "Rally\\Media\\Texture\\RallyRoadLowtoMediumDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyRoadMedium": [
+    "Rally\\Media\\Texture\\RallyRoadMediumDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyRoadMediumFreeWheeling": [
+    "Rally\\Media\\Texture\\RallyRoadMediumFreeWheeling.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyRoadMediumToLow": [
+    "Rally\\Media\\Texture\\RallyRoadLowtoMediumDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyRoadMediumTurbo": [
+    "Rally\\Media\\Texture\\RallyRoadMediumTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "RallyRoadSigns": [
+    "Rally\\Media\\Texture\\RallyRoadSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyRockyGrass": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "RallyRockyGrassCliff": [
+    "Rally\\Media\\Texture\\RallyRockyGrass1.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassCliff.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrass2.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRockyGrassMask.Texture.Gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "RallyStoneBridge": [
+    "Rally\\Media\\Texture\\RallyStoneBridge.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyStoneBridgeUnderWater": [
+    "Rally\\Media\\Texture\\RallyStoneBridge.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyTreeBranchAlpha": [
+    "Rally\\Media\\Texture\\RallyTreeBranchAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "RallyTreeSpriteAlpha": [
+    "Rally\\Media\\Texture\\RallyTreeSpriteAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Sprite HighQ.Material.Gbx"
+  ],
+  "RallyTreeSpriteAlpha2": [
+    "Rally\\Media\\Texture\\RallyTreeSpriteAlpha2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Sprite HighQ.Material.Gbx"
+  ],
+  "RallyTreeSpriteAlpha2LowQ": [
+    "Rally\\Media\\Texture\\RallyTreeSpriteAlpha2.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Sprite LowQ.Material.Gbx"
+  ],
+  "RallyTreeSpriteAlphaLowQ": [
+    "Rally\\Media\\Texture\\RallyTreeSpriteAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Sprite LowQ.Material.Gbx"
+  ],
+  "RallyTrunk": [
+    "Rally\\Media\\Texture\\Trunk.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "RallyTunnelCastle": [
+    "Rally\\Media\\Texture\\RallyCastle.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "RallyTunnelFlags": [
+    "Rally\\Media\\Texture\\RallyFlagDiffuse.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "RallyTunnelGlowVolume": [
+    "Shader\\RallyTunnelGlowVolumePC0.Shader.Gbx",
+    "Shader\\RallyTunnelGlowVolumePC2.Shader.Gbx"
+  ],
+  "RallyTunnelRoadMedium": [
+    "Rally\\Media\\Texture\\RallyRoadMediumDiffuse.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "RallyTunnelTurbo": [
+    "Rally\\Media\\Texture\\RallyRoadMediumTurboDiffuse.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "RallyTurboRoulette": [
+    "Rally\\Media\\Texture\\RallyRoadMediumTurboDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Rally\\Media\\Texture\\RallyRoadMediumTurboRouletteDiffuse.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "RallyVegetation": [
+    "Rally\\Media\\Texture\\RallyVegetation.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans NormY PC3only.Material.Gbx"
+  ],
+  "RallyWarpCliff": [
+    "Rally\\Media\\Texture\\GrassHH1Diff.Texture.gbx",
+    "Rally\\Media\\Texture\\RallyCliffDiffuse.Texture.gbx",
+    "Rally\\Media\\Texture\\GrassHH1Height.Texture.gbx",
+    "Techno\\Media\\Material\\PDisp PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "RallyWarpGrass": [
+    "Rally\\Media\\Texture\\GrassHH1Diff.Texture.gbx",
+    "Rally\\Media\\Texture\\GrassHH1Height.Texture.gbx",
+    "Techno\\Media\\Material\\PDisp PDiff PX2.Material.Gbx"
+  ],
+  "RallyWarpLake": [
+    "Shader\\RallyWarpLakePC0.Shader.Gbx",
+    "Shader\\RallyWarpLakePC1.Shader.Gbx",
+    "Shader\\RallyWarpLakePC3.Shader.Gbx"
+  ],
+  "RallyWarpShadowCaster": null,
+  "RallyWarpTrees": [
+    "Rally\\Media\\Texture\\RallyWarpTrees.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "RallyWater": [
+    "Speed\\Media\\Texture\\WaterDuDvPC2_4.Texture.Gbx",
+    "Speed\\Media\\Texture\\WaterRenderReflection.Texture.Gbx",
+    "Rally\\Media\\Texture\\WaterRenderRefraction.Texture.Gbx",
+    "Rally\\Media\\Texture\\WaterSxSySzPC3.Texture.Gbx",
+    "Rally\\Media\\Texture\\WaterRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Material\\SeaMultiY.Material.Gbx"
+  ],
+  "RallyWhiteWood": [
+    "Rally\\Media\\Texture\\RallyWhiteWood.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "RallyWindMill": [
+    "Rally\\Media\\Texture\\RallyWindMillDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyWindMillWings": [
+    "Rally\\Media\\Texture\\RallyWindMillDiffuse.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "RallyWoodBridge": [
+    "Rally\\Media\\Texture\\RallyWoodBridge.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "SpeedAdvertising": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedAnimatedTrafficLight": [
+    "Shader\\SpeedAnimatedTrafficLight.Shader.Gbx"
+  ],
+  "SpeedAsphalt": [
+    "Speed\\Media\\Texture\\SpeedAsphalt.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel.Material.Gbx"
+  ],
+  "SpeedBridgeAlpha": [
+    "Speed\\Media\\Texture\\SpeedBridgeAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "SpeedBridgeAlphaNotCollidable": [
+    "Speed\\Media\\Texture\\SpeedBridgeAlpha.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "SpeedBrushedMetal": [
+    "Speed\\Media\\Texture\\SpeedBrushedMetal.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedCanyonWarp": [
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedCanyonWarp.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedCanyonWarp2": [
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedCanyonWarp2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedCliff2": [
+    "Speed\\Media\\Texture\\SpeedCliff2Rock.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2Rock2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedCliff2Plant": [
+    "Speed\\Media\\Texture\\SpeedCliff2Plant.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans 2Sided.Material.Gbx"
+  ],
+  "SpeedCliff2Rock": [
+    "Speed\\Media\\Texture\\SpeedCliff2Rock.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2Rock2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "SpeedCliff2Sand": [
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedConcrete": [
+    "Speed\\Media\\Texture\\SpeedConcrete.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedConcreteBorder": [
+    "Speed\\Media\\Texture\\SpeedConcreteBorder.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedConcreteUnderWater": [
+    "Speed\\Media\\Texture\\SpeedConcrete.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedCrashBarrier": [
+    "Speed\\Media\\Texture\\SpeedCrashBarrier.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedDecors": [
+    "Speed\\Media\\Texture\\SpeedDecors.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedDerrickAlphas": [
+    "Speed\\Media\\Texture\\SpeedDerrickAlphasPC0.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "SpeedFreeWheeling": [
+    "Speed\\Media\\Texture\\SpeedFreeWeeling.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL.Material.Gbx"
+  ],
+  "SpeedMetalAlphas": [
+    "Speed\\Media\\Texture\\SpeedMetalAlphas.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2 Trans.Material.Gbx"
+  ],
+  "SpeedMetalCollision": [
+    "Effects\\Media\\Shader\\Invisible.Shader.Gbx"
+  ],
+  "SpeedMetalGrid": [
+    "Speed\\Media\\Texture\\SpeedMetalGrid.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL Trans.Material.Gbx"
+  ],
+  "SpeedParkingAsphalt": [
+    "Speed\\Media\\Texture\\SpeedParkingAsphalt.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedParkingMarks.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedParkingTurbo": [
+    "Speed\\Media\\Texture\\SpeedParkingAsphalt.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedParkingTurbo.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedRiver": [
+    "Speed\\Media\\Texture\\SpeedRiverGround1.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedRiverGround2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "SpeedRiverBeach": [
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedRiverBeach.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedRiverBeachUnderWater": [
+    "Speed\\Media\\Texture\\SpeedRiverGround1.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedRiverBeach.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedRiverGround2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedRoadSigns": [
+    "Speed\\Media\\Texture\\SpeedRoadSigns.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedRoadSignsSelfIllum.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "SpeedRock": [
+    "Speed\\Media\\Texture\\SpeedRock.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "SpeedSaguaro": [
+    "Speed\\Media\\Texture\\SpeedSaguaro.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "SpeedSand": [
+    "Speed\\Media\\Texture\\SpeedCliff2Rock.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2Rock2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "SpeedSandBorder": [
+    "Speed\\Media\\Texture\\SpeedCliff2Rock.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBorder.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedCliff2Rock2.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA TDiffA PX2.Material.Gbx"
+  ],
+  "SpeedSandWarp": [
+    "Speed\\Media\\Texture\\SpeedSand.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSand2.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSandBlendingClouds.Texture.gbx",
+    "Techno\\Media\\Material\\PDiff PDiff PA PX2.Material.Gbx"
+  ],
+  "SpeedShadowCaster": [
+    "Shader\\ShadowCaster.Shader.Gbx"
+  ],
+  "SpeedSky": [
+    "Speed\\Media\\Texture\\SpeedSkyClouds.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedSky.Texture.gbx",
+    "Techno\\Media\\Material\\Sky.Material.Gbx"
+  ],
+  "SpeedTunnelAsphalt": [
+    "Speed\\Media\\Texture\\SpeedAsphalt.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTunnelRadiosity.Texture.gbx",
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnelSpec.Material.Gbx"
+  ],
+  "SpeedTunnelConcrete": [
+    "Speed\\Media\\Texture\\SpeedConcrete.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTunnelRadiosity.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnel.Material.Gbx"
+  ],
+  "SpeedTunnelDecors": [
+    "Speed\\Media\\Texture\\SpeedDecors.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTunnelRadiosity.Texture.gbx",
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnelSpec.Material.Gbx"
+  ],
+  "SpeedTunnelRoadSigns": [
+    "Speed\\Media\\Texture\\SpeedRoadSigns.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTunnelRadiosity.Texture.gbx",
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnelSpec.Material.Gbx"
+  ],
+  "SpeedTunnelTurbo": [
+    "Speed\\Media\\Texture\\SpeedTurbo.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTunnelRadiosity.Texture.gbx",
+    "Vehicles\\Media\\Texture\\SpecEnv.Texture.gbx",
+    "Techno\\Media\\Material\\OriginalTunnelSpec.Material.Gbx"
+  ],
+  "SpeedTurbo": [
+    "Speed\\Media\\Texture\\SpeedTurbo.Texture.gbx",
+    "Speed\\Media\\Texture\\SpeedTurboSelfIllum.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL NightSI.Material.Gbx"
+  ],
+  "SpeedTurboRoulette": [
+    "Speed\\Media\\Texture\\SpeedTurbo.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Speed\\Media\\Texture\\SpeedTurboRouletteMask.Texture.gbx",
+    "Techno\\Media\\Material\\TDiffG PX2 CSpecL_Pixel TurboRoulette.Material.Gbx"
+  ],
+  "SpeedWarpShadowCaster": [
+    "Shader\\ShadowCaster.Shader.Gbx"
+  ],
+  "SpeedWater": [
+    "Speed\\Media\\Texture\\WaterDuDvPC2_4.Texture.Gbx",
+    "Speed\\Media\\Texture\\WaterRenderReflection.Texture.Gbx",
+    "Speed\\Media\\Texture\\WaterRenderRefraction.Texture.Gbx",
+    "Speed\\Media\\Texture\\WaterSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\SeaMultiY.Material.Gbx"
+  ],
+  "SpeedWoodCollision": null,
+  "SpeedWoodPlanks": [
+    "Speed\\Media\\Texture\\SpeedWoodPlanks.Texture.gbx",
+    "Techno\\Media\\Material\\TDiff PX2.Material.Gbx"
+  ],
+  "StadiumAirship": [
+    "Stadium\\Media\\Texture\\StadiumAirshipN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Occ TSpec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumCircuit": [
+    "Stadium\\Media\\Texture\\StadiumCircuitN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumCircuitLogo": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitLogoD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitLogoS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumCircuitNotCollidable": [
+    "Stadium\\Media\\Texture\\StadiumCircuitN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumCircuitScreen": [
+    "Stadium\\Media\\Texture\\StadiumCircuitScreen.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumCircuitScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumCollisionRubber": null,
+  "StadiumControlAuvent": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlAuvent2": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlAuvent2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlAuventAlpha": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlGlass": [
+    "Stadium\\Media\\Texture\\StadiumControlGlassD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlGlassS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlGlassN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecGlass.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlInterior": [
+    "Stadium\\Media\\Texture\\StadiumControlInteriorN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlInteriorD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlInteriorS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlLogos": [
+    "Stadium\\Media\\Texture\\StadiumWarpLogosN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlScreen2x1": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumControlSpots": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlStands": [
+    "Stadium\\Media\\Texture\\StadiumWarpStandsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlStands2": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumControlStands3": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands3D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirt": [
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilGen21.Material.gbx"
+  ],
+  "StadiumDirtAuvent2": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtBorder": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtRoadBorderD.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilFixToGen21.Material.gbx"
+  ],
+  "StadiumDirtFabric": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtGrid": [
+    "Stadium\\Media\\Texture\\StadiumDirtGrid.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtLogos": [
+    "Stadium\\Media\\Texture\\StadiumWarpLogosN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtPub2x1": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Interface\\Advertising\\StaticAd2x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtPub2x1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtPubNvidiaWorldcup": [
+    "Stadium\\Media\\Texture\\StadiumWarpLogosN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPubNvidiaWorldcup.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtRacePub8x1A": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Interface\\Advertising\\StaticRaceAd8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtRaceSignsRubber": [
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtRoad": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtRoad.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilFix.Material.gbx"
+  ],
+  "StadiumDirtRoadBorder": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtRoadDetails": [
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtStructureGeneric": [
+    "Stadium\\Media\\Texture\\StadiumStructureGenericD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumDirtToRoad": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtRoad.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilFixToGen21.Material.gbx"
+  ],
+  "StadiumFabric": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricAuvent": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricAuvent2": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricAuventAlpha": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricBorderRubber": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricFloor": [
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilGen21.Material.gbx"
+  ],
+  "StadiumFabricFloorNoOcc": [
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilGen21NoOcc.Material.gbx"
+  ],
+  "StadiumFabricInterior": [
+    "Stadium\\Media\\Texture\\StadiumControlInteriorN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlInteriorD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlInteriorS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricPlatformFloor": [
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricPool": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricPoolD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricRoadDetails": [
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricSpots": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricStands": [
+    "Stadium\\Media\\Texture\\StadiumWarpStandsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricStands2": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFabricStructure": [
+    "Stadium\\Media\\Texture\\StadiumFabricStructureN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricStructureD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricStructureS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumFan": [
+    "Stadium\\Func\\FuncShader\\FanRotate.FuncShader.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFan.Texture.gbx",
+    "Techno\\Media\\Material\\ShadowSkirt.Material.Gbx"
+  ],
+  "StadiumGrass": [
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumGrass9m": [
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumGrassFence": [
+    "Effects\\Media\\Shader\\Invisible.Shader.Gbx"
+  ],
+  "StadiumGrassOcc": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm TOcc CSpecSoft.Material.gbx"
+  ],
+  "StadiumGrassOcc9m": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm TOcc CSpecSoft.Material.gbx"
+  ],
+  "StadiumGrassOccNoFence": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm TOcc CSpecSoft.Material.gbx"
+  ],
+  "StadiumInflatable": [
+    "Stadium\\Media\\Texture\\StadiumInflatableN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft WhiteSpecPC2.Material.Gbx"
+  ],
+  "StadiumInflatable2": [
+    "Stadium\\Media\\Texture\\StadiumInflatable2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatable2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatable2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumInflatable2Occ": [
+    "Stadium\\Media\\Texture\\StadiumInflatable2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatable2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatable2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumInflatableCactus": [
+    "Stadium\\Media\\Texture\\StadiumInflatableN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Occ TSpec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumInflatableCastle": [
+    "Stadium\\Media\\Texture\\StadiumInflatableN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCastleD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Occ TSpec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumInflatablePalmTree": [
+    "Stadium\\Media\\Texture\\StadiumInflatableN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatablePalmTreeO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatablePalmTreeD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Occ TSpec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumInflatableSnowTree": [
+    "Stadium\\Media\\Texture\\StadiumInflatableN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableSnowTreeD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumAirshipS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumInflatableCactusL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Occ TSpec_Nrm CSpecSoft.Material.gbx"
+  ],
+  "StadiumLoopPillar": [
+    "Stadium\\Media\\Texture\\StadiumPillarN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumLoopRoadBorderMetal": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumLoopRoadBorderRubber": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumLoopRoadDetails": [
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumLoopRoadGrid": [
+    "Stadium\\Media\\Texture\\StadiumRoadGridD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadGridS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadGridN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumLoopL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPillar": [
+    "Stadium\\Media\\Texture\\StadiumPillarN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatform": [
+    "Stadium\\Media\\Texture\\StadiumPlatformN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformAuventAlpha": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformFabric": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformFabricUnderWater": [
+    "Stadium\\Media\\Texture\\StadiumFabricN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformFloor": [
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPlatformFloorS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformPillar": [
+    "Stadium\\Media\\Texture\\StadiumPillarN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPillarS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformPub8x1B": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Interface\\Advertising\\RaceAd8x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformRaceSigns": [
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformRoadBorder": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformRoadDetails": [
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformSoundSystem": [
+    "Stadium\\Media\\Texture\\StadiumSoundSystemN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSoundSystemD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSoundSystemS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformSpots": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformStands2": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPlatformStructureGeneric": [
+    "Stadium\\Media\\Texture\\StadiumStructureGenericD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumPubNvidiaWorldcup": [
+    "Stadium\\Media\\Texture\\StadiumWarpLogosN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumPubNvidiaWorldcup.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumControlL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRacePub8x1A": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Interface\\Advertising\\RaceAd8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRacePub8x1B": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Interface\\Advertising\\RaceAd8x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRacePub8x1C": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Interface\\Advertising\\RaceAd8x1C.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRacePub8x1D": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Interface\\Advertising\\RaceAd8x1D.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRaceSignsRubber": [
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRaceSignsRubberS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoad": [
+    "Stadium\\Media\\Texture\\StadiumRoadN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadBorder": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadBorderMetal": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadBorderRubber": [
+    "Stadium\\Media\\Texture\\StadiumRoadBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadCircuitBorder": [
+    "Stadium\\Media\\Texture\\StadiumRoadCircuitBorderN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadCircuitBorderD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadCircuitBorderS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadDetails": [
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDetailsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadDirtToRoad": [
+    "Stadium\\Media\\Texture\\StadiumRoadDirtToRoadN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDirtToRoadD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDirtToRoadS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadDirtToRoadFlat": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirt2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumDirtMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDirtToRoadD.Texture.gbx",
+    "Techno2\\Media\\Material\\SoilFixToGen21.Material.gbx"
+  ],
+  "StadiumRoadDirtTurbo": [
+    "Stadium\\Media\\Texture\\StadiumRoadDirtTurboN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDirtTurboD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadDirtTurboS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadFreeWheeling": [
+    "Stadium\\Media\\Texture\\StadiumRoadTurboN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadFreeWheelingD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadFreeWheelingS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadGrid": [
+    "Stadium\\Media\\Texture\\StadiumRoadGridD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadGridS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadGridN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadRace": [
+    "Stadium\\Media\\Texture\\StadiumRoadRaceN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadRaceD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadRaceS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadToDirt": [
+    "Stadium\\Media\\Texture\\StadiumGrassO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadToDirtD.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadToDirtS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadToDirtN.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadTurbo": [
+    "Stadium\\Media\\Texture\\StadiumRoadTurboN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadTurboD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadTurboS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumRoadTurboRoulette": [
+    "Stadium\\Media\\Texture\\StadiumRoadTurboN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadTurboRouletteD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadTurboRouletteS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft TurboRoulette.Material.Gbx"
+  ],
+  "StadiumScreen2x1": [
+    "Interface\\Media\\Texture\\Advertisement.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumScreen8x1A": [
+    "Interface\\Advertising\\Ad8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumScreen8x1B": [
+    "Interface\\Advertising\\Ad8x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumScreen8x1C": [
+    "Interface\\Advertising\\Ad8x1C.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumScreen8x1D": [
+    "Interface\\Advertising\\Ad8x1D.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumScreenArrow2x1": [
+    "Stadium\\Media\\Texture\\SignRight.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumSculpt": [
+    "Stadium\\Media\\Texture\\StadiumSculptN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSculptD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSculptS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumSculpt2": [
+    "Stadium\\Media\\Texture\\StadiumSculpt2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSculpt2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumSculpt2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumSculptAuvent2": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumSculptGrassOcc": [
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorD.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorS.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricFloorN.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Material\\PDiff_Spec_Nrm TOcc CSpecSoft.Material.gbx"
+  ],
+  "StadiumSculptStructureAlpha": [
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO2.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL2.Texture.Gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumStartLogo": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStartLogoD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStartLogoS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumStartSign": [
+    "Stadium\\Media\\Texture\\StadiumStartSignN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStartSignD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStartSignS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecGlass.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumStartSignGlow": [
+    "Stadium\\Media\\Texture\\StadiumStartSignGlow.Texture.gbx",
+    "Techno2\\Media\\Material\\TSelfI Add.Material.Gbx"
+  ],
+  "StadiumStructureAlpha": [
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumStructureGeneric": [
+    "Stadium\\Media\\Texture\\StadiumStructureGenericD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumStructureGenericN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecMatte.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumFabricL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumTurboAlpha": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumTurboSpots": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumTurboStands2": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumRoadL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultPreLightGen.Texture.Gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpAuvent": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpAuvent2": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuvent2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpAuventAlpha": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpAuventAlphaBis": [
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpAuventAlphaN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO2.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpFlagA": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagA.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagB": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagB.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagC": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagC.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagD": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagD.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagE": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagE.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagF": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagF.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagG": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagG.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagH": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagH.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagI": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagI.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagJ": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagJ.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagK": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagK.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagL": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagL.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagM": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagM.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagN": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagN.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagO": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagP": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagP.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagQ": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagQ.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagR": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagR.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagS": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagT": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagT.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagU": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagU.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagV": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagV.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagW": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagW.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpFlagX": [
+    "Stadium\\Media\\Texture\\StadiumWarpFlagX.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Techno2\\Media\\Material\\Tween TDiff_Spec CSpecSoft.Material.Gbx"
+  ],
+  "StadiumWarpGlass": [
+    "Stadium\\Media\\Texture\\StadiumWarpGlassD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpGlassS.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpGlassN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpGlassO.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpecGlass.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpGrass": [
+    "Stadium\\Media\\Texture\\StadiumGrass1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrass2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassStripe.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL2.Texture.gbx",
+    "Techno2\\Media\\Texture\\GrassFresnel.Texture.Gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\PDiff PDiff PA TOcc PX2 Grass NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpGrassPreLightGen": [
+    "Stadium\\Media\\Texture\\StadiumGrass1.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrass2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassMask.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumGrassStripe.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO2.Texture.gbx",
+    "Techno2\\Media\\Texture\\GrassFresnel.Texture.Gbx",
+    "Techno2\\Media\\Material\\PDiff PDiff PA TOcc PX2 Grass.Material.Gbx"
+  ],
+  "StadiumWarpLogos": [
+    "Stadium\\Media\\Texture\\StadiumWarpLogosN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpLogosS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpParking": [
+    "Stadium\\Media\\Texture\\StadiumWarpParkingN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpParkingD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpParkingS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpParvis": [
+    "Stadium\\Media\\Texture\\StadiumWarpParvisN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpParvisD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpParvisS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL2.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpPub8x1E": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Interface\\Advertising\\Ad8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpPub8x1F": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Interface\\Advertising\\Ad8x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpPub8x1G": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Interface\\Advertising\\Ad8x1C.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpPub8x1H": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Interface\\Advertising\\Ad8x1D.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpPub8x1I": [
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Interface\\Advertising\\Ad8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpPub8X1S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL3.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpRoute": [
+    "Stadium\\Media\\Texture\\StadiumWarpRouteN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO2.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpRouteD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpRouteS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL2.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpScreen2x1East": [
+    "Interface\\Advertising\\Ad2x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpScreen2x1West": [
+    "Interface\\Advertising\\Ad2x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpScreen8x1A": [
+    "Interface\\Advertising\\Ad8x1A.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpScreen8x1B": [
+    "Interface\\Advertising\\Ad8x1B.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpScreen8x1C": [
+    "Interface\\Advertising\\Ad8x1C.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpScreen8x1D": [
+    "Interface\\Advertising\\Ad8x1D.Texture.Gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpScreenMask.Texture.gbx",
+    "Techno\\Media\\Texture\\DefaultClouds.Texture.Gbx",
+    "Techno2\\Media\\Material\\TSelfI TDiffA PX2.Material.Gbx"
+  ],
+  "StadiumWarpSpots": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpSpotsGlow": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsGlow.Texture.gbx",
+    "Techno\\Media\\Material\\TAdd Night ZBias.Material.gbx"
+  ],
+  "StadiumWarpSpotsGlowBack": [
+    "Stadium\\Media\\Texture\\StadiumWarpSpotsGlow.Texture.gbx",
+    "Techno\\Media\\Material\\TAdd Night.Material.Gbx"
+  ],
+  "StadiumWarpStands": [
+    "Stadium\\Media\\Texture\\StadiumWarpStandsN.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsD.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStandsS.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectHardSpecA.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWarpStands2": [
+    "Stadium\\Media\\Texture\\StadiumWarpStands2N.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpO.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2D.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpStands2S.Texture.gbx",
+    "Techno2\\Media\\Texture\\DefaultCubeReflectSoft.Texture.gbx",
+    "Techno2\\Media\\Texture\\FresnelSpec.Texture.gbx",
+    "Stadium\\Media\\Texture\\StadiumWarpL.Texture.gbx",
+    "Techno2\\Media\\Material\\TDiff_Spec_Nrm TOcc CSpecSoft NoLightV.Material.Gbx"
+  ],
+  "StadiumWater": [
+    "Techno\\Media\\Texture\\SeaRenderReflection.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaRenderRefraction.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_2.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaDuDvPC2_4.Texture.Gbx",
+    "Techno\\Media\\Texture\\SeaSxSySzPC3.Texture.Gbx",
+    "Techno\\Media\\Material\\Sea.Material.Gbx"
+  ]
+}

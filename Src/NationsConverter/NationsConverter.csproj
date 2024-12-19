@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ByteSize" Version="2.1.2" />
+        <PackageReference Include="GBX.NET" Version="2.1.0-nightly.20241211.9ff62e8" />
+        <PackageReference Include="GBX.NET.Tool" Version="0.3.0" />
+        <PackageReference Include="YamlDotNet" Version="16.2.1" />
+        <PackageReference Include="Vecc.YamlDotNet.Analyzers.StaticGenerator" Version="16.2.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\NationsConverterShared\NationsConverterShared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="UserData\**">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>

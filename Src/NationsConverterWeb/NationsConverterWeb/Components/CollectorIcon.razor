@@ -1,0 +1,16 @@
+﻿@if (string.IsNullOrEmpty(WebpData))
+{
+    <img src="img/bloc.webp" width="@Size" height="@Size" style="opacity: 0.5" />
+}
+else
+{
+    <img src="data:image/webp;base64,@WebpData" width="@Size" height="@Size" />
+}
+
+@code {
+    [Parameter]
+    public string? WebpData { get; set; }
+
+    [Parameter]
+    public int Size { get; set; } = 48;
+}

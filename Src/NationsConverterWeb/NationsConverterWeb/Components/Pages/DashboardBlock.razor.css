@@ -1,0 +1,131 @@
+﻿h1 {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+
+h2 {
+    margin: 50px 0;
+}
+
+h3, h4 {
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button-big {
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    gap: 8px;
+    background-color: #333;
+    border: 2px solid #444;
+}
+
+    .button:hover {
+        background-color: #444;
+    }
+
+.item {
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+    .item-info span {
+        padding: 0 5px;
+    }
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button-download {
+    padding: 2px 6px;
+    gap: 8px;
+    background-color: #543;
+    font-size: 15px;
+    border: 2px solid #A94;
+}
+
+    .button-download:hover {
+        background-color: #654;
+    }
+
+.upload {
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    gap: 10px;
+}
+
+    .upload span {
+        padding: 0 8px;
+    }
+
+    .upload img {
+        border-radius: 12px;
+    }
+
+.button-delete {
+    padding: 1px 6px;
+    gap: 8px;
+    background-color: #533;
+    font-size: 15px;
+    margin-left: auto;
+    border: 2px solid #A44;
+}
+
+    .button-delete:hover {
+        background-color: #644;
+    }
+
+.upload-date {
+    margin-left: auto;
+}
+
+.button-basic {
+    padding: 2px 6px;
+    gap: 8px;
+    background-color: #333;
+    font-size: 15px;
+    border: 2px solid #444;
+}
+
+    .button-basic:hover {
+        background-color: #444;
+    }
+
+hr {
+    width: 100%;
+    margin: 2px 0;
+}
+
+.yellow {
+    color: #A94;
+}

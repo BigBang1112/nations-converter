@@ -1,10 +1,61 @@
-# Nations Converter
+# Nations Converter 2
 
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/BigBang1112/nations-converter?include_prereleases&style=for-the-badge)](https://github.com/BigBang1112/nations-converter/releases)
-[![GitHub all releases](https://img.shields.io/github/downloads/BigBang1112/nations-converter/total?style=for-the-badge)](https://github.com/BigBang1112/nations-converter/releases)
+This is where the new TMUF is being made.
 
-Powered by [GBX.NET](https://github.com/BigBang1112/gbx-net).
+## Overview
 
-We are coming back in December.
+```mermaid
+graph LR
+    X(Create Base Map)
+    Z(Environment) --> ExA
+    ExA(Conversion Set)
+    ExA --> ExB(Covered Zone Block Info)
+    ExA --> ExC(Terrain Modifier Zone)
+    X --> A(Place Base Zone)
+    A --> B(Place Block)
+    B --> C(Water)
+    C --> D(Pylon)
+    D --> E(Decoration)
+    E --> F(Place Transformation)
+    F --> G(MediaTracker)
+    G --> H(Music)
+    H --> I(Metadata)
+    I --> Y(Outputted map)
 
-**Current Nations Converter maps crash the game. Do not use v1.**
+    ExA --> A
+    ExA --> B
+    ExA --> C
+    ExA --> D
+    ExA --> E
+    ExA --> F
+
+    ExB --> B
+    ExB --> C
+    ExC --> A
+    ExC --> B
+    
+    subgraph Extracts from input map
+        Z
+        ExA
+        ExB
+        ExC
+    end
+
+    subgraph Stages
+        A
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+        I
+    end
+```
+
+## Build
+
+Build the solution with Visual Studio 2022 or by using `dotnet build`.
+
+This project started using the GBX.NET nightly builds for more comfortable development.

@@ -1,0 +1,8 @@
+BlockTerrainModifiers:
+ SpeedRock: Rock
+DecorationYOffset: -0.25
+Decorations:
+  30x18x30:
+    YOffset: 0.25
+WaterHeight: 5.9
+PillarOffset: 12

@@ -1,0 +1,1301 @@
+BlockTerrainModifiers:
+  StadiumDirt: Dirt
+WaterHeight: 1
+Blocks:
+  StadiumAirship:
+    Modernized: true
+  StadiumInflatableSnowTree:
+    PlaceDefaultZone: true
+    Modernized: true
+    Color: Green
+  StadiumInflatablePalmTree:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumInflatableCactus:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumDirtBorder:
+    NotModifiable: []
+    PlaceDefaultZone: true
+    Modernized: true
+    ConversionVariants:
+      5:
+        SubVariant: 0
+      9:
+        SubVariant: 0
+      11:
+        SubVariant: 0
+  StadiumInflatableCastle:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumInflatableCastleBig:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumInflatableCastleDoor:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumDirtDeadendSpot:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumDirtBorder
+      Variant: 5
+      Offset1Y: -1
+      Modernized: true
+  StadiumDirtDeadendTent1:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumDirtBorder
+      Variant: 5
+      Offset1Y: -1
+      Modernized: true
+  StadiumDirtDeadendDoor:
+    NoTerrainModifier: true
+    Modernized: true
+  StadiumRoadDirt:
+    SubVariant: 0
+    Modernized: true
+  StadiumRoadDirtHigh:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+    ConversionVariants:
+      1:
+        SubVariant: 0
+      3:
+        SubVariant: 0
+  StadiumRoadDirtFenceStraight:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      Variant: 3
+      Modernized: true
+  StadiumRoadDirtFenceCorner:
+    NoTerrainModifier: true
+    SubVariant: 0
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      Variant: 2
+      Modernized: true
+  StadiumRoadDirtHighFenceStraight:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirtHigh
+      Variant: 3
+      Modernized: true
+  StadiumRoadDirtHighFenceCorner:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirtHigh
+      Variant: 2
+  StadiumRoadDirtHillTiltCornerIn:
+    SubVariant: 0
+    Modernized: true
+  StadiumRoadDirtGTCurve2:
+    Modernized: true
+  StadiumRoadDirtGTCurve3:
+    Modernized: true
+  StadiumRoadDirtGTCurve4:
+    Modernized: true
+  StadiumRoadDirtDiagonaleLeft:
+    Modernized: true
+  StadiumRoadDirtDiagonaleRight:
+    Modernized: true
+  StadiumSculptBridgeSuspendSlope2:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSuspendSlope2Mirror:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSuspendSlopeEnd:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSuspendSlopeEndMirror:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSlopeStart:
+    PlaceDefaultZone: true
+  StadiumSculptBridgeSlopeStartMirror:
+    PlaceDefaultZone: true
+  StadiumRoadDirtToRoadGrass:
+    Items:
+    - Name: RoadDirt/RoadLow/StadiumRoadDirt/Ground_3_0.Item.Gbx
+    - Name: RoadDirt/RoadLow/StadiumRoadDirtFenceStraight/Ground_0_0.Item.Gbx
+  StadiumRoadDirtCheckpoint:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+      Modernized: true
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.62
+  StadiumRoadDirtMultiLap:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+      Modernized: true
+    Item:
+      Name: Misc/Waypoint/MultilapDirt.Item.Gbx
+      OffsetY: 1.62
+  StadiumRoadDirtToRoad:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      Variant: 3
+      NoItem: true
+  StadiumTube:
+    PlaceDefaultZone: true
+    SubVariant: 0
+  StadiumTubePillar:
+    PlaceDefaultZone: true
+    SubVariant: 0
+  StadiumTubePillarCap:
+    PlaceDefaultZone: true
+  StadiumTubeV1:
+    PlaceDefaultZone: true
+    SubVariant: 0
+  StadiumTubeV4:
+    PlaceDefaultZone: true
+    SubVariant: 0
+  StadiumTubeV8:
+    PlaceDefaultZone: true
+    SubVariant: 0
+  StadiumTubeRoad:
+    PlaceDefaultZone: true
+  StadiumTubeRoadUp:
+    PlaceDefaultZone: true
+  StadiumTubeRoadDown:
+    PlaceDefaultZone: true
+  StadiumTubeRoadCross:
+    PlaceDefaultZone: true
+  StadiumSculptA:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumSculptB:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumSculptC:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumPlatformSlope2Straight:
+    ForceAirItem: true
+  StadiumPlatformRoad:
+    Item:
+      Name: Platform/Road/StadiumPlatformRoad/Plate.Item.Gbx
+  StadiumPlatformToRoadMain:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformRoad
+    Block:
+      Name: TrackWallToRoadTech
+      OffsetY: 1
+  StadiumPlatformCheckpoint:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformRoad
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 8
+  StadiumPlatformCheckpointLeft:
+    NoItem: true
+    Items:
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 1
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Air_0_0.Item.Gbx
+      Dir: 1
+      OffsetY: 8
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      Pivot: [-16, 0, 0]
+      OffsetX: 16
+      OffsetY: 16
+      RotZ: -26.5
+  StadiumPlatformCheckpointRight:
+    NoItem: true
+    Items:
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 3
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Air_0_0.Item.Gbx
+      Dir: 3
+      OffsetY: 8
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      Pivot: [-16, 0, 0]
+      OffsetX: 16
+      OffsetY: 16
+      RotZ: 26.5
+  StadiumPlatformCheckpointDown:
+    NoItem: true
+    Items:
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 2
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Air_0_0.Item.Gbx
+      Dir: 2
+      OffsetY: 8
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      Pivot: [0, 0, -16]
+      OffsetZ: 16
+      OffsetY: 16
+      RotY: 26.5
+  StadiumPlatformCheckpointUp:
+    NoItem: true
+    Items:
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+    - Name: Platform/Road/StadiumPlatformSlope2Straight/Air_0_0.Item.Gbx
+      OffsetY: 8
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      Pivot: [0, 0, -16]
+      OffsetZ: 16
+      OffsetY: 16
+      RotY: -26.5
+  StadiumPlatformTurbo:
+    Item:
+      Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
+  StadiumPlatformTurboUp:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+  StadiumPlatformTurboDown:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 2
+  StadiumPlatformTurboLeft:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 1
+  StadiumPlatformTurboRight:
+    Item:
+      Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
+      Dir: 3
+  StadiumCheckpointRingV:
+    NoItem: true # has gap underneath, can be fixed
+    Block:
+      Name: GateCheckpoint
+  StadiumControlRoadGlass:
+    PlaceDefaultZone: true
+    Item:
+      Name: Decors/Control/StadiumControlRoadGlass/Base_{Variant}.Item.Gbx
+    ConversionVariants:
+      3:
+        Item:
+          Name: Decors/Control/StadiumControlRoadGlass/Air_3_0.Item.Gbx
+          Dir: 2
+      5:
+        NoItem: true
+  StadiumControlRoadCamera:
+    PlaceDefaultZone: true
+    Item:
+      Name: Decors/Control/StadiumControlRoadCamera/Base_{Variant}.Item.Gbx
+    ConversionVariants:
+      3:
+        Item:
+          Name: Decors/Control/StadiumControlRoadCamera/Air_3_0.Item.Gbx
+          Dir: 2
+      5:
+        NoItem: true
+  StadiumControlRoadPub:
+    PlaceDefaultZone: true
+  StadiumControlLight:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+  StadiumControlLightBase:
+    PlaceDefaultZone: true
+  StadiumRoadMain:
+    PlaceDefaultZone: true
+    ConversionVariants:
+      2:
+        NoItem: true
+        Block:
+          Name: RoadTechCurve1
+      3:
+        NoItem: true
+        Block:
+          Name: RoadTechStraight
+      4:
+        NoItem: true
+        Block:
+          Name: RoadTechBranchTShaped
+      5:
+        NoItem: true
+        Block:
+          Name: RoadTechBranchCross
+  StadiumRoadMainStartLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStart
+  StadiumRoadMainFinishLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechFinish
+  StadiumRoadMainStartFinishLine:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechMultilap
+  StadiumRoadMainCheckpoint: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpoint
+  StadiumRoadMainGTCurve2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve2
+  StadiumRoadMainGTCurve3:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve3
+  StadiumRoadMainGTCurve4:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve4
+  StadiumRoadMainGTCurve5:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve5
+  StadiumRoadMainTurbo:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurbo
+  StadiumRoadMainTurboRoulette:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurbo
+  StadiumRoadMainBumper: ~
+  StadiumRoadMainBumper2: ~
+  StadiumRoadMainFW:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngine
+  StadiumRoadMainForceAcceleration: ~
+  StadiumRoadMainNoGrip: ~
+  StadiumRoadMainNoSteering:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoSteering
+  StadiumRoadMainGTDiag2x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2Left
+  StadiumRoadMainGTDiag2x2Mirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2Right
+  StadiumRoadMainGTDiag3x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3Left
+  StadiumRoadMainGTDiag3x2Mirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3Right
+  StadiumRoadMainGTDiag4x3:
+    PlaceDefaultZone: true
+  StadiumRoadMainGTDiag4x3Mirror:
+    PlaceDefaultZone: true
+  StadiumRoadMainYShapedDiag2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3
+  StadiumRoadMainYShapedCurve2:
+    PlaceDefaultZone: true
+  StadiumRoadMainSlopeBase2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase2
+  StadiumRoadMainSlopeBase:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase
+  StadiumRoadMainSlopeBase1x2:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeBase2x1
+  StadiumRoadMainSlopeStraight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumRoadMainBiSlopeStart:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStart2x1
+  StadiumRoadMainBiSlopeEnd:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeEnd2x1
+  StadiumRoadMainSlopeUTop:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUTop
+  StadiumRoadMainSlopeUBottom:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUBottom
+  StadiumRoadMainSlopeUBottomInGround:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeUBottomInGround
+  StadiumRoadMainCheckpointUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointSlopeUp
+  StadiumRoadMainCheckpointDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointSlopeDown
+  StadiumRoadMainTurboUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeUp
+  StadiumRoadMainTurboDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeDown
+  StadiumRoadMainTurboRouletteDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeUp
+  StadiumRoadMainTurboRouletteUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboSlopeDown
+  StadiumRoadMainFWSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngineSlope
+  StadiumRoadMainGTDiag2x2Slope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2SlopeLeft
+  StadiumRoadMainGTDiag2x2SlopeMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2SlopeRight
+  StadiumRoadMainGTDiag3x2Slope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3SlopeLeft
+  StadiumRoadMainGTDiag3x2SlopeMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3SlopeRight
+  StadiumRoadMainYShapedDiag2SlopeUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3SlopeUp
+  StadiumRoadMainYShapedDiag2SlopeDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechBranchYShaped2X3SlopeDown
+  StadiumRoadTiltStraight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltStraight
+      Dir: 2
+  StadiumRoadTiltTransition1Left: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition1DownLeft
+      Dir: 2
+  StadiumRoadTiltTransition1Right: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition1DownRight
+      Dir: 2
+  StadiumRoadTiltTransition2Left:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownLeft
+      Dir: 2
+  StadiumRoadTiltTransition2Right:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownRight
+      Dir: 2
+  StadiumRoadTiltTransition2CurveLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownLeftCurveIn
+      Dir: 2
+  StadiumRoadTiltTransition2CurveRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltTransition2DownRightCurveIn
+      Dir: 2
+  StadiumRoadMainCheckpointLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointTiltRight
+  StadiumRoadMainCheckpointRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCheckpointTiltLeft
+  StadiumRoadMainTurboLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltRight
+  StadiumRoadMainTurboRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltLeft
+  StadiumRoadMainTurboRouletteLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltRight
+  StadiumRoadMainTurboRouletteRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialTurboTiltLeft
+  StadiumRoadMainFWTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSpecialNoEngineTilt
+      Dir: 2
+  StadiumRoadTiltCorner: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1
+  StadiumRoadTiltGTCurve2: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2
+  StadiumRoadTiltGTCurve3: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve3
+  StadiumRoadTiltGTCurve4:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve4
+  StadiumRoadMainGTDiag2x2Tilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2TiltLeft
+      Dir: 2
+  StadiumRoadMainGTDiag2x2TiltMirror: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX2TiltRight
+  StadiumRoadMainGTDiag3x2Tilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3TiltLeft
+      Dir: 2
+  StadiumRoadMainGTDiag3x2TiltMirror:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechChicaneX3TiltRight
+  StadiumRoadTiltCornerDownLeft: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1DownLeft
+  StadiumRoadTiltCornerDownRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1DownRight
+      Dir: 1
+  StadiumRoadTiltCornerUpLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1UpLeft
+      Dir: 3
+  StadiumRoadTiltCornerUpRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve1UpRight
+      Dir: 2
+  StadiumRoadTiltGTCurve2DownLeft: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2DownLeft
+  StadiumRoadTiltGTCurve2DownRight: 
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2DownRight
+      Dir: 1
+  StadiumRoadTiltGTCurve2UpLeft:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2UpLeft
+      Dir: 3
+  StadiumRoadTiltGTCurve2UpRight:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltCurve2UpRight
+      Dir: 2
+  StadiumRoadTiltTransition2DiagLeft:
+    PlaceDefaultZone: true
+  StadiumRoadTiltTransition2DiagRight:
+    PlaceDefaultZone: true
+  StadiumPlatformLoopStart:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopStart
+      Dir: 2
+  StadiumPlatformLoopEnd:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopEnd
+      Dir: 2
+  StadiumPlatformLoopStartCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopStartCurve1In
+  StadiumPlatformLoopEndCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: PlatformTechLoopEndCurve1In
+  StadiumRamp:
+    PlaceDefaultZone: true
+    Item:
+      Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumRampLow:
+    PlaceDefaultZone: true
+    Item:
+      Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumInflatableAdvert:
+    Modernized: true
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
+  StadiumInflatableSupport:
+    Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
+      6:
+        Variant: 5
+      7:
+        Variant: 5
+      8:
+        Variant: 5
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
+  StadiumInflatablePillar:
+    PlaceDefaultZone: true
+    Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
+      6:
+        Variant: 5
+      7:
+        Variant: 5
+      8:
+        Variant: 5
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
+  StadiumInflatableTube:
+    Modernized: true
+    Conversion:
+      Name: StadiumInflatablePillar
+      Modernized: true
+    ConversionVariants:
+      2:
+        Variant: 1
+      3:
+        Variant: 1
+      4:
+        Variant: 1
+  StadiumHole:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechHole
+  StadiumHoleSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeHole
+  StadiumHoleTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltHole
+      Dir: 2
+  StadiumHolePillar:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 2, 16]
+  StadiumHolePillar2Front:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [12, 2, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [20, 2, 16]
+  StadiumHolePillar2Line:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [16, 2, 8]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 2, 24]
+  StadiumHolePillar3:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [21, 2, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [11, 2, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 2, 6]
+  StadiumRoadStretch:
+    PlaceDefaultZone: true
+  StadiumPlatformWall1:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
+  StadiumPlatformWallBorder:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
+  StadiumPlatformWallPub2:
+    NoItem: true
+    Block:
+      Name: TechnicsScreen2x1Straight
+      Dir: 3
+  StadiumCircuitBorderStraight:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerIn:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerOut:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderCornerGTCurve2In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderSlopeStartLeft:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderSlopeStartRight:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve2In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve4Out:
+    PlaceDefaultZone: true
+  StadiumCircuitSlopeStart:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderDiagIn:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderDiagOut:
+    PlaceDefaultZone: true
+  #StadiumRoadMainClip:
+  #  PlaceDefaultZone: true
+  StadiumDirtHill:
+    Modernized: true
+    ConversionVariants:
+      11:
+        SubVariant: 0
+      13:
+        Item:
+          Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
+          OffsetY: -16
+          Offset2Y: 8
+  StadiumRoadDirtToRoadDirtHighBridge:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 5
+  StadiumRoadDirtToRoadDirtHigh:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+  StadiumRoadDirtToRoadDirtHigh2:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversions:
+    - Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+    - Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+      OffsetX: 1
+  StadiumRoadDirtHighToRoad:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+  StadiumSculptBridgePillar:
+    PlaceDefaultZone: true
+  StadiumSculptBridgePillarMirror:
+    PlaceDefaultZone: true
+  StadiumRoadDirtHighCheckpoint:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirtHigh
+      Variant: 3
+    Items:
+    - Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 8
+    - Name: RoadDirt/RoadHigh/StadiumRoadDirtHighFenceStraight/Ground_0_0.Item.Gbx
+  StadiumRoadDirtHighGTCurve2:
+    Modernized: true
+  StadiumRoadDirtHighGTCurve3:
+    Modernized: true
+  StadiumRoadDirtHighGTCurve4:
+    Modernized: true
+  StadiumSculptArchRingEnd:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingEndMirror:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingStart:
+    PlaceDefaultZone: true
+  StadiumSculptArchRingStartMirror:
+    PlaceDefaultZone: true
+  StadiumHolePillarTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechTiltStraight
+      Dir: 2
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 6, 16]
+  StadiumHolePillarSlope:
+    NoItem: true
+    Block:
+      Name: RoadTechSlopeStraight
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 6, 16]
+  StadiumPlatformToRoad:
+    NoItem: true
+    NoTerrainModifier: true
+    Block:
+      Name: PlatformTechToRoadTech
+  StadiumPlatformToRoad2:
+    NoTerrainModifier: true
+    Blocks:
+    - Name: PlatformTechToRoadTech
+      Dir: 2
+      IsRelativeOffset: true
+    - Name: PlatformTechBase
+      OffsetZ: 1
+      IsRelativeOffset: true
+  StadiumPlatformToRoad2Mirror:
+    NoTerrainModifier: true
+    Blocks:
+    - Name: PlatformTechToRoadTech
+      Dir: 2
+      IsRelativeOffset: true
+    - Name: PlatformTechBase
+      OffsetZ: 1
+      IsRelativeOffset: true
+  StadiumPlatformWall2:
+    NoItem: true
+    Blocks:
+    - Name: PlatformTechWallStraight
+      Dir: 3
+    - Name: PlatformTechWallStraight
+      Dir: 3
+      OffsetY: 1
+  StadiumPlatformWall4:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight4
+      Dir: 3
+  StadiumPlatformGTCurve2Wall1:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve2
+  StadiumPlatformGTCurve2Wall2:
+    NoItem: true
+    Blocks:
+    - Name: PlatformTechWallCurve2
+    - Name: PlatformTechWallCurve2
+      OffsetY: 1
+  StadiumPlatformGTCurve2Wall4:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve2x4
+  StadiumPlatformGTCurve3Wall1:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve3
+  StadiumPlatformGTCurve3Wall2:
+    NoItem: true
+    Blocks:
+    - Name: PlatformTechWallCurve3
+    - Name: PlatformTechWallCurve3
+      OffsetY: 1
+  StadiumPlatformGTCurve3Wall4:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallCurve3x4
+  StadiumGrassCheckpoint:
+    NoItem: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.655
+  StadiumRoadTiltClipLeft:
+    NoItem: true
+  StadiumRoadTiltClipRight:
+    NoItem: true
+    PlaceDefaultZone: true
+  StadiumLoopLeft:
+    PlaceDefaultZone: true
+    ForceAirItem: true  
+  StadiumLoopRight:
+    PlaceDefaultZone: true
+    ForceAirItem: true  
+  StadiumRoadDirtClip:
+    Modernized: true
+  StadiumRoadDirtHighClip:
+    PlaceDefaultZone: true
+    Modernized: true
+  StadiumPool:
+    NoTerrainModifier: true
+    Modernized: true
+  StadiumPool2:
+    NoItem: true
+    NoTerrainModifier: true
+    WaterOffsetY: 1
+    Conversion:
+      Name: StadiumPool
+      OffsetY: 1
+  StadiumWater:
+    Modernized: true
+  StadiumWater2:
+    NoItem: true
+    NoTerrainModifier: true
+    WaterOffsetY: 1
+    Conversion:
+      Name: StadiumWater
+      OffsetY: 1
+  StadiumPodium:
+    Modifiable: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+  StadiumCircuitPillar1:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Item:
+      Name: ObstaclePillar2m
+      Pivot: [16, 9, 16]
+  StadiumCircuitPillar2:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 21]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 11]
+  StadiumCircuitPillar3:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 6]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 26]
+  StadiumCircuitPillar5:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [26, 10, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [26, 10, 6]
+    - Name: ObstaclePillar2m
+      Pivot: [16, 10, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [6, 10, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [6, 10, 6]
+  StadiumCircuitPillar6:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: ObstaclePillar2m
+      Pivot: [26, 8, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [26, 8, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [26, 8, 6]
+    - Name: ObstaclePillar2m
+      Pivot: [11, 8, 26]
+    - Name: ObstaclePillar2m
+      Pivot: [11, 8, 16]
+    - Name: ObstaclePillar2m
+      Pivot: [11, 8, 6]
+  StadiumCircuitBumpUp:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitBumpUp2:
+    NoItem: true
+    Items:
+    - Name: Circuit/FlatBase/StadiumCircuitBase/Air_0_0.Item.Gbx
+    - Name: Circuit/FlatBase/StadiumCircuitBase/Air_0_0.Item.Gbx
+      OffsetZ: 32
+    - Name: Circuit/Hazards/StadiumCircuitBumpUp/Air_0_0.Item.Gbx
+      OffsetZ: 16
+  StadiumCircuitRampSmall1x05:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitRampSmall1x1:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitRampBig:
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumTrenchStraight:
+    Item:
+      Name: Trench/Main/StadiumTrenchStraight/Base.Item.Gbx
+  StadiumTrenchStraightTunnel:
+    Item:
+      Name: Trench/Main/StadiumTrenchStraight/Base.Item.Gbx
+  StadiumTrenchStraightScreen:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+  StadiumTrenchCheckpoint:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+    Item:
+      Name: Misc/Waypoint/Checkpoint.Item.Gbx
+      OffsetY: 1.661
+  StadiumTrenchMultiLap:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+    Item:
+      Name: Misc/Waypoint/Multilap.Item.Gbx
+      OffsetY: 1.661
+  StadiumTrenchXRoadMain:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+    Block:
+      Name: RoadTechStraight
+      Dir: 1
+      OffsetY: 1
+  StadiumRoadDirtTurbo:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 3
+  StadiumTrenchGTCurve2:
+    Item:
+      Name: Trench/Main/StadiumTrenchGTCurve2/Base.Item.Gbx
+  StadiumTrenchGTCurve2Tunnel:
+    Item:
+      Name: Trench/Main/StadiumTrenchGTCurve2/Base.Item.Gbx
+  StadiumTrenchTurbo:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+      NoItem: true
+  StadiumTrenchCross:
+    Item:
+      Name: Trench/Main/StadiumTrenchCross/Base.Item.Gbx
+  StadiumTrenchCrossTunnel:
+    Item:
+      Name: Trench/Main/StadiumTrenchCross/Base.Item.Gbx
+  StadiumRoadDirtToRoadDirtHighCross:
+    NoTerrainModifier: true
+    Modernized: true
+    Conversion:
+      Name: StadiumRoadDirt
+      NoItem: true
+      Variant: 5
+  StadiumTrenchInPillar:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumTrenchStraight
+  StadiumBump1:
+    PlaceDefaultZone: true
+  StadiumBump1InGround:
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirt # bruh
+      NoItem: true
+      Variant: 3
+  StadiumPlatformGridStraight:
+    NoItem: true
+    NoTerrainModifier: true
+    Block:
+      Name: PlatformTechBase
+  StadiumCircuitLoopStart:
+    PlaceDefaultZone: true
+  StadiumCircuitToRoadMain:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Block:
+      Name: TrackWallToRoadTech
+      OffsetY: 1
+  StadiumRoadDirtHillTiltToRoadLeft:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadRight:
+    Modernized: true
+  StadiumRoadDirtHillTiltStraight:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerLeft:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerRight:
+    Modernized: true
+  StadiumRoadDirtHillSlope:
+    Modernized: true
+  StadiumRoadDirtHillSlope2:
+    Modernized: true
+  StadiumRoadDirtHillSlopeGT2:
+    Modernized: true
+  StadiumRoadDirtHillSlopeGT2Bis:
+    Modernized: true
+  StadiumRoadDirtHillWave:
+    Modernized: true
+  StadiumRoadDirtHillTiltCornerOut:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlope:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlopeMirror:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlopeX2:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlopeX2Mirror:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlopeX4:
+    Modernized: true
+  StadiumRoadDirtHillTiltToRoadSlopeX4Mirror:
+    Modernized: true
+  StadiumRoadDirtWave_x1:
+    Modernized: true
+  StadiumRoadDirtWave_x2:
+    Modernized: true

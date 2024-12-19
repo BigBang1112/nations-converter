@@ -1,0 +1,58 @@
+﻿nav {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+    background-color: #222D;
+}
+
+    nav div.inner {
+        display: flex;
+        gap: 10px;
+    }
+
+.nav-item {
+    display: flex;
+}
+
+.nav-item ::deep a {
+    display: flex;
+    padding: 10px 20px;
+    min-width: 150px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+    .nav-item ::deep a.active {
+        background-color: #333;
+    }
+
+    .nav-item ::deep a:hover {
+        background-color: white;
+        color: #222;
+    }
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    nav div.inner {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 520px) {
+    nav {
+        padding: 20px 50px;
+    }
+
+        nav div.inner:last-child {
+            margin-left: auto;
+        }
+}

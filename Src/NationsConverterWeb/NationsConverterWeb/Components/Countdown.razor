@@ -1,0 +1,80 @@
+﻿@implements IDisposable
+
+<div id="demo" style="font-size: 300%;font-weight: bold">
+    @if (Expired)
+    {
+        <span>OUT NOW</span>
+    }
+    else
+    {
+        @if (Days > 0)
+        {
+            <span>@(Days)d </span>
+        }
+
+        @if (Hours > 0 || Days > 0)
+        {
+            <span>@(Hours)h </span>
+        }
+
+        @if (Minutes > 0 || Hours > 0 || Days > 0)
+        {
+            <span>@(Minutes)m </span>
+        }
+
+        <span>@(Seconds)s</span>
+    }
+
+</div>
+
+@code {
+    private System.Timers.Timer? _timer;
+    private DateTime _countDownDate = new DateTime(2024, 12, 20, 16, 0, 0, DateTimeKind.Utc);
+    private int Days;
+    private int Hours;
+    private int Minutes;
+    private int Seconds;
+    private bool Expired => _countDownDate < DateTime.UtcNow;
+
+    [Parameter]
+    public EventCallback OnExpired { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // Set up and start the timer
+        _timer = new System.Timers.Timer(500); // 1-second interval
+        _timer.Elapsed += UpdateCountdown;
+        _timer.AutoReset = true;
+        _timer.Start();
+
+        // Update the countdown immediately
+        UpdateCountdown(null, null);
+    }
+
+    private async void UpdateCountdown(object? sender, System.Timers.ElapsedEventArgs? e)
+    {
+        var now = DateTime.UtcNow;
+        var distance = _countDownDate - now;
+
+        if (distance.TotalMilliseconds > 0)
+        {
+            // Calculate days, hours, minutes, and seconds
+            Days = distance.Days;
+            Hours = distance.Hours;
+            Minutes = distance.Minutes;
+            Seconds = distance.Seconds;
+        }
+        else
+        {
+            await InvokeAsync(OnExpired.InvokeAsync);
+            _timer?.Stop(); // Stop the timer once expired
+        }
+
+        await InvokeAsync(StateHasChanged); // Refresh the UI
+    }
+
+    public void Dispose()
+    {
+        _timer?.Dispose(); // Cleanup the timer on component disposal
+    }
+}
