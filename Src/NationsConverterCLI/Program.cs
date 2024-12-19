@@ -23,5 +23,6 @@ await ToolConsole<NationsConverterTool>.RunAsync(args, new()
     JsonContext = new AppJsonContext(jsonOptions),
     YmlDeserializer = new DeserializerBuilder()
         .WithTypeConverter(new YmlVec3Converter()),
-    YmlSerializer = new SerializerBuilder()
+    YmlSerializer = new SerializerBuilder(),
+    GitHubRepo = "bigbang1112/nations-converter"
 });
