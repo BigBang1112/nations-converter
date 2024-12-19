@@ -22,7 +22,8 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     public int WaterOffsetY { get; set; }
     public bool ForceAirItem { get; set; }
     public bool ForceGroundItem { get; set; }
-    public ConversionSkinModel? Skin { get; set; }
+    public ManualConversionSkinModel? Skin { get; set; }
+    public DifficultyColor? Color { get; set; }
 
     /// <summary>
     /// If items from the Modernized sub-category should be used when Modernized is applied. False will always pick Classic. Only has effect in the Crystal category.

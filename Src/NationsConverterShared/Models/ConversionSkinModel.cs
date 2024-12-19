@@ -1,5 +1,5 @@
 ﻿namespace NationsConverterShared.Models;
 
-public sealed class ConversionSkinModel
+public class ConversionSkinModel
 {
 }

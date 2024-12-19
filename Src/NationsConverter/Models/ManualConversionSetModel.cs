@@ -100,10 +100,14 @@ public sealed class ManualConversionSetModel
             manualConversion.NotModifiable ??= conversion.NotModifiable;
             manualConversion.WaterUnits = conversion.WaterUnits;
             manualConversion.Road = conversion.Road;
-            manualConversion.Skin = conversion.Skin;
             manualConversion.PlacePylons = conversion.PlacePylons;
             manualConversion.AcceptPylons = conversion.AcceptPylons;
             manualConversion.TerrainModifierUnits = conversion.TerrainModifierUnits;
+
+            if (conversion.Skin is not null)
+            {
+                manualConversion.Skin ??= new ManualConversionSkinModel();
+            }
         }
 
         return this;

@@ -7,6 +7,7 @@ Blocks:
   StadiumInflatableSnowTree:
     PlaceDefaultZone: true
     Modernized: true
+    Color: Green
   StadiumInflatablePalmTree:
     PlaceDefaultZone: true
     Modernized: true
@@ -726,6 +727,16 @@ Blocks:
     PlaceDefaultZone: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
+  StadiumInflatableAdvert:
+    Modernized: true
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
   StadiumInflatableSupport:
     Modernized: true
     ConversionVariants:
@@ -741,6 +752,14 @@ Blocks:
         Variant: 5
       8:
         Variant: 5
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
   StadiumInflatablePillar:
     PlaceDefaultZone: true
     Modernized: true
@@ -757,6 +776,14 @@ Blocks:
         Variant: 5
       8:
         Variant: 5
+    Skin:
+      RemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+      FallbackColor: Red
   StadiumInflatableTube:
     Modernized: true
     Conversion:
@@ -1029,8 +1056,10 @@ Blocks:
     PlaceDefaultZone: true
   StadiumLoopLeft:
     PlaceDefaultZone: true
+    ForceAirItem: true  
   StadiumLoopRight:
     PlaceDefaultZone: true
+    ForceAirItem: true  
   StadiumRoadDirtClip:
     Modernized: true
   StadiumRoadDirtHighClip:

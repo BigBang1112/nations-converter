@@ -260,7 +260,20 @@ internal sealed class PlaceBlockStage : BlockStageBase
         if (!noItem)
         {
             logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
-            customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
+
+            var item = customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
+            item.Color = conversion.Color ?? DifficultyColor.Default;
+
+            if (conversion.Skin is not null)
+            {
+                if (conversion.Skin.RemapToColor?.Count > 0)
+                {
+                    var skinPath = block.Skin?.PackDesc?.FilePath;
+                    item.Color = !string.IsNullOrEmpty(skinPath) && conversion.Skin.RemapToColor.TryGetValue(skinPath, out var color)
+                        ? color
+                        : conversion.Skin.FallbackColor;
+                }
+            }
         }
 
         // Place terrain-modifiable pieces
