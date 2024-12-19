@@ -139,7 +139,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         {
             AnchoredObjects = [],
             AuthorLogin = authorLogin,
-            AuthorNickname = mapIn.AuthorNickname,
+            AuthorNickname = mapIn.AuthorNickname ?? authorLogin,
             AuthorZone = authorZone,
             Blocks = [],
             BlockStock = new CGameCtnCollectorList(),

@@ -36,7 +36,7 @@ internal sealed class MetadataStage : EnvironmentStageBase
         metadata.Declare("NC2_Web_Version", "");
         metadata.Declare("NC2_GBXNET_Version", typeof(CGameCtnChallenge).Assembly.GetName().Version?.ToString() ?? "");
         metadata.Declare("NC2_Environment", Environment);
-        metadata.Declare("NC2_PreAlpha", true);
+        metadata.Declare("NC2_Phase", "Alpha");
         metadata.Declare("NC2_Seed", seed.ToString());
         metadata.Declare("NC2_Category", config.GetUsedCategory(Environment));
         metadata.Declare("NC2_SubCategory", config.GetUsedSubCategory(Environment));
