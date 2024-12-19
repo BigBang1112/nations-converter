@@ -16,16 +16,16 @@ Any\Advertisement\SignDown.bik:
 # TM2
 
 Any\Advertisement\SignLeft.dds:
-  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyMarine.webm
+  Primary: Any\Advertisement2x1\Green.zip
   Foreground: Any\Advertisement2x1\Left+111A.webm
 Any\Advertisement\SignRight.dds:
-  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyMarine.webm
+  Primary: Any\Advertisement2x1\Green.zip
   Foreground: Any\Advertisement2x1\Right+111A.webm
 Any\Advertisement\SignUp.dds:
-  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyMarine.webm
+  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyBlue.webm
   Foreground: Any\Advertisement2x1\Top+111A.webm
 Any\Advertisement\SignDown.dds:
-  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyMarine.webm
+  Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyBlue.webm
   Foreground: Any\Advertisement2x1\Bottom+111A.webm
 
 Stadium\CircuitScreen\Left.webm:
