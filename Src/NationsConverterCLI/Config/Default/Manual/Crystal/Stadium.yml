@@ -1299,3 +1299,17 @@ Blocks:
     Modernized: true
   StadiumRoadDirtWave_x2:
     Modernized: true
+  StadiumDecoTowerBeam:
+    PlaceDefaultZone: true
+  StadiumRoadMainInBeam:
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+  StadiumRoadMainInBeamSlope:
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumDecoTowerCore:
+    PlaceDefaultZone: true
+  StadiumPlatformFW:
+    Item:
+      Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
