@@ -24,6 +24,7 @@ COPY Src/$APPNAME/$APPNAME.Client $APPNAME/$APPNAME.Client
 COPY Src/NationsConverterShared NationsConverterShared
 RUN dotnet publish $APPNAME/$APPNAME -c $BUILD_CONFIGURATION -a $TARGETARCH -o /app --no-restore
 
+RUN chmod -R 755 /app/wwwroot
 
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled
