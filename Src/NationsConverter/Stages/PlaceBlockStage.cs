@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using GBX.NET.Engines.GameData;
 using GBX.NET.Tool;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
@@ -416,6 +417,16 @@ internal sealed class PlaceBlockStage : BlockStageBase
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
+
+        if (blockModel.Name.Contains("Checkpoint"))
+        {
+            additionalBlock.WaypointSpecialProperty = new CGameWaypointSpecialProperty
+            {
+                Tag = "Checkpoint"
+            };
+            additionalBlock.WaypointSpecialProperty.CreateChunk<CGameWaypointSpecialProperty.Chunk2E009000>().Version = 2;
+            additionalBlock.WaypointSpecialProperty.CreateChunk<CGameWaypointSpecialProperty.Chunk2E009001>();
+        }
 
         if (blockModel.RotX != 0 || blockModel.RotY != 0 || blockModel.RotZ != 0)
         {
