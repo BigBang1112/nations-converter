@@ -215,26 +215,26 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-            /*blocks = db.Blocks
-            .Where(x => x.Name.Contains(searchValue))
-            .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
-            .Include(x => x.AssignedTo)
-            .ThenInclude(x => x!.DiscordUser)
-            .AsNoTracking()
-            .Select(x => new BlockDto
-            {
-            Id = x.Id,
-            Name = x.Name,
-            AssignedTo = x.AssignedTo,
-            AssignedToId = x.AssignedToId,
-            AssignedAt = x.AssignedAt,
-            IsDone = x.IsDone,
-            HasUpload = x.HasUpload,
-            CategoryId = x.CategoryId,
-            SubCategoryId = x.SubCategoryId,
-            EnvironmentId = x.EnvironmentId,
-        })
-        .ToArray();*/
+        /*blocks = db.Blocks
+        .Where(x => x.Name.Contains(searchValue))
+        .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
+        .Include(x => x.AssignedTo)
+        .ThenInclude(x => x!.DiscordUser)
+        .AsNoTracking()
+        .Select(x => new BlockDto
+        {
+        Id = x.Id,
+        Name = x.Name,
+        AssignedTo = x.AssignedTo,
+        AssignedToId = x.AssignedToId,
+        AssignedAt = x.AssignedAt,
+        IsDone = x.IsDone,
+        HasUpload = x.HasUpload,
+        CategoryId = x.CategoryId,
+        SubCategoryId = x.SubCategoryId,
+        EnvironmentId = x.EnvironmentId,
+    })
+    .ToArray();*/
 
         loading = false;
     }
@@ -351,12 +351,17 @@
         {
             zipMs.Position = 0;
 
-            var assets = Path.Combine(Env.WebRootPath, "assets");
-            Directory.CreateDirectory(assets);
-            await using var fs = new FileStream(Path.Combine(assets, $"{env}.zip"), FileMode.Create, FileAccess.Write, FileShare.None, 4096, useAsync: true);
-
-            await zipMs.CopyToAsync(fs);
+            // push to db
+            db.AssetReleases.Add(new AssetRelease
+            {
+                Name = env,
+                EnvironmentId = env,
+                Data = zipMs.ToArray(),
+                ReleasedAt = DateTimeOffset.UtcNow,
+            });
         }
+
+        await db.SaveChangesAsync();
     }
 
     private async Task DownloadClaimedInitItemsAsync()

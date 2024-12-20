@@ -249,6 +249,21 @@ app.MapGet("/blockicon/{name}", async (
     }
 });
 
+app.MapGet("/assets/{name}", async (string name, AppDbContext db, CancellationToken cancellationToken) =>
+{
+    var release = await db.AssetReleases
+        .AsNoTracking()
+        .OrderByDescending(x => x.ReleasedAt)
+        .FirstOrDefaultAsync(x => x.Name == name, cancellationToken);
+
+    if (release is null)
+    {
+        return Results.NotFound();
+    }
+
+    return Results.File(release.Data, "application/zip", $"{release.Name}.zip", lastModified: release.ReleasedAt);
+});
+
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
