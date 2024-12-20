@@ -2,6 +2,7 @@
 @attribute [Authorize(Roles = "Admin,Developer,Modeler")]
 @inject IDbContextFactory<AppDbContext> DbFactory
 @inject IJSRuntime JS
+@inject IWebHostEnvironment Env
 @inject ILogger<Dashboard> Logger
 @rendermode InteractiveServer
 
@@ -101,6 +102,7 @@
                 {
                     <button class="button" @onclick="DownloadValueReviewItemsAsync">Download value review items</button>
                     <button class="button" @onclick="UpdatePayoutValuesAsync">Update payout values</button>
+                    <button class="button" @onclick="PublishCurrentZipAssetsAsync">Publish current ZIP assets</button>
                     <a href="/bulkfix">Bulk fix</a>
                 }
 
@@ -213,12 +215,12 @@
 
         currentDiscordUser = discordUsers.FirstOrDefault(x => x.Id == snowflake);
 
-        /*blocks = db.Blocks
-        .Where(x => x.Name.Contains(searchValue))
-        .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
-        .Include(x => x.AssignedTo)
-        .ThenInclude(x => x!.DiscordUser)
-        .AsNoTracking()
+            /*blocks = db.Blocks
+            .Where(x => x.Name.Contains(searchValue))
+            .Where(x => x.EnvironmentId.Contains(Environment ?? ""))
+            .Include(x => x.AssignedTo)
+            .ThenInclude(x => x!.DiscordUser)
+            .AsNoTracking()
             .Select(x => new BlockDto
             {
             Id = x.Id,
@@ -289,6 +291,72 @@
 
         using var streamRef = new DotNetStreamReference(ms);
         await JS.InvokeVoidAsync("downloadFileFromStream", "UserData.zip", streamRef);
+    }
+
+    private async Task PublishCurrentZipAssetsAsync()
+    {
+        await using var db = DbFactory.CreateDbContext();
+
+        var uploads = await db.ItemUploads
+            .Include(x => x.BlockItem)
+                .ThenInclude(x => x.Block)
+            .GroupBy(x => x.BlockItem)
+            .Select(x => x.OrderByDescending(x => x.UploadedAt).First())
+            .ToListAsync();
+
+        var zipStreamDict = new Dictionary<string, MemoryStream>();
+        var zipDict = new Dictionary<string, ZipArchive>();
+
+        foreach (var env in new string[] { "Desert", "Rally", "Snow" })
+        {
+            var zipMs = new MemoryStream();
+            var zip = new ZipArchive(zipMs, ZipArchiveMode.Create, leaveOpen: true);
+            zipStreamDict[env] = zipMs;
+            zipDict[env] = zip;
+        }
+
+        foreach (var upload in uploads)
+        {
+            if (!zipDict.TryGetValue(upload.BlockItem.Block.EnvironmentId, out var zip))
+            {
+                continue;
+            }
+
+            var filePath = Path.Combine(
+                "Items",
+                "NC2",
+                upload.BlockItem.Block.CategoryId,
+                upload.BlockItem.Block.SubCategoryId,
+                "MM_Collision",
+                upload.BlockItem.Block.EnvironmentId,
+                upload.BlockItem.Block.PageName,
+                upload.BlockItem.Block.Name,
+                upload.BlockItem.FileName);
+
+            var entry = zip.CreateEntry(filePath, CompressionLevel.SmallestSize);
+
+            entry.LastWriteTime = upload.LastModifiedAt;
+
+            using var entryStream = entry.Open();
+            await using var uploadStream = new MemoryStream(upload.Data);
+            await uploadStream.CopyToAsync(entryStream);
+        }
+
+        foreach (var (env, zip) in zipDict)
+        {
+            zip.Dispose();
+        }
+
+        foreach (var (env, zipMs) in zipStreamDict)
+        {
+            zipMs.Position = 0;
+
+            var assets = Path.Combine(Env.WebRootPath, "assets");
+            Directory.CreateDirectory(assets);
+            await using var fs = new FileStream(Path.Combine(assets, $"{env}.zip"), FileMode.Create, FileAccess.Write, FileShare.None, 4096, useAsync: true);
+
+            await zipMs.CopyToAsync(fs);
+        }
     }
 
     private async Task DownloadClaimedInitItemsAsync()

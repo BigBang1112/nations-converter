@@ -122,7 +122,9 @@ Blocks:
   StadiumRoadDirtToRoadGrass:
     Items:
     - Name: RoadDirt/RoadLow/StadiumRoadDirt/Ground_3_0.Item.Gbx
+      Modernized: true
     - Name: RoadDirt/RoadLow/StadiumRoadDirtFenceStraight/Ground_0_0.Item.Gbx
+      Modernized: true
   StadiumRoadDirtCheckpoint:
     NoItem: true
     NoTerrainModifier: true
@@ -944,11 +946,13 @@ Blocks:
     Modernized: true
     Conversion:
       Name: StadiumRoadDirtHigh
+      Modernized: true
       Variant: 3
     Items:
     - Name: Misc/Waypoint/Checkpoint.Item.Gbx
       OffsetY: 8
     - Name: RoadDirt/RoadHigh/StadiumRoadDirtHighFenceStraight/Ground_0_0.Item.Gbx
+      Modernized: true
   StadiumRoadDirtHighGTCurve2:
     Modernized: true
   StadiumRoadDirtHighGTCurve3:

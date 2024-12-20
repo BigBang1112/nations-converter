@@ -1,27 +1,39 @@
-﻿<div class="image-comparison">
+﻿@rendermode InteractiveServer
+
+<div class="image-comparison">
     <div class="images-container">
-        <img class="before-image" src="img/comparisons/before.png" alt="" />
-        <img class="after-image" src="img/comparisons/after.png" alt="" />
+        <img class="before-image" src="@BeforeImage" alt="" style="@(sliderValue is not null ? $"width: {sliderValue}%" : "")" />
+        <img class="after-image" src="@AfterImage" alt="" />
 
-
-        <div class="slider-line"></div>
-        <div class="slider-icon">
+        <div class="slider-line" style="@(sliderValue is not null ? $"left: {sliderValue}%" : "")"></div>
+        <div class="slider-icon" style="@(sliderValue is not null ? $"left: {sliderValue}%" : "")">
             <svg xmlns="http://www.w3.org/2000/svg"
-                 fill="none"
-                 viewBox="0 0 24 24"
-                 stroke-width="1"
-                 stroke="currentColor"
-                 class="w-6 h-6">
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1"
+            stroke="currentColor"
+            class="w-6 h-6">
                 <path stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                stroke-linejoin="round"
+                d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
             </svg>
         </div>
 
-        <input type="range" class="slider" min="0" max="100" step="0.01" />
+        <input type="range" class="slider" min="0" max="100" step="0.01" @oninput="@((args) => OnInput(args.Value.ToString()))" />
     </div>
 </div>
 
 @code {
+    [Parameter]
+    public string? BeforeImage { get; set; }
 
+    [Parameter]
+    public string? AfterImage { get; set; }
+
+    private string? sliderValue;
+
+    public void OnInput(string value)
+    {
+        sliderValue = value;
+    }
 }

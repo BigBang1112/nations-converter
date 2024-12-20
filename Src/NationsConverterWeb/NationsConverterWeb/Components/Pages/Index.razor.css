@@ -17,7 +17,7 @@ div.comparisons {
 
 div.showcase {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
     div.showcase div.text {
@@ -83,19 +83,28 @@ div.showcase {
     gap: 20px;
 }
 
-#button-discord {
-    display: block;
-    border: 2px solid #457;
-    border-radius: 5px;
-    padding: 10px;
-    width: 250px;
-    text-align: center;
-    background-color: #346;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.button-discord {
+    display: flex;
+    height: 80px;
+    background-color: #5865F2
 }
 
-    #button-discord:hover {
-        background-color: #457;
+    .button-discord:hover {
+        background-color: #6E7BEF;
     }
+
+.discord-server {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+h4 {
+    margin-top: 10px;
+}

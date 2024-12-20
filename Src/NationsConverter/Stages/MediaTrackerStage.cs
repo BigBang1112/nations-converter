@@ -3,7 +3,7 @@ using GBX.NET.Engines.Game;
 
 namespace NationsConverter.Stages;
 
-internal sealed class MediaTrackerStage
+internal sealed class MediaTrackerStage : EnvironmentStageBase
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
@@ -12,14 +12,14 @@ internal sealed class MediaTrackerStage
     private readonly Int3 blockSize;
     private readonly Int3 centerOffset;
 
-    public MediaTrackerStage(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, NationsConverterConfig config)
+    public MediaTrackerStage(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, NationsConverterConfig config) : base(mapIn)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
         this.config = config;
 
         blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
-        centerOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2) ;
+        centerOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
     }
 
     public void Convert()
@@ -182,7 +182,7 @@ internal sealed class MediaTrackerStage
                             Start = cameraGame.Start,
                             End = cameraGame.End,
                         };
-                        newCameraGame.CreateChunk<CGameCtnMediaBlockCameraGame.Chunk03084007>().Version = 2;
+                        newCameraGame.CreateChunk<CGameCtnMediaBlockCameraGame.Chunk03084007>().Version = 4;
 
                         newTrack.Blocks.Add(newCameraGame);
                         break;
@@ -214,9 +214,9 @@ internal sealed class MediaTrackerStage
                 var coordEnumerable = trigger.Coords?.Select(coord => coord with
                 {
                     X = coord.X * blockSize.X / 32,
-                    Y = coord.Y * blockSize.Y / 8 + 9,
+                    Y = coord.Y * blockSize.Y / 8 + 8,
                     Z = coord.Z * blockSize.Z / 32,
-                });
+                } + centerOffset);
                 var coords = new List<Int3>();
 
                 foreach (var coord in coordEnumerable ?? [])

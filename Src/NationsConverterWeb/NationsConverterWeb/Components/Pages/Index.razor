@@ -35,11 +35,11 @@ else
     </div>
     <div class="readable-width" style="background-color: #0005;">
         <div class="readable-width-container" style="flex-direction: row;margin: 20px auto;">
-            <div style="gap: 20px;display: flex;flex-direction: column;flex: 1;justify-content: center;">
+            <div class="discord-server">
                 <h2 style="font-size: 220%;">Join the Discord server</h2>
                 <p>Discuss anything, report issues, suggest features, share maps, or apply for modeller!</p>
             </div>
-            <a href="#" class="web-browser-button button-shiny" style="display: flex;height: 80px; background: #5865F2"><img src="img/discord-logo-white.svg" width="320" /></a>
+            <a href="https://discord.gg/BJB3hjfkJa" class="web-browser-button button-shiny button-discord"><img src="img/discord-logo-white.svg" width="320" /></a>
         </div>
     </div>
     <div class="readable-width bright-green-cyan-mention">
@@ -77,7 +77,7 @@ else
                             <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
                             <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
                             <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
                         </tr>
                         <tr>
                             <td>Desert</td>
@@ -178,35 +178,35 @@ else
         <div class="comparisons readable-width-container">
             <h2>How does it look like?</h2>
             <div class="showcase">
-                <ImgComparison />
+                <ImgComparison BeforeImage="img/comparisons/before.png" AfterImage="img/comparisons/after.png" />
                 <div class="text">
                     <h3>Stadium (category: Crystal, Modernized)</h3>
                     <p>Blocks we made in 2020 were getting a little old. We modernized the Stadium conversion to the 2024 standard.</p>
                 </div>
             </div>
             <div class="showcase">
-                <ImgComparison />
+                <ImgComparison BeforeImage="img/comparisons/before.png" AfterImage="img/comparisons/after.png" />
                 <div class="text">
                     <h3>Desert (category: Solid, Modless)</h3>
                     <p>The first non-Stadium environment that we ported to Nations Converter.</p>
                 </div>
             </div>
             <div class="showcase">
-                <ImgComparison />
+                <ImgComparison BeforeImage="img/comparisons/before.png" AfterImage="img/comparisons/after.png" />
                 <div class="text">
                     <h3>Rally (category: Solid, Modless)</h3>
                     <p>Less of a swamp now. Reflective water, remade houses, usage of item trees.</p>
                 </div>
             </div>
             <div class="showcase">
-                <ImgComparison />
+                <ImgComparison BeforeImage="img/comparisons/before.png" AfterImage="img/comparisons/after.png" />
                 <div class="text">
                     <h3>Snow (category: Solid, Modless)</h3>
-                    <p>The most contrasted and overhauled environment in Nations Converter 2.</p>
+                    <p>Contrasted yet well-blended. Proper winter vibes right here.</p>
                 </div>
             </div>
             <div class="showcase">
-                <ImgComparison />
+                <ImgComparison BeforeImage="img/comparisons/before.png" AfterImage="img/comparisons/after.png" />
                 <div class="text">
                     <h3>Stadium (category: Crystal, Classic)</h3>
                     <p>We brought the same Nations Converter back to with minor improvements, if you're used to it.</p>
@@ -237,17 +237,17 @@ else
             <h4>Balanced</h4>
             <p>Mod that looks acceptable when you don't have it downloaded. To be done.</p>
             <h3>Stock</h3>
-            <p>Keep the true looks of TM2020. Save a lot of time you'd spend copying the blocks one by one.</p>
+            <p>Keep the true looks of TM2020. Save a lot of time you'd spend copying the blocks one by one. To be done.</p>
             <h4>Enhanced</h4>
-            <p>Represents most of the older blocks in the TM2020 style. Includes custom assets to reach this quality.</p>
-            <h4>Stock</h4>
-            <p>Attempt its best to copy the map layout with official assets only. Perfect for concepts to expand on. No custom assets are embedded to the map.</p>
+            <p>Represents most of the older blocks in the TM2020 style. Includes custom assets to reach this quality. To be done.</p>
+            <h4>Raw</h4>
+            <p>Attempt its best to copy the map layout with official assets only. Perfect for concepts to expand on. No custom assets are embedded to the map. To be done.</p>
         </div>
     </div>
     <div class="open-source readable-width white-mention">
         <div class="readable-width-container">
             <h2 class="centered">Believe it or not, the tool is open source</h2>
-            <a href="#" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
+            <a href="https://github.com/BigBang1112/nations-converter" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
         </div>
     </div>
     <div class="readable-width">
@@ -259,7 +259,7 @@ else
             </div>
             <div>
                 <h3>Mesh modeling team <small>(looking for more volunteers!)</small></h3>
-                <p>harry.alexm, Paddy Productions, nod, Zai, eyebo</p>
+                <p>harry.alexm, Paddy Productions, nod, Zai, eyebo, Rokas RX</p>
             </div>
             <div>
                 <h3>Mod work</h3>
@@ -280,7 +280,7 @@ else
 @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }
 
-    public bool Released { get; set; } = false;
+    public bool Released { get; set; }
 
     public bool WebAppReleased { get; set; }
 
