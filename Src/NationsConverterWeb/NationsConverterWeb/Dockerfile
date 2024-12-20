@@ -4,6 +4,7 @@ ARG TARGETARCH
 ARG APPNAME=NationsConverterWeb
 RUN apt-get update && apt-get install -y git python3
 WORKDIR /src
+USER root
 
 COPY .git/ ./.git/
 
@@ -30,5 +31,4 @@ EXPOSE 8080
 EXPOSE 8081
 WORKDIR /app
 COPY --from=build /app .
-USER root
 ENTRYPOINT ["./NationsConverterWeb"]
