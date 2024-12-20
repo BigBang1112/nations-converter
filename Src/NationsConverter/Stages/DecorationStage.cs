@@ -85,6 +85,8 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
         var voidOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
 
+        mapOut.ThumbnailPosition += voidOffset * blockSize;
+
         for (var x = 0; x < voidSize.X; x++)
         {
             for (var z = 0; z < voidSize.Z; z++)
