@@ -30,4 +30,5 @@ EXPOSE 8080
 EXPOSE 8081
 WORKDIR /app
 COPY --from=build /app .
+USER root
 ENTRYPOINT ["./NationsConverterWeb"]
