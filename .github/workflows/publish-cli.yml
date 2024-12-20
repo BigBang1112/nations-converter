@@ -39,7 +39,7 @@ jobs:
     name: Publish with ${{ matrix.os.os }} (${{ matrix.os.runtime }})
     
     env:
-      ZIP_SUFFIX: -${{ matrix.os.runtime }}..zip
+      ZIP_SUFFIX: -${{ matrix.os.runtime }}.${{ github.ref_name }}.zip
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
