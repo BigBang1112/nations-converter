@@ -80,6 +80,7 @@ jobs:
           $hashValue | Out-File -FilePath "${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}.hash.txt"
 
       - name: Calculate SHA256 (Linux)
+        if: matrix.os.os == 'ubuntu-latest'
         run: |
           sha256sum "${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}" | awk '{print $1}' | tee >(cat) > ${{ env.PROJECT_NAME }}${{ env.ZIP_SUFFIX }}.hash.txt
 
