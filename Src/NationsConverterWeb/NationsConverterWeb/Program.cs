@@ -66,6 +66,7 @@ builder.Services.AddDbContextFactory<AppDbContext>(options =>
 builder.Services.AddTransient<IClaimsTransformation, ClaimsTransformation>();
 
 builder.Services.AddScoped<RevertMaterialPhysicsBulkFixer>();
+builder.Services.AddScoped<CheckpointTerrainModifierBulkFixer>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

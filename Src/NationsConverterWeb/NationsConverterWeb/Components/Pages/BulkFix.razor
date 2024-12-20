@@ -11,6 +11,7 @@
 <h2>Bulk fix</h2>
 
 <button class="button" @onclick="() => PreviewBulkFixAsync<RevertMaterialPhysicsBulkFixer>()">Revert material physics (for Rally)</button>
+<button class="button" @onclick="() => PreviewBulkFixAsync<CheckpointTerrainModifierBulkFixer>()">Checkpoint terrain modifier fix</button>
 
 @if (affectedItems.Count > 0)
 {
