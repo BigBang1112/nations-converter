@@ -10,6 +10,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapOut;
     private readonly CustomContentManager customContentManager;
+    private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
     public PlaceTransformationStage(
@@ -17,10 +18,12 @@ internal sealed class PlaceTransformationStage : BlockStageBase
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
+        NationsConverterConfig config,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapOut = mapOut;
         this.customContentManager = customContentManager;
+        this.config = config;
         this.logger = logger;
     }
 
@@ -33,7 +36,10 @@ internal sealed class PlaceTransformationStage : BlockStageBase
 
         mapOut.PlayerModel = new($"Car{Environment}", 10003, "Nadeo");
 
-        base.Convert();
+        if (config.PlaceTransformationGate)
+        {
+            base.Convert();
+        }
     }
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
