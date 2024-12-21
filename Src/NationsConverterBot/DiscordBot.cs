@@ -91,7 +91,7 @@ internal sealed class DiscordBot : IDiscordBot
         // Does not need to be called every Ready event
         await RegisterCommandsAsync(deleteMissing: true);
 
-        await _client.SetCustomStatusAsync("I'm out on 20 December!");
+        await _client.SetCustomStatusAsync("Out now!");
     }
 
     private Task ClientLog(LogMessage msg)
