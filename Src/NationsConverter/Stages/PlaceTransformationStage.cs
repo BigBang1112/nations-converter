@@ -8,6 +8,7 @@ namespace NationsConverter.Stages;
 
 internal sealed class PlaceTransformationStage : BlockStageBase
 {
+    private readonly CGameCtnChallenge mapOut;
     private readonly CustomContentManager customContentManager;
     private readonly ILogger logger;
 
@@ -18,6 +19,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
         CustomContentManager customContentManager,
         ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
+        this.mapOut = mapOut;
         this.customContentManager = customContentManager;
         this.logger = logger;
     }
@@ -29,8 +31,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
             return;
         }
 
-        // Nadeo PLS fix
-        // convertedMap.PlayerModel = new($"Car{Environment}", 10003, "Nadeo");
+        mapOut.PlayerModel = new($"Car{Environment}", 10003, "Nadeo");
 
         base.Convert();
     }
