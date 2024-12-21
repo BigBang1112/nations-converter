@@ -208,7 +208,7 @@ Blocks:
         SubVariants:
           0:
             Items:
-            - Name: FirSnowTall
+            - Name: FirSnowMedium
               OffsetX: 11.1906
               OffsetY: 14.958
               OffsetZ: 9.0007
@@ -727,7 +727,7 @@ Blocks:
         SubVariants:
           0:
             Items:
-            - Name: FirSnowTall
+            - Name: FirSnowMedium
               OffsetX: 11.1906
               OffsetY: 14.958
               OffsetZ: 9.0007
