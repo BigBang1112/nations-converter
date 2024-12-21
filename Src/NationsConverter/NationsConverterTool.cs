@@ -68,7 +68,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var decorationStage = new DecorationStage(mapIn, mapOut, conversionSet, Config, customContentManager, logger);
         decorationStage.Convert();
 
-        var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, logger);
+        var placeTransformationStage = new PlaceTransformationStage(mapIn, mapOut, conversionSet, customContentManager, Config, logger);
         placeTransformationStage.Convert();
 
         var advertisementStage = new AdvertisementStage(mapOut);
