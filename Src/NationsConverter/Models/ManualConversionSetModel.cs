@@ -44,7 +44,6 @@ public sealed class ManualConversionSetModel
         }
 
         TerrainModifiers ??= conversionSet.TerrainModifiers;
-        Pylon ??= conversionSet.Pylon;
 
         foreach (var (block, conversion) in conversionSet.Blocks)
         {
