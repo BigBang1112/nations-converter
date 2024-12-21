@@ -87,7 +87,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             itemLights.Add(Path.Combine("Items", rootFolderName, itemPath), lightProperties);
         }
 
-        var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
+        var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath.Replace("�", "")).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
         item.LightmapQuality = lightmapQuality;
         return item;
     }
@@ -137,7 +137,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             foreach (var (embeddedType, remainingPath) in embeddedFilePaths)
             {
                 var loadPath = Path.Combine(embeddedType, NC2, remainingPath);
-                var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath);
+                var embeddedPath = Path.Combine(embeddedType, rootFolderName, remainingPath.Replace("�", ""));
 
                 var loadPathForEntry = loadPath.Replace('\\', '/');
                 var toEmbedEntry = zipStreams.Values
