@@ -320,6 +320,7 @@ Blocks:
           Name: RoadTechCurve1
       3:
         NoItem: true
+        SubVariant: 0
         Block:
           Name: RoadTechStraight
       4:
@@ -385,6 +386,7 @@ Blocks:
   StadiumRoadMainFW:
     NoItem: true
     PlaceDefaultZone: true
+    SubVariant: 0
     Block:
       Name: RoadTechSpecialNoEngine
   StadiumRoadMainForceAcceleration: ~
