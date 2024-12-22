@@ -94,7 +94,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
     public CGameCtnBlock PlaceBlock(string blockModel, Int3 coord, Direction dir, bool isGround = false, byte variant = 0, byte subVariant = 0)
     {
-        var blockPath = $"{blockModel.Replace('/', '\\')}.Block.Gbx";
+        var blockPath = $"{blockModel}.Block.Gbx";
 
         var block = mapOut.PlaceBlock($"{Path.Combine(rootFolderName, blockPath).Replace('/', '\\')}_CustomBlock", coord, dir, isGround, variant, subVariant);
 
