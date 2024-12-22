@@ -2,6 +2,10 @@ BlockTerrainModifiers:
  AlpineTundra: Tundra
 PillarOffset: 14
 Blocks:
+  AlpineRoadChalet:
+    SubVariant: 0 # case for TMO maps as TMUF versions
+  AlpineRoadChaletPillar:
+    SubVariant: 0 # case for TMO maps as TMUF versions
   Hills:
     ConversionVariants:
       0:
