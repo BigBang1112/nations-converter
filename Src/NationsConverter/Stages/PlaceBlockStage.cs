@@ -652,7 +652,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
             logger.LogInformation("---- Placing clip {ClipName} at adjusted coord {NewCoord}, {Direction} ...", clip.Name, clipBlock.Coord, dir);
 
-            PlaceBlockConversion(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir);
+            PlaceBlockConversion(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir, overrideVariant: 0);
         }
 
         return clipDirs is { Count: > 0 };
