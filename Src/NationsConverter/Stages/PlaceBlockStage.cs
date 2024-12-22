@@ -120,7 +120,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (variant >= maxVariants)
         {
-            throw new ArgumentException($"Block {blockName} variant ({variant}) exceeds max variants ({maxVariants})");
+            logger.LogWarning("Block {BlockName} with variant {Variant} exceeds max variants ({MaxVariants}). Skipping for now.", blockName, variant, maxVariants);
+            return;
         }
 
         if (block.IsClip)
