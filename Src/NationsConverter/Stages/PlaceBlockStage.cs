@@ -120,7 +120,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (variant >= maxVariants)
         {
-            throw new ArgumentException($"Block {blockName} variant exceeds max variants");
+            throw new ArgumentException($"Block {blockName} variant ({variant}) exceeds max variants ({maxVariants})");
         }
 
         if (block.IsClip)
