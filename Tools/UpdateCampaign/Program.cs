@@ -81,7 +81,3 @@ internal partial class Program
     [GeneratedRegex(@"\suid=""(.+?)""\s")]
     private static partial Regex MapUidInXmlRegex();
 }
-
-//var mapInfo = await ns.UpdateMapAsync(Guid.Parse(args[0]), args[1]);
-
-//AnsiConsole.WriteLine(mapInfo.ToString());
