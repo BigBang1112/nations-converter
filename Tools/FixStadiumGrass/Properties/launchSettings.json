@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FixStadiumGrass": {
+      "commandName": "Project",
+      "commandLineArgs": "../../../../../Src/NationsConverterCLI/UserData"
+    }
+  }
+}
