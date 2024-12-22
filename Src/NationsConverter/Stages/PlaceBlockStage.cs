@@ -50,9 +50,18 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
     public override void Convert()
     {
+        logger.LogInformation("Gathering clip blocks (TMF)...");
+
         foreach (var clipBlock in mapIn.GetBlocks().Where(x => x.IsClip))
         {
-            clipBlocks.Add(clipBlock.Coord, clipBlock);
+            if (clipBlocks.TryAdd(clipBlock.Coord, clipBlock))
+            {
+                logger.LogInformation("Clip block at {Coord} of type {Name}", clipBlock.Coord, clipBlock.Name);
+            }
+            else
+            {
+                logger.LogInformation("Duplicate clip block at {Coord}?", clipBlock.Coord);
+            }
         }
 
         logger.LogInformation("Placing blocks...");
