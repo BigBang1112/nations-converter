@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{00F42213
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixStadiumGrass", "Tools\FixStadiumGrass\FixStadiumGrass.csproj", "{18967A84-E3C3-4A10-9B59-B5DA6A6D7C6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateCampaign", "Tools\UpdateCampaign\UpdateCampaign.csproj", "{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{18967A84-E3C3-4A10-9B59-B5DA6A6D7C6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18967A84-E3C3-4A10-9B59-B5DA6A6D7C6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18967A84-E3C3-4A10-9B59-B5DA6A6D7C6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{D6C58FC2-D8A6-4AB9-A302-89E08EE72F46} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{0A67AEBB-3ACE-456B-8D58-2899F7BF4E52} = {C4686498-B539-4420-BCB7-A5AEB884506B}
 		{18967A84-E3C3-4A10-9B59-B5DA6A6D7C6E} = {00F42213-4CBA-4120-8C67-EC7470AEEE1A}
+		{E8DF5D06-99FE-4433-BB54-EE2CDA8E92DD} = {00F42213-4CBA-4120-8C67-EC7470AEEE1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5F80CCCE-40A6-4BE9-8853-5A8E3D4C276A}

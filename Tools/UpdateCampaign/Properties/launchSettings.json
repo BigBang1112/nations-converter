@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UpdateCampaign": {
+      "commandName": "Project",
+      "commandLineArgs": "E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT\\SecondNC2Stuff 21571 84199"
+    }
+  }
+}
