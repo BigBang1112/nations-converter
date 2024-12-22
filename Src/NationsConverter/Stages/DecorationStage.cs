@@ -16,6 +16,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
     private readonly bool includeDecorationItem;
     private readonly bool includeMapWatermark;
+    private static readonly string voidBlockName = Path.Combine("Misc", "Void");
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)", RegexOptions.IgnoreCase)]
     private static partial Regex MoodRegex();
@@ -111,14 +112,14 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
     private void PlaceVoidBlock(int x, int z)
     {
-        var block = customContentManager.PlaceBlock(@"Misc\Void", (x, 9, z), Direction.North, isGround: true);
+        var block = customContentManager.PlaceBlock(voidBlockName, (x, 9, z), Direction.North, isGround: true);
         block.LightmapQuality = LightmapQuality.Lowest;
     }
 
     private void PlaceTransitionGrass()
     {
-        const string grassCorner = @"Misc\Border\GrassCorner.Item.Gbx";
-        const string grassEdge = @"Misc\Border\GrassEdge.Item.Gbx";
+        var grassCorner = Path.Combine("Misc", "Border", "GrassCorner.Item.Gbx");
+        var grassEdge = Path.Combine("Misc", "Border", "GrassEdge.Item.Gbx");
 
         var mapSize = mapIn.Size;
         var offset = new Int3(224, 8, 224);
@@ -253,7 +254,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
                 break;
         }
 
-        customContentManager.PlaceItemRaw(@"Misc\NC2_Alpha_Big.Item.Gbx", pos - (0, 0, 0.5f * blockSize.Z), rot);
+        customContentManager.PlaceItemRaw(Path.Combine("Misc", "NC2_Alpha_Big.Item.Gbx"), pos - (0, 0, 0.5f * blockSize.Z), rot);
 
         if (Environment == "Rally")
         {
@@ -270,6 +271,6 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
             pos += (9, 0, -1);
         }
 
-        customContentManager.PlaceItemRaw(@"Misc\NC2_Logo_Long_Big.Item.Gbx", pos, rot);
+        customContentManager.PlaceItemRaw(Path.Combine("Misc", "NC2_Logo_Long_Big.Item.Gbx"), pos, rot);
     }
 }
