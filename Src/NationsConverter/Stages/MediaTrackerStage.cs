@@ -59,7 +59,7 @@ internal sealed class MediaTrackerStage : BlockStageBase
 
         var expectedCoord = block.Coord * (BlockSize.X / 32, BlockSize.Y / 8, BlockSize.Z / 32) + (0, 8, 0) + CenterOffset;
 
-        logger.LogInformation("Checking if there's trigger at {Coord} due to possible camera deadlock...", expectedCoord);
+        logger.LogInformation("Checking if there's trigger at {Coord} due to possible camera softlock...", expectedCoord);
 
         foreach (var clip in mapOut.ClipGroupInGame.Clips)
         {
@@ -71,7 +71,7 @@ internal sealed class MediaTrackerStage : BlockStageBase
             }
         }
 
-        logger.LogInformation("Adding trigger at {Coord} to prevent camera deadlock...", expectedCoord);
+        logger.LogInformation("Adding trigger at {Coord} to prevent camera softlock...", expectedCoord);
 
         var emptyClip = new CGameCtnMediaClip
         {
