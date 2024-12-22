@@ -944,10 +944,6 @@ Blocks:
   StadiumRoadDirtHighCheckpoint:
     NoTerrainModifier: true
     Modernized: true
-    Conversion:
-      Name: StadiumRoadDirtHigh
-      Modernized: true
-      Variant: 3
     Items:
     - Name: Misc/Waypoint/Checkpoint.Item.Gbx
       OffsetY: 8
