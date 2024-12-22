@@ -79,7 +79,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         mapOut.IsLapRace = mapIn.IsLapRace;
         mapOut.NbLaps = mapIn.NbLaps;
 
-        var mediaTrackerStage = new MediaTrackerStage(mapIn, mapOut, Config);
+        var mediaTrackerStage = new MediaTrackerStage(mapIn, mapOut, Config, conversionSet, logger);
         mediaTrackerStage.Convert();
 
         var musicStage = new MusicStage(mapIn, mapOut, Config, http, logger);

@@ -2,7 +2,7 @@
   "profiles": {
     "NationsConverterCLI": {
       "commandName": "Project",
-      "commandLineArgs": "-o E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT --direct-output \"C:\\Users\\petrp\\Documents\\TrackMania\\Tracks\\Challenges\\Kekelska_Vysocina.Challenge.Gbx\""
+      "commandLineArgs": "-o E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT --direct-output \"C:\\Users\\petrp\\Documents\\TrackMania\\Tracks\\Challenges\\My Challenges\\ClipTest.Challenge.Gbx\" -o E:\\TrackmaniaUserData\\Maps\\NC2OUTPUT"
     }
   }
 }

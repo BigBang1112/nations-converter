@@ -1,28 +1,32 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
+using NationsConverter.Models;
+using NationsConverterShared.Models;
 
 namespace NationsConverter.Stages;
 
-internal sealed class MediaTrackerStage : EnvironmentStageBase
+internal sealed class MediaTrackerStage : BlockStageBase
 {
     private readonly CGameCtnChallenge mapIn;
     private readonly CGameCtnChallenge mapOut;
     private readonly NationsConverterConfig config;
+    private readonly ILogger logger;
 
-    private readonly Int3 blockSize;
-    private readonly Int3 centerOffset;
-
-    public MediaTrackerStage(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, NationsConverterConfig config) : base(mapIn)
+    public MediaTrackerStage(
+        CGameCtnChallenge mapIn,
+        CGameCtnChallenge mapOut,
+        NationsConverterConfig config,
+        ManualConversionSetModel conversionSet,
+        ILogger logger) : base(mapIn, mapOut, conversionSet)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
         this.config = config;
-
-        blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
-        centerOffset = new Int3((mapOut.Size.X - mapIn.Size.X) / 2, 0, (mapOut.Size.Z - mapIn.Size.Z) / 2);
+        this.logger = logger;
     }
 
-    public void Convert()
+    public override void Convert()
     {
         if (!config.IncludeMediaTracker)
         {
@@ -37,6 +41,54 @@ internal sealed class MediaTrackerStage : EnvironmentStageBase
         mapOut.ClipAmbiance = TransferMediaTracker(mapIn.ClipAmbiance);
 
         mapOut.ClipTriggerSize = (1, 1, 1);
+
+        base.Convert();
+    }
+
+    protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
+    {
+        if (mapOut.ClipGroupInGame is null)
+        {
+            return;
+        }
+
+        if (conversion.Waypoint is not WaypointType.Start and not WaypointType.StartFinish)
+        {
+            return;
+        }
+
+        var expectedCoord = block.Coord * (BlockSize.X / 32, BlockSize.Y / 8, BlockSize.Z / 32) + (0, 8, 0) + CenterOffset;
+
+        logger.LogInformation("Checking if there's trigger at {Coord} due to possible camera deadlock...", expectedCoord);
+
+        foreach (var clip in mapOut.ClipGroupInGame.Clips)
+        {
+            if (clip.Trigger.Coords?.Contains(expectedCoord) == true)
+            {
+                // Trigger already exists on this position
+                logger.LogInformation("Trigger already exists at {Coord}, skipping the prevention.", expectedCoord);
+                return;
+            }
+        }
+
+        logger.LogInformation("Adding trigger at {Coord} to prevent camera deadlock...", expectedCoord);
+
+        var emptyClip = new CGameCtnMediaClip
+        {
+            Name = "NADEO TRIGGER BUG FIX"
+        };
+        emptyClip.CreateChunk<CGameCtnMediaClip.Chunk0307900D>();
+
+        mapOut.ClipGroupInGame.Clips.Add(new(emptyClip, new()
+        {
+            Coords = [expectedCoord],
+            Condition = 0,
+            ConditionValue = 0,
+            U01 = 0,
+            U02 = 0,
+            U03 = 0,
+            U04 = 0,
+        }));
     }
 
     private CGameCtnMediaClip? TransferMediaTracker(CGameCtnMediaClip? clip)
@@ -89,7 +141,7 @@ internal sealed class MediaTrackerStage : EnvironmentStageBase
                             newCameraCustom.Keys.Add(new CGameCtnMediaBlockCameraCustom.Key
                             {
                                 Time = key.Time,
-                                Position = key.Position + centerOffset * blockSize,
+                                Position = key.Position + CenterOffset * BlockSize,
                                 Anchor = key.Anchor,
                                 AnchorRot = key.AnchorRot,
                                 AnchorVis = key.AnchorVis,
@@ -127,7 +179,7 @@ internal sealed class MediaTrackerStage : EnvironmentStageBase
                             newCameraPath.Keys.Add(new CGameCtnMediaBlockCameraPath.Key
                             {
                                 Time = key.Time,
-                                Position = key.Position + centerOffset * blockSize,
+                                Position = key.Position + CenterOffset * BlockSize,
                                 Anchor = key.Anchor,
                                 AnchorRot = key.AnchorRot,
                                 AnchorVis = key.AnchorVis,
@@ -213,15 +265,15 @@ internal sealed class MediaTrackerStage : EnvironmentStageBase
             {
                 var coordEnumerable = trigger.Coords?.Select(coord => coord with
                 {
-                    X = coord.X * blockSize.X / 32,
-                    Y = coord.Y * blockSize.Y / 8 + 8,
-                    Z = coord.Z * blockSize.Z / 32,
-                } + centerOffset);
+                    X = coord.X * BlockSize.X / 32,
+                    Y = coord.Y * BlockSize.Y / 8 + 8,
+                    Z = coord.Z * BlockSize.Z / 32,
+                } + CenterOffset);
                 var coords = new List<Int3>();
 
                 foreach (var coord in coordEnumerable ?? [])
                 {
-                    for (var i = 0; i < blockSize.Y / 8; i++)
+                    for (var i = 0; i < BlockSize.Y / 8; i++)
                     {
                         coords.Add(coord with { Y = coord.Y + i });
                     }
