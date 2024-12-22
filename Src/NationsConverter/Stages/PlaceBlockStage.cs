@@ -77,12 +77,12 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return;
         }
 
-        PlaceItem(block, conversion);
+        PlaceBlockConversion(block, conversion);
 
         TryPlaceClips(block, conversion);
     }
 
-    private void PlaceItem(
+    private void PlaceBlockConversion(
         CGameCtnBlock block,
         ManualConversionModel conversion,
         string? overrideName = null,
@@ -91,6 +91,12 @@ internal sealed class PlaceBlockStage : BlockStageBase
         int? overrideVariant = null,
         int? overrideSubVariant = null)
     {
+        var blockName = overrideName ?? block.Name;
+
+        using var _ = logger.BeginScope("Block {BlockName}", blockName);
+
+        logger.LogInformation("Placing block {BlockName} from {Coord}, {Direction} ...", blockName, block.Coord, block.Direction);
+
         // fallbacks should be less permissive in the future
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true);
         var maxVariants = conversion.GetProperty(block, x => x.Variants, fallback: true);
@@ -105,7 +111,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (variant >= maxVariants)
         {
-            throw new ArgumentException("Block variant exceeds max variants");
+            throw new ArgumentException($"Block {blockName} variant exceeds max variants");
         }
 
         if (block.IsClip)
@@ -118,8 +124,6 @@ internal sealed class PlaceBlockStage : BlockStageBase
             subVariant = conversion.SubVariant.Value;
         }
 
-        var blockName = overrideName ?? block.Name;
-
         var maxSubVariants = conversion.GetProperty(block, x => x.SubVariants?[variant], fallback: true);
 
         if (maxSubVariants == 0)
@@ -129,7 +133,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         }
         else if (subVariant >= maxSubVariants)
         {
-            throw new ArgumentException($"Block sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
+            throw new ArgumentException($"Block {blockName} sub variant ({subVariant}) exceeds max sub variants ({maxSubVariants})");
         }
 
         var dirPath = string.IsNullOrWhiteSpace(conversion.PageName)
@@ -168,7 +172,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             {
                 if (c is not null && !string.IsNullOrWhiteSpace(c.Name))
                 {
-                    PlaceItem(block, ConversionSet.Blocks[c.Name],
+                    PlaceBlockConversion(block, ConversionSet.Blocks[c.Name],
                         overrideName: c.Name,
                         overrideConversion: c,
                         overrideVariant: overrideConversion?.Variant);
@@ -176,7 +180,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             }
         }
 
-        var pos = block.Coord + TotalOffset + direction switch
+        var newCoord = block.Coord + TotalOffset + direction switch
         {
             Direction.North => (0, 0, 0),
             Direction.East => (blockCoordSize.Z, 0, 0),
@@ -187,10 +191,11 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (conversion.ZoneHeight.HasValue)
         {
-            pos -= (0, isManiaPlanet ? 1 : conversion.ZoneHeight.Value, 0);
+            newCoord -= (0, isManiaPlanet ? 1 : conversion.ZoneHeight.Value, 0);
         }
 
-        var rotRadians = -(int)direction * MathF.PI / 2;
+        var rot = -(int)direction;
+        var rotRadians = rot * MathF.PI / 2;
 
         var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
         if (itemModel is not null)
@@ -248,7 +253,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var conversionModel = conversion.GetPropertyDefault(block, x => x.Conversion);
         if (conversionModel is not null && !string.IsNullOrWhiteSpace(conversionModel.Name))
         {
-            PlaceItem(block, ConversionSet.Blocks[conversionModel.Name],
+            PlaceBlockConversion(block, ConversionSet.Blocks[conversionModel.Name],
                 overrideName: conversionModel.Name,
                 overrideConversion: conversionModel,
                 overrideVariant: variantModel?.Variant ?? overrideConversion?.Variant,
@@ -257,16 +262,17 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         var modifierType = (block.IsGround && !conversion.ForceAirItem) || conversion.ForceGroundItem ? "Ground" : "Air";
 
-        var itemPath = Path.Combine(dirPath, $"{modifierType}_{variant}_{subVariant}.Item.Gbx");
+        var itemName = $"{modifierType}_{variant}_{subVariant}.Item.Gbx";
+        var itemPath = Path.Combine(dirPath, itemName);
 
         var modernized = overrideConversion?.Modernized ?? conversion.Modernized;
 
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
-            logger.LogInformation("Placing item ({BlockName}) at {Pos} with rotation {Dir}...", blockName, pos, direction);
+            logger.LogInformation("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
 
-            var item = customContentManager.PlaceItem(itemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
+            var item = customContentManager.PlaceItem(itemPath, newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
             item.Color = conversion.Color ?? DifficultyColor.Default;
 
             if (conversion.Skin is not null)
@@ -289,6 +295,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
             if (!noTerrainModifier)
             {
                 var placeDefaultZone = variantModel?.PlaceDefaultZone ?? conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
+                
+                logger.LogInformation("-- Placing terrain modifier item ...");
 
                 // This will work fine in 99% of cases, BUT
                 // in TMF, when you place fabric on NON-0x0x0 rotated unit,
@@ -377,19 +385,26 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
+                        logger.LogInformation("---- Placing default zone modifier item {ZoneBlockName} at adjusted coord {NewCoord} ...", terrainItemPath, newCoord + unit);
+
                         var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null || isManiaPlanet ? -1 : 0) + offset.Y, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0), modernized: modernized);
                     }
                 }
                 else
                 {
-                    var terrainItemPath = modifier is null
-                        ? Path.Combine(dirPath, $"GroundDefault_{variant}_{subVariant}.Item.Gbx")
-                        : Path.Combine(dirPath, $"{modifier}_{variant}_{subVariant}.Item.Gbx");
-                    customContentManager.PlaceItem(terrainItemPath, pos * BlockSize, (rotRadians, 0, 0), modernized: modernized);
+                    var terrainItemName = modifier is null
+                        ? $"GroundDefault_{variant}_{subVariant}.Item.Gbx"
+                        : $"{modifier}_{variant}_{subVariant}.Item.Gbx";
+
+                    logger.LogInformation("---- Placing terrain modifier item {TerrainItemName} ...", terrainItemName);
+
+                    customContentManager.PlaceItem(Path.Combine(dirPath, terrainItemName), newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized);
                 }
             }
         }
+
+        logger.LogInformation("-- Completed {BlockName} placement.", blockName);
     }
 
     private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel, Int3 blockSizeCoord, ManualConversionSkinModel? skinConversion)
@@ -409,17 +424,22 @@ internal sealed class PlaceBlockStage : BlockStageBase
         } : new Int3(0, 0, 0);
 
         var offsetY = blockModel.OffsetY + (isManiaPlanet ? blockModel.Offset2Y : blockModel.Offset1Y);
+        var coord = block.Coord + TotalOffset + adjustedOffset + (0, 8 + (int)offsetY, 0);
+        var dir = (Direction)(((int)direction + blockModel.Dir) % 4);
+
+        logger.LogInformation("-- Placing TM2020 block {BlockName} at adjusted coord {NewCoord}, {Direction} ...", blockModel.Name, coord, dir);
 
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
-            block.Coord + TotalOffset + adjustedOffset + (0, 8 + (int)offsetY, 0),
-            (Direction)(((int)direction + blockModel.Dir) % 4),
+            coord,
+            dir,
             blockModel.IsGround,
             (byte)blockModel.Variant.GetValueOrDefault(0));
         additionalBlock.Bit21 = blockModel.Bit21;
 
         if (blockModel.Name.Contains("Checkpoint"))
         {
+            logger.LogInformation("Setting checkpoint properties ...");
             additionalBlock.WaypointSpecialProperty = new CGameWaypointSpecialProperty
             {
                 Tag = "Checkpoint"
@@ -534,6 +554,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var rot = new Vec3(rotXRadians + AdditionalMath.ToRadians(itemModel.RotX), AdditionalMath.ToRadians(itemModel.RotY), AdditionalMath.ToRadians(itemModel.RotZ));
         var isOfficial = !itemModel.Name.Contains('/') && !itemModel.Name.Contains('\\');
 
+        logger.LogInformation("-- Placing item {ItemName} (official: {IsOfficial}) at position {Pos}, {Rot} ...", itemModel.Name, isOfficial, pos, rot);
+
         if (isOfficial)
         {
             mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
@@ -560,6 +582,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             return false;
         }
+
+        logger.LogInformation("-- Placing clips...");
 
         var blockCoordSize = conversion.GetProperty(block, x => x.Size, fallback: true) - (1, 1, 1);
 
@@ -617,7 +641,9 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
             // TODO condition Fabric in Stadium here
 
-            PlaceItem(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir);
+            logger.LogInformation("---- Placing clip {ClipName} at adjusted coord {NewCoord}, {Direction} ...", clip.Name, clipBlock.Coord, dir);
+
+            PlaceBlockConversion(clipBlock, clipConversion, overrideName: clip.Name, overrideDirection: dir);
         }
 
         return clipDirs is { Count: > 0 };
@@ -645,7 +671,9 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                 // TODO condition Fabric in Stadium here
 
-                PlaceItem(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
+                logger.LogInformation("Placing ground clip filler {BlockName}, {Direction} ...", block.Name, dir);
+
+                PlaceBlockConversion(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
             }
         }
 
