@@ -299,6 +299,12 @@ Blocks:
         NoItem: true
   StadiumControlRoadPub:
     PlaceDefaultZone: true
+  StadiumControlCameraPub:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Item:
+      Name: Decors/Control/StadiumControlRoadCamera/{Modifier}_3_0.Item.Gbx
   StadiumControlLight:
     PlaceDefaultZone: true
     ForceAirItem: true
