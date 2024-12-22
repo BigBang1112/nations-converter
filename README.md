@@ -40,12 +40,12 @@ Every converted map includes additional metadata traits that can be used in game
 
 | Type and Name                        | Version        | Example value                 | Description |
 |--------------------------------------|----------------|-------------------------------| ----------- |
-| `Boolean` `MadeWithNationsConverter` | 0.1.0+         | `True`                        | Track was made with (or with assist) of this tool. Always true.
+| `Boolean` `MadeWithNationsConverter` | 0.1.0+         | `True`                        | Track was made with (or with assist of) this tool. Always true.
 | `Text` `NC_OriginalAuthorLogin`      | 1.0.1+         | `bigbang1112`                 | Login of the original author name. Bugged in 1.0.1, fixed since 1.0.2.
 | `Text` `NC_OriginalAuthorNickname`   | 1.0.1+         | `$fff$o$n$t$iBigBang1112`     | Formatted nickname of the original author name. Empty text on maps made in TMUF and lower versions.
 | `Text` `NC_OriginalMapUid`           | 1.2.0+         | `JtPkBe105hUkDkQOoieBVFZTDK9` | Map UID of the map converted before the new UID was set. Useful for original map identification.
-| `Boolean` `NC2_IsConverted`          | 2.0.0-alpha.1+ | `True`                        | Track was made with (or with assist) of Nations Converter **2**.
-| `Text` `NC2_ConvertedAt`             | 2.0.0-alpha.1+ | `2024-12-19T21:22:03`         | Date and time the conversion happened in ISO 8601 standard.
+| `Boolean` `NC2_IsConverted`          | 2.0.0-alpha.1+ | `True`                        | Track was made with (or with assist of) Nations Converter **2**.
+| `Text` `NC2_ConvertedAt`             | 2.0.0-alpha.1+ | `2024-12-19T21:22:03`         | Date and time the conversion happened in ISO 8601 standard, always UTC.
 | `Text` `NC2_Version`                 | 2.0.0-alpha.1+ | `2.0.0.0`                     | Version of the core NC2 library. Does not include pre-releases. Never empty.
 | `Text` `NC2_CLI_Version`             | 2.0.0-alpha.1+ | `2.0.0.0`                     | Version of the CLI program that uses the NC2 library. Does not include pre-releases. Can be empty if converted in web browser.
 | `Text` `NC2_Web_Version`             | 2.0.0-alpha.1+ | `2.0.0.0`                     | Version of the CLI program that uses the NC2 library. Does not include pre-releases. Can be empty if converted using CLI.
