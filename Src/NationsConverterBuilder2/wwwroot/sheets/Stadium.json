@@ -6748,6 +6748,126 @@
         }
       ]
     },
+    "StadiumCircuitBumper": {
+      "PageName": "Circuit/Turbos",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "StadiumCircuitBumper2": {
+      "PageName": "Circuit/Turbos",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
     "StadiumCircuitBumpUp": {
       "PageName": "Circuit/Hazards",
       "Ground": {},
@@ -12445,6 +12565,50 @@
       "TM2": true,
       "Variants": 1
     },
+    "StadiumPlatformBumper": {
+      "PageName": "Platform/Turbo",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformBumper2": {
+      "PageName": "Platform/Turbo",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
     "StadiumPlatformCornerWall1": {
       "PageName": "Platform/GTCurve",
       "Air": {
@@ -12846,6 +13010,62 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ]
+    },
+    "StadiumPlatformGridToCircuit": {
+      "PageName": "Platform/Grid",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumCircuitBorderFreeClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitBorderFreeClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
       ]
     },
     "StadiumPlatformGridTurbo": {
@@ -14675,6 +14895,114 @@
           1
         ]
       },
+      "Variants": 1
+    },
+    "StadiumPlatformWall2ForceAcceleration": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformWall2FreeWheeling": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformWall2NoGrip": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformWall2NoSteering": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformWall4": {
@@ -19435,6 +19763,92 @@
         }
       ]
     },
+    "StadiumRoadMainBumper": {
+      "PageName": "RoadMain/Turbo",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "StadiumRoadMainBumper2": {
+      "PageName": "RoadMain/Turbo",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
     "StadiumRoadMainClip": {
       "PageName": "Other",
       "Ground": {},
@@ -19528,6 +19942,49 @@
         1
       ],
       "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "StadiumRoadMainForceAcceleration": {
+      "PageName": "RoadMain/Specials",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
         {
           "Name": "StadiumRoadMainClip",
           "Offset": [
@@ -22066,6 +22523,49 @@
         }
       ]
     },
+    "StadiumRoadMainNoGrip": {
+      "PageName": "RoadMain/Specials",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
     "StadiumRoadMainNoGripSlope": {
       "PageName": "Slope/Specials",
       "Ground": {},
@@ -22153,6 +22653,49 @@
         },
         {
           "Name": "StadiumRoadTiltClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "StadiumRoadMainNoSteering": {
+      "PageName": "RoadMain/Specials",
+      "Ground": {},
+      "Air": {},
+      "Modifiable": true,
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadMainClip",
           "Offset": [
             0,
             0,
@@ -31276,6 +31819,100 @@
       "Variants": 1,
       "SubVariants": [
         1
+      ]
+    },
+    "StadiumTubeCurve1": {
+      "PageName": "Bridges/PillarRoad",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumTubeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumTubeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        }
+      ]
+    },
+    "StadiumTubeCurve2": {
+      "PageName": "Bridges/PillarRoad",
+      "Ground": {},
+      "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "Size": [
+        2,
+        1,
+        2
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumTubeRoadClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumTubeRoadClip",
+          "Offset": [
+            1,
+            0,
+            1
+          ],
+          "Dir": 0
+        }
       ]
     },
     "StadiumTubePillar": {
