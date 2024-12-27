@@ -199,7 +199,10 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
         if (oldThumbnailChunk is null)
         {
-            mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+            if (mapIn.CanBeGameVersion(GameVersion.MP4))
+            {
+                mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+            }
         }
         else
         {
