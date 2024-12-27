@@ -282,7 +282,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             logger.LogInformation("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
 
-            var item = customContentManager.PlaceItem(itemPath, newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest);
+            var item = customContentManager.PlaceItem(itemPath, newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest, lightProperties: conversion.Lights);
             item.Color = conversion.Color ?? DifficultyColor.Default;
 
             if (conversion.Skin is not null)

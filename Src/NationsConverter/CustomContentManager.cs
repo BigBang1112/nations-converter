@@ -2,6 +2,7 @@
 using GBX.NET;
 using GBX.NET.Engines.Game;
 using GBX.NET.Engines.GameData;
+using GBX.NET.Engines.Plug;
 using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 using NationsConverter.Stages;
@@ -84,7 +85,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         if (lightProperties?.Length > 0)
         {
             // so that you can match it in CreateEntryFromLocalGbxFile/CreateEntryFromZippedGbxFile
-            itemLights.Add(Path.Combine("Items", rootFolderName, itemPath), lightProperties);
+            itemLights.TryAdd(Path.Combine("Items", rootFolderName, itemPath), lightProperties);
         }
 
         var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath.Replace("�", "")).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
@@ -215,9 +216,60 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             return false;
         }
 
-        // 1. open item gbx fully
+        // 1. open item gbx fully (issue with "Failed to read compressed data" if not using MemoryStream)
+        using var ms = new MemoryStream();
+        sourceItemGbxStream.CopyTo(ms);
+        ms.Position = 0;
+        var itemGbx = Gbx.Parse<CGameItemModel>(ms);
+
         // 2. add light layer according to lightProperties
+        if (itemGbx.Node.EntityModelEdition is not CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityEdition)
+        {
+            return false;
+        }
+
+        var lightLayer = entityEdition.MeshCrystal
+            .Layers
+            .OfType<CPlugCrystal.LightLayer>()
+            .FirstOrDefault();
+
+        if (lightLayer is null)
+        {
+            lightLayer = new CPlugCrystal.LightLayer
+            {
+                Ver = 2,
+                LayerName = "Light",
+                LayerId = "Layer4",
+                IsEnabled = true
+            };
+            entityEdition.MeshCrystal.Layers.Add(lightLayer);
+        }
+
+        var lights = lightProperties.Select(props =>
+        {
+            var userLight = new CPlugLightUserModel
+            {
+                Color = props.Color,
+                Distance = props.Distance,
+                Intensity = props.Intensity,
+                NightOnly = props.NightOnly,
+                SpotInnerAngle = props.SpotInnerAngle,
+                SpotOuterAngle = props.SpotOuterAngle,
+            };
+            userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
+            return userLight;
+        });
+        var lightPositions = lightProperties.Select(x => new CPlugCrystal.LightPos
+        {
+            U02 = new(0, 0, 0, 0, 0, 0, 0, 0, 0, x.Position.X, x.Position.Y, x.Position.Z)
+        });
+
+        lightLayer.Lights = (lightLayer.Lights ?? []).Concat(lights).ToArray();
+        lightLayer.LightPositions = (lightLayer.LightPositions ?? []).Concat(lightPositions).ToArray();
+
         // 3. write uncompressed to outputItemGbxStream
+        itemGbx.BodyCompression = GbxCompression.Uncompressed;
+        itemGbx.Save(outputItemGbxStream);
 
         return true;
     }
