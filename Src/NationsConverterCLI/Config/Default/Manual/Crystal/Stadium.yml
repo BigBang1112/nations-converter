@@ -908,11 +908,6 @@ Blocks:
     ConversionVariants:
       11:
         SubVariant: 0
-      13:
-        Item:
-          Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
-          OffsetY: -16
-          Offset2Y: 8
   StadiumRoadDirtToRoadDirtHighBridge:
     NoTerrainModifier: true
     Modernized: true
