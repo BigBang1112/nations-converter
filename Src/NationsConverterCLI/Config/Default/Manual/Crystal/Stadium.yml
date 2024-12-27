@@ -1285,8 +1285,20 @@ Blocks:
     Modernized: true
   StadiumRoadDirtHillSlopeGT2:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [48, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillSlopeGT2Bis:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [16, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillWave:
     Modernized: true
   StadiumRoadDirtHillTiltCornerOut:
