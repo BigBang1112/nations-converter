@@ -1340,3 +1340,33 @@ Blocks:
       Name: GateCheckpoint
       RotY: 90
       OffsetY: 2.5
+  StadiumTubeVDiag1:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag1/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag2:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag2/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag4:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag4/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag8:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag8/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag16:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag16/Air_0_0.Item.Gbx
+      OnlyGround: true

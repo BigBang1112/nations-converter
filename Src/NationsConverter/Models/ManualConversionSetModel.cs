@@ -51,7 +51,7 @@ public sealed class ManualConversionSetModel
             if (!Blocks.TryGetValue(block, out var manualConversion) || manualConversion is null)
             {
                 manualConversion = new ManualConversionModel();
-                Blocks.Add(block, manualConversion);
+                Blocks[block] = manualConversion;
             }
 
             manualConversion ??= new ManualConversionModel();

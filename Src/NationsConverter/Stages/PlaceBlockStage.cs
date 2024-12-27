@@ -538,6 +538,16 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return;
         }
 
+        if (isGround && !itemModel.OnlyGround)
+        {
+            return;
+        }
+
+        if (!isGround && !itemModel.OnlyAir)
+        {
+            return;
+        }
+
         var dir = ((int)direction + itemModel.Dir) % 4;
 
         var c = coord + TotalOffset + dir switch
