@@ -34,7 +34,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         ImmutableDictionary<Int3, string> terrainModifierZones,
         bool isManiaPlanet,
         IComplexConfig complexConfig,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;

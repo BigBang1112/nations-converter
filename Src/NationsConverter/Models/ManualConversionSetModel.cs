@@ -1,4 +1,5 @@
 ﻿using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverterShared.Models;
 using YamlDotNet.Serialization;
 
@@ -16,14 +17,14 @@ public sealed class ManualConversionSetModel
         set => environment = value;
     }
 
+    private readonly HashSet<string> blockNamesNotFound = [];
+
     public string? DefaultZoneBlock { get; set; }
     public Dictionary<string, string> BlockTerrainModifiers { get; set; } = [];
     public float DecorationYOffset { get; set; }
     public Dictionary<string, ManualConversionDecorationModel> Decorations { get; set; } = [];
     public HashSet<string>? TerrainModifiers { get; set; }
     public float WaterHeight { get; set; }
-    [Obsolete("Pylon is now taken from zone blocks")]
-    public string? Pylon { get; set; }
     public Dictionary<string, ManualConversionModel> Blocks { get; set; } = [];
     public int PillarOffset { get; set; }
 
@@ -112,13 +113,17 @@ public sealed class ManualConversionSetModel
         return this;
     }
 
-    public IEnumerable<KeyValuePair<CGameCtnBlock, ManualConversionModel>> GetBlockConversionPairs(CGameCtnChallenge map)
+    public IEnumerable<KeyValuePair<CGameCtnBlock, ManualConversionModel>> GetBlockConversionPairs(CGameCtnChallenge map, ILogger logger)
     {
         foreach (var block in map.GetBlocks())
         {
             if (Blocks.TryGetValue(block.Name, out var conversion) && conversion is not null)
             {
                 yield return KeyValuePair.Create(block, conversion);
+            }
+            else if (blockNamesNotFound.Add(block.Name))
+            {
+                logger.LogWarning("Block {BlockName} not found in conversion set!", block.Name);
             }
         }
     }

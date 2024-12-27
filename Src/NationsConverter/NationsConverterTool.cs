@@ -62,7 +62,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, isManiaPlanet, logger);
         waterStage.Convert();
 
-        var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager);
+        var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager, logger);
         pylonStage.Convert();
 
         var decorationStage = new DecorationStage(mapIn, mapOut, conversionSet, Config, customContentManager, logger);

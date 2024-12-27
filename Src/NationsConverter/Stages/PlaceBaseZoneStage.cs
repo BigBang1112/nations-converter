@@ -23,7 +23,7 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         ImmutableDictionary<Int3, string> terrainModifierZones,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;

@@ -21,7 +21,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         NationsConverterConfig config,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapOut = mapOut;
         this.customContentManager = customContentManager;

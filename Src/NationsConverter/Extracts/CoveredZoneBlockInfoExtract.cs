@@ -29,7 +29,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         var groundPositions = new HashSet<Int3>();
 
-        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn))
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn, logger))
         {
             if (conversion.ZoneHeight is not null)
             {
@@ -41,7 +41,7 @@ internal sealed class CoveredZoneBlockInfoExtract
 
         var coveredZoneBlocks = ImmutableHashSet.CreateBuilder<CGameCtnBlock>();
 
-        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn))
+        foreach (var (block, conversion) in conversionSet.GetBlockConversionPairs(mapIn, logger))
         {
             if (!block.IsGround || conversion.ZoneHeight is null)
             {
