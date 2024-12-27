@@ -26,6 +26,9 @@ public class NationsConverterConfig : Config
     [YamlMember(Description = "Places invisible transformation gate on the start block.")]
     public bool PlaceTransformationGate { get; set; } = true;
 
+    [YamlMember(Description = "Applies the default car from the map to the converted map. This won't make a difference without Editor++ installed.")]
+    public bool ApplyDefaultCar { get; set; }
+
     [YamlMember(Description = "Keeps the map validated with its medal times. PLEASE use only if you're certain the map is gonna be possible to finish.")]
     public bool KeepMedalTimes { get; set; }
 

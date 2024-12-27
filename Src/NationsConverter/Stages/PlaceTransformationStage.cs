@@ -13,6 +13,8 @@ internal sealed class PlaceTransformationStage : BlockStageBase
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
+    private string? carEnvironment;
+
     public PlaceTransformationStage(
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
@@ -25,16 +27,33 @@ internal sealed class PlaceTransformationStage : BlockStageBase
         this.customContentManager = customContentManager;
         this.config = config;
         this.logger = logger;
+
+        carEnvironment = mapIn.PlayerModel?.Id switch
+        {
+            "SnowCar" => "Snow",
+            "Rally" => "Rally",
+            "American" => "Desert",
+            _ => Environment switch
+            {
+                "Snow" => "Snow",
+                "Rally" => "Rally",
+                "Desert" => "Desert",
+                _ => null,
+            }
+        };
     }
 
     public override void Convert()
     {
-        if (Environment is not "Snow" and not "Rally" and not "Desert")
+        if (carEnvironment is null)
         {
             return;
         }
 
-        mapOut.PlayerModel = new($"Car{Environment}", 10003, "Nadeo");
+        if (config.ApplyDefaultCar)
+        {
+            mapOut.PlayerModel = new($"Car{carEnvironment}", 10003, "Nadeo");
+        }
 
         if (config.PlaceTransformationGate)
         {
@@ -65,7 +84,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
 
         logger.LogInformation("Placing transformation gate at {Pos} with rotation {Dir}...", pos, block.Direction);
 
-        var gateBlock = customContentManager.PlaceBlock($@"Misc\{Environment}HiddenGate", pos, (rotRadians, 0, 0));
+        var gateBlock = customContentManager.PlaceBlock($@"Misc\{carEnvironment}HiddenGate", pos, (rotRadians, 0, 0));
         gateBlock.Bit21 = true;
 
         // Placing official transformation can be optional
