@@ -538,12 +538,12 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return;
         }
 
-        if (isGround && !itemModel.OnlyGround)
+        if (itemModel.OnlyGround && !isGround)
         {
             return;
         }
 
-        if (!isGround && !itemModel.OnlyAir)
+        if (itemModel.OnlyAir && isGround)
         {
             return;
         }
