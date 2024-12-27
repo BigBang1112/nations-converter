@@ -13,7 +13,7 @@ internal sealed class PlaceTransformationStage : BlockStageBase
     private readonly NationsConverterConfig config;
     private readonly ILogger logger;
 
-    private string? carEnvironment;
+    private readonly string? carEnvironment;
 
     public PlaceTransformationStage(
         CGameCtnChallenge mapIn,
@@ -84,12 +84,16 @@ internal sealed class PlaceTransformationStage : BlockStageBase
 
         logger.LogInformation("Placing transformation gate at {Pos} with rotation {Dir}...", pos, block.Direction);
 
-        var gateBlock = customContentManager.PlaceBlock($@"Misc\{carEnvironment}HiddenGate", pos, (rotRadians, 0, 0));
-        gateBlock.Bit21 = true;
-
-        // Placing official transformation can be optional
-        /*convertedMap.PlaceAnchoredObject(
-            new($"GateGameplay{Environment}4m", 26, "Nadeo"),
-                pos, (rotRadians, 0, 0));*/
+        if (config.UseVisibleTransformationGate)
+        {
+            mapOut.PlaceAnchoredObject(
+                new($"GateGameplay{carEnvironment}4m", 26, "Nadeo"),
+                    pos, (rotRadians, 0, 0));
+        }
+        else
+        {
+            var gateBlock = customContentManager.PlaceBlock($@"Misc\{carEnvironment}HiddenGate", pos, (rotRadians, 0, 0));
+            gateBlock.Bit21 = true;
+        }
     }
 }
