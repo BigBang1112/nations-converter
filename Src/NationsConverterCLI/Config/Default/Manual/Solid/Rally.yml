@@ -1445,3 +1445,81 @@ Blocks:
     SubVariant: 0
   RallyCastleDrawBridgePillar:
     SubVariant: 0
+  RallyTunnelEntry:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 4, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelExit:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 14, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyRockyGrassCliffTunnelEntry:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 4, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelRoadSlope:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 10, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelGTCurve2:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [20, 4, 18]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+    - Color: [1, 0.95, 0.95]
+      Position: [46, 4, 44]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelGTCurve3:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [19, 4, 21]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+    - Color: [1, 0.95, 0.95]
+      Position: [40, 4, 57]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+    - Color: [1, 0.95, 0.95]
+      Position: [76, 4, 77]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelRoad:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 4, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelCheckpoint:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 4, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false
+  RallyTunnelTurbo:
+    Lights:
+    - Color: [1, 0.95, 0.95]
+      Position: [16, 4, 16]
+      Distance: 64
+      Intensity: 1.5
+      NightOnly: false

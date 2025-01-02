@@ -264,7 +264,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         var lightPositions = lightProperties.Select((x, i) => new CPlugCrystal.LightPos
         {
-            U01 = i + prevLightCount,
+            U01 = i + prevLightCount, // index of the light
             U02 = new(0, 0, 0, 0, 0, 0, 0, 0, 0, x.Position.X, x.Position.Y, x.Position.Z)
         });
 
