@@ -103,6 +103,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
             ? TextFormatter.Deformat(mapIn.MapName)
             : GbxPath.GetFileNameWithoutExtension(gbxMapIn.FilePath);
 
+        fileNameWithoutExtension = Path.GetInvalidFileNameChars()
+            .Aggregate(fileNameWithoutExtension, (current, c) => current.Replace(c, '_'));
+
         return new Gbx<CGameCtnChallenge>(mapOut)
         {
             FilePath = Path.Combine("Maps", "GbxTools", "NationsConverter", $"{fileNameWithoutExtension}.Map.Gbx")
