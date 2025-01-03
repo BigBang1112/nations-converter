@@ -329,7 +329,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                             _ => (0, 0, 0)
                         };
 
-                        if (terrainModifierZones.TryGetValue(alignedCoord - (0, isManiaPlanet ? 0 : 1, 0), out modifier))
+                        if (terrainModifierZones.TryGetValue(alignedCoord with { Y = 0 }, out modifier))
                         {
                             break;
                         }
@@ -337,7 +337,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 }
                 else
                 {
-                    modifier = terrainModifierZones.GetValueOrDefault(block.Coord - (0, 1, 0));
+                    modifier = terrainModifierZones.GetValueOrDefault(block.Coord with { Y = 0 });
                 }
 
                 // if placeDefaultZone, place 1x1 pieces on all ground units at Y 0
