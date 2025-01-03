@@ -313,6 +313,7 @@ Blocks:
     PlaceDefaultZone: true
   StadiumRoadMain:
     PlaceDefaultZone: true
+    Modernized: true
     ConversionVariants:
       2:
         NoItem: true
@@ -731,10 +732,14 @@ Blocks:
       Name: PlatformTechLoopEndCurve1In
   StadiumRamp:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumRampLow:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumInflatableAdvert:
@@ -864,6 +869,8 @@ Blocks:
       Pivot: [16, 2, 6]
   StadiumRoadStretch:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
   StadiumPlatformWall1:
     NoItem: true
     Block:
@@ -1064,9 +1071,11 @@ Blocks:
   StadiumLoopLeft:
     PlaceDefaultZone: true
     ForceAirItem: true  
+    Modernized: true
   StadiumLoopRight:
     PlaceDefaultZone: true
     ForceAirItem: true  
+    Modernized: true
   StadiumRoadDirtClip:
     Modernized: true
   StadiumRoadDirtHighClip:
@@ -1340,6 +1349,9 @@ Blocks:
       Name: GateCheckpoint
       RotY: 90
       OffsetY: 2.5
+  StadiumCircuitHole:
+    ForceAirItem: true
+    Modernized: true
   StadiumTubeVDiag1:
     Modifiable: true
     PlaceDefaultZone: true
