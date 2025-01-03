@@ -94,6 +94,7 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 2
+      Modernized: true
   StadiumRoadDirtHillTiltCornerIn:
     SubVariant: 0
     Modernized: true
@@ -307,10 +308,11 @@ Blocks:
       Name: Decors/Control/StadiumControlRoadCamera/{Modifier}_3_0.Item.Gbx
   StadiumControlLight:
     PlaceDefaultZone: true
-    ForceAirItem: true
     Modifiable: true
+    Modernized: true
   StadiumControlLightBase:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumRoadMain:
     PlaceDefaultZone: true
     Modernized: true
@@ -876,6 +878,11 @@ Blocks:
     Block:
       Name: PlatformTechWallStraight
       Dir: 3
+  StadiumPlatformWall1Birds:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
   StadiumPlatformWallBorder:
     NoItem: true
     Block:
@@ -908,8 +915,6 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderDiagOut:
     PlaceDefaultZone: true
-  #StadiumRoadMainClip:
-  #  PlaceDefaultZone: true
   StadiumDirtHill:
     Modernized: true
     ConversionVariants:
@@ -1079,9 +1084,9 @@ Blocks:
     NoItem: true
     NoTerrainModifier: true
     WaterOffsetY: 1
-    Modernized: true
     Conversion:
       Name: StadiumPool
+      Modernized: true
       OffsetY: 1
   StadiumWater:
     Modernized: true
@@ -1091,6 +1096,7 @@ Blocks:
     WaterOffsetY: 1
     Conversion:
       Name: StadiumWater
+      Modernized: true
       OffsetY: 1
   StadiumPodium:
     Modifiable: true
@@ -1260,6 +1266,11 @@ Blocks:
     NoTerrainModifier: true
     Block:
       Name: PlatformTechBase
+  StadiumPlatformGridStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Block:
+      Name: PlatformTechBase
   StadiumCircuitLoopStart:
     PlaceDefaultZone: true
   StadiumCircuitToRoadMain:
@@ -1373,3 +1384,20 @@ Blocks:
     Item:
       Name: Bridges/Pillar/StadiumTubeVDiag16/Air_0_0.Item.Gbx
       OnlyGround: true
+  CE_Crane:
+    PlaceDefaultZone: true
+    Modifiable: true
+  CE_CranePlatformGridStraight:
+    PlaceDefaultZone: true
+    Modifiable: true
+  StadiumRoadMainBirds:
+    NoItem: true
+    Conversion:
+      Name: StadiumRoadMain
+      Modernized: true
+  StadiumRoadDirtStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+      Modernized: true
