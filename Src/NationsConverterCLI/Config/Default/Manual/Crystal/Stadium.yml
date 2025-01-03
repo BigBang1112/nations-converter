@@ -907,6 +907,14 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve2In:
     PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve4In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve2Out:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3Out:
+    PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve4Out:
     PlaceDefaultZone: true
   StadiumCircuitSlopeStart:
@@ -1354,6 +1362,7 @@ Blocks:
   StadiumCircuitHole:
     ForceAirItem: true
     Modernized: true
+    PlaceDefaultZone: true
   StadiumTubeVDiag1:
     Modifiable: true
     PlaceDefaultZone: true
