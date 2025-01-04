@@ -23,7 +23,7 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
         ManualConversionSetModel conversionSet,
         CustomContentManager customContentManager,
         ImmutableDictionary<Int3, string> terrainModifierZones,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
@@ -83,6 +83,11 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
         foreach (var unit in alignedUnits)
         {
             var pos = block.Coord + unit - min;
+
+            if (occupiedZone.GetLength(0) <= pos.X || occupiedZone.GetLength(1) <= pos.Z)
+            {
+                continue;
+            }
 
             if (!occupiedZone[pos.X, pos.Z])
             {

@@ -259,8 +259,12 @@ internal sealed class CustomContentManager : EnvironmentStageBase
             userLight.CreateChunk<CPlugLightUserModel.Chunk090F9000>().Version = 1;
             return userLight;
         });
-        var lightPositions = lightProperties.Select(x => new CPlugCrystal.LightPos
+
+        var prevLightCount = lightLayer.Lights?.Length ?? 0;
+
+        var lightPositions = lightProperties.Select((x, i) => new CPlugCrystal.LightPos
         {
+            U01 = i + prevLightCount, // index of the light
             U02 = new(0, 0, 0, 0, 0, 0, 0, 0, 0, x.Position.X, x.Position.Y, x.Position.Z)
         });
 

@@ -30,7 +30,7 @@ internal sealed class TerrainModifierZoneExtract
         {
             if (conversionSet.BlockTerrainModifiers.TryGetValue(block.Name, out var terrainModifier))
             {
-                terrainModifierZones[block.Coord] = terrainModifier;
+                terrainModifierZones[block.Coord with { Y = 0 }] = terrainModifier;
                 continue;
             }
 

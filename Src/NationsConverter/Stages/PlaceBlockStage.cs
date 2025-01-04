@@ -34,7 +34,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         ImmutableDictionary<Int3, string> terrainModifierZones,
         bool isManiaPlanet,
         IComplexConfig complexConfig,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;
@@ -280,7 +280,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
         if (!noItem)
         {
-            logger.LogInformation("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
+            logger.LogDebug("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
 
             var item = customContentManager.PlaceItem(itemPath, newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized, lightmapQuality: LightmapQuality.Highest, lightProperties: conversion.Lights);
             item.Color = conversion.Color ?? DifficultyColor.Default;
@@ -306,7 +306,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             {
                 var placeDefaultZone = variantModel?.PlaceDefaultZone ?? conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
                 
-                logger.LogInformation("-- Placing terrain modifier item ...");
+                logger.LogDebug("-- Placing terrain modifier item ...");
 
                 // This will work fine in 99% of cases, BUT
                 // in TMF, when you place fabric on NON-0x0x0 rotated unit,
@@ -329,7 +329,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                             _ => (0, 0, 0)
                         };
 
-                        if (terrainModifierZones.TryGetValue(alignedCoord - (0, isManiaPlanet ? 0 : 1, 0), out modifier))
+                        if (terrainModifierZones.TryGetValue(alignedCoord with { Y = 0 }, out modifier))
                         {
                             break;
                         }
@@ -337,7 +337,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 }
                 else
                 {
-                    modifier = terrainModifierZones.GetValueOrDefault(block.Coord - (0, 1, 0));
+                    modifier = terrainModifierZones.GetValueOrDefault(block.Coord with { Y = 0 });
                 }
 
                 // if placeDefaultZone, place 1x1 pieces on all ground units at Y 0
@@ -395,7 +395,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                     foreach (var unit in alignedUnits.Where(x => x.Y == 0))
                     {
-                        logger.LogInformation("---- Placing default zone modifier item {ZoneBlockName} at adjusted coord {NewCoord} ...", terrainItemPath, newCoord + unit);
+                        logger.LogDebug("---- Placing default zone modifier item {ZoneBlockName} at adjusted coord {NewCoord} ...", terrainItemPath, newCoord + unit);
 
                         var alignedPos = block.Coord + unit - min + TotalOffset + (0, (conversion.ZoneHeight is null || isManiaPlanet ? -1 : 0) + offset.Y, 0);
                         customContentManager.PlaceItem(terrainItemPath, alignedPos * BlockSize, (0, 0, 0), modernized: modernized);
@@ -407,14 +407,14 @@ internal sealed class PlaceBlockStage : BlockStageBase
                         ? $"GroundDefault_{variant}_{subVariant}.Item.Gbx"
                         : $"{modifier}_{variant}_{subVariant}.Item.Gbx";
 
-                    logger.LogInformation("---- Placing terrain modifier item {TerrainItemName} ...", terrainItemName);
+                    logger.LogDebug("---- Placing terrain modifier item {TerrainItemName} ...", terrainItemName);
 
                     customContentManager.PlaceItem(Path.Combine(dirPath, terrainItemName), newCoord * BlockSize, (rotRadians, 0, 0), modernized: modernized);
                 }
             }
         }
 
-        logger.LogInformation("-- Completed {BlockName} placement.", blockName);
+        logger.LogDebug("-- Completed {BlockName} placement.", blockName);
     }
 
     private void PlaceBlockFromItemModel(CGameCtnBlock block, Direction direction, ManualConversionBlockModel blockModel, Int3 blockSizeCoord, ManualConversionSkinModel? skinConversion)
@@ -437,7 +437,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var coord = block.Coord + TotalOffset + adjustedOffset + (0, 8 + (int)offsetY, 0);
         var dir = (Direction)(((int)direction + blockModel.Dir) % 4);
 
-        logger.LogInformation("-- Placing TM2020 block {BlockName} at adjusted coord {NewCoord}, {Direction} ...", blockModel.Name, coord, dir);
+        logger.LogDebug("-- Placing TM2020 block {BlockName} at adjusted coord {NewCoord}, {Direction} ...", blockModel.Name, coord, dir);
 
         var additionalBlock = mapOut.PlaceBlock(
             blockModel.Name,
@@ -538,6 +538,16 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return;
         }
 
+        if (itemModel.OnlyGround && !isGround)
+        {
+            return;
+        }
+
+        if (itemModel.OnlyAir && isGround)
+        {
+            return;
+        }
+
         var dir = ((int)direction + itemModel.Dir) % 4;
 
         var c = coord + TotalOffset + dir switch
@@ -564,7 +574,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var rot = new Vec3(rotXRadians + AdditionalMath.ToRadians(itemModel.RotX), AdditionalMath.ToRadians(itemModel.RotY), AdditionalMath.ToRadians(itemModel.RotZ));
         var isOfficial = !itemModel.Name.Contains('/') && !itemModel.Name.Contains('\\');
 
-        logger.LogInformation("-- Placing item {ItemName} (official: {IsOfficial}) at position {Pos}, {Rot} ...", itemModel.Name, isOfficial, pos, rot);
+        logger.LogDebug("-- Placing item {ItemName} (official: {IsOfficial}) at position {Pos}, {Rot} ...", itemModel.Name, isOfficial, pos, rot);
 
         if (isOfficial)
         {

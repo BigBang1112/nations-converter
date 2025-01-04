@@ -19,9 +19,9 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="GBX.NET.Hashing" Version="1.0.0" />
-        <PackageReference Include="GBX.NET.LZO" Version="2.1.1" />
-        <PackageReference Include="GBX.NET.Tool.CLI" Version="0.4.0-nightly.20241220.e293b64" />
+        <PackageReference Include="GBX.NET.Hashing" Version="1.0.1" />
+        <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
+        <PackageReference Include="GBX.NET.Tool.CLI" Version="0.5.0" />
     </ItemGroup>
 
     <ItemGroup>

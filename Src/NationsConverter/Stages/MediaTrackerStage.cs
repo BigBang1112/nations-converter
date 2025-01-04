@@ -18,7 +18,7 @@ internal sealed class MediaTrackerStage : BlockStageBase
         CGameCtnChallenge mapOut,
         NationsConverterConfig config,
         ManualConversionSetModel conversionSet,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.mapOut = mapOut;

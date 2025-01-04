@@ -94,6 +94,7 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 2
+      Modernized: true
   StadiumRoadDirtHillTiltCornerIn:
     SubVariant: 0
     Modernized: true
@@ -307,10 +308,11 @@ Blocks:
       Name: Decors/Control/StadiumControlRoadCamera/{Modifier}_3_0.Item.Gbx
   StadiumControlLight:
     PlaceDefaultZone: true
-    ForceAirItem: true
     Modifiable: true
+    Modernized: true
   StadiumControlLightBase:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumRoadMain:
     PlaceDefaultZone: true
     Modernized: true
@@ -876,6 +878,11 @@ Blocks:
     Block:
       Name: PlatformTechWallStraight
       Dir: 3
+  StadiumPlatformWall1Birds:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
   StadiumPlatformWallBorder:
     NoItem: true
     Block:
@@ -900,6 +907,14 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve2In:
     PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve4In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve2Out:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3Out:
+    PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve4Out:
     PlaceDefaultZone: true
   StadiumCircuitSlopeStart:
@@ -908,18 +923,11 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderDiagOut:
     PlaceDefaultZone: true
-  #StadiumRoadMainClip:
-  #  PlaceDefaultZone: true
   StadiumDirtHill:
     Modernized: true
     ConversionVariants:
       11:
         SubVariant: 0
-      13:
-        Item:
-          Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
-          OffsetY: -16
-          Offset2Y: 8
   StadiumRoadDirtToRoadDirtHighBridge:
     NoTerrainModifier: true
     Modernized: true
@@ -935,16 +943,7 @@ Blocks:
       NoItem: true
       Variant: 3
   StadiumRoadDirtToRoadDirtHigh2:
-    NoTerrainModifier: true
     Modernized: true
-    Conversions:
-    - Name: StadiumRoadDirt
-      NoItem: true
-      Variant: 3
-    - Name: StadiumRoadDirt
-      NoItem: true
-      Variant: 3
-      OffsetX: 1
   StadiumRoadDirtHighToRoad:
     NoTerrainModifier: true
     Modernized: true
@@ -1093,9 +1092,9 @@ Blocks:
     NoItem: true
     NoTerrainModifier: true
     WaterOffsetY: 1
-    Modernized: true
     Conversion:
       Name: StadiumPool
+      Modernized: true
       OffsetY: 1
   StadiumWater:
     Modernized: true
@@ -1105,6 +1104,7 @@ Blocks:
     WaterOffsetY: 1
     Conversion:
       Name: StadiumWater
+      Modernized: true
       OffsetY: 1
   StadiumPodium:
     Modifiable: true
@@ -1274,6 +1274,11 @@ Blocks:
     NoTerrainModifier: true
     Block:
       Name: PlatformTechBase
+  StadiumPlatformGridStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Block:
+      Name: PlatformTechBase
   StadiumCircuitLoopStart:
     PlaceDefaultZone: true
   StadiumCircuitToRoadMain:
@@ -1299,8 +1304,20 @@ Blocks:
     Modernized: true
   StadiumRoadDirtHillSlopeGT2:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [48, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillSlopeGT2Bis:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [16, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillWave:
     Modernized: true
   StadiumRoadDirtHillTiltCornerOut:
@@ -1345,3 +1362,51 @@ Blocks:
   StadiumCircuitHole:
     ForceAirItem: true
     Modernized: true
+    PlaceDefaultZone: true
+  StadiumTubeVDiag1:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag1/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag2:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag2/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag4:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag4/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag8:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag8/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag16:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag16/Air_0_0.Item.Gbx
+      OnlyGround: true
+  CE_Crane:
+    PlaceDefaultZone: true
+    Modifiable: true
+  CE_CranePlatformGridStraight:
+    PlaceDefaultZone: true
+    Modifiable: true
+  StadiumRoadMainBirds:
+    NoItem: true
+    Conversion:
+      Name: StadiumRoadMain
+      Modernized: true
+  StadiumRoadDirtStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+      Modernized: true

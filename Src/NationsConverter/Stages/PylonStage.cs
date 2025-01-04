@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 
 namespace NationsConverter.Stages;
@@ -12,6 +13,7 @@ internal sealed class PylonStage : BlockStageBase
 
     private readonly CGameCtnChallenge mapIn;
     private readonly CustomContentManager customContentManager;
+    private readonly ILogger logger;
 
     private readonly int baseHeight;
 
@@ -38,18 +40,19 @@ internal sealed class PylonStage : BlockStageBase
         CGameCtnChallenge mapIn,
         CGameCtnChallenge mapOut,
         ManualConversionSetModel conversionSet,
-        CustomContentManager customContentManager) : base(mapIn, mapOut, conversionSet)
+        CustomContentManager customContentManager,
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapIn = mapIn;
         this.customContentManager = customContentManager;
-
+        this.logger = logger;
         baseHeight = (conversionSet.Decorations
             .GetValueOrDefault($"{mapIn.Size.X}x{mapIn.Size.Y}x{mapIn.Size.Z}")?.BaseHeight ?? 0) + 1;
     }
 
     public override void Convert()
     {
-        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn))
+        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn, logger))
         {
             PopulateGroundPositionsWithAndWithoutPylons(block, conversion);
             PopulateDisallowedPylonPlacements(block, conversion);
