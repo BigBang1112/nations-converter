@@ -6,6 +6,8 @@ Blocks:
     SubVariant: 0 # case for TMO maps as TMUF versions
   AlpineRoadChaletPillar:
     SubVariant: 0 # case for TMO maps as TMUF versions
+  AlpineIceRoadClip:
+    Modifiable: True
   Hills:
     ConversionVariants:
       0:
