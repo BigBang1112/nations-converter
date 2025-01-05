@@ -8587,6 +8587,55 @@
         }
       ]
     },
+    "StadiumDecoPalm": {
+      "PageName": "Inflatables/Tower",
+      "Ground": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          3,
+          1
+        ],
+        "SubVariants": [
+          3
+        ]
+      },
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          1,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "TM2": true,
+      "Variants": 1
+    },
     "StadiumDecoTowerA": {
       "PageName": "Inflatables/Tower",
       "Air": {
@@ -12950,6 +12999,29 @@
       "PageName": "Platform/GridSpecials",
       "Ground": {},
       "Air": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ]
+    },
+    "StadiumPlatformGridRoadPaint": {
+      "PageName": "Platform/Transition",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
       "TM2": true,
       "Units": [
         [
@@ -22801,6 +22873,102 @@
         }
       ]
     },
+    "StadiumRoadMainRoadPaintSlopeDown": {
+      "PageName": "Slope/Main",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "StadiumRoadMainRoadPaintSlopeUp": {
+      "PageName": "Slope/Main",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            1,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
     "StadiumRoadMainSlopeBase": {
       "PageName": "Slope/Main",
       "Ground": {},
@@ -24321,6 +24489,49 @@
       },
       "Variants": 1
     },
+    "StadiumRoadRoadPaint": {
+      "PageName": "RoadMain/Main",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadMainClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
     "StadiumRoadStretch": {
       "PageName": "RoadMain/Hazards",
       "Ground": {},
@@ -25388,6 +25599,102 @@
         1,
         1,
         1
+      ]
+    },
+    "StadiumRoadTiltRoadPaintLeft": {
+      "PageName": "RoadTilt/Main",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadTiltClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadTiltClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
+      ]
+    },
+    "StadiumRoadTiltRoadPaintRight": {
+      "PageName": "RoadTilt/Main",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        2,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips": [
+        {
+          "Name": "StadiumRoadTiltClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumRoadTiltClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        }
       ]
     },
     "StadiumRoadTiltStraight": {
