@@ -207,18 +207,21 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var rot = -(int)direction;
         var rotRadians = rot * MathF.PI / 2;
 
-        var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
-        if (itemModel is not null)
+        if (overrideConversion is null || !overrideConversion.NoItems)
         {
-            PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize, block.IsGround);
-        }
-
-        var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
-        if (itemModels is not null)
-        {
-            foreach (var item in itemModels)
+            var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
+            if (itemModel is not null)
             {
-                PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+            }
+
+            var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
+            if (itemModels is not null)
+            {
+                foreach (var item in itemModels)
+                {
+                    PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                }
             }
         }
 
@@ -278,6 +281,12 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var modernized = overrideConversion?.Modernized ?? conversion.Modernized;
 
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
+        
+        if (overrideConversion?.NoItems == true)
+        {
+            noItem = true;
+        }
+
         if (!noItem)
         {
             logger.LogDebug("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
