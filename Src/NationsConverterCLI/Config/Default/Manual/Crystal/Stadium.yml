@@ -1168,6 +1168,25 @@ Blocks:
       Pivot: [10.667, 8, 5.333]
     - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
       Pivot: [10.667, 8, 26.667]
+  StadiumCircuitPillar7:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 21.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 21.333]
   StadiumCircuitBumpUp:
     Conversion:
       Name: StadiumCircuitBase
