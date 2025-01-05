@@ -833,42 +833,46 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 2, 16]
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 16]
   StadiumHolePillar2Front:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [12, 2, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [20, 2, 16]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [12, 0, 16]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [20, 0, 16]
   StadiumHolePillar2Line:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 8]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 24]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 8]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 24]
   StadiumHolePillar3:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [21, 2, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 2, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 6]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 4]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [22, 0, 28]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [10, 0, 28]
   StadiumRoadStretch:
     PlaceDefaultZone: true
     ForceAirItem: true
@@ -982,21 +986,16 @@ Blocks:
   StadiumSculptArchRingStartMirror:
     PlaceDefaultZone: true
   StadiumHolePillarTilt:
-    NoItem: true
     PlaceDefaultZone: true
+    ForceAirItem: true
     Block:
-      Name: RoadTechTiltStraight
+      Name: RoadTechTiltHole
       Dir: 2
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 6, 16]
   StadiumHolePillarSlope:
-    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
     Block:
-      Name: RoadTechSlopeStraight
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 6, 16]
+      Name: RoadTechSlopeHole
   StadiumPlatformToRoad:
     NoItem: true
     NoTerrainModifier: true
@@ -1115,60 +1114,60 @@ Blocks:
     Conversion:
       Name: StadiumCircuitBase
     Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 9, 16]
+      Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
   StadiumCircuitPillar2:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 21]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 11]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 21.333]
   StadiumCircuitPillar3:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 26]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 26.667]
   StadiumCircuitPillar5:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [26, 10, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 10, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [6, 10, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [6, 10, 6]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 26.667]
   StadiumCircuitPillar6:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 6]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 26.667]
   StadiumCircuitBumpUp:
     Conversion:
       Name: StadiumCircuitBase
