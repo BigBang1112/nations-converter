@@ -1260,7 +1260,7 @@ Blocks:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumTrenchStraight
-      NoItem: true
+      NoItems: true
   StadiumTrenchCross:
     Item:
       Name: Trench/Main/StadiumTrenchCross/Base.Item.Gbx
