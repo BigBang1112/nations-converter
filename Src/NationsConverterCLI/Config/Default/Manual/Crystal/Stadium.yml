@@ -334,6 +334,11 @@ Blocks:
         NoItem: true
         Block:
           Name: RoadTechBranchCross
+  StadiumRoadMainCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve1
   StadiumRoadMainStartLine:
     NoItem: true
     PlaceDefaultZone: true
