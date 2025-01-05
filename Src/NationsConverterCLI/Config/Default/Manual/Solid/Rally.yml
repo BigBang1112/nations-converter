@@ -1523,3 +1523,6 @@ Blocks:
       Distance: 64
       Intensity: 1.5
       NightOnly: false
+  RallyMultiLapPillar:
+    SubVariant: 0
+    
