@@ -1275,10 +1275,10 @@ Blocks:
       NoItem: true
       Variant: 5
   StadiumTrenchInPillar:
-    NoItem: true
     NoTerrainModifier: true
     Conversion:
       Name: StadiumTrenchStraight
+      NoItems: true
   StadiumBump1:
     PlaceDefaultZone: true
   StadiumBump1InGround:
