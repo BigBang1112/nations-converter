@@ -1446,3 +1446,36 @@ Blocks:
       OffsetZ: 17.0550957
       RotZ: 180
       AlwaysStaticObject: true
+  CE_Helico:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 16
+              OffsetY: 6.72141
+              OffsetZ: 12.4538
+              RotY: -1.8594
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 17.5056
+              OffsetY: 7.62591
+              OffsetZ: 30.614
+              RotZ: 180
+              AlwaysStaticObject: true
+          1:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.6031
+              OffsetY: 6.72141
+              OffsetZ: 15.3214
+              RotX: -40
+              RotY: -1.8594
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 28.4297
+              OffsetY: 7.62591
+              OffsetZ: 28.2652
+              RotX: 40
+              AlwaysStaticObject: true
