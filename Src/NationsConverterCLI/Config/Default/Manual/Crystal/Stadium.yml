@@ -1433,3 +1433,16 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtFenceStraight
       Modernized: true
+  CE_HelicoStart:
+    Items:
+    - Name: CE/CE_Helico/MainRotor.Item.Gbx
+      OffsetX: 16.014633  
+      OffsetY: 16.847183
+      OffsetZ: 35.237551
+      AlwaysStaticObject: true
+    - Name: CE/CE_Helico/TailRotor.Item.Gbx
+      OffsetX: 14.508982 
+      OffsetY: 16.952335
+      OffsetZ: 17.0550957
+      RotZ: 180
+      AlwaysStaticObject: true
