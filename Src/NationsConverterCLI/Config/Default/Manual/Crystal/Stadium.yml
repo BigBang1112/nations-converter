@@ -1543,6 +1543,42 @@ Blocks:
               OffsetZ: 28.2652
               RotX: 40
               AlwaysStaticObject: true
+  CE_HelicoScreen:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.9648
+              OffsetY: 36.2264
+              OffsetZ: 19.2244
+              RotX: 170
+              RotY: 0.660589
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 11.3247
+              OffsetY: 36.3316
+              OffsetZ: 1.57964
+              RotX: -170
+              RotY: 2.51998
+              AlwaysStaticObject: true
+          1:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.3269
+              OffsetY: 36.219
+              OffsetZ: 17.2422
+              RotX: -125
+              RotY: 0.660589
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 29.3484
+              OffsetY: 36.3241
+              OffsetZ: 5.63128
+              RotX: 125
+              RotY: 2.52
+              AlwaysStaticObject: true
   # StadiumDecoPalm:
   StadiumRoadStretchSlope:
     PlaceDefaultZone: true
