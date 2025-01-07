@@ -7871,6 +7871,351 @@
         1
       ]
     },
+    "StadiumCircuitRoadPaint": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        1,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 0
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        }
+      ]
+    },
+    "StadiumCircuitRoadPaintSlopeDown": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "StadiumCircuitRoadPaintSlopeLeft": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "StadiumCircuitRoadPaintSlopeRight": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
+    "StadiumCircuitRoadPaintSlopeUp": {
+      "PageName": "Circuit/FlatBase",
+      "Ground": {},
+      "Air": {},
+      "Skin": {},
+      "TM2": true,
+      "Units": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "Size": [
+        1,
+        3,
+        1
+      ],
+      "Variants": 1,
+      "SubVariants": [
+        1
+      ],
+      "Clips2": [
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipRight",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 1
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 2
+        },
+        {
+          "Name": "StadiumCircuitSlopeStraightFreeClipLeft",
+          "Offset": [
+            0,
+            0,
+            0
+          ],
+          "Dir": 3
+        },
+        {
+          "Name": "StadiumCircuitFreeClip",
+          "Offset": [
+            0,
+            2,
+            0
+          ],
+          "Dir": 0
+        }
+      ]
+    },
     "StadiumCircuitSlopeCornerInLeftBottom": {
       "PageName": "Circuit/SlopeCorner",
       "Air": {
@@ -15078,6 +15423,62 @@
       "TM2": true,
       "Variants": 1
     },
+    "StadiumPlatformWall2RoadPaintLeft": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Skin": {},
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformWall2RoadPaintRight": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          2,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Skin": {},
+      "TM2": true,
+      "Variants": 1
+    },
     "StadiumPlatformWall4": {
       "PageName": "Platform/Main",
       "Air": {
@@ -15118,6 +15519,82 @@
           1
         ]
       },
+      "Variants": 1
+    },
+    "StadiumPlatformWall4RoadPaintDown": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Skin": {},
+      "TM2": true,
+      "Variants": 1
+    },
+    "StadiumPlatformWall4RoadPaintUp": {
+      "PageName": "Platform/Main",
+      "Air": {
+        "Units": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            3,
+            0
+          ]
+        ],
+        "Size": [
+          1,
+          4,
+          1
+        ],
+        "SubVariants": [
+          1
+        ]
+      },
+      "Skin": {},
+      "TM2": true,
       "Variants": 1
     },
     "StadiumPlatformWallBorder": {

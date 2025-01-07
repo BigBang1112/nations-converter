@@ -1925,3 +1925,31 @@ Blocks:
             Name: Other/StadiumDirtHill/Ground_9_0.Item.Gbx
             OffsetY: -8
             Modernized: true
+    StadiumPlatformWall2RoadPaintLeft:
+      NoItem: true
+      Conversion:
+        Name: StadiumPlatformWall2
+    StadiumPlatformWall4RoadPaintUp:
+      NoItem: true
+      Conversion:
+        Name: StadiumPlatformWall4
+    StadiumCircuitRoadPaint:
+      NoItem: true
+      Conversion:
+        Name: StadiumCircuitBase
+    StadiumCircuitRoadPaintSlopeDown:
+      NoItem: true
+      Conversion:
+        Name: StadiumCircuitSlopeStraight
+    StadiumCircuitRoadPaintSlopeLeft:
+      NoItem: true
+      Conversion:
+        Name: StadiumCircuitSlopeStraight
+    StadiumCircuitRoadPaintSlopeRight:
+      NoItem: true
+      Conversion:
+        Name: StadiumCircuitSlopeStraight
+    StadiumCircuitRoadPaintSlopeUp:
+      NoItem: true
+      Conversion:
+        Name: StadiumCircuitSlopeStraight
