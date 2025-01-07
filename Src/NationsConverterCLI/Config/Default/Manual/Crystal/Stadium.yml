@@ -1371,10 +1371,12 @@ Blocks:
     PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
+    Modernized: true
     Item:
       Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
       OnlyGround: true
       OffsetY: 1.655
+      Modernized: true
   StadiumRoadMainInBeam:
     NoItem: true
     PlaceDefaultZone: true
@@ -1386,8 +1388,10 @@ Blocks:
     - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
       OffsetY: 2
       Dir: 1
+      Modernized: true
     - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
       Dir: 1
+      Modernized: true
   StadiumRoadMainXBeam:
     NoItem: true
     PlaceDefaultZone: true
@@ -1398,17 +1402,21 @@ Blocks:
     - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
     - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
       OffsetY: 2
+      Modernized: true
     - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
+      Modernized: true
   StadiumRoadMainInBeamSlope:
     PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
+    Modernized: true
     Block:
       Name: RoadTechSlopeHole
     Items:
     - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Beam.Item.Gbx
       OffsetY: 4
+      Modernized: true
   StadiumRoadMainXBeamSlope:
     NoItem: true
     PlaceDefaultZone: true
@@ -1419,8 +1427,10 @@ Blocks:
     - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
       Dir: 1
+      Modernized: true
     - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
       OffsetY: 4.655
+      Modernized: true
   StadiumRoadMainInBeamTilt:
     NoItem: true
     PlaceDefaultZone: true
@@ -1432,9 +1442,11 @@ Blocks:
     Items:
     - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Modernized: true
     - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
       Dir: 3
       OffsetY: 4.655
+      Modernized: true
   StadiumRoadMainXBeamTilt:
     NoItem: true
     PlaceDefaultZone: true
@@ -1446,9 +1458,11 @@ Blocks:
     Items:
     - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Modernized: true
     - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
       Dir: 3
       OffsetY: 4.655
+      Modernized: true
   StadiumDecoTowerCore:
     PlaceDefaultZone: true
     ForceAirItem: true
@@ -1628,6 +1642,7 @@ Blocks:
     ForceAirItem: true
     Modifiable: true
   StadiumDecoTowerA:
+    Modernized: true
     Item:
       Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
   StadiumDecoTowerB:
@@ -1635,27 +1650,36 @@ Blocks:
     Items:
     - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 2
   StadiumDecoTowerC:
     NoItem: true
     Items:
     - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 1
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 2
   StadiumDecoTowerD:
     NoItem: true
     Items:
     - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 1
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 2
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
       Dir: 3
   StadiumDecoPalm:
     NoItem: true
