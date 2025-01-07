@@ -24,6 +24,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
     private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
+    private readonly ILookup<Int3, CGameCtnBlock> blocksPerCoord;
 
     public PlaceBlockStage(
         CGameCtnChallenge mapIn,
@@ -46,6 +47,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         reverseBlockTerrainModifiers = ConversionSet.BlockTerrainModifiers.ToDictionary(x => x.Value, x => x.Key);
         skinMapping = complexConfig.Get<Dictionary<string, SkinInfoModel>>("Skins");
+
+        blocksPerCoord = mapIn.GetBlocks().ToLookup(x => x.Coord);
     }
 
     public override void Convert()
@@ -225,8 +228,23 @@ internal sealed class PlaceBlockStage : BlockStageBase
             }
         }
 
-        var conversionVariants = conversion.GetPropertyDefault(block, x => x.ConversionVariants);
-        var variantModel = conversionVariants?.GetValueOrDefault(variant);
+        var conversionVariantsByBlock = conversion.GetPropertyDefault(block, x => x.ConversionVariantsByBlock);
+        var variantModel = default(ManualConversionVariantModel);
+        var disableTerrainModifier = false;
+
+        if (conversionVariantsByBlock?.Count > 0)
+        {
+            variantModel = blocksPerCoord[block.Coord]
+                .Select(b => conversionVariantsByBlock.GetValueOrDefault(b.Name)?.GetValueOrDefault(b.Variant))
+                .FirstOrDefault(variant => variant is not null);
+
+            if (variantModel is not null)
+            {
+                disableTerrainModifier = true; // temporary
+            }
+        }
+
+        variantModel ??= conversion.GetPropertyDefault(block, x => x.ConversionVariants)?.GetValueOrDefault(variant);
         if (variantModel is not null)
         {
             if (variantModel.SubVariants?.TryGetValue(subVariant, out var subVariantModel) == true)
@@ -311,10 +329,16 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             var noTerrainModifier = conversion.GetPropertyDefault(block, x => x.NoTerrainModifier);
 
+            // temporary
+            if (disableTerrainModifier)
+            {
+                noTerrainModifier = true;
+            }
+
             if (!noTerrainModifier)
             {
                 var placeDefaultZone = variantModel?.PlaceDefaultZone ?? conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
-                
+
                 logger.LogDebug("-- Placing terrain modifier item ...");
 
                 // This will work fine in 99% of cases, BUT

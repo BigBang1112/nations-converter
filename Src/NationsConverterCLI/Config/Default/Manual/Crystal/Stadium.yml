@@ -1657,3 +1657,247 @@ Blocks:
       Dir: 2
     - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
       Dir: 3
+  StadiumDecoPalm:
+    NoItem: true
+    PlaceDefaultZone: true
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: PalmTreeMedium
+              OffsetX: 12.8438
+              OffsetY: 1.8173
+              OffsetZ: 3.6855
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 19.5168
+              OffsetY: 1.7959
+              OffsetZ: 4.0547
+              RotX: -180
+            - Name: PalmTreeSmall
+              OffsetX: 28.16
+              OffsetY: 1.655
+              OffsetZ: 24.2712
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 27.1727
+              OffsetY: 1.655
+              OffsetZ: 19.078
+            - Name: PalmTreeMedium
+              OffsetX: 24.8076
+              OffsetY: 1.7876
+              OffsetZ: 12.0333
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 22.4201
+              OffsetY: 1.655
+              OffsetZ: 20.1498
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 15.6149
+              OffsetY: 1.8629
+              OffsetZ: 22.8514
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 5.4991
+              OffsetY: 1.655
+              OffsetZ: 4.1068
+            - Name: PalmTreeMedium
+              OffsetX: 13.3289
+              OffsetY: 1.8353
+              OffsetZ: 13.1709
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 2.9164
+              OffsetY: 1.655
+              OffsetZ: 18.4875
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 7.6243
+              OffsetY: 1.837
+              OffsetZ: 19.6798
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 7.2258
+              OffsetY: 1.655
+              OffsetZ: 10.5316
+            - Name: PalmTreeMedium
+              OffsetX: 11.2134
+              OffsetY: 1.8665
+              OffsetZ: 27.0095
+              RotX: -90
+            - Name: PalmTreeSmall
+              OffsetX: 7.7078
+              OffsetY: 1.655
+              OffsetZ: 8.5312
+              RotX: -90
+            - Name: PalmTreeSmall
+              OffsetX: 7.4372
+              OffsetY: 1.655
+              OffsetZ: 23.1204
+              RotX: -180
+            - Name: PalmTreeSmall
+              OffsetX: 23.8875
+              OffsetY: 1.655
+              OffsetZ: 19.1859
+              RotX: 90
+          1:
+            Items:
+            - Name: PalmTreeMedium
+              OffsetX: 3.2526
+              OffsetY: 1.655
+              OffsetZ: 11.2601
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 12.3219
+              OffsetY: 1.655
+              OffsetZ: 6.4952
+            - Name: PalmTreeMedium
+              OffsetX: 18.1418
+              OffsetY: 1.655
+              OffsetZ: 3.369
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 23.1805
+              OffsetY: 1.655
+              OffsetZ: 3.9746
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 30.9177
+              OffsetY: 1.655
+              OffsetZ: 9.7028
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 24.6065
+              OffsetY: 1.7252
+              OffsetZ: 11.5278
+            - Name: PalmTreeMedium
+              OffsetX: 23.0248
+              OffsetY: 1.655
+              OffsetZ: 25.8458
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 17.4502
+              OffsetY: 1.655
+              OffsetZ: 28.8536
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 15.3443
+              OffsetY: 1.655
+              OffsetZ: 28.1594
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 27.7103
+              OffsetY: 1.8262
+              OffsetZ: 19.9238
+            - Name: PalmTreeMedium
+              OffsetX: 9.1897
+              OffsetY: 1.655
+              OffsetZ: 19.1781
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 6.254
+              OffsetY: 1.655
+              OffsetZ: 3.9132
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 14.9747
+              OffsetY: 1.655
+              OffsetZ: 14.9757
+              RotX: -180
+            - Name: PalmTreeSmall
+              OffsetX: 16.5104
+              OffsetY: 1.655
+              OffsetZ: 17.2893
+              RotX: 90
+          2:
+            Items:
+            - Name: PalmTreeMedium
+              OffsetX: 8.8066
+              OffsetY: 1.655
+              OffsetZ: 7.4907
+            - Name: PalmTreeMedium
+              OffsetX: 13.7642
+              OffsetY: 1.655
+              OffsetZ: 9.212
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 15.1257
+              OffsetY: 1.655
+              OffsetZ: 11.4301
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 5.4448
+              OffsetY: 1.655
+              OffsetZ: 14.1593
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 4.9739
+              OffsetY: 1.655
+              OffsetZ: 21.1613
+            - Name: PalmTreeMedium
+              OffsetX: 9.4705
+              OffsetY: 1.655
+              OffsetZ: 19.035
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 8.7711
+              OffsetY: 1.6828
+              OffsetZ: 26.5304
+              RotX: -180
+            - Name: PalmTreeMedium
+              OffsetX: 20.977
+              OffsetY: 1.655
+              OffsetZ: 13.0963
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 24.8116
+              OffsetY: 1.655
+              OffsetZ: 10.2412
+            - Name: PalmTreeMedium
+              OffsetX: 27.3031
+              OffsetY: 1.655
+              OffsetZ: 5.1742
+              RotX: -90
+            - Name: PalmTreeMedium
+              OffsetX: 26.7578
+              OffsetY: 1.655
+              OffsetZ: 18.4236
+              RotX: -180
+            - Name: PalmTreeSmall
+              OffsetX: 24.8428
+              OffsetY: 1.7215
+              OffsetZ: 28.9531
+              RotX: 90
+            - Name: PalmTreeMedium
+              OffsetX: 17.113
+              OffsetY: 1.655
+              OffsetZ: 22.6693
+            - Name: PalmTreeMedium
+              OffsetX: 18.1159
+              OffsetY: 1.655
+              OffsetZ: 20.9036
+              RotX: -90
+    ConversionVariantsByBlock:
+      StadiumDirtHill:
+        0:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_0_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+        2:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_2_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+        5:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_5_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+        9:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_9_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true

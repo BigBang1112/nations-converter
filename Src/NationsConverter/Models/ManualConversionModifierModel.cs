@@ -16,5 +16,6 @@ public class ManualConversionModifierModel : ConversionModifierModel
     public ManualConversionBlockModel? Conversion { get; set; }
     public ManualConversionBlockModel[]? Conversions { get; set; }
     public Dictionary<int, ManualConversionVariantModel>? ConversionVariants { get; set; }
+    public Dictionary<string, Dictionary<int, ManualConversionVariantModel>>? ConversionVariantsByBlock { get; set; }
     public LightPropertiesModel[]? Lights { get; set; }
 }
