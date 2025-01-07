@@ -2814,3 +2814,7 @@ Blocks:
     NoItem: true
     Conversion:
       Name: StadiumCircuitSlopeStraight
+  StadiumRoadDirtHillTiltCheckpointLeft:
+    Modernized: true  
+  StadiumRoadDirtHillTiltCheckpointRight:
+    Modernized: true  
