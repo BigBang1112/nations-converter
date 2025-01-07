@@ -1371,6 +1371,10 @@ Blocks:
     PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
   StadiumRoadMainInBeam:
     NoItem: true
     PlaceDefaultZone: true
@@ -1379,8 +1383,10 @@ Blocks:
       Name: RoadTechHole
     Items:
     - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
-    Conversion:
-      Name: StadiumDecoTowerBeam
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OffsetY: 2
+      Dir: 1
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
       Dir: 1
   StadiumRoadMainXBeam:
     NoItem: true
@@ -1390,16 +1396,19 @@ Blocks:
       Name: RoadTechHole
     Items:
     - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
-    Conversion:
-      Name: StadiumDecoTowerBeam
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OffsetY: 2
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
   StadiumRoadMainInBeamSlope:
     PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
     Block:
       Name: RoadTechSlopeHole
-    Item:
-      Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Beam.Item.Gbx
+      OffsetY: 4
   StadiumRoadMainXBeamSlope:
     NoItem: true
     PlaceDefaultZone: true
@@ -1410,6 +1419,8 @@ Blocks:
     - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
       Dir: 1
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      OffsetY: 4.655
   StadiumRoadMainInBeamTilt:
     NoItem: true
     PlaceDefaultZone: true
@@ -1421,6 +1432,9 @@ Blocks:
     Items:
     - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      Dir: 3
+      OffsetY: 4.655
   StadiumRoadMainXBeamTilt:
     NoItem: true
     PlaceDefaultZone: true
@@ -1432,10 +1446,25 @@ Blocks:
     Items:
     - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
     - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
-      Dir: 1
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      Dir: 3
+      OffsetY: 4.655
   StadiumDecoTowerCore:
     PlaceDefaultZone: true
     ForceAirItem: true
+    Modifiable: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerCore/Stripe.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
+  StadiumDecoTowerCore6:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerCore/Stripe.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
   StadiumPlatformFW:
     Item:
       Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
@@ -1598,3 +1627,33 @@ Blocks:
     PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
+  StadiumDecoTowerA:
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+  StadiumDecoTowerB:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 2
+  StadiumDecoTowerC:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 1
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 2
+  StadiumDecoTowerD:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 1
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 2
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Dir: 3
