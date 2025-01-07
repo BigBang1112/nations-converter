@@ -826,6 +826,7 @@ Blocks:
   StadiumHoleSlope:
     NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
       Name: RoadTechSlopeHole
   StadiumHoleTilt:
@@ -996,11 +997,16 @@ Blocks:
     Block:
       Name: RoadTechTiltHole
       Dir: 2
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
   StadiumHolePillarSlope:
     PlaceDefaultZone: true
     ForceAirItem: true
+    Modifiable: true
     Block:
       Name: RoadTechSlopeHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
   StadiumPlatformToRoad:
     NoItem: true
     NoTerrainModifier: true
@@ -1363,15 +1369,73 @@ Blocks:
     Modernized: true
   StadiumDecoTowerBeam:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
   StadiumRoadMainInBeam:
+    NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    Conversion:
+      Name: StadiumDecoTowerBeam
+      Dir: 1
+  StadiumRoadMainXBeam:
+    NoItem: true
+    PlaceDefaultZone: true
+    Modifiable: true
+    Block:
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    Conversion:
+      Name: StadiumDecoTowerBeam
   StadiumRoadMainInBeamSlope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
     Block:
-      Name: RoadTechSlopeStraight
+      Name: RoadTechSlopeHole
+    Item:
+      Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+  StadiumRoadMainXBeamSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Modifiable: true
+    Block:
+      Name: RoadTechSlopeHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Dir: 1
+  StadiumRoadMainInBeamTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Block:
+      Name: RoadTechTiltHole
+      Dir: 2
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+  StadiumRoadMainXBeamTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Block:
+      Name: RoadTechTiltHole
+      Dir: 2
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Dir: 1
   StadiumDecoTowerCore:
     PlaceDefaultZone: true
+    ForceAirItem: true
   StadiumPlatformFW:
     Item:
       Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
@@ -1479,3 +1543,22 @@ Blocks:
               OffsetZ: 28.2652
               RotX: 40
               AlwaysStaticObject: true
+  # StadiumDecoPalm:
+  StadiumRoadStretchSlope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
+  StadiumBump1Slope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+  StadiumStretchTilt:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
+  StadiumBump1Tilt:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true

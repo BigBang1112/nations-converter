@@ -150,7 +150,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             ? blockName
             : Path.Combine(conversion.PageName, blockName);
 
-        var direction = overrideDirection ?? block.Direction;
+        var direction = overrideDirection ?? ((Direction)(((int)block.Direction + (overrideConversion?.Dir ?? 0)) % 4));
         var offset = new Int3();
         if (overrideConversion is not null)
         {
@@ -327,7 +327,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 var modifier = default(string);
                 if (Environment == "Stadium")
                 {
-                    var units = conversion.GetProperty(block, x => x.Units)?.Where(x => x.Y == 0) ?? [];
+                    var units = conversion.GetProperty(block, x => x.Units, fallback: true)?.Where(x => x.Y == 0) ?? [];
                     foreach (var unit in units)
                     {
                         var alignedCoord = block.Coord + unit + block.Direction switch
@@ -372,7 +372,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                         terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
                     }
 
-                    var units = conversion.GetProperty(block, x => x.Units)?.ToArray() ?? [(0, 0, 0)];
+                    var units = conversion.GetProperty(block, x => x.Units, fallback: true)?.ToArray() ?? [(0, 0, 0)];
 
                     var alignedUnits = new Int3[units.Length];
 
