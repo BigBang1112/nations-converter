@@ -339,9 +339,42 @@ internal sealed class InitStageService
                 }
             }
 
+            if (nodeForMesh.AdditionalVariantsGround is not null)
+            {
+                var groundUnits = nodeForMesh.GroundBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                foreach (var variant in nodeForMesh.AdditionalVariantsGround)
+                {
+                    for (byte i = 0; i < variant.Mobils?.Length; i++)
+                    {
+                        var groundMobilSubVariants = variant.Mobils[i];
+                        for (byte j = 0; j < groundMobilSubVariants.Length; j++)
+                        {
+                            ProcessSubVariant(new()
+                            {
+                                Mobil = null,
+                                Mobil2 = groundMobilSubVariants[j],
+                                BlockInfo = node,
+                                CollectionName = collectionName,
+                                DirectoryPath = dirPath,
+                                ModifierType = $"Ground_{variant.Name?.Replace(' ', '_') ?? "Unnamed"}",
+                                VariantIndex = i,
+                                SubVariantIndex = j,
+                                WebpData = node.IconWebP,
+                                BlockName = block.Name,
+                                SubCategory = subCategory,
+                                Technology = technology,
+                                MapTechnology = mapTechnology,
+                                Units = groundUnits
+                            }, baseMap, ref index, out var isModifiable);
+                        }
+                    }
+                }
+            }
+
             if (nodeForMesh.VariantBaseAir is not null)
             {
                 var airUnits = nodeForMesh.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+                
                 for (byte i = 0; i < nodeForMesh.VariantBaseAir.Mobils?.Length; i++)
                 {
                     var airMobilSubVariants = nodeForMesh.VariantBaseAir.Mobils[i];
@@ -369,6 +402,39 @@ internal sealed class InitStageService
                             index++;
                         }
                         isTerrainModifiable |= isModifiable;
+                    }
+                }
+            }
+
+            if (nodeForMesh.AdditionalVariantsAir is not null)
+            {
+                var airUnits = nodeForMesh.AirBlockUnitInfos?.Select(x => x.RelativeOffset).ToArray() ?? [];
+
+                foreach (var variant in nodeForMesh.AdditionalVariantsAir)
+                {
+                    for (byte i = 0; i < variant.Mobils?.Length; i++)
+                    {
+                        var airMobilSubVariants = variant.Mobils[i];
+                        for (byte j = 0; j < airMobilSubVariants.Length; j++)
+                        {
+                            ProcessSubVariant(new()
+                            {
+                                Mobil = null,
+                                Mobil2 = airMobilSubVariants[j],
+                                BlockInfo = node,
+                                CollectionName = collectionName,
+                                DirectoryPath = dirPath,
+                                ModifierType = $"Air_{variant.Name?.Replace(' ', '_') ?? "Unnamed"}",
+                                VariantIndex = i,
+                                SubVariantIndex = j,
+                                WebpData = node.IconWebP,
+                                BlockName = block.Name,
+                                SubCategory = subCategory,
+                                Technology = technology,
+                                MapTechnology = mapTechnology,
+                                Units = airUnits
+                            }, baseMap, ref index, out var isModifiable);
+                        }
                     }
                 }
             }
