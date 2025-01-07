@@ -247,11 +247,6 @@ internal sealed class PlaceBlockStage : BlockStageBase
         variantModel ??= conversion.GetPropertyDefault(block, x => x.ConversionVariants)?.GetValueOrDefault(variant);
         if (variantModel is not null)
         {
-            if (variantModel.SubVariants?.TryGetValue(subVariant, out var subVariantModel) == true)
-            {
-                variantModel = subVariantModel;
-            }
-
             if (variantModel.Item is not null)
             {
                 PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
@@ -268,6 +263,29 @@ internal sealed class PlaceBlockStage : BlockStageBase
             if (variantModel.Block is not null)
             {
                 PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize, conversion.Skin);
+            }
+
+            if (variantModel.SubVariants?.TryGetValue(subVariant, out var subVariantModel) == true)
+            {
+                variantModel = subVariantModel;
+
+                if (variantModel.Item is not null)
+                {
+                    PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                }
+
+                if (variantModel.Items is not null)
+                {
+                    foreach (var item in variantModel.Items)
+                    {
+                        PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                    }
+                }
+
+                if (variantModel.Block is not null)
+                {
+                    PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize, conversion.Skin);
+                }
             }
 
             if (variantModel.Variant.HasValue)
