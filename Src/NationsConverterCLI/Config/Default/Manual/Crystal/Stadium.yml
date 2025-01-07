@@ -448,6 +448,7 @@ Blocks:
   StadiumRoadMainSlopeBase1x2:
     NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
       Name: RoadTechSlopeBase2x1
   StadiumRoadMainSlopeStraight:
@@ -1531,9 +1532,8 @@ Blocks:
     Modifiable: true
   StadiumRoadMainBirds:
     NoItem: true
-    Conversion:
-      Name: StadiumRoadMain
-      Modernized: true
+    Block:
+      Name: RoadTechStraight
   StadiumRoadDirtStraightBirds:
     NoItem: true
     NoTerrainModifier: true
@@ -2818,3 +2818,19 @@ Blocks:
     Modernized: true  
   StadiumRoadDirtHillTiltCheckpointRight:
     Modernized: true  
+  StadiumFabricPillarScreenSmall:
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumFabricRamp:
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumGrassBirds:
+    NoItem: true
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumRoadRoadPaint:
+    NoItem: true
+    Modifiable: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
