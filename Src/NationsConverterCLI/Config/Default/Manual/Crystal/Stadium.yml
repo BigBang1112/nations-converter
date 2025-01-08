@@ -2813,6 +2813,16 @@ Blocks:
     NoItem: true
     Conversion:
       Name: StadiumCircuitSlopeStraight
+  StadiumRoadMainRoadPaintSlopeDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumRoadMainRoadPaintSlopeUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
   StadiumRoadDirtHillTiltCheckpointLeft:
     Modernized: true  
   StadiumRoadDirtHillTiltCheckpointRight:
@@ -2833,3 +2843,9 @@ Blocks:
     PlaceDefaultZone: true
     Block:
       Name: RoadTechStraight
+  StadiumRoadDirtHighFenceStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtHighFenceStraight
+      Modernized: true

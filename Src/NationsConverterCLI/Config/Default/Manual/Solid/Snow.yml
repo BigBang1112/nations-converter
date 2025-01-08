@@ -8,6 +8,7 @@ Blocks:
     SubVariant: 0 # case for TMO maps as TMUF versions
   AlpineIceRoadClip:
     Modifiable: True
+    AirModifiable: True
   Hills:
     ConversionVariants:
       0:

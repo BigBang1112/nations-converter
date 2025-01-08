@@ -199,18 +199,19 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304302A>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043034>();
 
-        var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
-        if (oldThumbnailChunk is null)
+        var newThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043036>();
+        if (newThumbnailChunk is null)
         {
-            if (mapIn.CanBeGameVersion(GameVersion.MP4))
+            var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
+            if (oldThumbnailChunk is not null)
             {
-                mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+                mapOut.Chunks.Add(oldThumbnailChunk);
+                mapOut.HasCustomCamThumbnail = mapIn.HasCustomCamThumbnail;
             }
         }
         else
         {
-            mapOut.Chunks.Add(oldThumbnailChunk);
-            mapOut.HasCustomCamThumbnail = mapIn.HasCustomCamThumbnail;
+            mapOut.Chunks.Add(newThumbnailChunk);
         }
 
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304303E>();
