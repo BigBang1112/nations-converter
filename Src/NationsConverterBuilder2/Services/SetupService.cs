@@ -65,7 +65,7 @@ internal sealed class SetupService
                 }
 
                 var sceneSolidFile = scene3dHeader.RefTable.Files
-                    .FirstOrDefault(x => !x.FilePath.EndsWith("SkyDome.Solid.Gbx") && x.FilePath.EndsWith(".Solid.Gbx"));
+                    .FirstOrDefault(x => !x.FilePath.EndsWith("SkyDome.Solid.Gbx") && !x.FilePath.EndsWith("32x32ShadowCaster.Solid.Gbx") && x.FilePath.EndsWith(".Solid.Gbx"));
 
                 if (sceneSolidFile is null)
                 {

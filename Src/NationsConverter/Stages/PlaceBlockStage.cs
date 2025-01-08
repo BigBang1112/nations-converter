@@ -24,6 +24,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
     private readonly Dictionary<Int3, CGameCtnBlock> clipBlocks = [];
     private readonly Dictionary<CGameCtnBlock, HashSet<Direction>> clipDirs = [];
+    private readonly ILookup<Int3, CGameCtnBlock> blocksPerCoord;
 
     public PlaceBlockStage(
         CGameCtnChallenge mapIn,
@@ -46,6 +47,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         reverseBlockTerrainModifiers = ConversionSet.BlockTerrainModifiers.ToDictionary(x => x.Value, x => x.Key);
         skinMapping = complexConfig.Get<Dictionary<string, SkinInfoModel>>("Skins");
+
+        blocksPerCoord = mapIn.GetBlocks().ToLookup(x => x.Coord);
     }
 
     public override void Convert()
@@ -150,7 +153,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             ? blockName
             : Path.Combine(conversion.PageName, blockName);
 
-        var direction = overrideDirection ?? block.Direction;
+        var direction = overrideDirection ?? ((Direction)(((int)block.Direction + (overrideConversion?.Dir ?? 0)) % 4));
         var offset = new Int3();
         if (overrideConversion is not null)
         {
@@ -207,30 +210,43 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var rot = -(int)direction;
         var rotRadians = rot * MathF.PI / 2;
 
-        var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
-        if (itemModel is not null)
+        if (overrideConversion is null || !overrideConversion.NoItems)
         {
-            PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize, block.IsGround);
-        }
-
-        var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
-        if (itemModels is not null)
-        {
-            foreach (var item in itemModels)
+            var itemModel = conversion.GetPropertyDefault(block, x => x.Item);
+            if (itemModel is not null)
             {
-                PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                PlaceItemFromItemModel(itemModel, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+            }
+
+            var itemModels = conversion.GetPropertyDefault(block, x => x.Items);
+            if (itemModels is not null)
+            {
+                foreach (var item in itemModels)
+                {
+                    PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                }
             }
         }
 
-        var conversionVariants = conversion.GetPropertyDefault(block, x => x.ConversionVariants);
-        var variantModel = conversionVariants?.GetValueOrDefault(variant);
+        var conversionVariantsByBlock = conversion.GetPropertyDefault(block, x => x.ConversionVariantsByBlock);
+        var variantModel = default(ManualConversionVariantModel);
+        var disableTerrainModifier = false;
+
+        if (conversionVariantsByBlock?.Count > 0)
+        {
+            variantModel = blocksPerCoord[block.Coord]
+                .Select(b => conversionVariantsByBlock.GetValueOrDefault(b.Name)?.GetValueOrDefault(b.Variant))
+                .FirstOrDefault(variant => variant is not null);
+
+            if (variantModel is not null)
+            {
+                disableTerrainModifier = true; // temporary
+            }
+        }
+
+        variantModel ??= conversion.GetPropertyDefault(block, x => x.ConversionVariants)?.GetValueOrDefault(variant);
         if (variantModel is not null)
         {
-            if (variantModel.SubVariants?.TryGetValue(subVariant, out var subVariantModel) == true)
-            {
-                variantModel = subVariantModel;
-            }
-
             if (variantModel.Item is not null)
             {
                 PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
@@ -247,6 +263,29 @@ internal sealed class PlaceBlockStage : BlockStageBase
             if (variantModel.Block is not null)
             {
                 PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize, conversion.Skin);
+            }
+
+            if (variantModel.SubVariants?.TryGetValue(subVariant, out var subVariantModel) == true)
+            {
+                variantModel = subVariantModel;
+
+                if (variantModel.Item is not null)
+                {
+                    PlaceItemFromItemModel(variantModel.Item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                }
+
+                if (variantModel.Items is not null)
+                {
+                    foreach (var item in variantModel.Items)
+                    {
+                        PlaceItemFromItemModel(item, variant, block.Coord, direction, blockCoordSize, block.IsGround);
+                    }
+                }
+
+                if (variantModel.Block is not null)
+                {
+                    PlaceBlockFromItemModel(block, direction, variantModel.Block, blockCoordSize, conversion.Skin);
+                }
             }
 
             if (variantModel.Variant.HasValue)
@@ -278,6 +317,12 @@ internal sealed class PlaceBlockStage : BlockStageBase
         var modernized = overrideConversion?.Modernized ?? conversion.Modernized;
 
         var noItem = overrideConversion?.NoItem ?? variantModel?.NoItem ?? conversion.GetPropertyDefault(block, x => x.NoItem);
+        
+        if (overrideConversion?.NoItems == true)
+        {
+            noItem = true;
+        }
+
         if (!noItem)
         {
             logger.LogDebug("-- Placing primary item {ItemName} at adjusted coord {NewCoord}, {Direction} ...", itemName, newCoord, direction);
@@ -302,10 +347,16 @@ internal sealed class PlaceBlockStage : BlockStageBase
         {
             var noTerrainModifier = conversion.GetPropertyDefault(block, x => x.NoTerrainModifier);
 
+            // temporary
+            if (disableTerrainModifier)
+            {
+                noTerrainModifier = true;
+            }
+
             if (!noTerrainModifier)
             {
                 var placeDefaultZone = variantModel?.PlaceDefaultZone ?? conversion.GetPropertyDefault(block, x => x.PlaceDefaultZone);
-                
+
                 logger.LogDebug("-- Placing terrain modifier item ...");
 
                 // This will work fine in 99% of cases, BUT
@@ -318,7 +369,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 var modifier = default(string);
                 if (Environment == "Stadium")
                 {
-                    var units = conversion.GetProperty(block, x => x.Units)?.Where(x => x.Y == 0) ?? [];
+                    var units = conversion.GetProperty(block, x => x.Units, fallback: true)?.Where(x => x.Y == 0) ?? [];
                     foreach (var unit in units)
                     {
                         var alignedCoord = block.Coord + unit + block.Direction switch
@@ -363,7 +414,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
                         terrainItemPath = Path.Combine(zoneDirPath, "Ground_0_0.Item.Gbx");
                     }
 
-                    var units = conversion.GetProperty(block, x => x.Units)?.ToArray() ?? [(0, 0, 0)];
+                    var units = conversion.GetProperty(block, x => x.Units, fallback: true)?.ToArray() ?? [(0, 0, 0)];
 
                     var alignedUnits = new Int3[units.Length];
 
