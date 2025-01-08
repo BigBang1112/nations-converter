@@ -40,3 +40,234 @@ Stadium\CircuitScreen\Up.webm:
 Stadium\CircuitScreen\Down.webm:
   Primary: Any\Advertisement2x1\Reversible\AnimatedFoggyMarine.webm
   Foreground: Any\Advertisement4x1\Bottom+111A.webm
+
+# TMT
+
+AnyCE\Advertisement\AD_builder_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_builder_01.dds
+AnyCE\Advertisement\AD_die_tryin_12.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_die_tryin_12.dds
+AnyCE\Advertisement\AD_double_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_double_01.dds
+AnyCE\Advertisement\AD_double_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_double_02.dds
+AnyCE\Advertisement\AD_double_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_double_03.dds
+AnyCE\Advertisement\AD_double_05.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_double_05.dds
+AnyCE\Advertisement\AD_EasyHard_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_EasyHard_01.dds
+AnyCE\Advertisement\AD_go_west.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_go_west.dds
+AnyCE\Advertisement\AD_grass_tread.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_grass_tread.dds
+AnyCE\Advertisement\AD_honk_fun.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_honk_fun.dds
+AnyCE\Advertisement\AD_hotseat_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_hotseat_01.dds
+AnyCE\Advertisement\AD_hotseat_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_hotseat_02.dds
+AnyCE\Advertisement\AD_hotseat_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_hotseat_03.dds
+AnyCE\Advertisement\AD_if_you_can_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_if_you_can_01.dds
+AnyCE\Advertisement\AD_if_you_can_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_if_you_can_02.dds
+AnyCE\Advertisement\AD_keepin_08.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_keepin_08.dds
+AnyCE\Advertisement\AD_la_peur_13.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_la_peur_13.dds
+AnyCE\Advertisement\AD_le_mieux_07.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_le_mieux_07.dds
+AnyCE\Advertisement\AD_LiveFast_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_LiveFast_01.dds
+AnyCE\Advertisement\AD_never_05.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_never_05.dds
+AnyCE\Advertisement\AD_one_moren_04.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_one_moren_04.dds
+AnyCE\Advertisement\AD_physics_11.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_physics_11.dds
+AnyCE\Advertisement\AD_physics_12.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_physics_12.dds
+AnyCE\Advertisement\AD_PreserveNature_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_PreserveNature_01.dds
+AnyCE\Advertisement\AD_PreserveNature_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_PreserveNature_02.dds
+AnyCE\Advertisement\AD_split_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_split_01.dds
+AnyCE\Advertisement\AD_try_again_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_try_again_02.dds
+AnyCE\Advertisement\AD_try_hard_09.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_try_hard_09.dds
+AnyCE\Advertisement\AD_try_hard_14.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_try_hard_14.dds
+AnyCE\Advertisement\AD_try_hard_17.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_try_hard_17.dds
+AnyCE\Advertisement\AD_VID_Gravity.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_Gravity.webm
+AnyCE\Advertisement\AD_VID_Gravity_CHN.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_Gravity_CHN.webm
+AnyCE\Advertisement\AD_VID_if_you_can_CHN.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_if_you_can_CHN.webm
+AnyCE\Advertisement\AD_VID_LiveFast.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_LiveFast.webm
+AnyCE\Advertisement\AD_VID_NoPain.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_NoPain.webm
+AnyCE\Advertisement\AD_VID_Physics.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_Physics.webm
+AnyCE\Advertisement\AD_VID_PreserveNature.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_VID_PreserveNature.webm
+AnyCE\Advertisement\AD_Winners_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_Winners_01.dds
+AnyCE\Advertisement\AD_Wolf_1.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/AD_Wolf_1.dds
+AnyCE\Advertisement\CAUTION_AirControl_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_AirControl_01.dds
+AnyCE\Advertisement\CAUTION_Danger_CHN_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_Danger_CHN_01.dds
+AnyCE\Advertisement\CAUTION_hold_fast.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_hold_fast.dds
+AnyCE\Advertisement\CAUTION_jump_CN.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_jump_CN.dds
+AnyCE\Advertisement\CAUTION_jump_US.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_jump_US.dds
+AnyCE\Advertisement\CAUTION_VID_Achtung.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_Achtung.webm
+AnyCE\Advertisement\CAUTION_VID_AirControl.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_AirControl.webm
+AnyCE\Advertisement\CAUTION_VID_AvoidCenter_01.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_AvoidCenter_01.webm
+AnyCE\Advertisement\CAUTION_VID_BigJump_Us.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_BigJump_Us.webm
+AnyCE\Advertisement\CAUTION_VID_Brake.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_Brake.webm
+AnyCE\Advertisement\CAUTION_VID_DriftHere.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_DriftHere.webm
+AnyCE\Advertisement\CAUTION_VID_Mas_Rapido.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_Mas_Rapido.webm
+AnyCE\Advertisement\CAUTION_VID_SlowDown.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_SlowDown.webm
+AnyCE\Advertisement\CAUTION_VID_SlowDown_CHN.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_SlowDown_CHN.webm
+AnyCE\Advertisement\CAUTION_VID_Stay.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_Stay.webm
+AnyCE\Advertisement\CAUTION_VID_StayCenter_01.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_StayCenter_01.webm
+AnyCE\Advertisement\CAUTION_VID_StayCenter_02.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_StayCenter_02.webm
+AnyCE\Advertisement\CAUTION_VID_Stay_CHN.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_VID_Stay_CHN.webm
+AnyCE\Advertisement\CAUTION_wallride_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_wallride_01.dds
+AnyCE\Advertisement\CAUTION_wallride_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/CAUTION_wallride_03.dds
+AnyCE\Advertisement\FLAG_CHN.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_CHN.dds
+AnyCE\Advertisement\FLAG_FRA.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_FRA.dds
+AnyCE\Advertisement\FLAG_GER.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_GER.dds
+AnyCE\Advertisement\FLAG_ITA.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_ITA.dds
+AnyCE\Advertisement\FLAG_JAM.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_JAM.dds
+AnyCE\Advertisement\FLAG_KOR.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_KOR.dds
+AnyCE\Advertisement\FLAG_SEY.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_SEY.dds
+AnyCE\Advertisement\FLAG_SWE.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_SWE.dds
+AnyCE\Advertisement\FLAG_UK.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_UK.dds
+AnyCE\Advertisement\FLAG_USA.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_USA.dds
+AnyCE\Advertisement\FLAG_WAL.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/FLAG_WAL.dds
+AnyCE\Advertisement\PODIUM_VID_TryHard1.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PODIUM_VID_TryHard1.webm
+AnyCE\Advertisement\PODIUM_VID_TryHard2.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PODIUM_VID_TryHard2.webm
+AnyCE\Advertisement\PROMO_double_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PROMO_double_01.dds
+AnyCE\Advertisement\PROMO_ranking_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PROMO_ranking_02.dds
+AnyCE\Advertisement\PROMO_TIME_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PROMO_TIME_03.dds
+AnyCE\Advertisement\PROMO_TM_CN_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PROMO_TM_CN_01.dds
+AnyCE\Advertisement\PROMO_VID_DoubleDriver.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/PROMO_VID_DoubleDriver.webm
+AnyCE\Advertisement\Series_Black.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Series_Black.webm
+AnyCE\Advertisement\Series_Blue.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Series_Blue.webm
+AnyCE\Advertisement\Series_Green.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Series_Green.webm
+AnyCE\Advertisement\Series_Red.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Series_Red.webm
+AnyCE\Advertisement\Series_White.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/Series_White.webm
+AnyCE\Advertisement\SIGN_chicane_CN_06.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_chicane_CN_06.dds
+AnyCE\Advertisement\SIGN_chicane_US_05.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_chicane_US_05.dds
+AnyCE\Advertisement\SIGN_DriftHere.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_DriftHere.dds
+AnyCE\Advertisement\SIGN_left_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_left_03.dds
+AnyCE\Advertisement\SIGN_narrow_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_narrow_01.dds
+AnyCE\Advertisement\SIGN_OFF_CN_08.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_OFF_CN_08.dds
+AnyCE\Advertisement\SIGN_OFF_US_07.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_OFF_US_07.dds
+AnyCE\Advertisement\SIGN_right_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_right_02.dds
+AnyCE\Advertisement\SIGN_SPLIT_CN_10.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_SPLIT_CN_10.dds
+AnyCE\Advertisement\SIGN_SPLIT_US_09.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_SPLIT_US_09.dds
+AnyCE\Advertisement\SIGN_up_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_up_01.dds
+AnyCE\Advertisement\SIGN_U_left_CN_02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_U_left_CN_02.dds
+AnyCE\Advertisement\SIGN_U_left_US_04.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_U_left_US_04.dds
+AnyCE\Advertisement\SIGN_U_right_CN_01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_U_right_CN_01.dds
+AnyCE\Advertisement\SIGN_U_right_US_03.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_U_right_US_03.dds
+AnyCE\Advertisement\SIGN_VID_Down.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Down.webm
+AnyCE\Advertisement\SIGN_VID_Finish.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Finish.webm
+AnyCE\Advertisement\SIGN_VID_Left.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Left.webm
+AnyCE\Advertisement\SIGN_VID_Left_Hand.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Left_Hand.webm
+AnyCE\Advertisement\SIGN_VID_Right.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Right.webm
+AnyCE\Advertisement\SIGN_VID_Right_Hand.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Right_Hand.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_CHN_Blue.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_CHN_Blue.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_CHN_Yellow.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_CHN_Yellow.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_RUS_Blue.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_RUS_Blue.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_RUS_Yellow.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_RUS_Yellow.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_US_Blue.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_US_Blue.webm
+AnyCE\Advertisement\SIGN_VID_Turbo_US_Yellow.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Turbo_US_Yellow.webm
+AnyCE\Advertisement\SIGN_VID_Up_Sign.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/SIGN_VID_Up_Sign.webm
+AnyCE\Advertisement\VID_Flags.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/VID_Flags.webm
+AnyCE\Advertisement\VID_Flags2.webm:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/VID_Flags2.webm
+AnyCE\Advertisement\WELCOME_lagoon01.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/WELCOME_lagoon01.dds
+AnyCE\Advertisement\WELCOME_lagoon02.dds:
+  PrimaryLocatorUrl: https://download.dashmap.live/6a43df20-cd1a-4b3b-87b9-a6835a9b416d/WELCOME_lagoon02.dds
