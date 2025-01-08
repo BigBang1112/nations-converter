@@ -1638,7 +1638,6 @@ Blocks:
     Modifiable: true
     Modernized: true
   StadiumBump1Tilt:
-    PlaceDefaultZone: true
     ForceAirItem: true
     Modifiable: true
   StadiumDecoTowerA:
