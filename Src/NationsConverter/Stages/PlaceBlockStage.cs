@@ -532,6 +532,11 @@ internal sealed class PlaceBlockStage : BlockStageBase
             return null;
         }
 
+        if (!block.Skin.PackDesc.FilePath.StartsWith("Skins\\"))
+        {
+            return null;
+        }
+
         var filePathToMatch = block.Skin.PackDesc.FilePath.Substring(@"Skins\".Length);
 
         CGameCtnBlockSkin skin;
@@ -542,7 +547,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
             {
                 PackDesc = new PackDesc
                 {
-                    FilePath = string.IsNullOrEmpty(skinInfo.Primary) ? "" : $@"Skins\{skinInfo.Primary}",
+                    FilePath = $@"Skins\{(string.IsNullOrEmpty(skinInfo.Primary) ? filePathToMatch : skinInfo.Primary)}",
                     LocatorUrl = skinInfo.PrimaryLocatorUrl
                 },
                 ForegroundPackDesc = new PackDesc
