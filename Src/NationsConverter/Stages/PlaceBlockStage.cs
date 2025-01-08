@@ -343,7 +343,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         }
 
         // Place terrain-modifiable pieces
-        if (block.IsGround && conversion.Modifiable.GetValueOrDefault() && (conversion.NotModifiable is null || !conversion.NotModifiable.Contains((variant, subVariant))))
+        if ((block.IsGround || conversion.AirModifiable) && conversion.Modifiable.GetValueOrDefault() && (conversion.NotModifiable is null || !conversion.NotModifiable.Contains((variant, subVariant))))
         {
             var noTerrainModifier = conversion.GetPropertyDefault(block, x => x.NoTerrainModifier);
 
