@@ -16,6 +16,8 @@ public sealed class ManualConversionItemModel
     public float RotY { get; set; }
     public float RotZ { get; set; }
     public bool AlwaysStaticObject { get; set; }
+    public bool OnlyAir { get; set; }
+    public bool OnlyGround { get; set; }
 
     /// <summary>
     /// If item from the Modernized sub-category should be used when Modernized is applied. False will always pick Classic. Only has effect in the Crystal category.

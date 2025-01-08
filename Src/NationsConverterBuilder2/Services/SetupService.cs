@@ -65,7 +65,7 @@ internal sealed class SetupService
                 }
 
                 var sceneSolidFile = scene3dHeader.RefTable.Files
-                    .FirstOrDefault(x => !x.FilePath.EndsWith("SkyDome.Solid.Gbx") && x.FilePath.EndsWith(".Solid.Gbx"));
+                    .FirstOrDefault(x => !x.FilePath.EndsWith("SkyDome.Solid.Gbx") && !x.FilePath.EndsWith("32x32ShadowCaster.Solid.Gbx") && x.FilePath.EndsWith(".Solid.Gbx"));
 
                 if (sceneSolidFile is null)
                 {
@@ -123,9 +123,13 @@ internal sealed class SetupService
                 .Concat(stadium2.CompleteListZoneList ?? [])
                 .DistinctBy(x => x.File?.FilePath)
                 .ToArray();
-            stadium2Blocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.ED*.Gbx", SearchOption.AllDirectories)
+            var stadium2EdBlocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.ED*.Gbx", SearchOption.AllDirectories)
                 .Where(x => !x.EndsWith(".EDClip.Gbx"))
                 .ToImmutableHashSet();
+            var stadium2TmedBlocks = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.TMED*.Gbx", SearchOption.AllDirectories)
+                .Where(x => !x.EndsWith(".TMEDClip.Gbx") && !folderBlockInfoPaths.Select(GbxPath.GetFileNameWithoutExtension).Contains(GbxPath.GetFileNameWithoutExtension(x)))
+                .ToImmutableHashSet();
+            stadium2Blocks = stadium2EdBlocks.Concat(stadium2TmedBlocks).ToImmutableHashSet();
             Stadium2Clips = Directory.EnumerateFiles(Path.Combine(data2DirPath, collection.Node.FolderBlockInfo), "*.EDClip.Gbx", SearchOption.AllDirectories)
                 .Select(x => GbxPath.GetFileNameWithoutExtension(x))
                 .ToHashSet();

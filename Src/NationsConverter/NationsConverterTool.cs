@@ -62,7 +62,7 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var waterStage = new WaterStage(mapIn, mapOut, conversionSet, coveredZoneBlocks, isManiaPlanet, logger);
         waterStage.Convert();
 
-        var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager);
+        var pylonStage = new PylonStage(mapIn, mapOut, conversionSet, customContentManager, logger);
         pylonStage.Convert();
 
         var decorationStage = new DecorationStage(mapIn, mapOut, conversionSet, Config, customContentManager, logger);
@@ -102,6 +102,9 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         var fileNameWithoutExtension = gbxMapIn.FilePath is null
             ? TextFormatter.Deformat(mapIn.MapName)
             : GbxPath.GetFileNameWithoutExtension(gbxMapIn.FilePath);
+
+        fileNameWithoutExtension = Path.GetInvalidFileNameChars()
+            .Aggregate(fileNameWithoutExtension, (current, c) => current.Replace(c, '_'));
 
         return new Gbx<CGameCtnChallenge>(mapOut)
         {
@@ -196,15 +199,19 @@ public class NationsConverterTool(Gbx<CGameCtnChallenge> gbxMapIn, IComplexConfi
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304302A>();
         mapOut.CreateChunk<CGameCtnChallenge.Chunk03043034>();
 
-        var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
-        if (oldThumbnailChunk is null)
+        var newThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043036>();
+        if (newThumbnailChunk is null)
         {
-            mapOut.CreateChunk<CGameCtnChallenge.Chunk03043036>().U01 = 10;
+            var oldThumbnailChunk = mapIn.Chunks.Get<CGameCtnChallenge.Chunk03043028>();
+            if (oldThumbnailChunk is not null)
+            {
+                mapOut.Chunks.Add(oldThumbnailChunk);
+                mapOut.HasCustomCamThumbnail = mapIn.HasCustomCamThumbnail;
+            }
         }
         else
         {
-            mapOut.Chunks.Add(oldThumbnailChunk);
-            mapOut.HasCustomCamThumbnail = mapIn.HasCustomCamThumbnail;
+            mapOut.Chunks.Add(newThumbnailChunk);
         }
 
         mapOut.CreateChunk<CGameCtnChallenge.Chunk0304303E>();

@@ -22,8 +22,8 @@ foreach (var newMapPath in newMapPaths)
 
 AnsiConsole.MarkupLine($"[green]{mapUidDict.Count}[/] maps loaded");
 
-using var ns = new NadeoServices();
-using var nls = new NadeoLiveServices();
+using var ns = new NadeoServices(http);
+using var nls = new NadeoLiveServices(http);
 
 var login = AnsiConsole.Ask<string>("Enter Ubisoft Connect [green]login[/]:");
 
@@ -37,7 +37,7 @@ await nls.AuthorizeAsync(login, password, AuthorizationMethod.UbisoftAccount);
 
 AnsiConsole.MarkupLine("[green]Authorization successful[/]");
 
-var campaign = await nls.GetClubCampaignAsync(int.Parse(args[1]), int.Parse(args[2]));
+var campaign = await nls.GetClubCampaignAsync(clubId: int.Parse(args[1]), campaignId: int.Parse(args[2]));
 var mapInfos = await nls.GetMapInfosAsync(campaign.Campaign.Playlist.Select(x => x.MapUid));
 
 foreach (var mapInfo in mapInfos)

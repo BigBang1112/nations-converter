@@ -20,7 +20,7 @@ internal sealed class WaterStage : BlockStageBase
         ManualConversionSetModel conversionSet,
         ImmutableHashSet<CGameCtnBlock> coveredZoneBlocks,
         bool isManiaPlanet,
-        ILogger logger) : base(mapIn, mapOut, conversionSet)
+        ILogger logger) : base(mapIn, mapOut, conversionSet, logger)
     {
         this.mapOut = mapOut;
         this.coveredZoneBlocks = coveredZoneBlocks;

@@ -1,5 +1,6 @@
 ﻿using GBX.NET;
 using GBX.NET.Engines.Game;
+using Microsoft.Extensions.Logging;
 using NationsConverter.Models;
 
 namespace NationsConverter.Stages;
@@ -7,6 +8,7 @@ namespace NationsConverter.Stages;
 internal abstract class BlockStageBase : EnvironmentStageBase
 {
     private readonly CGameCtnChallenge mapIn;
+    private readonly ILogger logger;
 
     /// <summary>
     /// Block size in small units.
@@ -16,7 +18,7 @@ internal abstract class BlockStageBase : EnvironmentStageBase
     protected Int3 TotalOffset { get; }
     protected ManualConversionSetModel ConversionSet { get; }
 
-    public BlockStageBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet)
+    public BlockStageBase(CGameCtnChallenge mapIn, CGameCtnChallenge mapOut, ManualConversionSetModel conversionSet, ILogger logger)
         : base(mapIn)
     {
         this.mapIn = mapIn;
@@ -28,13 +30,15 @@ internal abstract class BlockStageBase : EnvironmentStageBase
         }
         TotalOffset = CenterOffset + (0, -mapIn.DecoBaseHeightOffset, 0);
         ConversionSet = conversionSet;
+
+        this.logger = logger;
     }
 
     protected abstract void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion);
 
     public virtual void Convert()
     {
-        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn))
+        foreach (var (block, conversion) in ConversionSet.GetBlockConversionPairs(mapIn, logger))
         {
             ConvertBlock(block, conversion);
         }

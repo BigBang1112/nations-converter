@@ -6,6 +6,9 @@ Blocks:
     SubVariant: 0 # case for TMO maps as TMUF versions
   AlpineRoadChaletPillar:
     SubVariant: 0 # case for TMO maps as TMUF versions
+  AlpineIceRoadClip:
+    Modifiable: True
+    AirModifiable: True
   Hills:
     ConversionVariants:
       0:
@@ -1223,6 +1226,12 @@ Blocks:
       OffsetZ: 84.9176
       RotX: -90
   AlpineToundraHillsTransitionTunnelEntry:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 8]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
     Items:
     - Name: FirSnowMedium
       OffsetX: 27.4998
@@ -1253,6 +1262,12 @@ Blocks:
       OffsetZ: 29.1882
       RotX: 90
   AlpineHillsTransitionTunnelEntry:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 8]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
     Items:
     - Name: FirSnowMedium
       OffsetX: 27.4998
@@ -1857,3 +1872,112 @@ Blocks:
       OffsetY: 16.2015
       OffsetZ: 67.4278
       RotX: -90
+  AlpineTunnelEntry1:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 8]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelEntry2:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 21, 8]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelEntry3:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 37, 8]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelRoad:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelCheckPoint:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelTurbo:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 5, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelRoadSlope:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 13, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelExit:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 13, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelGTCurve2:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [20, 4, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+    - Color: [1, 0.95, 0.85]
+      Position: [46, 4, 44]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelGTCurve3:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [19, 4, 21]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+    - Color: [1, 0.95, 0.85]
+      Position: [40, 4, 57]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+    - Color: [1, 0.95, 0.85]
+      Position: [76, 4, 77]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelBiSlopeStart:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 8, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 16, 48]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+  AlpineTunnelBiSlopeEnd:
+    Lights:
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 12, 16]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false
+    - Color: [1, 0.95, 0.85]
+      Position: [16, 18, 48]
+      Distance: 96
+      Intensity: 2
+      NightOnly: false

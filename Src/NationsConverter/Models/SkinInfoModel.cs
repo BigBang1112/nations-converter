@@ -1,4 +1,4 @@
-﻿namespace NationsConverter.Stages;
+﻿namespace NationsConverter.Models;
 
 public sealed class SkinInfoModel
 {

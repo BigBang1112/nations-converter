@@ -94,6 +94,7 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHigh
       Variant: 2
+      Modernized: true
   StadiumRoadDirtHillTiltCornerIn:
     SubVariant: 0
     Modernized: true
@@ -307,12 +308,14 @@ Blocks:
       Name: Decors/Control/StadiumControlRoadCamera/{Modifier}_3_0.Item.Gbx
   StadiumControlLight:
     PlaceDefaultZone: true
-    ForceAirItem: true
     Modifiable: true
+    Modernized: true
   StadiumControlLightBase:
     PlaceDefaultZone: true
+    Modernized: true
   StadiumRoadMain:
     PlaceDefaultZone: true
+    Modernized: true
     ConversionVariants:
       2:
         NoItem: true
@@ -331,6 +334,11 @@ Blocks:
         NoItem: true
         Block:
           Name: RoadTechBranchCross
+  StadiumRoadMainCorner:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechCurve1
   StadiumRoadMainStartLine:
     NoItem: true
     PlaceDefaultZone: true
@@ -440,6 +448,7 @@ Blocks:
   StadiumRoadMainSlopeBase1x2:
     NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
       Name: RoadTechSlopeBase2x1
   StadiumRoadMainSlopeStraight:
@@ -731,10 +740,14 @@ Blocks:
       Name: PlatformTechLoopEndCurve1In
   StadiumRamp:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumRampLow:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
     Item:
       Name: RoadMain/Main/StadiumRoadMain/{Modifier}_1_0.Item.Gbx
   StadiumInflatableAdvert:
@@ -814,6 +827,7 @@ Blocks:
   StadiumHoleSlope:
     NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
       Name: RoadTechSlopeHole
   StadiumHoleTilt:
@@ -826,45 +840,56 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 2, 16]
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 16]
   StadiumHolePillar2Front:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [12, 2, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [20, 2, 16]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [12, 0, 16]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [20, 0, 16]
   StadiumHolePillar2Line:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 8]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 24]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 8]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 24]
   StadiumHolePillar3:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [21, 2, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 2, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 2, 6]
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [16, 0, 4]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [22, 0, 28]
+    - Name: Misc/Pillar/StadiumPillar.Item.Gbx
+      Pivot: [10, 0, 28]
   StadiumRoadStretch:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
   StadiumPlatformWall1:
+    NoItem: true
+    Block:
+      Name: PlatformTechWallStraight
+      Dir: 3
+  StadiumPlatformWall1Birds:
     NoItem: true
     Block:
       Name: PlatformTechWallStraight
@@ -893,6 +918,14 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve2In:
     PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve4In:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve2Out:
+    PlaceDefaultZone: true
+  StadiumCircuitBorderGTCurve3Out:
+    PlaceDefaultZone: true
   StadiumCircuitBorderGTCurve4Out:
     PlaceDefaultZone: true
   StadiumCircuitSlopeStart:
@@ -901,18 +934,11 @@ Blocks:
     PlaceDefaultZone: true
   StadiumCircuitBorderDiagOut:
     PlaceDefaultZone: true
-  #StadiumRoadMainClip:
-  #  PlaceDefaultZone: true
   StadiumDirtHill:
     Modernized: true
     ConversionVariants:
       11:
         SubVariant: 0
-      13:
-        Item:
-          Name: Terraformation/StadiumDirt/Ground_0_0.Item.Gbx
-          OffsetY: -16
-          Offset2Y: 8
   StadiumRoadDirtToRoadDirtHighBridge:
     NoTerrainModifier: true
     Modernized: true
@@ -928,16 +954,7 @@ Blocks:
       NoItem: true
       Variant: 3
   StadiumRoadDirtToRoadDirtHigh2:
-    NoTerrainModifier: true
     Modernized: true
-    Conversions:
-    - Name: StadiumRoadDirt
-      NoItem: true
-      Variant: 3
-    - Name: StadiumRoadDirt
-      NoItem: true
-      Variant: 3
-      OffsetX: 1
   StadiumRoadDirtHighToRoad:
     NoTerrainModifier: true
     Modernized: true
@@ -976,21 +993,21 @@ Blocks:
   StadiumSculptArchRingStartMirror:
     PlaceDefaultZone: true
   StadiumHolePillarTilt:
-    NoItem: true
     PlaceDefaultZone: true
+    ForceAirItem: true
     Block:
-      Name: RoadTechTiltStraight
+      Name: RoadTechTiltHole
       Dir: 2
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 6, 16]
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
   StadiumHolePillarSlope:
-    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
     Block:
-      Name: RoadTechSlopeStraight
-    Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 6, 16]
+      Name: RoadTechSlopeHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
   StadiumPlatformToRoad:
     NoItem: true
     NoTerrainModifier: true
@@ -1069,9 +1086,11 @@ Blocks:
   StadiumLoopLeft:
     PlaceDefaultZone: true
     ForceAirItem: true  
+    Modernized: true
   StadiumLoopRight:
     PlaceDefaultZone: true
     ForceAirItem: true  
+    Modernized: true
   StadiumRoadDirtClip:
     Modernized: true
   StadiumRoadDirtHighClip:
@@ -1084,9 +1103,9 @@ Blocks:
     NoItem: true
     NoTerrainModifier: true
     WaterOffsetY: 1
-    Modernized: true
     Conversion:
       Name: StadiumPool
+      Modernized: true
       OffsetY: 1
   StadiumWater:
     Modernized: true
@@ -1096,6 +1115,7 @@ Blocks:
     WaterOffsetY: 1
     Conversion:
       Name: StadiumWater
+      Modernized: true
       OffsetY: 1
   StadiumPodium:
     Modifiable: true
@@ -1106,60 +1126,79 @@ Blocks:
     Conversion:
       Name: StadiumCircuitBase
     Item:
-      Name: ObstaclePillar2m
-      Pivot: [16, 9, 16]
+      Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
   StadiumCircuitPillar2:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 21]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 11]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 21.333]
   StadiumCircuitPillar3:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 26]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 26.667]
   StadiumCircuitPillar5:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [26, 10, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 10, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [16, 10, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [6, 10, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [6, 10, 6]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 26.667]
   StadiumCircuitPillar6:
     NoItem: true
     Conversion:
       Name: StadiumCircuitBase
     Items:
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [26, 8, 6]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 26]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 16]
-    - Name: ObstaclePillar2m
-      Pivot: [11, 8, 6]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [21.333, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [10.667, 8, 26.667]
+  StadiumCircuitPillar7:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+    Items:
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 10.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 16]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [26.667, 8, 21.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 5.333]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [16, 8, 26.667]
+    - Name: Misc/Pillar/StadiumPillarPlatform.Item.Gbx
+      Pivot: [5.333, 8, 21.333]
   StadiumCircuitBumpUp:
     Conversion:
       Name: StadiumCircuitBase
@@ -1233,7 +1272,7 @@ Blocks:
     NoTerrainModifier: true
     Conversion:
       Name: StadiumTrenchStraight
-      NoItem: true
+      NoItems: true
   StadiumTrenchCross:
     Item:
       Name: Trench/Main/StadiumTrenchCross/Base.Item.Gbx
@@ -1248,10 +1287,10 @@ Blocks:
       NoItem: true
       Variant: 5
   StadiumTrenchInPillar:
-    NoItem: true
     NoTerrainModifier: true
     Conversion:
       Name: StadiumTrenchStraight
+      NoItems: true
   StadiumBump1:
     PlaceDefaultZone: true
   StadiumBump1InGround:
@@ -1261,6 +1300,11 @@ Blocks:
       NoItem: true
       Variant: 3
   StadiumPlatformGridStraight:
+    NoItem: true
+    NoTerrainModifier: true
+    Block:
+      Name: PlatformTechBase
+  StadiumPlatformGridStraightBirds:
     NoItem: true
     NoTerrainModifier: true
     Block:
@@ -1290,8 +1334,20 @@ Blocks:
     Modernized: true
   StadiumRoadDirtHillSlopeGT2:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [48, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillSlopeGT2Bis:
     Modernized: true
+    Lights:
+    - Color: [1, 0.97, 0.8]
+      Position: [16, 18, 18]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtHillWave:
     Modernized: true
   StadiumRoadDirtHillTiltCornerOut:
@@ -1314,15 +1370,116 @@ Blocks:
     Modernized: true
   StadiumDecoTowerBeam:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
+      Modernized: true
   StadiumRoadMainInBeam:
+    NoItem: true
     PlaceDefaultZone: true
+    Modifiable: true
     Block:
-      Name: RoadTechStraight
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OffsetY: 2
+      Dir: 1
+      Modernized: true
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
+      Dir: 1
+      Modernized: true
+  StadiumRoadMainXBeam:
+    NoItem: true
+    PlaceDefaultZone: true
+    Modifiable: true
+    Block:
+      Name: RoadTechHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlass.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Beam.Item.Gbx
+      OffsetY: 2
+      Modernized: true
+    - Name: Inflatables/Tower/StadiumDecoTowerBeam/Air_0_0.Item.Gbx
+      Modernized: true
   StadiumRoadMainInBeamSlope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
     Block:
-      Name: RoadTechSlopeStraight
+      Name: RoadTechSlopeHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Beam.Item.Gbx
+      OffsetY: 4
+      Modernized: true
+  StadiumRoadMainXBeamSlope:
+    NoItem: true
+    PlaceDefaultZone: true
+    Modifiable: true
+    Block:
+      Name: RoadTechSlopeHole
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassSlope.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Dir: 1
+      Modernized: true
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      OffsetY: 4.655
+      Modernized: true
+  StadiumRoadMainInBeamTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Block:
+      Name: RoadTechTiltHole
+      Dir: 2
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Modernized: true
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      Dir: 3
+      OffsetY: 4.655
+      Modernized: true
+  StadiumRoadMainXBeamTilt:
+    NoItem: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Block:
+      Name: RoadTechTiltHole
+      Dir: 2
+    Items:
+    - Name: Misc/Pillar/StadiumHoleGlassTilt.Item.Gbx
+    - Name: Slope/Hazards/StadiumRoadMainInBeamSlope/Air_0_0.Item.Gbx
+      Modernized: true
+    - Name: Slope/Hazards/StadiumRoadMainXBeamSlope/Beam.Item.Gbx
+      Dir: 3
+      OffsetY: 4.655
+      Modernized: true
   StadiumDecoTowerCore:
     PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerCore/Stripe.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
+  StadiumDecoTowerCore6:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerCore/Stripe.Item.Gbx
+      OnlyGround: true
+      OffsetY: 1.655
   StadiumPlatformFW:
     Item:
       Name: Platform/Road/StadiumPlatformRoad/Air_0_0.Item.Gbx
@@ -1333,3 +1490,1362 @@ Blocks:
       Name: GateCheckpoint
       RotY: 90
       OffsetY: 2.5
+  StadiumCircuitHole:
+    ForceAirItem: true
+    Modernized: true
+    PlaceDefaultZone: true
+  StadiumTubeVDiag1:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag1/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag2:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag2/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag4:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag4/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag8:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag8/Air_0_0.Item.Gbx
+      OnlyGround: true
+  StadiumTubeVDiag16:
+    Modifiable: true
+    PlaceDefaultZone: true
+    Item:
+      Name: Bridges/Pillar/StadiumTubeVDiag16/Air_0_0.Item.Gbx
+      OnlyGround: true
+  CE_Crane:
+    PlaceDefaultZone: true
+    Modifiable: true
+  CE_CranePlatformGridStraight:
+    PlaceDefaultZone: true
+    Modifiable: true
+  StadiumRoadMainBirds:
+    NoItem: true
+    Block:
+      Name: RoadTechStraight
+  StadiumRoadDirtStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtFenceStraight
+      Modernized: true
+  CE_HelicoStart:
+    Items:
+    - Name: CE/CE_Helico/MainRotor.Item.Gbx
+      OffsetX: 16.014633  
+      OffsetY: 16.847183
+      OffsetZ: 35.237551
+      AlwaysStaticObject: true
+    - Name: CE/CE_Helico/TailRotor.Item.Gbx
+      OffsetX: 14.508982 
+      OffsetY: 16.952335
+      OffsetZ: 17.0550957
+      RotZ: 180
+      AlwaysStaticObject: true
+  CE_Helico:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 16
+              OffsetY: 6.72141
+              OffsetZ: 12.4538
+              RotY: -1.8594
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 17.5056
+              OffsetY: 7.62591
+              OffsetZ: 30.614
+              RotZ: 180
+              AlwaysStaticObject: true
+          1:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.6031
+              OffsetY: 6.72141
+              OffsetZ: 15.3214
+              RotX: -40
+              RotY: -1.8594
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 28.4297
+              OffsetY: 7.62591
+              OffsetZ: 28.2652
+              RotX: 40
+              AlwaysStaticObject: true
+  CE_HelicoScreen:
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.9648
+              OffsetY: 36.2264
+              OffsetZ: 19.2244
+              RotX: 170
+              RotY: 0.660589
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 11.3247
+              OffsetY: 36.3316
+              OffsetZ: 1.57964
+              RotX: -170
+              RotY: 2.51998
+              AlwaysStaticObject: true
+          1:
+            Items:
+            - Name: CE/CE_Helico/MainRotor.Item.Gbx
+              OffsetX: 15.3269
+              OffsetY: 36.219
+              OffsetZ: 17.2422
+              RotX: -125
+              RotY: 0.660589
+              AlwaysStaticObject: true
+            - Name: CE/CE_Helico/TailRotor.Item.Gbx
+              OffsetX: 29.3484
+              OffsetY: 36.3241
+              OffsetZ: 5.63128
+              RotX: 125
+              RotY: 2.52
+              AlwaysStaticObject: true
+  # StadiumDecoPalm:
+  StadiumRoadStretchSlope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
+  StadiumBump1Slope:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+  StadiumStretchTilt:
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modifiable: true
+    Modernized: true
+  StadiumBump1Tilt:
+    ForceAirItem: true
+    Modifiable: true
+  StadiumDecoTowerA:
+    Modernized: true
+    Item:
+      Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+  StadiumDecoTowerB:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 2
+  StadiumDecoTowerC:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 1
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 2
+  StadiumDecoTowerD:
+    NoItem: true
+    Items:
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Base.Item.Gbx
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 1
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 2
+    - Name: Inflatables/Tower/StadiumDecoTowerA/Air_0_0.Item.Gbx
+      Modernized: true
+      Dir: 3
+  StadiumDecoPalm:
+    NoItem: true
+    PlaceDefaultZone: true
+    ConversionVariants:
+      0:
+        SubVariants:
+          0:
+            Items:
+            - Name: PalmTreeDirtMedium
+              OffsetX: 12.8438
+              OffsetY: 1.8173
+              OffsetZ: 3.6855
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 19.5168
+              OffsetY: 1.7959
+              OffsetZ: 4.0547
+              RotX: -180
+            - Name: PalmTreeDirtSmall
+              OffsetX: 28.16
+              OffsetY: 1.655
+              OffsetZ: 24.2712
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 27.1727
+              OffsetY: 1.655
+              OffsetZ: 19.078
+            - Name: PalmTreeDirtMedium
+              OffsetX: 24.8076
+              OffsetY: 1.7876
+              OffsetZ: 12.0333
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 22.4201
+              OffsetY: 1.655
+              OffsetZ: 20.1498
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 15.6149
+              OffsetY: 1.8629
+              OffsetZ: 22.8514
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 5.4991
+              OffsetY: 1.655
+              OffsetZ: 4.1068
+            - Name: PalmTreeDirtMedium
+              OffsetX: 13.3289
+              OffsetY: 1.8353
+              OffsetZ: 13.1709
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 2.9164
+              OffsetY: 1.655
+              OffsetZ: 18.4875
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 7.6243
+              OffsetY: 1.837
+              OffsetZ: 19.6798
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 7.2258
+              OffsetY: 1.655
+              OffsetZ: 10.5316
+            - Name: PalmTreeDirtMedium
+              OffsetX: 11.2134
+              OffsetY: 1.8665
+              OffsetZ: 27.0095
+              RotX: -90
+            - Name: PalmTreeDirtSmall
+              OffsetX: 7.7078
+              OffsetY: 1.655
+              OffsetZ: 8.5312
+              RotX: -90
+            - Name: PalmTreeDirtSmall
+              OffsetX: 7.4372
+              OffsetY: 1.655
+              OffsetZ: 23.1204
+              RotX: -180
+            - Name: PalmTreeDirtSmall
+              OffsetX: 23.8875
+              OffsetY: 1.655
+              OffsetZ: 19.1859
+              RotX: 90
+          1:
+            Items:
+            - Name: PalmTreeDirtMedium
+              OffsetX: 3.2526
+              OffsetY: 1.655
+              OffsetZ: 11.2601
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 12.3219
+              OffsetY: 1.655
+              OffsetZ: 6.4952
+            - Name: PalmTreeDirtMedium
+              OffsetX: 18.1418
+              OffsetY: 1.655
+              OffsetZ: 3.369
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 23.1805
+              OffsetY: 1.655
+              OffsetZ: 3.9746
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 30.9177
+              OffsetY: 1.655
+              OffsetZ: 9.7028
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 24.6065
+              OffsetY: 1.7252
+              OffsetZ: 11.5278
+            - Name: PalmTreeDirtMedium
+              OffsetX: 23.0248
+              OffsetY: 1.655
+              OffsetZ: 25.8458
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 17.4502
+              OffsetY: 1.655
+              OffsetZ: 28.8536
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 15.3443
+              OffsetY: 1.655
+              OffsetZ: 28.1594
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 27.7103
+              OffsetY: 1.8262
+              OffsetZ: 19.9238
+            - Name: PalmTreeDirtMedium
+              OffsetX: 9.1897
+              OffsetY: 1.655
+              OffsetZ: 19.1781
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 6.254
+              OffsetY: 1.655
+              OffsetZ: 3.9132
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 14.9747
+              OffsetY: 1.655
+              OffsetZ: 14.9757
+              RotX: -180
+            - Name: PalmTreeDirtSmall
+              OffsetX: 16.5104
+              OffsetY: 1.655
+              OffsetZ: 17.2893
+              RotX: 90
+          2:
+            Items:
+            - Name: PalmTreeDirtMedium
+              OffsetX: 8.8066
+              OffsetY: 1.655
+              OffsetZ: 7.4907
+            - Name: PalmTreeDirtMedium
+              OffsetX: 13.7642
+              OffsetY: 1.655
+              OffsetZ: 9.212
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 15.1257
+              OffsetY: 1.655
+              OffsetZ: 11.4301
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 5.4448
+              OffsetY: 1.655
+              OffsetZ: 14.1593
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 4.9739
+              OffsetY: 1.655
+              OffsetZ: 21.1613
+            - Name: PalmTreeDirtMedium
+              OffsetX: 9.4705
+              OffsetY: 1.655
+              OffsetZ: 19.035
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 8.7711
+              OffsetY: 1.6828
+              OffsetZ: 26.5304
+              RotX: -180
+            - Name: PalmTreeDirtMedium
+              OffsetX: 20.977
+              OffsetY: 1.655
+              OffsetZ: 13.0963
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 24.8116
+              OffsetY: 1.655
+              OffsetZ: 10.2412
+            - Name: PalmTreeDirtMedium
+              OffsetX: 27.3031
+              OffsetY: 1.655
+              OffsetZ: 5.1742
+              RotX: -90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 26.7578
+              OffsetY: 1.655
+              OffsetZ: 18.4236
+              RotX: -180
+            - Name: PalmTreeDirtSmall
+              OffsetX: 24.8428
+              OffsetY: 1.7215
+              OffsetZ: 28.9531
+              RotX: 90
+            - Name: PalmTreeDirtMedium
+              OffsetX: 17.113
+              OffsetY: 1.655
+              OffsetZ: 22.6693
+            - Name: PalmTreeDirtMedium
+              OffsetX: 18.1159
+              OffsetY: 1.655
+              OffsetZ: 20.9036
+              RotX: -90
+    ConversionVariantsByBlock:
+      StadiumDirtHill:
+        0:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_0_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+          SubVariants:
+            0:
+              Items:
+              - Name: PalmTreeDirtMedium
+                OffsetX: 5.1141
+                OffsetY: 17.0224
+                OffsetZ: 4.2557
+              - Name: PalmTreeDirtMedium
+                OffsetX: 2.8148
+                OffsetY: 17
+                OffsetZ: 17.5732
+                RotX: -90
+              - Name: PalmTreeDirtMedium
+                OffsetX: 12.908
+                OffsetY: 17
+                OffsetZ: 3.4923
+                RotX: -180
+              - Name: PalmTreeDirtMedium
+                OffsetX: 10.4409
+                OffsetY: 12.5376
+                OffsetZ: 27.0492
+              - Name: PalmTreeDirtMedium
+                OffsetX: 7.8735
+                OffsetY: 16.2014
+                OffsetZ: 19.5961
+                RotX: -90
+              - Name: PalmTreeDirtMedium
+                OffsetX: 18.8361
+                OffsetY: 17.0054
+                OffsetZ: 3.8793
+                RotX: -90
+              - Name: PalmTreeDirtMedium
+                OffsetX: 24.6591
+                OffsetY: 13.6825
+                OffsetZ: 11.3591
+                RotX: -180
+              - Name: PalmTreeDirtMedium
+                OffsetX: 6.7588
+                OffsetY: 17
+                OffsetZ: 10.5443
+                RotX: 90
+              - Name: PalmTreeDirtMedium
+                OffsetX: 16.4586
+                OffsetY: 12.0443
+                OffsetZ: 22.5546
+              - Name: PalmTreeDirtMedium
+                OffsetX: 22.2597
+                OffsetY: 9.8402
+                OffsetZ: 20.1564
+                RotX: -90
+              - Name: PalmTreeDirtMedium
+                OffsetX: 27.6147
+                OffsetY: 9.0332
+                OffsetZ: 18.8794
+                RotX: -180
+              - Name: PalmTreeDirtMedium
+                OffsetX: 13.0626
+                OffsetY: 16.4362
+                OffsetZ: 12.3042
+                RotX: 90
+              - Name: PalmTreeDirtSmall
+                OffsetX: 7.5098
+                OffsetY: 17
+                OffsetZ: 8.3292
+                RotX: 90
+              - Name: PalmTreeDirtSmall
+                OffsetX: 7.4843
+                OffsetY: 15.2873
+                OffsetZ: 23.2563
+              - Name: PalmTreeDirtMedium
+                OffsetX: 28.54
+                OffsetY: 5.0954
+                OffsetZ: 24.6545
+                RotX: -180
+              - Name: PalmTreeDirtSmall
+                OffsetX: 23.6852
+                OffsetY: 10.3026
+                OffsetZ: 18.7185
+                RotX: 90
+            1:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 2.8333
+                  OffsetY: 17
+                  OffsetZ: 11.4606
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.0568
+                  OffsetY: 17
+                  OffsetZ: 3.2422
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.5178
+                  OffsetY: 17
+                  OffsetZ: 6.428
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 5.3642
+                  OffsetY: 17
+                  OffsetZ: 3.2006
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.6281
+                  OffsetY: 15.979
+                  OffsetZ: 19.5375
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.9065
+                  OffsetY: 13.9451
+                  OffsetZ: 10.675
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 31.2431
+                  OffsetY: 13.2248
+                  OffsetZ: 9.361
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 16.3863
+                  OffsetY: 8.9647
+                  OffsetZ: 28.7897
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 22.655
+                  OffsetY: 6.4642
+                  OffsetZ: 26.2233
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 23.6189
+                  OffsetY: 16.7088
+                  OffsetZ: 3.814
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 13.9965
+                  OffsetY: 15.5663
+                  OffsetZ: 14.5125
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 16.7531
+                  OffsetY: 14.0227
+                  OffsetZ: 17.1719
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.6182
+                  OffsetY: 8.4709
+                  OffsetZ: 19.7899
+            2:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 4.0499
+                  OffsetY: 16.6831
+                  OffsetZ: 21.0557
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 5.1334
+                  OffsetY: 17
+                  OffsetZ: 14.2135
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.2874
+                  OffsetY: 17
+                  OffsetZ: 7.4594
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.1221
+                  OffsetY: 16.6884
+                  OffsetZ: 9.8
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 14.9859
+                  OffsetY: 16.1115
+                  OffsetZ: 11.4818
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 20.8709
+                  OffsetY: 13.7414
+                  OffsetZ: 12.7332
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.4012
+                  OffsetY: 14.3807
+                  OffsetZ: 9.825
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 28.2097
+                  OffsetY: 16.2859
+                  OffsetZ: 5.327
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 26.8135
+                  OffsetY: 9.7333
+                  OffsetZ: 18.2958
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 24.0487
+                  OffsetY: 4.7672
+                  OffsetZ: 28.9095
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.1377
+                  OffsetY: 11.3394
+                  OffsetZ: 23.103
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.3564
+                  OffsetY: 11.8517
+                  OffsetZ: 21.1442
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.4846
+                  OffsetY: 13.7826
+                  OffsetZ: 27.0718
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 9.1733
+                  OffsetY: 16.0696
+                  OffsetZ: 18.4917
+                  RotX: 90
+        2:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_2_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+          SubVariants:
+            0:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.767
+                  OffsetY: 9.1445
+                  OffsetZ: 3.5555
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 6.0216
+                  OffsetY: 5.6984997
+                  OffsetZ: 4.6812
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.8825
+                  OffsetY: 12.6243
+                  OffsetZ: 3.9248
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 25.0931
+                  OffsetY: 14.6083
+                  OffsetZ: 11.4806
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.4697
+                  OffsetY: 9.407599
+                  OffsetZ: 19.3495
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 28.5009
+                  OffsetY: 5.9504995
+                  OffsetZ: 24.6315
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 7.0404
+                  OffsetY: 8.2114
+                  OffsetZ: 10.6364
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 7.4178
+                  OffsetY: 7.9020004
+                  OffsetZ: 8.582
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.2194
+                  OffsetY: 11.6867
+                  OffsetZ: 13.0055
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 7.7828
+                  OffsetY: 13.7617
+                  OffsetZ: 19.759
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 2.0773
+                  OffsetY: 12.7163
+                  OffsetZ: 20.8105
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 10.6
+                  OffsetY: 14.6543
+                  OffsetZ: 27.1749
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.6367
+                  OffsetY: 12.5127
+                  OffsetZ: 22.7605
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 11.7308
+                  OffsetY: 14.1733
+                  OffsetZ: 25.9375
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 23.8621
+                  OffsetY: 10.7652
+                  OffsetZ: 18.7294
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 22.2973
+                  OffsetY: 10.4794
+                  OffsetZ: 20.038
+            1:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 3.2857
+                  OffsetY: 6.7404995
+                  OffsetZ: 10.637
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 9.0161
+                  OffsetY: 13.2365
+                  OffsetZ: 19.2877
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.5335
+                  OffsetY: 9.9519
+                  OffsetZ: 28.8818
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.5735
+                  OffsetY: 8.7371
+                  OffsetZ: 28.9601
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 23.1321
+                  OffsetY: 7.2317
+                  OffsetZ: 25.7858
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 26.9382
+                  OffsetY: 9.026299
+                  OffsetZ: 20.3832
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 30.811
+                  OffsetY: 13.869599
+                  OffsetZ: 9.3771
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 28.5929
+                  OffsetY: 17.3519
+                  OffsetZ: 3.0728
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.7401
+                  OffsetY: 14.8376
+                  OffsetZ: 10.9257
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.8168
+                  OffsetY: 12.2167
+                  OffsetZ: 3.3284
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 6.1706
+                  OffsetY: 5.066
+                  OffsetZ: 3.7819
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.3915
+                  OffsetY: 10.2585
+                  OffsetZ: 6.7313
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 14.1749
+                  OffsetY: 12.0422
+                  OffsetZ: 14.9832
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 16.4327
+                  OffsetY: 12.698299
+                  OffsetZ: 17.2957
+                  RotX: -180
+            2:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 4.9877
+                  OffsetY: 9.0651
+                  OffsetZ: 14.2219
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.1847
+                  OffsetY: 8.0031
+                  OffsetZ: 7.4634
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 6.7073
+                  OffsetY: 16.0533
+                  OffsetZ: 27.5735
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 3.7311
+                  OffsetY: 15.6671
+                  OffsetZ: 24.0218
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 28.2415
+                  OffsetY: 16.569
+                  OffsetZ: 5.8392
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.5289
+                  OffsetY: 15.1678
+                  OffsetZ: 10.2113
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 20.834
+                  OffsetY: 13.7241
+                  OffsetZ: 12.7979
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.2803
+                  OffsetY: 12.1355
+                  OffsetZ: 11.1013
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.2067
+                  OffsetY: 11.2027
+                  OffsetZ: 9.6665
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.4417
+                  OffsetY: 11.2671995
+                  OffsetZ: 22.9631
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.383
+                  OffsetY: 11.6353
+                  OffsetZ: 20.9642
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 9.0218
+                  OffsetY: 13.0589
+                  OffsetZ: 18.8383
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.2831
+                  OffsetY: 10.522699
+                  OffsetZ: 17.5354
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 24.4665
+                  OffsetY: 5.4341
+                  OffsetZ: 28.3862
+                  RotX: -180
+        5:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_5_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+          SubVariants:
+            0:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 5.0835
+                  OffsetY: 17.3022
+                  OffsetZ: 4.0768
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.7832
+                  OffsetY: 17.476
+                  OffsetZ: 3.0922
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 19.523
+                  OffsetY: 17.5522
+                  OffsetZ: 3.8401
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 1.8477
+                  OffsetY: 7.0705996
+                  OffsetZ: 20.6458
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 6.8614
+                  OffsetY: 14.142799
+                  OffsetZ: 10.5951
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 7.1882
+                  OffsetY: 15.375199
+                  OffsetZ: 7.9692
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 11.9224
+                  OffsetY: 4.307
+                  OffsetZ: 25.8444
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 11.0624
+                  OffsetY: 3.233
+                  OffsetZ: 27.1731
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 16.3079
+                  OffsetY: 7.0379
+                  OffsetZ: 22.6757
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 28.7238
+                  OffsetY: 4.5815
+                  OffsetZ: 24.6975
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 22.3358
+                  OffsetY: 7.3851995
+                  OffsetZ: 20.4104
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.6798
+                  OffsetY: 7.5344
+                  OffsetZ: 19.6353
+                  RotX: 90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 23.9982
+                  OffsetY: 8.1709
+                  OffsetZ: 18.8528
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 7.7181
+                  OffsetY: 8.6293
+                  OffsetZ: 19.6508
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.3188
+                  OffsetY: 13.2717
+                  OffsetZ: 12.5107
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 25.0526
+                  OffsetY: 13.065499
+                  OffsetZ: 11.1066
+                  RotX: 90
+            1:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 28.9138
+                  OffsetY: 17.514101
+                  OffsetZ: 2.4226
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 30.9959
+                  OffsetY: 13.4523
+                  OffsetZ: 10.0328
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.7892
+                  OffsetY: 13.319699
+                  OffsetZ: 10.8986
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.9595
+                  OffsetY: 17.592402
+                  OffsetZ: 3.2316
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.3906
+                  OffsetY: 16.366001
+                  OffsetZ: 6.3688
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 2.8774
+                  OffsetY: 13.6921
+                  OffsetZ: 10.5045
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 6.2037
+                  OffsetY: 17.3146
+                  OffsetZ: 3.3434
+                  RotX: -180
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 17.0078
+                  OffsetY: 9.9553995
+                  OffsetZ: 17.0288
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 14.0477
+                  OffsetY: 11.757199
+                  OffsetZ: 14.707
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.844
+                  OffsetY: 8.9016
+                  OffsetZ: 19.491
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.8486
+                  OffsetY: 7.3876
+                  OffsetZ: 19.8871
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 23.2094
+                  OffsetY: 4.5724
+                  OffsetZ: 25.8589
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.5481
+                  OffsetY: 2.7861
+                  OffsetZ: 28.8315
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.3849
+                  OffsetY: 2.87
+                  OffsetZ: 28.5463
+                  RotX: -90
+            2:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 3.8424
+                  OffsetY: 5.5572996
+                  OffsetZ: 23.7095
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 6.8625
+                  OffsetY: 3.2482
+                  OffsetZ: 27.0569
+                  RotX: 90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 24.8252
+                  OffsetY: 2.6794
+                  OffsetZ: 28.3854
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.7243
+                  OffsetY: 8.5789
+                  OffsetZ: 17.8447
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 28.3159
+                  OffsetY: 16.3464
+                  OffsetZ: 5.485
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.3588
+                  OffsetY: 13.8456
+                  OffsetZ: 10.1832
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 20.7352
+                  OffsetY: 13.4236
+                  OffsetZ: 12.635
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.2247
+                  OffsetY: 14.2324
+                  OffsetZ: 11.1637
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.2079
+                  OffsetY: 14.7455
+                  OffsetZ: 9.5673
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.6437
+                  OffsetY: 15.5959
+                  OffsetZ: 7.3784
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 5.0963
+                  OffsetY: 12.2796
+                  OffsetZ: 14.1476
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 9.4272
+                  OffsetY: 9.9569
+                  OffsetZ: 18.297
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.3632
+                  OffsetY: 7.531
+                  OffsetZ: 21.0999
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.832
+                  OffsetY: 6.7622995
+                  OffsetZ: 22.9618
+                  RotX: 90
+        9:
+          Item:
+            Name: Other/StadiumDirtHill/Ground_9_0.Item.Gbx
+            OffsetY: -8
+            Modernized: true
+          SubVariants:
+            0:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 1.6823
+                  OffsetY: 1.655
+                  OffsetZ: 20.6267
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 7.9127
+                  OffsetY: 1.8198
+                  OffsetZ: 19.5844
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 10.2733
+                  OffsetY: 1.655
+                  OffsetZ: 27.1574
+                  RotX: 90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 11.9932
+                  OffsetY: 1.655
+                  OffsetZ: 25.9271
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 7.5045
+                  OffsetY: 4.0074
+                  OffsetZ: 8.285
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 6.6934
+                  OffsetY: 2.7898
+                  OffsetZ: 10.5983
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 4.9155
+                  OffsetY: 2.9131
+                  OffsetZ: 4.4252
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 16.2114
+                  OffsetY: 3.4199
+                  OffsetZ: 23.0052
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.9645
+                  OffsetY: 4.1031
+                  OffsetZ: 25.1184
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.3632
+                  OffsetY: 7.4257
+                  OffsetZ: 19.2332
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 22.3739
+                  OffsetY: 6.0283003
+                  OffsetZ: 20.2428
+                  RotX: 90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 23.8704
+                  OffsetY: 7.1966
+                  OffsetZ: 18.4738
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 25.1285
+                  OffsetY: 12.6367
+                  OffsetZ: 11.684
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 19.3307
+                  OffsetY: 12.9938
+                  OffsetZ: 3.4379
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.8694
+                  OffsetY: 8.2546
+                  OffsetZ: 3.601
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.3949
+                  OffsetY: 6.8170004
+                  OffsetZ: 12.3983
+                  RotX: 90
+            1:
+              Items:
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 3.3193
+                  OffsetY: 1.6776
+                  OffsetZ: 11.1927
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.8441
+                  OffsetY: 2.148
+                  OffsetZ: 19.2162
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.2557
+                  OffsetY: 1.655
+                  OffsetZ: 28.6114
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.8207
+                  OffsetY: 1.655
+                  OffsetZ: 29.2393
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 23.2034
+                  OffsetY: 2.9549
+                  OffsetZ: 25.9576
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.7654
+                  OffsetY: 6.8451996
+                  OffsetZ: 20.3314
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 12.3199
+                  OffsetY: 7.6594
+                  OffsetZ: 6.3346
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.8839
+                  OffsetY: 12.6282
+                  OffsetZ: 3.1406
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 29.1226
+                  OffsetY: 17.3792
+                  OffsetZ: 2.9252
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 31.1722
+                  OffsetY: 13.399799
+                  OffsetZ: 10.0228
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.5559
+                  OffsetY: 13.2332
+                  OffsetZ: 10.9609
+                  RotX: 90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 14.8953
+                  OffsetY: 6.7418003
+                  OffsetZ: 14.8976
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 5.819
+                  OffsetY: 3.7167
+                  OffsetZ: 2.8713
+                  RotX: -90
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 23.9575
+                  OffsetY: 1.7163
+                  OffsetZ: 29.4694
+                  RotX: -180
+            2:
+              Items:
+                - Name: PalmTreeDirtSmall
+                  OffsetX: 9.9922
+                  OffsetY: 2.5415
+                  OffsetZ: 18.717
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 7.2536
+                  OffsetY: 1.655
+                  OffsetZ: 27.5594
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 4.266
+                  OffsetY: 1.655
+                  OffsetZ: 24.1846
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 17.6024
+                  OffsetY: 3.6929
+                  OffsetZ: 23.1024
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 18.2246
+                  OffsetY: 5.3281
+                  OffsetZ: 20.9546
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.0129
+                  OffsetY: 1.9999
+                  OffsetZ: 28.6403
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.0882
+                  OffsetY: 7.8498
+                  OffsetZ: 18.394
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 4.9547
+                  OffsetY: 1.8105999
+                  OffsetZ: 14.1992
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 8.4409
+                  OffsetY: 5.0207996
+                  OffsetZ: 6.5966
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 13.2263
+                  OffsetY: 7.8159
+                  OffsetZ: 9.7269
+                  RotX: 90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 15.043
+                  OffsetY: 8.4616
+                  OffsetZ: 11.1245
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 20.467
+                  OffsetY: 9.6327
+                  OffsetZ: 12.8422
+                  RotX: -90
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 24.6173
+                  OffsetY: 13.594999
+                  OffsetZ: 10.4537
+                  RotX: -180
+                - Name: PalmTreeDirtMedium
+                  OffsetX: 27.9306
+                  OffsetY: 16.878601
+                  OffsetZ: 5.1433
+                  RotX: 90
+  StadiumPlatformWall2RoadPaintLeft:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformWall2
+  StadiumPlatformWall4RoadPaintUp:
+    NoItem: true
+    Conversion:
+      Name: StadiumPlatformWall4
+  StadiumCircuitRoadPaint:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitBase
+  StadiumCircuitRoadPaintSlopeDown:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitSlopeStraight
+  StadiumCircuitRoadPaintSlopeLeft:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitSlopeStraight
+  StadiumCircuitRoadPaintSlopeRight:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitSlopeStraight
+  StadiumCircuitRoadPaintSlopeUp:
+    NoItem: true
+    Conversion:
+      Name: StadiumCircuitSlopeStraight
+  StadiumRoadMainRoadPaintSlopeDown:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumRoadMainRoadPaintSlopeUp:
+    NoItem: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechSlopeStraight
+  StadiumRoadDirtHillTiltCheckpointLeft:
+    Modernized: true  
+  StadiumRoadDirtHillTiltCheckpointRight:
+    Modernized: true  
+  StadiumFabricPillarScreenSmall:
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumFabricRamp:
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumGrassBirds:
+    NoItem: true
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumRoadRoadPaint:
+    NoItem: true
+    Modifiable: true
+    PlaceDefaultZone: true
+    Block:
+      Name: RoadTechStraight
+  StadiumRoadDirtHighFenceStraightBirds:
+    NoItem: true
+    NoTerrainModifier: true
+    Conversion:
+      Name: StadiumRoadDirtHighFenceStraight
+      Modernized: true
