@@ -457,7 +457,7 @@
             .Include(x => x.UploadedBy)
             .Include(x => x.BlockItem)
                 .ThenInclude(x => x.Block)
-            .Where(x => x.UploadedBy != null && !x.UploadedBy.IsAdmin)
+            .Where(x => x.UploadedBy != null && !x.UploadedBy.IsAdmin && x.UploadedAt.Year <= 2024)
             .Select(x => new { x.UploadedBy, x.BlockItem, x.Value })
             .GroupBy(x => x.BlockItem)
             .ToListAsync();
