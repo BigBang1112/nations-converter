@@ -8,7 +8,106 @@
     <div class="readable-width white-mention">
         <div class="readable-width-container">
             <h2>About this project</h2>
-            <p>One day, we will write something here...</p>
+            <p>Nations Converter is a project dedicated to people who would like to see their older Trackmania maps in the new game without having to worry about block-per-block copying.</p>
+            <p>It was made using the powers of Mesh Modeller tool and Crystal.Gbx files with occasional mesh rips. Since 2024, we have abandoned mesh ripping, and are using direct mesh data from Solid.Gbx files to do the job, but we still work with the Mesh Modeller and the old Crystal techniques.</p>
+            <h2>Media</h2>
+            <p>You can use these images in any of your own media or in your Nations Converter project forks. <a href="NC2Media.zip" download="NC2Media.zip">Download</a></p>
+            <h2>History</h2>
+            <p><i>(written by BigBang1112)</i></p>
+            <p>Nations Converter, until the day I'm writing this About section, has a fairly unknown but rich history, which I'm happy to share with you.</p>
+            <h3>Part 1: The idea and plans</h3>
+            <p>
+                The project idea first started as a ManiaScript map editor plugin called NewTMConverter.Script.txt around 3 days after I got access to the Trackmania 2020 Alpha (around April 3, 2020).
+                Concept of map converters from different TM games was already introduced by the Unbitn team with the <a href="https://unbitn.com/converter/">1toOneConverter</a>, converting TMUF tracks to the TMOne title packs in TM2.
+            </p>
+            <p>
+                That inspired me to do something similar between previous Stadium TM games and the new Trackmania, however, (at the time) I gave up understanding the Gbx format, as the Gbx wiki was too difficult for newcomers, so I tried doing it with a pair of ManiaScript map editor plugins, one for TM2 Stadium, and the other for TM2020.
+            </p>
+            <p>
+                The plugin would copy all blocks from a TM2 Stadium map to a clipboard as JSON, and in TM2020, you'd paste it, and it'd place the blocks accoding to block mappings.
+                However, I quickly realized the limitations of ManiaScript in map editors (block differences, lack of clip data), so I decided to leave the project during the Spring of 2020.
+                The "plugin pair" idea was scapped so early that the TM2020 map editor plugin script ended up having no code written.
+            </p>
+            <p>
+                As TM2020 was heading towards the release date in July 2020, I realized how screwed up the ManiaScript API has become during the port of the Stadium environment to a ShootMania-based "sub-engine".
+                I used to make a couple of gamemodes for TM2 and I had a fair overview of how gamemode logic works, but Nadeo decided to mix features of both genres into a complete hodgepodge, half of the things not even working, which demotivated me from using ManiaScript again.
+            </p>
+            <p>
+                It was still June 2020, and I remembered the idea of converting Stadium maps to TM2020 though, so I started looking into the Gbx format again.
+                I also talked Arkady a lot about my conversion plans in relation with his TM2 Island title pack (separate from the Unbitn work). He wished to have a converter for his title pack as well.
+                So, on June 22, 2020, I started the GBX.NET project, as a shared base for Gbx modification that could be used for both Nations Converter and <a href="https://github.com/bigbang1112-cz/island-converter/releases">Island Converter</a>.
+                This time, my journey with Gbx files was successful, and I had a wonderful Summer time, one of the best ones in my life.
+            </p>
+            <p>
+                I chose the word Nations instead of Stadium to better describe the origin of the conversions + to better incorporate unique naming for the converter.
+                There's also a small personal secret involved in this naming.
+            </p>
+            <h3>Part 2: The realization</h3>
+            <p>
+                At the end of August 2020, I finally announced both Nations Converter and Island Converter, with the GBX.NET core behind all of it.
+                I had basically no experience with Mesh Modeller, so I used official blocks and items and tried doing my best.
+                In October 2020, I finally realized most of the project won't work with just the official stuff, so I asked for item modelling help in exchange of early access.
+                Rxelux, iNDEX, and Zai got to me and made most of the looks you see today. I also got a hang of Mesh Modeller finally, and was able to contribute with modelling by myself.
+            </p>
+            <p>
+                The converter released on December 11, 2020 (my first project release on the 11. 12. date) as version 1, just a few weeks after we started doing all the modelling work, together with the TMNF campaign.
+                The TM2 campaign was added at the end of December, as a showcase of light features and that the TM2 conversion is now working as expected.
+                The converter was then updated until the end of 2021, as the code got messy in combination with other project interests.
+            </p>
+            <p>
+                Between this period, I also announced Nations Converter 2 in <a href="https://www.youtube.com/watch?v=inT8Bvf7P28">a teaser video back in June 1, 2021</a>, as a way to bring the converter to the browser environment, but this idea got largely delayed due to learning curve.
+            </p>
+            <h3>Part 3: The breakage</h3>
+            <p>
+                In December 2022, Nadeo pushed out an update to the game that made majority of the items disappear after the map resave. A second resave would then remove all of the items.
+                The bug was not reportable, as I was only able to reproduce it with external tools, and these kind of bugs are not considered by Nadeo.
+                It appeared to be a wider issue that stayed throughout the holidays, as some of the manually-made complex maps also had various item dissapear issues.
+            </p>
+            <p>
+                In January 2023, Nadeo released a patch that fixed the issue for manually-made maps, but Nations Converter maps started to crash the game.
+                It was never discovered why exactly did the crash happen and what was the cause of it. Community members like jake_tm tried to figure out why, but we never got to the bottom of it.
+                Empty maps appeared fine, but when adding any road blocks or just a bit of anything, it was over.
+            </p>
+            <p>
+                For a long time, it was unknown if this was an intentional break or just a guard clause that wasn't considered with the old GBX.NET.
+            </p>
+            <p>
+                Later it was found out by Xetrov that the crash can be somewhat avoided via his OpenPlanet plugin, but this was not considered as a good solution to recommend to people.
+            </p>
+            <h3>Part 4: The recovery</h3>
+            <p>
+                As the converter was still a topic to many, I started to shape plans for Nations Converter 2 again back in mid 2023. Any form or plan of fixing the old v1 converter was abandoned.
+                When Nadeo announced the price change for TM2020 - removing the Standard access and making the free version more of a demo version - I considered abandoning Nations Converter entirely, as the game appeared to get more expensive with no additional value.
+            </p>
+            <p>
+                What happened in November 2023 though was not something I'd ever expect to happen thoughout NC's lifetime - the previous cars were ported to TM2020, but without the environments.
+                This inspired me with ideas how to import the old environments to TM2020, and with that, I started to shape GBX.NET 2 that would be used with the Nations Converter 2.
+                Yeah, I got back to the Summer 2020 days with developing new GBX.NET and new Nations Converter, except it was Winter and I was recovering from mental health issues, so it was a bit of a push thoughout other responsibilites, instead of the vibe from back then, which gave me a sign that I cannot do this forever.
+                For the sake of marketing, I decided to keep the first word as Nations, also to be inlined with the Nations Converter 2 announcement from 2021.
+            </p>
+            <p>
+                After GBX.NET 2 was finished, the work on Nations Converter 2 began in May 2024, first porting as many blocks as possible from the TMUF to TM2020 via the Solid.Gbx data.
+                Community members harry.alexm, Paddy Productions, and nod got to me for help with modelling, block tweaking, and such.
+                The auto-generation of blocks was tweaked until the end of August, and the modelling work started on September 1. All 3 original environments got ported in just 3 months.
+                The Stadium environment was ported and upgraded from the old converter throughout October to December 2024.
+            </p>
+            <p>
+                The v2 converter released as Alpha on December 20, 2024, and we were happy to see it caught the attention of many players again. The project release was also streamed by Spam and GranaDy.
+                5 new TMUF campaigns were added to the Nations Converter club. After the release, many many blocks were improved, fixed, and cleaned up within just 2 weeks from the release.
+                In early January 2025, the TMT White campaign was released to celebrate the possibility to convert TM Turbo maps to TM2020.
+            </p>
+            <p>
+                In March 2025, the Nations Converter Discord server reached 100 members, so as a celebration, I shared a poll of a new campaign to officially support.
+                The StarTrack campaign won, as as it was pre-made by Sparkster already, we were able to publish it immediately.
+            </p>
+            <p>
+                The StarTrack campaign <a href="https://x.com/Trackmania/status/1901587363450495484">got advertised by Nadeo on X</a>, and the club got an artificial boost in the club list, which proved that Nadeo did not want to intentionally break the project.
+                So, we are happy to continue on.
+            </p>
+            <h3>Part 5: The environmentalism</h3>
+            <p>
+                Porting environments This part is written as the things go...
+            </p>
         </div>
     </div>
 </div>
