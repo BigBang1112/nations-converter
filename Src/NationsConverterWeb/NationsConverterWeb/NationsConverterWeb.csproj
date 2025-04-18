@@ -7,32 +7,38 @@
         <UserSecretsId>277b8743-3a2f-4f8b-ba13-7054709c4267</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <DockerfileContext>..\..\..</DockerfileContext>
+        <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\NationsConverterShared\NationsConverterShared.csproj" />
         <ProjectReference Include="..\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj" />
-        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="9.0.0" />
+        <PackageReference Include="AspNet.Security.OAuth.Discord" Version="9.2.0" />
         <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.1" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.10" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.0.0-preview.9.24556.5" />
-        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-        <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.0.0-beta.12" />
-        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2" />
-        <PackageReference Include="GBX.NET" Version="2.1.0" />
-        <PackageReference Include="OpenTelemetry.Api.ProviderBuilderExtensions" Version="1.10.0" />
-        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.10.0" />
-        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.10.0" />
-        <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.10.0" />
-        <PackageReference Include="OpenTelemetry.Instrumentation.Process" Version="0.5.0-beta.7" />
-        <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.10.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="9.4.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.2" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.11.1" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.11.0-beta.2" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
+        <PackageReference Include="GBX.NET" Version="2.1.1" />
+        <PackageReference Include="OpenTelemetry.Api.ProviderBuilderExtensions" Version="1.11.2" />
+        <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.11.2" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.11.2" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.11.1" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Process" Version="1.11.0-beta.2" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.11.1" />
+        <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="9.0.1" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+        <PackageReference Include="Serilog.Sinks.OpenTelemetry" Version="4.1.1" />
     </ItemGroup>
 
     <ItemGroup>

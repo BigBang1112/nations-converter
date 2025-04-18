@@ -1,7 +1,6 @@
 using AspNet.Security.OAuth.Discord;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -16,6 +15,8 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Trace;
 using Microsoft.Extensions.Caching.Hybrid;
 using NationsConverterWeb.BulkFixers;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
 
@@ -73,14 +74,35 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen, applyThemeToRedirectedOutput: true)
+    .WriteTo.OpenTelemetry(options =>
+    {
+        options.Endpoint = builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"];
+        options.Protocol = builder.Environment.IsDevelopment()
+            ? Serilog.Sinks.OpenTelemetry.OtlpProtocol.HttpProtobuf
+            : Serilog.Sinks.OpenTelemetry.OtlpProtocol.Grpc;
+    })
+    .CreateLogger();
+
+builder.Services.AddSerilog();
+
 builder.Services.AddOpenTelemetry()
     .WithMetrics(options =>
     {
         options
+            .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation()
             .AddRuntimeInstrumentation()
             .AddProcessInstrumentation()
-            .AddOtlpExporter();
+            .AddOtlpExporter(x =>
+            {
+                x.Protocol = builder.Environment.IsDevelopment()
+                    ? OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf
+                    : OpenTelemetry.Exporter.OtlpExportProtocol.Grpc;
+            });
 
         options.AddMeter("System.Net.Http");
     })
@@ -92,14 +114,19 @@ builder.Services.AddOpenTelemetry()
         }
 
         options
+            .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation()
-            .AddOtlpExporter();
+            .AddEntityFrameworkCoreInstrumentation()
+            .AddOtlpExporter(x =>
+            {
+                x.Protocol = builder.Environment.IsDevelopment()
+                    ? OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf
+                    : OpenTelemetry.Exporter.OtlpExportProtocol.Grpc;
+            });
     });
 builder.Services.AddMetrics();
 
-#pragma warning disable EXTEXP0018
 builder.Services.AddHybridCache();
-#pragma warning restore EXTEXP0018
 
 var app = builder.Build();
 
