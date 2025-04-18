@@ -84,6 +84,10 @@ Log.Logger = new LoggerConfiguration()
         options.Protocol = builder.Environment.IsDevelopment()
             ? Serilog.Sinks.OpenTelemetry.OtlpProtocol.HttpProtobuf
             : Serilog.Sinks.OpenTelemetry.OtlpProtocol.Grpc;
+        options.Headers = builder.Configuration["OTEL_EXPORTER_OTLP_HEADERS"]?
+            .Split(',', StringSplitOptions.RemoveEmptyEntries)
+            .Select(x => x.Split('=', 2, StringSplitOptions.RemoveEmptyEntries))
+            .ToDictionary(x => x[0], x => x[1]) ?? [];
     })
     .CreateLogger();
 
