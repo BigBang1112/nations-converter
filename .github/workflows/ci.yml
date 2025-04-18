@@ -26,8 +26,8 @@ jobs:
           9.0.x
           8.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore GbxTools3D.sln
     - name: Build
-      run: dotnet build -c Release --no-restore -p:ContinuousIntegrationBuild=true
+      run: dotnet build GbxTools3D.sln -c Release --no-restore -p:ContinuousIntegrationBuild=true
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test GbxTools3D.sln --no-build --verbosity normal
