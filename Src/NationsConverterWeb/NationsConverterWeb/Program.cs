@@ -17,6 +17,7 @@ using Microsoft.Extensions.Caching.Hybrid;
 using NationsConverterWeb.BulkFixers;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
+using System;
 
 GBX.NET.Gbx.LZO = new GBX.NET.LZO.MiniLZO();
 
@@ -81,9 +82,12 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.OpenTelemetry(options =>
     {
         options.Endpoint = builder.Configuration["OTEL_EXPORTER_OTLP_ENDPOINT"];
-        options.Protocol = builder.Environment.IsDevelopment()
-            ? Serilog.Sinks.OpenTelemetry.OtlpProtocol.HttpProtobuf
-            : Serilog.Sinks.OpenTelemetry.OtlpProtocol.Grpc;
+        options.Protocol = builder.Configuration["OTEL_EXPORTER_OTLP_PROTOCOL"]?.ToLowerInvariant() switch
+        {
+            "grpc" => Serilog.Sinks.OpenTelemetry.OtlpProtocol.Grpc,
+            "http/protobuf" or null or "" => Serilog.Sinks.OpenTelemetry.OtlpProtocol.HttpProtobuf,
+            _ => throw new NotSupportedException($"OTLP protocol {builder.Configuration["OTEL_EXPORTER_OTLP_PROTOCOL"]} is not supported")
+        };
         options.Headers = builder.Configuration["OTEL_EXPORTER_OTLP_HEADERS"]?
             .Split(',', StringSplitOptions.RemoveEmptyEntries)
             .Select(x => x.Split('=', 2, StringSplitOptions.RemoveEmptyEntries))
@@ -101,12 +105,7 @@ builder.Services.AddOpenTelemetry()
             .AddHttpClientInstrumentation()
             .AddRuntimeInstrumentation()
             .AddProcessInstrumentation()
-            .AddOtlpExporter(x =>
-            {
-                x.Protocol = builder.Environment.IsDevelopment()
-                    ? OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf
-                    : OpenTelemetry.Exporter.OtlpExportProtocol.Grpc;
-            });
+            .AddOtlpExporter();
 
         options.AddMeter("System.Net.Http");
     })
@@ -121,12 +120,7 @@ builder.Services.AddOpenTelemetry()
             .AddAspNetCoreInstrumentation()
             .AddHttpClientInstrumentation()
             .AddEntityFrameworkCoreInstrumentation()
-            .AddOtlpExporter(x =>
-            {
-                x.Protocol = builder.Environment.IsDevelopment()
-                    ? OpenTelemetry.Exporter.OtlpExportProtocol.HttpProtobuf
-                    : OpenTelemetry.Exporter.OtlpExportProtocol.Grpc;
-            });
+            .AddOtlpExporter();
     });
 builder.Services.AddMetrics();
 
