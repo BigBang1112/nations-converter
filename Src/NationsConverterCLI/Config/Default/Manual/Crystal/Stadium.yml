@@ -2849,3 +2849,6 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHighFenceStraight
       Modernized: true
+  StadiumPlatformBiSlope2StartSmall:
+    PlaceDefaultZone: true
+    
