@@ -72,16 +72,28 @@ internal sealed class TerrainModifierZoneExtract
     {
         Span<Int3> alignedUnits = stackalloc Int3[units.Length];
 
+        var min = new Int3(int.MaxValue, 0, int.MaxValue);
+
         for (int i = 0; i < units.Length; i++)
         {
             var unit = units[i];
             var alignedUnit = block.Direction switch
             {
-                Direction.East => (unit.X + size.Z, unit.Y, unit.Z),
-                Direction.South => (unit.X + size.X, unit.Y, unit.Z + size.Z),
-                Direction.West => (unit.X, unit.Y, unit.Z + size.X),
+                Direction.East => (-unit.Z + size.Z, unit.Y, unit.X),
+                Direction.South => (-unit.X + size.X, unit.Y, -unit.Z + size.Z),
+                Direction.West => (unit.Z, unit.Y, -unit.X + size.X),
                 _ => unit
             };
+
+            if (alignedUnit.X < min.X)
+            {
+                min = min with { X = alignedUnit.X };
+            }
+
+            if (alignedUnit.Z < min.Z)
+            {
+                min = min with { Z = alignedUnit.Z };
+            }
 
             alignedUnits[i] = alignedUnit;
         }
