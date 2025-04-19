@@ -287,7 +287,7 @@ app.MapGet("/assets/{name}", async (string name, AppDbContext db, CancellationTo
         return Results.NotFound();
     }
 
-    return Results.File(release.Data, "application/zip", $"{release.Name}.zip", lastModified: release.ReleasedAt);
+    return Results.File(release.Data, "application/zip", $"{release.Name}.nc2", lastModified: release.ReleasedAt);
 });
 
 app.UseAntiforgery();
