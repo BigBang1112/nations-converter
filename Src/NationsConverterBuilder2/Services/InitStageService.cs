@@ -658,11 +658,11 @@ internal sealed class InitStageService
 
         var airTerrainModifierUnits = node.AirBlockUnitInfos?
             .Where(x => !string.IsNullOrWhiteSpace(x.TerrainModifierId))
-            .GroupBy(x => x.TerrainModifierId!)
+            .GroupBy(GetFixedTerrainModifierId)
             .ToDictionary(x => x.Key, x => x.Select(x => x.RelativeOffset).ToArray()) ?? [];
         var groundTerrainModifierUnits = node.GroundBlockUnitInfos?
             .Where(x => !string.IsNullOrWhiteSpace(x.TerrainModifierId))
-            .GroupBy(x => x.TerrainModifierId!)
+            .GroupBy(GetFixedTerrainModifierId)
             .ToDictionary(x => x.Key, x => x.Select(x => x.RelativeOffset).ToArray()) ?? [];
 
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
@@ -853,5 +853,14 @@ internal sealed class InitStageService
         }
 
         return modifierMaterials;
+    }
+
+    private static string GetFixedTerrainModifierId(CGameCtnBlockUnitInfo x)
+    {
+        return x.TerrainModifierId switch
+        {
+            "fabric" => "Fabric", // randomly for only StadiumFabricCross3x3 in TM2? how does this work nadeo
+            _ => x.TerrainModifierId!
+        };
     }
 }
