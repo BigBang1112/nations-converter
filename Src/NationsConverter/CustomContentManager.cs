@@ -127,7 +127,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         var userDataPath = Path.Combine(runningDir, "UserData");
 
-        var zipStreams = Directory.GetFiles(userDataPath, "*.zip")
+        var zipStreams = Directory.GetFiles(userDataPath, "*.nc2")
             .Select(x => (Path.GetFileNameWithoutExtension(x), ZipFile.OpenRead(x)))
             .ToDictionary(x => x.Item1, x => x.Item2);
 
