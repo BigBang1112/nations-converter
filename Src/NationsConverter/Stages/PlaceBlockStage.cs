@@ -737,6 +737,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 continue;
             }
 
+            var modifier = terrainModifierZones.GetValueOrDefault(block.Coord with { Y = 0 });
+
             for (int i = 0; i < 4; i++)
             {
                 var dir = (Direction)i;
@@ -750,7 +752,25 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                 logger.LogInformation("Placing ground clip filler {BlockName}, {Direction} ...", block.Name, dir);
 
-                PlaceBlockConversion(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
+                if (modifier == "Fabric")
+                {
+                    var terrainItemPath = Path.Combine("Misc", "Fabric", "Clip.Item.Gbx");
+                    var newCoord = block.Coord + TotalOffset + dir switch
+                    {
+                        Direction.North => (0, 0, 0),
+                        Direction.East => (1, 0, 0),
+                        Direction.South => (1, 0, 1),
+                        Direction.West => (0, 0, 1),
+                        _ => throw new ArgumentException("Invalid block direction")
+                    };
+                    var rotRadians = -i * MathF.PI / 2;
+
+                    customContentManager.PlaceItem(terrainItemPath, newCoord * BlockSize, (rotRadians, 0, 0));
+                }
+                else
+                {
+                    PlaceBlockConversion(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
+                }
             }
         }
 
