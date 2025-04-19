@@ -16,6 +16,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
     private readonly bool includeDecorationItem;
     private readonly bool includeMapWatermark;
+    private readonly bool resizeMapBase;
     private static readonly string voidBlockName = Path.Combine("Misc", "Void");
 
     [GeneratedRegex(@"(Sunrise|Day|Sunset|Night)", RegexOptions.IgnoreCase)]
@@ -37,6 +38,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
         includeDecorationItem = config.IncludeDecoration && Environment != "Stadium";
         includeMapWatermark = config.IncludeMapWatermark;
+        resizeMapBase = includeDecorationItem || (Environment == "Stadium" && mapIn.Size.X > 45 && mapIn.Size.Z > 45);
     }
 
     public void Convert()
@@ -50,12 +52,12 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
         mood = string.Concat(mood[0].ToString().ToUpper(), mood.AsSpan(1));
 
-        var mapBase = includeDecorationItem
+        var mapBase = resizeMapBase
             ? "NoStadium48x48"
             : "48x48Screen155";
 
         var blockSize = mapIn.Collection.GetValueOrDefault().GetBlockSize();
-        if (includeDecorationItem)
+        if (resizeMapBase)
         {
             mapOut.Size = new((int)(mapIn.Size.X * (blockSize.X / 32f)), 40, (int)(mapIn.Size.Z * (blockSize.Z / 32f)));
         }
@@ -98,7 +100,7 @@ internal sealed partial class DecorationStage : EnvironmentStageBase
 
         logger.LogInformation("Placed {SizeX}x{SizeZ} void.", voidSize.X, voidSize.Z);
 
-        if (Environment == "Stadium")
+        if (!resizeMapBase)
         {
             PlaceTransitionGrass();
             PlaceTransitionVoid();
