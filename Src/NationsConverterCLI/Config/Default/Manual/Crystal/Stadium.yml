@@ -1097,11 +1097,9 @@ Blocks:
     PlaceDefaultZone: true
     Modernized: true
   StadiumPool:
-    NoTerrainModifier: true
     Modernized: true
   StadiumPool2:
     NoItem: true
-    NoTerrainModifier: true
     WaterOffsetY: 1
     Conversion:
       Name: StadiumPool
