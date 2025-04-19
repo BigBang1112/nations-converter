@@ -89,6 +89,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         }
 
         var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath.Replace("�", "")).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
+        item.BlockUnitCoord = new Byte3((byte)(pos.X / 32), (byte)(pos.Y / 8), (byte)(pos.Z / 32));
         item.LightmapQuality = lightmapQuality;
         return item;
     }

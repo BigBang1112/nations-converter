@@ -634,7 +634,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (isOfficial)
         {
-            mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
+            var item = mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
+            item.BlockUnitCoord = new Byte3((byte)(pos.X / 32), (byte)(pos.Y / 8), (byte)(pos.Z / 32));
         }
         else
         {

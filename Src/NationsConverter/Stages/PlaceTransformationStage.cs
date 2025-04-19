@@ -86,9 +86,10 @@ internal sealed class PlaceTransformationStage : BlockStageBase
 
         if (config.UseVisibleTransformationGate)
         {
-            mapOut.PlaceAnchoredObject(
+            var item = mapOut.PlaceAnchoredObject(
                 new($"GateGameplay{carEnvironment}4m", 26, "Nadeo"),
                     pos, (rotRadians, 0, 0));
+            item.BlockUnitCoord = new Byte3((byte)(pos.X / 32), (byte)(pos.Y / 8), (byte)(pos.Z / 32));
         }
         else
         {
