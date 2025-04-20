@@ -717,7 +717,6 @@ Blocks:
   StadiumRoadTiltTransition2DiagRight:
     PlaceDefaultZone: true
   StadiumPlatformLoopStart:
-    NoItem: true
     PlaceDefaultZone: true
     Block:
       Name: PlatformTechLoopStart
