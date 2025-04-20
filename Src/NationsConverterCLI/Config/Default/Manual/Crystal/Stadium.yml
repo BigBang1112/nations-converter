@@ -2846,6 +2846,9 @@ Blocks:
       Modernized: true
   StadiumPlatformBiSlope2StartSmall:
     PlaceDefaultZone: true
+  StadiumPlatformBiSlope2End:
+    Modifiable: true
+    PlaceDefaultZone: true
   StadiumFabricCornerIn:
     Modernized: true
   StadiumFabricCornerOut:
