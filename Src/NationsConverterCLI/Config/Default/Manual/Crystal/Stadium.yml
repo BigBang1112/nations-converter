@@ -717,12 +717,13 @@ Blocks:
   StadiumRoadTiltTransition2DiagRight:
     PlaceDefaultZone: true
   StadiumPlatformLoopStart:
+    ForceAirItem: true
     PlaceDefaultZone: true
     Block:
       Name: PlatformTechLoopStart
       Dir: 2
   StadiumPlatformLoopEnd:
-    NoItem: true
+    ForceAirItem: true
     PlaceDefaultZone: true
     Block:
       Name: PlatformTechLoopEnd
@@ -1099,6 +1100,7 @@ Blocks:
     Modernized: true
   StadiumPool2:
     NoItem: true
+    NoTerrainModifier: true
     WaterOffsetY: 1
     Conversion:
       Name: StadiumPool
@@ -2870,3 +2872,4 @@ Blocks:
   StadiumFabricRampCornerOut:
     Modifiable: true
     Modernized: true
+      
