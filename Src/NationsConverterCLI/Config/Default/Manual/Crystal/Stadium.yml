@@ -2828,9 +2828,6 @@ Blocks:
   StadiumFabricPillarScreenSmall:
     Modifiable: true
     PlaceDefaultZone: true
-  StadiumFabricRamp:
-    Modifiable: true
-    PlaceDefaultZone: true
   StadiumGrassBirds:
     NoItem: true
     Modifiable: true
@@ -2849,4 +2846,24 @@ Blocks:
       Modernized: true
   StadiumPlatformBiSlope2StartSmall:
     PlaceDefaultZone: true
-    
+  StadiumFabricCornerIn:
+    Modernized: true
+  StadiumFabricCornerOut:
+    Modernized: true
+  StadiumFabricPillarAir:
+    Modernized: true
+  StadiumFabricPillarCornerInAir:
+    Modernized: true
+  StadiumFabricPillarCornerOut:
+    Modernized: true
+  StadiumFabricStraight1x1:
+    Modernized: true
+  StadiumFabricRamp:
+    Modifiable: true
+    Modernized: true
+  StadiumFabricRampCornerIn:
+    Modifiable: true
+    Modernized: true
+  StadiumFabricRampCornerOut:
+    Modifiable: true
+    Modernized: true
