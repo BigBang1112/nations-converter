@@ -39,6 +39,11 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
+        if (block.IsGhost)
+        {
+            return;
+        }
+
         // If block is of zone type (ZoneHeight not null) it is automatically considered occupied
         // Block's height does not matter - tested on TMUnlimiter
         if (conversion.ZoneHeight.HasValue)
