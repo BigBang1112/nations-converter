@@ -2828,6 +2828,7 @@ Blocks:
   StadiumFabricPillarScreenSmall:
     Modifiable: true
     PlaceDefaultZone: true
+    ForceAirItem: true
   StadiumGrassBirds:
     NoItem: true
     Modifiable: true
