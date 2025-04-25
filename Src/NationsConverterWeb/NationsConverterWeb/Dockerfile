@@ -1,5 +1,5 @@
 # Debug phase
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0 AS base
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
