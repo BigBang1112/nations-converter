@@ -63,7 +63,6 @@ builder.ConfigureServices((context, services) =>
         .WithMetrics(options =>
         {
             options
-                .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
                 .AddRuntimeInstrumentation()
                 .AddProcessInstrumentation()
@@ -79,9 +78,7 @@ builder.ConfigureServices((context, services) =>
             }
 
             options
-                .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
-                .AddEntityFrameworkCoreInstrumentation()
                 .AddOtlpExporter();
         });
 });
