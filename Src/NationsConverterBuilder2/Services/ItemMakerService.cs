@@ -275,7 +275,7 @@ internal sealed class ItemMakerService
             Ident = new Ident("", 26, "akPfIM0aSzuHuaaDWptBbQ"),
             ItemType = CGameItemModel.EItemType.Ornament,
             ItemTypeE = CGameItemModel.EItemType.Ornament,
-            NadeoSkinFids = new GBX.NET.Engines.MwFoundations.CMwNod[7],
+            NadeoSkinFids = new External<GBX.NET.Engines.MwFoundations.CMwNod>[7],
             Name = name,
             Description = JsonSerializer.Serialize(itemInfo, AppJsonContext.Default.ItemInfoModel),
             DefaultPlacement = placementParams,
