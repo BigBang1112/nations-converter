@@ -10,7 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GBX.NET" Version="2.1.0" />
+        <PackageReference Include="GBX.NET" Version="2.1.2" />
         <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
     </ItemGroup>
 

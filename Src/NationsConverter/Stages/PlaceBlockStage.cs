@@ -512,7 +512,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         if (blockModel.RotX != 0 || blockModel.RotY != 0 || blockModel.RotZ != 0)
         {
             additionalBlock.IsFree = true;
-            additionalBlock.PitchYawRoll = (
+            additionalBlock.YawPitchRoll = (
                 AdditionalMath.ToRadians(blockModel.RotX), 
                 AdditionalMath.ToRadians(blockModel.RotY),
                 AdditionalMath.ToRadians(blockModel.RotZ));

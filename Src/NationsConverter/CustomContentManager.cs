@@ -113,7 +113,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         block.IsFree = true;
         block.AbsolutePositionInMap = pos;
-        block.PitchYawRoll = rot;
+        block.YawPitchRoll = rot;
 
         embeddedFilePaths.Add(("Blocks", blockPath));
 

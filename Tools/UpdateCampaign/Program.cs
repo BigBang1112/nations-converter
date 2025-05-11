@@ -22,8 +22,8 @@ foreach (var newMapPath in newMapPaths)
 
 AnsiConsole.MarkupLine($"[green]{mapUidDict.Count}[/] maps loaded");
 
-using var ns = new NadeoServices(http);
-using var nls = new NadeoLiveServices(http);
+using var ns = new NadeoServices(http, new());
+using var nls = new NadeoLiveServices(http, new());
 
 var login = AnsiConsole.Ask<string>("Enter Ubisoft Connect [green]login[/]:");
 
