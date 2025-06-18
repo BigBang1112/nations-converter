@@ -297,7 +297,7 @@ public static class CPlugSolidExtensions
             {
                 Position = new Vec3(
                     v.Position.X * location.XX + v.Position.Y * location.XY + v.Position.Z * location.XZ + location.TX,
-                    v.Position.X * location.YZ + v.Position.Y * location.YY + v.Position.Z * location.YZ + location.TY,
+                    v.Position.X * location.YX + v.Position.Y * location.YY + v.Position.Z * location.YZ + location.TY,
                     v.Position.X * location.ZX + v.Position.Y * location.ZY + v.Position.Z * location.ZZ + location.TZ
                 )
             };
@@ -313,7 +313,7 @@ public static class CPlugSolidExtensions
 
         return vertices.Select(v => new Vec3(
             v.X * location.XX + v.Y * location.XY + v.Z * location.XZ + location.TX,
-            v.X * location.YZ + v.Y * location.YY + v.Z * location.YZ + location.TY,
+            v.X * location.YX + v.Y * location.YY + v.Z * location.YZ + location.TY,
             v.X * location.ZX + v.Y * location.ZY + v.Z * location.ZZ + location.TZ
         ));
     }

@@ -501,7 +501,7 @@ public static class CPlugTreeExtensions
 
         return new Vec3(
             vertex.X * location.XX + vertex.Y * location.XY + vertex.Z * location.XZ + location.TX,
-            vertex.X * location.YZ + vertex.Y * location.YY + vertex.Z * location.YZ + location.TY,
+            vertex.X * location.YX + vertex.Y * location.YY + vertex.Z * location.YZ + location.TY,
             vertex.X * location.ZX + vertex.Y * location.ZY + vertex.Z * location.ZZ + location.TZ
         );
     }
