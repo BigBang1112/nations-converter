@@ -372,6 +372,7 @@ internal sealed class ItemMakerService
                 0x00, 0x00, 0x00, 0x00
             ]
         };
+        Array.Fill(item.NadeoSkinFids, new(null, null)); // fix for gbx.net issue
         item.CreateChunk<CGameCtnCollector.HeaderChunk2E001003>().Version = 8;
         var chunk004 = item.CreateChunk<CGameCtnCollector.HeaderChunk2E001004>();
         chunk004.U01 = 1;
