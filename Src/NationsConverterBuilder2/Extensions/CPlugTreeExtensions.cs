@@ -465,9 +465,9 @@ public static class CPlugTreeExtensions
             a.ZX * b.XY + a.ZY * b.YY + a.ZZ * b.ZY,
             a.ZX * b.XZ + a.ZY * b.YZ + a.ZZ * b.ZZ,
 
-            a.TX + b.TX,
-            a.TY + b.TY,
-            a.TZ + b.TZ
+            a.XX * b.TX + a.XY * b.TY + a.XZ * b.TZ + a.TX,
+            a.YX * b.TX + a.YY * b.TY + a.YZ * b.TZ + a.TY,
+            a.ZX * b.TX + a.ZY * b.TY + a.ZZ * b.TZ + a.TZ
         );
     }
 
