@@ -128,13 +128,16 @@ builder.Services.AddHybridCache();
 
 var app = builder.Build();
 
-using (var scope = app.Services.CreateScope())
+if (app.Environment.IsDevelopment())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-    if (dbContext.Database.IsRelational())
+    using (var scope = app.Services.CreateScope())
     {
-        dbContext.Database.Migrate();
+        var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+        if (dbContext.Database.IsRelational())
+        {
+            dbContext.Database.Migrate();
+        }
     }
 }
 
