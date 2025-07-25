@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace NationsConverterWeb.Models;
 
+[Index(nameof(Name))]
 public sealed class AssetRelease
 {
     public int Id { get; set; }
 
     [Required]
-    [StringLength(byte.MaxValue)]
+    [StringLength(64)]
     public required string Name { get; set; }
 
     [Required]

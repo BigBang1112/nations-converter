@@ -1,13 +1,15 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace NationsConverterWeb.Models;
 
+[Index(nameof(Name))]
 public sealed class Block
 {
     public int Id { get; set; }
 
     [Required]
-    [StringLength(byte.MaxValue)]
+    [StringLength(96)]
     public required string Name { get; set; }
 
     [Required]
@@ -29,6 +31,7 @@ public sealed class Block
     [StringLength(short.MaxValue)]
     public string? Description { get; set; }
 
+    [StringLength(ushort.MaxValue)]
     public string? IconWebp { get; set; }
 
     public User? AssignedTo { get; set; }
