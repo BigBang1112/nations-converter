@@ -1,0 +1,169 @@
+﻿button {
+    all: unset;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+.discord {
+    background-color: #5865F2DD !important;
+}
+
+    .discord:hover {
+        background-color: #6373EDDD !important;
+    }
+
+.kofi {
+    background-color: #FF4F19DD !important;
+    cursor: pointer;
+}
+
+    .kofi:hover {
+        background-color: #FF6433DD !important;
+    }
+
+    .kofi.open {
+        background-color: #FF8966DD !important;
+    }
+
+.reu-navbar {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    background-color: #111;
+    border-bottom: 2px solid #333;
+}
+
+    .reu-navbar .container {
+        display: flex;
+        padding: 1rem;
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        transition: width 0.2s ease, padding 0.2s ease;
+    }
+
+.reu-navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.reu-navbar-brand {
+    color: white !important;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 2rem;
+}
+
+    .reu-navbar-brand.nonav {
+        text-shadow: 2px 2px 4px #2228;
+        opacity: 0.5;
+    }
+
+nav {
+    display: flex;
+    margin-left: auto;
+    gap: 5px;
+}
+
+.nav-link {
+    color: white;
+    background-color: #3333;
+    border-bottom: 2px solid #FFF3;
+    border-radius: 4px;
+    height: 2.5rem;
+    min-width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 0.05s ease;
+    backdrop-filter: blur(5px);
+}
+
+    .nav-link:hover {
+        color: white;
+        background-color: #3338;
+    }
+
+    .nav-link.wide {
+        min-width: 8rem;
+    }
+
+    .nav-link img.icon {
+        display: none;
+    }
+
+@media (max-width: 1000px) and (min-width: 750px) {
+    .nav-item .nav-link.wide {
+        min-width: 5rem;
+    }
+
+    .nav-item .nav-link span {
+        display: none;
+    }
+
+    .nav-item .nav-link img.icon {
+        display: block;
+    }
+}
+
+.nav-item a.active, .nav-item button.active, #burger:checked ~ label {
+    background-color: #555A !important;
+}
+
+#burger {
+    display: none;
+    cursor: pointer;
+}
+
+#burger:checked ~ nav {
+    display: flex;
+}
+
+.burger {
+    margin-left: auto;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 750px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 1.5rem;
+        top: 85%;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+        .burger .nav-link.wide {
+            min-width: 5rem;
+        }
+
+        .burger .nav-link img.icon {
+            display: block;
+        }
+
+    #burger:checked ~ nav {
+        background: #111A;
+        padding: 5px;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+    }
+
+    .reu-navbar .container {
+        width: calc(100% - 3rem);
+    }
+}
+
+@media (max-height: 600px) {
+    .reu-navbar .container {
+        padding: 0.7rem;
+    }
+}

@@ -1,9 +1,9 @@
 ﻿@page "/about"
 @attribute [AllowAnonymous]
+@inject IJSRuntime JS
 
 <PageTitle>About - Nations Converter 2</PageTitle>
 
-<NavMenu Released="true" />
 <div class="downloads">
     <div class="readable-width white-mention">
         <div class="readable-width-container">
@@ -111,3 +111,10 @@
         </div>
     </div>
 </div>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
