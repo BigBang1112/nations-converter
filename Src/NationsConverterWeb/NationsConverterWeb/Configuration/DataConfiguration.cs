@@ -15,6 +15,11 @@ public static class DataConfiguration
 
     public static void MigrateDatabase(this WebApplication app)
     {
+        if (!app.Environment.IsDevelopment())
+        {
+            return;
+        }
+
         using var scope = app.Services.CreateScope();
 
         var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
