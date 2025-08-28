@@ -1082,7 +1082,6 @@ Blocks:
     NoItem: true
   StadiumRoadTiltClipRight:
     NoItem: true
-    PlaceDefaultZone: true
   StadiumLoopLeft:
     PlaceDefaultZone: true
     ForceAirItem: true  
