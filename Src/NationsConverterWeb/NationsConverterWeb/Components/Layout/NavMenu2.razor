@@ -9,7 +9,7 @@
                 <img src="icons/ui/menu.svg" alt="Menu" width="32" height="32" />
             </label>
 
-        <nav class="@(showBurger ? "show" : "")">
+        <nav>
             <div class="nav-item" title="Home">
                 <NavLink class="nav-link wide" href="" Match="NavLinkMatch.All">
                     <img src="icons/ui/home.svg" alt="Home" class="icon" width="32" height="32" />
@@ -32,9 +32,9 @@
             </div>
 
             <div class="nav-item" title="GitHub">
-                <NavLink class="nav-link" href="https://github.com/BigBang1112/nations-converter">
+                <a class="nav-link" href="https://github.com/BigBang1112/nations-converter">
                     <img src="icons/github-mark-white.svg" alt="GitHub" width="28" height="28" />
-                </NavLink>
+                </a>
             </div>
 
             <div class="nav-item" title="Join the Discord server">
@@ -45,7 +45,3 @@
         </nav>
     </div>
 </div>
-
-@code {
-    private bool showBurger = false;
-}
