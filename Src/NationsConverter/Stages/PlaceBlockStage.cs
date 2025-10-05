@@ -366,6 +366,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 // in TMF, on map reload, non 0x0x0 fabric is consistently not applied
                 // so fabric is not yet quite exact here
                 // So far, this system is needed ONLY for Stadium
+                // 2025-06-30 -- one solution to this problem is to avoid getting modified by itself (the block that does the modification). this helps it a lot but is still not perfect
+                //            -- it should be checked against real block units and not just 0x0x0!!
                 var modifier = default(string);
                 if (Environment == "Stadium")
                 {
