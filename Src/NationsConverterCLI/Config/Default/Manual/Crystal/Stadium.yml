@@ -345,8 +345,8 @@ Blocks:
     Block:
       Name: RoadTechStart
   StadiumRoadMainFinishLine:
-    NoItem: true
     PlaceDefaultZone: true
+    Modernized: true
     Block:
       Name: RoadTechFinish
   StadiumRoadMainStartFinishLine:
