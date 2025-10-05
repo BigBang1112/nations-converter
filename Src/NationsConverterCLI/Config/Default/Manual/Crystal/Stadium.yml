@@ -347,6 +347,8 @@ Blocks:
   StadiumRoadMainFinishLine:
     PlaceDefaultZone: true
     Modernized: true
+    Air:
+      NoItem: true
     Block:
       Name: RoadTechFinish
   StadiumRoadMainStartFinishLine:
@@ -722,6 +724,7 @@ Blocks:
     Block:
       Name: PlatformTechLoopStart
       Dir: 2
+      Bit21: false
   StadiumPlatformLoopEnd:
     ForceAirItem: true
     PlaceDefaultZone: true
@@ -1046,30 +1049,36 @@ Blocks:
       Dir: 3
   StadiumPlatformGTCurve2Wall1:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve2
   StadiumPlatformGTCurve2Wall2:
     NoItem: true
+    KeepZone: true
     Blocks:
     - Name: PlatformTechWallCurve2
     - Name: PlatformTechWallCurve2
       OffsetY: 1
   StadiumPlatformGTCurve2Wall4:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve2x4
   StadiumPlatformGTCurve3Wall1:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve3
   StadiumPlatformGTCurve3Wall2:
     NoItem: true
+    KeepZone: true
     Blocks:
     - Name: PlatformTechWallCurve3
     - Name: PlatformTechWallCurve3
       OffsetY: 1
   StadiumPlatformGTCurve3Wall4:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve3x4
   StadiumGrassCheckpoint:

@@ -31,6 +31,8 @@ public sealed class ManualConversionModel : ManualConversionModifierModel
     /// </summary>
     public bool Modernized { get; set; }
 
+    public bool KeepZone { get; set; }
+
     public T GetProperty<T>(
         Func<ManualConversionModel, ManualConversionModifierModel?> modifierFunc,
         Func<ManualConversionModifierModel, T?> propertyFunc,
