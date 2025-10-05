@@ -9,8 +9,8 @@
 
     <ItemGroup>
         <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
-        <PackageReference Include="ManiaAPI.NadeoAPI.Extensions.Gbx" Version="2.2.0" />
-        <PackageReference Include="Spectre.Console" Version="0.50.0" />
+        <PackageReference Include="ManiaAPI.NadeoAPI.Extensions.Gbx" Version="2.4.0" />
+        <PackageReference Include="Spectre.Console" Version="0.51.1" />
     </ItemGroup>
 
 </Project>
