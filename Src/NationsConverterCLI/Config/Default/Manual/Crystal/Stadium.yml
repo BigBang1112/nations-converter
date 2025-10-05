@@ -2838,6 +2838,7 @@ Blocks:
     Modifiable: true
     PlaceDefaultZone: true
     ForceAirItem: true
+    Modernized: true
   StadiumGrassBirds:
     NoItem: true
     Modifiable: true
@@ -2880,4 +2881,14 @@ Blocks:
   StadiumFabricRampCornerOut:
     Modifiable: true
     Modernized: true
-      
+  StadiumFabricCross1x1:
+    Modernized: true
+  StadiumFabricCross3x3:
+    Modernized: true
+  StadiumFabricCross3x3Screen:
+    Modernized: true
+  StadiumFabricPillarAirScreen:
+    Modifiable: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
