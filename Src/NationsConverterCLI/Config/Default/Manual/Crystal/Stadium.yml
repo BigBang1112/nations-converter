@@ -388,7 +388,7 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurbo
+      Name: RoadTechSpecialTurboRoulette
   StadiumRoadMainBumper: ~
   StadiumRoadMainBumper2: ~
   StadiumRoadMainFW:
@@ -505,12 +505,12 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboSlopeUp
+      Name: RoadTechSpecialTurboRouletteSlopeDown
   StadiumRoadMainTurboRouletteUp:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboSlopeDown
+      Name: RoadTechSpecialTurboRouletteSlopeUp
   StadiumRoadMainFWSlope:
     NoItem: true
     PlaceDefaultZone: true
@@ -612,12 +612,12 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboTiltRight
+      Name: RoadTechSpecialTurboRouletteTiltRight
   StadiumRoadMainTurboRouletteRight:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboTiltLeft
+      Name: RoadTechSpecialTurboRouletteTiltLeft
   StadiumRoadMainFWTilt:
     NoItem: true
     PlaceDefaultZone: true
