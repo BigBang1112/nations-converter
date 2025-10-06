@@ -2872,6 +2872,8 @@ Blocks:
     Modernized: true
   StadiumFabricStraight1x1:
     Modernized: true
+  StadiumFabricStraight1x1Air:
+    Modernized: true
   StadiumFabricRamp:
     Modifiable: true
     Modernized: true
