@@ -638,11 +638,11 @@ internal sealed class InitStageService
             or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.GetValueOrDefault().TX, node.SpawnLocGround.GetValueOrDefault().TY, node.SpawnLocGround.GetValueOrDefault().TZ) : null;
 
         var airWaterUnits = (node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels)?
-            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Surface ?? ""))
             .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
             .Distinct().ToArray() ?? [];
         var groundWaterUnits = (node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels)?
-            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Surface ?? ""))
             .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
             .Distinct().ToArray() ?? [];
 

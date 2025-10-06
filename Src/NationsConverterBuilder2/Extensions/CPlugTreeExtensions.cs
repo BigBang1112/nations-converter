@@ -349,7 +349,7 @@ public static class CPlugTreeExtensions
                         continue;
                     }
 
-                    if (treeLight.PlugLight.GxLightModel is not GxLight light)
+                    if (treeLight.PlugLight.Light is not GxLight light)
                     {
                         logger?.LogWarning("Light instance has no gx light");
                         continue;
