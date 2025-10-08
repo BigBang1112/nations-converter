@@ -221,7 +221,18 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         using var ms = new MemoryStream();
         sourceItemGbxStream.CopyTo(ms);
         ms.Position = 0;
-        var itemGbx = Gbx.Parse<CGameItemModel>(ms);
+
+        Gbx<CGameItemModel> itemGbx;
+
+        try
+        { 
+            itemGbx = Gbx.Parse<CGameItemModel>(ms);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Failed to parse item model Gbx for light injection: {Path}", embeddedPath);
+            throw;
+        }
 
         // 2. add light layer according to lightProperties
         if (itemGbx.Node.EntityModelEdition is not CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityEdition)

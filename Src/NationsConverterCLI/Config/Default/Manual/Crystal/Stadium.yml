@@ -2862,8 +2862,18 @@ Blocks:
     PlaceDefaultZone: true
   StadiumFabricCornerIn:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
   StadiumFabricCornerOut:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 48]
+      Distance: 96
+      Intensity: 1
   StadiumFabricPillarAir:
     Modernized: true
   StadiumFabricPillarCornerInAir:
@@ -2872,8 +2882,18 @@ Blocks:
     Modernized: true
   StadiumFabricStraight1x1:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
   StadiumFabricStraight1x1Air:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
   StadiumFabricRamp:
     Modifiable: true
     Modernized: true
@@ -2887,8 +2907,18 @@ Blocks:
     Modernized: true
   StadiumFabricCross3x3:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [48, 0, 48]
+      Distance: 96
+      Intensity: 1
   StadiumFabricCross3x3Screen:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [48, 32, 48]
+      Distance: 96
+      Intensity: 1
   StadiumFabricPillarAirScreen:
     Modifiable: true
     PlaceDefaultZone: true
