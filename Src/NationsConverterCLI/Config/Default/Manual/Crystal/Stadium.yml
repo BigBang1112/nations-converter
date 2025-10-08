@@ -273,7 +273,6 @@ Blocks:
       Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
       Dir: 3
   StadiumCheckpointRingV:
-    NoItem: true # has gap underneath, can be fixed
     Block:
       Name: GateCheckpoint
   StadiumControlRoadGlass:
