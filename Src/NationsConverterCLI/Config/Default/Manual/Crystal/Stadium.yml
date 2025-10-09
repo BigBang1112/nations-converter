@@ -2910,6 +2910,11 @@ Blocks:
     Modernized: true
   StadiumFabricCross1x1:
     Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 0, 16]
+      Distance: 64
+      Intensity: 0.5
   StadiumFabricCross3x3:
     Modernized: true
     Lights:
@@ -2928,4 +2933,8 @@ Blocks:
     Modifiable: true
     PlaceDefaultZone: true
     ForceAirItem: true
+    Modernized: true
+  StadiumTrenchToRoadDirt:
+    Modernized: true
+  StadiumTrenchToRoadDirtX2:
     Modernized: true
