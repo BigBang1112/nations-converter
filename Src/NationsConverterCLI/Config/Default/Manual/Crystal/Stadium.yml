@@ -761,13 +761,14 @@ Blocks:
   StadiumInflatableAdvert:
     Modernized: true
     Skin:
-      RemapToColor:
+      ParentRemapToColor:
         Skins\Stadium\Inflatable\White.zip: White
         Skins\Stadium\Inflatable\Green.zip: Green
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
-      FallbackColor: Red
+        Skins\Stadium\Inflatable\Orange.zip: Default
+      ParentFallbackColor: Red
   StadiumInflatableSupport:
     Modernized: true
     ConversionVariants:
@@ -790,6 +791,7 @@ Blocks:
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
       FallbackColor: Red
   StadiumInflatablePillar:
     PlaceDefaultZone: true
@@ -814,7 +816,16 @@ Blocks:
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
       FallbackColor: Red
+      ParentRemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
+      ParentFallbackColor: Red
   StadiumInflatableTube:
     Modernized: true
     Conversion:
