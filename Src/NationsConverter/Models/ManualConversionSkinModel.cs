@@ -7,4 +7,6 @@ public class ManualConversionSkinModel : ConversionSkinModel
 {
     public Dictionary<string, DifficultyColor>? RemapToColor { get; set; }
     public DifficultyColor FallbackColor { get; set; }
+    public Dictionary<string, DifficultyColor>? ParentRemapToColor { get; set; }
+    public DifficultyColor ParentFallbackColor { get; set; }
 }

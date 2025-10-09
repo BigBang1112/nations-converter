@@ -339,6 +339,15 @@ internal sealed class PlaceBlockStage : BlockStageBase
                         ? color
                         : conversion.Skin.FallbackColor;
                 }
+
+                // item.Color == conversion.Skin.FallbackColor to avoid overriding a remap done by the previous PackDesc remap
+                if (conversion.Skin.ParentRemapToColor?.Count > 0 && item.Color == conversion.Skin.FallbackColor)
+                {
+                    var skinPath = block.Skin?.ParentPackDesc?.FilePath;
+                    item.Color = !string.IsNullOrEmpty(skinPath) && conversion.Skin.ParentRemapToColor.TryGetValue(skinPath, out var color)
+                        ? color
+                        : conversion.Skin.ParentFallbackColor;
+                }
             }
         }
 
