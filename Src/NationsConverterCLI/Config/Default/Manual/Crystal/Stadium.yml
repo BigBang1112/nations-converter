@@ -102,6 +102,12 @@ Blocks:
     Modernized: true
   StadiumRoadDirtGTCurve3:
     Modernized: true
+    Lights:
+    - Color: [0.8, 0.97, 1]
+      Position: [26, 1, 53]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtGTCurve4:
     Modernized: true
   StadiumRoadDirtDiagonaleLeft:
