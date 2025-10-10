@@ -54,7 +54,7 @@ public static class EndpointExtensions
                 }
 
                 var lastModified = string.IsNullOrWhiteSpace(block.IconWebp)
-                    ? env.WebRootFileProvider.GetFileInfo(Path.Combine("img, bloc.webp")).LastModified
+                    ? env.WebRootFileProvider.GetFileInfo(Path.Combine("img", "bloc.webp")).LastModified
                     : block.CreatedAt;
 
                 var eTag = $"\"{lastModified.Ticks}\"";
