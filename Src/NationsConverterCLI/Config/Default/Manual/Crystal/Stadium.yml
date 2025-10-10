@@ -1118,7 +1118,6 @@ Blocks:
   StadiumRoadDirtClip:
     Modernized: true
   StadiumRoadDirtHighClip:
-    PlaceDefaultZone: true
     Modernized: true
   StadiumPool:
     Modernized: true
