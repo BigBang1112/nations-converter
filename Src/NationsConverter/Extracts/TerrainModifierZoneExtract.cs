@@ -77,9 +77,9 @@ internal sealed class TerrainModifierZoneExtract
             var unit = units[i];
             var alignedUnit = block.Direction switch
             {
-                Direction.East => (unit.X + size.Z, unit.Y, unit.Z),
-                Direction.South => (unit.X + size.X, unit.Y, unit.Z + size.Z),
-                Direction.West => (unit.X, unit.Y, unit.Z + size.X),
+                Direction.East => (-unit.Z + size.Z, unit.Y, unit.X),
+                Direction.South => (-unit.X + size.X, unit.Y, -unit.Z + size.Z),
+                Direction.West => (unit.Z, unit.Y, -unit.X + size.X),
                 _ => unit
             };
 

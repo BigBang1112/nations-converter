@@ -188,7 +188,7 @@ internal sealed class SetupService
         // currently unused
         foreach (var modifier in collection.Node.ReplacementTerrainModifiers ?? [])
         {
-            foreach (var mat in modifier.Node?.Remapping?.Fids?.Select(x => x.Name) ?? [])
+            foreach (var mat in modifier.Node?.Remapping?.CustomizableFids?.Select(x => x.Name) ?? [])
             {
                 collection.TerrainModifierMaterials.Add(mat);
             }

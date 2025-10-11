@@ -86,7 +86,8 @@ div.showcase {
 .button-discord {
     display: flex;
     height: 80px;
-    background-color: #5865F2
+    background-color: #5865F2;
+    justify-content: center;
 }
 
     .button-discord:hover {
@@ -99,6 +100,19 @@ div.showcase {
     flex-direction: column;
     flex: 1;
     justify-content: center;
+}
+
+.discord-container {
+    flex-direction: row;
+    margin: 20px auto;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .discord-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 h3 {

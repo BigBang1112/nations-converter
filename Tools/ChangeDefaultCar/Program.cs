@@ -11,8 +11,8 @@ var carName = AnsiConsole.Ask<string>("Enter [green]car name[/] (empty for Stadi
 
 using var http = new HttpClient();
 
-using var ns = new NadeoServices(http);
-using var nls = new NadeoLiveServices(http);
+using var ns = new NadeoServices(http, new());
+using var nls = new NadeoLiveServices(http, new());
 
 var login = AnsiConsole.Ask<string>("Enter Ubisoft Connect [green]login[/]:");
 

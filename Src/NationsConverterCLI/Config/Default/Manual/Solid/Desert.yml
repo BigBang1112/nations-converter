@@ -12,118 +12,118 @@ Blocks:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelSlope:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 14, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadGTCurve2:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [20, 6, 18]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
     - Color: [1, 0.95, 0.8]
       Position: [46, 6, 44]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadGTCurve3:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [19, 6, 21]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
     - Color: [1, 0.95, 0.8]
       Position: [40, 6, 57]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
     - Color: [1, 0.95, 0.8]
       Position: [76, 6, 77]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadCheckpoint:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelTurbo:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRockToRockEntry3:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 38, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRockToRockEntry2:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 22, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRockToRockEntry1:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelDesertToRockEntry2:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 22, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelDesertToRockEntry1:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadEntry1:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 6, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadEntry2:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 22, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelRoadEntry3:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 38, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false
   SpeedTunnelExit:
     Lights:
     - Color: [1, 0.95, 0.8]
       Position: [16, 14, 16]
       Distance: 96
-      Intensity: 2
+      Intensity: 1
       NightOnly: false

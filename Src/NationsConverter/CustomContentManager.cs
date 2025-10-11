@@ -89,6 +89,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         }
 
         var item = mapOut.PlaceAnchoredObject(new(Path.Combine(rootFolderName, itemPath.Replace("�", "")).Replace('/', '\\'), ItemCollection, itemModelAuthor), pos, rot, pivot);
+        item.BlockUnitCoord = new Byte3((byte)(pos.X / 32), (byte)(pos.Y / 8), (byte)(pos.Z / 32));
         item.LightmapQuality = lightmapQuality;
         return item;
     }
@@ -112,7 +113,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         block.IsFree = true;
         block.AbsolutePositionInMap = pos;
-        block.PitchYawRoll = rot;
+        block.YawPitchRoll = rot;
 
         embeddedFilePaths.Add(("Blocks", blockPath));
 
@@ -127,7 +128,7 @@ internal sealed class CustomContentManager : EnvironmentStageBase
 
         var userDataPath = Path.Combine(runningDir, "UserData");
 
-        var zipStreams = Directory.GetFiles(userDataPath, "*.zip")
+        var zipStreams = Directory.GetFiles(userDataPath, "*.nc2")
             .Select(x => (Path.GetFileNameWithoutExtension(x), ZipFile.OpenRead(x)))
             .ToDictionary(x => x.Item1, x => x.Item2);
 
@@ -220,7 +221,18 @@ internal sealed class CustomContentManager : EnvironmentStageBase
         using var ms = new MemoryStream();
         sourceItemGbxStream.CopyTo(ms);
         ms.Position = 0;
-        var itemGbx = Gbx.Parse<CGameItemModel>(ms);
+
+        Gbx<CGameItemModel> itemGbx;
+
+        try
+        { 
+            itemGbx = Gbx.Parse<CGameItemModel>(ms);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Failed to parse item model Gbx for light injection: {Path}", embeddedPath);
+            throw;
+        }
 
         // 2. add light layer according to lightProperties
         if (itemGbx.Node.EntityModelEdition is not CGameCommonItemEntityModelEdition { MeshCrystal: not null } entityEdition)

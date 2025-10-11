@@ -3,10 +3,10 @@ name: CI
 on:
   push:
     branches: [ "main", "dev" ]
-    paths: [ ".github/workflows/ci.yml", "Src/**", "Tools/**", "NationsConverter.sln" ]
+    paths: [ ".github/workflows/ci.yml", "Src/**", "Tools/**", "NationsConverter.slnx" ]
   pull_request:
     branches: [ "main", "dev" ]
-    paths: [ ".github/workflows/ci.yml", "Src/**", "Tools/**", "NationsConverter.sln" ]
+    paths: [ ".github/workflows/ci.yml", "Src/**", "Tools/**", "NationsConverter.slnx" ]
 
 jobs:
   build:
@@ -26,8 +26,8 @@ jobs:
           9.0.x
           8.0.x
     - name: Restore dependencies
-      run: dotnet restore NationsConverter.sln
+      run: dotnet restore NationsConverter.slnx
     - name: Build
-      run: dotnet build NationsConverter.sln -c Release --no-restore -p:ContinuousIntegrationBuild=true
+      run: dotnet build NationsConverter.slnx -c Release --no-restore -p:ContinuousIntegrationBuild=true
     - name: Test
-      run: dotnet test NationsConverter.sln --no-build --verbosity normal
+      run: dotnet test NationsConverter.slnx --no-build --verbosity normal

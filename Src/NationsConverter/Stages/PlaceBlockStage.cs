@@ -339,6 +339,15 @@ internal sealed class PlaceBlockStage : BlockStageBase
                         ? color
                         : conversion.Skin.FallbackColor;
                 }
+
+                // item.Color == conversion.Skin.FallbackColor to avoid overriding a remap done by the previous PackDesc remap
+                if (conversion.Skin.ParentRemapToColor?.Count > 0 && item.Color == conversion.Skin.FallbackColor)
+                {
+                    var skinPath = block.Skin?.ParentPackDesc?.FilePath;
+                    item.Color = !string.IsNullOrEmpty(skinPath) && conversion.Skin.ParentRemapToColor.TryGetValue(skinPath, out var color)
+                        ? color
+                        : conversion.Skin.ParentFallbackColor;
+                }
             }
         }
 
@@ -366,6 +375,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 // in TMF, on map reload, non 0x0x0 fabric is consistently not applied
                 // so fabric is not yet quite exact here
                 // So far, this system is needed ONLY for Stadium
+                // 2025-06-30 -- one solution to this problem is to avoid getting modified by itself (the block that does the modification). this helps it a lot but is still not perfect
+                //            -- it should be checked against real block units and not just 0x0x0!!
                 var modifier = default(string);
                 if (Environment == "Stadium")
                 {
@@ -512,7 +523,7 @@ internal sealed class PlaceBlockStage : BlockStageBase
         if (blockModel.RotX != 0 || blockModel.RotY != 0 || blockModel.RotZ != 0)
         {
             additionalBlock.IsFree = true;
-            additionalBlock.PitchYawRoll = (
+            additionalBlock.YawPitchRoll = (
                 AdditionalMath.ToRadians(blockModel.RotX), 
                 AdditionalMath.ToRadians(blockModel.RotY),
                 AdditionalMath.ToRadians(blockModel.RotZ));
@@ -634,7 +645,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
         if (isOfficial)
         {
-            mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
+            var item = mapOut.PlaceAnchoredObject(new(itemModel.Name, 26, "Nadeo"), pos, rot, itemModel.Pivot);
+            item.BlockUnitCoord = new Byte3((byte)(pos.X / 32), (byte)(pos.Y / 8), (byte)(pos.Z / 32));
         }
         else
         {
@@ -736,6 +748,8 @@ internal sealed class PlaceBlockStage : BlockStageBase
                 continue;
             }
 
+            var modifier = terrainModifierZones.GetValueOrDefault(block.Coord with { Y = 0 });
+
             for (int i = 0; i < 4; i++)
             {
                 var dir = (Direction)i;
@@ -749,7 +763,25 @@ internal sealed class PlaceBlockStage : BlockStageBase
 
                 logger.LogInformation("Placing ground clip filler {BlockName}, {Direction} ...", block.Name, dir);
 
-                PlaceBlockConversion(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
+                if (modifier == "Fabric")
+                {
+                    var terrainItemPath = Path.Combine("Misc", "Fabric", "Clip.Item.Gbx");
+                    var newCoord = block.Coord + TotalOffset + dir switch
+                    {
+                        Direction.North => (0, 0, 0),
+                        Direction.East => (1, 0, 0),
+                        Direction.South => (1, 0, 1),
+                        Direction.West => (0, 0, 1),
+                        _ => throw new ArgumentException("Invalid block direction")
+                    };
+                    var rotRadians = -i * MathF.PI / 2;
+
+                    customContentManager.PlaceItem(terrainItemPath, newCoord * BlockSize, (rotRadians, 0, 0));
+                }
+                else
+                {
+                    PlaceBlockConversion(block, ConversionSet.Blocks[block.Name] ?? throw new InvalidOperationException($"Conversion filler ({block.Name}) is null in conversion set"), overrideDirection: dir);
+                }
             }
         }
 

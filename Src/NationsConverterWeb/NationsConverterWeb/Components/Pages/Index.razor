@@ -5,277 +5,267 @@
 
 <PageTitle>Nations Converter 2</PageTitle>
 
-<NavMenu Released="Released" />
 <div class="eyecatcher">
     <h1><img id="logo" src="img/logo.webp" width="700" /></h1>
     <p>Convert your TMNF / TMUF / TMT / TM2 maps to the latest Trackmania.</p>
 </div>
-@if (!Released)
-{
-    <div class="web-browser">
-        <Countdown OnExpired="CountdownExpired"></Countdown>
+<div class="web-browser">
+    @if (WebAppReleased)
+    {
+        <p class="centered">No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
+        <a href="/webapp" class="web-browser-button button-shiny"><b>Open Nations Converter 2 web</b> (coming 2026)</a>
+    }
+    else
+    {
+        <a href="/downloads" class="web-browser-button button-shiny"><b>Download the CLI program</b></a>
+        <p class="centered">You'll be also able to run Nations Converter directly in a web browser in 2026.</p>
+    }
+</div>
+<div class="readable-width support">
+    <a href="https://liberapay.com/NationsConverter" class="button-support">Support our work on Liberapay</a>
+</div>
+<div class="readable-width" style="background-color: #0005;">
+    <div class="readable-width-container discord-container">
+        <div class="discord-server">
+            <h2 style="font-size: 220%;">Join the Discord server</h2>
+            <p>Discuss anything, report issues, suggest features, share maps, or apply for modeller!</p>
+        </div>
+        <a href="https://discord.gg/BJB3hjfkJa" class="web-browser-button button-shiny button-discord"><img src="img/discord-logo-white.svg" width="320" /></a>
     </div>
-}
-else
-{
-    <div class="web-browser">
-        @if (WebAppReleased)
-        {
-            <p class="centered">No need to install anything! Run Nations Converter 2 in a web browser client-side.</p>
-            <a href="/webapp" class="web-browser-button button-shiny"><b>Open Nations Converter 2 web</b> (coming early 2025)</a>
-        }
-        else
-        {
-            <a href="/downloads" class="web-browser-button button-shiny"><b>Download the CLI program</b></a>
-            <p class="centered">You'll be also able to run Nations Converter directly in a web browser in early 2025.</p>
-        }
-    </div>
-    <div class="readable-width support">
-        <a href="https://liberapay.com/NationsConverter" class="button-support">Support our work on Liberapay</a>
-    </div>
-    <div class="readable-width" style="background-color: #0005;">
-        <div class="readable-width-container" style="flex-direction: row;margin: 20px auto;">
-            <div class="discord-server">
-                <h2 style="font-size: 220%;">Join the Discord server</h2>
-                <p>Discuss anything, report issues, suggest features, share maps, or apply for modeller!</p>
-            </div>
-            <a href="https://discord.gg/BJB3hjfkJa" class="web-browser-button button-shiny button-discord"><img src="img/discord-logo-white.svg" width="320" /></a>
+</div>
+<div class="readable-width bright-green-cyan-mention">
+    <div class="readable-width-container">
+        <h2 class="centered">Currently supported environments</h2>
+        <p class="centered">Solid Modless, Crystal Modernized, and Stock Raw are prioritized at the moment. Evolution is expected to continue throughout 2026 and 2027.</p>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="3">Environment</th>
+                        <th colspan="8">Category</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3">Solid</th>
+                        <th colspan="2">Crystal</th>
+                        <th colspan="3">Stock</th>
+                    </tr>
+                    <tr>
+                        <th>Modless</th>
+                        <th>Mod</th>
+                        <th>Balanced</th>
+                        <th>Modernized</th>
+                        <th>Classic</th>
+                        <th>Enhanced</th>
+                        <th>Raw</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stadium</td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
+                        <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Desert</td>
+                        <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Rally</td>
+                        <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Snow</td>
+                        <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Island</td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Bay</td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Coast</td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Canyon</td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Valley</td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                    <tr>
+                        <td>Lagoon</td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                        <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-    <div class="readable-width bright-green-cyan-mention">
-        <div class="readable-width-container">
-            <h2 class="centered">Currently supported environments</h2>
-            <p class="centered">Solid Modless, Crystal Modernized, and Stock Raw are prioritized at the moment. Evolution is expected to continue throughout 2025 and 2026.</p>
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr>
-                            <th rowspan="3">Environment</th>
-                            <th colspan="8">Category</th>
-                        </tr>
-                        <tr>
-                            <th colspan="3">Solid</th>
-                            <th colspan="2">Crystal</th>
-                            <th colspan="3">Stock</th>
-                        </tr>
-                        <tr>
-                            <th>Modless</th>
-                            <th>Mod</th>
-                            <th>Balanced</th>
-                            <th>Modernized</th>
-                            <th>Classic</th>
-                            <th>Enhanced</th>
-                            <th>Raw</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Stadium</td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"> <small>(+ TM2)</small></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Desert</td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Rally</td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Snow</td>
-                            <td style="background: #0F0A"><img src="img/checkmark.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Island</td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Bay</td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Coast</td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Canyon</td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #F00A"><img src="img/x.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Valley</td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                        <tr>
-                            <td>Lagoon</td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                            <td style="background: #333A"><img src="img/not-available.webp" width="24" height="24" style="vertical-align: middle; opacity: 0.9"></td>
-                        </tr>
-                    </tbody>
-                </table>
+</div>
+<div class="readable-width">
+    <div class="comparisons readable-width-container">
+        <h2>How does it look like?</h2>
+        <div class="showcase">
+            <ImgComparison BeforeImage="img/comparisons/StadiumCrystalModernized_before.jpg" AfterImage="img/comparisons/StadiumCrystalModernized_after.jpg" />
+            <div class="text">
+                <h3>Stadium (category: Crystal, Modernized)</h3>
+                <p>Blocks we made in 2020 were getting a little old. We modernized the Stadium conversion to the 2024 standard.</p>
             </div>
         </div>
-    </div>
-    <div class="readable-width">
-        <div class="comparisons readable-width-container">
-            <h2>How does it look like?</h2>
-            <div class="showcase">
-                <ImgComparison BeforeImage="img/comparisons/StadiumCrystalModernized_before.jpg" AfterImage="img/comparisons/StadiumCrystalModernized_after.jpg" />
-                <div class="text">
-                    <h3>Stadium (category: Crystal, Modernized)</h3>
-                    <p>Blocks we made in 2020 were getting a little old. We modernized the Stadium conversion to the 2024 standard.</p>
-                </div>
+        <div class="showcase">
+            <ImgComparison BeforeImage="img/comparisons/DesertSolidModless_before.jpg" AfterImage="img/comparisons/DesertSolidModless_after.jpg" />
+            <div class="text">
+                <h3>Desert (category: Solid, Modless)</h3>
+                <p>The first non-Stadium environment that we ported to Nations Converter.</p>
             </div>
-            <div class="showcase">
-                <ImgComparison BeforeImage="img/comparisons/DesertSolidModless_before.jpg" AfterImage="img/comparisons/DesertSolidModless_after.jpg" />
-                <div class="text">
-                    <h3>Desert (category: Solid, Modless)</h3>
-                    <p>The first non-Stadium environment that we ported to Nations Converter.</p>
-                </div>
+        </div>
+        <div class="showcase">
+            <ImgComparison BeforeImage="img/comparisons/RallySolidModless_before.jpg" AfterImage="img/comparisons/RallySolidModless_after.jpg" />
+            <div class="text">
+                <h3>Rally (category: Solid, Modless)</h3>
+                <p>Less of a swamp now. Reflective water, remade houses, usage of item trees.</p>
             </div>
-            <div class="showcase">
-                <ImgComparison BeforeImage="img/comparisons/RallySolidModless_before.jpg" AfterImage="img/comparisons/RallySolidModless_after.jpg" />
-                <div class="text">
-                    <h3>Rally (category: Solid, Modless)</h3>
-                    <p>Less of a swamp now. Reflective water, remade houses, usage of item trees.</p>
-                </div>
+        </div>
+        <div class="showcase">
+            <ImgComparison BeforeImage="img/comparisons/SnowSolidModless_before.jpg" AfterImage="img/comparisons/SnowSolidModless_after.jpg" />
+            <div class="text">
+                <h3>Snow (category: Solid, Modless)</h3>
+                <p>Contrasted yet well-blended. Proper winter vibes right here.</p>
             </div>
-            <div class="showcase">
-                <ImgComparison BeforeImage="img/comparisons/SnowSolidModless_before.jpg" AfterImage="img/comparisons/SnowSolidModless_after.jpg" />
-                <div class="text">
-                    <h3>Snow (category: Solid, Modless)</h3>
-                    <p>Contrasted yet well-blended. Proper winter vibes right here.</p>
-                </div>
-            </div>
-            <div class="showcase">
-                <ImgComparison BeforeImage="img/comparisons/StadiumCrystalClassic_before.jpg" AfterImage="img/comparisons/StadiumCrystalClassic_after.jpg" />
-                <div class="text">
-                    <h3>Stadium (category: Crystal, Classic)</h3>
-                    <p>We brought the same Nations Converter back to with minor improvements, if you're used to it.</p>
-                </div>
+        </div>
+        <div class="showcase">
+            <ImgComparison BeforeImage="img/comparisons/StadiumCrystalClassic_before.jpg" AfterImage="img/comparisons/StadiumCrystalClassic_after.jpg" />
+            <div class="text">
+                <h3>Stadium (category: Crystal, Classic)</h3>
+                <p>We brought the same Nations Converter back to with minor improvements, if you're used to it.</p>
             </div>
         </div>
     </div>
-    <div class="eyecatcher">
-        <p>More comparisons coming soon!</p>
+</div>
+<div class="eyecatcher">
+    <p>More comparisons coming soon!</p>
+</div>
+<div class="readable-width">
+    <div class="readable-width-container">
+        <h2>Categories</h2>
+        <p>Nations Converter 2 is split into many categories, as from the beginning, the tool was supposed to be about choices.</p>
+        <h3>Crystal</h3>
+        <p>The style of the old Nations Converter. Good old ways of exporting TM2 Stadium Crystal.Gbx and importing it in TM2020.</p>
+        <h4>Modernized</h4>
+        <p>Improvements to dirt, pool, inflatables, and many other blocks. Presenting more details overall.</p>
+        <h4>Classic</h4>
+        <p>The old Nations Converter looks from 2020-2022 with minor improvements like usage of pipes and pudding items.</p>
+        <h3>Solid</h3>
+        <p>You thought 1:1 conversions were impossible?</p>
+        <p>We extracted all block meshes from Solid.Gbx files and transformed them into Item.Gbx files!</p>
+        <h4>Modless</h4>
+        <p>Downloading texture mods suck. We decided to figure out how to make things look good using the TM2020 textures.</p>
+        <h4>Mod</h4>
+        <p>The equal experience to the old Trackmania games. No compromise in texture usage. To be done.</p>
+        <h4>Balanced</h4>
+        <p>Mod that looks acceptable when you don't have it downloaded. To be done.</p>
+        <h3>Stock</h3>
+        <p>Keep the true looks of TM2020. Save a lot of time you'd spend copying the blocks one by one. To be done.</p>
+        <h4>Enhanced</h4>
+        <p>Represents most of the older blocks in the TM2020 style. Includes custom assets to reach this quality. To be done.</p>
+        <h4>Raw</h4>
+        <p>Attempt its best to copy the map layout with official assets only. Perfect for concepts to expand on. No custom assets are embedded to the map. To be done.</p>
     </div>
-    <div class="readable-width">
-        <div class="readable-width-container">
-            <h2>Categories</h2>
-            <p>Nations Converter 2 is split into many categories, as from the beginning, the tool was supposed to be about choices.</p>
-            <h3>Crystal</h3>
-            <p>The style of the old Nations Converter. Good old ways of exporting TM2 Stadium Crystal.Gbx and importing it in TM2020.</p>
-            <h4>Modernized</h4>
-            <p>Improvements to dirt, pool, inflatables, and many other blocks. Presenting more details overall.</p>
-            <h4>Classic</h4>
-            <p>The old Nations Converter looks from 2020-2022 with minor improvements like usage of pipes and pudding items.</p>
-            <h3>Solid</h3>
-            <p>You thought 1:1 conversions were impossible?</p>
-            <p>We extracted all block meshes from Solid.Gbx files and transformed them into Item.Gbx files!</p>
-            <h4>Modless</h4>
-            <p>Downloading texture mods suck. We decided to figure out how to make things look good using the TM2020 textures.</p>
-            <h4>Mod</h4>
-            <p>The equal experience to the old Trackmania games. No compromise in texture usage. To be done.</p>
-            <h4>Balanced</h4>
-            <p>Mod that looks acceptable when you don't have it downloaded. To be done.</p>
-            <h3>Stock</h3>
-            <p>Keep the true looks of TM2020. Save a lot of time you'd spend copying the blocks one by one. To be done.</p>
-            <h4>Enhanced</h4>
-            <p>Represents most of the older blocks in the TM2020 style. Includes custom assets to reach this quality. To be done.</p>
-            <h4>Raw</h4>
-            <p>Attempt its best to copy the map layout with official assets only. Perfect for concepts to expand on. No custom assets are embedded to the map. To be done.</p>
+</div>
+<div class="open-source readable-width white-mention">
+    <div class="readable-width-container">
+        <h2 class="centered">Believe it or not, the tool is open source</h2>
+        <a href="https://github.com/BigBang1112/nations-converter" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
+    </div>
+</div>
+<div class="readable-width">
+    <div class="readable-width-container">
+        <h2>Authors</h2>
+        <div>
+            <h3>Development, technology, mesh modeling assistance, website</h3>
+            <p>BigBang1112</p>
+        </div>
+        <div>
+            <h3>Mesh modeling team <small>(looking for more volunteers!)</small></h3>
+            <p>harry.alexm, Paddy Productions, nod, Zai, eyebo, Rokas RX</p>
+        </div>
+        <div>
+            <h3>Mod work</h3>
+            <p>Rxelux</p>
+        </div>
+        <div>
+            <h3>Skins</h3>
+            <p>DMW</p>
+        </div>
+        <div>
+            <h3>Assistance</h3>
+            <p>eyebo</p>
         </div>
     </div>
-    <div class="open-source readable-width white-mention">
-        <div class="readable-width-container">
-            <h2 class="centered">Believe it or not, the tool is open source</h2>
-            <a href="https://github.com/BigBang1112/nations-converter" class="button-github-large"><img src="img/github.svg" width="32" />GitHub</a>
-        </div>
-    </div>
-    <div class="readable-width">
-        <div class="readable-width-container">
-            <h2>Authors</h2>
-            <div>
-                <h3>Development, technology, mesh modeling assistance, website</h3>
-                <p>BigBang1112</p>
-            </div>
-            <div>
-                <h3>Mesh modeling team <small>(looking for more volunteers!)</small></h3>
-                <p>harry.alexm, Paddy Productions, nod, Zai, eyebo, Rokas RX</p>
-            </div>
-            <div>
-                <h3>Mod work</h3>
-                <p>Rxelux</p>
-            </div>
-            <div>
-                <h3>Skins</h3>
-                <p>DMW</p>
-            </div>
-            <div>
-                <h3>Assistance</h3>
-                <p>eyebo</p>
-            </div>
-        </div>
-    </div>
-}
+</div>
 
 @code {
     [CascadingParameter] public Task<AuthenticationState>? AuthenticationStateTask { get; set; }

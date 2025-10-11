@@ -349,7 +349,7 @@ public static class CPlugTreeExtensions
                         continue;
                     }
 
-                    if (treeLight.PlugLight.GxLightModel is not GxLight light)
+                    if (treeLight.PlugLight.Light is not GxLight light)
                     {
                         logger?.LogWarning("Light instance has no gx light");
                         continue;
@@ -465,9 +465,9 @@ public static class CPlugTreeExtensions
             a.ZX * b.XY + a.ZY * b.YY + a.ZZ * b.ZY,
             a.ZX * b.XZ + a.ZY * b.YZ + a.ZZ * b.ZZ,
 
-            a.TX + b.TX,
-            a.TY + b.TY,
-            a.TZ + b.TZ
+            a.XX * b.TX + a.XY * b.TY + a.XZ * b.TZ + a.TX,
+            a.YX * b.TX + a.YY * b.TY + a.YZ * b.TZ + a.TY,
+            a.ZX * b.TX + a.ZY * b.TY + a.ZZ * b.TZ + a.TZ
         );
     }
 
@@ -501,7 +501,7 @@ public static class CPlugTreeExtensions
 
         return new Vec3(
             vertex.X * location.XX + vertex.Y * location.XY + vertex.Z * location.XZ + location.TX,
-            vertex.X * location.YZ + vertex.Y * location.YY + vertex.Z * location.YZ + location.TY,
+            vertex.X * location.YX + vertex.Y * location.YY + vertex.Z * location.YZ + location.TY,
             vertex.X * location.ZX + vertex.Y * location.ZY + vertex.Z * location.ZZ + location.TZ
         );
     }

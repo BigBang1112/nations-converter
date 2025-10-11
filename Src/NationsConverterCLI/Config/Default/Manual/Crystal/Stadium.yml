@@ -102,6 +102,12 @@ Blocks:
     Modernized: true
   StadiumRoadDirtGTCurve3:
     Modernized: true
+    Lights:
+    - Color: [0.8, 0.97, 1]
+      Position: [26, 1, 53]
+      Distance: 96
+      Intensity: 2
+      NightOnly: true
   StadiumRoadDirtGTCurve4:
     Modernized: true
   StadiumRoadDirtDiagonaleLeft:
@@ -273,7 +279,6 @@ Blocks:
       Name: Platform/Road/StadiumPlatformSlope2Straight/Base.Item.Gbx
       Dir: 3
   StadiumCheckpointRingV:
-    NoItem: true # has gap underneath, can be fixed
     Block:
       Name: GateCheckpoint
   StadiumControlRoadGlass:
@@ -345,8 +350,10 @@ Blocks:
     Block:
       Name: RoadTechStart
   StadiumRoadMainFinishLine:
-    NoItem: true
     PlaceDefaultZone: true
+    Modernized: true
+    Air:
+      NoItem: true
     Block:
       Name: RoadTechFinish
   StadiumRoadMainStartFinishLine:
@@ -388,7 +395,7 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurbo
+      Name: RoadTechSpecialTurboRoulette
   StadiumRoadMainBumper: ~
   StadiumRoadMainBumper2: ~
   StadiumRoadMainFW:
@@ -505,12 +512,12 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboSlopeUp
+      Name: RoadTechSpecialTurboRouletteSlopeDown
   StadiumRoadMainTurboRouletteUp:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboSlopeDown
+      Name: RoadTechSpecialTurboRouletteSlopeUp
   StadiumRoadMainFWSlope:
     NoItem: true
     PlaceDefaultZone: true
@@ -612,12 +619,12 @@ Blocks:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboTiltRight
+      Name: RoadTechSpecialTurboRouletteTiltRight
   StadiumRoadMainTurboRouletteRight:
     NoItem: true
     PlaceDefaultZone: true
     Block:
-      Name: RoadTechSpecialTurboTiltLeft
+      Name: RoadTechSpecialTurboRouletteTiltLeft
   StadiumRoadMainFWTilt:
     NoItem: true
     PlaceDefaultZone: true
@@ -717,13 +724,14 @@ Blocks:
   StadiumRoadTiltTransition2DiagRight:
     PlaceDefaultZone: true
   StadiumPlatformLoopStart:
-    NoItem: true
+    ForceAirItem: true
     PlaceDefaultZone: true
     Block:
       Name: PlatformTechLoopStart
       Dir: 2
+      Bit21: false
   StadiumPlatformLoopEnd:
-    NoItem: true
+    ForceAirItem: true
     PlaceDefaultZone: true
     Block:
       Name: PlatformTechLoopEnd
@@ -753,13 +761,14 @@ Blocks:
   StadiumInflatableAdvert:
     Modernized: true
     Skin:
-      RemapToColor:
+      ParentRemapToColor:
         Skins\Stadium\Inflatable\White.zip: White
         Skins\Stadium\Inflatable\Green.zip: Green
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
-      FallbackColor: Red
+        Skins\Stadium\Inflatable\Orange.zip: Default
+      ParentFallbackColor: Red
   StadiumInflatableSupport:
     Modernized: true
     ConversionVariants:
@@ -782,6 +791,7 @@ Blocks:
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
       FallbackColor: Red
   StadiumInflatablePillar:
     PlaceDefaultZone: true
@@ -806,7 +816,16 @@ Blocks:
         Skins\Stadium\Inflatable\Blue.zip: Blue
         Skins\Stadium\Inflatable\Yellow.zip: Default
         Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
       FallbackColor: Red
+      ParentRemapToColor:
+        Skins\Stadium\Inflatable\White.zip: White
+        Skins\Stadium\Inflatable\Green.zip: Green
+        Skins\Stadium\Inflatable\Blue.zip: Blue
+        Skins\Stadium\Inflatable\Yellow.zip: Default
+        Skins\Stadium\Inflatable\Black.zip: Black
+        Skins\Stadium\Inflatable\Orange.zip: Default
+      ParentFallbackColor: Red
   StadiumInflatableTube:
     Modernized: true
     Conversion:
@@ -1046,30 +1065,36 @@ Blocks:
       Dir: 3
   StadiumPlatformGTCurve2Wall1:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve2
   StadiumPlatformGTCurve2Wall2:
     NoItem: true
+    KeepZone: true
     Blocks:
     - Name: PlatformTechWallCurve2
     - Name: PlatformTechWallCurve2
       OffsetY: 1
   StadiumPlatformGTCurve2Wall4:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve2x4
   StadiumPlatformGTCurve3Wall1:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve3
   StadiumPlatformGTCurve3Wall2:
     NoItem: true
+    KeepZone: true
     Blocks:
     - Name: PlatformTechWallCurve3
     - Name: PlatformTechWallCurve3
       OffsetY: 1
   StadiumPlatformGTCurve3Wall4:
     NoItem: true
+    KeepZone: true
     Block:
       Name: PlatformTechWallCurve3x4
   StadiumGrassCheckpoint:
@@ -1082,7 +1107,6 @@ Blocks:
     NoItem: true
   StadiumRoadTiltClipRight:
     NoItem: true
-    PlaceDefaultZone: true
   StadiumLoopLeft:
     PlaceDefaultZone: true
     ForceAirItem: true  
@@ -1094,10 +1118,8 @@ Blocks:
   StadiumRoadDirtClip:
     Modernized: true
   StadiumRoadDirtHighClip:
-    PlaceDefaultZone: true
     Modernized: true
   StadiumPool:
-    NoTerrainModifier: true
     Modernized: true
   StadiumPool2:
     NoItem: true
@@ -2830,9 +2852,8 @@ Blocks:
   StadiumFabricPillarScreenSmall:
     Modifiable: true
     PlaceDefaultZone: true
-  StadiumFabricRamp:
-    Modifiable: true
-    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
   StadiumGrassBirds:
     NoItem: true
     Modifiable: true
@@ -2849,3 +2870,81 @@ Blocks:
     Conversion:
       Name: StadiumRoadDirtHighFenceStraight
       Modernized: true
+  StadiumPlatformBiSlope2StartSmall:
+    PlaceDefaultZone: true
+  StadiumPlatformBiSlope2End:
+    Modifiable: true
+    PlaceDefaultZone: true
+  StadiumFabricCornerIn:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricCornerOut:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 48]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricPillarAir:
+    Modernized: true
+  StadiumFabricPillarCornerInAir:
+    Modernized: true
+  StadiumFabricPillarCornerOut:
+    Modernized: true
+  StadiumFabricStraight1x1:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricStraight1x1Air:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 24, 16]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricRamp:
+    Modifiable: true
+    Modernized: true
+  StadiumFabricRampCornerIn:
+    Modifiable: true
+    Modernized: true
+  StadiumFabricRampCornerOut:
+    Modifiable: true
+    Modernized: true
+  StadiumFabricCross1x1:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [16, 0, 16]
+      Distance: 64
+      Intensity: 0.5
+  StadiumFabricCross3x3:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [48, 0, 48]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricCross3x3Screen:
+    Modernized: true
+    Lights:
+    - Color: [1, 1, 1]
+      Position: [48, 32, 48]
+      Distance: 96
+      Intensity: 1
+  StadiumFabricPillarAirScreen:
+    Modifiable: true
+    PlaceDefaultZone: true
+    ForceAirItem: true
+    Modernized: true
+  StadiumTrenchToRoadDirt:
+    Modernized: true
+  StadiumTrenchToRoadDirtX2:
+    Modernized: true

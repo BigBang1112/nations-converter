@@ -6,6 +6,7 @@ services:
       dockerfile: Src/NationsConverterWeb/NationsConverterWeb/Dockerfile
     environment:
       CONNECTIONSTRINGS__DEFAULTCONNECTION: Server=mariadb;Port=3306;Database=nc_gbx_tools;User=root;
+      OTEL_SERVICE_NAME: NationsConverterWeb
       OTEL_EXPORTER_OTLP_ENDPOINT: http://seq/ingest/otlp
       OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
     depends_on:

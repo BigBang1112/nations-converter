@@ -638,11 +638,11 @@ internal sealed class InitStageService
             or CGameCtnBlockInfo.EWayPointType.Checkpoint ? (node.SpawnLocGround.GetValueOrDefault().TX, node.SpawnLocGround.GetValueOrDefault().TY, node.SpawnLocGround.GetValueOrDefault().TZ) : null;
 
         var airWaterUnits = (node.AirBlockUnitInfos ?? node.VariantBaseAir?.BlockUnitModels)?
-            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Surface ?? ""))
             .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
             .Distinct().ToArray() ?? [];
         var groundWaterUnits = (node.GroundBlockUnitInfos ?? node.VariantBaseGround?.BlockUnitModels)?
-            .Where(x => initOptions.Value.WaterZone.Contains(x.Chunks.Get<CGameCtnBlockUnitInfo.Chunk03036001>()!.U01 ?? ""))
+            .Where(x => initOptions.Value.WaterZone.Contains(x.Surface ?? ""))
             .Select(x => new Int2(x.RelativeOffset.X, x.RelativeOffset.Z))
             .Distinct().ToArray() ?? [];
 
@@ -658,11 +658,11 @@ internal sealed class InitStageService
 
         var airTerrainModifierUnits = node.AirBlockUnitInfos?
             .Where(x => !string.IsNullOrWhiteSpace(x.TerrainModifierId))
-            .GroupBy(x => x.TerrainModifierId!)
+            .GroupBy(GetFixedTerrainModifierId)
             .ToDictionary(x => x.Key, x => x.Select(x => x.RelativeOffset).ToArray()) ?? [];
         var groundTerrainModifierUnits = node.GroundBlockUnitInfos?
             .Where(x => !string.IsNullOrWhiteSpace(x.TerrainModifierId))
-            .GroupBy(x => x.TerrainModifierId!)
+            .GroupBy(GetFixedTerrainModifierId)
             .ToDictionary(x => x.Key, x => x.Select(x => x.RelativeOffset).ToArray()) ?? [];
 
         var commonUnits = airUnits.SequenceEqual(groundUnits) ? airUnits : null;
@@ -853,5 +853,14 @@ internal sealed class InitStageService
         }
 
         return modifierMaterials;
+    }
+
+    private static string GetFixedTerrainModifierId(CGameCtnBlockUnitInfo x)
+    {
+        return x.TerrainModifierId switch
+        {
+            "fabric" => "Fabric", // randomly for only StadiumFabricCross3x3 in TM2? how does this work nadeo
+            _ => x.TerrainModifierId!
+        };
     }
 }

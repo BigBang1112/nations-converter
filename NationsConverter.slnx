@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/Src/">
+    <Project Path="Src/NationsConverter/NationsConverter.csproj" />
+    <Project Path="Src/NationsConverterBot/NationsConverterBot.csproj" />
+    <Project Path="Src/NationsConverterBuilder2/NationsConverterBuilder2.csproj" />
+    <Project Path="Src/NationsConverterCLI/NationsConverterCLI.csproj" />
+    <Project Path="Src/NationsConverterShared/NationsConverterShared.csproj" />
+    <Project Path="Src/NationsConverterWeb/NationsConverterWeb.Client/NationsConverterWeb.Client.csproj" />
+    <Project Path="Src/NationsConverterWeb/NationsConverterWeb/NationsConverterWeb.csproj" />
+  </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="Tools/ChangeDefaultCar/ChangeDefaultCar.csproj" />
+    <Project Path="Tools/FixStadiumGrass/FixStadiumGrass.csproj" />
+    <Project Path="Tools/LoadMacroblockInfo/LoadMacroblockInfo.csproj" />
+    <Project Path="Tools/UpdateCampaign/UpdateCampaign.csproj" />
+  </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
+</Solution>

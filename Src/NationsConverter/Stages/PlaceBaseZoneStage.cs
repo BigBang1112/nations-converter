@@ -39,6 +39,17 @@ internal sealed class PlaceBaseZoneStage : BlockStageBase
 
     protected override void ConvertBlock(CGameCtnBlock block, ManualConversionModel conversion)
     {
+        if (conversion.KeepZone)
+        {
+            return;
+        }
+
+        // tm2 thing where ghost blocks of air blocks are used in a ground, so that the base zone is not removed from that
+        if (conversion.Ground is null && block.IsGhost)
+        {
+            return;
+        }
+
         // If block is of zone type (ZoneHeight not null) it is automatically considered occupied
         // Block's height does not matter - tested on TMUnlimiter
         if (conversion.ZoneHeight.HasValue)
