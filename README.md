@@ -130,3 +130,7 @@ graph LR
 Build the solution with Visual Studio 2022 or by using `dotnet build`.
 
 This project started using the GBX.NET nightly builds for more comfortable development.
+
+## Convengine
+
+This project is under very longterm plans to be rewritten into the Convengine converter engine system, which would allow cleaner structure of the converter project.
