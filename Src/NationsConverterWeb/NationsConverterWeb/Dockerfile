@@ -1,5 +1,5 @@
 # Debug phase
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
@@ -7,7 +7,7 @@ EXPOSE 8081
 
 
 # Publish phase
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:9.0 AS publish
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS publish
 ARG BUILD_CONFIGURATION=Release
 ARG TARGETARCH
 ARG APPNAME=NationsConverterWeb
@@ -31,7 +31,7 @@ RUN dotnet publish $APPNAME/$APPNAME -c $BUILD_CONFIGURATION -a $TARGETARCH -o /
 
 
 # Final phase
-FROM mcr.microsoft.com/dotnet/aspnet:9.0-noble-chiseled AS final
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled AS final
 EXPOSE 8080
 EXPOSE 8081
 WORKDIR /app
