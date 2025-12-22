@@ -32,8 +32,6 @@ app.MapGet("/init", async (InitStageService initStageService, SetupService setup
 {
     await setupService.SetupCollectionsAsync(cancellationToken);
     await initStageService.BuildAsync(cancellationToken);
-})
-.WithName("Init")
-.WithOpenApi();
+});
 
 app.Run();

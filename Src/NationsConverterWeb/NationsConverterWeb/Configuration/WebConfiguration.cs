@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.ResponseCompression;
 using NationsConverterWeb.Authentication;
-using Microsoft.AspNetCore.CookiePolicy;
-using Microsoft.AspNetCore.StaticFiles;
-using Microsoft.Extensions.FileProviders;
-using NationsConverterWeb.Components;
-using NationsConverterWeb.Endpoints;
+using System.Net;
 
 namespace NationsConverterWeb.Configuration;
 
@@ -37,8 +33,6 @@ public static class WebConfiguration
 
         services.AddCascadingAuthenticationState();
 
-        services.AddDirectoryBrowser();
-
         services.AddResponseCompression(options =>
         {
             options.EnableForHttps = true;
@@ -46,69 +40,25 @@ public static class WebConfiguration
             options.Providers.Add<GzipCompressionProvider>();
         });
 
+        // Figures out HTTPS behind proxies
         services.Configure<ForwardedHeadersOptions>(options =>
         {
             options.ForwardedHeaders =
-                ForwardedHeaders.XForwardedFor |
-                ForwardedHeaders.XForwardedProto;
-            options.KnownNetworks.Clear();
-            options.KnownProxies.Clear();
-        });
-    }
+                ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
 
-    public static void UseAuthMiddleware(this WebApplication app)
-    {
-        app.UseAuthentication();
-        app.UseAuthorization();
-        app.UseAntiforgery();
-    }
-
-    public static void UseSecurityMiddleware(this WebApplication app)
-    {
-        var dataDir = Path.Combine(AppContext.BaseDirectory, "Data");
-        Directory.CreateDirectory(dataDir);
-
-        /*app.UseStaticFiles(new StaticFileOptions
-        {
-            FileProvider = new PhysicalFileProvider(dataDir),
-            RequestPath = "/data",
-            ServeUnknownFileTypes = true
-        });*/
-
-        app.UseDirectoryBrowser(new DirectoryBrowserOptions
-        {
-            FileProvider = new PhysicalFileProvider(dataDir),
-            RequestPath = "/data"
-        });
-
-        app.UseStaticFiles(new StaticFileOptions()
-        {
-            ContentTypeProvider = new FileExtensionContentTypeProvider
+            foreach (var knownProxy in config.GetSection("KnownProxies").Get<string[]>() ?? [])
             {
-                Mappings = { [".mux"] = "application/octet-stream" }
+                if (IPAddress.TryParse(knownProxy, out var ipAddress))
+                {
+                    options.KnownProxies.Add(ipAddress);
+                    continue;
+                }
+
+                foreach (var hostIpAddress in Dns.GetHostAddresses(knownProxy))
+                {
+                    options.KnownProxies.Add(hostIpAddress);
+                }
             }
         });
-
-        app.UseCookiePolicy(new CookiePolicyOptions
-        {
-            MinimumSameSitePolicy = SameSiteMode.Lax,
-            Secure = CookieSecurePolicy.Always,
-            HttpOnly = HttpOnlyPolicy.Always
-        });
-
-        if (!app.Environment.IsDevelopment())
-        {
-            app.UseResponseCompression();
-        }
-    }
-
-    public static void UseEndpointMiddleware(this WebApplication app)
-    {
-        app.MapEndpoints();
-
-        app.MapRazorComponents<App>()
-            .AddInteractiveServerRenderMode()
-            .AddInteractiveWebAssemblyRenderMode()
-            .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
     }
 }

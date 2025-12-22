@@ -134,6 +134,7 @@ table {
     .button-shiny:hover {
         background-color: #77DDFF;
         color: #222;
+        text-decoration: none;
     }
 
 
@@ -184,11 +185,4 @@ h1:focus {
 
 .darker-border-checkbox.form-check-input {
     border-color: #929292;
-}
-
-footer {
-    margin-top: 10px;
-    color: gray;
-    text-align: center;
-    padding: 20px 10px;
 }

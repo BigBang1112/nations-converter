@@ -1,18 +1,42 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <NavMenu2></NavMenu2>
+<ReuNavMenu Brand="nc.gbx.tools">
+    <ReuNavItem Name="Home" Href="" IconType="IconType.Home" NavLinkMatch="NavLinkMatch.All"></ReuNavItem>
+    <ReuNavItem Name="Downloads" IconType="IconType.Download" Href="downloads"></ReuNavItem>
+    <ReuNavItem Name="About" Href="about" IconType="IconType.Info"></ReuNavItem>
+    <ReuNavItem Name="GitHub" Href="https://github.com/BigBang1112/nations-converter" IconType="IconType.GitHub" IsNavLink="false" IconOnly="true" IconWidth="28" IconHeight="28"></ReuNavItem>
+    <ReuNavItem Name="Discord" Href="https://discord.nc.gbx.tools" IconType="IconType.Discord" IsNavLink="false" IconOnly="true" Title="Join the Discord server"></ReuNavItem>
+</ReuNavMenu>
+    
+<ReuMain>
     @Body
-    <footer>
-        <p>
-            © 2024-2025 Petr 'BigBang1112' Pivoňka<br />
-            <small>
-                Not affiliated with or endorsed by Nadeo or Ubisoft.
-                All relevant trademarks belong to their respective owners.
-            </small>
-        </p>
-    </footer>
-</div>
+</ReuMain>
+
+<ReuFooter>
+    <CopyrightContent>
+        © 2024-2025 Petr '<a href="https://bigbang1112.cz">BigBang1112</a>' Pivoňka<br />
+        <small>
+            Not affiliated with or endorsed by Nadeo or Ubisoft.
+            All relevant trademarks belong to their respective owners.
+        </small>
+    </CopyrightContent>
+    <LinkContent>
+    </LinkContent>
+    <ExtraContent>
+        <div class="footer-discover-more">
+            <span>Discover more:</span>
+            <a href="https://gbx.tools">gbx.tools</a>
+            <a href="https://explorer.gbx.tools">explorer.gbx.tools</a>
+            <a href="https://3d.gbx.tools">3d.gbx.tools</a>
+            <a href="https://io.gbx.tools">io.gbx.tools</a>
+            <span>nc.gbx.tools</span>
+            <a href="https://revalidate.gbx.tools">revalidate.gbx.tools</a>
+            <a href="https://envimix.gbx.tools">envimix.gbx.tools</a>
+            <a href="https://uotd.gbx.tools">uotd.gbx.tools</a>
+            <a href="https://nuget.gbx.tools">nuget.gbx.tools</a>
+        </div>
+    </ExtraContent>
+</ReuFooter>
 
 <div id="blazor-error-ui">
     An unhandled error has occurred.

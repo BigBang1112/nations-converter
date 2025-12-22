@@ -12,24 +12,11 @@ builder.Services.AddTelemetryServices(builder.Configuration, builder.Environment
 
 var app = builder.Build();
 
-app.MigrateDatabase();
-
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseWebAssemblyDebugging();
-    app.UseForwardedHeaders();
-}
-else
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    app.UseForwardedHeaders();
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+    app.MigrateDatabase();
 }
 
-app.UseAuthMiddleware();
-app.UseSecurityMiddleware();
-app.UseEndpointMiddleware();
+app.UseMiddleware();
 
 app.Run();
