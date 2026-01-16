@@ -159,7 +159,7 @@ public static class CPlugSolidExtensions
 
             var shadedGeom = new CPlugSolid2Model.ShadedGeom
             {
-                Lod = 1,
+                LodMask = 1,
                 MaterialIndex = matIndex,
                 U01 = -1,
                 VisualIndex = visuals.Count

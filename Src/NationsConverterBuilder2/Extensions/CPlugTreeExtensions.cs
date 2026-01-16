@@ -572,12 +572,12 @@ public static class CPlugTreeExtensions
                 faces.AddRange(collisionMesh.CookedTriangles
                     .Select(tri =>
                     {
-                        var material = surface.Materials[tri.U03];
+                        var material = surface.Materials[tri.SurfaceIndex];
 
                         return new CPlugCrystal.Face([
-                            new(tri.U02.X + indicesOffset, default, default),
-                            new(tri.U02.Y + indicesOffset, default, default),
-                            new(tri.U02.Z + indicesOffset, default, default)
+                            new(tri.Indices.X + indicesOffset, default, default),
+                            new(tri.Indices.Y + indicesOffset, default, default),
+                            new(tri.Indices.Z + indicesOffset, default, default)
                             ],
                             group,
                             materials[GetSurfaceIdSet(material)],
@@ -590,11 +590,11 @@ public static class CPlugTreeExtensions
                 faces.AddRange(collisionMesh.Triangles
                     .Select(tri =>
                     {
-                        var material = surface.Materials[tri.U04];
+                        var material = surface.Materials[tri.SurfaceIndex];
                         return new CPlugCrystal.Face([
-                            new(tri.U01.X + indicesOffset, default, default),
-                            new(tri.U01.Y + indicesOffset, default, default),
-                            new(tri.U01.Z + indicesOffset, default, default)
+                            new(tri.Indices.X + indicesOffset, default, default),
+                            new(tri.Indices.Y + indicesOffset, default, default),
+                            new(tri.Indices.Z + indicesOffset, default, default)
                             ],
                             group,
                             materials[GetSurfaceIdSet(material)],
