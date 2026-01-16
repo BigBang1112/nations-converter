@@ -9,7 +9,7 @@
 
     <ItemGroup>
         <PackageReference Include="ByteSize" Version="2.1.2" />
-        <PackageReference Include="GBX.NET.Tool" Version="0.3.2" />
+        <PackageReference Include="GBX.NET.Tool" Version="0.3.3" />
         <PackageReference Include="YamlDotNet" Version="16.3.0" />
         <PackageReference Include="Vecc.YamlDotNet.Analyzers.StaticGenerator" Version="16.3.0">
             <PrivateAssets>all</PrivateAssets>

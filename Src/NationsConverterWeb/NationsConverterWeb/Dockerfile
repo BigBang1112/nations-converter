@@ -1,40 +1,33 @@
 # Debug phase
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0 AS base
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
-
 
 # Publish phase
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0 AS publish
-ARG BUILD_CONFIGURATION=Release
-ARG TARGETARCH
-ARG APPNAME=NationsConverterWeb
-RUN apt-get update && apt-get install -y git python3
-WORKDIR /src
-COPY .git/ ./.git/
-RUN dotnet workload install wasm-tools
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0-alpine AS build
+
 RUN dotnet nuget add source https://nuget.gbx.tools/v3/index.json --name nuget.gbx.tools
 
-# copy csproj and restore as distinct layers
-COPY Src/$APPNAME/$APPNAME/*.csproj $APPNAME/$APPNAME/
-COPY Src/$APPNAME/$APPNAME.Client/*.csproj $APPNAME/$APPNAME.Client/
-COPY Src/NationsConverterShared/*.csproj NationsConverterShared/
-RUN dotnet restore $APPNAME/$APPNAME/$APPNAME.csproj -a $TARGETARCH
+COPY .git .
 
-# copy and publish app and libraries
-COPY Src/$APPNAME/$APPNAME $APPNAME/$APPNAME
-COPY Src/$APPNAME/$APPNAME.Client $APPNAME/$APPNAME.Client
-COPY Src/NationsConverterShared NationsConverterShared
-RUN dotnet publish $APPNAME/$APPNAME -c $BUILD_CONFIGURATION -a $TARGETARCH -o /app --no-restore
+COPY Src/NationsConverterWeb /src/NationsConverterWeb
+COPY Src/NationsConverterShared /src/NationsConverterShared
 
+WORKDIR /src/NationsConverterWeb/NationsConverterWeb
 
+ARG TARGETARCH
+
+RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
+    dotnet publish -a ${TARGETARCH/amd64/x64} --self-contained false -o /app
+    
 # Final phase
-FROM mcr.microsoft.com/dotnet/aspnet:10.0-noble-chiseled AS final
-EXPOSE 8080
-EXPOSE 8081
+FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS final
 WORKDIR /app
-COPY --from=publish /app .
+
+COPY --from=build /app .
+
 USER $APP_UID
-ENTRYPOINT ["./NationsConverterWeb"]
+RUN mkdir -p /home/app/.aspnet/DataProtection-Keys && chown -R $APP_UID /home/app/.aspnet
+ENTRYPOINT ["dotnet", "NationsConverterWeb.dll"]

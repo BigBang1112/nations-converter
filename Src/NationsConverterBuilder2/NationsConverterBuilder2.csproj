@@ -10,9 +10,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.2" />
-        <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.1" />
+        <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.3" />
+        <PackageReference Include="GBX.NET.LZO" Version="2.1.3" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
     </ItemGroup>

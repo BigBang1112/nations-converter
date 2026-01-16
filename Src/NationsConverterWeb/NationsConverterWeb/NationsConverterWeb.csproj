@@ -8,23 +8,24 @@
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <DockerfileContext>..\..\..</DockerfileContext>
         <DockerComposeProjectPath>..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\NationsConverterShared\NationsConverterShared.csproj" />
         <ProjectReference Include="..\NationsConverterWeb.Client\NationsConverterWeb.Client.csproj" />
         <PackageReference Include="AspNet.Security.OAuth.Discord" Version="10.0.0" />
-        <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.2" />
-        <PackageReference Include="GBX.NET.LZO" Version="2.1.2" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.11" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.11" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.11">
+        <PackageReference Include="GBX.NET.Imaging.SkiaSharp" Version="1.1.3" />
+        <PackageReference Include="GBX.NET.LZO" Version="2.1.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.12">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
-        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="10.1.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Hybrid" Version="10.2.0" />
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
         <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
         <PackageReference Include="Serilog.Extensions.Logging" Version="10.0.0" />
@@ -38,6 +39,10 @@
         <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.14.0" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Process" Version="1.14.0-beta.2" />
         <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" Version="1.14.0" />
+        <PackageReference Include="SimplestGitSourceGenerator" Version="1.0.3">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>

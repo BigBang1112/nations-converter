@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
 
+@using SimplestGitSourceGenerator
+
 <ReuNavMenu Brand="nc.gbx.tools">
     <ReuNavItem Name="Home" Href="" IconType="IconType.Home" NavLinkMatch="NavLinkMatch.All"></ReuNavItem>
     <ReuNavItem Name="Downloads" IconType="IconType.Download" Href="downloads"></ReuNavItem>
@@ -14,7 +16,7 @@
 
 <ReuFooter>
     <CopyrightContent>
-        © 2024-2025 Petr '<a href="https://bigbang1112.cz">BigBang1112</a>' Pivoňka<br />
+        © 2024-2026 Petr '<a href="https://bigbang1112.cz">BigBang1112</a>' Pivoňka<br />
         <small>
             Not affiliated with or endorsed by Nadeo or Ubisoft.
             All relevant trademarks belong to their respective owners.
@@ -33,7 +35,16 @@
             <a href="https://revalidate.gbx.tools">revalidate.gbx.tools</a>
             <a href="https://envimix.gbx.tools">envimix.gbx.tools</a>
             <a href="https://uotd.gbx.tools">uotd.gbx.tools</a>
+            <a href="https://identity.gbx.tools">identity.gbx.tools</a>
             <a href="https://nuget.gbx.tools">nuget.gbx.tools</a>
+            <code>
+                @{
+                    var remoteUrl = SimplestGit.RemoteUrl.EndsWith(".git") ? SimplestGit.RemoteUrl.Substring(0, SimplestGit.RemoteUrl.Length - 4) : SimplestGit.RemoteUrl;
+                }
+                <a href="@remoteUrl/tree/@SimplestGit.CommitHash" title="@SimplestGit.CommitDate" target="_blank">
+                    @SimplestGit.Tag
+                </a>
+            </code>
         </div>
     </ExtraContent>
 </ReuFooter>
