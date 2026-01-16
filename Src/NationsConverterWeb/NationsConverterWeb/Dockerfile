@@ -19,8 +19,7 @@ WORKDIR /src/NationsConverterWeb/NationsConverterWeb
 
 ARG TARGETARCH
 
-RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
-    dotnet publish -a ${TARGETARCH/amd64/x64} --self-contained false -o /app
+RUN dotnet publish -a ${TARGETARCH/amd64/x64} --self-contained false -o /app
     
 # Final phase
 FROM mcr.microsoft.com/dotnet/aspnet:10.0-alpine AS final
