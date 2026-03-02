@@ -1,3 +1,5 @@
+### The project is now on pure maintenance mode, no meaningful updates will be made for the next year or a few.
+
 # Nations Converter 2
 
 This is where the new TMUF is being made!
