@@ -1,0 +1,19 @@
+﻿<ReuMetadataTags Title="@Title"
+                 SiteName="Nations Converter"
+                 Description="@Description"
+                 ImagePath="@ImagePath"
+                 ThemeColor="#9BFF67"></ReuMetadataTags>
+
+@code {
+    [Parameter, EditorRequired]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string? Description { get; set; } = "Convert your TMNF / TMUF / TMT / TM2 maps to the latest Trackmania.";
+
+    [Parameter]
+    public string? ImagePath { get; set; }
+
+    [Parameter]
+    public string? ThemeColor { get; set; }
+}
